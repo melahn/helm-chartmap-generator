@@ -54,28 +54,31 @@ public class ReportGenerator {
         Options options = new Options();
         options.addOption("h", false, "Help");
         options.addOption("o", true, "The Output Directory name");
-        options.addOption("r", false, "The local helm repo name");
+        options.addOption("r", true, "The Local Helm Repo Name");
         options.addOption("v", false, "Verbose");
         options.addOption("z", false, "Debug Mode");
         CommandLineParser parser = new DefaultParser();
         int count = 0;
         try {
             CommandLine cmd = parser.parse(options, a);
-            if (cmd.hasOption("o")) {
-                outputDirname = cmd.getOptionValue("o");
-            }
-            if (cmd.hasOption("r")) {
-                localRepoName = cmd.getOptionValue("r");
-            }
             if (cmd.hasOption("v")) {
                 verbose = true;
             }
             if (cmd.hasOption("z")) {
                 debug = true;
             }
+            if (cmd.hasOption("o")) {
+                outputDirname = cmd.getOptionValue("o");
+                log("Files will be written to directory \"".concat(outputDirname).concat("\""));
+            }
+            if (cmd.hasOption("r")) {
+                localRepoName = cmd.getOptionValue("r");
+                log("local helm chart repo \"".concat(localRepoName).concat("\" will be used"));
+            }
             if (a.length == 0
                     || cmd.hasOption("h")
-                    || count != 1) {
+                    || localRepoName == null
+                    || outputDirname == null) {
                 System.out.println(getHelp());
                 System.exit(0);
             }
@@ -141,12 +144,23 @@ public class ReportGenerator {
      *
      * @return a string containing some help
      */
-    public static String getHelp() {
+    private static String getHelp() {
         String help = "\nUsage:\n";
-        help += "java -jar ---<filename>---+---  -r <chart repo name>----+---  -o <directoryname>----+------------+---+------------+\n";
-        help += "                                                                                    |            |   |            |\n";
-        help += "                                                                                    +---  -v  ---+   +---  -h  ---+\n";
+        help += "java -jar ---<filename>----  -r <chart repo name>----  -o <directoryname>----+------------+---+------------+\n";
+        help += "                                                                             |            |   |            |\n";
+        help += "                                                                             +---  -v  ---+   +---  -h  ---+\n";
         help += "\nSee https://github.com/melahn/helm-chartmap-generator for more information\n";
         return help;
+    }
+
+    /**
+     * Logs a string if verbose is on
+     *
+     */
+    private static void log(String s) {
+        if (verbose) {
+            System.out.println(s);
+        }
+        return;
     }
 }
