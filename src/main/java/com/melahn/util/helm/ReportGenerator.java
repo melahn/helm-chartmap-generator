@@ -146,7 +146,7 @@ public class ReportGenerator {
         help += "java -jar ---<filename>---+---  -r <chart repo name>----+---  -o <directoryname>----+------------+---+------------+\n";
         help += "                                                                                    |            |   |            |\n";
         help += "                                                                                    +---  -v  ---+   +---  -h  ---+\n";
-        help += "\nSee http://github.com/melahn/helm-chartmap-generator for more information\n";
+        help += "\nSee https://github.com/melahn/helm-chartmap-generator for more information\n";
         return help;
     }
 }
