@@ -20,7 +20,10 @@ import org.apache.commons.collections4.map.MultiKeyMap;
 public class ReportGenerator {
 
     private static MultiKeyMap charts = new MultiKeyMap();;
-    private static String localRepoName=null;
+    private static String localRepoName = null;
+    private static String outputDirname = null;
+    private static boolean debug = false;
+    private static boolean verbose = false;
 
     /**
      * Parses the command line and generates a set of reports
@@ -34,6 +37,8 @@ public class ReportGenerator {
             generate();
         } catch (IOException e) {
             System.out.println("IOException: " + e.getMessage());
+        } catch (ParseException e) {
+            System.out.println("ParseException: " + e.getMessage());
         } catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
         }
@@ -45,8 +50,39 @@ public class ReportGenerator {
      * @param a The command line args
      * @throws IOException
      */
-    private static void parseArgs(String[] a) throws IOException {
+    private static void parseArgs(String[] a) throws IOException, ParseException {
         Options options = new Options();
+        options.addOption("h", false, "Help");
+        options.addOption("o", true, "The Output Directory name");
+        options.addOption("r", false, "The local helm repo name");
+        options.addOption("v", false, "Verbose");
+        options.addOption("z", false, "Debug Mode");
+        CommandLineParser parser = new DefaultParser();
+        int count = 0;
+        try {
+            CommandLine cmd = parser.parse(options, a);
+            if (cmd.hasOption("o")) {
+                outputDirname = cmd.getOptionValue("o");
+            }
+            if (cmd.hasOption("r")) {
+                localRepoName = cmd.getOptionValue("r");
+            }
+            if (cmd.hasOption("v")) {
+                verbose = true;
+            }
+            if (cmd.hasOption("z")) {
+                debug = true;
+            }
+            if (a.length == 0
+                    || cmd.hasOption("h")
+                    || count != 1) {
+                System.out.println(getHelp());
+                System.exit(0);
+            }
+        } catch (ParseException e) {
+            System.out.println(e.getMessage());
+            throw (e);
+        }
     }
 
     /**
@@ -100,5 +136,17 @@ public class ReportGenerator {
             System.out.println(e.getMessage());
         }
     }
-
+    /**
+     * Prints some help
+     *
+     * @return a string containing some help
+     */
+    public static String getHelp() {
+        String help = "\nUsage:\n";
+        help += "java -jar ---<filename>---+---  -r <chart repo name>----+---  -o <directoryname>----+------------+---+------------+\n";
+        help += "                                                                                    |            |   |            |\n";
+        help += "                                                                                    +---  -v  ---+   +---  -h  ---+\n";
+        help += "\nSee http://github.com/melahn/helm-chartmap-generator for more information\n";
+        return help;
+    }
 }
