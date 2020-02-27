@@ -7,21 +7,21 @@ import java.util.Map;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.melahn.util.helm.ChartMap;
 import com.melahn.util.helm.model.HelmChart;
 import com.melahn.util.helm.model.HelmChartLocalCache;
-import com.melahn.util.helm.model.HelmChartRepoLocal;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
-import org.apache.commons.collections4.map.MultiKeyMap;
 
 public class ReportGenerator {
 
-    private static MultiKeyMap charts = new MultiKeyMap();;
     private static String localRepoName = null;
     private static String outputDirname = null;
+    private static String envFilename = null;
+    private static int count = 1;
     private static boolean debug = false;
     private static boolean verbose = false;
 
@@ -29,7 +29,6 @@ public class ReportGenerator {
      * Parses the command line and generates a set of reports
      *
      * @param arg The command line args
-     * @throws IOException
      */
     public static void main(String[] arg) {
         try {
@@ -48,13 +47,14 @@ public class ReportGenerator {
      * Parses the command line
      *
      * @param a The command line args
-     * @throws IOException
      */
     private static void parseArgs(String[] a) throws IOException, ParseException {
         Options options = new Options();
         options.addOption("h", false, "Help");
         options.addOption("o", true, "The Output Directory name");
         options.addOption("r", true, "The Local Helm Repo Name");
+        options.addOption("n", true, "The Max Number of Chart Versions to Print");
+        options.addOption("e", true, "Environment Specification File");
         options.addOption("v", false, "Verbose");
         options.addOption("z", false, "Debug Mode");
         CommandLineParser parser = new DefaultParser();
@@ -74,6 +74,14 @@ public class ReportGenerator {
             if (cmd.hasOption("r")) {
                 localRepoName = cmd.getOptionValue("r");
                 log("local helm chart repo \"".concat(localRepoName).concat("\" will be used"));
+            }
+            if (cmd.hasOption("n")) {
+                count = Integer.parseInt(cmd.getOptionValue("n"));
+                log("A maximum of ".concat(cmd.getOptionValue("n")).concat(" versions will be printed"));
+            }
+            if (cmd.hasOption("e")) {
+                envFilename = cmd.getOptionValue("e");
+                log("Environment file \"".concat(envFilename).concat("\" will be used"));
             }
             if (a.length == 0
                     || cmd.hasOption("h")
@@ -95,10 +103,10 @@ public class ReportGenerator {
      * @return The fqfn of a local yaml file where helm chart info can be found, null otherwise
      */
     private static String constructRepoFilename(String r) {
-        String helm_home = System. getenv("HELM_HOME");
-        if (helm_home != null) {
-            String repoFileName = localRepoName.concat("/repository/cache/").concat(r).concat("-index.yaml");
-            File f = new File(localRepoName);
+        String helmHome = System. getenv("HELM_HOME");
+        if (helmHome != null) {
+            String repoFileName = helmHome.concat("/").concat("/repository/cache/").concat(r).concat("-index.yaml");
+            File f = new File(repoFileName);
             if (f.exists()) {
                 return repoFileName;
             }
@@ -110,7 +118,7 @@ public class ReportGenerator {
      * Generates a set of reports
      * @throws IOException
      */
-    private static void generate() throws IOException {
+    private static void generate() {
         String localRepoFilename = constructRepoFilename(localRepoName);
         if (localRepoFilename !=null) {
             loadChartsFromCache(localRepoFilename);
@@ -124,15 +132,21 @@ public class ReportGenerator {
      * @param f a file containing helm charts in yaml form
      */
     private static void loadChartsFromCache(String f) {
+        log("loading charts from ".concat(f));
         HelmChartLocalCache cache;
         try {
             ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
             mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             cache = mapper.readValue(new File(f), HelmChartLocalCache.class);
             Map<String, HelmChart[]> entries = cache.getEntries();
+            log(String.valueOf(entries.size()).concat(" charts found"));
             for (Map.Entry<String, HelmChart[]> entry : entries.entrySet()) {
+                int i = 0;
                 for (HelmChart h : entry.getValue()) {
-                    charts.put(h.getName(), h.getVersion(), h);
+                    printChart(h);
+                    if (++i > count) {
+                        break;
+                    }
                 }
             }
         } catch (IOException e) {
@@ -151,6 +165,29 @@ public class ReportGenerator {
         help += "                                                                             +---  -v  ---+   +---  -h  ---+\n";
         help += "\nSee https://github.com/melahn/helm-chartmap-generator for more information\n";
         return help;
+    }
+
+    /**
+     * prints a chart using the ChartMap API
+     *
+     * @param h helm chart
+     */
+    private static void printChart(HelmChart h) {
+        try {
+            log("print chart: " + h.getNameFull());
+            ChartMap testMap = new ChartMap(
+                    ChartOption.CHARTNAME,
+                    h.getNameFull(),
+                    outputDirname + "/" + h.getName() + "-" + h.getVersion() + ".txt",
+                    System.getenv("HELM_HOME"),
+                    envFilename,
+                    false,
+                    false);
+            //testMap.print();
+        } catch (Exception e) {
+            System.out.println("Exception printChart: " + e.getMessage());
+        }
+        return;
     }
 
     /**
