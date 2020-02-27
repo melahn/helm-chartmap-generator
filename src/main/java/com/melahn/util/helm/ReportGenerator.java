@@ -141,7 +141,7 @@ public class ReportGenerator {
             Map<String, HelmChart[]> entries = cache.getEntries();
             log(String.valueOf(entries.size()).concat(" charts found"));
             for (Map.Entry<String, HelmChart[]> entry : entries.entrySet()) {
-                int i = 0;
+                int i = 1;
                 for (HelmChart h : entry.getValue()) {
                     printChart(h);
                     if (++i > count) {
@@ -174,7 +174,7 @@ public class ReportGenerator {
      */
     private static void printChart(HelmChart h) {
         try {
-            log("print chart: " + h.getNameFull());
+            log("printing chart: " + h.getNameFull());
             ChartMap testMap = new ChartMap(
                     ChartOption.CHARTNAME,
                     h.getNameFull(),
@@ -183,9 +183,9 @@ public class ReportGenerator {
                     envFilename,
                     false,
                     false);
-            //testMap.print();
+            testMap.print();
         } catch (Exception e) {
-            System.out.println("Exception printChart: " + e.getMessage());
+            System.out.println("Exception printing Chart " + h.getNameFull() + " : " + e.getMessage());
         }
         return;
     }
