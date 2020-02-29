@@ -2,6 +2,8 @@ package com.melahn.util.helm;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -21,9 +23,9 @@ public class ReportGenerator {
     private static String localRepoName = null;
     private static String outputDirname = null;
     private static String envFilename = null;
-    private static int count = 1;
-    private static boolean debug = false;
     private static boolean verbose = false;
+    private static String formatString = "";
+    private static HashSet<String> extensions = new HashSet<String>();
 
     /**
      * Parses the command line and generates a set of reports
@@ -53,6 +55,7 @@ public class ReportGenerator {
         options.addOption("h", false, "Help");
         options.addOption("o", true, "The Output Directory name");
         options.addOption("r", true, "The Local Helm Repo Name");
+        options.addOption("f", true, "The Formats to be printed");
         options.addOption("n", true, "The Max Number of Chart Versions to Print");
         options.addOption("e", true, "Environment Specification File");
         options.addOption("v", false, "Verbose");
@@ -65,7 +68,7 @@ public class ReportGenerator {
                 verbose = true;
             }
             if (cmd.hasOption("z")) {
-                debug = true;
+                boolean debug = true;
             }
             if (cmd.hasOption("o")) {
                 outputDirname = cmd.getOptionValue("o");
@@ -74,6 +77,10 @@ public class ReportGenerator {
             if (cmd.hasOption("r")) {
                 localRepoName = cmd.getOptionValue("r");
                 log("local helm chart repo \"".concat(localRepoName).concat("\" will be used"));
+            }
+            if (cmd.hasOption("f")) {
+                formatString = cmd.getOptionValue("f");
+                log("format string".concat(formatString).concat("\" will be used"));
             }
             if (cmd.hasOption("n")) {
                 count = Integer.parseInt(cmd.getOptionValue("n"));
@@ -90,6 +97,7 @@ public class ReportGenerator {
                 System.out.println(getHelp());
                 System.exit(0);
             }
+            parseFormatString();
         } catch (ParseException e) {
             System.out.println(e.getMessage());
             throw (e);
@@ -99,11 +107,11 @@ public class ReportGenerator {
     /**
      * Constructs a helm repo file name from the short name of a helm repo
      *
-     * @param   r   A repo name (e.g. stable)
+     * @param r A repo name (e.g. stable)
      * @return The fqfn of a local yaml file where helm chart info can be found, null otherwise
      */
     private static String constructRepoFilename(String r) {
-        String helmHome = System. getenv("HELM_HOME");
+        String helmHome = System.getenv("HELM_HOME");
         if (helmHome != null) {
             String repoFileName = helmHome.concat("/").concat("/repository/cache/").concat(r).concat("-index.yaml");
             File f = new File(repoFileName);
@@ -116,11 +124,11 @@ public class ReportGenerator {
 
     /**
      * Generates a set of reports
-     * @throws IOException
+     *
      */
     private static void generate() {
         String localRepoFilename = constructRepoFilename(localRepoName);
-        if (localRepoFilename !=null) {
+        if (localRepoFilename != null) {
             loadChartsFromCache(localRepoFilename);
         }
     }
@@ -144,6 +152,7 @@ public class ReportGenerator {
                 int i = 1;
                 for (HelmChart h : entry.getValue()) {
                     printChart(h);
+                    int count = 1;
                     if (++i > count) {
                         break;
                     }
@@ -153,6 +162,7 @@ public class ReportGenerator {
             System.out.println(e.getMessage());
         }
     }
+
     /**
      * Prints some help
      *
@@ -168,36 +178,69 @@ public class ReportGenerator {
     }
 
     /**
-     * prints a chart using the ChartMap API
+     * prints a chart
      *
      * @param h helm chart
      */
     private static void printChart(HelmChart h) {
+
         try {
             log("printing chart: " + h.getNameFull());
+            for (String e : extensions) {
+                printChart(h, e);
+            }
+        } catch (Exception e) {
+            System.out.println("Exception printing Chart " + h.getNameFull() + " : " + e.getMessage());
+        }
+    }
+
+    /**
+     * prints a chart of a specific format using the ChartMap API
+     *
+     * @param h helm chart
+     * @param f the file extension to use
+     */
+    private static void printChart(HelmChart h, String f) {
+        String filename = h.getName().concat("-").concat(h.getVersion()).concat(f);
+        try {
             ChartMap testMap = new ChartMap(
                     ChartOption.CHARTNAME,
                     h.getNameFull(),
-                    outputDirname + "/" + h.getName() + "-" + h.getVersion() + ".txt",
+                    outputDirname.concat("/").concat(filename),
                     System.getenv("HELM_HOME"),
                     envFilename,
                     false,
                     false);
             testMap.print();
+            log(filename.concat(filename.concat(" created")));
         } catch (Exception e) {
-            System.out.println("Exception printing Chart " + h.getNameFull() + " : " + e.getMessage());
+            System.out.println("Exception creating file ".concat(filename).concat(" : ").concat(e.getMessage()));
         }
-        return;
+    }
+
+    /**
+     * Parses the format string passed in by the caller and
+     * adds a set of corresponding extensions to
+     * the extensions set which is later used for file writing
+     */
+    private static void parseFormatString() {
+        if (formatString.indexOf('j') >= 0) {
+            extensions.add(".json");
+        }
+        if (formatString.indexOf('p') >= 0) {
+            extensions.add(".puml");
+        }
+        if (formatString.indexOf('t') >= 0 || extensions.isEmpty()) {
+            extensions.add(".txt");
+        }
     }
 
     /**
      * Logs a string if verbose is on
-     *
      */
     private static void log(String s) {
         if (verbose) {
             System.out.println(s);
         }
-        return;
     }
 }
