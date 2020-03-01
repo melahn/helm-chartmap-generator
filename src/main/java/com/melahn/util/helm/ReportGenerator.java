@@ -21,7 +21,7 @@ import org.apache.commons.cli.ParseException;
 public class ReportGenerator {
 
     private static String localRepoName = null;
-    private static String outputDirname = null;
+    private static String outputDirname = System.getProperty("user.dir");
     private static String envFilename = null;
     private static boolean verbose = false;
     private static String formatString = "";
@@ -92,8 +92,7 @@ public class ReportGenerator {
             }
             if (a.length == 0
                     || cmd.hasOption("h")
-                    || localRepoName == null
-                    || outputDirname == null) {
+                    || localRepoName == null) {
                 System.out.println(getHelp());
                 System.exit(0);
             }
@@ -169,11 +168,18 @@ public class ReportGenerator {
      * @return a string containing some help
      */
     private static String getHelp() {
-        String help = "\nUsage:\n";
-        help += "java -jar ---<filename>----  -r <chart repo name>----  -o <directoryname>----+------------+---+------------+\n";
-        help += "                                                                             |            |   |            |\n";
-        help += "                                                                             +---  -v  ---+   +---  -h  ---+\n";
-        help += "\nSee https://github.com/melahn/helm-chartmap-generator for more information\n";
+        String help = "\nUsage:\n\n"
+                .concat("java -jar helm-chartmap-generator-1.0-SNAPSHOT.jar\n")
+                .concat("\nFlags:\n")
+                .concat("\t-r\t<repo name>\t\tthe name of the local helm repo to use (required)\n")
+                .concat("\t-o\t<directory name>\tthe output directory to use (default <pwd>) (optional)\n")
+                .concat("\t-f\t<file format mask>\ta string containing any combination of 'j','p' and 't' (default 't') (optional)\n")
+                .concat("\t-n\t<integer>\t\tthe maximum number of chart versions to print (default 1) (optional)\n")
+                .concat("\t-e\t<file name>\t\tenvironment file (optional)\n")
+                .concat("\t-v\tverbose\t\t\tprint verbose output (optional)\n")
+                .concat("\t-h\thelp\t\t\tprovide help (optional)\n")
+                .concat("\nSee https://github.com/melahn/helm-chartmap-generator for more information\n");
+
         return help;
     }
 
