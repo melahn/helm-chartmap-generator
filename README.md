@@ -63,7 +63,7 @@ Flags:
      
 ##### Generating JSON and PlantUML reports from the stable repo, with up to 3 versions printed with verbose output
 ```
-    java -helm-chartmap-generator-1.0-SNAPSHOT.jar -r stable -n 3 -v 
+    java -helm-chartmap-generator-1.0-SNAPSHOT.jar -r stable -f pt -n 3 -v 
 ``` 
 ### Issues
 If you find any problems please open an [issue](https://github.com/melahn/helm-chartmap-generator/issues).
