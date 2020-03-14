@@ -9,6 +9,9 @@ The generated reports can be in various formats including
 * PlantUML which can be turned into images using [PlantUML](https://plantuml.com/)
 * Text which can of course be viewed using any text editor
 
+In addition to producing the dependency report files, an 'index.html' file is produced that lists the files
+and provided links to view them.
+
 ## Prerequisites
 
 * Java 8 or later.
@@ -38,6 +41,8 @@ Flags:
      * The name of the local helm repo to use.  Run 'helm repo list' to see the names of the local helm repos and use any one
      of them here.  A set of one or more reports will be generated for all the charts in that repo.  
 * **Optional**
+   * **-o** \<directory name\>
+      *  The name of directory to which the files will be written.  The default is the current working directory.
    * **-f** \<file format mask\>
       *  A string that is formed from the characters 'j','p' and 't' in any order or frequency.  If the mask contains the character 'j' a JSON
       file will be generated.  If the mask contains the character 'p' a PlantUML file will be generated. If the mask contains the character 't' a text file will be generated.  For example. if the file format mask contains 'jt', then
