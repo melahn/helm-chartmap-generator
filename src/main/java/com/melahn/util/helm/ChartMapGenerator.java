@@ -289,7 +289,7 @@ public class ChartMapGenerator {
      *
      */
     private static void startStanzaInIndex(String s) throws IOException {
-        String l = "\n\t<p class=\"chartname\">".concat(s).concat("</p>\n\t<ul>\n");
+        String l = "\t<p class=\"chartname\">".concat(s).concat("</p>\n\t<ul>\n");
         Files.write(Paths.get(indexFilename),
                 l.getBytes(),
                 StandardOpenOption.APPEND);
@@ -300,7 +300,7 @@ public class ChartMapGenerator {
      *
      */
     private static void closeStanzaInIndex() throws IOException {
-        String l = "\t\t</ul>";
+        String l = "\t</ul>\n";
         Files.write(Paths.get(indexFilename),
                 l.getBytes(),
                 StandardOpenOption.APPEND);
@@ -323,7 +323,7 @@ public class ChartMapGenerator {
      *
      */
     private static void endIndex () throws IOException {
-        String e = "</body></html>";
+        String e = "</body>\n</html>";
         Files.write(Paths.get(indexFilename),
                 e.getBytes(),
                 StandardOpenOption.APPEND);
