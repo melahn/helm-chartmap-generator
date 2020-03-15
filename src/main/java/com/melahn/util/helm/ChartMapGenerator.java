@@ -142,7 +142,7 @@ public class ChartMapGenerator {
 
     /**
      * Takes the name of a file containing helm charts in yaml form and constructs a HelmChart object from
-     * each and adds that HelmChart object to the charts map
+     * each and prints it, keeping a count aling the way
      *
      * @param f a file containing helm charts in yaml form
      */
@@ -194,7 +194,7 @@ public class ChartMapGenerator {
     }
 
     /**
-     * prints a chart
+     * Prints a chart
      *
      * @param h helm chart
      */
@@ -213,7 +213,7 @@ public class ChartMapGenerator {
     }
 
     /**
-     * prints a chart of a specific format using the ChartMap API
+     * Prints a chart of a specific format using the ChartMap API
      *
      * @param h helm chart
      * @param f the file extension to use
