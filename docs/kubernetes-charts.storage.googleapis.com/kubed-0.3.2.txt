@@ -1,0 +1,29 @@
+Chart Map for kubed:0.3.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: kubed:0.3.2
+	apiVersion: v1
+	appVersion: 0.4.0
+	created: Not specified
+	dependencies: None
+	description: Kubed by AppsCode - Kubernetes daemon
+	digest: Not specified
+	icon: https://cdn.appscode.com/images/icon/kubed.png
+	keywords: Not specified
+	maintainers: appscode:support@appscode.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: kubed
+	sources: https://github.com/appscode/kubed
+	urls: Not specified
+	version: 0.3.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: appscode/kubed:0.4.0
+
+Chart Dependencies
+------------------
+kubed:0.3.2 uses appscode/kubed:0.4.0
+
+Generated on 2020/03/16 17:21:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

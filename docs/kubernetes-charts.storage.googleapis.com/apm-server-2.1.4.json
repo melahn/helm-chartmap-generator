@@ -1,0 +1,18 @@
+{
+  "maintainers": [
+    {
+      "name": "mumoshu",
+      "email": "ykuoka@gmail.com"
+    },
+    {
+      "name": "at-k",
+      "email": "atushi.k@gmail.com"
+    }
+  ],
+  "children": [],
+  "name": "apm-server:2.1.4",
+  "description": "The server receives data from the Elastic APM agents and stores the data into a datastore like Elasticsearch",
+  "type": "chart",
+  "shortName": "apm-server",
+  "version": "2.1.4"
+}

@@ -1,0 +1,19 @@
+{
+  "maintainers": [{
+    "name": "kiall",
+    "email": "kiall@macinnes.ie"
+  }],
+  "keywords": ["irc"],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "linuxserver/quassel-core",
+    "type": "image",
+    "version": "92"
+  }],
+  "name": "quassel:0.2.9",
+  "description": "Quassel IRC is a modern, cross-platform, distributed IRC client.",
+  "type": "chart",
+  "shortName": "quassel",
+  "version": "0.2.9"
+}

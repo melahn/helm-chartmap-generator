@@ -1,0 +1,14 @@
+{
+  "keywords": [
+    "monitoring",
+    "alerting",
+    "metrics",
+    "stats"
+  ],
+  "children": [],
+  "name": "signalfx-agent:0.3.1",
+  "description": "DEPRECATED The SignalFx Kubernetes agent",
+  "type": "chart",
+  "shortName": "signalfx-agent",
+  "version": "0.3.1"
+}

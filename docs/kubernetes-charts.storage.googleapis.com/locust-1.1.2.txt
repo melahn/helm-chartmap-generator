@@ -1,0 +1,29 @@
+Chart Map for locust:1.1.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: locust:1.1.2
+	apiVersion: v1
+	appVersion: 0.9.0
+	created: Not specified
+	dependencies: None
+	description: A modern load testing framework
+	digest: Not specified
+	icon: https://pbs.twimg.com/profile_images/1867636195/locust-logo-orignal.png
+	keywords: Not specified
+	maintainers: haugene:kristian.haugene@greenbird.com,sekka1:sekka1@managedkube.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: locust
+	sources: https://github.com/greenbird/locust
+	urls: Not specified
+	version: 1.1.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: greenbirdit/locust:0.9.0
+
+Chart Dependencies
+------------------
+locust:1.1.2 uses greenbirdit/locust:0.9.0
+
+Generated on 2020/03/16 17:22:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

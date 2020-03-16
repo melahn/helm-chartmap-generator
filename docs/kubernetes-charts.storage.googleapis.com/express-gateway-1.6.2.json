@@ -1,0 +1,43 @@
+{
+  "maintainers": [{
+    "name": "XVincentX",
+    "email": "vincenz.chianese@icloud.com"
+  }],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "expressgateway/express-gateway",
+      "type": "image",
+      "version": "v1.16.8"
+    },
+    {
+      "maintainers": [{
+        "name": "bitnami-bot",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/redis",
+        "type": "image",
+        "version": "4.0.9"
+      }],
+      "name": "redis:3.0.6",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "3.0.6"
+    }
+  ],
+  "name": "express-gateway:1.6.2",
+  "description": "Express Gateway is an API Gateway that sits at the heart of any microservices architecture",
+  "type": "chart",
+  "shortName": "express-gateway",
+  "version": "1.6.2"
+}

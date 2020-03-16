@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for aws-cluster-autoscaler:0.3.3
+
+'There is one referenced Helm Chart
+artifact "aws-cluster-autoscaler:0.3.3\n====\n\taws-cluster-autoscaler\n====\n\t0.3.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Michael Goodness\n====\n\tKeywords: " as aws_cluster_autoscaler_0_3_3 #HoneyDew
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tk8s.gcr.io/cluster-autoscaler\n====\n\tv0.6.1" as k8s_gcr_io_cluster_autoscaler_v0_6_1 #LightCyan
+
+'Chart Dependencies
+aws_cluster_autoscaler_0_3_3--[#orange]-|>k8s_gcr_io_cluster_autoscaler_v0_6_1
+
+center footer Generated on 2020/03/16 17:12:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,29 @@
+Chart Map for socat-tunneller:0.1.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: socat-tunneller:0.1.0
+	apiVersion: v1
+	appVersion: 1.0
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for socat-tunneller
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: plumdog:plummer574@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: socat-tunneller
+	sources: Not specified
+	urls: Not specified
+	version: 0.1.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: alpine/socat:1.0.3
+
+Chart Dependencies
+------------------
+socat-tunneller:0.1.0 uses alpine/socat:1.0.3
+
+Generated on 2020/03/16 17:29:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

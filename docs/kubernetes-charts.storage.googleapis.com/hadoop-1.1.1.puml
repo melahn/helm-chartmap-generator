@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for hadoop:1.1.1
+
+'There is one referenced Helm Chart
+artifact "hadoop:1.1.1\n====\n\thadoop\n====\n\t1.1.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: danisla\n====\n\tKeywords: " as hadoop_1_1_1 #DeepSkyBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tdanisla/hadoop\n====\n\t2.9.0" as danisla_hadoop_2_9_0 #Beige
+
+'Chart Dependencies
+hadoop_1_1_1--[#orange]-|>danisla_hadoop_2_9_0
+
+center footer Generated on 2020/03/16 17:18:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

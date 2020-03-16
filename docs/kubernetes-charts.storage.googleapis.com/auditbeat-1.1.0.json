@@ -1,0 +1,18 @@
+{
+  "maintainers": [
+    {
+      "name": "cpanato",
+      "email": "ctadeu@gmail.com"
+    },
+    {
+      "name": "mumoshu",
+      "email": "ykuoka@gmail.com"
+    }
+  ],
+  "children": [],
+  "name": "auditbeat:1.1.0",
+  "description": "A lightweight shipper to audit the activities of users and processes on your systems",
+  "type": "chart",
+  "shortName": "auditbeat",
+  "version": "1.1.0"
+}

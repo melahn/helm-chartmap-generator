@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for express-gateway:1.6.2
+
+'There are 2 referenced Helm Charts
+artifact "express-gateway:1.6.2\n====\n\texpress-gateway\n====\n\t1.6.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: XVincentX\n====\n\tKeywords: " as express_gateway_1_6_2 #CadetBlue
+artifact "redis:3.0.6\n====\n\tredis\n====\n\t3.0.6\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: bitnami-bot\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_3_0_6 #LightSeaGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/redis:4.0.9\n====\n\t4.0.9" as docker_io_bitnami_redis_4_0_9 #Azure
+usecase "Image\n====\n\tDocker Hub\n====\n\texpressgateway/express-gateway\n====\n\tv1.16.8" as expressgateway_express_gateway_v1_16_8 #FloralWhite
+
+'Chart Dependencies
+express_gateway_1_6_2--[#green]-|>redis_3_0_6
+express_gateway_1_6_2--[#orange]-|>expressgateway_express_gateway_v1_16_8
+redis_3_0_6--[#orange]-|>docker_io_bitnami_redis_4_0_9
+
+center footer Generated on 2020/03/16 17:16:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

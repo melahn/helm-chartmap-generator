@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for spartakus:1.1.5
+
+'There is one referenced Helm Chart
+artifact "spartakus:1.1.5\n====\n\tspartakus\n====\n\t1.1.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Michael Goodness\n====\n\tKeywords: " as spartakus_1_1_5 #Coral
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tk8s.gcr.io/spartakus-amd64\n====\n\tv1.0.0" as k8s_gcr_io_spartakus_amd64_v1_0_0 #Chocolate
+
+'Chart Dependencies
+spartakus_1_1_5--[#orange]-|>k8s_gcr_io_spartakus_amd64_v1_0_0
+
+center footer Generated on 2020/03/16 17:30:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

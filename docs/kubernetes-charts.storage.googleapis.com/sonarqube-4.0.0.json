@@ -1,0 +1,64 @@
+{
+  "maintainers": [
+    {
+      "name": "rjkernick",
+      "email": "rjkernick@gmail.com"
+    },
+    {
+      "name": "tsiddique",
+      "email": "tsiddique@live.com"
+    }
+  ],
+  "keywords": [
+    "coverage",
+    "security",
+    "code",
+    "quality"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "sonarqube",
+      "type": "image",
+      "version": "7.9.2-community"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/postgresql",
+        "type": "image",
+        "version": "11.6.0-debian-10-r0"
+      }],
+      "name": "postgresql:8.2.0",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "8.2.0"
+    }
+  ],
+  "name": "sonarqube:4.0.0",
+  "description": "SonarQube is an open sourced code quality scanning tool",
+  "type": "chart",
+  "shortName": "sonarqube",
+  "version": "4.0.0"
+}

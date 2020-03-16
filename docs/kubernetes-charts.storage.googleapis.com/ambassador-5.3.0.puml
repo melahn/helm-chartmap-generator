@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for ambassador:5.3.0
+
+'There is one referenced Helm Chart
+artifact "ambassador:5.3.0\n====\n\tambassador\n====\n\t5.3.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: flydiverny, kflynn, nbkrause, lukeshu\n====\n\tKeywords: api gateway\nambassador\ndatawire\nenvoy" as ambassador_5_3_0 #DeepSkyBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tquay.io\n====\n\tdatawire/ambassador:0.86.1\n====\n\t0.86.1" as quay_io_datawire_ambassador_0_86_1 #Aquamarine
+
+'Chart Dependencies
+ambassador_5_3_0--[#orange]-|>quay_io_datawire_ambassador_0_86_1
+
+center footer Generated on 2020/03/16 17:12:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "appscode/voyager",
+    "type": "image",
+    "version": "6.0.0"
+  }],
+  "name": "voyager:3.2.4",
+  "description": "DEPRECATED Voyager by AppsCode - Secure Ingress Controller for Kubernetes",
+  "type": "chart",
+  "shortName": "voyager",
+  "version": "3.2.4"
+}

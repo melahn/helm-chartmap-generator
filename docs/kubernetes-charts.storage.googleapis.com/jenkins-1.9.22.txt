@@ -1,0 +1,29 @@
+Chart Map for jenkins:1.9.22
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: jenkins:1.9.22
+	apiVersion: v1
+	appVersion: lts
+	created: Not specified
+	dependencies: None
+	description: Open source continuous integration server. It supports multiple SCM tools including CVS, Subversion and Git. It can execute Apache Ant and Apache Maven-based projects as well as arbitrary scripts.
+	digest: Not specified
+	icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
+	keywords: Not specified
+	maintainers: lachie83:lachlan.evenson@microsoft.com,viglesiasce:viglesias@google.com,maorfr:maor.friedman@redhat.com,torstenwalter:mail@torstenwalter.de,mogaal:garridomota@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: jenkins
+	sources: https://github.com/jenkinsci/jenkins,https://github.com/jenkinsci/docker-jnlp-slave,https://github.com/maorfr/kube-tasks,https://github.com/jenkinsci/configuration-as-code-plugin
+	urls: Not specified
+	version: 1.9.22
+
+There is one referenced Docker Image
+------------------------------------
+Image: jenkins/jenkins:lts
+
+Chart Dependencies
+------------------
+jenkins:1.9.22 uses jenkins/jenkins:lts
+
+Generated on 2020/03/16 17:20:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "sstarcher/helm-exporter",
+    "type": "image",
+    "version": "0.4.2"
+  }],
+  "name": "helm-exporter:0.3.3",
+  "description": "DEPRECATED Exports helm release stats to prometheus",
+  "type": "chart",
+  "shortName": "helm-exporter",
+  "version": "0.3.3"
+}

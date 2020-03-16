@@ -1,0 +1,26 @@
+{
+  "keywords": [
+    "google",
+    "endpoints",
+    "nginx",
+    "gcloud",
+    "proxy",
+    "authentication",
+    "monitoring",
+    "api",
+    "swagger",
+    "open api"
+  ],
+  "children": [{
+    "repoHost": "b.gcr.io",
+    "children": [],
+    "name": "endpoints/endpoints-runtime",
+    "type": "image",
+    "version": "1"
+  }],
+  "name": "gcloud-endpoints:0.1.2",
+  "description": "DEPRECATED Develop, deploy, protect and monitor your APIs with Google Cloud Endpoints.",
+  "type": "chart",
+  "shortName": "gcloud-endpoints",
+  "version": "0.1.2"
+}

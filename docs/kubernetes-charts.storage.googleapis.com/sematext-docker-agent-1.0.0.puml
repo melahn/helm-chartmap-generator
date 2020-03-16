@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for sematext-docker-agent:1.0.0
+
+'There is one referenced Helm Chart
+artifact "sematext-docker-agent:1.0.0\n====\n\tsematext-docker-agent\n====\n\t1.0.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: komljen\n====\n\tKeywords: alerts\nmetrics\nevents\nlogs" as sematext_docker_agent_1_0_0 #Chartreuse
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2020/03/16 17:29:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for gcloud-endpoints:0.1.2
+
+'There is one referenced Helm Chart
+artifact "gcloud-endpoints:0.1.2\n====\n\tgcloud-endpoints\n====\n\t0.1.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: google\nendpoints\nnginx\ngcloud\nproxy\nauthentication\nmonitoring\napi\nswagger\nopen api" as gcloud_endpoints_0_1_2 #Chartreuse
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tb.gcr.io\n====\n\tendpoints/endpoints-runtime:1\n====\n\t1" as b_gcr_io_endpoints_endpoints_runtime_1 #DarkSalmon
+
+'Chart Dependencies
+gcloud_endpoints_0_1_2--[#orange]-|>b_gcr_io_endpoints_endpoints_runtime_1
+
+center footer Generated on 2020/03/16 17:17:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

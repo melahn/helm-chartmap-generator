@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for home-assistant:0.12.1
+
+'There is one referenced Helm Chart
+artifact "home-assistant:0.12.1\n====\n\thome-assistant\n====\n\t0.12.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: billimek, runningman84\n====\n\tKeywords: home-assistant\nhass\nhomeassistant" as home_assistant_0_12_1 #LightSalmon
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\thomeassistant/home-assistant\n====\n\t0.103.3" as homeassistant_home_assistant_0_103_3 #LightCoral
+
+'Chart Dependencies
+home_assistant_0_12_1--[#orange]-|>homeassistant_home_assistant_0_103_3
+
+center footer Generated on 2020/03/16 17:19:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

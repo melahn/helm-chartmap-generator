@@ -1,0 +1,22 @@
+{
+  "maintainers": [{
+    "name": "bclermont",
+    "email": "bruno@robotinfra.com"
+  }],
+  "keywords": [
+    "ipfs",
+    "distributed-web"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "ipfs/go-ipfs",
+    "type": "image",
+    "version": "v0.4.22"
+  }],
+  "name": "ipfs:0.4.1",
+  "description": "A Helm chart for the Interplanetary File System",
+  "type": "chart",
+  "shortName": "ipfs",
+  "version": "0.4.1"
+}

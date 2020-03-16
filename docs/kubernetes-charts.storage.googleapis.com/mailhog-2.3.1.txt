@@ -1,0 +1,29 @@
+Chart Map for mailhog:2.3.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: mailhog:2.3.1
+	apiVersion: v1
+	appVersion: 1.0.0
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED - An e-mail testing tool for developers
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/mailhog/MailHog-UI/master/assets/images/hog.png
+	keywords: mailhog,mail,smtp,email,e-mail,testing
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mailhog
+	sources: https://github.com/mailhog/MailHog
+	urls: Not specified
+	version: 2.3.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: mailhog/mailhog:v1.0.0
+
+Chart Dependencies
+------------------
+mailhog:2.3.1 uses mailhog/mailhog:v1.0.0
+
+Generated on 2020/03/16 17:22:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

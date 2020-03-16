@@ -1,0 +1,29 @@
+{
+  "maintainers": [
+    {
+      "name": "svenmueller",
+      "email": "sven.mueller@commercetools.com"
+    },
+    {
+      "name": "caarlos0",
+      "email": "carlos@carlosbecker.com"
+    }
+  ],
+  "keywords": [
+    "metrics",
+    "elasticsearch",
+    "monitoring"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "justwatch/elasticsearch_exporter",
+    "type": "image",
+    "version": "1.1.0"
+  }],
+  "name": "elasticsearch-exporter:2.3.0",
+  "description": "Elasticsearch stats exporter for Prometheus",
+  "type": "chart",
+  "shortName": "elasticsearch-exporter",
+  "version": "2.3.0"
+}

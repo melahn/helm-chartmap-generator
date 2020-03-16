@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus-nats-exporter:2.4.0
+
+'There is one referenced Helm Chart
+artifact "prometheus-nats-exporter:2.4.0\n====\n\tprometheus-nats-exporter\n====\n\t2.4.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: okgolove, caarlos0\n====\n\tKeywords: nats\nprometheus\nexporter" as prometheus_nats_exporter_2_4_0 #Coral
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tsynadia/prometheus-nats-exporter\n====\n\t0.6.0" as synadia_prometheus_nats_exporter_0_6_0 #Ivory
+
+'Chart Dependencies
+prometheus_nats_exporter_2_4_0--[#orange]-|>synadia_prometheus_nats_exporter_0_6_0
+
+center footer Generated on 2020/03/16 17:27:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

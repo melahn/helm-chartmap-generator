@@ -1,0 +1,33 @@
+{
+  "maintainers": [
+    {
+      "name": "lachie83",
+      "email": "lachlan.evenson@gmail.com"
+    },
+    {
+      "name": "daixiang0",
+      "email": "764524258@qq.com"
+    }
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "k8s.gcr.io/spark",
+      "type": "image",
+      "version": "1.5.1_v3"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "apache/zeppelin",
+      "type": "image",
+      "version": "0.7.3"
+    }
+  ],
+  "name": "spark:1.0.2",
+  "description": "Fast and general-purpose cluster computing system.",
+  "type": "chart",
+  "shortName": "spark",
+  "version": "1.0.2"
+}

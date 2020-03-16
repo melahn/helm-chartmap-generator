@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for gocd:1.22.0
+
+'There is one referenced Helm Chart
+artifact "gocd:1.22.0\n====\n\tgocd\n====\n\t1.22.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: arvindsv, ganeshspatil, varshavaradarajan\n====\n\tKeywords: gocd\nci\ncd\nci/cd\ncontinuous-integration\ncontinuous-delivery\ncontinuous-deployment\ncontinuous-testing" as gocd_1_22_0 #LightSteelBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tgocd/gocd-server\n====\n\tv20.1.0" as gocd_gocd_server_v20_1_0 #Aqua
+usecase "Image\n====\n\tDocker Hub\n====\n\tgocd/gocd-agent-alpine-3.9\n====\n\tv20.1.0" as gocd_gocd_agent_alpine_3_9_v20_1_0 #BurlyWood
+
+'Chart Dependencies
+gocd_1_22_0--[#orange]-|>gocd_gocd_server_v20_1_0
+gocd_1_22_0--[#orange]-|>gocd_gocd_agent_alpine_3_9_v20_1_0
+
+center footer Generated on 2020/03/16 17:18:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

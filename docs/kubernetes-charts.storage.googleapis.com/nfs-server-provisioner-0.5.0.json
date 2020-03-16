@@ -1,0 +1,32 @@
+{
+  "maintainers": [
+    {
+      "name": "kiall",
+      "email": "kiall@macinnes.ie"
+    },
+    {
+      "name": "joaocc",
+      "email": "joaocc-dev@live.com"
+    },
+    {
+      "name": "naseemkullah",
+      "email": "naseem@transit.app"
+    }
+  ],
+  "keywords": [
+    "nfs",
+    "storage"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "kubernetes_incubator/nfs-provisioner",
+    "type": "image",
+    "version": "v2.3.0"
+  }],
+  "name": "nfs-server-provisioner:0.5.0",
+  "description": "nfs-server-provisioner is an out-of-tree dynamic provisioner for Kubernetes. You can use it to quickly & easily deploy shared storage that works almost anywhere.",
+  "type": "chart",
+  "shortName": "nfs-server-provisioner",
+  "version": "0.5.0"
+}

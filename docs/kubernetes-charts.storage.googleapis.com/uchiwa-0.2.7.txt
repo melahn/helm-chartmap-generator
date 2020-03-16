@@ -1,0 +1,65 @@
+Chart Map for uchiwa:0.2.7
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: uchiwa:0.2.7
+	apiVersion: v1
+	appVersion: 0.22
+	created: Not specified
+	dependencies: sensu:0.1.2
+	description: Dashboard for the Sensu monitoring framework
+	digest: Not specified
+	icon: https://uchiwa.io/img/favicon.png
+	keywords: uchiwa,sensu,monitoring
+	maintainers: Shane Starcher:shane.starcher@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: uchiwa
+	sources: https://github.com/kubernetes/charts,https://github.com/sstarcher/docker-uchiwa,https://github.com/sensu/uchiwa
+	urls: Not specified
+	version: 0.2.7
+Chart: redis:0.4.5
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: 2017-03-02T19:33:28.196397881Z
+	dependencies: None
+	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: 7891aef2647fd00ca93cd6894720a6307d3fdd275f912eb6a05fcbb6b7009c13
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://kubernetes-charts.storage.googleapis.com/redis-0.4.5.tgz
+	version: 0.4.5
+Chart: sensu:0.1.2
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2017-09-04T19:33:58.060735947Z
+	dependencies: redis:0.4.5
+	description: Sensu monitoring framework backed by the Redis transport
+	digest: f5f791908b0a98ff25cca44d65d4a1bdfbada87d1673c0f4659fbb9986caa5fc
+	icon: https://raw.githubusercontent.com/sensu/sensu/master/sensu-logo.png
+	keywords: sensu,monitoring
+	maintainers: Shane Starcher:shane.starcher@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: sensu
+	sources: https://github.com/kubernetes/charts,https://github.com/sstarcher/docker-sensu,https://github.com/sensu/sensu
+	urls: https://kubernetes-charts.storage.googleapis.com/sensu-0.1.2.tgz
+	version: 0.1.2
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: sstarcher/uchiwa:0.22
+Image: bitnami/redis:3.2.6-r2
+Image: sstarcher/sensu:0.28
+
+Chart Dependencies
+------------------
+uchiwa:0.2.7 depends on sensu:0.1.2
+sensu:0.1.2 depends on redis:0.4.5
+uchiwa:0.2.7 uses sstarcher/uchiwa:0.22
+redis:0.4.5 uses bitnami/redis:3.2.6-r2
+sensu:0.1.2 uses sstarcher/sensu:0.28
+
+Generated on 2020/03/16 17:31:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

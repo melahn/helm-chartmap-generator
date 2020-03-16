@@ -1,0 +1,23 @@
+{
+  "maintainers": [{
+    "name": "pickledrick",
+    "email": "pegrant@vmware.com"
+  }],
+  "keywords": [
+    "ingress",
+    "envoy",
+    "contour"
+  ],
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "heptio-images/contour",
+    "type": "image",
+    "version": "v0.15.0"
+  }],
+  "name": "contour:0.1.1",
+  "description": "Contour Ingress controller for Kubernetes",
+  "type": "chart",
+  "shortName": "contour",
+  "version": "0.1.1"
+}

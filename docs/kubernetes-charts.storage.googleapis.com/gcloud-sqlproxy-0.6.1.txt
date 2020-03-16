@@ -1,0 +1,27 @@
+Chart Map for gcloud-sqlproxy:0.6.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: gcloud-sqlproxy:0.6.1
+	apiVersion: Not specified
+	appVersion: 1.11
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED Google Cloud SQL Proxy
+	digest: Not specified
+	icon: Not specified
+	keywords: google,cloud,postgresql,mysql,sql,sqlproxy
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: gcloud-sqlproxy
+	sources: https://github.com/rimusz/charts
+	urls: Not specified
+	version: 0.6.1
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/03/16 17:17:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,33 @@
+{
+  "maintainers": [{
+    "name": "Jack Zampolin",
+    "email": "jack.zampolin@gmail.com"
+  }],
+  "keywords": [
+    "kube-lego",
+    "nginx-ingress-controller",
+    "nginx",
+    "letsencrypt"
+  ],
+  "children": [
+    {
+      "repoHost": "gcr.io",
+      "children": [],
+      "name": "google_containers/defaultbackend",
+      "type": "image",
+      "version": "1.0"
+    },
+    {
+      "repoHost": "gcr.io",
+      "children": [],
+      "name": "google_containers/nginx-ingress-controller",
+      "type": "image",
+      "version": "0.8.3"
+    }
+  ],
+  "name": "nginx-lego:0.3.0",
+  "description": "Chart for nginx-ingress-controller and kube-lego",
+  "type": "chart",
+  "shortName": "nginx-lego",
+  "version": "0.3.0"
+}

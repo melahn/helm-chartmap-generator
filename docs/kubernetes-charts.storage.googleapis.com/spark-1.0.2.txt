@@ -1,0 +1,31 @@
+Chart Map for spark:1.0.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: spark:1.0.2
+	apiVersion: v1
+	appVersion: 1.5.1
+	created: Not specified
+	dependencies: None
+	description: Fast and general-purpose cluster computing system.
+	digest: Not specified
+	icon: http://spark.apache.org/images/spark-logo-trademark.png
+	keywords: Not specified
+	maintainers: lachie83:lachlan.evenson@gmail.com,daixiang0:764524258@qq.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: spark
+	sources: https://github.com/kubernetes/kubernetes/tree/master/examples/spark,https://github.com/apache/spark
+	urls: Not specified
+	version: 1.0.2
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: k8s.gcr.io/spark:1.5.1_v3
+Image: apache/zeppelin:0.7.3
+
+Chart Dependencies
+------------------
+spark:1.0.2 uses k8s.gcr.io/spark:1.5.1_v3
+spark:1.0.2 uses apache/zeppelin:0.7.3
+
+Generated on 2020/03/16 17:30:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

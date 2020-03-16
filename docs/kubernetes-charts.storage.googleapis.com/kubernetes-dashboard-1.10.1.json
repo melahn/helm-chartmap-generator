@@ -1,0 +1,28 @@
+{
+  "maintainers": [
+    {
+      "name": "kfox1111",
+      "email": "Kevin.Fox@pnnl.gov"
+    },
+    {
+      "name": "desaintmartin",
+      "email": "cdesaintmartin@wiremind.fr"
+    }
+  ],
+  "keywords": [
+    "kubernetes",
+    "dashboard"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "k8s.gcr.io/kubernetes-dashboard-amd64",
+    "type": "image",
+    "version": "v1.10.1"
+  }],
+  "name": "kubernetes-dashboard:1.10.1",
+  "description": "General-purpose web UI for Kubernetes clusters",
+  "type": "chart",
+  "shortName": "kubernetes-dashboard",
+  "version": "1.10.1"
+}

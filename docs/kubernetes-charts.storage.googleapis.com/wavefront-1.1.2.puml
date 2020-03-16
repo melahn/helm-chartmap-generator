@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for wavefront:1.1.2
+
+'There are 2 referenced Helm Charts
+artifact "kube-state-metrics:2.3.1\n====\n\tkube-state-metrics\n====\n\t2.3.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: fiunchinho, tariq1890\n====\n\tKeywords: metric\nmonitoring\nprometheus\nkubernetes" as kube_state_metrics_2_3_1 #Gainsboro
+artifact "wavefront:1.1.2\n====\n\twavefront\n====\n\t1.1.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: metric\nmonitoring\nobservability\nalerting" as wavefront_1_1_2 #LavenderBlush
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tquay.io\n====\n\tcoreos/kube-state-metrics:v1.7.2\n====\n\tv1.7.2" as quay_io_coreos_kube_state_metrics_v1_7_2 #LightGrey
+usecase "Image\n====\n\tDocker Hub\n====\n\twavefronthq/proxy\n====\n\t5.7" as wavefronthq_proxy_5_7 #LightGrey
+
+'Chart Dependencies
+wavefront_1_1_2--[#green]-|>kube_state_metrics_2_3_1
+kube_state_metrics_2_3_1--[#orange]-|>quay_io_coreos_kube_state_metrics_v1_7_2
+wavefront_1_1_2--[#orange]-|>wavefronthq_proxy_5_7
+
+center footer Generated on 2020/03/16 17:32:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

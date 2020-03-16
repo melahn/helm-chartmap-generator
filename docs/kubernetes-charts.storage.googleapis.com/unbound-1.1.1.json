@@ -1,0 +1,24 @@
+{
+  "maintainers": [
+    {
+      "name": "Markbnj",
+      "email": "betz.mark@gmail.com"
+    },
+    {
+      "name": "n0rad",
+      "email": "alemaire@norad.fr"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "markbnj/unbound-docker",
+    "type": "image",
+    "version": "0.1.0"
+  }],
+  "name": "unbound:1.1.1",
+  "description": "Unbound is a fast caching DNS resolver",
+  "type": "chart",
+  "shortName": "unbound",
+  "version": "1.1.1"
+}

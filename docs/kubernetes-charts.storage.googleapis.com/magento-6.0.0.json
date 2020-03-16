@@ -1,0 +1,39 @@
+{
+  "keywords": [
+    "magento",
+    "e-commerce",
+    "http",
+    "web",
+    "php"
+  ],
+  "children": [{
+    "maintainers": [{
+      "name": "Bitnami",
+      "email": "containers@bitnami.com"
+    }],
+    "keywords": [
+      "mariadb",
+      "mysql",
+      "database",
+      "sql",
+      "prometheus"
+    ],
+    "children": [{
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/mariadb",
+      "type": "image",
+      "version": "10.3.18-debian-9-r36"
+    }],
+    "name": "mariadb:7.0.0",
+    "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
+    "type": "chart",
+    "shortName": "mariadb",
+    "version": "7.0.0"
+  }],
+  "name": "magento:6.0.0",
+  "description": "DEPRECATED A feature-rich flexible e-commerce solution. It includes transaction options, multi-store functionality, loyalty programs, product categorization and shopper filtering, promotion rules, and more.",
+  "type": "chart",
+  "shortName": "magento",
+  "version": "6.0.0"
+}

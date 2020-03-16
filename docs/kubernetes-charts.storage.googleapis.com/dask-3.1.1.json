@@ -1,0 +1,23 @@
+{
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "daskdev/dask",
+      "type": "image",
+      "version": "1.1.5"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "daskdev/dask-notebook",
+      "type": "image",
+      "version": "1.1.5"
+    }
+  ],
+  "name": "dask:3.1.1",
+  "description": "DEPRECATED Distributed computation in Python with task scheduling",
+  "type": "chart",
+  "shortName": "dask",
+  "version": "3.1.1"
+}

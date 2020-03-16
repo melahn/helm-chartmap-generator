@@ -1,0 +1,29 @@
+Chart Map for hlf-ca:1.2.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: hlf-ca:1.2.0
+	apiVersion: v1
+	appVersion: 1.4.3
+	created: Not specified
+	dependencies: None
+	description: Hyperledger Fabric Certificate Authority chart (these charts are created by AID:Tech and are currently not directly associated with the Hyperledger project)
+	digest: Not specified
+	icon: https://www.hyperledger.org/wp-content/uploads/2018/04/fabric-logo.png
+	keywords: blockchain,hyperledger,fabric
+	maintainers: alexvicegrab:sasha@aid.technology,inzamam-iqbal:inzamam@aid.technology,dbandin:diego@aid.technology
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: hlf-ca
+	sources: https://github.com/hyperledger/fabric-ca
+	urls: Not specified
+	version: 1.2.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: hyperledger/fabric-ca:1.4.3
+
+Chart Dependencies
+------------------
+hlf-ca:1.2.0 uses hyperledger/fabric-ca:1.4.3
+
+Generated on 2020/03/16 17:18:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

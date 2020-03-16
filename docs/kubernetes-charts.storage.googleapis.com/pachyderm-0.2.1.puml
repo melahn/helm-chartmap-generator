@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for pachyderm:0.2.1
+
+'There is one referenced Helm Chart
+artifact "pachyderm:0.2.1\n====\n\tpachyderm\n====\n\t0.2.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: jonandernovella, dwhitena, jdoliner\n====\n\tKeywords: pachyderm\nworkflows\nreproducibility\ndistributed\nprocessing" as pachyderm_0_2_1 #CadetBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tquay.io\n====\n\tcoreos/etcd:v3.3.5\n====\n\tv3.3.5" as quay_io_coreos_etcd_v3_3_5 #Cornsilk
+
+'Chart Dependencies
+pachyderm_0_2_1--[#orange]-|>quay_io_coreos_etcd_v3_3_5
+
+center footer Generated on 2020/03/16 17:26:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

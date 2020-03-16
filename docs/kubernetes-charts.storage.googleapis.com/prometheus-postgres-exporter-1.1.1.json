@@ -1,0 +1,23 @@
+{
+  "maintainers": [{
+    "name": "gianrubio",
+    "email": "gianrubio@gmail.com"
+  }],
+  "keywords": [
+    "postgresql",
+    "prometheus",
+    "exporter"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "wrouesnel/postgres_exporter",
+    "type": "image",
+    "version": "v0.5.1"
+  }],
+  "name": "prometheus-postgres-exporter:1.1.1",
+  "description": "A Helm chart for prometheus postgres-exporter",
+  "type": "chart",
+  "shortName": "prometheus-postgres-exporter",
+  "version": "1.1.1"
+}

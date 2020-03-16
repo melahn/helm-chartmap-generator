@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for reloader:1.2.0
+
+'There is one referenced Helm Chart
+artifact "reloader:1.2.0\n====\n\treloader\n====\n\t1.2.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: rasheedamir, waseem-h, faizanahmad055, kahootali, ahmadiq, ahsan-storm\n====\n\tKeywords: Reloader\nkubernetes" as reloader_1_2_0 #Coral
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tstakater/reloader\n====\n\tv0.0.41" as stakater_reloader_v0_0_41 #LemonChiffon
+
+'Chart Dependencies
+reloader_1_2_0--[#orange]-|>stakater_reloader_v0_0_41
+
+center footer Generated on 2020/03/16 17:28:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

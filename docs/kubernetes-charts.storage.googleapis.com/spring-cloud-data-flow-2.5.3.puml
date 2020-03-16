@@ -1,0 +1,31 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for spring-cloud-data-flow:2.5.3
+
+'There are 3 referenced Helm Charts
+artifact "spring-cloud-data-flow:2.5.3\n====\n\tspring-cloud-data-flow\n====\n\t2.5.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: trisberg, chrisjs, sabbyanandan\n====\n\tKeywords: " as spring_cloud_data_flow_2_5_3 #LightSteelBlue
+artifact "mysql:1.1.0\n====\n\tmysql\n====\n\t1.1.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: olemarkus, viglesiasce\n====\n\tKeywords: mysql\ndatabase\nsql" as mysql_1_1_0 #Aqua
+artifact "rabbitmq:0.6.16\n====\n\trabbitmq\n====\n\t0.6.16\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: rabbitmq\nmessage queue\nAMQP" as rabbitmq_0_6_16 #Aqua
+
+'There are 4 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tbitnami/rabbitmq\n====\n\t3.7.2-r1" as bitnami_rabbitmq_3_7_2_r1 #Fuchsia
+usecase "Image\n====\n\tDocker Hub\n====\n\tspringcloud/spring-cloud-dataflow-server\n====\n\t2.3.1.RELEASE" as springcloud_spring_cloud_dataflow_server_2_3_1_RELEASE #Beige
+usecase "Image\n====\n\tDocker Hub\n====\n\tspringcloud/spring-cloud-skipper-server\n====\n\t2.2.2.RELEASE" as springcloud_spring_cloud_skipper_server_2_2_2_RELEASE #Azure
+usecase "Image\n====\n\tDocker Hub\n====\n\tmysql\n====\n\t5.7.14" as mysql_5_7_14 #Aqua
+
+'Chart Dependencies
+spring_cloud_data_flow_2_5_3--[#green]-|>rabbitmq_0_6_16
+spring_cloud_data_flow_2_5_3--[#green]-|>mysql_1_1_0
+spring_cloud_data_flow_2_5_3--[#orange]-|>springcloud_spring_cloud_dataflow_server_2_3_1_RELEASE
+spring_cloud_data_flow_2_5_3--[#orange]-|>springcloud_spring_cloud_skipper_server_2_2_2_RELEASE
+mysql_1_1_0--[#orange]-|>mysql_5_7_14
+rabbitmq_0_6_16--[#orange]-|>bitnami_rabbitmq_3_7_2_r1
+
+center footer Generated on 2020/03/16 17:30:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

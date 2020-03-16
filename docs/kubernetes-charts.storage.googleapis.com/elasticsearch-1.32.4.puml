@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for elasticsearch:1.32.4
+
+'There is one referenced Helm Chart
+artifact "elasticsearch:1.32.4\n====\n\telasticsearch\n====\n\t1.32.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: simonswine, icereval, rendhalver, desaintmartin, KongZ, hectorj2f\n====\n\tKeywords: " as elasticsearch_1_32_4 #Aquamarine
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tdocker.elastic.co\n====\n\telasticsearch/elasticsearch-oss:6.8.6\n====\n\t6.8.6" as docker_elastic_co_elasticsearch_elasticsearch_oss_6_8_6 #IndianRed
+
+'Chart Dependencies
+elasticsearch_1_32_4--[#orange]-|>docker_elastic_co_elasticsearch_elasticsearch_oss_6_8_6
+
+center footer Generated on 2020/03/16 17:16:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for gitlab-ce:0.2.2
+
+'There are 3 referenced Helm Charts
+artifact "gitlab-ce:0.2.2\n====\n\tgitlab-ce\n====\n\t0.2.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: git\nci\ndeploy\nissue tracker\ncode review\nwiki" as gitlab_ce_0_2_2 #Aqua
+artifact "redis:0.9.0\n====\n\tredis\n====\n\t0.9.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: bitnami-bot\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_0_9_0 #LightSeaGreen
+artifact "postgresql:0.8.1\n====\n\tpostgresql\n====\n\t0.8.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: swordbeta, databus23\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql" as postgresql_0_8_1 #LightSteelBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tbitnami/redis\n====\n\t3.2.9-r2" as bitnami_redis_3_2_9_r2 #Khaki
+usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t9.6" as postgres_9_6 #Ivory
+
+'Chart Dependencies
+gitlab_ce_0_2_2--[#green]-|>redis_0_9_0
+gitlab_ce_0_2_2--[#green]-|>postgresql_0_8_1
+redis_0_9_0--[#orange]-|>bitnami_redis_3_2_9_r2
+postgresql_0_8_1--[#orange]-|>postgres_9_6
+
+center footer Generated on 2020/03/16 17:17:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

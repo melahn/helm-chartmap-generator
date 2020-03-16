@@ -1,0 +1,31 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for spring-cloud-data-flow:2.6.0
+
+'There are 3 referenced Helm Charts
+artifact "rabbitmq:6.16.6\n====\n\trabbitmq\n====\n\t6.16.6\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami, desaintmartin\n====\n\tKeywords: rabbitmq\nmessage queue\nAMQP" as rabbitmq_6_16_6 #Aqua
+artifact "spring-cloud-data-flow:2.6.0\n====\n\tspring-cloud-data-flow\n====\n\t2.6.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: trisberg, chrisjs, sabbyanandan\n====\n\tKeywords: " as spring_cloud_data_flow_2_6_0 #LightSteelBlue
+artifact "mysql:1.6.2\n====\n\tmysql\n====\n\t1.6.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: olemarkus, viglesiasce\n====\n\tKeywords: mysql\ndatabase\nsql" as mysql_1_6_2 #Aqua
+
+'There are 4 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tspringcloud/spring-cloud-skipper-server\n====\n\t2.3.0.RELEASE" as springcloud_spring_cloud_skipper_server_2_3_0_RELEASE #Azure
+usecase "Image\n====\n\tDocker Hub\n====\n\tspringcloud/spring-cloud-dataflow-server\n====\n\t2.4.0.RELEASE" as springcloud_spring_cloud_dataflow_server_2_4_0_RELEASE #Beige
+usecase "Image\n====\n\tDocker Hub\n====\n\tmysql\n====\n\t5.7.28" as mysql_5_7_28 #Aqua
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/rabbitmq:3.8.2-debian-10-r0\n====\n\t3.8.2-debian-10-r0" as docker_io_bitnami_rabbitmq_3_8_2_debian_10_r0 #Beige
+
+'Chart Dependencies
+spring_cloud_data_flow_2_6_0--[#green]-|>mysql_1_6_2
+spring_cloud_data_flow_2_6_0--[#green]-|>rabbitmq_6_16_6
+rabbitmq_6_16_6--[#orange]-|>docker_io_bitnami_rabbitmq_3_8_2_debian_10_r0
+spring_cloud_data_flow_2_6_0--[#orange]-|>springcloud_spring_cloud_skipper_server_2_3_0_RELEASE
+spring_cloud_data_flow_2_6_0--[#orange]-|>springcloud_spring_cloud_dataflow_server_2_4_0_RELEASE
+mysql_1_6_2--[#orange]-|>mysql_5_7_28
+
+center footer Generated on 2020/03/16 17:30:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

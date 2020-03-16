@@ -1,0 +1,27 @@
+Chart Map for filebeat:4.0.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: filebeat:4.0.0
+	apiVersion: v1
+	appVersion: 7.4.0
+	created: Not specified
+	dependencies: None
+	description: A Helm chart to collect Kubernetes logs with filebeat
+	digest: Not specified
+	icon: https://www.elastic.co/assets/blt47799dcdcf08438d/logo-elastic-beats-lt.svg
+	keywords: Not specified
+	maintainers: rendhalver:pete.brown@powerhrg.com,sstarcher:shane.starcher@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: filebeat
+	sources: https://www.elastic.co/guide/en/beats/filebeat/current/index.html
+	urls: Not specified
+	version: 4.0.0
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/03/16 17:16:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

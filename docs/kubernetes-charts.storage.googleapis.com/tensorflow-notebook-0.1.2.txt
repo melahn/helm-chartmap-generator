@@ -1,0 +1,29 @@
+Chart Map for tensorflow-notebook:0.1.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: tensorflow-notebook:0.1.2
+	apiVersion: v1
+	appVersion: 1.6.0
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for tensorflow notebook and tensorboard
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: cheyang:cheyang@163.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: tensorflow-notebook
+	sources: https://github.com/tensorflow/tensorflow,https://github.com/jupyter
+	urls: Not specified
+	version: 0.1.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: tensorflow/tensorflow:1.6.0-devel
+
+Chart Dependencies
+------------------
+tensorflow-notebook:0.1.2 uses tensorflow/tensorflow:1.6.0-devel
+
+Generated on 2020/03/16 17:31:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

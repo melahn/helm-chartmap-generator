@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for katafygio:0.4.0
+
+'There is one referenced Helm Chart
+artifact "katafygio:0.4.0\n====\n\tkatafygio\n====\n\t0.4.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: bpineau\n====\n\tKeywords: backup\ndump\nkatafygio\ngit" as katafygio_0_4_0 #LightSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tbpineau/katafygio\n====\n\tv0.7.1" as bpineau_katafygio_v0_7_1 #LavenderBlush
+
+'Chart Dependencies
+katafygio_0_4_0--[#orange]-|>bpineau_katafygio_v0_7_1
+
+center footer Generated on 2020/03/16 17:20:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

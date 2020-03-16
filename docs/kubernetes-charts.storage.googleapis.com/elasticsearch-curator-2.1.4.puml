@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for elasticsearch-curator:2.1.4
+
+'There is one referenced Helm Chart
+artifact "elasticsearch-curator:2.1.4\n====\n\telasticsearch-curator\n====\n\t2.1.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: desaintmartin, gianrubio\n====\n\tKeywords: curator\nelasticsearch\nelasticsearch-curator" as elasticsearch_curator_2_1_4 #Gainsboro
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2020/03/16 17:16:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

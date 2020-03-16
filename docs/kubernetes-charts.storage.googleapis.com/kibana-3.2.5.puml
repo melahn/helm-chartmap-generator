@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kibana:3.2.5
+
+'There is one referenced Helm Chart
+artifact "kibana:3.2.5\n====\n\tkibana\n====\n\t3.2.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: compleatang, monotek\n====\n\tKeywords: elasticsearch\nkibana" as kibana_3_2_5 #GhostWhite
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tdocker.elastic.co\n====\n\tkibana/kibana-oss:6.7.0\n====\n\t6.7.0" as docker_elastic_co_kibana_kibana_oss_6_7_0 #DarkTurquoise
+
+'Chart Dependencies
+kibana_3_2_5--[#orange]-|>docker_elastic_co_kibana_kibana_oss_6_7_0
+
+center footer Generated on 2020/03/16 17:21:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

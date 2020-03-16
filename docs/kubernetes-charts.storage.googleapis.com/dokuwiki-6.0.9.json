@@ -1,0 +1,26 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "dokuwiki",
+    "wiki",
+    "http",
+    "web",
+    "application",
+    "php"
+  ],
+  "children": [{
+    "repoHost": "docker.io",
+    "children": [],
+    "name": "bitnami/dokuwiki",
+    "type": "image",
+    "version": "0.20180422.201901061035-debian-10-r28"
+  }],
+  "name": "dokuwiki:6.0.9",
+  "description": "DokuWiki is a standards-compliant, simple to use wiki optimized for creating documentation. It is targeted at developer teams, workgroups, and small companies. All data is stored in plain text files, so no database is required.",
+  "type": "chart",
+  "shortName": "dokuwiki",
+  "version": "6.0.9"
+}

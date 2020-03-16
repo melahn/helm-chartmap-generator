@@ -1,0 +1,45 @@
+Chart Map for mcrouter:1.0.1
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: mcrouter:1.0.1
+	apiVersion: v1
+	appVersion: 0.36.0
+	created: Not specified
+	dependencies: memcached:2.9.0
+	description: Mcrouter is a memcached protocol router for scaling memcached deployments.
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: jphalip:jphalip@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mcrouter
+	sources: https://github.com/facebook/mcrouter,https://github.com/jphalip/mcrouter-docker
+	urls: Not specified
+	version: 1.0.1
+Chart: memcached:2.9.0
+	apiVersion: v1
+	appVersion: 1.5.12
+	created: 2019-09-09T16:27:08.136378117Z
+	dependencies: None
+	description: Free & open source, high-performance, distributed memory object caching system.
+	digest: c261ee114efd87ea9fdc1e99bfa21582f14de625171a56782ce075838d1177a1
+	icon: https://upload.wikimedia.org/wikipedia/en/thumb/2/27/Memcached.svg/1024px-Memcached.svg.png
+	keywords: memcached,cache
+	maintainers: gtaylor:gtaylor@gc-taylor.com,olemarkus:o.with@sportradar.com,kennethaasan:k.aasan@sportradar.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: memcached
+	sources: https://github.com/docker-library/memcached
+	urls: https://kubernetes-charts.storage.googleapis.com/memcached-2.9.0.tgz
+	version: 2.9.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: memcached:1.5.12-alpine
+
+Chart Dependencies
+------------------
+mcrouter:1.0.1 depends on memcached:2.9.0
+memcached:2.9.0 uses memcached:1.5.12-alpine
+
+Generated on 2020/03/16 17:22:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

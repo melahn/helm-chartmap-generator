@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for hlf-peer:1.2.10
+
+'There is one referenced Helm Chart
+artifact "hlf-peer:1.2.10\n====\n\thlf-peer\n====\n\t1.2.10\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: alexvicegrab, inzamam-iqbal, dbandin\n====\n\tKeywords: blockchain\nhyperledger\nfabric" as hlf_peer_1_2_10 #GreenYellow
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\thyperledger/fabric-peer\n====\n\t1.3.0" as hyperledger_fabric_peer_1_3_0 #FloralWhite
+
+'Chart Dependencies
+hlf_peer_1_2_10--[#orange]-|>hyperledger_fabric_peer_1_3_0
+
+center footer Generated on 2020/03/16 17:19:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

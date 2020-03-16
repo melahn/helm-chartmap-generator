@@ -1,0 +1,28 @@
+{
+  "maintainers": [
+    {
+      "name": "rendhalver",
+      "email": "pete.brown@powerhrg.com"
+    },
+    {
+      "name": "miouge1",
+      "email": "maxime@root314.com"
+    },
+    {
+      "name": "hectorj2f",
+      "email": "hfernandez@mesosphere.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "google-containers/fluentd-elasticsearch",
+    "type": "image",
+    "version": "v2.4.0"
+  }],
+  "name": "fluentd:2.4.0",
+  "description": "A Fluentd Elasticsearch Helm chart for Kubernetes.",
+  "type": "chart",
+  "shortName": "fluentd",
+  "version": "2.4.0"
+}

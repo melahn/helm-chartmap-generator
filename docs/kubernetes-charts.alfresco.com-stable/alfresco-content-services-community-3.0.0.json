@@ -1,0 +1,109 @@
+{
+  "keywords": [
+    "community",
+    "alfresco community",
+    "content",
+    "content services",
+    "alfresco",
+    "alfresco content services"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-content-repository-community",
+      "type": "image",
+      "version": "6.2.0-ea"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-share",
+      "type": "image",
+      "version": "6.2.0-RC4"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-libreoffice",
+      "type": "image",
+      "version": "2.1.0-RC3"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-pdf-renderer",
+      "type": "image",
+      "version": "2.1.0-RC3"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-transform-misc",
+      "type": "image",
+      "version": "2.1.0-RC3"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-imagemagick",
+      "type": "image",
+      "version": "2.1.0-RC3"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-tika",
+      "type": "image",
+      "version": "2.1.0-RC3"
+    },
+    {
+      "maintainers": [{"name": "databus23"}],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "11.4"
+      }],
+      "name": "postgresql:0.9.3",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.9.3"
+    },
+    {
+      "keywords": [
+        "search",
+        "search services",
+        "alfresco search services",
+        "insight",
+        "insight engine",
+        "alfresco insight engine"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "alfresco/alfresco-search-services",
+        "type": "image",
+        "version": "1.4.0"
+      }],
+      "name": "alfresco-search:1.0.0",
+      "description": "A Helm chart for deploying Alfresco Search",
+      "type": "chart",
+      "shortName": "alfresco-search",
+      "version": "1.0.0"
+    }
+  ],
+  "name": "alfresco-content-services-community:3.0.0",
+  "description": "A Helm chart for deploying Alfresco Content Services Community",
+  "type": "chart",
+  "shortName": "alfresco-content-services-community",
+  "version": "3.0.0"
+}

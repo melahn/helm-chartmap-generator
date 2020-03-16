@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for magic-ip-address:0.1.0
+
+'There is one referenced Helm Chart
+artifact "magic-ip-address:0.1.0\n====\n\tmagic-ip-address\n====\n\t0.1.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: mumoshu\n====\n\tKeywords: " as magic_ip_address_0_1_0 #AliceBlue
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2020/03/16 17:22:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

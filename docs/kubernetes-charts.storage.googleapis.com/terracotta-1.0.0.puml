@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for terracotta:1.0.0
+
+'There is one referenced Helm Chart
+artifact "terracotta:1.0.0\n====\n\tterracotta\n====\n\t1.0.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: anthonydahanne\n====\n\tKeywords: terracotta\njcache\nin-memory\ncaching" as terracotta_1_0_0 #DarkSalmon
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tterracotta/terracotta-server-oss\n====\n\t5.5.1" as terracotta_terracotta_server_oss_5_5_1 #Ivory
+
+'Chart Dependencies
+terracotta_1_0_0--[#orange]-|>terracotta_terracotta_server_oss_5_5_1
+
+center footer Generated on 2020/03/16 17:31:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

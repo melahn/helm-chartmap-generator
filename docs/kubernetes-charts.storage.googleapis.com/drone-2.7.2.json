@@ -1,0 +1,17 @@
+{
+  "keywords": [
+    "continuous-delivery",
+    "continuous-deployment",
+    "continuous-integration",
+    "docker",
+    "drone",
+    "drone.io",
+    "go"
+  ],
+  "children": [],
+  "name": "drone:2.7.2",
+  "description": "Drone is a Continuous Delivery system built on container technology",
+  "type": "chart",
+  "shortName": "drone",
+  "version": "2.7.2"
+}

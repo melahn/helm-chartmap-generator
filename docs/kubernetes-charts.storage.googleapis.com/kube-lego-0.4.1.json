@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "kube-lego",
+    "letsencrypt"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "jetstack/kube-lego",
+    "type": "image",
+    "version": "0.1.5"
+  }],
+  "name": "kube-lego:0.4.1",
+  "description": "DEPRECATED Automatically requests certificates from Let's Encrypt",
+  "type": "chart",
+  "shortName": "kube-lego",
+  "version": "0.4.1"
+}

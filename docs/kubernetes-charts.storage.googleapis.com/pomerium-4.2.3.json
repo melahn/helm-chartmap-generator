@@ -1,0 +1,34 @@
+{
+  "maintainers": [
+    {
+      "name": "desimone",
+      "email": "bobby.desimone@gmail.com"
+    },
+    {"name": "travisgroth"}
+  ],
+  "keywords": [
+    "proxy",
+    "access-proxy",
+    "reverse-proxy",
+    "sso",
+    "openid connect",
+    "oauth2",
+    "authorization",
+    "authentication",
+    "google",
+    "okta",
+    "azure"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "pomerium/pomerium",
+    "type": "image",
+    "version": "v0.5.2"
+  }],
+  "name": "pomerium:4.2.3",
+  "description": "DEPRECATED - see https://helm.pomerium.io",
+  "type": "chart",
+  "shortName": "pomerium",
+  "version": "4.2.3"
+}

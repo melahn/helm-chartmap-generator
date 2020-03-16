@@ -1,0 +1,47 @@
+Chart Map for jasperreports:7.0.9
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: mariadb:7.3.12
+	apiVersion: v1
+	appVersion: 10.3.22
+	created: 2020-03-11T16:59:26.242689051Z
+	dependencies: None
+	description: Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.
+	digest: 0fd31add0399f731d5a5b059465080649d773c2c4130be696628e21271469ccd
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter
+	urls: https://kubernetes-charts.storage.googleapis.com/mariadb-7.3.12.tgz
+	version: 7.3.12
+Chart: jasperreports:7.0.9
+	apiVersion: v1
+	appVersion: 7.2.0
+	created: Not specified
+	dependencies: mariadb:7.3.12
+	description: The JasperReports server can be used as a stand-alone or embedded reporting and BI server that offers web-based reporting, analytic tools and visualization, and a dashboard feature for compiling multiple custom views
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/jasperserver/img/jasperserver-stack-110x117.png
+	keywords: business intelligence,java,jasper,reporting,analytic,visualization
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: jasperreports
+	sources: https://github.com/bitnami/bitnami-docker-jasperreports
+	urls: Not specified
+	version: 7.0.9
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.3.22-debian-10-r27
+Image: docker.io/bitnami/jasperreports:7.2.0-debian-10-r24
+
+Chart Dependencies
+------------------
+jasperreports:7.0.9 depends on mariadb:7.3.12
+mariadb:7.3.12 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r27
+jasperreports:7.0.9 uses docker.io/bitnami/jasperreports:7.2.0-debian-10-r24
+
+Generated on 2020/03/16 17:20:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

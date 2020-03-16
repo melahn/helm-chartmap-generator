@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "mgoodness",
+    "email": "mgoodness@gmail.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "k8s.gcr.io/spartakus-amd64",
+    "type": "image",
+    "version": "v1.0.0"
+  }],
+  "name": "spartakus:1.1.6",
+  "description": "Collect information about Kubernetes clusters to help improve the project.",
+  "type": "chart",
+  "shortName": "spartakus",
+  "version": "1.1.6"
+}

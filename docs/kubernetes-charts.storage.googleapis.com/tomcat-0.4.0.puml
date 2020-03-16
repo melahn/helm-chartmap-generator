@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for tomcat:0.4.0
+
+'There is one referenced Helm Chart
+artifact "tomcat:0.4.0\n====\n\ttomcat\n====\n\t0.4.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: yahavb\n====\n\tKeywords: " as tomcat_0_4_0 #Darkorange
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\ttomcat\n====\n\t7.0" as tomcat_7_0 #Darkorange
+
+'Chart Dependencies
+tomcat_0_4_0--[#orange]-|>tomcat_7_0
+
+center footer Generated on 2020/03/16 17:31:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

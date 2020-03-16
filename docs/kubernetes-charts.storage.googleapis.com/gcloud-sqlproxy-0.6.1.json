@@ -1,0 +1,16 @@
+{
+  "keywords": [
+    "google",
+    "cloud",
+    "postgresql",
+    "mysql",
+    "sql",
+    "sqlproxy"
+  ],
+  "children": [],
+  "name": "gcloud-sqlproxy:0.6.1",
+  "description": "DEPRECATED Google Cloud SQL Proxy",
+  "type": "chart",
+  "shortName": "gcloud-sqlproxy",
+  "version": "0.6.1"
+}

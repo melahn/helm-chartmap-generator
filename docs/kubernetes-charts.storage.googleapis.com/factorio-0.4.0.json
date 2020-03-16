@@ -1,0 +1,22 @@
+{
+  "maintainers": [{
+    "name": "gtaylor",
+    "email": "gtaylor@gc-taylor.com"
+  }],
+  "keywords": [
+    "game",
+    "server"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "games_on_k8s/factorio",
+    "type": "image",
+    "version": "0.15.39"
+  }],
+  "name": "factorio:0.4.0",
+  "description": "Factorio dedicated server.",
+  "type": "chart",
+  "shortName": "factorio",
+  "version": "0.4.0"
+}

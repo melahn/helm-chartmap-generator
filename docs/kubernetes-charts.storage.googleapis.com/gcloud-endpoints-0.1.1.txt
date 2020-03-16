@@ -1,0 +1,29 @@
+Chart Map for gcloud-endpoints:0.1.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: gcloud-endpoints:0.1.1
+	apiVersion: Not specified
+	appVersion: 1
+	created: Not specified
+	dependencies: None
+	description: Develop, deploy, protect and monitor your APIs with Google Cloud Endpoints.
+	digest: Not specified
+	icon: Not specified
+	keywords: google,endpoints,nginx,gcloud,proxy,authentication,monitoring,api,swagger,open api
+	maintainers: ultimateboy:mtucker@deis.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: gcloud-endpoints
+	sources: Not specified
+	urls: Not specified
+	version: 0.1.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: b.gcr.io/endpoints/endpoints-runtime:1
+
+Chart Dependencies
+------------------
+gcloud-endpoints:0.1.1 uses b.gcr.io/endpoints/endpoints-runtime:1
+
+Generated on 2020/03/16 17:17:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

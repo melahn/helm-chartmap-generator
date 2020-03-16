@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "pmint93",
+    "email": "phamminhthanh69@gmail.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "metabase/metabase",
+    "type": "image",
+    "version": "v0.34.0"
+  }],
+  "name": "metabase:0.10.5",
+  "description": "The easy, open source way for everyone in your company to ask questions and learn from data.",
+  "type": "chart",
+  "shortName": "metabase",
+  "version": "0.10.5"
+}

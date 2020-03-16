@@ -1,0 +1,22 @@
+{
+  "maintainers": [
+    {
+      "name": "Jason DuMars",
+      "email": "jdumars+github@gmail.com"
+    },
+    {
+      "name": "Sean Knox",
+      "email": "knoxville+github@gmail.com"
+    }
+  ],
+  "keywords": [
+    "monitoring",
+    "logging"
+  ],
+  "children": [],
+  "name": "sumokube:0.1.4",
+  "description": "Sumologic Log Collector",
+  "type": "chart",
+  "shortName": "sumokube",
+  "version": "0.1.4"
+}

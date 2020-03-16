@@ -1,0 +1,32 @@
+{
+  "maintainers": [
+    {
+      "name": "compleatang",
+      "email": "casey@monax.io"
+    },
+    {
+      "name": "gregdhill",
+      "email": "greg.hill@monax.io"
+    }
+  ],
+  "keywords": [
+    "blockchain",
+    "smart contracts",
+    "ethereum",
+    "hyperledger",
+    "evm",
+    "web3"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "hyperledger/burrow",
+    "type": "image",
+    "version": "0.29.0"
+  }],
+  "name": "burrow:1.5.2",
+  "description": "Burrow is a permissionable smart contract machine",
+  "type": "chart",
+  "shortName": "burrow",
+  "version": "1.5.2"
+}

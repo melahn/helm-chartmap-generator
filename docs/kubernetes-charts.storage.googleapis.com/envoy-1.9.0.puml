@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for envoy:1.9.0
+
+'There is one referenced Helm Chart
+artifact "envoy:1.9.0\n====\n\tenvoy\n====\n\t1.9.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: josdotso, mumoshu\n====\n\tKeywords: envoy\nproxy" as envoy_1_9_0 #LightSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tenvoyproxy/envoy\n====\n\tv1.11.1" as envoyproxy_envoy_v1_11_1 #LightSkyBlue
+
+'Chart Dependencies
+envoy_1_9_0--[#orange]-|>envoyproxy_envoy_v1_11_1
+
+center footer Generated on 2020/03/16 17:16:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

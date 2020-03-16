@@ -1,0 +1,22 @@
+{
+  "maintainers": [{
+    "name": "komljen",
+    "email": "alen.komljen@live.com"
+  }],
+  "keywords": [
+    "spot",
+    "rescheduler"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "pusher/k8s-spot-rescheduler",
+    "type": "image",
+    "version": "v0.2.0"
+  }],
+  "name": "k8s-spot-rescheduler:0.4.3",
+  "description": "A k8s-spot-rescheduler Helm chart for Kubernetes",
+  "type": "chart",
+  "shortName": "k8s-spot-rescheduler",
+  "version": "0.4.3"
+}

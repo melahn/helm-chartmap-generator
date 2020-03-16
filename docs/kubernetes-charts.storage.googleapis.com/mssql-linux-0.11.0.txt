@@ -1,0 +1,29 @@
+Chart Map for mssql-linux:0.11.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: mssql-linux:0.11.0
+	apiVersion: v1
+	appVersion: 14.0.3023.8
+	created: Not specified
+	dependencies: None
+	description: SQL Server 2017 Linux Helm Chart
+	digest: Not specified
+	icon: https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1I4Dx
+	keywords: Not specified
+	maintainers: thomasliddledba:tliddle30@gmail.com,winromulus:winromulus@winromulus.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mssql-linux
+	sources: https://hub.docker.com/r/microsoft/mssql-server-linux/
+	urls: Not specified
+	version: 0.11.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: microsoft/mssql-server-linux:2017-CU5
+
+Chart Dependencies
+------------------
+mssql-linux:0.11.0 uses microsoft/mssql-server-linux:2017-CU5
+
+Generated on 2020/03/16 17:24:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,65 @@
+Chart Map for anchore-engine:1.4.3
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: redis:6.4.5
+	apiVersion: v1
+	appVersion: 4.0.14
+	created: 2019-04-23T08:56:35.068841863Z
+	dependencies: None
+	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: 14e8127fb9deee7be95b5433007c8ee9c9643cc76bcada440f0bf602ff666071
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://kubernetes-charts.storage.googleapis.com/redis-6.4.5.tgz
+	version: 6.4.5
+Chart: anchore-engine:1.4.3
+	apiVersion: v1
+	appVersion: 0.6.1
+	created: Not specified
+	dependencies: postgresql:1.0.0, redis:6.4.5
+	description: Anchore container analysis and policy evaluation engine service
+	digest: Not specified
+	icon: https://anchore.com/wp-content/uploads/2016/08/anchore.png
+	keywords: analysis,docker,anchore,anchore-engine,image,security,vulnerability,scanner
+	maintainers: zhill:zach@anchore.com,btodhunter:bradyt@anchore.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: anchore-engine
+	sources: https://github.com/anchore/anchore-engine
+	urls: Not specified
+	version: 1.4.3
+Chart: postgresql:1.0.0
+	apiVersion: Not specified
+	appVersion: 9.6.2
+	created: 2018-10-24T07:24:55.390759352Z
+	dependencies: None
+	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: c9202bdeff429be22c9ca19aa39fb57c418d548803c20e33aa6035feffc49dab
+	icon: https://www.postgresql.org/media/img/about/press/elephant.png
+	keywords: postgresql,postgres,database,sql
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: postgresql
+	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
+	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-1.0.0.tgz
+	version: 1.0.0
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: docker.io/anchore/anchore-engine:v0.6.1
+Image: postgres:9.6.2
+Image: docker.io/bitnami/redis:4.0.14
+
+Chart Dependencies
+------------------
+anchore-engine:1.4.3 depends on postgresql:1.0.0
+anchore-engine:1.4.3 depends on redis:6.4.5
+redis:6.4.5 uses docker.io/bitnami/redis:4.0.14
+anchore-engine:1.4.3 uses docker.io/anchore/anchore-engine:v0.6.1
+postgresql:1.0.0 uses postgres:9.6.2
+
+Generated on 2020/03/16 17:12:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

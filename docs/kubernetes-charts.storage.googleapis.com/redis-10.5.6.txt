@@ -1,0 +1,29 @@
+Chart Map for redis:10.5.6
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: redis:10.5.6
+	apiVersion: v1
+	appVersion: 5.0.7
+	created: Not specified
+	dependencies: None
+	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: Not specified
+	version: 10.5.6
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/redis:5.0.7-debian-10-r32
+
+Chart Dependencies
+------------------
+redis:10.5.6 uses docker.io/bitnami/redis:5.0.7-debian-10-r32
+
+Generated on 2020/03/16 17:28:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

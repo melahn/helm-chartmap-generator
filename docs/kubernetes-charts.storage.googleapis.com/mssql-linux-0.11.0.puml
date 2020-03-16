@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for mssql-linux:0.11.0
+
+'There is one referenced Helm Chart
+artifact "mssql-linux:0.11.0\n====\n\tmssql-linux\n====\n\t0.11.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: thomasliddledba, winromulus\n====\n\tKeywords: " as mssql_linux_0_11_0 #Gold
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tmicrosoft/mssql-server-linux\n====\n\t2017-CU5" as microsoft_mssql_server_linux_2017_CU5 #LightBlue
+
+'Chart Dependencies
+mssql_linux_0_11_0--[#orange]-|>microsoft_mssql_server_linux_2017_CU5
+
+center footer Generated on 2020/03/16 17:24:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

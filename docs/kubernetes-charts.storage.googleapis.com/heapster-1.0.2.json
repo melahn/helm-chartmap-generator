@@ -1,0 +1,23 @@
+{
+  "maintainers": [{
+    "name": "jose5918",
+    "email": "jose.g.aguirre@intel.com"
+  }],
+  "keywords": [
+    "metrics",
+    "cadvisor",
+    "monitoring"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "k8s.gcr.io/heapster-amd64",
+    "type": "image",
+    "version": "v1.5.4"
+  }],
+  "name": "heapster:1.0.2",
+  "description": "Heapster enables Container Cluster Monitoring and Performance Analysis.",
+  "type": "chart",
+  "shortName": "heapster",
+  "version": "1.0.2"
+}

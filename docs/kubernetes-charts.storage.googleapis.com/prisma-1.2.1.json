@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "giacomoguiulfo",
+    "email": "giacomoguiulfo@gmail.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prismagraphql/prisma",
+    "type": "image",
+    "version": "1.29.1-heroku"
+  }],
+  "name": "prisma:1.2.1",
+  "description": "Prisma turns your database into a realtime GraphQL API",
+  "type": "chart",
+  "shortName": "prisma",
+  "version": "1.2.1"
+}

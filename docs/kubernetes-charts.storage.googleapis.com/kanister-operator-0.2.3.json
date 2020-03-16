@@ -1,0 +1,24 @@
+{
+  "maintainers": [
+    {
+      "name": "depohmel",
+      "email": "ilya@kasten.io"
+    },
+    {
+      "name": "tdmanv",
+      "email": "tom@kasten.io"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "kanisterio/controller",
+    "type": "image",
+    "version": "v0.2.0"
+  }],
+  "name": "kanister-operator:0.2.3",
+  "description": "Kanister-operator Helm chart for Kubernetes",
+  "type": "chart",
+  "shortName": "kanister-operator",
+  "version": "0.2.3"
+}

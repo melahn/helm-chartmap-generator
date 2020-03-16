@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for sentry:4.0.0
+
+'There are 3 referenced Helm Charts
+artifact "postgresql:6.5.0\n====\n\tpostgresql\n====\n\t6.5.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami, desaintmartin\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql\nreplication\ncluster" as postgresql_6_5_0 #LightSteelBlue
+artifact "sentry:4.0.0\n====\n\tsentry\n====\n\t4.0.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: rothgar, okgolove\n====\n\tKeywords: debugging\nlogging" as sentry_4_0_0 #GreenYellow
+artifact "redis:9.3.2\n====\n\tredis\n====\n\t9.3.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami, desaintmartin\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_9_3_2 #LightSeaGreen
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/redis:5.0.5-debian-9-r141\n====\n\t5.0.5-debian-9-r141" as docker_io_bitnami_redis_5_0_5_debian_9_r141 #Azure
+usecase "Image\n====\n\tDocker Hub\n====\n\tsentry\n====\n\t9.1.2" as sentry_9_1_2 #GreenYellow
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/postgresql:11.5.0-debian-9-r60\n====\n\t11.5.0-debian-9-r60" as docker_io_bitnami_postgresql_11_5_0_debian_9_r60 #DarkSalmon
+
+'Chart Dependencies
+sentry_4_0_0--[#green]-|>postgresql_6_5_0
+sentry_4_0_0--[#green]-|>redis_9_3_2
+postgresql_6_5_0--[#orange]-|>docker_io_bitnami_postgresql_11_5_0_debian_9_r60
+sentry_4_0_0--[#orange]-|>sentry_9_1_2
+redis_9_3_2--[#orange]-|>docker_io_bitnami_redis_5_0_5_debian_9_r141
+
+center footer Generated on 2020/03/16 17:29:42 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

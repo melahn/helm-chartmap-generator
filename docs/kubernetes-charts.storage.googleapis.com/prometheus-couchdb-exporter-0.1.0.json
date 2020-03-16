@@ -1,0 +1,19 @@
+{
+  "maintainers": [{
+    "name": "gkarthiks",
+    "email": "github.gkarthiks@gmail.com"
+  }],
+  "keywords": ["couchdb-exporter"],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "gesellix/couchdb-prometheus-exporter",
+    "type": "image",
+    "version": "16"
+  }],
+  "name": "prometheus-couchdb-exporter:0.1.0",
+  "description": "A Helm chart to export the metrics from couchdb in Prometheus format.",
+  "type": "chart",
+  "shortName": "prometheus-couchdb-exporter",
+  "version": "0.1.0"
+}

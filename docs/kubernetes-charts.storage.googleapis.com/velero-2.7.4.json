@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "velero:2.7.4",
+  "description": "A Helm chart for velero",
+  "type": "chart",
+  "shortName": "velero",
+  "version": "2.7.4"
+}

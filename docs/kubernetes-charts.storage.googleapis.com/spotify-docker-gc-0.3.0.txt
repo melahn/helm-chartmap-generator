@@ -1,0 +1,27 @@
+Chart Map for spotify-docker-gc:0.3.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: spotify-docker-gc:0.3.0
+	apiVersion: Not specified
+	appVersion: latest
+	created: Not specified
+	dependencies: None
+	description: A simple Docker container and image garbage collection script.
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: vdice:vadice@microsoft.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: spotify-docker-gc
+	sources: https://github.com/spotify/docker-gc
+	urls: Not specified
+	version: 0.3.0
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/03/16 17:30:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

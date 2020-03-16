@@ -1,0 +1,29 @@
+Chart Map for prometheus-consul-exporter:0.1.4
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: prometheus-consul-exporter:0.1.4
+	apiVersion: v1
+	appVersion: 0.4.0
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for the Prometheus Consul Exporter
+	digest: Not specified
+	icon: Not specified
+	keywords: metrics,consul,monitoring
+	maintainers: timm088:8890118+timm088@users.noreply.github.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: prometheus-consul-exporter
+	sources: Not specified
+	urls: Not specified
+	version: 0.1.4
+
+There is one referenced Docker Image
+------------------------------------
+Image: prom/consul-exporter:v0.4.0
+
+Chart Dependencies
+------------------
+prometheus-consul-exporter:0.1.4 uses prom/consul-exporter:v0.4.0
+
+Generated on 2020/03/16 17:27:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

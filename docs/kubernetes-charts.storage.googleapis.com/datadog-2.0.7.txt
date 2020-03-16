@@ -1,0 +1,45 @@
+Chart Map for datadog:2.0.7
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: datadog:2.0.7
+	apiVersion: v1
+	appVersion: 7
+	created: Not specified
+	dependencies: kube-state-metrics:2.3.1
+	description: DataDog Agent
+	digest: Not specified
+	icon: https://datadog-live.imgix.net/img/dd_logo_70x75.png
+	keywords: monitoring,alerting,metric
+	maintainers: hkaj:haissam@datadoghq.com,irabinovitch:ilan@datadoghq.com,charlyf:charly@datadoghq.com,mfpierre:pierre.margueritte@datadoghq.com,clamoriniere:cedric.lamoriniere@datadoghq.com,xlucas:xavier.lucas@datadoghq.com,L3n41c:lenaic.huard@datadoghq.com,celenechang:celene@datadoghq.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: datadog
+	sources: https://app.datadoghq.com/account/settings#agent/kubernetes,https://github.com/DataDog/datadog-agent
+	urls: Not specified
+	version: 2.0.7
+Chart: kube-state-metrics:2.3.1
+	apiVersion: v1
+	appVersion: 1.7.2
+	created: 2019-10-01T18:57:45.643049649Z
+	dependencies: None
+	description: Install kube-state-metrics to generate and expose cluster-level metrics
+	digest: 1647e585332649e6ac4020e9e025081195c392d85a25fba21274e4fb0183c860
+	icon: Not specified
+	keywords: metric,monitoring,prometheus,kubernetes
+	maintainers: fiunchinho:jose@armesto.net,tariq1890:tariq.ibrahim@mulesoft.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: kube-state-metrics
+	sources: https://github.com/kubernetes/kube-state-metrics/
+	urls: https://kubernetes-charts.storage.googleapis.com/kube-state-metrics-2.3.1.tgz
+	version: 2.3.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: quay.io/coreos/kube-state-metrics:v1.7.2
+
+Chart Dependencies
+------------------
+datadog:2.0.7 depends on kube-state-metrics:2.3.1
+kube-state-metrics:2.3.1 uses quay.io/coreos/kube-state-metrics:v1.7.2
+
+Generated on 2020/03/16 17:15:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

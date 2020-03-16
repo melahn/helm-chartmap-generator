@@ -1,0 +1,24 @@
+{
+  "maintainers": [{
+    "name": "anthonydahanne",
+    "email": "anthonydahanne@softwareag.com"
+  }],
+  "keywords": [
+    "terracotta",
+    "jcache",
+    "in-memory",
+    "caching"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "terracotta/terracotta-server-oss",
+    "type": "image",
+    "version": "5.5.1"
+  }],
+  "name": "terracotta:1.0.0",
+  "description": "Terracotta Ehcache is an improved version of Java's de facto caching API, Ehcache. It has a powerful, streamlined, modernized caching API taking advantage of newer Java features as well as the capability to be used via the JSR-107 \"JCache\" API.",
+  "type": "chart",
+  "shortName": "terracotta",
+  "version": "1.0.0"
+}

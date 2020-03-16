@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for efs-provisioner:0.10.2
+
+'There is one referenced Helm Chart
+artifact "efs-provisioner:0.10.2\n====\n\tefs-provisioner\n====\n\t0.10.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: whereisaaron, mariusv\n====\n\tKeywords: " as efs_provisioner_0_10_2 #Aqua
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2020/03/16 17:15:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

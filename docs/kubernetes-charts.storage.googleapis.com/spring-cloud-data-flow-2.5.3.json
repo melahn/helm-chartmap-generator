@@ -1,0 +1,89 @@
+{
+  "maintainers": [
+    {
+      "name": "trisberg",
+      "email": "trisberg@pivotal.io"
+    },
+    {
+      "name": "chrisjs",
+      "email": "cschaefer@pivotal.io"
+    },
+    {
+      "name": "sabbyanandan",
+      "email": "sanandan@pivotal.io"
+    }
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "springcloud/spring-cloud-dataflow-server",
+      "type": "image",
+      "version": "2.3.1.RELEASE"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "springcloud/spring-cloud-skipper-server",
+      "type": "image",
+      "version": "2.2.2.RELEASE"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "rabbitmq",
+        "message queue",
+        "AMQP"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "bitnami/rabbitmq",
+        "type": "image",
+        "version": "3.7.2-r1"
+      }],
+      "name": "rabbitmq:0.6.16",
+      "description": "Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
+      "type": "chart",
+      "shortName": "rabbitmq",
+      "version": "0.6.16"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "olemarkus",
+          "email": "o.with@sportradar.com"
+        },
+        {
+          "name": "viglesiasce",
+          "email": "viglesias@google.com"
+        }
+      ],
+      "keywords": [
+        "mysql",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "mysql",
+        "type": "image",
+        "version": "5.7.14"
+      }],
+      "name": "mysql:1.1.0",
+      "description": "Fast, reliable, scalable, and easy to use open-source relational database system.",
+      "type": "chart",
+      "shortName": "mysql",
+      "version": "1.1.0"
+    }
+  ],
+  "name": "spring-cloud-data-flow:2.5.3",
+  "description": "Toolkit for building data processing pipelines.",
+  "type": "chart",
+  "shortName": "spring-cloud-data-flow",
+  "version": "2.5.3"
+}

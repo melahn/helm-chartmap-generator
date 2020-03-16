@@ -1,0 +1,29 @@
+Chart Map for bitcoind:1.0.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: bitcoind:1.0.0
+	apiVersion: v1
+	appVersion: 0.17.1
+	created: Not specified
+	dependencies: None
+	description: Bitcoin is an innovative payment network and a new kind of money.
+	digest: Not specified
+	icon: https://bitcoin.org/img/icons/logotop.png
+	keywords: bitcoind,cryptocurrency,blockchain
+	maintainers: daniel-yavorovich:daniel@arilot.com,govale:shiyanval@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: bitcoind
+	sources: https://github.com/kubernetes/charts,https://github.com/kuberstack/bitcoind,https://github.com/kylemanna/docker-bitcoind
+	urls: Not specified
+	version: 1.0.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: arilot/docker-bitcoind:0.17.1
+
+Chart Dependencies
+------------------
+bitcoind:1.0.0 uses arilot/docker-bitcoind:0.17.1
+
+Generated on 2020/03/16 17:13:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

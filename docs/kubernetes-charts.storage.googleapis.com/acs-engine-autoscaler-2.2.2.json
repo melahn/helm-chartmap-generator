@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "acs-engine-autoscaler:2.2.2",
+  "description": "DEPRECATED Scales worker nodes within agent pools",
+  "type": "chart",
+  "shortName": "acs-engine-autoscaler",
+  "version": "2.2.2"
+}

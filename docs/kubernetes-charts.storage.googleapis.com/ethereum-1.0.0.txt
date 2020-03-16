@@ -1,0 +1,33 @@
+Chart Map for ethereum:1.0.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: ethereum:1.0.0
+	apiVersion: v1
+	appVersion: v1.7.3
+	created: Not specified
+	dependencies: None
+	description: private Ethereum network Helm chart for Kubernetes
+	digest: Not specified
+	icon: https://www.ethereum.org/images/logos/ETHEREUM-LOGO_PORTRAIT_Black_small.png
+	keywords: ethereum,blockchain
+	maintainers: jpoon:kubernetes@jasonpoon.ca
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: ethereum
+	sources: https://github.com/ethereum/go-ethereum
+	urls: Not specified
+	version: 1.0.0
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: ethereum/client-go:alltools-v1.7.3
+Image: ethereum/client-go:v1.7.3
+Image: ethereumex/eth-stats-dashboard:v0.0.1
+
+Chart Dependencies
+------------------
+ethereum:1.0.0 uses ethereum/client-go:alltools-v1.7.3
+ethereum:1.0.0 uses ethereumex/eth-stats-dashboard:v0.0.1
+ethereum:1.0.0 uses ethereum/client-go:v1.7.3
+
+Generated on 2020/03/16 17:16:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

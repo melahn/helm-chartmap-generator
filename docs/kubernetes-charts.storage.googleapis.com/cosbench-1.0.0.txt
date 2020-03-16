@@ -1,0 +1,29 @@
+Chart Map for cosbench:1.0.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: cosbench:1.0.0
+	apiVersion: Not specified
+	appVersion: 0.0.6
+	created: Not specified
+	dependencies: None
+	description: A benchmark tool for cloud object storage services
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: giacomoguiulfo:giacomoguiulfo@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: cosbench
+	sources: https://github.com/intel-cloud/cosbench,https://github.com/scality/zenko-cosbench
+	urls: Not specified
+	version: 1.0.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: zenko/zenko-cosbench:0.0.6
+
+Chart Dependencies
+------------------
+cosbench:1.0.0 uses zenko/zenko-cosbench:0.0.6
+
+Generated on 2020/03/16 17:14:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

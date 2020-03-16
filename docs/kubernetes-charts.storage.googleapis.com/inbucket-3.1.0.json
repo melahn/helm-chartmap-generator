@@ -1,0 +1,33 @@
+{
+  "maintainers": [
+    {
+      "name": "cpanato",
+      "email": "ctadeu@gmail.com"
+    },
+    {
+      "name": "jhillyerd",
+      "email": "github@hillyerd.com"
+    }
+  ],
+  "keywords": [
+    "inbucket",
+    "mail",
+    "smtp",
+    "pop3",
+    "email",
+    "testing",
+    "disposable webmail"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "jhillyerd/inbucket",
+    "type": "image",
+    "version": "release-2.0.0"
+  }],
+  "name": "inbucket:3.1.0",
+  "description": "Inbucket is an email testing application",
+  "type": "chart",
+  "shortName": "inbucket",
+  "version": "3.1.0"
+}

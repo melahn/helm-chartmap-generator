@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "ark:4.2.2",
+  "description": "DEPRECATED A Helm chart for ark",
+  "type": "chart",
+  "shortName": "ark",
+  "version": "4.2.2"
+}

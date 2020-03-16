@@ -1,0 +1,29 @@
+Chart Map for ambassador:5.3.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: ambassador:5.3.1
+	apiVersion: v1
+	appVersion: 0.86.1
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for Datawire Ambassador
+	digest: Not specified
+	icon: https://www.getambassador.io/images/logo.png
+	keywords: api gateway,ambassador,datawire,envoy
+	maintainers: flydiverny:markus@maga.se,kflynn:flynn@datawire.io,nbkrause:nkrause@datawire.io,lukeshu:lukeshu@datawire.io
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: ambassador
+	sources: https://github.com/datawire/ambassador,https://github.com/prometheus/statsd_exporter
+	urls: Not specified
+	version: 5.3.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: quay.io/datawire/ambassador:0.86.1
+
+Chart Dependencies
+------------------
+ambassador:5.3.1 uses quay.io/datawire/ambassador:0.86.1
+
+Generated on 2020/03/16 17:12:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for stash:0.5.3
+
+'There is one referenced Helm Chart
+artifact "stash:0.5.3\n====\n\tstash\n====\n\t0.5.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: " as stash_0_5_3 #LightSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tappscode/stash\n====\n\t0.7.0-rc.1" as appscode_stash_0_7_0_rc_1 #FloralWhite
+
+'Chart Dependencies
+stash_0_5_3--[#orange]-|>appscode_stash_0_7_0_rc_1
+
+center footer Generated on 2020/03/16 17:30:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,31 @@
+Chart Map for hoard:0.7.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: hoard:0.7.0
+	apiVersion: v1
+	appVersion: 3.0.1
+	created: Not specified
+	dependencies: None
+	description: Hoard is a stateless, deterministically encrypted, content-addressed object store
+	digest: Not specified
+	icon: https://pbs.twimg.com/profile_images/781959787856687105/76s1CJER_400x400.jpg
+	keywords: s3,aws,gcp,azure,ipfs,envelope encryption,content addressable,distributed file storage
+	maintainers: compleatang:casey@monax.io,gregdhill:greg.hill@monax.io
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: hoard
+	sources: https://github.com/monax/hoard
+	urls: Not specified
+	version: 0.7.0
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: quay.io/monax/hoard:controller
+Image: quay.io/monax/hoard:3.0.1
+
+Chart Dependencies
+------------------
+hoard:0.7.0 uses quay.io/monax/hoard:3.0.1
+hoard:0.7.0 uses quay.io/monax/hoard:controller
+
+Generated on 2020/03/16 17:19:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

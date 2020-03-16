@@ -1,0 +1,86 @@
+{
+  "maintainers": [
+    {
+      "name": "viglesiasce",
+      "email": "viglesias@google.com"
+    },
+    {
+      "name": "ezimanyi",
+      "email": "ezimanyi@google.com"
+    },
+    {
+      "name": "dwardu89",
+      "email": "hello@dwardu.com"
+    },
+    {
+      "name": "paulczar",
+      "email": "username.taken@gmail.com"
+    }
+  ],
+  "children": [
+    {
+      "repoHost": "gcr.io",
+      "children": [],
+      "name": "spinnaker-marketplace/halyard",
+      "type": "image",
+      "version": "1.23.2"
+    },
+    {
+      "maintainers": [{
+        "name": "bitnami-bot",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/redis",
+        "type": "image",
+        "version": "4.0.11-debian-9"
+      }],
+      "name": "redis:3.8.0",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "3.8.0"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Acaleph",
+          "email": "hello@acale.ph"
+        },
+        {
+          "name": "Minio",
+          "email": "dev@minio.io"
+        }
+      ],
+      "keywords": [
+        "storage",
+        "object-storage",
+        "S3"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "minio/minio",
+        "type": "image",
+        "version": "RELEASE.2018-08-25T01-56-38Z"
+      }],
+      "name": "minio:1.6.3",
+      "description": "Minio is a high performance distributed object storage server, designed for large-scale private cloud infrastructure.",
+      "type": "chart",
+      "shortName": "minio",
+      "version": "1.6.3"
+    }
+  ],
+  "name": "spinnaker:1.23.3",
+  "description": "Open source, multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence.",
+  "type": "chart",
+  "shortName": "spinnaker",
+  "version": "1.23.3"
+}

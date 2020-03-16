@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for k8s-spot-termination-handler:1.4.8
+
+'There is one referenced Helm Chart
+artifact "k8s-spot-termination-handler:1.4.8\n====\n\tk8s-spot-termination-handler\n====\n\t1.4.8\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: kierranm, egeland, mariusv\n====\n\tKeywords: spot\ntermination" as k8s_spot_termination_handler_1_4_8 #FloralWhite
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2020/03/16 17:20:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

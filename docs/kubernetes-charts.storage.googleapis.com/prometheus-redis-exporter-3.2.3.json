@@ -1,0 +1,22 @@
+{
+  "maintainers": [{
+    "name": "acondrat",
+    "email": "arcadie.condrat@gmail.com"
+  }],
+  "keywords": [
+    "prometheus",
+    "redis"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "oliver006/redis_exporter",
+    "type": "image",
+    "version": "v1.3.4"
+  }],
+  "name": "prometheus-redis-exporter:3.2.3",
+  "description": "Prometheus exporter for Redis metrics",
+  "type": "chart",
+  "shortName": "prometheus-redis-exporter",
+  "version": "3.2.3"
+}

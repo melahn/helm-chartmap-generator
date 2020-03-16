@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "mlaccetti",
+    "email": "michael@laccetti.com"
+  }],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "coreos/vault-operator",
+    "type": "image",
+    "version": "0.1.9"
+  }],
+  "name": "vault-operator:0.1.0",
+  "description": "CoreOS vault-operator Helm chart for Kubernetes",
+  "type": "chart",
+  "shortName": "vault-operator",
+  "version": "0.1.0"
+}

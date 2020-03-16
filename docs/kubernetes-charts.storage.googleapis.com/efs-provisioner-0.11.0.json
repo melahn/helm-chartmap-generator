@@ -1,0 +1,18 @@
+{
+  "maintainers": [
+    {
+      "name": "whereisaaron",
+      "email": "aaron@roydhouse.com"
+    },
+    {
+      "name": "mariusv",
+      "email": "myself@mariusv.com"
+    }
+  ],
+  "children": [],
+  "name": "efs-provisioner:0.11.0",
+  "description": "A Helm chart for the AWS EFS external storage provisioner",
+  "type": "chart",
+  "shortName": "efs-provisioner",
+  "version": "0.11.0"
+}

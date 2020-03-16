@@ -1,0 +1,51 @@
+{
+  "keywords": [
+    "artifactory",
+    "jfrog"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.bintray.io",
+      "children": [],
+      "name": "jfrog/artifactory-pro",
+      "type": "image",
+      "version": "6.2.0"
+    },
+    {
+      "repoHost": "docker.bintray.io",
+      "children": [],
+      "name": "jfrog/nginx-artifactory-pro",
+      "type": "image",
+      "version": "6.2.0"
+    },
+    {
+      "maintainers": [
+        {"name": "swordbeta"},
+        {"name": "databus23"}
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6.2"
+      }],
+      "name": "postgresql:0.8.7",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.8.7"
+    }
+  ],
+  "name": "artifactory-ha:0.4.1",
+  "description": "DEPRECATED Universal Repository Manager supporting all major packaging formats, build tools and CI servers.",
+  "type": "chart",
+  "shortName": "artifactory-ha",
+  "version": "0.4.1"
+}

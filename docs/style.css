@@ -1,0 +1,18 @@
+* {
+    font-family: "Arial", Helvetica, san-serif;
+    color: lightgray;
+    background-color: black;
+}
+a:visited {
+    color: grey;
+}
+.header {
+    font: 30px sans-serif;
+}
+.chartname {
+    font-weight: 700;
+    font: 16px sans-serif;
+}
+.chartlink {
+    font: 16px sans-serif;
+}

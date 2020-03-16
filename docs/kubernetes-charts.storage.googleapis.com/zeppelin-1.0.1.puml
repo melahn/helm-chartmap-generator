@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for zeppelin:1.0.1
+
+'There is one referenced Helm Chart
+artifact "zeppelin:1.0.1\n====\n\tzeppelin\n====\n\t1.0.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: danisla\n====\n\tKeywords: " as zeppelin_1_0_1 #LavenderBlush
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tdylanmei/zeppelin\n====\n\t0.7.2" as dylanmei_zeppelin_0_7_2 #DarkSeaGreen
+
+'Chart Dependencies
+zeppelin_1_0_1--[#orange]-|>dylanmei_zeppelin_0_7_2
+
+center footer Generated on 2020/03/16 17:32:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,29 @@
+Chart Map for magic-namespace:0.5.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: magic-namespace:0.5.2
+	apiVersion: v1
+	appVersion: 2.8.1
+	created: Not specified
+	dependencies: None
+	description: Elegantly enables a Tiller per namespace in RBAC-enabled clusters
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: krancour:kent.rancourt@microsoft.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: magic-namespace
+	sources: Not specified
+	urls: Not specified
+	version: 0.5.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: gcr.io/kubernetes-helm/tiller:v2.8.1
+
+Chart Dependencies
+------------------
+magic-namespace:0.5.2 uses gcr.io/kubernetes-helm/tiller:v2.8.1
+
+Generated on 2020/03/16 17:22:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

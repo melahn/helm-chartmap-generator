@@ -1,0 +1,29 @@
+{
+  "maintainers": [
+    {
+      "name": "okgolove",
+      "email": "okgolove@markeloff.net"
+    },
+    {
+      "name": "caarlos0",
+      "email": "carlos@carlosbecker.com"
+    }
+  ],
+  "keywords": [
+    "nats",
+    "prometheus",
+    "exporter"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "synadia/prometheus-nats-exporter",
+    "type": "image",
+    "version": "0.6.0"
+  }],
+  "name": "prometheus-nats-exporter:2.4.0",
+  "description": "A Helm chart for prometheus-nats-exporter",
+  "type": "chart",
+  "shortName": "prometheus-nats-exporter",
+  "version": "2.4.0"
+}

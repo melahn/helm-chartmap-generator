@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for metallb:0.12.0
+
+'There is one referenced Helm Chart
+artifact "metallb:0.12.0\n====\n\tmetallb\n====\n\t0.12.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: danderson\n====\n\tKeywords: load-balancer\nbalancer\nlb\nbgp\narp\nvrrp\nvip" as metallb_0_12_0 #GoldenRod
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tmetallb/controller\n====\n\tv0.8.1" as metallb_controller_v0_8_1 #Coral
+
+'Chart Dependencies
+metallb_0_12_0--[#orange]-|>metallb_controller_v0_8_1
+
+center footer Generated on 2020/03/16 17:23:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

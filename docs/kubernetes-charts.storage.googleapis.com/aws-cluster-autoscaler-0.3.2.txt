@@ -1,0 +1,29 @@
+Chart Map for aws-cluster-autoscaler:0.3.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: aws-cluster-autoscaler:0.3.2
+	apiVersion: v1
+	appVersion: Not specified
+	created: Not specified
+	dependencies: None
+	description: Scales worker nodes within autoscaling groups.
+	digest: Not specified
+	icon: https://github.com/kubernetes/kubernetes/blob/master/logo/logo.png
+	keywords: Not specified
+	maintainers: Michael Goodness:mgoodness@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: aws-cluster-autoscaler
+	sources: https://github.com/kubernetes/contrib/tree/master/cluster-autoscaler/cloudprovider/aws
+	urls: Not specified
+	version: 0.3.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: k8s.gcr.io/cluster-autoscaler:v0.6.1
+
+Chart Dependencies
+------------------
+aws-cluster-autoscaler:0.3.2 uses k8s.gcr.io/cluster-autoscaler:v0.6.1
+
+Generated on 2020/03/16 17:13:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

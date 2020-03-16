@@ -1,0 +1,27 @@
+Chart Map for drone:2.7.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: drone:2.7.1
+	apiVersion: v1
+	appVersion: 1.6.5
+	created: Not specified
+	dependencies: None
+	description: Drone is a Continuous Delivery system built on container technology
+	digest: Not specified
+	icon: https://drone.io/apple-touch-icon.png
+	keywords: continuous-delivery,continuous-deployment,continuous-integration,docker,drone,drone.io,go
+	maintainers: christian-roggia:christian.roggia@gmail.com,paulczar:username.taken@gmail.com,zakkg3:zakkg3@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: drone
+	sources: https://github.com/drone/drone
+	urls: Not specified
+	version: 2.7.1
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/03/16 17:15:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "appscode/stash",
+    "type": "image",
+    "version": "0.7.0-rc.1"
+  }],
+  "name": "stash:0.5.3",
+  "description": "DEPRECATED Stash by AppsCode - Backup your Kubernetes Volumes",
+  "type": "chart",
+  "shortName": "stash",
+  "version": "0.5.3"
+}

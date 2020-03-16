@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "Sean Knox",
+    "email": "knoxville@gmail.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "buoyantio/namerd",
+    "type": "image",
+    "version": "0.9.1"
+  }],
+  "name": "namerd:0.2.0",
+  "description": "Service that manages routing for multiple linkerd instances",
+  "type": "chart",
+  "shortName": "namerd",
+  "version": "0.2.0"
+}

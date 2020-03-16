@@ -1,0 +1,29 @@
+Chart Map for chronograf:1.1.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: chronograf:1.1.1
+	apiVersion: v1
+	appVersion: 1.7.12
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED Open-source web application written in Go and React.js that provides the tools to visualize your monitoring data and easily create alerting and automation rules.
+	digest: Not specified
+	icon: Not specified
+	keywords: chronograf,visualizaion,timeseries
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: chronograf
+	sources: Not specified
+	urls: Not specified
+	version: 1.1.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: quay.io/influxdb/chronograf:1.7.12
+
+Chart Dependencies
+------------------
+chronograf:1.1.1 uses quay.io/influxdb/chronograf:1.7.12
+
+Generated on 2020/03/16 17:13:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

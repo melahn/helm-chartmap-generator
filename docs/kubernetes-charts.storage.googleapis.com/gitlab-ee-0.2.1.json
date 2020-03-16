@@ -1,0 +1,68 @@
+{
+  "maintainers": [{
+    "name": "Quentin Rousseau",
+    "email": "contact@quent.in"
+  }],
+  "keywords": [
+    "git",
+    "ci",
+    "deploy",
+    "issue tracker",
+    "code review",
+    "wiki"
+  ],
+  "children": [
+    {
+      "maintainers": [
+        {"name": "swordbeta"},
+        {"name": "databus23"}
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6"
+      }],
+      "name": "postgresql:0.8.1",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.8.1"
+    },
+    {
+      "maintainers": [{
+        "name": "bitnami-bot",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "bitnami/redis",
+        "type": "image",
+        "version": "3.2.9-r2"
+      }],
+      "name": "redis:0.9.0",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "0.9.0"
+    }
+  ],
+  "name": "gitlab-ee:0.2.1",
+  "description": "GitLab Enterprise Edition",
+  "type": "chart",
+  "shortName": "gitlab-ee",
+  "version": "0.2.1"
+}

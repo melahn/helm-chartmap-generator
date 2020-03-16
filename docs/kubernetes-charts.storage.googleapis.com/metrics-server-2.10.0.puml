@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for metrics-server:2.10.0
+
+'There is one referenced Helm Chart
+artifact "metrics-server:2.10.0\n====\n\tmetrics-server\n====\n\t2.10.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: olemarkus, kennethaasan\n====\n\tKeywords: metrics-server" as metrics_server_2_10_0 #Cyan
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tgcr.io\n====\n\tgoogle_containers/metrics-server-amd64:v0.3.6\n====\n\tv0.3.6" as gcr_io_google_containers_metrics_server_amd64_v0_3_6 #Cornsilk
+
+'Chart Dependencies
+metrics_server_2_10_0--[#orange]-|>gcr_io_google_containers_metrics_server_amd64_v0_3_6
+
+center footer Generated on 2020/03/16 17:23:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

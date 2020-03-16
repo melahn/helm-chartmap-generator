@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-digital-workspace:2.2.0
+
+'There is one referenced Helm Chart
+artifact "alfresco-digital-workspace:2.2.0\n====\n\talfresco-digital-workspace\n====\n\t2.2.0\n====\n\thttps://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: \n====\n\tKeywords: alfresco\ndigital workspace" as alfresco_digital_workspace_2_2_0 #DodgerBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tquay.io\n====\n\talfresco/alfresco-digital-workspace:1.3.0\n====\n\t1.3.0" as quay_io_alfresco_alfresco_digital_workspace_1_3_0 #FloralWhite
+
+'Chart Dependencies
+alfresco_digital_workspace_2_2_0--[#orange]-|>quay_io_alfresco_alfresco_digital_workspace_1_3_0
+
+center footer Generated on 2020/03/16 14:34:42 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

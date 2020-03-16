@@ -1,0 +1,28 @@
+{
+  "maintainers": [
+    {"name": "aasiutin"},
+    {"name": "greyteardrop"}
+  ],
+  "keywords": [
+    "java",
+    "datagrid",
+    "caching",
+    "jvm",
+    "sql",
+    "key-value",
+    "nosql",
+    "distributed"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "apacheignite/ignite",
+    "type": "image",
+    "version": "2.7.6"
+  }],
+  "name": "ignite:1.0.1",
+  "description": "Apache Ignite is an open-source distributed database, caching and processing platform designed to store and compute on large volumes of data across a cluster of nodes.",
+  "type": "chart",
+  "shortName": "ignite",
+  "version": "1.0.1"
+}

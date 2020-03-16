@@ -1,0 +1,27 @@
+Chart Map for k8s-spot-termination-handler:1.4.7
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: k8s-spot-termination-handler:1.4.7
+	apiVersion: v1
+	appVersion: 1.13.7-1
+	created: Not specified
+	dependencies: None
+	description: The K8s Spot Termination handler handles draining AWS Spot Instances in response to termination requests.
+	digest: Not specified
+	icon: Not specified
+	keywords: spot,termination
+	maintainers: kierranm:kierranm@gmail.com,egeland:egeland@gmail.com,mariusv:myself@mariusv.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: k8s-spot-termination-handler
+	sources: https://github.com/kube-aws/kube-spot-termination-notice-handler
+	urls: Not specified
+	version: 1.4.7
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/03/16 17:20:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

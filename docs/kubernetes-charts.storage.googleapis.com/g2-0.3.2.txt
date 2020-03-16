@@ -1,0 +1,29 @@
+Chart Map for g2:0.3.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: g2:0.3.2
+	apiVersion: v1
+	appVersion: 0.5.0
+	created: Not specified
+	dependencies: None
+	description: G2 by AppsCode - Gearman in Golang
+	digest: Not specified
+	icon: https://cdn.appscode.com/images/icon/g2.png
+	keywords: Not specified
+	maintainers: appscode:support@appscode.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: g2
+	sources: https://github.com/appscode/g2
+	urls: Not specified
+	version: 0.3.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: appscode/gearmand:0.5.0
+
+Chart Dependencies
+------------------
+g2:0.3.2 uses appscode/gearmand:0.5.0
+
+Generated on 2020/03/16 17:17:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

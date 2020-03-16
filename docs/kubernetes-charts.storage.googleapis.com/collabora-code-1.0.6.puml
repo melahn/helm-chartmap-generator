@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for collabora-code:1.0.6
+
+'There is one referenced Helm Chart
+artifact "collabora-code:1.0.6\n====\n\tcollabora-code\n====\n\t1.0.6\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Christian\n====\n\tKeywords: " as collabora_code_1_0_6 #Chartreuse
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tcollabora/code\n====\n\t4.0.3.1" as collabora_code_4_0_3_1 #Chartreuse
+
+'Chart Dependencies
+collabora_code_1_0_6--[#orange]-|>collabora_code_4_0_3_1
+
+center footer Generated on 2020/03/16 17:14:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

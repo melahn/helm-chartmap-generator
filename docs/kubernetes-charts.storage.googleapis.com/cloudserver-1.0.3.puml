@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for cloudserver:1.0.3
+
+'There are 3 referenced Helm Charts
+artifact "redis-ha:3.0.0\n====\n\tredis-ha\n====\n\t3.0.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: ssalaues\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_ha_3_0_0 #IndianRed
+artifact "cloudserver:1.0.3\n====\n\tcloudserver\n====\n\t1.0.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: ssalaues, tmacro\n====\n\tKeywords: " as cloudserver_1_0_3 #Cornsilk
+artifact "mongodb-replicaset:3.6.4\n====\n\tmongodb-replicaset\n====\n\t3.6.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: foxish, unguiculus\n====\n\tKeywords: " as mongodb_replicaset_3_6_4 #Fuchsia
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tzenko/cloudserver\n====\n\t8.1.5" as zenko_cloudserver_8_1_5 #CornflowerBlue
+usecase "Image\n====\n\tDocker Hub\n====\n\tmongo\n====\n\t3.6" as mongo_3_6 #Aqua
+usecase "Image\n====\n\tDocker Hub\n====\n\tredis\n====\n\t4.0.11-stretch" as redis_4_0_11_stretch #LightSeaGreen
+
+'Chart Dependencies
+cloudserver_1_0_3--[#green]-|>redis_ha_3_0_0
+cloudserver_1_0_3--[#green]-|>mongodb_replicaset_3_6_4
+redis_ha_3_0_0--[#orange]-|>redis_4_0_11_stretch
+cloudserver_1_0_3--[#orange]-|>zenko_cloudserver_8_1_5
+mongodb_replicaset_3_6_4--[#orange]-|>mongo_3_6
+
+center footer Generated on 2020/03/16 17:13:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,29 @@
+Chart Map for presto:0.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: presto:0.1
+	apiVersion: v1
+	appVersion: 0.196
+	created: Not specified
+	dependencies: None
+	description: Distributed SQL query engine for running interactive analytic queries
+	digest: Not specified
+	icon: https://prestodb.io/static/presto.png
+	keywords: Not specified
+	maintainers: bivas:eliran.bivas@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: presto
+	sources: https://github.com/facebook/presto
+	urls: Not specified
+	version: 0.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: bivas/presto:0.196
+
+Chart Dependencies
+------------------
+presto:0.1 uses bivas/presto:0.196
+
+Generated on 2020/03/16 17:26:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

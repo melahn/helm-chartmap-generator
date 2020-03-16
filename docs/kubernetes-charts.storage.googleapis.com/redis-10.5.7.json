@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "redis",
+    "keyvalue",
+    "database"
+  ],
+  "children": [{
+    "repoHost": "docker.io",
+    "children": [],
+    "name": "bitnami/redis",
+    "type": "image",
+    "version": "5.0.7-debian-10-r32"
+  }],
+  "name": "redis:10.5.7",
+  "description": "DEPRECATED Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+  "type": "chart",
+  "shortName": "redis",
+  "version": "10.5.7"
+}

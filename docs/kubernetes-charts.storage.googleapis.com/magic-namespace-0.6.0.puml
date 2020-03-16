@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for magic-namespace:0.6.0
+
+'There is one referenced Helm Chart
+artifact "magic-namespace:0.6.0\n====\n\tmagic-namespace\n====\n\t0.6.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: " as magic_namespace_0_6_0 #Gold
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tgcr.io\n====\n\tkubernetes-helm/tiller:v2.8.1\n====\n\tv2.8.1" as gcr_io_kubernetes_helm_tiller_v2_8_1 #IndianRed
+
+'Chart Dependencies
+magic_namespace_0_6_0--[#orange]-|>gcr_io_kubernetes_helm_tiller_v2_8_1
+
+center footer Generated on 2020/03/16 17:22:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

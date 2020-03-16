@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "lachie83",
+    "email": "lachlan.evenson@microsoft.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "consul",
+    "type": "image",
+    "version": "1.5.3"
+  }],
+  "name": "consul:3.9.4",
+  "description": "Highly available and distributed service discovery and key-value store designed with support for the modern data center to make distributed systems and configuration easy.",
+  "type": "chart",
+  "shortName": "consul",
+  "version": "3.9.4"
+}

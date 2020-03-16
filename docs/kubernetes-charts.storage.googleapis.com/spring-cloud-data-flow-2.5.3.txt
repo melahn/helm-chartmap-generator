@@ -1,0 +1,67 @@
+Chart Map for spring-cloud-data-flow:2.5.3
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: spring-cloud-data-flow:2.5.3
+	apiVersion: v1
+	appVersion: 2.3.1.RELEASE
+	created: Not specified
+	dependencies: mysql:1.1.0, rabbitmq:0.6.16
+	description: Toolkit for building data processing pipelines.
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/spring-io/dataflow.spring.io/master/src/images/dataflow-icon.png
+	keywords: Not specified
+	maintainers: trisberg:trisberg@pivotal.io,chrisjs:cschaefer@pivotal.io,sabbyanandan:sanandan@pivotal.io
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: spring-cloud-data-flow
+	sources: https://github.com/spring-cloud/spring-cloud-dataflow,https://github.com/spring-cloud/spring-cloud-skipper
+	urls: Not specified
+	version: 2.5.3
+Chart: mysql:1.1.0
+	apiVersion: v1
+	appVersion: 5.7.14
+	created: 2019-05-16T17:57:34.536273662Z
+	dependencies: None
+	description: Fast, reliable, scalable, and easy to use open-source relational database system.
+	digest: 9bfa43dfc8459d821fd1ba769c99b0b544ff7488e7ff801b42ecbe86c2d7443e
+	icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+	keywords: mysql,database,sql
+	maintainers: olemarkus:o.with@sportradar.com,viglesiasce:viglesias@google.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mysql
+	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/mysql
+	urls: https://kubernetes-charts.storage.googleapis.com/mysql-1.1.0.tgz
+	version: 1.1.0
+Chart: rabbitmq:0.6.16
+	apiVersion: Not specified
+	appVersion: 3.7.2
+	created: 2018-01-29T21:34:25.956923999Z
+	dependencies: None
+	description: Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)
+	digest: 5eaa13a3dc085f2ce930081d493398ea4bef2a156a0151853da93ab08e00322b
+	icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+	keywords: rabbitmq,message queue,AMQP
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: rabbitmq
+	sources: https://github.com/bitnami/bitnami-docker-rabbitmq
+	urls: https://kubernetes-charts.storage.googleapis.com/rabbitmq-0.6.16.tgz
+	version: 0.6.16
+
+There are 4 referenced Docker Images
+------------------------------------
+Image: bitnami/rabbitmq:3.7.2-r1
+Image: springcloud/spring-cloud-dataflow-server:2.3.1.RELEASE
+Image: springcloud/spring-cloud-skipper-server:2.2.2.RELEASE
+Image: mysql:5.7.14
+
+Chart Dependencies
+------------------
+spring-cloud-data-flow:2.5.3 depends on mysql:1.1.0
+spring-cloud-data-flow:2.5.3 depends on rabbitmq:0.6.16
+spring-cloud-data-flow:2.5.3 uses springcloud/spring-cloud-dataflow-server:2.3.1.RELEASE
+spring-cloud-data-flow:2.5.3 uses springcloud/spring-cloud-skipper-server:2.2.2.RELEASE
+mysql:1.1.0 uses mysql:5.7.14
+rabbitmq:0.6.16 uses bitnami/rabbitmq:3.7.2-r1
+
+Generated on 2020/03/16 17:30:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for ipfs:0.4.0
+
+'There is one referenced Helm Chart
+artifact "ipfs:0.4.0\n====\n\tipfs\n====\n\t0.4.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: bclermont\n====\n\tKeywords: ipfs\ndistributed-web" as ipfs_0_4_0 #AliceBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tipfs/go-ipfs\n====\n\tv0.4.22" as ipfs_go_ipfs_v0_4_22 #Khaki
+
+'Chart Dependencies
+ipfs_0_4_0--[#orange]-|>ipfs_go_ipfs_v0_4_22
+
+center footer Generated on 2020/03/16 17:19:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

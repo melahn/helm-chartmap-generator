@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "bivas",
+    "email": "eliran.bivas@gmail.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "bivas/presto",
+    "type": "image",
+    "version": "0.196"
+  }],
+  "name": "presto:0.1",
+  "description": "Distributed SQL query engine for running interactive analytic queries",
+  "type": "chart",
+  "shortName": "presto",
+  "version": "0.1"
+}

@@ -1,0 +1,39 @@
+{
+  "maintainers": [
+    {
+      "name": "alexvicegrab",
+      "email": "sasha@aid.technology"
+    },
+    {
+      "name": "nicolapaoli",
+      "email": "nicola@aid.technology"
+    }
+  ],
+  "keywords": [
+    "blockchain",
+    "hyperledger",
+    "fabric",
+    "composer"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "hyperledger/composer-cli",
+      "type": "image",
+      "version": "0.20.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "hyperledger/composer-playground",
+      "type": "image",
+      "version": "0.20.0"
+    }
+  ],
+  "name": "hl-composer:1.0.11",
+  "description": "Hyperledger Composer REST Server chart",
+  "type": "chart",
+  "shortName": "hl-composer",
+  "version": "1.0.11"
+}

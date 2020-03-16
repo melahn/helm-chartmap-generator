@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for orangehrm:7.0.9
+
+'There are 2 referenced Helm Charts
+artifact "orangehrm:7.0.9\n====\n\torangehrm\n====\n\t7.0.9\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: orangehrm\nhttp\nhttps\nweb\napplication\nphp\nhuman resources" as orangehrm_7_0_9 #Cyan
+artifact "mariadb:7.3.11\n====\n\tmariadb\n====\n\t7.3.11\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mariadb\nmysql\ndatabase\nsql\nprometheus" as mariadb_7_3_11 #DarkTurquoise
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/orangehrm:4.3.4-0-debian-10-r26\n====\n\t4.3.4-0-debian-10-r26" as docker_io_bitnami_orangehrm_4_3_4_0_debian_10_r26 #Bisque
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mariadb:10.3.22-debian-10-r27\n====\n\t10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
+
+'Chart Dependencies
+orangehrm_7_0_9--[#green]-|>mariadb_7_3_11
+orangehrm_7_0_9--[#orange]-|>docker_io_bitnami_orangehrm_4_3_4_0_debian_10_r26
+mariadb_7_3_11--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r27
+
+center footer Generated on 2020/03/16 17:25:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

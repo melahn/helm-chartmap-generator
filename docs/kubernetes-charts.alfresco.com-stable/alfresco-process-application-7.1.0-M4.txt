@@ -1,0 +1,188 @@
+Chart Map for alfresco-process-application:7.1.0-M4
+
+There are 10 referenced Helm Charts
+-----------------------------------
+Chart: activiti-cloud-notifications-graphql:7.1.192
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-03-05T12:00:25.722070214Z
+	dependencies: common:1.1.26
+	description: A Helm chart for Activiti Cloud Notifications GraphQL Application
+	digest: 8b6ddfc7db0db107ad2acf6cbc3303c4ebec35bd1741d90c8de964585c446aed
+	icon: https://salaboy.files.wordpress.com/2018/01/acitiviti_icon_fullcolor_github_400x400.png
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://activiti.github.io/activiti-cloud-helm-charts
+	name: activiti-cloud-notifications-graphql
+	sources: Not specified
+	urls: activiti-cloud-notifications-graphql-7.1.192.tgz
+	version: 7.1.192
+Chart: runtime-bundle:7.1.230
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-03-05T12:00:26.600819594Z
+	dependencies: common:1.1.26
+	description: A Helm chart for Activiti Cloud Runtime Bundle Example
+	digest: eaba769251a97eb0247015d66238f4bc56ead482c3f4a8b9462c8b293f28fe65
+	icon: https://salaboy.files.wordpress.com/2018/01/acitiviti_icon_fullcolor_github_400x400.png
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://activiti.github.io/activiti-cloud-helm-charts
+	name: runtime-bundle
+	sources: Not specified
+	urls: runtime-bundle-7.1.230.tgz
+	version: 7.1.230
+Chart: activiti-cloud-query:7.1.188
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-03-05T12:00:26.051935713Z
+	dependencies: common:1.1.26
+	description: A Helm chart for Kubernetes
+	digest: d2cc363df50578fb669f587c676c0806aa1359c017f238eec6f865ade5540f39
+	icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/master/images/java.png
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://activiti.github.io/activiti-cloud-helm-charts
+	name: activiti-cloud-query
+	sources: Not specified
+	urls: activiti-cloud-query-7.1.188.tgz
+	version: 7.1.188
+Chart: common:1.1.21
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-03-05T12:00:26.247727578Z
+	dependencies: None
+	description: A Helm chart for Activiti Cloud Common Templates
+	digest: 0c8318110b46f9fe27742db0808ed5da688f34cc2495e9d06c995b9846ae78c5
+	icon: https://salaboy.files.wordpress.com/2018/01/acitiviti_icon_fullcolor_github_400x400.png
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://activiti.github.io/activiti-cloud-helm-charts
+	name: common
+	sources: Not specified
+	urls: common-1.1.21.tgz
+	version: 1.1.21
+Chart: alfresco-process-application:7.1.0-M4
+	apiVersion: v1
+	appVersion: 7.1.0.M4
+	created: Not specified
+	dependencies: alfresco-process-springboot-service:2.1.0, activiti-cloud-audit:7.1.193, runtime-bundle:7.1.230, postgresql:3.11.3, rabbitmq-ha:1.19.0, activiti-cloud-query:7.1.188, activiti-cloud-notifications-graphql:7.1.192
+	description: A Helm chart for Alfresco Activiti Enterprise Process Application
+	digest: Not specified
+	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
+	keywords: process,process services,alfresco,alfresco process services,activiti,activiti enterprise,alfresco activiti enterprise
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.alfresco.com/stable
+	name: alfresco-process-application
+	sources: https://git.alfresco.com/process-services-public/alfresco-process-application-deployment
+	urls: Not specified
+	version: 7.1.0-M4
+Chart: postgresql:3.11.3
+	apiVersion: Not specified
+	appVersion: 10.7.0
+	created: 2019-02-18T10:25:57.729232907Z
+	dependencies: None
+	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 2e0796234d243d08e2f4f24932b8b6693f041f7d1e284f8ed0de113895da393e
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql
+	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-3.11.3.tgz
+	version: 3.11.3
+Chart: rabbitmq-ha:1.19.0
+	apiVersion: v1
+	appVersion: 3.7.8
+	created: 2019-02-22T21:56:49.997830295Z
+	dependencies: None
+	description: Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).
+	digest: 0d85c5cd74c69d1fbf3a9e2a150fb8db3893f789b054d6318e489c6ed22b1193
+	icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+	keywords: rabbitmq,message queue,AMQP,AMQPS,MQTT,STOMP
+	maintainers: steven-sheehy:ssheehy@firescope.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: rabbitmq-ha
+	sources: https://github.com/rabbitmq/rabbitmq,https://github.com/docker-library/rabbitmq
+	urls: https://kubernetes-charts.storage.googleapis.com/rabbitmq-ha-1.19.0.tgz
+	version: 1.19.0
+Chart: alfresco-process-springboot-service:2.1.0
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-02-25T14:46:28.738929897Z
+	dependencies: common:1.1.21
+	description: A Helm chart for a generic Alfresco Process/Activiti Spring Boot based microservice
+	digest: e4996336ce452851c406af625ed0f12db3324ba92286f77bbbd5c36155f8de12
+	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
+	keywords: alfresco,content,content services,alfresco content services,activiti,process,alfresco activiti enterprise,java,spring boot,microservice
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/stable
+	name: alfresco-process-springboot-service
+	sources: https://github.com/Alfresco/alfresco-process-springboot-service-deployment
+	urls: http://kubernetes-charts.alfresco.com/stable/alfresco-process-springboot-service-2.1.0.tgz
+	version: 2.1.0
+Chart: activiti-cloud-audit:7.1.193
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-03-05T12:00:19.395248517Z
+	dependencies: common:1.1.26
+	description: A Helm chart for Kubernetes
+	digest: 0358f0d47a7deba5a76d88ea7980992313a950f441877bdd2457c43348d1e324
+	icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/master/images/java.png
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://activiti.github.io/activiti-cloud-helm-charts
+	name: activiti-cloud-audit
+	sources: Not specified
+	urls: activiti-cloud-audit-7.1.193.tgz
+	version: 7.1.193
+Chart: common:1.1.26
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-03-05T12:00:26.249820212Z
+	dependencies: None
+	description: A Helm chart for Activiti Cloud Common Templates
+	digest: a7ed5794423967dab6246f3407933d2f6de25bf82b99a4f068f317cd1f0b2e28
+	icon: https://salaboy.files.wordpress.com/2018/01/acitiviti_icon_fullcolor_github_400x400.png
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://activiti.github.io/activiti-cloud-helm-charts
+	name: common
+	sources: Not specified
+	urls: common-1.1.26.tgz
+	version: 1.1.26
+
+There are 7 referenced Docker Images
+------------------------------------
+Image: rabbitmq:3.7-alpine
+Image: docker.io/bitnami/postgresql:10.7.0
+Image: quay.io/alfresco/alfresco-process-notifications-graphql-service:7.1.0.M4
+Image: quay.io/alfresco/alfresco-process-query-service:7.1.0.M4
+Image: activiti/example-runtime-bundle:7.0.0.SR1
+Image: quay.io/alfresco/alfresco-process-audit-service:7.1.0.M4
+Image: activiti/example-runtime-bundle:7.1.0.M4
+
+Chart Dependencies
+------------------
+alfresco-process-application:7.1.0-M4 depends on alfresco-process-springboot-service:2.1.0
+alfresco-process-springboot-service:2.1.0 depends on common:1.1.21
+alfresco-process-application:7.1.0-M4 depends on activiti-cloud-audit:7.1.193
+activiti-cloud-audit:7.1.193 depends on common:1.1.26
+alfresco-process-application:7.1.0-M4 depends on runtime-bundle:7.1.230
+runtime-bundle:7.1.230 depends on common:1.1.26
+alfresco-process-application:7.1.0-M4 depends on postgresql:3.11.3
+alfresco-process-application:7.1.0-M4 depends on rabbitmq-ha:1.19.0
+alfresco-process-application:7.1.0-M4 depends on activiti-cloud-query:7.1.188
+activiti-cloud-query:7.1.188 depends on common:1.1.26
+alfresco-process-application:7.1.0-M4 depends on activiti-cloud-notifications-graphql:7.1.192
+activiti-cloud-notifications-graphql:7.1.192 depends on common:1.1.26
+activiti-cloud-notifications-graphql:7.1.192 uses quay.io/alfresco/alfresco-process-notifications-graphql-service:7.1.0.M4
+runtime-bundle:7.1.230 uses activiti/example-runtime-bundle:7.1.0.M4
+activiti-cloud-query:7.1.188 uses quay.io/alfresco/alfresco-process-query-service:7.1.0.M4
+postgresql:3.11.3 uses docker.io/bitnami/postgresql:10.7.0
+rabbitmq-ha:1.19.0 uses rabbitmq:3.7-alpine
+alfresco-process-springboot-service:2.1.0 uses activiti/example-runtime-bundle:7.0.0.SR1
+activiti-cloud-audit:7.1.193 uses quay.io/alfresco/alfresco-process-audit-service:7.1.0.M4
+
+Generated on 2020/03/16 14:36:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

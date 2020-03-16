@@ -1,0 +1,24 @@
+{
+  "maintainers": [
+    {
+      "name": "shashiranjan84",
+      "email": "shashi@konghq.com"
+    },
+    {
+      "name": "hbagdi",
+      "email": "harry@konghq.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "kong-docker-kubernetes-ingress-controller.bintray.io/kong-ingress-controller",
+    "type": "image",
+    "version": "0.7.0"
+  }],
+  "name": "kong:0.36.6",
+  "description": "DEPRECATED The Cloud-Native Ingress and API-management",
+  "type": "chart",
+  "shortName": "kong",
+  "version": "0.36.6"
+}

@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-sync-service:3.0.2
+
+'There are 2 referenced Helm Charts
+artifact "postgresql:0.9.3\n====\n\tpostgresql\n====\n\t0.9.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: databus23\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql" as postgresql_0_9_3 #LightSteelBlue
+artifact "alfresco-sync-service:3.0.2\n====\n\talfresco-sync-service\n====\n\t3.0.2\n====\n\thttps://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: Alfresco Apps Repo Team\n====\n\tKeywords: syncservice\nalfresco\napplication" as alfresco_sync_service_3_0_2 #CadetBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t10.1" as postgres_10_1 #Ivory
+usecase "Image\n====\n\tquay.io\n====\n\talfresco/service-sync:3.3.1\n====\n\t3.3.1" as quay_io_alfresco_service_sync_3_3_1 #LightPink
+
+'Chart Dependencies
+alfresco_sync_service_3_0_2--[#green]-|>postgresql_0_9_3
+postgresql_0_9_3--[#orange]-|>postgres_10_1
+alfresco_sync_service_3_0_2--[#orange]-|>quay_io_alfresco_service_sync_3_3_1
+
+center footer Generated on 2020/03/16 17:05:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

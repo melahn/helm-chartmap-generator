@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for presto:0.1.1
+
+'There is one referenced Helm Chart
+artifact "presto:0.1.1\n====\n\tpresto\n====\n\t0.1.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: bivas\n====\n\tKeywords: " as presto_0_1_1 #Gold
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tbivas/presto\n====\n\t0.196" as bivas_presto_0_196 #LightGrey
+
+'Chart Dependencies
+presto_0_1_1--[#orange]-|>bivas_presto_0_196
+
+center footer Generated on 2020/03/16 17:26:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

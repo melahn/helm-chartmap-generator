@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for centrifugo:3.1.1
+
+'There is one referenced Helm Chart
+artifact "centrifugo:3.1.1\n====\n\tcentrifugo\n====\n\t3.1.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: oleh-ozimok\n====\n\tKeywords: centrifugo\nwebsocket\ngolang" as centrifugo_3_1_1 #LavenderBlush
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tcentrifugo/centrifugo\n====\n\tv2.1.0" as centrifugo_centrifugo_v2_1_0 #Khaki
+
+'Chart Dependencies
+centrifugo_3_1_1--[#orange]-|>centrifugo_centrifugo_v2_1_0
+
+center footer Generated on 2020/03/16 17:13:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

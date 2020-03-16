@@ -1,0 +1,28 @@
+{
+  "maintainers": [
+    {
+      "name": "billimek",
+      "email": "jeff@billimek.com"
+    },
+    {
+      "name": "batazor",
+      "email": "batazor111@gmail.com"
+    }
+  ],
+  "keywords": [
+    "nodered",
+    "node-red"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "nodered/node-red",
+    "type": "image",
+    "version": "1.0.1-12-minimal"
+  }],
+  "name": "node-red:1.4.1",
+  "description": "Node-RED is low-code programming for event-driven applications",
+  "type": "chart",
+  "shortName": "node-red",
+  "version": "1.4.1"
+}

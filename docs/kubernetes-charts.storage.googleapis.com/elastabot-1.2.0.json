@@ -1,0 +1,12 @@
+{
+  "maintainers": [{
+    "name": "jertel",
+    "email": "jertel@codesim.com"
+  }],
+  "children": [],
+  "name": "elastabot:1.2.0",
+  "description": "A Helm chart for Elastabot - a Slack bot companion for Elasticsearch and ElastAlert",
+  "type": "chart",
+  "shortName": "elastabot",
+  "version": "1.2.0"
+}

@@ -1,0 +1,29 @@
+Chart Map for seq:1.0.5
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: seq:1.0.5
+	apiVersion: v1
+	appVersion: 5
+	created: Not specified
+	dependencies: None
+	description: Seq is the easiest way for development teams to capture, search and visualize structured log events! This page will walk you through the very quick setup process.
+	digest: Not specified
+	icon: https://avatars1.githubusercontent.com/u/5898109?s=200&v=4
+	keywords: seq,structured,logging
+	maintainers: nblumhardt:nblumhardt@nblumhardt.com,KodrAus:ashleymannix@live.com.au,gertjvr:gertjvr@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: seq
+	sources: https://github.com/datalust/seq-tickets
+	urls: Not specified
+	version: 1.0.5
+
+There is one referenced Docker Image
+------------------------------------
+Image: datalust/seq:5
+
+Chart Dependencies
+------------------
+seq:1.0.5 uses datalust/seq:5
+
+Generated on 2020/03/16 17:29:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

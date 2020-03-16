@@ -1,0 +1,29 @@
+Chart Map for prometheus-rabbitmq-exporter:0.5.3
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: prometheus-rabbitmq-exporter:0.5.3
+	apiVersion: v1
+	appVersion: v0.29.0
+	created: Not specified
+	dependencies: None
+	description: Rabbitmq metrics exporter for prometheus
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: juanchimienti:juan.chimienti@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: prometheus-rabbitmq-exporter
+	sources: https://github.com/kbudde/rabbitmq_exporter
+	urls: Not specified
+	version: 0.5.3
+
+There is one referenced Docker Image
+------------------------------------
+Image: kbudde/rabbitmq-exporter:v0.29.0
+
+Chart Dependencies
+------------------
+prometheus-rabbitmq-exporter:0.5.3 uses kbudde/rabbitmq-exporter:v0.29.0
+
+Generated on 2020/03/16 17:28:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

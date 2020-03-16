@@ -1,0 +1,27 @@
+Chart Map for cluster-overprovisioner:0.2.6
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: cluster-overprovisioner:0.2.6
+	apiVersion: v1
+	appVersion: 1.0
+	created: Not specified
+	dependencies: None
+	description: Installs the a deployment that overprovisions the cluster
+	digest: Not specified
+	icon: https://github.com/kubernetes/kubernetes/raw/master/logo/logo.png
+	keywords: cluster,autoscaling,overprovision,cluster-autoscaler
+	maintainers: max-rocket-internet:max.williams@deliveryhero.com,mmingorance-dh:miguel.mingorance@deliveryhero.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: cluster-overprovisioner
+	sources: https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#how-can-i-configure-overprovisioning-with-cluster-autoscaler,https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler,https://github.com/kubernetes/kubernetes/tree/master/build/pause
+	urls: Not specified
+	version: 0.2.6
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/03/16 17:14:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,54 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-process-application:7.1.0-M4
+
+'There are 10 referenced Helm Charts
+artifact "activiti-cloud-notifications-graphql:7.1.192\n====\n\tactiviti-cloud-notifications-graphql\n====\n\t7.1.192\n====\n\thttps://activiti.github.io/activiti-cloud-helm-charts\n====\n\tMaintainers: \n====\n\tKeywords: " as activiti_cloud_notifications_graphql_7_1_192 #LightSalmon
+artifact "runtime-bundle:7.1.230\n====\n\truntime-bundle\n====\n\t7.1.230\n====\n\thttps://activiti.github.io/activiti-cloud-helm-charts\n====\n\tMaintainers: \n====\n\tKeywords: " as runtime_bundle_7_1_230 #Cyan
+artifact "activiti-cloud-query:7.1.188\n====\n\tactiviti-cloud-query\n====\n\t7.1.188\n====\n\thttps://activiti.github.io/activiti-cloud-helm-charts\n====\n\tMaintainers: \n====\n\tKeywords: " as activiti_cloud_query_7_1_188 #Darkorange
+artifact "common:1.1.21\n====\n\tcommon\n====\n\t1.1.21\n====\n\thttps://activiti.github.io/activiti-cloud-helm-charts\n====\n\tMaintainers: \n====\n\tKeywords: " as common_1_1_21 #DarkSeaGreen
+artifact "alfresco-process-application:7.1.0-M4\n====\n\talfresco-process-application\n====\n\t7.1.0-M4\n====\n\thttps://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: \n====\n\tKeywords: process\nprocess services\nalfresco\nalfresco process services\nactiviti\nactiviti enterprise\nalfresco activiti enterprise" as alfresco_process_application_7_1_0_M4 #LightSeaGreen
+artifact "postgresql:3.11.3\n====\n\tpostgresql\n====\n\t3.11.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami, desaintmartin\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql\nreplication\ncluster" as postgresql_3_11_3 #LightSteelBlue
+artifact "rabbitmq-ha:1.19.0\n====\n\trabbitmq-ha\n====\n\t1.19.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: steven-sheehy\n====\n\tKeywords: rabbitmq\nmessage queue\nAMQP\nAMQPS\nMQTT\nSTOMP" as rabbitmq_ha_1_19_0 #Chocolate
+artifact "alfresco-process-springboot-service:2.1.0\n====\n\talfresco-process-springboot-service\n====\n\t2.1.0\n====\n\thttps://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: alfresco\ncontent\ncontent services\nalfresco content services\nactiviti\nprocess\nalfresco activiti enterprise\njava\nspring boot\nmicroservice" as alfresco_process_springboot_service_2_1_0 #Coral
+artifact "activiti-cloud-audit:7.1.193\n====\n\tactiviti-cloud-audit\n====\n\t7.1.193\n====\n\thttps://activiti.github.io/activiti-cloud-helm-charts\n====\n\tMaintainers: \n====\n\tKeywords: " as activiti_cloud_audit_7_1_193 #HoneyDew
+artifact "common:1.1.26\n====\n\tcommon\n====\n\t1.1.26\n====\n\thttps://activiti.github.io/activiti-cloud-helm-charts\n====\n\tMaintainers: \n====\n\tKeywords: " as common_1_1_26 #DarkSeaGreen
+
+'There are 7 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\trabbitmq\n====\n\t3.7-alpine" as rabbitmq_3_7_alpine #Aqua
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/postgresql:10.7.0\n====\n\t10.7.0" as docker_io_bitnami_postgresql_10_7_0 #DarkSalmon
+usecase "Image\n====\n\tquay.io\n====\n\talfresco/alfresco-process-notifications-graphql-service:7.1.0.M4\n====\n\t7.1.0.M4" as quay_io_alfresco_alfresco_process_notifications_graphql_service_7_1_0_M4 #Gold
+usecase "Image\n====\n\tquay.io\n====\n\talfresco/alfresco-process-query-service:7.1.0.M4\n====\n\t7.1.0.M4" as quay_io_alfresco_alfresco_process_query_service_7_1_0_M4 #DarkSeaGreen
+usecase "Image\n====\n\tDocker Hub\n====\n\tactiviti/example-runtime-bundle\n====\n\t7.0.0.SR1" as activiti_example_runtime_bundle_7_0_0_SR1 #LightSkyBlue
+usecase "Image\n====\n\tquay.io\n====\n\talfresco/alfresco-process-audit-service:7.1.0.M4\n====\n\t7.1.0.M4" as quay_io_alfresco_alfresco_process_audit_service_7_1_0_M4 #GreenYellow
+usecase "Image\n====\n\tDocker Hub\n====\n\tactiviti/example-runtime-bundle\n====\n\t7.1.0.M4" as activiti_example_runtime_bundle_7_1_0_M4 #LightSkyBlue
+
+'Chart Dependencies
+alfresco_process_application_7_1_0_M4--[#green]-|>activiti_cloud_notifications_graphql_7_1_192
+activiti_cloud_notifications_graphql_7_1_192--[#green]-|>common_1_1_26
+alfresco_process_application_7_1_0_M4--[#green]-|>runtime_bundle_7_1_230
+runtime_bundle_7_1_230--[#green]-|>common_1_1_26
+alfresco_process_application_7_1_0_M4--[#green]-|>postgresql_3_11_3
+alfresco_process_application_7_1_0_M4--[#green]-|>alfresco_process_springboot_service_2_1_0
+alfresco_process_springboot_service_2_1_0--[#green]-|>common_1_1_21
+alfresco_process_application_7_1_0_M4--[#green]-|>activiti_cloud_audit_7_1_193
+activiti_cloud_audit_7_1_193--[#green]-|>common_1_1_26
+alfresco_process_application_7_1_0_M4--[#green]-|>rabbitmq_ha_1_19_0
+alfresco_process_application_7_1_0_M4--[#green]-|>activiti_cloud_query_7_1_188
+activiti_cloud_query_7_1_188--[#green]-|>common_1_1_26
+activiti_cloud_notifications_graphql_7_1_192--[#orange]-|>quay_io_alfresco_alfresco_process_notifications_graphql_service_7_1_0_M4
+runtime_bundle_7_1_230--[#orange]-|>activiti_example_runtime_bundle_7_1_0_M4
+activiti_cloud_query_7_1_188--[#orange]-|>quay_io_alfresco_alfresco_process_query_service_7_1_0_M4
+postgresql_3_11_3--[#orange]-|>docker_io_bitnami_postgresql_10_7_0
+rabbitmq_ha_1_19_0--[#orange]-|>rabbitmq_3_7_alpine
+alfresco_process_springboot_service_2_1_0--[#orange]-|>activiti_example_runtime_bundle_7_0_0_SR1
+activiti_cloud_audit_7_1_193--[#orange]-|>quay_io_alfresco_alfresco_process_audit_service_7_1_0_M4
+
+center footer Generated on 2020/03/16 14:36:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

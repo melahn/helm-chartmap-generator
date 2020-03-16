@@ -1,0 +1,81 @@
+Chart Map for elastic-stack:1.8.0
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: logstash:1.13.0
+	apiVersion: v1
+	appVersion: 6.7.0
+	created: 2019-06-27T08:27:13.276302043Z
+	dependencies: None
+	description: Logstash is an open source, server-side data processing pipeline
+	digest: ff94da7562fc6ec0652fcd67230a1bc020233bce63fdcf20ea1f22a3f4563064
+	icon: https://www.elastic.co/assets/blt86e4472872eed314/logo-elastic-logstash-lt.svg
+	keywords: Not specified
+	maintainers: rendhalver:pete.brown@powerhrg.com,jar361:jrodgers@powerhrg.com,christian-roggia:christian.roggia@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: logstash
+	sources: https://www.docker.elastic.co,https://www.elastic.co/guide/en/logstash/current/index.html
+	urls: https://kubernetes-charts.storage.googleapis.com/logstash-1.13.0.tgz
+	version: 1.13.0
+Chart: elasticsearch:1.29.0
+	apiVersion: v1
+	appVersion: 6.7.0
+	created: 2019-06-27T21:57:29.642323396Z
+	dependencies: None
+	description: Flexible and powerful open source, distributed real-time search and analytics engine.
+	digest: bb32cc541a26a7da5b14282bf0c0c5906602855282eba1a8f540c1f0dd7acead
+	icon: https://static-www.elastic.co/assets/blteb1c97719574938d/logo-elastic-elasticsearch-lt.svg
+	keywords: Not specified
+	maintainers: simonswine:christian@jetstack.io,icereval:michael.haselton@gmail.com,rendhalver:pete.brown@powerhrg.com,desaintmartin:cedric@desaintmartin.fr,KongZ:goonohc@gmail.com,hectorj2f:hfernandez@mesosphere.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: elasticsearch
+	sources: https://www.elastic.co/products/elasticsearch,https://github.com/jetstack/elasticsearch-pet,https://github.com/giantswarm/kubernetes-elastic-stack,https://github.com/GoogleCloudPlatform/elasticsearch-docker,https://github.com/clockworksoul/helm-elasticsearch,https://github.com/pires/kubernetes-elasticsearch-cluster
+	urls: https://kubernetes-charts.storage.googleapis.com/elasticsearch-1.29.0.tgz
+	version: 1.29.0
+Chart: kibana:3.2.1
+	apiVersion: v1
+	appVersion: 6.7.0
+	created: 2019-07-09T09:26:37.867701068Z
+	dependencies: None
+	description: Kibana is an open source data visualization plugin for Elasticsearch
+	digest: 45fd6f8f5956e0b6cc8fda2dda9e0eb7aaafdccdad7f3a4df00f515b848b6d80
+	icon: https://raw.githubusercontent.com/elastic/kibana/master/src/ui/public/icons/kibana-color.svg
+	keywords: elasticsearch,kibana
+	maintainers: compleatang:casey@monax.io,monotek:monotek23@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: kibana
+	sources: https://github.com/elastic/kibana
+	urls: https://kubernetes-charts.storage.googleapis.com/kibana-3.2.1.tgz
+	version: 3.2.1
+Chart: elastic-stack:1.8.0
+	apiVersion: v1
+	appVersion: 6
+	created: Not specified
+	dependencies: logstash:1.13.0, elasticsearch:1.29.0, kibana:3.2.1
+	description: A Helm chart for ELK
+	digest: Not specified
+	icon: https://www.elastic.co/assets/bltb35193323e8f1770/logo-elastic-stack-lt.svg
+	keywords: Not specified
+	maintainers: rendhalver:pete.brown@powerhrg.com,jar361:jrodgers@powerhrg.com,christian-roggia:christian.roggia@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: elastic-stack
+	sources: Not specified
+	urls: Not specified
+	version: 1.8.0
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: docker.elastic.co/logstash/logstash-oss:6.7.0
+Image: docker.elastic.co/kibana/kibana-oss:6.7.0
+Image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.7.0
+
+Chart Dependencies
+------------------
+elastic-stack:1.8.0 depends on logstash:1.13.0
+elastic-stack:1.8.0 depends on elasticsearch:1.29.0
+elastic-stack:1.8.0 depends on kibana:3.2.1
+logstash:1.13.0 uses docker.elastic.co/logstash/logstash-oss:6.7.0
+elasticsearch:1.29.0 uses docker.elastic.co/elasticsearch/elasticsearch-oss:6.7.0
+kibana:3.2.1 uses docker.elastic.co/kibana/kibana-oss:6.7.0
+
+Generated on 2020/03/16 17:16:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

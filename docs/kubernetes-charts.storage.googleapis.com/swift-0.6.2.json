@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "appscode",
+    "email": "support@appscode.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "appscode/swift",
+    "type": "image",
+    "version": "0.7.3"
+  }],
+  "name": "swift:0.6.2",
+  "description": "swift by AppsCode - Ajax friendly Helm Tiller Proxy",
+  "type": "chart",
+  "shortName": "swift",
+  "version": "0.6.2"
+}

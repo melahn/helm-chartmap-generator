@@ -1,0 +1,47 @@
+Chart Map for wavefront:1.1.2
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: kube-state-metrics:2.3.1
+	apiVersion: v1
+	appVersion: 1.7.2
+	created: 2019-10-01T18:57:45.643049649Z
+	dependencies: None
+	description: Install kube-state-metrics to generate and expose cluster-level metrics
+	digest: 1647e585332649e6ac4020e9e025081195c392d85a25fba21274e4fb0183c860
+	icon: Not specified
+	keywords: metric,monitoring,prometheus,kubernetes
+	maintainers: fiunchinho:jose@armesto.net,tariq1890:tariq.ibrahim@mulesoft.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: kube-state-metrics
+	sources: https://github.com/kubernetes/kube-state-metrics/
+	urls: https://kubernetes-charts.storage.googleapis.com/kube-state-metrics-2.3.1.tgz
+	version: 2.3.1
+Chart: wavefront:1.1.2
+	apiVersion: v1
+	appVersion: 1.0.3
+	created: Not specified
+	dependencies: kube-state-metrics:2.3.1
+	description: DEPRECATED Wavefront Kubernetes collector
+	digest: Not specified
+	icon: Not specified
+	keywords: metric,monitoring,observability,alerting
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: wavefront
+	sources: https://github.com/wavefrontHQ/wavefront-collector-for-kubernetes,https://github.com/wavefrontHQ/java/tree/master/proxy
+	urls: Not specified
+	version: 1.1.2
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: quay.io/coreos/kube-state-metrics:v1.7.2
+Image: wavefronthq/proxy:5.7
+
+Chart Dependencies
+------------------
+wavefront:1.1.2 depends on kube-state-metrics:2.3.1
+kube-state-metrics:2.3.1 uses quay.io/coreos/kube-state-metrics:v1.7.2
+wavefront:1.1.2 uses wavefronthq/proxy:5.7
+
+Generated on 2020/03/16 17:32:27 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for heapster:1.0.2
+
+'There is one referenced Helm Chart
+artifact "heapster:1.0.2\n====\n\theapster\n====\n\t1.0.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: jose5918\n====\n\tKeywords: metrics\ncadvisor\nmonitoring" as heapster_1_0_2 #GhostWhite
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tk8s.gcr.io/heapster-amd64\n====\n\tv1.5.4" as k8s_gcr_io_heapster_amd64_v1_5_4 #LightSkyBlue
+
+'Chart Dependencies
+heapster_1_0_2--[#orange]-|>k8s_gcr_io_heapster_amd64_v1_5_4
+
+center footer Generated on 2020/03/16 17:18:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

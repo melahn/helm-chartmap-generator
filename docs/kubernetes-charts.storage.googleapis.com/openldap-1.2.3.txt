@@ -1,0 +1,29 @@
+Chart Map for openldap:1.2.3
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: openldap:1.2.3
+	apiVersion: v1
+	appVersion: 2.4.48
+	created: Not specified
+	dependencies: None
+	description: Community developed LDAP software
+	digest: Not specified
+	icon: http://www.openldap.org/images/headers/LDAPworm.gif
+	keywords: ldap,openldap
+	maintainers: enis:enis@apache.org
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: openldap
+	sources: https://github.com/kubernetes/charts
+	urls: Not specified
+	version: 1.2.3
+
+There is one referenced Docker Image
+------------------------------------
+Image: osixia/openldap:1.2.4
+
+Chart Dependencies
+------------------
+openldap:1.2.3 uses osixia/openldap:1.2.4
+
+Generated on 2020/03/16 17:25:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

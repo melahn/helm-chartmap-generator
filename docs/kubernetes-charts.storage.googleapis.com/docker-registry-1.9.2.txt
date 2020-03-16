@@ -1,0 +1,29 @@
+Chart Map for docker-registry:1.9.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: docker-registry:1.9.2
+	apiVersion: v1
+	appVersion: 2.7.1
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for Docker Registry
+	digest: Not specified
+	icon: https://hub.docker.com/public/images/logos/mini-logo.svg
+	keywords: Not specified
+	maintainers: jpds:jpds@protonmail.com,rendhalver:pete.brown@powerhrg.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: docker-registry
+	sources: https://github.com/docker/distribution-library-image
+	urls: Not specified
+	version: 1.9.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: registry:2.7.1
+
+Chart Dependencies
+------------------
+docker-registry:1.9.2 uses registry:2.7.1
+
+Generated on 2020/03/16 17:15:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

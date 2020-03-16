@@ -1,0 +1,25 @@
+{
+  "maintainers": [
+    {
+      "name": "Sambit Mishra",
+      "email": "samis@microsoft.com"
+    },
+    {
+      "name": "Keiko Harada",
+      "email": "keikhara@microsoft.com"
+    }
+  ],
+  "keywords": [
+    "monitoring",
+    "alerting",
+    "metric",
+    "event",
+    "logging"
+  ],
+  "children": [],
+  "name": "msoms:0.2.0",
+  "description": "A chart for deploying omsagent as a daemonset Kubernetes",
+  "type": "chart",
+  "shortName": "msoms",
+  "version": "0.2.0"
+}

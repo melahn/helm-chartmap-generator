@@ -1,0 +1,31 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for openebs:1.7.1
+
+'There is one referenced Helm Chart
+artifact "openebs:1.7.1\n====\n\topenebs\n====\n\t1.7.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: kmova, prateekpandey14\n====\n\tKeywords: cloud-native-storage\nblock-storage\niSCSI\nstorage" as openebs_1_7_1 #GreenYellow
+
+'There are 6 referenced Docker Images
+usecase "Image\n====\n\tquay.io\n====\n\topenebs/admission-server:1.7.0\n====\n\t1.7.0" as quay_io_openebs_admission_server_1_7_0 #LawnGreen
+usecase "Image\n====\n\tquay.io\n====\n\topenebs/node-disk-operator-amd64:v0.4.7\n====\n\tv0.4.7" as quay_io_openebs_node_disk_operator_amd64_v0_4_7 #IndianRed
+usecase "Image\n====\n\tquay.io\n====\n\topenebs/snapshot-controller:1.7.0\n====\n\t1.7.0" as quay_io_openebs_snapshot_controller_1_7_0 #LightPink
+usecase "Image\n====\n\tquay.io\n====\n\topenebs/provisioner-localpv:1.7.0\n====\n\t1.7.0" as quay_io_openebs_provisioner_localpv_1_7_0 #GhostWhite
+usecase "Image\n====\n\tquay.io\n====\n\topenebs/m-apiserver:1.7.0\n====\n\t1.7.0" as quay_io_openebs_m_apiserver_1_7_0 #DarkSeaGreen
+usecase "Image\n====\n\tquay.io\n====\n\topenebs/openebs-k8s-provisioner:1.7.0\n====\n\t1.7.0" as quay_io_openebs_openebs_k8s_provisioner_1_7_0 #Khaki
+
+'Chart Dependencies
+openebs_1_7_1--[#orange]-|>quay_io_openebs_m_apiserver_1_7_0
+openebs_1_7_1--[#orange]-|>quay_io_openebs_openebs_k8s_provisioner_1_7_0
+openebs_1_7_1--[#orange]-|>quay_io_openebs_admission_server_1_7_0
+openebs_1_7_1--[#orange]-|>quay_io_openebs_node_disk_operator_amd64_v0_4_7
+openebs_1_7_1--[#orange]-|>quay_io_openebs_snapshot_controller_1_7_0
+openebs_1_7_1--[#orange]-|>quay_io_openebs_provisioner_localpv_1_7_0
+
+center footer Generated on 2020/03/16 17:25:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

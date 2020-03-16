@@ -1,0 +1,103 @@
+{
+  "maintainers": [
+    {"name": "vsliouniaev"},
+    {"name": "bismarck"},
+    {
+      "name": "gianrubio",
+      "email": "gianrubio@gmail.com"
+    }
+  ],
+  "keywords": [
+    "operator",
+    "prometheus"
+  ],
+  "children": [
+    {
+      "maintainers": [
+        {
+          "name": "fiunchinho",
+          "email": "jose@armesto.net"
+        },
+        {
+          "name": "tariq1890",
+          "email": "tariq.ibrahim@mulesoft.com"
+        },
+        {
+          "name": "mrueg",
+          "email": "manuel@rueg.eu"
+        }
+      ],
+      "keywords": [
+        "metric",
+        "monitoring",
+        "prometheus",
+        "kubernetes"
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "coreos/prometheus-operator",
+        "type": "image",
+        "version": "v0.37.0"
+      }],
+      "name": "kube-state-metrics:2.6.4",
+      "description": "Install kube-state-metrics to generate and expose cluster-level metrics",
+      "type": "chart",
+      "shortName": "kube-state-metrics",
+      "version": "2.6.4"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "gianrubio",
+          "email": "gianrubio@gmail.com"
+        },
+        {"name": "vsliouniaev"}
+      ],
+      "keywords": [
+        "node-exporter",
+        "prometheus",
+        "exporter"
+      ],
+      "children": [],
+      "name": "prometheus-node-exporter:1.8.2",
+      "description": "A Helm chart for prometheus node-exporter",
+      "type": "chart",
+      "shortName": "prometheus-node-exporter",
+      "version": "1.8.2"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "zanhsieh",
+          "email": "zanhsieh@gmail.com"
+        },
+        {
+          "name": "rtluckie",
+          "email": "rluckie@cisco.com"
+        },
+        {
+          "name": "maorfr",
+          "email": "maor.friedman@redhat.com"
+        }
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "coreos/kube-state-metrics",
+        "type": "image",
+        "version": "v1.9.4"
+      }],
+      "name": "grafana:5.0.4",
+      "description": "The leading tool for querying and visualizing time series and metrics.",
+      "type": "chart",
+      "shortName": "grafana",
+      "version": "5.0.4"
+    }
+  ],
+  "name": "prometheus-operator:8.12.0",
+  "description": "Provides easy monitoring definitions for Kubernetes services, and deployment and management of Prometheus instances.",
+  "type": "chart",
+  "shortName": "prometheus-operator",
+  "version": "8.12.0"
+}

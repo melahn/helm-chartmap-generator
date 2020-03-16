@@ -1,0 +1,29 @@
+Chart Map for metallb:0.12.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: metallb:0.12.0
+	apiVersion: v1
+	appVersion: 0.8.1
+	created: Not specified
+	dependencies: None
+	description: MetalLB is a load-balancer implementation for bare metal Kubernetes clusters
+	digest: Not specified
+	icon: https://metallb.universe.tf/images/logo.png
+	keywords: load-balancer,balancer,lb,bgp,arp,vrrp,vip
+	maintainers: danderson:dave@natulte.net
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: metallb
+	sources: Not specified
+	urls: Not specified
+	version: 0.12.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: metallb/controller:v0.8.1
+
+Chart Dependencies
+------------------
+metallb:0.12.0 uses metallb/controller:v0.8.1
+
+Generated on 2020/03/16 17:23:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

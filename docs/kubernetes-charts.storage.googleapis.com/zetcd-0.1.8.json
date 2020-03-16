@@ -1,0 +1,41 @@
+{
+  "maintainers": [{"name": "hunter"}],
+  "children": [
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "coreos/zetcd",
+      "type": "image",
+      "version": "v0.0.3"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "chancez",
+          "email": "chance.zibolski@coreos.com"
+        },
+        {
+          "name": "lachie83",
+          "email": "lachlan@deis.com"
+        }
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "coreos/etcd-operator",
+        "type": "image",
+        "version": "v0.3.3"
+      }],
+      "name": "etcd-operator:0.4.3",
+      "description": "CoreOS etcd-operator Helm chart for Kubernetes",
+      "type": "chart",
+      "shortName": "etcd-operator",
+      "version": "0.4.3"
+    }
+  ],
+  "name": "zetcd:0.1.8",
+  "description": "CoreOS zetcd Helm chart for Kubernetes",
+  "type": "chart",
+  "shortName": "zetcd",
+  "version": "0.1.8"
+}

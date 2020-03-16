@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for jasperreports:7.0.10
+
+'There are 2 referenced Helm Charts
+artifact "mariadb:7.3.12\n====\n\tmariadb\n====\n\t7.3.12\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mariadb\nmysql\ndatabase\nsql\nprometheus" as mariadb_7_3_12 #DarkTurquoise
+artifact "jasperreports:7.0.10\n====\n\tjasperreports\n====\n\t7.0.10\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: business intelligence\njava\njasper\nreporting\nanalytic\nvisualization" as jasperreports_7_0_10 #LightGrey
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mariadb:10.3.22-debian-10-r27\n====\n\t10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/jasperreports:7.2.0-debian-10-r24\n====\n\t7.2.0-debian-10-r24" as docker_io_bitnami_jasperreports_7_2_0_debian_10_r24 #LawnGreen
+
+'Chart Dependencies
+jasperreports_7_0_10--[#green]-|>mariadb_7_3_12
+mariadb_7_3_12--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r27
+jasperreports_7_0_10--[#orange]-|>docker_io_bitnami_jasperreports_7_2_0_debian_10_r24
+
+center footer Generated on 2020/03/16 17:20:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

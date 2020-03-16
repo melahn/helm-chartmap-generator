@@ -1,0 +1,41 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-content-services-community:3.0.0
+
+'There are 3 referenced Helm Charts
+artifact "postgresql:0.9.3\n====\n\tpostgresql\n====\n\t0.9.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: databus23\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql" as postgresql_0_9_3 #LightSteelBlue
+artifact "alfresco-search:1.0.0\n====\n\talfresco-search\n====\n\t1.0.0\n====\n\thttps://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: \n====\n\tKeywords: search\nsearch services\nalfresco search services\ninsight\ninsight engine\nalfresco insight engine" as alfresco_search_1_0_0 #GhostWhite
+artifact "alfresco-content-services-community:3.0.0\n====\n\talfresco-content-services-community\n====\n\t3.0.0\n====\n\thttps://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: \n====\n\tKeywords: community\nalfresco community\ncontent\ncontent services\nalfresco\nalfresco content services" as alfresco_content_services_community_3_0_0 #LightSkyBlue
+
+'There are 9 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t11.4" as postgres_11_4 #Ivory
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-imagemagick\n====\n\t2.1.0-RC3" as alfresco_alfresco_imagemagick_2_1_0_RC3 #Aqua
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-content-repository-community\n====\n\t6.2.0-ea" as alfresco_alfresco_content_repository_community_6_2_0_ea #Aqua
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-share\n====\n\t6.2.0-RC4" as alfresco_alfresco_share_6_2_0_RC4 #LightSalmon
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-search-services\n====\n\t1.4.0" as alfresco_alfresco_search_services_1_4_0 #Coral
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-libreoffice\n====\n\t2.1.0-RC3" as alfresco_alfresco_libreoffice_2_1_0_RC3 #LightSkyBlue
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-transform-misc\n====\n\t2.1.0-RC3" as alfresco_alfresco_transform_misc_2_1_0_RC3 #LightSkyBlue
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-pdf-renderer\n====\n\t2.1.0-RC3" as alfresco_alfresco_pdf_renderer_2_1_0_RC3 #Cornsilk
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-tika\n====\n\t2.1.0-RC3" as alfresco_alfresco_tika_2_1_0_RC3 #DeepSkyBlue
+
+'Chart Dependencies
+alfresco_content_services_community_3_0_0--[#green]-|>alfresco_search_1_0_0
+alfresco_content_services_community_3_0_0--[#green]-|>postgresql_0_9_3
+postgresql_0_9_3--[#orange]-|>postgres_11_4
+alfresco_search_1_0_0--[#orange]-|>alfresco_alfresco_search_services_1_4_0
+alfresco_content_services_community_3_0_0--[#orange]-|>alfresco_alfresco_content_repository_community_6_2_0_ea
+alfresco_content_services_community_3_0_0--[#orange]-|>alfresco_alfresco_share_6_2_0_RC4
+alfresco_content_services_community_3_0_0--[#orange]-|>alfresco_alfresco_libreoffice_2_1_0_RC3
+alfresco_content_services_community_3_0_0--[#orange]-|>alfresco_alfresco_pdf_renderer_2_1_0_RC3
+alfresco_content_services_community_3_0_0--[#orange]-|>alfresco_alfresco_transform_misc_2_1_0_RC3
+alfresco_content_services_community_3_0_0--[#orange]-|>alfresco_alfresco_imagemagick_2_1_0_RC3
+alfresco_content_services_community_3_0_0--[#orange]-|>alfresco_alfresco_tika_2_1_0_RC3
+
+center footer Generated on 2020/03/16 14:34:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

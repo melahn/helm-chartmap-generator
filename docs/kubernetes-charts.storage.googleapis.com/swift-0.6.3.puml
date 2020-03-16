@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for swift:0.6.3
+
+'There is one referenced Helm Chart
+artifact "swift:0.6.3\n====\n\tswift\n====\n\t0.6.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: " as swift_0_6_3 #LightSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tappscode/swift\n====\n\t0.7.3" as appscode_swift_0_7_3 #FloralWhite
+
+'Chart Dependencies
+swift_0_6_3--[#orange]-|>appscode_swift_0_7_3
+
+center footer Generated on 2020/03/16 17:31:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

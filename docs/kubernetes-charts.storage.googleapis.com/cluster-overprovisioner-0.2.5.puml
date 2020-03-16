@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for cluster-overprovisioner:0.2.5
+
+'There is one referenced Helm Chart
+artifact "cluster-overprovisioner:0.2.5\n====\n\tcluster-overprovisioner\n====\n\t0.2.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: max-rocket-internet, mmingorance-dh\n====\n\tKeywords: cluster\nautoscaling\noverprovision\ncluster-autoscaler" as cluster_overprovisioner_0_2_5 #Gainsboro
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2020/03/16 17:14:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

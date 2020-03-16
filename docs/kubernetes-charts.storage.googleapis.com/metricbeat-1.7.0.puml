@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for metricbeat:1.7.0
+
+'There is one referenced Helm Chart
+artifact "metricbeat:1.7.0\n====\n\tmetricbeat\n====\n\t1.7.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: at-k, mumoshu\n====\n\tKeywords: " as metricbeat_1_7_0 #Cornsilk
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tdocker.elastic.co\n====\n\tbeats/metricbeat:6.7.0\n====\n\t6.7.0" as docker_elastic_co_beats_metricbeat_6_7_0 #LightGrey
+
+'Chart Dependencies
+metricbeat_1_7_0--[#orange]-|>docker_elastic_co_beats_metricbeat_6_7_0
+
+center footer Generated on 2020/03/16 17:23:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

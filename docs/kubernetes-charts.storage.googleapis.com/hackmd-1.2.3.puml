@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for hackmd:1.2.3
+
+'There are 2 referenced Helm Charts
+artifact "postgresql:0.8.4\n====\n\tpostgresql\n====\n\t0.8.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: swordbeta, databus23\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql" as postgresql_0_8_4 #LightSteelBlue
+artifact "hackmd:1.2.3\n====\n\thackmd\n====\n\t1.2.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: yuanying\n====\n\tKeywords: hackmd\ncms\nmarkdown\nhttp\nweb\napplication" as hackmd_1_2_3 #GreenYellow
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\thackmdio/hackmd\n====\n\t1.3.0-alpine" as hackmdio_hackmd_1_3_0_alpine #Cornsilk
+usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t9.6.2" as postgres_9_6_2 #Ivory
+
+'Chart Dependencies
+hackmd_1_2_3--[#green]-|>postgresql_0_8_4
+postgresql_0_8_4--[#orange]-|>postgres_9_6_2
+hackmd_1_2_3--[#orange]-|>hackmdio_hackmd_1_3_0_alpine
+
+center footer Generated on 2020/03/16 17:18:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

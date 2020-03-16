@@ -1,0 +1,254 @@
+{
+  "keywords": [
+    "process",
+    "process services",
+    "alfresco",
+    "alfresco process services",
+    "activiti",
+    "activiti enterprise",
+    "alfresco activiti enterprise"
+  ],
+  "children": [
+    {
+      "maintainers": [{"name": "databus23"}],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6.2"
+      }],
+      "name": "postgresql:0.11.0",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.11.0"
+    },
+    {
+      "children": [],
+      "name": "common:1.1.21",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.1.21"
+    },
+    {
+      "maintainers": [{"name": "Alfresco"}],
+      "keywords": [
+        "alfresco",
+        "content",
+        "content services",
+        "alfresco content services",
+        "activiti",
+        "process",
+        "alfresco activiti enterprise",
+        "java",
+        "spring boot",
+        "microservice"
+      ],
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "activiti/example-runtime-bundle",
+          "type": "image",
+          "version": "7.0.0.SR1"
+        },
+        {
+          "children": [],
+          "name": "common:1.1.21",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.1.21"
+        }
+      ],
+      "name": "alfresco-process-springboot-service:2.1.0",
+      "description": "A Helm chart for a generic Alfresco Process/Activiti Spring Boot based microservice",
+      "type": "chart",
+      "shortName": "alfresco-process-springboot-service",
+      "version": "2.1.0"
+    },
+    {
+      "children": [
+        {
+          "maintainers": [{"name": "Alfresco"}],
+          "keywords": [
+            "alfresco",
+            "keycloak",
+            "identity-service"
+          ],
+          "children": [{
+            "maintainers": [
+              {
+                "name": "unguiculus",
+                "email": "unguiculus@gmail.com"
+              },
+              {
+                "name": "thomasdarimont",
+                "email": "thomas.darimont+github@gmail.com"
+              }
+            ],
+            "keywords": [
+              "sso",
+              "idm",
+              "openid connect",
+              "saml",
+              "kerberos",
+              "ldap"
+            ],
+            "children": [
+              {
+                "repoHost": "Docker Hub",
+                "children": [],
+                "name": "jboss/keycloak",
+                "type": "image",
+                "version": "4.8.3.Final"
+              },
+              {
+                "maintainers": [{"name": "databus23"}],
+                "keywords": [
+                  "postgresql",
+                  "postgres",
+                  "database",
+                  "sql"
+                ],
+                "children": [{
+                  "repoHost": "Docker Hub",
+                  "children": [],
+                  "name": "postgres",
+                  "type": "image",
+                  "version": "11.3"
+                }],
+                "name": "postgresql:0.15.0",
+                "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+                "type": "chart",
+                "shortName": "postgresql",
+                "version": "0.15.0"
+              }
+            ],
+            "name": "keycloak:4.3.0",
+            "description": "Open Source Identity and Access Management For Modern Applications and Services",
+            "type": "chart",
+            "shortName": "keycloak",
+            "version": "4.3.0"
+          }],
+          "name": "alfresco-identity-service:1.1.2",
+          "description": "The Alfresco Identity Service will become the central component responsible for identity-related capabilities needed by other Alfresco software, such as managing users, groups, roles, profiles, and authentication. Currently it deals just with authentication.",
+          "type": "chart",
+          "shortName": "alfresco-identity-service",
+          "version": "1.1.2"
+        },
+        {
+          "keywords": [
+            "activemq",
+            "message broker"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "alfresco/alfresco-activemq",
+            "type": "image",
+            "version": "5.15.8-java-8-oracle-centos-7-87b15e37ce8b"
+          }],
+          "name": "activemq:1.1.1",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "1.1.1"
+        },
+        {
+          "maintainers": [
+            {
+              "name": "jackzampolin",
+              "email": "jack.zampolin@gmail.com"
+            },
+            {
+              "name": "mgoodness",
+              "email": "mgoodness@gmail.com"
+            },
+            {
+              "name": "chancez",
+              "email": "chance.zibolski@coreos.com"
+            }
+          ],
+          "keywords": [
+            "ingress",
+            "nginx"
+          ],
+          "children": [
+            {
+              "repoHost": "Docker Hub",
+              "children": [],
+              "name": "k8s.gcr.io/defaultbackend",
+              "type": "image",
+              "version": "1.3"
+            },
+            {
+              "repoHost": "quay.io",
+              "children": [],
+              "name": "kubernetes-ingress-controller/nginx-ingress-controller",
+              "type": "image",
+              "version": "0.12.0"
+            }
+          ],
+          "name": "nginx-ingress:0.14.0",
+          "description": "An nginx Ingress controller that uses ConfigMap to store the nginx configuration.",
+          "type": "chart",
+          "shortName": "nginx-ingress",
+          "version": "0.14.0"
+        },
+        {
+          "maintainers": [{"name": "Alfresco"}],
+          "keywords": [
+            "alfresco",
+            "events",
+            "gateway"
+          ],
+          "children": [
+            {
+              "repoHost": "Docker Hub",
+              "children": [],
+              "name": "alfresco/alfresco-event-gateway",
+              "type": "image",
+              "version": "0.3-SNAPSHOT"
+            },
+            {
+              "keywords": [
+                "activemq",
+                "message broker"
+              ],
+              "children": [],
+              "name": "activemq:1.1.1",
+              "description": "A Helm chart Providing Apache ActiveMQ.",
+              "type": "chart",
+              "shortName": "activemq",
+              "version": "1.1.1"
+            }
+          ],
+          "name": "alfresco-event-gateway:0.1.2",
+          "description": "Alfresco Event Gateway",
+          "type": "chart",
+          "shortName": "alfresco-event-gateway",
+          "version": "0.1.2"
+        }
+      ],
+      "name": "alfresco-infrastructure:5.1.1",
+      "description": "A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform. This includes activemq, alfresco-identity-service, akfresco-event-gateway nginx-ingress and a persistent volume to use with the DBP chart.",
+      "type": "chart",
+      "shortName": "alfresco-infrastructure",
+      "version": "5.1.1"
+    }
+  ],
+  "name": "alfresco-process-infrastructure:7.1.0-M5",
+  "description": "A Helm chart for Alfresco Process Infrastructure",
+  "type": "chart",
+  "shortName": "alfresco-process-infrastructure",
+  "version": "7.1.0-M5"
+}

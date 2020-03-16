@@ -1,0 +1,38 @@
+{
+  "maintainers": [
+    {
+      "name": "krancour",
+      "email": "kent.rancourt@microsoft.com"
+    },
+    {
+      "name": "emilevauge",
+      "email": "emile@vauge.com"
+    },
+    {
+      "name": "dtomcej",
+      "email": "daniel.tomcej@gmail.com"
+    },
+    {
+      "name": "ldez",
+      "email": "ludovic@containo.us"
+    }
+  ],
+  "keywords": [
+    "traefik",
+    "ingress",
+    "acme",
+    "letsencrypt"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "traefik",
+    "type": "image",
+    "version": "1.7.20"
+  }],
+  "name": "traefik:1.86.1",
+  "description": "A Traefik based Kubernetes ingress controller with Let's Encrypt support",
+  "type": "chart",
+  "shortName": "traefik",
+  "version": "1.86.1"
+}

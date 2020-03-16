@@ -1,0 +1,19 @@
+{
+  "maintainers": [{
+    "name": "gianrubio",
+    "email": "gianrubio@gmail.com"
+  }],
+  "keywords": ["eventrouter"],
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "heptio-images/eventrouter",
+    "type": "image",
+    "version": "v0.3"
+  }],
+  "name": "eventrouter:0.3.0",
+  "description": "A Helm chart for eventruter (https://github.com/heptiolabs/eventrouter)",
+  "type": "chart",
+  "shortName": "eventrouter",
+  "version": "0.3.0"
+}

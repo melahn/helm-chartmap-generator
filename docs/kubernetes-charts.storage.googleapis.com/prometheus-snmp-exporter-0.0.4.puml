@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus-snmp-exporter:0.0.4
+
+'There is one referenced Helm Chart
+artifact "prometheus-snmp-exporter:0.0.4\n====\n\tprometheus-snmp-exporter\n====\n\t0.0.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: miouge1\n====\n\tKeywords: prometheus\nsnmp\nmonitoring" as prometheus_snmp_exporter_0_0_4 #Fuchsia
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tprom/snmp-exporter\n====\n\tv0.14.0" as prom_snmp_exporter_v0_14_0 #GreenYellow
+
+'Chart Dependencies
+prometheus_snmp_exporter_0_0_4--[#orange]-|>prom_snmp_exporter_v0_14_0
+
+center footer Generated on 2020/03/16 17:28:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

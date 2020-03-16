@@ -1,0 +1,47 @@
+Chart Map for parse:10.3.8
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: mongodb:7.8.5
+	apiVersion: v1
+	appVersion: 4.2.3
+	created: 2020-02-26T08:28:54.445183219Z
+	dependencies: None
+	description: NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
+	digest: dbf7a47d67888973b2b55e793c18356cfbd6be7ade6de39a32d3e1defb524fcb
+	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+	keywords: mongodb,database,nosql,cluster,replicaset,replication
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mongodb
+	sources: https://github.com/bitnami/bitnami-docker-mongodb
+	urls: https://kubernetes-charts.storage.googleapis.com/mongodb-7.8.5.tgz
+	version: 7.8.5
+Chart: parse:10.3.8
+	apiVersion: v1
+	appVersion: 3.10.0
+	created: Not specified
+	dependencies: mongodb:7.8.5
+	description: Parse is a platform that enables users to add a scalable and powerful backend to launch a full-featured app for iOS, Android, JavaScript, Windows, Unity, and more.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/parse/img/parse-stack-220x234.png
+	keywords: parse,backend,serverless,platform,mbaas,mobile
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: parse
+	sources: https://github.com/bitnami/bitnami-docker-parse,https://github.com/bitnami/bitnami-docker-parse-dashboard
+	urls: Not specified
+	version: 10.3.8
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/mongodb:4.2.3-debian-10-r10
+Image: docker.io/bitnami/parse:3.10.0-debian-10-r30
+
+Chart Dependencies
+------------------
+parse:10.3.8 depends on mongodb:7.8.5
+mongodb:7.8.5 uses docker.io/bitnami/mongodb:4.2.3-debian-10-r10
+parse:10.3.8 uses docker.io/bitnami/parse:3.10.0-debian-10-r30
+
+Generated on 2020/03/16 17:26:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

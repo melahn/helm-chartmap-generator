@@ -1,0 +1,22 @@
+{
+  "maintainers": [{
+    "name": "acondrat",
+    "email": "arcadie.condrat@gmail.com"
+  }],
+  "keywords": [
+    "prometheus",
+    "stackdriver"
+  ],
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "google-containers/prometheus-to-sd",
+    "type": "image",
+    "version": "v0.5.2"
+  }],
+  "name": "prometheus-to-sd:0.2.0",
+  "description": "Scrape metrics stored in prometheus format and push them to the Stackdriver",
+  "type": "chart",
+  "shortName": "prometheus-to-sd",
+  "version": "0.2.0"
+}

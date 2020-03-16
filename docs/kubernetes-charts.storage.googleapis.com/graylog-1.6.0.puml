@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for graylog:1.6.0
+
+'There are 3 referenced Helm Charts
+artifact "graylog:1.6.0\n====\n\tgraylog\n====\n\t1.6.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: KongZ\n====\n\tKeywords: graylog\nlogs\nsyslog\ngelf" as graylog_1_6_0 #LightGreen
+artifact "mongodb-replicaset:3.11.2\n====\n\tmongodb-replicaset\n====\n\t3.11.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: unguiculus, steven-sheehy\n====\n\tKeywords: " as mongodb_replicaset_3_11_2 #Fuchsia
+artifact "elasticsearch:1.32.2\n====\n\telasticsearch\n====\n\t1.32.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: simonswine, icereval, rendhalver, desaintmartin, KongZ, hectorj2f\n====\n\tKeywords: " as elasticsearch_1_32_2 #Aquamarine
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\n\tdocker.elastic.co\n====\n\telasticsearch/elasticsearch-oss:6.5.4\n====\n\t6.5.4" as docker_elastic_co_elasticsearch_elasticsearch_oss_6_5_4 #IndianRed
+usecase "Image\n====\n\tDocker Hub\n====\n\tgraylog/graylog\n====\n\t3.1" as graylog_graylog_3_1 #FloralWhite
+usecase "Image\n====\n\tDocker Hub\n====\n\tmongo\n====\n\t3.6" as mongo_3_6 #Aqua
+
+'Chart Dependencies
+graylog_1_6_0--[#green]-|>elasticsearch_1_32_2
+graylog_1_6_0--[#green]-|>mongodb_replicaset_3_11_2
+graylog_1_6_0--[#orange]-|>graylog_graylog_3_1
+mongodb_replicaset_3_11_2--[#orange]-|>mongo_3_6
+elasticsearch_1_32_2--[#orange]-|>docker_elastic_co_elasticsearch_elasticsearch_oss_6_5_4
+
+center footer Generated on 2020/03/16 17:18:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

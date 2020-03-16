@@ -1,0 +1,36 @@
+{
+  "maintainers": [
+    {
+      "name": "kfox1111",
+      "email": "Kevin.Fox@pnnl.gov"
+    },
+    {
+      "name": "sstarcher",
+      "email": "shane.starcher@gmail.com"
+    },
+    {
+      "name": "rendhalver",
+      "email": "pete.brown@powerhrg.com"
+    },
+    {
+      "name": "vi7",
+      "email": "vi7alya@gmail.com"
+    }
+  ],
+  "keywords": [
+    "dex",
+    "oidc"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "dexidp/dex",
+    "type": "image",
+    "version": "v2.21.0"
+  }],
+  "name": "dex:2.8.0",
+  "description": "CoreOS Dex",
+  "type": "chart",
+  "shortName": "dex",
+  "version": "2.8.0"
+}

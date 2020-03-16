@@ -1,0 +1,30 @@
+{
+  "maintainers": [
+    {
+      "name": "domcar",
+      "email": "d-caruso@hotmail.it"
+    },
+    {
+      "name": "hectorj2f",
+      "email": "hfernandez@mesosphere.com"
+    },
+    {
+      "name": "nrb",
+      "email": "brubakern@vmware.com"
+    },
+    {
+      "name": "carlisia",
+      "email": "carlisiac@vmware.com"
+    },
+    {
+      "name": "ashish-amarnath",
+      "email": "ashisham@vmware.com"
+    }
+  ],
+  "children": [],
+  "name": "velero:2.7.3",
+  "description": "A Helm chart for velero",
+  "type": "chart",
+  "shortName": "velero",
+  "version": "2.7.3"
+}

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for lamp:1.1.2
+
+'There is one referenced Helm Chart
+artifact "lamp:1.1.2\n====\n\tlamp\n====\n\t1.1.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: lead4good\n====\n\tKeywords: " as lamp_1_1_2 #AliceBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\thttpd\n====\n\t2.4-alpine" as httpd_2_4_alpine #Aqua
+
+'Chart Dependencies
+lamp_1_1_2--[#orange]-|>httpd_2_4_alpine
+
+center footer Generated on 2020/03/16 17:22:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,65 @@
+Chart Map for graylog:1.6.0
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: graylog:1.6.0
+	apiVersion: v1
+	appVersion: 3.1
+	created: Not specified
+	dependencies: elasticsearch:1.32.2, mongodb-replicaset:3.11.2
+	description: Graylog is the centralized log management solution built to open standards for capturing, storing, and enabling real-time analysis of terabytes of machine data.
+	digest: Not specified
+	icon: https://global-uploads.webflow.com/5a218ef7897bf400019e2f16/5a218ef7897bf400019e2f60_logo-graylog.png
+	keywords: graylog,logs,syslog,gelf
+	maintainers: KongZ:goonohc@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: graylog
+	sources: https://www.graylog.org
+	urls: Not specified
+	version: 1.6.0
+Chart: mongodb-replicaset:3.11.2
+	apiVersion: v1
+	appVersion: 3.6
+	created: 2020-01-12T23:28:17.698706745Z
+	dependencies: None
+	description: NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
+	digest: 4954ec12af749f92356e9f01f03e982507a52fda9ff81604d5fc2c929f980f19
+	icon: https://webassets.mongodb.com/_com_assets/cms/mongodb-logo-rgb-j6w271g1xn.jpg
+	keywords: Not specified
+	maintainers: unguiculus:unguiculus@gmail.com,steven-sheehy:ssheehy@firescope.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mongodb-replicaset
+	sources: https://github.com/mongodb/mongo,https://github.com/percona/mongodb_exporter
+	urls: https://kubernetes-charts.storage.googleapis.com/mongodb-replicaset-3.11.2.tgz
+	version: 3.11.2
+Chart: elasticsearch:1.32.2
+	apiVersion: v1
+	appVersion: 6.8.2
+	created: 2020-02-13T22:28:58.944290522Z
+	dependencies: None
+	description: Flexible and powerful open source, distributed real-time search and analytics engine.
+	digest: 76b0b9266f48806aa073fd0c830f6c0be325723804b553e06d7048a068270b32
+	icon: https://static-www.elastic.co/assets/blteb1c97719574938d/logo-elastic-elasticsearch-lt.svg
+	keywords: Not specified
+	maintainers: simonswine:christian@jetstack.io,icereval:michael.haselton@gmail.com,rendhalver:pete.brown@powerhrg.com,desaintmartin:cedric@desaintmartin.fr,KongZ:goonohc@gmail.com,hectorj2f:hfernandez@mesosphere.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: elasticsearch
+	sources: https://www.elastic.co/products/elasticsearch,https://github.com/jetstack/elasticsearch-pet,https://github.com/giantswarm/kubernetes-elastic-stack,https://github.com/GoogleCloudPlatform/elasticsearch-docker,https://github.com/clockworksoul/helm-elasticsearch,https://github.com/pires/kubernetes-elasticsearch-cluster
+	urls: https://kubernetes-charts.storage.googleapis.com/elasticsearch-1.32.2.tgz
+	version: 1.32.2
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4
+Image: graylog/graylog:3.1
+Image: mongo:3.6
+
+Chart Dependencies
+------------------
+graylog:1.6.0 depends on elasticsearch:1.32.2
+graylog:1.6.0 depends on mongodb-replicaset:3.11.2
+graylog:1.6.0 uses graylog/graylog:3.1
+mongodb-replicaset:3.11.2 uses mongo:3.6
+elasticsearch:1.32.2 uses docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4
+
+Generated on 2020/03/16 17:18:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

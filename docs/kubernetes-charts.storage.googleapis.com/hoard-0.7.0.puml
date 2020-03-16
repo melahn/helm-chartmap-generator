@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for hoard:0.7.0
+
+'There is one referenced Helm Chart
+artifact "hoard:0.7.0\n====\n\thoard\n====\n\t0.7.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: compleatang, gregdhill\n====\n\tKeywords: s3\naws\ngcp\nazure\nipfs\nenvelope encryption\ncontent addressable\ndistributed file storage" as hoard_0_7_0 #Aqua
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tquay.io\n====\n\tmonax/hoard:controller\n====\n\tcontroller" as quay_io_monax_hoard_controller #LightGreen
+usecase "Image\n====\n\tquay.io\n====\n\tmonax/hoard:3.0.1\n====\n\t3.0.1" as quay_io_monax_hoard_3_0_1 #LightGreen
+
+'Chart Dependencies
+hoard_0_7_0--[#orange]-|>quay_io_monax_hoard_3_0_1
+hoard_0_7_0--[#orange]-|>quay_io_monax_hoard_controller
+
+center footer Generated on 2020/03/16 17:19:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

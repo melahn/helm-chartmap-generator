@@ -1,0 +1,85 @@
+{
+  "maintainers": [{
+    "name": "gsemet",
+    "email": "gaetan@xeberon.net"
+  }],
+  "keywords": [
+    "workflow",
+    "dag"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "puckel/docker-airflow",
+      "type": "image",
+      "version": "1.10.4"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/postgresql",
+        "type": "image",
+        "version": "11.6.0-debian-9-r48"
+      }],
+      "name": "postgresql:8.1.4",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "8.1.4"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/redis",
+        "type": "image",
+        "version": "5.0.7-debian-9-r50"
+      }],
+      "name": "redis:10.3.4",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "10.3.4"
+    }
+  ],
+  "name": "airflow:6.5.0",
+  "description": "Airflow is a platform to programmatically author, schedule and monitor workflows",
+  "type": "chart",
+  "shortName": "airflow",
+  "version": "6.5.0"
+}

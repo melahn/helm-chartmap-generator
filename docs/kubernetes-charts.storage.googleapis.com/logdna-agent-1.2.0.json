@@ -1,0 +1,23 @@
+{
+  "maintainers": [{
+    "name": "leeliu",
+    "email": "lee@logdna.com"
+  }],
+  "keywords": [
+    "logs",
+    "logging",
+    "log-management",
+    "agent",
+    "alerts",
+    "metrics",
+    "events",
+    "daemonset",
+    "logger"
+  ],
+  "children": [],
+  "name": "logdna-agent:1.2.0",
+  "description": "Run this, get logs. All cluster containers. LogDNA collector agent daemonset for Kubernetes.",
+  "type": "chart",
+  "shortName": "logdna-agent",
+  "version": "1.2.0"
+}

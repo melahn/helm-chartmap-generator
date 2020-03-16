@@ -1,0 +1,27 @@
+Chart Map for efs-provisioner:0.10.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: efs-provisioner:0.10.2
+	apiVersion: v1
+	appVersion: v2.4.0
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for the AWS EFS external storage provisioner
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: whereisaaron:aaron@roydhouse.com,mariusv:myself@mariusv.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: efs-provisioner
+	sources: https://github.com/kubernetes-incubator/external-storage/tree/master/aws/efs,https://github.com/mirror/busybox
+	urls: Not specified
+	version: 0.10.2
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/03/16 17:15:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

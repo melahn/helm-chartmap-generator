@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for nginx-lego:0.3.1
+
+'There is one referenced Helm Chart
+artifact "nginx-lego:0.3.1\n====\n\tnginx-lego\n====\n\t0.3.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Jack Zampolin\n====\n\tKeywords: kube-lego\nnginx-ingress-controller\nnginx\nletsencrypt" as nginx_lego_0_3_1 #FloralWhite
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tk8s.gcr.io/nginx-ingress-controller\n====\n\t0.8.3" as k8s_gcr_io_nginx_ingress_controller_0_8_3 #DarkSeaGreen
+usecase "Image\n====\n\tDocker Hub\n====\n\tk8s.gcr.io/defaultbackend\n====\n\t1.0" as k8s_gcr_io_defaultbackend_1_0 #DarkSeaGreen
+
+'Chart Dependencies
+nginx_lego_0_3_1--[#orange]-|>k8s_gcr_io_defaultbackend_1_0
+nginx_lego_0_3_1--[#orange]-|>k8s_gcr_io_nginx_ingress_controller_0_8_3
+
+center footer Generated on 2020/03/16 17:24:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

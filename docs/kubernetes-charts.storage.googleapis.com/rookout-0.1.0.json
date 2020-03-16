@@ -1,0 +1,12 @@
+{
+  "maintainers": [{
+    "name": "Zohar",
+    "email": "zohar@rookout.com"
+  }],
+  "children": [],
+  "name": "rookout:0.1.0",
+  "description": "A Helm chart for Rookout agent on Kubernetes",
+  "type": "chart",
+  "shortName": "rookout",
+  "version": "0.1.0"
+}

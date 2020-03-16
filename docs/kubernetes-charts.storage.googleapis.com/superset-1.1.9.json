@@ -1,0 +1,19 @@
+{
+  "maintainers": [{
+    "name": "marcussorealheis",
+    "email": "marcuseagan@gmail.com"
+  }],
+  "keywords": ["bi"],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "amancevice/superset",
+    "type": "image",
+    "version": "0.35.2"
+  }],
+  "name": "superset:1.1.9",
+  "description": "Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application",
+  "type": "chart",
+  "shortName": "superset",
+  "version": "1.1.9"
+}

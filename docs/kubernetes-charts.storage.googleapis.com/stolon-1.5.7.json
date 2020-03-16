@@ -1,0 +1,18 @@
+{
+  "maintainers": [
+    {
+      "name": "rtluckie",
+      "email": "rluckie@cisco.com"
+    },
+    {
+      "name": "lwolf",
+      "email": "ipaq.lw@gmail.com"
+    }
+  ],
+  "children": [],
+  "name": "stolon:1.5.7",
+  "description": "Stolon - PostgreSQL cloud native High Availability.",
+  "type": "chart",
+  "shortName": "stolon",
+  "version": "1.5.7"
+}

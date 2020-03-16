@@ -1,0 +1,28 @@
+{
+  "maintainers": [
+    {
+      "name": "gianrubio",
+      "email": "gianrubio@gmail.com"
+    },
+    {
+      "name": "cstaud",
+      "email": "christian.staude@staffbase.com"
+    }
+  ],
+  "keywords": [
+    "pushgateway",
+    "prometheus"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prom/pushgateway",
+    "type": "image",
+    "version": "v1.2.0"
+  }],
+  "name": "prometheus-pushgateway:1.3.0",
+  "description": "A Helm chart for prometheus pushgateway",
+  "type": "chart",
+  "shortName": "prometheus-pushgateway",
+  "version": "1.3.0"
+}

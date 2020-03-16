@@ -1,0 +1,47 @@
+Chart Map for bookstack:1.2.0
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: mariadb:4.4.0
+	apiVersion: Not specified
+	appVersion: 10.1.35
+	created: 2018-09-10T09:25:34.467013591Z
+	dependencies: None
+	description: Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.
+	digest: 16e8bf195c2a66a44b6d69f71929a86414853d1396213d4e1888376e64bcf084
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: bitnami-bot:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter
+	urls: https://kubernetes-charts.storage.googleapis.com/mariadb-4.4.0.tgz
+	version: 4.4.0
+Chart: bookstack:1.2.0
+	apiVersion: v1
+	appVersion: 0.27.5
+	created: Not specified
+	dependencies: mariadb:4.4.0
+	description: BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information.
+	digest: Not specified
+	icon: https://github.com/BookStackApp/website/blob/master/static/images/logo.png
+	keywords: Not specified
+	maintainers: verwilst:bart@verwilst.be
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: bookstack
+	sources: https://github.com/BookStackApp/BookStack
+	urls: Not specified
+	version: 1.2.0
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.1.35-debian-9
+Image: solidnerd/bookstack:0.27.5
+
+Chart Dependencies
+------------------
+bookstack:1.2.0 depends on mariadb:4.4.0
+mariadb:4.4.0 uses docker.io/bitnami/mariadb:10.1.35-debian-9
+bookstack:1.2.0 uses solidnerd/bookstack:0.27.5
+
+Generated on 2020/03/16 17:13:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

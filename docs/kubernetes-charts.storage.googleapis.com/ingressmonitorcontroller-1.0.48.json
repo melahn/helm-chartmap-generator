@@ -1,0 +1,44 @@
+{
+  "maintainers": [
+    {
+      "name": "rasheedamir",
+      "email": "rasheed@aurorasolutions.io"
+    },
+    {
+      "name": "waseem-h",
+      "email": "waseemhassan@stakater.com"
+    },
+    {
+      "name": "faizanahmad055",
+      "email": "faizan.ahmad55@outlook.com"
+    },
+    {
+      "name": "kahootali",
+      "email": "ali.kahoot@aurorasolutions.io"
+    },
+    {
+      "name": "ahmadiq",
+      "email": "ahmad@aurorasolutions.io"
+    },
+    {
+      "name": "ahsan-storm",
+      "email": "ahsanmuhammad1@outlook.com"
+    }
+  ],
+  "keywords": [
+    "IngressMonitorController",
+    "kubernetes"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "stakater/ingressmonitorcontroller",
+    "type": "image",
+    "version": "1.0.47"
+  }],
+  "name": "ingressmonitorcontroller:1.0.48",
+  "description": "IngressMonitorController chart that runs on kubernetes",
+  "type": "chart",
+  "shortName": "ingressmonitorcontroller",
+  "version": "1.0.48"
+}

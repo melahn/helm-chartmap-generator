@@ -1,0 +1,22 @@
+{
+  "keywords": [
+    "mailhog",
+    "mail",
+    "smtp",
+    "email",
+    "e-mail",
+    "testing"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "mailhog/mailhog",
+    "type": "image",
+    "version": "v1.0.0"
+  }],
+  "name": "mailhog:2.3.1",
+  "description": "DEPRECATED - An e-mail testing tool for developers",
+  "type": "chart",
+  "shortName": "mailhog",
+  "version": "2.3.1"
+}

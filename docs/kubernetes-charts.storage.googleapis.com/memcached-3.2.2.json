@@ -1,0 +1,32 @@
+{
+  "maintainers": [
+    {
+      "name": "gtaylor",
+      "email": "gtaylor@gc-taylor.com"
+    },
+    {
+      "name": "olemarkus",
+      "email": "o.with@sportradar.com"
+    },
+    {
+      "name": "kennethaasan",
+      "email": "k.aasan@sportradar.com"
+    }
+  ],
+  "keywords": [
+    "memcached",
+    "cache"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "memcached",
+    "type": "image",
+    "version": "1.5.20"
+  }],
+  "name": "memcached:3.2.2",
+  "description": "Free & open source, high-performance, distributed memory object caching system.",
+  "type": "chart",
+  "shortName": "memcached",
+  "version": "3.2.2"
+}

@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "appscode",
+    "email": "support@appscode.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "appscode/searchlight",
+    "type": "image",
+    "version": "5.0.0"
+  }],
+  "name": "searchlight:0.3.2",
+  "description": "Searchlight by AppsCode - Alerts for Kubernetes",
+  "type": "chart",
+  "shortName": "searchlight",
+  "version": "0.3.2"
+}

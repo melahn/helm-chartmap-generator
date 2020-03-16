@@ -1,0 +1,35 @@
+{
+  "keywords": [
+    "sugarcrm",
+    "CRM"
+  ],
+  "children": [{
+    "maintainers": [{
+      "name": "Bitnami",
+      "email": "containers@bitnami.com"
+    }],
+    "keywords": [
+      "mariadb",
+      "mysql",
+      "database",
+      "sql"
+    ],
+    "children": [{
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "bitnami/mariadb",
+      "type": "image",
+      "version": "10.1.23-r2"
+    }],
+    "name": "mariadb:0.7.0",
+    "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software.",
+    "type": "chart",
+    "shortName": "mariadb",
+    "version": "0.7.0"
+  }],
+  "name": "sugarcrm:1.0.7",
+  "description": "DEPRECATED SugarCRM enables businesses to create extraordinary customer relationships with the most innovative and affordable CRM solution in the market.",
+  "type": "chart",
+  "shortName": "sugarcrm",
+  "version": "1.0.7"
+}

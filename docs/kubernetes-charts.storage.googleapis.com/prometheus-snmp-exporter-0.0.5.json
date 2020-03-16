@@ -1,0 +1,23 @@
+{
+  "maintainers": [{
+    "name": "miouge1",
+    "email": "maxime@root314.com"
+  }],
+  "keywords": [
+    "prometheus",
+    "snmp",
+    "monitoring"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prom/snmp-exporter",
+    "type": "image",
+    "version": "v0.14.0"
+  }],
+  "name": "prometheus-snmp-exporter:0.0.5",
+  "description": "Prometheus SNMP Exporter",
+  "type": "chart",
+  "shortName": "prometheus-snmp-exporter",
+  "version": "0.0.5"
+}

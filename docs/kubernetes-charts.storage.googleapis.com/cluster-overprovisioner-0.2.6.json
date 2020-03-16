@@ -1,0 +1,24 @@
+{
+  "maintainers": [
+    {
+      "name": "max-rocket-internet",
+      "email": "max.williams@deliveryhero.com"
+    },
+    {
+      "name": "mmingorance-dh",
+      "email": "miguel.mingorance@deliveryhero.com"
+    }
+  ],
+  "keywords": [
+    "cluster",
+    "autoscaling",
+    "overprovision",
+    "cluster-autoscaler"
+  ],
+  "children": [],
+  "name": "cluster-overprovisioner:0.2.6",
+  "description": "Installs the a deployment that overprovisions the cluster",
+  "type": "chart",
+  "shortName": "cluster-overprovisioner",
+  "version": "0.2.6"
+}

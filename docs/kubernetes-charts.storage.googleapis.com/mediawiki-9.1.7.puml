@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for mediawiki:9.1.7
+
+'There are 2 referenced Helm Charts
+artifact "mariadb:7.3.10\n====\n\tmariadb\n====\n\t7.3.10\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mariadb\nmysql\ndatabase\nsql\nprometheus" as mariadb_7_3_10 #DarkTurquoise
+artifact "mediawiki:9.1.7\n====\n\tmediawiki\n====\n\t9.1.7\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mediawiki\nwiki\nhttp\nweb\napplication\nphp" as mediawiki_9_1_7 #LightSteelBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mariadb:10.3.22-debian-10-r17\n====\n\t10.3.22-debian-10-r17" as docker_io_bitnami_mariadb_10_3_22_debian_10_r17 #DarkGoldenRod
+
+'Chart Dependencies
+mediawiki_9_1_7--[#green]-|>mariadb_7_3_10
+mariadb_7_3_10--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r17
+
+center footer Generated on 2020/03/16 17:23:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

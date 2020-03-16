@@ -1,0 +1,14 @@
+{
+  "keywords": [
+    "kiam",
+    "aws",
+    "iam",
+    "security"
+  ],
+  "children": [],
+  "name": "kiam:2.5.3",
+  "description": "DEPRECATED Integrate AWS IAM with Kubernetes",
+  "type": "chart",
+  "shortName": "kiam",
+  "version": "2.5.3"
+}

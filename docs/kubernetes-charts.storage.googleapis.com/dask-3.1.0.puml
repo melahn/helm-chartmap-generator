@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for dask:3.1.0
+
+'There is one referenced Helm Chart
+artifact "dask:3.1.0\n====\n\tdask\n====\n\t3.1.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: danielfrg, mrocklin, beberg\n====\n\tKeywords: " as dask_3_1_0 #LightSteelBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tdaskdev/dask-notebook\n====\n\t1.1.5" as daskdev_dask_notebook_1_1_5 #CornflowerBlue
+usecase "Image\n====\n\tDocker Hub\n====\n\tdaskdev/dask\n====\n\t1.1.5" as daskdev_dask_1_1_5 #LemonChiffon
+
+'Chart Dependencies
+dask_3_1_0--[#orange]-|>daskdev_dask_1_1_5
+dask_3_1_0--[#orange]-|>daskdev_dask_notebook_1_1_5
+
+center footer Generated on 2020/03/16 17:15:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

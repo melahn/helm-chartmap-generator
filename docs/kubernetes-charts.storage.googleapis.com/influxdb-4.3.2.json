@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "influxdb",
+    "database",
+    "timeseries"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "influxdb",
+    "type": "image",
+    "version": "1.7.9-alpine"
+  }],
+  "name": "influxdb:4.3.2",
+  "description": "DEPRECATED Scalable datastore for metrics, events, and real-time analytics.",
+  "type": "chart",
+  "shortName": "influxdb",
+  "version": "4.3.2"
+}

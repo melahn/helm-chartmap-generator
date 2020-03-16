@@ -1,0 +1,59 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "odoo",
+    "crm",
+    "www",
+    "http",
+    "web"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/odoo",
+      "type": "image",
+      "version": "12.0.20200215-debian-10-r1"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/postgresql",
+        "type": "image",
+        "version": "11.7.0-debian-10-r9"
+      }],
+      "name": "postgresql:8.4.3",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "8.4.3"
+    }
+  ],
+  "name": "odoo:13.0.3",
+  "description": "A suite of web based open source business apps.",
+  "type": "chart",
+  "shortName": "odoo",
+  "version": "13.0.3"
+}

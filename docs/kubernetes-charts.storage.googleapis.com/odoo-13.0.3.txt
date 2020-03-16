@@ -1,0 +1,47 @@
+Chart Map for odoo:13.0.3
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: odoo:13.0.3
+	apiVersion: v1
+	appVersion: 12.0.20200215
+	created: Not specified
+	dependencies: postgresql:8.4.3
+	description: A suite of web based open source business apps.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/odoo/img/odoo-stack-110x117.png
+	keywords: odoo,crm,www,http,web
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: odoo
+	sources: https://github.com/bitnami/bitnami-docker-odoo
+	urls: Not specified
+	version: 13.0.3
+Chart: postgresql:8.4.3
+	apiVersion: v1
+	appVersion: 11.7.0
+	created: 2020-03-03T09:58:45.752315896Z
+	dependencies: None
+	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 745953ffac81f065b4681821d409d08215a17b3b2f45f064870cca4113161450
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql
+	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-8.4.3.tgz
+	version: 8.4.3
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/odoo:12.0.20200215-debian-10-r1
+Image: docker.io/bitnami/postgresql:11.7.0-debian-10-r9
+
+Chart Dependencies
+------------------
+odoo:13.0.3 depends on postgresql:8.4.3
+odoo:13.0.3 uses docker.io/bitnami/odoo:12.0.20200215-debian-10-r1
+postgresql:8.4.3 uses docker.io/bitnami/postgresql:11.7.0-debian-10-r9
+
+Generated on 2020/03/16 17:25:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

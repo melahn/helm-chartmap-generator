@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for uchiwa:0.2.7
+
+'There are 3 referenced Helm Charts
+artifact "uchiwa:0.2.7\n====\n\tuchiwa\n====\n\t0.2.7\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Shane Starcher\n====\n\tKeywords: uchiwa\nsensu\nmonitoring" as uchiwa_0_2_7 #HoneyDew
+artifact "redis:0.4.5\n====\n\tredis\n====\n\t0.4.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_0_4_5 #LightSeaGreen
+artifact "sensu:0.1.2\n====\n\tsensu\n====\n\t0.1.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Shane Starcher\n====\n\tKeywords: sensu\nmonitoring" as sensu_0_1_2 #Aqua
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tsstarcher/uchiwa\n====\n\t0.22" as sstarcher_uchiwa_0_22 #LightGreen
+usecase "Image\n====\n\tDocker Hub\n====\n\tbitnami/redis\n====\n\t3.2.6-r2" as bitnami_redis_3_2_6_r2 #Khaki
+usecase "Image\n====\n\tDocker Hub\n====\n\tsstarcher/sensu\n====\n\t0.28" as sstarcher_sensu_0_28 #GreenYellow
+
+'Chart Dependencies
+uchiwa_0_2_7--[#green]-|>sensu_0_1_2
+sensu_0_1_2--[#green]-|>redis_0_4_5
+uchiwa_0_2_7--[#orange]-|>sstarcher_uchiwa_0_22
+redis_0_4_5--[#orange]-|>bitnami_redis_3_2_6_r2
+sensu_0_1_2--[#orange]-|>sstarcher_sensu_0_28
+
+center footer Generated on 2020/03/16 17:31:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

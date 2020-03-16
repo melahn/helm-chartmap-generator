@@ -1,0 +1,29 @@
+Chart Map for elasticsearch:1.32.3
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: elasticsearch:1.32.3
+	apiVersion: v1
+	appVersion: 6.8.6
+	created: Not specified
+	dependencies: None
+	description: Flexible and powerful open source, distributed real-time search and analytics engine.
+	digest: Not specified
+	icon: https://static-www.elastic.co/assets/blteb1c97719574938d/logo-elastic-elasticsearch-lt.svg
+	keywords: Not specified
+	maintainers: simonswine:christian@jetstack.io,icereval:michael.haselton@gmail.com,rendhalver:pete.brown@powerhrg.com,desaintmartin:cedric@desaintmartin.fr,KongZ:goonohc@gmail.com,hectorj2f:hfernandez@mesosphere.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: elasticsearch
+	sources: https://www.elastic.co/products/elasticsearch,https://github.com/jetstack/elasticsearch-pet,https://github.com/giantswarm/kubernetes-elastic-stack,https://github.com/GoogleCloudPlatform/elasticsearch-docker,https://github.com/clockworksoul/helm-elasticsearch,https://github.com/pires/kubernetes-elasticsearch-cluster
+	urls: Not specified
+	version: 1.32.3
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.8.6
+
+Chart Dependencies
+------------------
+elasticsearch:1.32.3 uses docker.elastic.co/elasticsearch/elasticsearch-oss:6.8.6
+
+Generated on 2020/03/16 17:16:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

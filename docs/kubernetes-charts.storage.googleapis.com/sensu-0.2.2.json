@@ -1,0 +1,47 @@
+{
+  "maintainers": [{
+    "name": "Shane Starcher",
+    "email": "shane.starcher@gmail.com"
+  }],
+  "keywords": [
+    "sensu",
+    "monitoring"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "sstarcher/sensu",
+      "type": "image",
+      "version": "0.28"
+    },
+    {
+      "maintainers": [{
+        "name": "bitnami-bot",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "bitnami/redis",
+        "type": "image",
+        "version": "3.2.9-r2"
+      }],
+      "name": "redis:0.9.0",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "0.9.0"
+    }
+  ],
+  "name": "sensu:0.2.2",
+  "description": "Sensu monitoring framework backed by the Redis transport",
+  "type": "chart",
+  "shortName": "sensu",
+  "version": "0.2.2"
+}

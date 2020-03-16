@@ -1,0 +1,32 @@
+{
+  "maintainers": [
+    {
+      "name": "pposkrobko",
+      "email": "pawel.poskrobko@icloud.com"
+    },
+    {
+      "name": "Prytu",
+      "email": "mich.pryt@gmail.com"
+    },
+    {
+      "name": "GraczykowskiMichal",
+      "email": "graczykowskimichal@gmail.com"
+    },
+    {
+      "name": "jackmax",
+      "email": "jacek.maksymowicz@student.uw.edu.pl"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "pposkrobko/risk-advisor",
+    "type": "image",
+    "version": "v1.0.0"
+  }],
+  "name": "risk-advisor:2.0.4",
+  "description": "Risk Advisor add-on module for Kubernetes",
+  "type": "chart",
+  "shortName": "risk-advisor",
+  "version": "2.0.4"
+}

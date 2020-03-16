@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus-blackbox-exporter:3.2.0
+
+'There is one referenced Helm Chart
+artifact "prometheus-blackbox-exporter:3.2.0\n====\n\tprometheus-blackbox-exporter\n====\n\t3.2.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: desaintmartin, gianrubio, rsotnychenko\n====\n\tKeywords: prometheus\nblackbox\nmonitoring" as prometheus_blackbox_exporter_3_2_0 #HotPink
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tprom/blackbox-exporter\n====\n\tv0.16.0" as prom_blackbox_exporter_v0_16_0 #DarkTurquoise
+
+'Chart Dependencies
+prometheus_blackbox_exporter_3_2_0--[#orange]-|>prom_blackbox_exporter_v0_16_0
+
+center footer Generated on 2020/03/16 17:27:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

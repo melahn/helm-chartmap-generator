@@ -1,0 +1,67 @@
+{
+  "maintainers": [
+    {
+      "name": "darioblanco",
+      "email": "dblanco@minddoc.com"
+    },
+    {
+      "name": "decayofmind",
+      "email": "r.komkov@gmail.com"
+    }
+  ],
+  "keywords": [
+    "slack",
+    "hubot",
+    "chatbot"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/redis",
+      "type": "image",
+      "version": "5.0.5-debian-9-r36"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "minddocdev/hubot",
+      "type": "image",
+      "version": "3.3.2"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/redis",
+        "type": "image",
+        "version": "5.0.5-debian-9-r36"
+      }],
+      "name": "redis:8.0.19",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "8.0.19"
+    }
+  ],
+  "name": "hubot:1.0.0",
+  "description": "Hubot chatbot for Slack",
+  "type": "chart",
+  "shortName": "hubot",
+  "version": "1.0.0"
+}

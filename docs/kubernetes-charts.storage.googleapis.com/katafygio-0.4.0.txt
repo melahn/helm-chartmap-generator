@@ -1,0 +1,29 @@
+Chart Map for katafygio:0.4.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: katafygio:0.4.0
+	apiVersion: v1
+	appVersion: 0.7.1
+	created: Not specified
+	dependencies: None
+	description: Continuously backup Kubernetes objets as YAML files in git
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/bpineau/katafygio/master/assets/logo/480px-katafygio.png
+	keywords: backup,dump,katafygio,git
+	maintainers: bpineau:ben.pineau@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: katafygio
+	sources: https://github.com/bpineau/katafygio
+	urls: Not specified
+	version: 0.4.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: bpineau/katafygio:v0.7.1
+
+Chart Dependencies
+------------------
+katafygio:0.4.0 uses bpineau/katafygio:v0.7.1
+
+Generated on 2020/03/16 17:20:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

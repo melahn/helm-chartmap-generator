@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for docker-registry:1.9.2
+
+'There is one referenced Helm Chart
+artifact "docker-registry:1.9.2\n====\n\tdocker-registry\n====\n\t1.9.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: jpds, rendhalver\n====\n\tKeywords: " as docker_registry_1_9_2 #BurlyWood
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tregistry\n====\n\t2.7.1" as registry_2_7_1 #Khaki
+
+'Chart Dependencies
+docker_registry_1_9_2--[#orange]-|>registry_2_7_1
+
+center footer Generated on 2020/03/16 17:15:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

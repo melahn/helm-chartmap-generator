@@ -1,0 +1,47 @@
+Chart Map for luigi:2.7.4
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: mysql:0.3.4
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: 2018-03-01T06:04:16.760807252Z
+	dependencies: None
+	description: Fast, reliable, scalable, and easy to use open-source relational database system.
+	digest: 314df04967024171e42c08fc54f7e7572b71466582251766ec52624d4ecee9a3
+	icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+	keywords: mysql,database,sql
+	maintainers: Vic Iglesias:viglesias@google.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mysql
+	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/mysql
+	urls: https://kubernetes-charts.storage.googleapis.com/mysql-0.3.4.tgz
+	version: 0.3.4
+Chart: luigi:2.7.4
+	apiVersion: v1
+	appVersion: 2.7.2
+	created: Not specified
+	dependencies: mysql:0.3.4
+	description: Luigi is a Python module that helps you build complex pipelines of batch jobs. It handles dependency resolution, workflow management, visualization etc. It also comes with Hadoop support built in.
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/spotify/luigi/master/doc/luigi.png
+	keywords: luigi,scheduler,dependency graph,web,task management,hadoop,spark,kubernetes job manager
+	maintainers: sammerry:sam.merry@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: luigi
+	sources: https://github.com/spotify/luigi/,https://github.com/sammerry/luigi-docker-image/
+	urls: Not specified
+	version: 2.7.4
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: axiom/docker-luigi:2.7.2-alpine
+Image: mysql:5.7.14
+
+Chart Dependencies
+------------------
+luigi:2.7.4 depends on mysql:0.3.4
+mysql:0.3.4 uses mysql:5.7.14
+luigi:2.7.4 uses axiom/docker-luigi:2.7.2-alpine
+
+Generated on 2020/03/16 17:22:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

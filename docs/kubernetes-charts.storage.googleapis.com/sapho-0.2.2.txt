@@ -1,0 +1,47 @@
+Chart Map for sapho:0.2.2
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: sapho:0.2.2
+	apiVersion: v1
+	appVersion: Not specified
+	created: Not specified
+	dependencies: mysql:0.3.7
+	description: A micro application development and integration platform that enables organizations to create and deliver secure micro applications that tie into existing business systems and track changes to key business data.
+	digest: Not specified
+	icon: https://www.sapho.com/wp-content/uploads/2016/04/sapho-logotype.svg
+	keywords: Not specified
+	maintainers: Sapho:support@sapho.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: sapho
+	sources: https://bitbucket.org/sapho/ops-docker-tomcat/src,https://hub.docker.com/r/sapho/ops-docker-tomcat,https://github.com/kubernetes/charts/tree/master/stable/mysql
+	urls: Not specified
+	version: 0.2.2
+Chart: mysql:0.3.7
+	apiVersion: Not specified
+	appVersion: 5.7.14
+	created: 2018-04-24T14:56:58.547586811Z
+	dependencies: None
+	description: Fast, reliable, scalable, and easy to use open-source relational database system.
+	digest: 0c8d79ccd4ed817f54fe14d90a45833a0ef454127339c233db1e920b256a39a9
+	icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+	keywords: mysql,database,sql
+	maintainers: Vic Iglesias:viglesias@google.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mysql
+	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/mysql
+	urls: https://kubernetes-charts.storage.googleapis.com/mysql-0.3.7.tgz
+	version: 0.3.7
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: mysql:5.7.14
+Image: sapho/ops-docker-tomcat:8-jre8
+
+Chart Dependencies
+------------------
+sapho:0.2.2 depends on mysql:0.3.7
+sapho:0.2.2 uses sapho/ops-docker-tomcat:8-jre8
+mysql:0.3.7 uses mysql:5.7.14
+
+Generated on 2020/03/16 17:29:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

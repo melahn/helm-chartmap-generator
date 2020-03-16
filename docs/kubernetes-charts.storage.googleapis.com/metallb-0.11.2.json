@@ -1,0 +1,27 @@
+{
+  "maintainers": [{
+    "name": "danderson",
+    "email": "dave@natulte.net"
+  }],
+  "keywords": [
+    "load-balancer",
+    "balancer",
+    "lb",
+    "bgp",
+    "arp",
+    "vrrp",
+    "vip"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "metallb/controller",
+    "type": "image",
+    "version": "v0.8.1"
+  }],
+  "name": "metallb:0.11.2",
+  "description": "MetalLB is a load-balancer implementation for bare metal Kubernetes clusters",
+  "type": "chart",
+  "shortName": "metallb",
+  "version": "0.11.2"
+}

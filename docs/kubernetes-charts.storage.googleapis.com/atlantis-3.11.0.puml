@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for atlantis:3.11.0
+
+'There is one referenced Helm Chart
+artifact "atlantis:3.11.0\n====\n\tatlantis\n====\n\t3.11.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: jkodroff, callmeradical, jeff-knurek, lkysow, anubhavmishra\n====\n\tKeywords: terraform" as atlantis_3_11_0 #BlanchedAlmond
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\trunatlantis/atlantis\n====\n\tv0.11.1" as runatlantis_atlantis_v0_11_1 #Beige
+
+'Chart Dependencies
+atlantis_3_11_0--[#orange]-|>runatlantis_atlantis_v0_11_1
+
+center footer Generated on 2020/03/16 17:12:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

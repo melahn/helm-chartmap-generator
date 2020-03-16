@@ -1,0 +1,31 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for elastic-stack:1.9.0
+
+'There are 4 referenced Helm Charts
+artifact "elastic-stack:1.9.0\n====\n\telastic-stack\n====\n\t1.9.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: rendhalver, jar361, christian-roggia\n====\n\tKeywords: " as elastic_stack_1_9_0 #BlanchedAlmond
+artifact "elasticsearch:1.32.0\n====\n\telasticsearch\n====\n\t1.32.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: simonswine, icereval, rendhalver, desaintmartin, KongZ, hectorj2f\n====\n\tKeywords: " as elasticsearch_1_32_0 #Aquamarine
+artifact "kibana:3.2.4\n====\n\tkibana\n====\n\t3.2.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: compleatang, monotek\n====\n\tKeywords: elasticsearch\nkibana" as kibana_3_2_4 #GhostWhite
+artifact "logstash:2.3.0\n====\n\tlogstash\n====\n\t2.3.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: rendhalver, jar361, christian-roggia\n====\n\tKeywords: " as logstash_2_3_0 #Aqua
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\n\tdocker.elastic.co\n====\n\tlogstash/logstash-oss:7.1.1\n====\n\t7.1.1" as docker_elastic_co_logstash_logstash_oss_7_1_1 #BlanchedAlmond
+usecase "Image\n====\n\tdocker.elastic.co\n====\n\telasticsearch/elasticsearch-oss:6.8.2\n====\n\t6.8.2" as docker_elastic_co_elasticsearch_elasticsearch_oss_6_8_2 #IndianRed
+usecase "Image\n====\n\tdocker.elastic.co\n====\n\tkibana/kibana-oss:6.7.0\n====\n\t6.7.0" as docker_elastic_co_kibana_kibana_oss_6_7_0 #DarkTurquoise
+
+'Chart Dependencies
+elastic_stack_1_9_0--[#green]-|>logstash_2_3_0
+elastic_stack_1_9_0--[#green]-|>kibana_3_2_4
+elastic_stack_1_9_0--[#green]-|>elasticsearch_1_32_0
+elasticsearch_1_32_0--[#orange]-|>docker_elastic_co_elasticsearch_elasticsearch_oss_6_8_2
+kibana_3_2_4--[#orange]-|>docker_elastic_co_kibana_kibana_oss_6_7_0
+logstash_2_3_0--[#orange]-|>docker_elastic_co_logstash_logstash_oss_7_1_1
+
+center footer Generated on 2020/03/16 17:16:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

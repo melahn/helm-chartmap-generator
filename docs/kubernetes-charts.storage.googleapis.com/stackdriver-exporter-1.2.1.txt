@@ -1,0 +1,29 @@
+Chart Map for stackdriver-exporter:1.2.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: stackdriver-exporter:1.2.1
+	apiVersion: v1
+	appVersion: 0.6.0
+	created: Not specified
+	dependencies: None
+	description: Stackdriver exporter for Prometheus
+	digest: Not specified
+	icon: Not specified
+	keywords: metrics,stackdriver,monitoring
+	maintainers: apenney:apenney@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: stackdriver-exporter
+	sources: https://github.com/frodenas/stackdriver_exporter/releases
+	urls: Not specified
+	version: 1.2.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: frodenas/stackdriver-exporter:v0.6.0
+
+Chart Dependencies
+------------------
+stackdriver-exporter:1.2.1 uses frodenas/stackdriver-exporter:v0.6.0
+
+Generated on 2020/03/16 17:30:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

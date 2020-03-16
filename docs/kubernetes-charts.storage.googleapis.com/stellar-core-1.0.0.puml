@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for stellar-core:1.0.0
+
+'There are 2 referenced Helm Charts
+artifact "stellar-core:1.0.0\n====\n\tstellar-core\n====\n\t1.0.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: andrenarchy, rendhalver\n====\n\tKeywords: stellar\nstellar-core\ncryptocurrency\nblockchain" as stellar_core_1_0_0 #AliceBlue
+artifact "postgresql:0.19.0\n====\n\tpostgresql\n====\n\t0.19.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql" as postgresql_0_19_0 #LightSteelBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t9.6.2" as postgres_9_6_2 #Ivory
+usecase "Image\n====\n\tDocker Hub\n====\n\tsatoshipay/stellar-core\n====\n\t10.0.0-2" as satoshipay_stellar_core_10_0_0_2 #Azure
+
+'Chart Dependencies
+stellar_core_1_0_0--[#green]-|>postgresql_0_19_0
+stellar_core_1_0_0--[#orange]-|>satoshipay_stellar_core_10_0_0_2
+postgresql_0_19_0--[#orange]-|>postgres_9_6_2
+
+center footer Generated on 2020/03/16 17:30:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

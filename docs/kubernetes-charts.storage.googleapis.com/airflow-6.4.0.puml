@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for airflow:6.4.0
+
+'There are 3 referenced Helm Charts
+artifact "airflow:6.4.0\n====\n\tairflow\n====\n\t6.4.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: gsemet\n====\n\tKeywords: workflow\ndag" as airflow_6_4_0 #FloralWhite
+artifact "redis:10.3.4\n====\n\tredis\n====\n\t10.3.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami, desaintmartin\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_10_3_4 #LightSeaGreen
+artifact "postgresql:8.1.4\n====\n\tpostgresql\n====\n\t8.1.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami, desaintmartin\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql\nreplication\ncluster" as postgresql_8_1_4 #LightSteelBlue
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tpuckel/docker-airflow\n====\n\t1.10.4" as puckel_docker_airflow_1_10_4 #DarkGoldenRod
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/redis:5.0.7-debian-9-r50\n====\n\t5.0.7-debian-9-r50" as docker_io_bitnami_redis_5_0_7_debian_9_r50 #Azure
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/postgresql:11.6.0-debian-9-r48\n====\n\t11.6.0-debian-9-r48" as docker_io_bitnami_postgresql_11_6_0_debian_9_r48 #DarkSalmon
+
+'Chart Dependencies
+airflow_6_4_0--[#green]-|>redis_10_3_4
+airflow_6_4_0--[#green]-|>postgresql_8_1_4
+airflow_6_4_0--[#orange]-|>puckel_docker_airflow_1_10_4
+redis_10_3_4--[#orange]-|>docker_io_bitnami_redis_5_0_7_debian_9_r50
+postgresql_8_1_4--[#orange]-|>docker_io_bitnami_postgresql_11_6_0_debian_9_r48
+
+center footer Generated on 2020/03/16 17:12:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

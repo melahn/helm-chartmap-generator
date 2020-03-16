@@ -1,0 +1,14 @@
+{
+  "keywords": [
+    "kubernetes deployment",
+    "helm release",
+    "continuous deployment",
+    "continuous integration"
+  ],
+  "children": [],
+  "name": "buildkite:0.2.4",
+  "description": "DEPRECATED Agent for Buildkite",
+  "type": "chart",
+  "shortName": "buildkite",
+  "version": "0.2.4"
+}

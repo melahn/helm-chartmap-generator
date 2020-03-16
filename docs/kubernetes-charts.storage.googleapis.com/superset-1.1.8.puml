@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for superset:1.1.8
+
+'There is one referenced Helm Chart
+artifact "superset:1.1.8\n====\n\tsuperset\n====\n\t1.1.8\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: alitari\n====\n\tKeywords: bi" as superset_1_1_8 #Chocolate
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tamancevice/superset\n====\n\t0.35.2" as amancevice_superset_0_35_2 #Cornsilk
+
+'Chart Dependencies
+superset_1_1_8--[#orange]-|>amancevice_superset_0_35_2
+
+center footer Generated on 2020/03/16 17:31:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for consul:3.9.5
+
+'There is one referenced Helm Chart
+artifact "consul:3.9.5\n====\n\tconsul\n====\n\t3.9.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: lachie83\n====\n\tKeywords: " as consul_3_9_5 #IndianRed
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tconsul\n====\n\t1.5.3" as consul_1_5_3 #IndianRed
+
+'Chart Dependencies
+consul_3_9_5--[#orange]-|>consul_1_5_3
+
+center footer Generated on 2020/03/16 17:14:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

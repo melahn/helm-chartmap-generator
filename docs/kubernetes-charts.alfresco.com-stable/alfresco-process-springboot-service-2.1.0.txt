@@ -1,0 +1,45 @@
+Chart Map for alfresco-process-springboot-service:2.1.0
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.1.28
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-03-05T12:00:26.250250397Z
+	dependencies: None
+	description: A Helm chart for Activiti Cloud Common Templates
+	digest: aa605f53cce16bb4e02d8ee452269dabf56f01cd883bec4458019c7d779d6885
+	icon: https://salaboy.files.wordpress.com/2018/01/acitiviti_icon_fullcolor_github_400x400.png
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://activiti.github.io/activiti-cloud-helm-charts
+	name: common
+	sources: Not specified
+	urls: common-1.1.28.tgz
+	version: 1.1.28
+Chart: alfresco-process-springboot-service:2.1.0
+	apiVersion: v1
+	appVersion: Not specified
+	created: Not specified
+	dependencies: common:1.1.28
+	description: A Helm chart for a generic Alfresco Process/Activiti Spring Boot based microservice
+	digest: Not specified
+	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
+	keywords: alfresco,content,content services,alfresco content services,activiti,process,alfresco activiti enterprise,java,spring boot,microservice
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/stable
+	name: alfresco-process-springboot-service
+	sources: https://github.com/Alfresco/alfresco-process-springboot-service-deployment
+	urls: Not specified
+	version: 2.1.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: activiti/example-runtime-bundle:7.0.0.SR1
+
+Chart Dependencies
+------------------
+alfresco-process-springboot-service:2.1.0 depends on common:1.1.28
+alfresco-process-springboot-service:2.1.0 uses activiti/example-runtime-bundle:7.0.0.SR1
+
+Generated on 2020/03/16 17:05:12 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

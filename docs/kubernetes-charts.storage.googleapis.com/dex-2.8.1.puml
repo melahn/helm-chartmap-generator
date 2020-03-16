@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for dex:2.8.1
+
+'There is one referenced Helm Chart
+artifact "dex:2.8.1\n====\n\tdex\n====\n\t2.8.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: kfox1111, sstarcher, rendhalver, vi7\n====\n\tKeywords: dex\noidc" as dex_2_8_1 #LightSteelBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tquay.io\n====\n\tdexidp/dex:v2.21.0\n====\n\tv2.21.0" as quay_io_dexidp_dex_v2_21_0 #DarkGoldenRod
+
+'Chart Dependencies
+dex_2_8_1--[#orange]-|>quay_io_dexidp_dex_v2_21_0
+
+center footer Generated on 2020/03/16 17:15:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

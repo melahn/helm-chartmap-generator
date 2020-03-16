@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kube-lego:0.4.2
+
+'There is one referenced Helm Chart
+artifact "kube-lego:0.4.2\n====\n\tkube-lego\n====\n\t0.4.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: kube-lego\nletsencrypt" as kube_lego_0_4_2 #Coral
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tjetstack/kube-lego\n====\n\t0.1.6" as jetstack_kube_lego_0_1_6 #LightPink
+
+'Chart Dependencies
+kube_lego_0_4_2--[#orange]-|>jetstack_kube_lego_0_1_6
+
+center footer Generated on 2020/03/16 17:21:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "chronograf",
+    "visualizaion",
+    "timeseries"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "influxdb/chronograf",
+    "type": "image",
+    "version": "1.7.12"
+  }],
+  "name": "chronograf:1.1.1",
+  "description": "DEPRECATED Open-source web application written in Go and React.js that provides the tools to visualize your monitoring data and easily create alerting and automation rules.",
+  "type": "chart",
+  "shortName": "chronograf",
+  "version": "1.1.1"
+}

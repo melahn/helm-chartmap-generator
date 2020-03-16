@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "pedrocesar-ti",
+    "email": "pedrocesar.ti@gmail.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "pedrocesarti/jmeter-docker",
+    "type": "image",
+    "version": "3.3"
+  }],
+  "name": "distributed-jmeter:1.0.1",
+  "description": "A Distributed JMeter Helm chart",
+  "type": "chart",
+  "shortName": "distributed-jmeter",
+  "version": "1.0.1"
+}

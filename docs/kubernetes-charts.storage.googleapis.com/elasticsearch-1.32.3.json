@@ -1,0 +1,40 @@
+{
+  "maintainers": [
+    {
+      "name": "simonswine",
+      "email": "christian@jetstack.io"
+    },
+    {
+      "name": "icereval",
+      "email": "michael.haselton@gmail.com"
+    },
+    {
+      "name": "rendhalver",
+      "email": "pete.brown@powerhrg.com"
+    },
+    {
+      "name": "desaintmartin",
+      "email": "cedric@desaintmartin.fr"
+    },
+    {
+      "name": "KongZ",
+      "email": "goonohc@gmail.com"
+    },
+    {
+      "name": "hectorj2f",
+      "email": "hfernandez@mesosphere.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "docker.elastic.co",
+    "children": [],
+    "name": "elasticsearch/elasticsearch-oss",
+    "type": "image",
+    "version": "6.8.6"
+  }],
+  "name": "elasticsearch:1.32.3",
+  "description": "Flexible and powerful open source, distributed real-time search and analytics engine.",
+  "type": "chart",
+  "shortName": "elasticsearch",
+  "version": "1.32.3"
+}

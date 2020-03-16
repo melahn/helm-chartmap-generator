@@ -1,0 +1,25 @@
+{
+  "maintainers": [{
+    "name": "dunglas",
+    "email": "dunglas+mercure@gmail.com"
+  }],
+  "keywords": [
+    "mercure",
+    "hub",
+    "push",
+    "streaming-api",
+    "async-api"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "dunglas/mercure",
+    "type": "image",
+    "version": "v0"
+  }],
+  "name": "mercure:2.0.0",
+  "description": "The Mercure hub allows to push data updates using the Mercure protocol to web browsers and other HTTP clients in a convenient, fast, reliable and battery-efficient way",
+  "type": "chart",
+  "shortName": "mercure",
+  "version": "2.0.0"
+}

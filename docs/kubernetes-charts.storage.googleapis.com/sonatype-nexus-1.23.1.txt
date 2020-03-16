@@ -1,0 +1,29 @@
+Chart Map for sonatype-nexus:1.23.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: sonatype-nexus:1.23.1
+	apiVersion: v1
+	appVersion: 3.20.1-01
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED - Sonatype Nexus is an open source repository manager
+	digest: Not specified
+	icon: http://www.sonatype.org/nexus/content/uploads/2015/06/Nexus-Logo.jpg
+	keywords: artifacts,dependency,management,sonatype,nexus,repository
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: sonatype-nexus
+	sources: https://github.com/sonatype/nexus-public,https://github.com/travelaudience/docker-nexus,https://github.com/travelaudience/kubernetes-nexus,https://github.com/travelaudience/docker-nexus-backup
+	urls: Not specified
+	version: 1.23.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: sonatype/nexus3:3.20.1
+
+Chart Dependencies
+------------------
+sonatype-nexus:1.23.1 uses sonatype/nexus3:3.20.1
+
+Generated on 2020/03/16 17:30:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

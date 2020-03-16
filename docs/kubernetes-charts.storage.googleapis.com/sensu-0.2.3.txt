@@ -1,0 +1,47 @@
+Chart Map for sensu:0.2.3
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: redis:0.9.0
+	apiVersion: Not specified
+	appVersion: 3.2.9
+	created: 2017-09-04T14:03:53.229051939Z
+	dependencies: None
+	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: 0babde961e7ce617899752c2fedfe9e11bfa7b47d08f9f6f07fe1aca8f34b1aa
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: bitnami-bot:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://kubernetes-charts.storage.googleapis.com/redis-0.9.0.tgz
+	version: 0.9.0
+Chart: sensu:0.2.3
+	apiVersion: v1
+	appVersion: 0.28
+	created: Not specified
+	dependencies: redis:0.9.0
+	description: Sensu monitoring framework backed by the Redis transport
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/sensu/sensu/master/sensu-logo.png
+	keywords: sensu,monitoring
+	maintainers: Shane Starcher:shane.starcher@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: sensu
+	sources: https://github.com/kubernetes/charts,https://github.com/sstarcher/docker-sensu,https://github.com/sensu/sensu
+	urls: Not specified
+	version: 0.2.3
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: bitnami/redis:3.2.9-r2
+Image: sstarcher/sensu:0.28
+
+Chart Dependencies
+------------------
+sensu:0.2.3 depends on redis:0.9.0
+redis:0.9.0 uses bitnami/redis:3.2.9-r2
+sensu:0.2.3 uses sstarcher/sensu:0.28
+
+Generated on 2020/03/16 17:29:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,16 @@
+{
+  "keywords": [
+    "signalsciences",
+    "signal-sciences",
+    "sigsci",
+    "agent",
+    "firewall",
+    "waf"
+  ],
+  "children": [],
+  "name": "signalsciences:0.0.1",
+  "description": "SignalSciences is a web application firewall. This chart is the installable agent.",
+  "type": "chart",
+  "shortName": "signalsciences",
+  "version": "0.0.1"
+}

@@ -1,0 +1,29 @@
+Chart Map for kubedb:0.1.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: kubedb:0.1.2
+	apiVersion: v1
+	appVersion: 0.8.0-beta.2
+	created: Not specified
+	dependencies: None
+	description: KubeDB by AppsCode - Making running production-grade databases easy on Kubernetes
+	digest: Not specified
+	icon: https://cdn.appscode.com/images/icon/kubedb.png
+	keywords: Not specified
+	maintainers: appscode:kubedb@appscode.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: kubedb
+	sources: https://github.com/kubedb/cli
+	urls: Not specified
+	version: 0.1.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: kubedb/operator:0.8.0-beta.2
+
+Chart Dependencies
+------------------
+kubedb:0.1.2 uses kubedb/operator:0.8.0-beta.2
+
+Generated on 2020/03/16 17:21:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

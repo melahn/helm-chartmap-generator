@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "ewbankkit",
+    "email": "Kit_Ewbank@hotmail.com"
+  }],
+  "keywords": [
+    "kiam",
+    "aws",
+    "iam",
+    "security"
+  ],
+  "children": [],
+  "name": "kiam:2.5.2",
+  "description": "Integrate AWS IAM with Kubernetes",
+  "type": "chart",
+  "shortName": "kiam",
+  "version": "2.5.2"
+}

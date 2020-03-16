@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for sensu:0.2.2
+
+'There are 2 referenced Helm Charts
+artifact "sensu:0.2.2\n====\n\tsensu\n====\n\t0.2.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Shane Starcher\n====\n\tKeywords: sensu\nmonitoring" as sensu_0_2_2 #Aqua
+artifact "redis:0.9.0\n====\n\tredis\n====\n\t0.9.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: bitnami-bot\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_0_9_0 #LightSeaGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tbitnami/redis\n====\n\t3.2.9-r2" as bitnami_redis_3_2_9_r2 #Khaki
+usecase "Image\n====\n\tDocker Hub\n====\n\tsstarcher/sensu\n====\n\t0.28" as sstarcher_sensu_0_28 #GreenYellow
+
+'Chart Dependencies
+sensu_0_2_2--[#green]-|>redis_0_9_0
+sensu_0_2_2--[#orange]-|>sstarcher_sensu_0_28
+redis_0_9_0--[#orange]-|>bitnami_redis_3_2_9_r2
+
+center footer Generated on 2020/03/16 17:29:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

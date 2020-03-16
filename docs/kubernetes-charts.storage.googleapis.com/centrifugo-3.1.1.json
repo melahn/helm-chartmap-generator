@@ -1,0 +1,23 @@
+{
+  "maintainers": [{
+    "name": "oleh-ozimok",
+    "email": "ozimok.oleg@gmail.com"
+  }],
+  "keywords": [
+    "centrifugo",
+    "websocket",
+    "golang"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "centrifugo/centrifugo",
+    "type": "image",
+    "version": "v2.1.0"
+  }],
+  "name": "centrifugo:3.1.1",
+  "description": "Centrifugo is a real-time messaging server.",
+  "type": "chart",
+  "shortName": "centrifugo",
+  "version": "3.1.1"
+}

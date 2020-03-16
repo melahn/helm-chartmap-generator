@@ -1,0 +1,58 @@
+{
+  "keywords": [
+    "alfresco",
+    "community",
+    "alfresco community",
+    "content",
+    "content services"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-content-repository-community",
+      "type": "image",
+      "version": "6.0.5-ea"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-search-services",
+      "type": "image",
+      "version": "1.1.1"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-share",
+      "type": "image",
+      "version": "6.0.a"
+    },
+    {
+      "maintainers": [{"name": "databus23"}],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "10.1"
+      }],
+      "name": "postgresql:0.9.3",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.9.3"
+    }
+  ],
+  "name": "alfresco-content-services-community:6.0.5-ea",
+  "description": "A Helm chart for deploying Alfresco Content Services Community",
+  "type": "chart",
+  "shortName": "alfresco-content-services-community",
+  "version": "6.0.5-ea"
+}

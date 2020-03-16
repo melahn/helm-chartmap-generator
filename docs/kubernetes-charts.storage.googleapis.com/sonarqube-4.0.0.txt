@@ -1,0 +1,47 @@
+Chart Map for sonarqube:4.0.0
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: postgresql:8.2.0
+	apiVersion: v1
+	appVersion: 11.6.0
+	created: 2020-01-29T19:29:58.860834136Z
+	dependencies: None
+	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: b0c742a5f0b8dcb271020db1935c0fd0ba38df197186b09b0a3fdc6c988ea21a
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql
+	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-8.2.0.tgz
+	version: 8.2.0
+Chart: sonarqube:4.0.0
+	apiVersion: v1
+	appVersion: 7.9.2
+	created: Not specified
+	dependencies: postgresql:8.2.0
+	description: SonarQube is an open sourced code quality scanning tool
+	digest: Not specified
+	icon: https://www.sonarqube.org/assets/logo-31ad3115b1b4b120f3d1efd63e6b13ac9f1f89437f0cf6881cc4d8b5603a52b4.svg
+	keywords: coverage,security,code,quality
+	maintainers: rjkernick:rjkernick@gmail.com,tsiddique:tsiddique@live.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: sonarqube
+	sources: https://github.com/SonarSource/docker-sonarqube
+	urls: Not specified
+	version: 4.0.0
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/postgresql:11.6.0-debian-10-r0
+Image: sonarqube:7.9.2-community
+
+Chart Dependencies
+------------------
+sonarqube:4.0.0 depends on postgresql:8.2.0
+postgresql:8.2.0 uses docker.io/bitnami/postgresql:11.6.0-debian-10-r0
+sonarqube:4.0.0 uses sonarqube:7.9.2-community
+
+Generated on 2020/03/16 17:30:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

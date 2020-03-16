@@ -1,0 +1,32 @@
+{
+  "maintainers": [
+    {
+      "name": "a-robinson",
+      "email": "alexdwanerobinson@gmail.com"
+    },
+    {
+      "name": "DuskEagle",
+      "email": "Joel.A.Kenny@gmail.com"
+    },
+    {
+      "name": "joshimhoff",
+      "email": "joshimhoff13@gmail.com"
+    },
+    {
+      "name": "keith-mcclellan",
+      "email": "keith.mcclellan@gmail.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "cockroachdb/cockroach",
+    "type": "image",
+    "version": "v19.2.4"
+  }],
+  "name": "cockroachdb:3.0.6",
+  "description": "CockroachDB is a scalable, survivable, strongly-consistent SQL database.",
+  "type": "chart",
+  "shortName": "cockroachdb",
+  "version": "3.0.6"
+}

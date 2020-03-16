@@ -1,0 +1,14 @@
+{
+  "keywords": [
+    "kapacitor",
+    "stream",
+    "etl",
+    "timeseries"
+  ],
+  "children": [],
+  "name": "kapacitor:1.2.2",
+  "description": "DEPRECATED InfluxDB's native data processing engine. It can process both stream and batch data from InfluxDB.",
+  "type": "chart",
+  "shortName": "kapacitor",
+  "version": "1.2.2"
+}

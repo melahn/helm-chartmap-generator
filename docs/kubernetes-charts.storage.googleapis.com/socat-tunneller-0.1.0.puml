@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for socat-tunneller:0.1.0
+
+'There is one referenced Helm Chart
+artifact "socat-tunneller:0.1.0\n====\n\tsocat-tunneller\n====\n\t0.1.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: plumdog\n====\n\tKeywords: " as socat_tunneller_0_1_0 #AliceBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\talpine/socat\n====\n\t1.0.3" as alpine_socat_1_0_3 #GhostWhite
+
+'Chart Dependencies
+socat_tunneller_0_1_0--[#orange]-|>alpine_socat_1_0_3
+
+center footer Generated on 2020/03/16 17:29:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,29 @@
+Chart Map for fluentd:2.3.3
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: fluentd:2.3.3
+	apiVersion: v1
+	appVersion: v2.4.0
+	created: Not specified
+	dependencies: None
+	description: A Fluentd Elasticsearch Helm chart for Kubernetes.
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/fluent/fluentd-docs/master/public/logo/Fluentd_square.png
+	keywords: Not specified
+	maintainers: rendhalver:pete.brown@powerhrg.com,miouge1:maxime@root314.com,hectorj2f:hfernandez@mesosphere.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: fluentd
+	sources: https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/fluentd-elasticsearch/fluentd-es-image,https://quay.io/repository/coreos/fluentd-kubernetes,https://github.com/coreos/fluentd-kubernetes-daemonset,https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
+	urls: Not specified
+	version: 2.3.3
+
+There is one referenced Docker Image
+------------------------------------
+Image: gcr.io/google-containers/fluentd-elasticsearch:v2.4.0
+
+Chart Dependencies
+------------------
+fluentd:2.3.3 uses gcr.io/google-containers/fluentd-elasticsearch:v2.4.0
+
+Generated on 2020/03/16 17:17:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

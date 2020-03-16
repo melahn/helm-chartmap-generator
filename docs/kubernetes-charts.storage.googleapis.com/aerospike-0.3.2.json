@@ -1,0 +1,28 @@
+{
+  "maintainers": [
+    {
+      "name": "kavehmz",
+      "email": "kavehmz@gmail.com"
+    },
+    {
+      "name": "okgolove",
+      "email": "okgolove@markeloff.net"
+    }
+  ],
+  "keywords": [
+    "aerospike",
+    "big-data"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "aerospike/aerospike-server",
+    "type": "image",
+    "version": "4.5.0.5"
+  }],
+  "name": "aerospike:0.3.2",
+  "description": "A Helm chart for Aerospike in Kubernetes",
+  "type": "chart",
+  "shortName": "aerospike",
+  "version": "0.3.2"
+}

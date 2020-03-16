@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kuberos:0.2.1
+
+'There is one referenced Helm Chart
+artifact "kuberos:0.2.1\n====\n\tkuberos\n====\n\t0.2.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: timothyclarke\n====\n\tKeywords: " as kuberos_0_2_1 #LightGoldenRodYellow
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tnegz/kuberos\n====\n\tede4085" as negz_kuberos_ede4085 #Aqua
+
+'Chart Dependencies
+kuberos_0_2_1--[#orange]-|>negz_kuberos_ede4085
+
+center footer Generated on 2020/03/16 17:21:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,28 @@
+{
+  "maintainers": [
+    {
+      "name": "kfox1111",
+      "email": "Kevin.Fox@pnnl.gov"
+    },
+    {
+      "name": "edsiper",
+      "email": "eduardo@treasure-data.com"
+    },
+    {
+      "name": "hectorj2f",
+      "email": "hfernandez@mesosphere.com"
+    }
+  ],
+  "keywords": [
+    "logging",
+    "monitoring",
+    "fluent",
+    "fluentd"
+  ],
+  "children": [],
+  "name": "fluent-bit:2.8.11",
+  "description": "Fast and Lightweight Log/Data Forwarder for Linux, BSD and OSX",
+  "type": "chart",
+  "shortName": "fluent-bit",
+  "version": "2.8.11"
+}

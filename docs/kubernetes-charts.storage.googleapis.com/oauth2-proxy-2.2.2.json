@@ -1,0 +1,32 @@
+{
+  "maintainers": [
+    {
+      "name": "desaintmartin",
+      "email": "cedric.dsm@gmail.com"
+    },
+    {
+      "name": "miouge1",
+      "email": "maxime@root314.com"
+    }
+  ],
+  "keywords": [
+    "kubernetes",
+    "oauth",
+    "oauth2",
+    "authentication",
+    "google",
+    "github"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "pusher/oauth2_proxy",
+    "type": "image",
+    "version": "v4.0.0"
+  }],
+  "name": "oauth2-proxy:2.2.2",
+  "description": "A reverse proxy that provides authentication with Google, Github or other providers",
+  "type": "chart",
+  "shortName": "oauth2-proxy",
+  "version": "2.2.2"
+}

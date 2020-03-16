@@ -1,0 +1,31 @@
+Chart Map for dask-distributed:2.0.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: dask-distributed:2.0.1
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED: Distributed computation in Python
+	digest: Not specified
+	icon: https://avatars3.githubusercontent.com/u/17131925?v=3&s=200
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: dask-distributed
+	sources: https://github.com/dask/distributed
+	urls: Not specified
+	version: 2.0.1
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: daskdev/dask:latest
+Image: jupyter/base-notebook:11be019e4079
+
+Chart Dependencies
+------------------
+dask-distributed:2.0.1 uses daskdev/dask:latest
+dask-distributed:2.0.1 uses jupyter/base-notebook:11be019e4079
+
+Generated on 2020/03/16 17:15:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

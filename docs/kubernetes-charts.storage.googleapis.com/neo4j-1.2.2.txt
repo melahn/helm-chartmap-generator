@@ -1,0 +1,29 @@
+Chart Map for neo4j:1.2.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: neo4j:1.2.2
+	apiVersion: v1
+	appVersion: 3.4.5
+	created: Not specified
+	dependencies: None
+	description: Neo4j is the world's leading graph database
+	digest: Not specified
+	icon: http://info.neo4j.com/rs/773-GON-065/images/neo4j_logo.png
+	keywords: Not specified
+	maintainers: mneedham:mark.needham@neo4j.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: neo4j
+	sources: https://github.com/neo4j/neo4j,https://github.com/neo4j/docker-neo4j,https://github.com/mneedham/k8s-kubectl
+	urls: Not specified
+	version: 1.2.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: neo4j:3.4.5-enterprise
+
+Chart Dependencies
+------------------
+neo4j:1.2.2 uses neo4j:3.4.5-enterprise
+
+Generated on 2020/03/16 17:24:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

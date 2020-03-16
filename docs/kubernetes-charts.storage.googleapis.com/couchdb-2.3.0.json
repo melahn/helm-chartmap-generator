@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "couchdb",
+    "database",
+    "nosql"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "couchdb",
+    "type": "image",
+    "version": "2.3.1"
+  }],
+  "name": "couchdb:2.3.0",
+  "description": "DEPRECATED A database featuring seamless multi-master sync, that scales from big data to mobile, with an intuitive HTTP/JSON API and designed for reliability.",
+  "type": "chart",
+  "shortName": "couchdb",
+  "version": "2.3.0"
+}

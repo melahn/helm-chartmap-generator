@@ -1,0 +1,26 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for hubot:1.0.0
+
+'There are 2 referenced Helm Charts
+artifact "redis:8.0.19\n====\n\tredis\n====\n\t8.0.19\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami, desaintmartin\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_8_0_19 #LightSeaGreen
+artifact "hubot:1.0.0\n====\n\thubot\n====\n\t1.0.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: darioblanco, decayofmind\n====\n\tKeywords: slack\nhubot\nchatbot" as hubot_1_0_0 #Aqua
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tminddocdev/hubot\n====\n\t3.3.2" as minddocdev_hubot_3_3_2 #DodgerBlue
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/redis:5.0.5-debian-9-r36\n====\n\t5.0.5-debian-9-r36" as docker_io_bitnami_redis_5_0_5_debian_9_r36 #Azure
+
+'Chart Dependencies
+hubot_1_0_0--[#green]-|>redis_8_0_19
+redis_8_0_19--[#orange]-|>docker_io_bitnami_redis_5_0_5_debian_9_r36
+hubot_1_0_0--[#orange]-|>docker_io_bitnami_redis_5_0_5_debian_9_r36
+hubot_1_0_0--[#orange]-|>minddocdev_hubot_3_3_2
+
+center footer Generated on 2020/03/16 17:19:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

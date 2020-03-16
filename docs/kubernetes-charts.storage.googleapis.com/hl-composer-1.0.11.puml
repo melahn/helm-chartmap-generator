@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for hl-composer:1.0.11
+
+'There is one referenced Helm Chart
+artifact "hl-composer:1.0.11\n====\n\thl-composer\n====\n\t1.0.11\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: alexvicegrab, nicolapaoli\n====\n\tKeywords: blockchain\nhyperledger\nfabric\ncomposer" as hl_composer_1_0_11 #Aquamarine
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\thyperledger/composer-cli\n====\n\t0.20.0" as hyperledger_composer_cli_0_20_0 #Fuchsia
+usecase "Image\n====\n\tDocker Hub\n====\n\thyperledger/composer-playground\n====\n\t0.20.0" as hyperledger_composer_playground_0_20_0 #GoldenRod
+
+'Chart Dependencies
+hl_composer_1_0_11--[#orange]-|>hyperledger_composer_cli_0_20_0
+hl_composer_1_0_11--[#orange]-|>hyperledger_composer_playground_0_20_0
+
+center footer Generated on 2020/03/16 17:18:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

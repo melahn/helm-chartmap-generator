@@ -1,0 +1,29 @@
+Chart Map for satisfy:1.0.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: satisfy:1.0.0
+	apiVersion: v1
+	appVersion: 3.0.4
+	created: Not specified
+	dependencies: None
+	description: Composer repo hosting with Satisfy
+	digest: Not specified
+	icon: https://getcomposer.org/img/logo-composer-transparent.png
+	keywords: Not specified
+	maintainers: anapsix:anapsix@random.io
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: satisfy
+	sources: https://github.com/anapsix/docker-satisfy,https://github.com/ludofleury/satisfy,https://github.com/composer/satis,https://unit.nginx.org/
+	urls: Not specified
+	version: 1.0.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/anapsix/satisfy@sha256:fae78e3809e9d08990c7d7d6699a734f7e584c28ce49381a1a699e1694481ab8
+
+Chart Dependencies
+------------------
+satisfy:1.0.0 uses docker.io/anapsix/satisfy@sha256:fae78e3809e9d08990c7d7d6699a734f7e584c28ce49381a1a699e1694481ab8
+
+Generated on 2020/03/16 17:29:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

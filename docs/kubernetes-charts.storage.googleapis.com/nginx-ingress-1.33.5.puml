@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for nginx-ingress:1.33.5
+
+'There is one referenced Helm Chart
+artifact "nginx-ingress:1.33.5\n====\n\tnginx-ingress\n====\n\t1.33.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: ChiefAlexander, taharah\n====\n\tKeywords: ingress\nnginx" as nginx_ingress_1_33_5 #DarkSalmon
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tk8s.gcr.io/defaultbackend-amd64\n====\n\t1.5" as k8s_gcr_io_defaultbackend_amd64_1_5 #CadetBlue
+usecase "Image\n====\n\tquay.io\n====\n\tkubernetes-ingress-controller/nginx-ingress-controller:0.30.0\n====\n\t0.30.0" as quay_io_kubernetes_ingress_controller_nginx_ingress_controller_0_30_0 #LightSkyBlue
+
+'Chart Dependencies
+nginx_ingress_1_33_5--[#orange]-|>k8s_gcr_io_defaultbackend_amd64_1_5
+nginx_ingress_1_33_5--[#orange]-|>quay_io_kubernetes_ingress_controller_nginx_ingress_controller_0_30_0
+
+center footer Generated on 2020/03/16 17:24:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,29 @@
+Chart Map for unifi:0.6.4
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: unifi:0.6.4
+	apiVersion: v1
+	appVersion: 5.11.50
+	created: Not specified
+	dependencies: None
+	description: Ubiquiti Network's Unifi Controller
+	digest: Not specified
+	icon: https://blog.ubnt.com/wp-content/uploads/2016/10/unifi-app-logo.png
+	keywords: ubiquiti,unifi,mongodb
+	maintainers: billimek:jeff@billimek.com,mcronce:mike@quadra-tec.net
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: unifi
+	sources: https://github.com/jacobalberty/unifi-docker,https://github.com/helm/charts/tree/master/stable/unifi
+	urls: Not specified
+	version: 0.6.4
+
+There is one referenced Docker Image
+------------------------------------
+Image: jacobalberty/unifi:5.11.50
+
+Chart Dependencies
+------------------
+unifi:0.6.4 uses jacobalberty/unifi:5.11.50
+
+Generated on 2020/03/16 17:32:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

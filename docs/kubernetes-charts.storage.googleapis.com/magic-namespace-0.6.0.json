@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "kubernetes-helm/tiller",
+    "type": "image",
+    "version": "v2.8.1"
+  }],
+  "name": "magic-namespace:0.6.0",
+  "description": "Elegantly enables a Tiller per namespace in RBAC-enabled clusters",
+  "type": "chart",
+  "shortName": "magic-namespace",
+  "version": "0.6.0"
+}

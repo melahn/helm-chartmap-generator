@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for jenkins:1.9.21
+
+'There is one referenced Helm Chart
+artifact "jenkins:1.9.21\n====\n\tjenkins\n====\n\t1.9.21\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: lachie83, viglesiasce, maorfr, torstenwalter, mogaal\n====\n\tKeywords: " as jenkins_1_9_21 #LightCoral
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tjenkins/jenkins\n====\n\tlts" as jenkins_jenkins_lts #DarkSalmon
+
+'Chart Dependencies
+jenkins_1_9_21--[#orange]-|>jenkins_jenkins_lts
+
+center footer Generated on 2020/03/16 17:20:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

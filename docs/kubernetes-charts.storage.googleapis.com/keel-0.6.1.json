@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "kubernetes deployment",
+    "helm release",
+    "continuous deployment"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "keelhq/keel",
+    "type": "image",
+    "version": "0.9.5"
+  }],
+  "name": "keel:0.6.1",
+  "description": "DEPRECATED Open source, tool for automating Kubernetes deployment updates. Keel is stateless, robust and lightweight.",
+  "type": "chart",
+  "shortName": "keel",
+  "version": "0.6.1"
+}

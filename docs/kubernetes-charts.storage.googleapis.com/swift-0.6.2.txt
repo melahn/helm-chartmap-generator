@@ -1,0 +1,29 @@
+Chart Map for swift:0.6.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: swift:0.6.2
+	apiVersion: v1
+	appVersion: 0.7.3
+	created: Not specified
+	dependencies: None
+	description: swift by AppsCode - Ajax friendly Helm Tiller Proxy
+	digest: Not specified
+	icon: https://cdn.appscode.com/images/icon/swift.png
+	keywords: Not specified
+	maintainers: appscode:support@appscode.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: swift
+	sources: https://github.com/appscode/swift
+	urls: Not specified
+	version: 0.6.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: appscode/swift:0.7.3
+
+Chart Dependencies
+------------------
+swift:0.6.2 uses appscode/swift:0.7.3
+
+Generated on 2020/03/16 17:31:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

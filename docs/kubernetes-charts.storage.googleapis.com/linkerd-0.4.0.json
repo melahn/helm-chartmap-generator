@@ -1,0 +1,12 @@
+{
+  "maintainers": [{
+    "name": "Vic Iglesias",
+    "email": "viglesias@google.com"
+  }],
+  "children": [],
+  "name": "linkerd:0.4.0",
+  "description": "Service mesh for cloud native apps",
+  "type": "chart",
+  "shortName": "linkerd",
+  "version": "0.4.0"
+}

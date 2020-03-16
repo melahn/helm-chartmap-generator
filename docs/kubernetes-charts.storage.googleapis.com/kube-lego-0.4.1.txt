@@ -1,0 +1,29 @@
+Chart Map for kube-lego:0.4.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: kube-lego:0.4.1
+	apiVersion: v1
+	appVersion: v0.1.5
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED Automatically requests certificates from Let's Encrypt
+	digest: Not specified
+	icon: Not specified
+	keywords: kube-lego,letsencrypt
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: kube-lego
+	sources: https://github.com/jetstack/kube-lego/tree/master/examples/nginx
+	urls: Not specified
+	version: 0.4.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: jetstack/kube-lego:0.1.5
+
+Chart Dependencies
+------------------
+kube-lego:0.4.1 uses jetstack/kube-lego:0.1.5
+
+Generated on 2020/03/16 17:21:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

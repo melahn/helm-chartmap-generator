@@ -1,0 +1,29 @@
+Chart Map for factorio:0.4.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: factorio:0.4.0
+	apiVersion: Not specified
+	appVersion: 0.15.39
+	created: Not specified
+	dependencies: None
+	description: Factorio dedicated server.
+	digest: Not specified
+	icon: https://us1.factorio.com/assets/img/factorio-logo.png
+	keywords: game,server
+	maintainers: gtaylor:gtaylor@gc-taylor.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: factorio
+	sources: https://github.com/games-on-k8s/docker-factorio
+	urls: Not specified
+	version: 0.4.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: quay.io/games_on_k8s/factorio:0.15.39
+
+Chart Dependencies
+------------------
+factorio:0.4.0 uses quay.io/games_on_k8s/factorio:0.15.39
+
+Generated on 2020/03/16 17:16:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

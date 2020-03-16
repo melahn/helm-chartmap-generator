@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for stackdriver-exporter:1.2.2
+
+'There is one referenced Helm Chart
+artifact "stackdriver-exporter:1.2.2\n====\n\tstackdriver-exporter\n====\n\t1.2.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: apenney\n====\n\tKeywords: metrics\nstackdriver\nmonitoring" as stackdriver_exporter_1_2_2 #LightCoral
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tfrodenas/stackdriver-exporter\n====\n\tv0.6.0" as frodenas_stackdriver_exporter_v0_6_0 #LightSalmon
+
+'Chart Dependencies
+stackdriver_exporter_1_2_2--[#orange]-|>frodenas_stackdriver_exporter_v0_6_0
+
+center footer Generated on 2020/03/16 17:30:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

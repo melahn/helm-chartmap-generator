@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashSet;
 import java.util.Map;
 
@@ -29,6 +31,8 @@ public class ChartMapGenerator {
     private static String formatString = "";
     private static HashSet<String> extensions = new HashSet<String>();
     private static String indexFilename = null;
+    private static String styleFilename = null;
+    private static int maxVersions = 0;
 
     /**
      * Parses the command line and generates a set of reports
@@ -64,7 +68,6 @@ public class ChartMapGenerator {
         options.addOption("v", false, "Verbose");
         options.addOption("z", false, "Debug Mode");
         CommandLineParser parser = new DefaultParser();
-        int count = 0;
         try {
             CommandLine cmd = parser.parse(options, a);
             if (cmd.hasOption("v")) {
@@ -86,8 +89,8 @@ public class ChartMapGenerator {
                 log("format string \"".concat(formatString).concat("\" will be used"));
             }
             if (cmd.hasOption("n")) {
-                count = Integer.parseInt(cmd.getOptionValue("n"));
-                if (count == 1) {
+                maxVersions = Integer.parseInt(cmd.getOptionValue("n"));
+                if (maxVersions == 1) {
                     log("Only one version of each chart will be printed");
                 }
                 else {
@@ -160,8 +163,7 @@ public class ChartMapGenerator {
                 int i = 1;
                 for (HelmChart h : entry.getValue()) {
                     printChart(h);
-                    int count = 1;
-                    if (++i > count) {
+                    if (++i > maxVersions) {
                         break;
                     }
                 }
@@ -256,32 +258,36 @@ public class ChartMapGenerator {
     }
 
     /**
-     * Adds head elements to the index file
+     * Adds head elements to the index file and adds a H1 tag, then creates css file
      *
      */
     private static void addHead () throws IOException {
         String h = "<head>"
                 .concat("\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n")
-                .concat("\t<title>Helm Dependency Charts</title>\n");
+                .concat("\t<link rel=\"stylesheet\" href=\"./style.css\">\n")
+                .concat("\t<title>Helm Dependency Charts</title>\n")
+                .concat("</head>\n<body>\n")
+                .concat("\t<h1 class=\"header\">Helm Dependency Charts</h1>\n");
         Files.write(Paths.get(indexFilename),
                 h.getBytes(),
                 StandardOpenOption.APPEND);
-        addStyle();
+        createStyleFile();
     }
 
     /**
-     * Adds style elements to the index file, closes the head and starts the body
+     * Creates a css style file.  If the file already exists, the file is left as-is
      *
      */
-    private static void addStyle () throws IOException {
-        String s = "\t<style>\n"
-                .concat("\t\t.header {").concat("\n\t\t\tfont: 30px sans-serif;\n\t\t}\n")
-                .concat("\t\t.chartname {").concat("\n\t\t\tfont-weight:bold;\n\t\t\tfont: 16px sans-serif;\n\t\t}\n")
-                .concat("\t\t.chartlink {").concat("\n\t\t\tfont: 16px sans-serif;\n\t\t}\n")
-                .concat("\t</style>\n</head>\n<body>\n\t<h1 class=\"header\">Helm Dependency Charts</h1>\n");
-        Files.write(Paths.get(indexFilename),
+    private static void createStyleFile () throws IOException {
+        styleFilename = outputDirname.concat("/style.css");
+        String s = "* {\n\tfont-family: \"Arial\", Helvetica, san-serif;\n\tcolor: lightgray;\n\tbackground-color: black;\n}\n"
+                .concat("a:visited {\n\tcolor: grey;\n}\n")
+                .concat(".header {").concat("\n\tfont: 30px sans-serif;\n}\n")
+                .concat(".chartname {").concat("\n\tfont-weight: bold;\n\tfont: 16px sans-serif;\n}\n")
+                .concat(".chartlink {").concat("\n\tfont: 16px sans-serif;\n}\n");
+        Files.write(Paths.get(styleFilename),
                 s.getBytes(),
-                StandardOpenOption.APPEND);
+                StandardOpenOption.CREATE);
     }
 
     /**
@@ -319,10 +325,35 @@ public class ChartMapGenerator {
     }
 
     /**
+     * @return A format for date and time
+     *
+     */
+    private static String getCurrentDateTime() {
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        return (f.format(LocalDateTime.now()));
+    }
+    /**
      * Adds end elements to the index file
      *
      */
+    private static void addFooterToIndex() throws IOException {
+        String f = "<hr/>Generated on "
+                .concat(getCurrentDateTime())
+                .concat(" by ")
+                .concat(ChartMapGenerator.class.getCanonicalName())
+                .concat(" ")
+                .concat("<a href=\"https://github.com/melahn/helm-chartmap-generator\">https://github.com/melahn/helm-chartmap-generator</a>");
+        Files.write(Paths.get(indexFilename),
+                f.getBytes(),
+                StandardOpenOption.APPEND);
+    }
+
+    /**
+     * Adds closing elements to the index file
+     *
+     */
     private static void endIndex () throws IOException {
+        addFooterToIndex();
         String e = "</body>\n</html>";
         Files.write(Paths.get(indexFilename),
                 e.getBytes(),

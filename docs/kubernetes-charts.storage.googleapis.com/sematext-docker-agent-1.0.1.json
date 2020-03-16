@@ -1,0 +1,14 @@
+{
+  "keywords": [
+    "alerts",
+    "metrics",
+    "events",
+    "logs"
+  ],
+  "children": [],
+  "name": "sematext-docker-agent:1.0.1",
+  "description": "DEPRECATED Sematext Docker Agent",
+  "type": "chart",
+  "shortName": "sematext-docker-agent",
+  "version": "1.0.1"
+}

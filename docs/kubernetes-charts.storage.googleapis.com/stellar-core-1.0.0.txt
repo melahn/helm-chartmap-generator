@@ -1,0 +1,47 @@
+Chart Map for stellar-core:1.0.0
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: stellar-core:1.0.0
+	apiVersion: v1
+	appVersion: 10.0.0
+	created: Not specified
+	dependencies: postgresql:0.19.0
+	description: Backbone node of the Stellar cryptocurrency network.
+	digest: Not specified
+	icon: https://www.stellar.org/developers/images/favicon/rocket-180x180.png
+	keywords: stellar,stellar-core,cryptocurrency,blockchain
+	maintainers: andrenarchy:andre.extern@satoshipay.io,rendhalver:pete.brown@powerhrg.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: stellar-core
+	sources: https://github.com/satoshipay/docker-stellar-core/
+	urls: Not specified
+	version: 1.0.0
+Chart: postgresql:0.19.0
+	apiVersion: Not specified
+	appVersion: 9.6.2
+	created: 2018-10-16T14:54:46.505071143Z
+	dependencies: None
+	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 46ffd70dd9bcf611a96c9857981b88f3bca7265573142445e863579b9e7a0ed4
+	icon: https://www.postgresql.org/media/img/about/press/elephant.png
+	keywords: postgresql,postgres,database,sql
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: postgresql
+	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
+	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-0.19.0.tgz
+	version: 0.19.0
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: postgres:9.6.2
+Image: satoshipay/stellar-core:10.0.0-2
+
+Chart Dependencies
+------------------
+stellar-core:1.0.0 depends on postgresql:0.19.0
+stellar-core:1.0.0 uses satoshipay/stellar-core:10.0.0-2
+postgresql:0.19.0 uses postgres:9.6.2
+
+Generated on 2020/03/16 17:30:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

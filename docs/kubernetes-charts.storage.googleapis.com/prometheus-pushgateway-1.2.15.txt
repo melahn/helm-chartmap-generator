@@ -1,0 +1,29 @@
+Chart Map for prometheus-pushgateway:1.2.15
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: prometheus-pushgateway:1.2.15
+	apiVersion: v1
+	appVersion: 1.0.1
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for prometheus pushgateway
+	digest: Not specified
+	icon: Not specified
+	keywords: pushgateway,prometheus
+	maintainers: gianrubio:gianrubio@gmail.com,cstaud:christian.staude@staffbase.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: prometheus-pushgateway
+	sources: https://github.com/prometheus/pushgateway
+	urls: Not specified
+	version: 1.2.15
+
+There is one referenced Docker Image
+------------------------------------
+Image: prom/pushgateway:v1.0.1
+
+Chart Dependencies
+------------------
+prometheus-pushgateway:1.2.15 uses prom/pushgateway:v1.0.1
+
+Generated on 2020/03/16 17:27:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for ethereum:1.0.0
+
+'There is one referenced Helm Chart
+artifact "ethereum:1.0.0\n====\n\tethereum\n====\n\t1.0.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: jpoon\n====\n\tKeywords: ethereum\nblockchain" as ethereum_1_0_0 #DarkSalmon
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tethereum/client-go\n====\n\talltools-v1.7.3" as ethereum_client_go_alltools_v1_7_3 #DarkTurquoise
+usecase "Image\n====\n\tDocker Hub\n====\n\tethereum/client-go\n====\n\tv1.7.3" as ethereum_client_go_v1_7_3 #DarkTurquoise
+usecase "Image\n====\n\tDocker Hub\n====\n\tethereumex/eth-stats-dashboard\n====\n\tv0.0.1" as ethereumex_eth_stats_dashboard_v0_0_1 #Aquamarine
+
+'Chart Dependencies
+ethereum_1_0_0--[#orange]-|>ethereum_client_go_alltools_v1_7_3
+ethereum_1_0_0--[#orange]-|>ethereumex_eth_stats_dashboard_v0_0_1
+ethereum_1_0_0--[#orange]-|>ethereum_client_go_v1_7_3
+
+center footer Generated on 2020/03/16 17:16:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

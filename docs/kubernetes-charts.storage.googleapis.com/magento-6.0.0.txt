@@ -1,0 +1,45 @@
+Chart Map for magento:6.0.0
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: magento:6.0.0
+	apiVersion: v1
+	appVersion: 2.3.1
+	created: Not specified
+	dependencies: mariadb:7.0.0
+	description: DEPRECATED A feature-rich flexible e-commerce solution. It includes transaction options, multi-store functionality, loyalty programs, product categorization and shopper filtering, promotion rules, and more.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/magento/img/magento-stack-110x117.png
+	keywords: magento,e-commerce,http,web,php
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: magento
+	sources: https://github.com/bitnami/bitnami-docker-magento
+	urls: Not specified
+	version: 6.0.0
+Chart: mariadb:7.0.0
+	apiVersion: v1
+	appVersion: 10.3.18
+	created: 2019-11-09T09:28:17.751970698Z
+	dependencies: None
+	description: Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.
+	digest: 1f09184c43d06eb27f362ec5e85a748612f30ab1a0c60b1f6b84244ff6f02a12
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter
+	urls: https://kubernetes-charts.storage.googleapis.com/mariadb-7.0.0.tgz
+	version: 7.0.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.3.18-debian-9-r36
+
+Chart Dependencies
+------------------
+magento:6.0.0 depends on mariadb:7.0.0
+mariadb:7.0.0 uses docker.io/bitnami/mariadb:10.3.18-debian-9-r36
+
+Generated on 2020/03/16 17:22:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

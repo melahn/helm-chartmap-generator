@@ -1,0 +1,27 @@
+Chart Map for apm-server:2.1.5
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: apm-server:2.1.5
+	apiVersion: v1
+	appVersion: 7.0.0
+	created: Not specified
+	dependencies: None
+	description: The server receives data from the Elastic APM agents and stores the data into a datastore like Elasticsearch
+	digest: Not specified
+	icon: https://www.elastic.co/assets/blt47799dcdcf08438d/logo-elastic-beats-lt.svg
+	keywords: Not specified
+	maintainers: mumoshu:ykuoka@gmail.com,at-k:atushi.k@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: apm-server
+	sources: https://www.elastic.co/guide/en/apm/get-started/current/index.html
+	urls: Not specified
+	version: 2.1.5
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/03/16 17:12:27 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

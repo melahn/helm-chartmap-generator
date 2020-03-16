@@ -1,0 +1,12 @@
+{
+  "maintainers": [{
+    "name": "plumdog",
+    "email": "plummer574@gmail.com"
+  }],
+  "children": [],
+  "name": "aws-iam-authenticator:0.1.1",
+  "description": "A Helm chart for aws-iam-authenticator",
+  "type": "chart",
+  "shortName": "aws-iam-authenticator",
+  "version": "0.1.1"
+}

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus-redis-exporter:3.2.3
+
+'There is one referenced Helm Chart
+artifact "prometheus-redis-exporter:3.2.3\n====\n\tprometheus-redis-exporter\n====\n\t3.2.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: acondrat\n====\n\tKeywords: prometheus\nredis" as prometheus_redis_exporter_3_2_3 #LawnGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\toliver006/redis_exporter\n====\n\tv1.3.4" as oliver006_redis_exporter_v1_3_4 #Cyan
+
+'Chart Dependencies
+prometheus_redis_exporter_3_2_3--[#orange]-|>oliver006_redis_exporter_v1_3_4
+
+center footer Generated on 2020/03/16 17:28:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

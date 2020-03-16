@@ -1,0 +1,22 @@
+{
+  "keywords": [
+    "search",
+    "search services",
+    "alfresco search services",
+    "insight",
+    "insight engine",
+    "alfresco insight engine"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "alfresco/alfresco-search-services",
+    "type": "image",
+    "version": "1.4.0"
+  }],
+  "name": "alfresco-search:1.0.3",
+  "description": "A Helm chart for deploying Alfresco Search",
+  "type": "chart",
+  "shortName": "alfresco-search",
+  "version": "1.0.3"
+}

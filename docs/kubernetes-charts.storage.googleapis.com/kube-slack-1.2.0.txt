@@ -1,0 +1,29 @@
+Chart Map for kube-slack:1.2.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: kube-slack:1.2.0
+	apiVersion: v1
+	appVersion: v4.2.0
+	created: Not specified
+	dependencies: None
+	description: Chart for kube-slack, a monitoring service for Kubernetes
+	digest: Not specified
+	icon: https://upload.wikimedia.org/wikipedia/commons/1/1f/Echo_%28Notifications%29_logo.svg
+	keywords: kubernetes,monitoring,slack
+	maintainers: jstriebel:jonathan@scalableminds.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: kube-slack
+	sources: https://github.com/wongnai/kube-slack
+	urls: Not specified
+	version: 1.2.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: willwill/kube-slack:v4.2.0
+
+Chart Dependencies
+------------------
+kube-slack:1.2.0 uses willwill/kube-slack:v4.2.0
+
+Generated on 2020/03/16 17:21:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

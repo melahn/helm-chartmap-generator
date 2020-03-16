@@ -1,0 +1,28 @@
+{
+  "maintainers": [
+    {
+      "name": "jmcarp",
+      "email": "jm.carp@gmail.com"
+    },
+    {
+      "name": "icereval",
+      "email": "michael.haselton@gmail.com"
+    },
+    {
+      "name": "mgoodness",
+      "email": "mgoodness@gmail.com"
+    }
+  ],
+  "keywords": [
+    "kube2iam",
+    "aws",
+    "iam",
+    "security"
+  ],
+  "children": [],
+  "name": "kube2iam:2.0.3",
+  "description": "Provide IAM credentials to pods based on annotations.",
+  "type": "chart",
+  "shortName": "kube2iam",
+  "version": "2.0.3"
+}

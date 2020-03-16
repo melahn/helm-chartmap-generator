@@ -1,0 +1,48 @@
+Chart Map for hubot:1.0.0
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: redis:8.0.19
+	apiVersion: v1
+	appVersion: 5.0.5
+	created: 2019-07-10T08:27:17.368808329Z
+	dependencies: None
+	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: d8a3b5ad184bea76eb6a27efcfaa0c57f2f79c6dcd4099925f9af3fc02c14012
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://kubernetes-charts.storage.googleapis.com/redis-8.0.19.tgz
+	version: 8.0.19
+Chart: hubot:1.0.0
+	apiVersion: v1
+	appVersion: 3.3.2
+	created: Not specified
+	dependencies: redis:8.0.19
+	description: Hubot chatbot for Slack
+	digest: Not specified
+	icon: https://hubot.github.com/assets/images/layout/hubot-avatar@2x.png
+	keywords: slack,hubot,chatbot
+	maintainers: darioblanco:dblanco@minddoc.com,decayofmind:r.komkov@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: hubot
+	sources: https://github.com/hubotio/hubot,https://github.com/minddocdev/hubot
+	urls: Not specified
+	version: 1.0.0
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: minddocdev/hubot:3.3.2
+Image: docker.io/bitnami/redis:5.0.5-debian-9-r36
+
+Chart Dependencies
+------------------
+hubot:1.0.0 depends on redis:8.0.19
+redis:8.0.19 uses docker.io/bitnami/redis:5.0.5-debian-9-r36
+hubot:1.0.0 uses docker.io/bitnami/redis:5.0.5-debian-9-r36
+hubot:1.0.0 uses minddocdev/hubot:3.3.2
+
+Generated on 2020/03/16 17:19:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for vault-operator:0.1.1
+
+'There is one referenced Helm Chart
+artifact "vault-operator:0.1.1\n====\n\tvault-operator\n====\n\t0.1.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: mlaccetti\n====\n\tKeywords: " as vault_operator_0_1_1 #Azure
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tquay.io\n====\n\tcoreos/vault-operator:0.1.9\n====\n\t0.1.9" as quay_io_coreos_vault_operator_0_1_9 #LightGray
+
+'Chart Dependencies
+vault_operator_0_1_1--[#orange]-|>quay_io_coreos_vault_operator_0_1_9
+
+center footer Generated on 2020/03/16 17:32:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

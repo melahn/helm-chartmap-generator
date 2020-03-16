@@ -1,0 +1,18 @@
+{
+  "maintainers": [
+    {
+      "name": "okgolove",
+      "email": "okgolove@markeloff.net"
+    },
+    {
+      "name": "s-vkropotko",
+      "email": "vjkropotko@gmail.com"
+    }
+  ],
+  "children": [],
+  "name": "goldpinger:2.0.1",
+  "description": "Goldpinger makes calls between its instances for visibility and alerting.",
+  "type": "chart",
+  "shortName": "goldpinger",
+  "version": "2.0.1"
+}

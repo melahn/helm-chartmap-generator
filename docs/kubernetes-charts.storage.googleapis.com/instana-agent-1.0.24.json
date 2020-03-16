@@ -1,0 +1,38 @@
+{
+  "maintainers": [
+    {
+      "name": "jbrisbin",
+      "email": "jon.brisbin@instana.com"
+    },
+    {
+      "name": "wiggzz",
+      "email": "william.james@instana.com"
+    },
+    {
+      "name": "JeroenSoeters",
+      "email": "jeroen.soeters@instana.com"
+    },
+    {
+      "name": "fstab",
+      "email": "fabian.staeber@instana.com"
+    },
+    {
+      "name": "mdonkers",
+      "email": "miel.donkers@instana.com"
+    },
+    {
+      "name": "dlbock",
+      "email": "dahlia.bock@instana.com"
+    },
+    {
+      "name": "nfisher",
+      "email": "nathan.fisher@instana.com"
+    }
+  ],
+  "children": [],
+  "name": "instana-agent:1.0.24",
+  "description": "Instana Agent for Kubernetes",
+  "type": "chart",
+  "shortName": "instana-agent",
+  "version": "1.0.24"
+}

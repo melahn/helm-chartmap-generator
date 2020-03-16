@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for telegraf:1.6.0
+
+'There is one referenced Helm Chart
+artifact "telegraf:1.6.0\n====\n\ttelegraf\n====\n\t1.6.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: naseemkullah\n====\n\tKeywords: telegraf\ncollector\ntimeseries\ninfluxdata" as telegraf_1_6_0 #IndianRed
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\ttelegraf\n====\n\t1.12-alpine" as telegraf_1_12_alpine #IndianRed
+
+'Chart Dependencies
+telegraf_1_6_0--[#orange]-|>telegraf_1_12_alpine
+
+center footer Generated on 2020/03/16 17:31:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

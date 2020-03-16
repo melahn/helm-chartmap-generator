@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "cheyang",
+    "email": "cheyang@163.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "uber/horovod",
+    "type": "image",
+    "version": "0.12.1-tf1.8.0-py3.5"
+  }],
+  "name": "horovod:1.0.0",
+  "description": "A Helm chart for deploying Horovod",
+  "type": "chart",
+  "shortName": "horovod",
+  "version": "1.0.0"
+}

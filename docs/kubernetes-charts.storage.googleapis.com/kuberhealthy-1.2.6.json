@@ -1,0 +1,38 @@
+{
+  "maintainers": [
+    {
+      "name": "integrii",
+      "email": "eric.greer@comcast.com"
+    },
+    {
+      "name": "lolimjake",
+      "email": "jacob.martin@comcast.com"
+    },
+    {
+      "name": "ihoegen",
+      "email": "ianhoegen@gmail.com"
+    }
+  ],
+  "keywords": [
+    "kuberhealthy",
+    "kubernetes",
+    "monitoring",
+    "synthetic",
+    "comcast",
+    "health",
+    "cluster",
+    "prometheus"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "comcast/kuberhealthy",
+    "type": "image",
+    "version": "v1.0.2"
+  }],
+  "name": "kuberhealthy:1.2.6",
+  "description": "The official Helm chart for Kuberhealthy.",
+  "type": "chart",
+  "shortName": "kuberhealthy",
+  "version": "1.2.6"
+}

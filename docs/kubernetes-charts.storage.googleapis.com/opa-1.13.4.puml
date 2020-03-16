@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for opa:1.13.4
+
+'There is one referenced Helm Chart
+artifact "opa:1.13.4\n====\n\topa\n====\n\t1.13.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: tsandall\n====\n\tKeywords: opa\nadmission control\npolicy" as opa_1_13_4 #AliceBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\topenpolicyagent/opa\n====\n\t0.15.1" as openpolicyagent_opa_0_15_1 #LightCyan
+
+'Chart Dependencies
+opa_1_13_4--[#orange]-|>openpolicyagent_opa_0_15_1
+
+center footer Generated on 2020/03/16 17:25:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

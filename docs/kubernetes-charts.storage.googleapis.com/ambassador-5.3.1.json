@@ -1,0 +1,38 @@
+{
+  "maintainers": [
+    {
+      "name": "flydiverny",
+      "email": "markus@maga.se"
+    },
+    {
+      "name": "kflynn",
+      "email": "flynn@datawire.io"
+    },
+    {
+      "name": "nbkrause",
+      "email": "nkrause@datawire.io"
+    },
+    {
+      "name": "lukeshu",
+      "email": "lukeshu@datawire.io"
+    }
+  ],
+  "keywords": [
+    "api gateway",
+    "ambassador",
+    "datawire",
+    "envoy"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "datawire/ambassador",
+    "type": "image",
+    "version": "0.86.1"
+  }],
+  "name": "ambassador:5.3.1",
+  "description": "A Helm chart for Datawire Ambassador",
+  "type": "chart",
+  "shortName": "ambassador",
+  "version": "5.3.1"
+}

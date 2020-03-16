@@ -1,0 +1,65 @@
+Chart Map for cloudserver:1.0.3
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: redis-ha:3.0.0
+	apiVersion: Not specified
+	appVersion: 4.0.11
+	created: 2018-11-09T14:55:06.400074511Z
+	dependencies: None
+	description: Highly available Kubernetes implementation of Redis
+	digest: a3de493032054eb871de779f60672e8a7ca057102a32c763f9d20c325dbbff0f
+	icon: https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/1200px-Redis_Logo.svg.png
+	keywords: redis,keyvalue,database
+	maintainers: ssalaues:salimsalaues@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: redis-ha
+	sources: https://redis.io/download,https://github.com/scality/Zenko/tree/development/1.0/kubernetes/zenko/charts/redis-ha
+	urls: https://kubernetes-charts.storage.googleapis.com/redis-ha-3.0.0.tgz
+	version: 3.0.0
+Chart: cloudserver:1.0.3
+	apiVersion: v1
+	appVersion: 8.1.5
+	created: Not specified
+	dependencies: redis-ha:3.0.0, mongodb-replicaset:3.6.4
+	description: An open-source Node.js implementation of the Amazon S3 protocol on the front-end and backend storage capabilities to multiple clouds, including Azure and Google.
+	digest: Not specified
+	icon: https://cdn.jsdelivr.net/gh/scality/cloudserver@development/8.1/res/scality-cloudserver-logo.png
+	keywords: Not specified
+	maintainers: ssalaues:salimsalaues@gmail.com,tmacro:mail@tmacs.space
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: cloudserver
+	sources: https://github.com/scality/cloudserver
+	urls: Not specified
+	version: 1.0.3
+Chart: mongodb-replicaset:3.6.4
+	apiVersion: Not specified
+	appVersion: 3.6
+	created: 2018-11-27T15:25:29.275773866Z
+	dependencies: None
+	description: NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
+	digest: 141e662cc0d3ea9be7f903ba3a88559258756ece01a4b4c094dc24880cd95088
+	icon: https://webassets.mongodb.com/_com_assets/cms/mongodb-logo-rgb-j6w271g1xn.jpg
+	keywords: Not specified
+	maintainers: foxish:ramanathana@google.com,unguiculus:unguiculus@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mongodb-replicaset
+	sources: https://github.com/mongodb/mongo,https://github.com/percona/mongodb_exporter
+	urls: https://kubernetes-charts.storage.googleapis.com/mongodb-replicaset-3.6.4.tgz
+	version: 3.6.4
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: zenko/cloudserver:8.1.5
+Image: mongo:3.6
+Image: redis:4.0.11-stretch
+
+Chart Dependencies
+------------------
+cloudserver:1.0.3 depends on redis-ha:3.0.0
+cloudserver:1.0.3 depends on mongodb-replicaset:3.6.4
+redis-ha:3.0.0 uses redis:4.0.11-stretch
+cloudserver:1.0.3 uses zenko/cloudserver:8.1.5
+mongodb-replicaset:3.6.4 uses mongo:3.6
+
+Generated on 2020/03/16 17:13:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for keel:0.6.1
+
+'There is one referenced Helm Chart
+artifact "keel:0.6.1\n====\n\tkeel\n====\n\t0.6.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: kubernetes deployment\nhelm release\ncontinuous deployment" as keel_0_6_1 #LightSteelBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tkeelhq/keel\n====\n\t0.9.5" as keelhq_keel_0_9_5 #DarkTurquoise
+
+'Chart Dependencies
+keel_0_6_1--[#orange]-|>keelhq_keel_0_9_5
+
+center footer Generated on 2020/03/16 17:20:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

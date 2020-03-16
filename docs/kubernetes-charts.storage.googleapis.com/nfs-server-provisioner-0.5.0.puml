@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for nfs-server-provisioner:0.5.0
+
+'There is one referenced Helm Chart
+artifact "nfs-server-provisioner:0.5.0\n====\n\tnfs-server-provisioner\n====\n\t0.5.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: kiall, joaocc, naseemkullah\n====\n\tKeywords: nfs\nstorage" as nfs_server_provisioner_0_5_0 #GoldenRod
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tquay.io\n====\n\tkubernetes_incubator/nfs-provisioner:v2.3.0\n====\n\tv2.3.0" as quay_io_kubernetes_incubator_nfs_provisioner_v2_3_0 #LightCoral
+
+'Chart Dependencies
+nfs_server_provisioner_0_5_0--[#orange]-|>quay_io_kubernetes_incubator_nfs_provisioner_v2_3_0
+
+center footer Generated on 2020/03/16 17:24:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

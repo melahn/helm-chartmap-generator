@@ -1,0 +1,29 @@
+Chart Map for telegraf:1.6.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: telegraf:1.6.1
+	apiVersion: v1
+	appVersion: 1.12
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED Telegraf is an agent written in Go for collecting, processing, aggregating, and writing metrics.
+	digest: Not specified
+	icon: Not specified
+	keywords: telegraf,collector,timeseries,influxdata
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: telegraf
+	sources: Not specified
+	urls: Not specified
+	version: 1.6.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: telegraf:1.12-alpine
+
+Chart Dependencies
+------------------
+telegraf:1.6.1 uses telegraf:1.12-alpine
+
+Generated on 2020/03/16 17:31:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

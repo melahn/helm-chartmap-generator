@@ -1,0 +1,12 @@
+{
+  "maintainers": [{
+    "name": "mumoshu",
+    "email": "ykuoka@gmail.com"
+  }],
+  "children": [],
+  "name": "magic-ip-address:0.1.0",
+  "description": "A Helm chart to assign static IP addresses for node-local services",
+  "type": "chart",
+  "shortName": "magic-ip-address",
+  "version": "0.1.0"
+}

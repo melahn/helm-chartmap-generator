@@ -1,0 +1,25 @@
+{
+  "maintainers": [
+    {
+      "name": "olemarkus",
+      "email": "o.with@sportradar.com"
+    },
+    {
+      "name": "kennethaasan",
+      "email": "k.aasan@sportradar.com"
+    }
+  ],
+  "keywords": ["metrics-server"],
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "google_containers/metrics-server-amd64",
+    "type": "image",
+    "version": "v0.3.6"
+  }],
+  "name": "metrics-server:2.10.0",
+  "description": "Metrics Server is a cluster-wide aggregator of resource usage data.",
+  "type": "chart",
+  "shortName": "metrics-server",
+  "version": "2.10.0"
+}

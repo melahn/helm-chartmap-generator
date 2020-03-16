@@ -1,0 +1,29 @@
+Chart Map for janusgraph:0.2.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: janusgraph:0.2.1
+	apiVersion: v1
+	appVersion: 1.0
+	created: Not specified
+	dependencies: None
+	description: Open source, scalable graph database.
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/JanusGraph/janusgraph/master/janusgraph.png
+	keywords: Not specified
+	maintainers: samizuh:samiz@google.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: janusgraph
+	sources: https://github.com/JanusGraph/janusgraph
+	urls: Not specified
+	version: 0.2.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: gcr.io/cloud-solutions-images/janusgraph:v2
+
+Chart Dependencies
+------------------
+janusgraph:0.2.1 uses gcr.io/cloud-solutions-images/janusgraph:v2
+
+Generated on 2020/03/16 17:19:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

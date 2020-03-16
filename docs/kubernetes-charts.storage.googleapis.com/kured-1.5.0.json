@@ -1,0 +1,18 @@
+{
+  "maintainers": [
+    {
+      "name": "plumdog",
+      "email": "plummer574@gmail.com"
+    },
+    {
+      "name": "patrickmslatteryvt",
+      "email": "pslattery@mi9retail.com"
+    }
+  ],
+  "children": [],
+  "name": "kured:1.5.0",
+  "description": "A Helm chart for kured",
+  "type": "chart",
+  "shortName": "kured",
+  "version": "1.5.0"
+}

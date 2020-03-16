@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "Christian",
+    "email": "christian.ingenhaag@googlemail.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "collabora/code",
+    "type": "image",
+    "version": "4.0.3.1"
+  }],
+  "name": "collabora-code:1.0.6",
+  "description": "A Helm chart for Collabora Office - CODE-Edition",
+  "type": "chart",
+  "shortName": "collabora-code",
+  "version": "1.0.6"
+}

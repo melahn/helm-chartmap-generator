@@ -1,0 +1,29 @@
+{
+  "maintainers": [
+    {
+      "name": "giacomoguiulfo",
+      "email": "giacomoguiulfo@gmail.com"
+    },
+    {
+      "name": "ssalaues",
+      "email": "salim.salaues@scality.com"
+    }
+  ],
+  "keywords": [
+    "kafka",
+    "zookeeper",
+    "kafka-manager"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "zenko/kafka-manager",
+    "type": "image",
+    "version": "1.3.3.22"
+  }],
+  "name": "kafka-manager:2.3.0",
+  "description": "A tool for managing Apache Kafka.",
+  "type": "chart",
+  "shortName": "kafka-manager",
+  "version": "2.3.0"
+}

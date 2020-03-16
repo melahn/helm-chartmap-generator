@@ -1,0 +1,44 @@
+{
+  "maintainers": [
+    {
+      "name": "rasheedamir",
+      "email": "rasheed@aurorasolutions.io"
+    },
+    {
+      "name": "waseem-h",
+      "email": "waseemhassan@stakater.com"
+    },
+    {
+      "name": "faizanahmad055",
+      "email": "faizan.ahmad55@outlook.com"
+    },
+    {
+      "name": "kahootali",
+      "email": "ali.kahoot@aurorasolutions.io"
+    },
+    {
+      "name": "ahmadiq",
+      "email": "ahmad@aurorasolutions.io"
+    },
+    {
+      "name": "ahsan-storm",
+      "email": "ahsanmuhammad1@outlook.com"
+    }
+  ],
+  "keywords": [
+    "Reloader",
+    "kubernetes"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "stakater/reloader",
+    "type": "image",
+    "version": "v0.0.41"
+  }],
+  "name": "reloader:1.2.0",
+  "description": "Reloader chart that runs on kubernetes",
+  "type": "chart",
+  "shortName": "reloader",
+  "version": "1.2.0"
+}

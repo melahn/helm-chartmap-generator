@@ -1,0 +1,29 @@
+Chart Map for coredns:1.10.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: coredns:1.10.0
+	apiVersion: v1
+	appVersion: 1.6.7
+	created: Not specified
+	dependencies: None
+	description: CoreDNS is a DNS server that chains plugins and provides Kubernetes DNS Services
+	digest: Not specified
+	icon: https://coredns.io/images/CoreDNS_Colour_Horizontal.png
+	keywords: coredns,dns,kubedns
+	maintainers: Acaleph:hello@acale.ph,shashidharatd:shashidhara.huawei@gmail.com,andor44:andor44@gmail.com,mrueg:manuel@rueg.eu
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: coredns
+	sources: https://github.com/coredns/coredns
+	urls: Not specified
+	version: 1.10.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: coredns/coredns:1.6.7
+
+Chart Dependencies
+------------------
+coredns:1.10.0 uses coredns/coredns:1.6.7
+
+Generated on 2020/03/16 17:14:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
