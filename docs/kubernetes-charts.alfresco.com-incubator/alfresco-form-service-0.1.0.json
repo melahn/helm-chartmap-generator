@@ -1,0 +1,15 @@
+{
+  "maintainers": [{"name": "Alfresco"}],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "alfresco/alfresco-form-service",
+    "type": "image",
+    "version": "latest"
+  }],
+  "name": "alfresco-form-service:0.1.0",
+  "description": "A Helm chart for the APS2 alfresco-form-service service",
+  "type": "chart",
+  "shortName": "alfresco-form-service",
+  "version": "0.1.0"
+}

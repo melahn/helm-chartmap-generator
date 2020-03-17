@@ -1,0 +1,15 @@
+{
+  "maintainers": [{"name": "Alfresco"}],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "activiti/activiti-cloud-registry",
+    "type": "image",
+    "version": "latest"
+  }],
+  "name": "alfresco-activiti-cloud-registry:0.1.0",
+  "description": "A Helm chart for Alfresco Activiti Cloud Registry",
+  "type": "chart",
+  "shortName": "alfresco-activiti-cloud-registry",
+  "version": "0.1.0"
+}

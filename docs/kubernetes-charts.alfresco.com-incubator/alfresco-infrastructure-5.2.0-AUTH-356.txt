@@ -1,0 +1,136 @@
+Chart Map for alfresco-infrastructure:5.2.0-AUTH-356
+
+There are 7 referenced Helm Charts
+----------------------------------
+Chart: alfresco-identity-service:2.0.0-AUTH-356
+	apiVersion: Not specified
+	appVersion: 1.2.0
+	created: 2020-02-25T14:46:25.164966334Z
+	dependencies: keycloak:5.1.7
+	description: The Alfresco Identity Service will become the central component responsible for identity-related capabilities needed by other Alfresco software, such as managing users, groups, roles, profiles, and authentication. Currently it deals just with authentication.
+	digest: cefdda8f86b45174a88c1a720098ebce7086b1c3c129f70d7d7f5047c1a339ec
+	icon: Not specified
+	keywords: alfresco,keycloak,identity-service
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-identity-service
+	sources: https://github.com/Alfresco/alfresco-identity-service/helm
+	urls: http://kubernetes-charts.alfresco.com/incubator/alfresco-identity-service-2.0.0-AUTH-356.tgz
+	version: 2.0.0-AUTH-356
+Chart: alfresco-infrastructure:5.2.0-AUTH-356
+	apiVersion: v1
+	appVersion: Not specified
+	created: Not specified
+	dependencies: alfresco-identity-service:2.0.0-AUTH-356, nginx-ingress:0.14.0, alfresco-event-gateway:0.1.2, activemq:1.1.1
+	description: A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform. This includes activemq, alfresco-identity-service, nginx-ingress and a persistent volume to use with the DBP chart.
+	digest: Not specified
+	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-infrastructure
+	sources: Not specified
+	urls: Not specified
+	version: 5.2.0-AUTH-356
+Chart: keycloak:5.1.7
+	apiVersion: Not specified
+	appVersion: 6.0.1
+	created: 2019-08-31T12:45:17.652950625Z
+	dependencies: postgresql:5.3.9
+	description: Open Source Identity and Access Management For Modern Applications and Services
+	digest: 49c6a351d218c59846ada0d13370d1675fd7c136e3c08f2298a86fba431b9817
+	icon: https://www.keycloak.org/resources/images/keycloak_logo_480x108.png
+	keywords: sso,idm,openid connect,saml,kerberos,ldap
+	maintainers: unguiculus:unguiculus@gmail.com,thomasdarimont:thomas.darimont+github@gmail.com
+	repo url: https://codecentric.github.io/helm-charts
+	name: keycloak
+	sources: https://github.com/codecentric/helm-charts,https://github.com/jboss-dockerfiles/keycloak
+	urls: https://github.com/codecentric/helm-charts/releases/download/keycloak-5.1.7/keycloak-5.1.7.tgz
+	version: 5.1.7
+Chart: alfresco-event-gateway:0.1.2
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: 2020-02-25T14:46:25.110628134Z
+	dependencies: activemq:1.1.1
+	description: Alfresco Event Gateway
+	digest: 1c3c912a0899bbdde18c6ef8a69489cb65cb445a50413e0c202546c3222d70d9
+	icon: Not specified
+	keywords: alfresco,events,gateway
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-event-gateway
+	sources: https://github.com/Alfresco/alfresco-event-gateway-deployment/helm
+	urls: http://kubernetes-charts.alfresco.com/incubator/alfresco-event-gateway-0.1.2.tgz
+	version: 0.1.2
+Chart: postgresql:5.3.9
+	apiVersion: v1
+	appVersion: 11.4.0
+	created: 2019-06-25T11:28:13.832445214Z
+	dependencies: None
+	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 97231606ab04ae3af97d71aa6fcc2ebac8f8a00fe7bdcb1ff1b016141407832e
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql
+	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-5.3.9.tgz
+	version: 5.3.9
+Chart: nginx-ingress:0.14.0
+	apiVersion: Not specified
+	appVersion: 0.12.0
+	created: 2018-04-18T21:56:29.224709184Z
+	dependencies: None
+	description: An nginx Ingress controller that uses ConfigMap to store the nginx configuration.
+	digest: 0beadee0eee1de15580fd741628e0b05de744c6521ebd3884583901a73666346
+	icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
+	keywords: ingress,nginx
+	maintainers: jackzampolin:jack.zampolin@gmail.com,mgoodness:mgoodness@gmail.com,chancez:chance.zibolski@coreos.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: nginx-ingress
+	sources: https://github.com/kubernetes/ingress-nginx
+	urls: https://kubernetes-charts.storage.googleapis.com/nginx-ingress-0.14.0.tgz
+	version: 0.14.0
+Chart: activemq:1.1.1
+	apiVersion: v1
+	appVersion: 5.15.8
+	created: 2020-02-25T14:46:28.428104976Z
+	dependencies: None
+	description: A Helm chart Providing Apache ActiveMQ.
+	digest: 28a35a28b9dc29fb99a110072cb200f92849c80beb5688c3b1f3fbb3f42fae08
+	icon: Not specified
+	keywords: activemq,message broker
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.alfresco.com/stable
+	name: activemq
+	sources: https://github.com/Alfresco/alfresco-activemq-deployment
+	urls: http://kubernetes-charts.alfresco.com/stable/activemq-1.1.1.tgz
+	version: 1.1.1
+
+There are 6 referenced Docker Images
+------------------------------------
+Image: quay.io/alfresco/alfresco-identity-service:1.2-AUTH-356
+Image: k8s.gcr.io/defaultbackend:1.3
+Image: alfresco/alfresco-event-gateway:0.3-SNAPSHOT
+Image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.12.0
+Image: docker.io/bitnami/postgresql:11.4.0-debian-9-r0
+Image: alfresco/alfresco-activemq:5.15.8-java-8-oracle-centos-7-87b15e37ce8b
+
+Chart Dependencies
+------------------
+alfresco-infrastructure:5.2.0-AUTH-356 depends on alfresco-identity-service:2.0.0-AUTH-356
+alfresco-identity-service:2.0.0-AUTH-356 depends on keycloak:5.1.7
+keycloak:5.1.7 depends on postgresql:5.3.9
+alfresco-infrastructure:5.2.0-AUTH-356 depends on nginx-ingress:0.14.0
+alfresco-infrastructure:5.2.0-AUTH-356 depends on alfresco-event-gateway:0.1.2
+alfresco-event-gateway:0.1.2 depends on activemq:1.1.1
+alfresco-infrastructure:5.2.0-AUTH-356 depends on activemq:1.1.1
+keycloak:5.1.7 uses quay.io/alfresco/alfresco-identity-service:1.2-AUTH-356
+alfresco-event-gateway:0.1.2 uses alfresco/alfresco-event-gateway:0.3-SNAPSHOT
+postgresql:5.3.9 uses docker.io/bitnami/postgresql:11.4.0-debian-9-r0
+nginx-ingress:0.14.0 uses k8s.gcr.io/defaultbackend:1.3
+nginx-ingress:0.14.0 uses quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.12.0
+activemq:1.1.1 uses alfresco/alfresco-activemq:5.15.8-java-8-oracle-centos-7-87b15e37ce8b
+
+Generated on 2020/03/17 14:54:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

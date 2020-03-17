@@ -1,0 +1,47 @@
+Chart Map for alfresco-event-gateway:0.1.2
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: alfresco-event-gateway:0.1.2
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: Not specified
+	dependencies: activemq:1.1.1
+	description: Alfresco Event Gateway
+	digest: Not specified
+	icon: Not specified
+	keywords: alfresco,events,gateway
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-event-gateway
+	sources: https://github.com/Alfresco/alfresco-event-gateway-deployment/helm
+	urls: Not specified
+	version: 0.1.2
+Chart: activemq:1.1.1
+	apiVersion: v1
+	appVersion: 5.15.8
+	created: 2020-02-25T14:46:28.428104976Z
+	dependencies: None
+	description: A Helm chart Providing Apache ActiveMQ.
+	digest: 28a35a28b9dc29fb99a110072cb200f92849c80beb5688c3b1f3fbb3f42fae08
+	icon: Not specified
+	keywords: activemq,message broker
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.alfresco.com/stable
+	name: activemq
+	sources: https://github.com/Alfresco/alfresco-activemq-deployment
+	urls: http://kubernetes-charts.alfresco.com/stable/activemq-1.1.1.tgz
+	version: 1.1.1
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: alfresco/alfresco-event-gateway:0.3-SNAPSHOT
+Image: alfresco/alfresco-activemq:5.15.8-java-8-oracle-centos-7-87b15e37ce8b
+
+Chart Dependencies
+------------------
+alfresco-event-gateway:0.1.2 depends on activemq:1.1.1
+alfresco-event-gateway:0.1.2 uses alfresco/alfresco-event-gateway:0.3-SNAPSHOT
+activemq:1.1.1 uses alfresco/alfresco-activemq:5.15.8-java-8-oracle-centos-7-87b15e37ce8b
+
+Generated on 2020/03/17 14:53:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

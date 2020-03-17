@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "content application",
+    "alfresco",
+    "alfresco content application"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "alfresco/alfresco-content-app",
+    "type": "image",
+    "version": "development-latest"
+  }],
+  "name": "alfresco-content-application:0.0.1",
+  "description": "A Helm chart for deploying Alfresco Content Application",
+  "type": "chart",
+  "shortName": "alfresco-content-application",
+  "version": "0.0.1"
+}

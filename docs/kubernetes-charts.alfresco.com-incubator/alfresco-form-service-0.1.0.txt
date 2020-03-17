@@ -1,0 +1,29 @@
+Chart Map for alfresco-form-service:0.1.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: alfresco-form-service:0.1.0
+	apiVersion: v1
+	appVersion: 1.0-SNAPSHOT
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for the APS2 alfresco-form-service service
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-form-service
+	sources: Not specified
+	urls: Not specified
+	version: 0.1.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: quay.io/alfresco/alfresco-form-service:latest
+
+Chart Dependencies
+------------------
+alfresco-form-service:0.1.0 uses quay.io/alfresco/alfresco-form-service:latest
+
+Generated on 2020/03/17 14:54:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

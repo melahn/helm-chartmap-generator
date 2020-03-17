@@ -1,0 +1,39 @@
+{
+  "maintainers": [{"name": "Alfresco"}],
+  "keywords": [
+    "alfresco",
+    "adf",
+    "alfresco development framework",
+    "content",
+    "content services",
+    "alfresco content services",
+    "process",
+    "process services",
+    "alfresco process services",
+    "activiti",
+    "activiti enterprise",
+    "alfresco activiti enterprise"
+  ],
+  "children": [
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "alfresco/alfresco-adf-app",
+      "type": "image",
+      "version": "latest"
+    },
+    {
+      "children": [],
+      "name": "common:1.1.28",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.1.28"
+    }
+  ],
+  "name": "alfresco-adf-app:2.1.4",
+  "description": "A Helm chart for a generic Alfresco ADF frontend application",
+  "type": "chart",
+  "shortName": "alfresco-adf-app",
+  "version": "2.1.4"
+}

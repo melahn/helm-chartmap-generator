@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-api-gateway:0.1.0
+
+'There is one referenced Helm Chart
+artifact "alfresco-api-gateway:0.1.0\n====\n\talfresco-api-gateway\n====\n\t0.1.0\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: " as alfresco_api_gateway_0_1_0 #BlanchedAlmond
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-api-gateway\n====\n\tlatest" as alfresco_alfresco_api_gateway_latest #Ivory
+
+'Chart Dependencies
+alfresco_api_gateway_0_1_0--[#orange]-|>alfresco_alfresco_api_gateway_latest
+
+center footer Generated on 2020/03/17 14:53:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

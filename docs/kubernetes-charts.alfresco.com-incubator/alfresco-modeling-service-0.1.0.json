@@ -1,0 +1,15 @@
+{
+  "maintainers": [{"name": "Alfresco"}],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "alfresco/alfresco-modeling-service",
+    "type": "image",
+    "version": "latest"
+  }],
+  "name": "alfresco-modeling-service:0.1.0",
+  "description": "A Helm chart for the APS2 alfresco-modeling-service service",
+  "type": "chart",
+  "shortName": "alfresco-modeling-service",
+  "version": "0.1.0"
+}

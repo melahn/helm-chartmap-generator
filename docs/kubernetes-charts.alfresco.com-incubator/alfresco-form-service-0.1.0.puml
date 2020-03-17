@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-form-service:0.1.0
+
+'There is one referenced Helm Chart
+artifact "alfresco-form-service:0.1.0\n====\n\talfresco-form-service\n====\n\t0.1.0\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: " as alfresco_form_service_0_1_0 #AliceBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tquay.io\n====\n\talfresco/alfresco-form-service:latest\n====\n\tlatest" as quay_io_alfresco_alfresco_form_service_latest #DarkSeaGreen
+
+'Chart Dependencies
+alfresco_form_service_0_1_0--[#orange]-|>quay_io_alfresco_alfresco_form_service_latest
+
+center footer Generated on 2020/03/17 14:54:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

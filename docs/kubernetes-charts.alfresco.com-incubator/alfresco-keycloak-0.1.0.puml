@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-keycloak:0.1.0
+
+'There is one referenced Helm Chart
+artifact "alfresco-keycloak:0.1.0\n====\n\talfresco-keycloak\n====\n\t0.1.0\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: " as alfresco_keycloak_0_1_0 #Cyan
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-keycloak\n====\n\tlatest" as alfresco_alfresco_keycloak_latest #Khaki
+
+'Chart Dependencies
+alfresco_keycloak_0_1_0--[#orange]-|>alfresco_alfresco_keycloak_latest
+
+center footer Generated on 2020/03/17 14:54:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

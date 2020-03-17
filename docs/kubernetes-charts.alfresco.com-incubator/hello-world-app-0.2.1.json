@@ -1,0 +1,81 @@
+{
+  "maintainers": [{"name": "Alfresco"}],
+  "keywords": [
+    "alfresco",
+    "anaxes",
+    "hello",
+    "world"
+  ],
+  "children": [
+    {
+      "maintainers": [{"name": "Alfresco"}],
+      "keywords": [
+        "alfresco",
+        "anaxes",
+        "hello",
+        "world"
+      ],
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/anaxes-hello-world-service",
+          "type": "image",
+          "version": "0.1-SNAPSHOT"
+        },
+        {
+          "maintainers": [{"name": "databus23"}],
+          "keywords": [
+            "postgresql",
+            "postgres",
+            "database",
+            "sql"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "postgres",
+            "type": "image",
+            "version": "10.1"
+          }],
+          "name": "postgresql:0.11.0",
+          "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+          "type": "chart",
+          "shortName": "postgresql",
+          "version": "0.11.0"
+        }
+      ],
+      "name": "hello-world-service:0.2.1",
+      "description": "Hello world sample service to demonstrate deployment capabilities",
+      "type": "chart",
+      "shortName": "hello-world-service",
+      "version": "0.2.1"
+    },
+    {
+      "maintainers": [{"name": "Alfresco"}],
+      "keywords": [
+        "alfresco",
+        "anaxes",
+        "hello",
+        "world"
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "alfresco/anaxes-hello-world-ui",
+        "type": "image",
+        "version": "0.1-SNAPSHOT"
+      }],
+      "name": "hello-world-ui:0.2",
+      "description": "Hello world sample UI to demonstrate deployment capabilities",
+      "type": "chart",
+      "shortName": "hello-world-ui",
+      "version": "0.2"
+    }
+  ],
+  "name": "hello-world-app:0.2.1",
+  "description": "Hello world sample app to demonstrate deployment capabilities",
+  "type": "chart",
+  "shortName": "hello-world-app",
+  "version": "0.2.1"
+}

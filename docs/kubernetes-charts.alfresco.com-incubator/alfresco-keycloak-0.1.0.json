@@ -1,0 +1,15 @@
+{
+  "maintainers": [{"name": "Alfresco"}],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "alfresco/alfresco-keycloak",
+    "type": "image",
+    "version": "latest"
+  }],
+  "name": "alfresco-keycloak:0.1.0",
+  "description": "A Helm chart for Alfresco and Activiti SSO identity-service",
+  "type": "chart",
+  "shortName": "alfresco-keycloak",
+  "version": "0.1.0"
+}

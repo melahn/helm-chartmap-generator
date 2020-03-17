@@ -1,0 +1,31 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-content-services-community:6.0.5-01
+
+'There are 3 referenced Helm Charts
+artifact "postgresql:0.9.3\n====\n\tpostgresql\n====\n\t0.9.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: databus23\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql" as postgresql_0_9_3 #LightSteelBlue
+artifact "alfresco-content-services-community:6.0.5-01\n====\n\talfresco-content-services-community\n====\n\t6.0.5-01\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: \n====\n\tKeywords: community\nalfresco community\ncontent\ncontent services\nalfresco\nalfresco content services" as alfresco_content_services_community_6_0_5_01 #LightSkyBlue
+artifact "alfresco-search:0.0.2\n====\n\talfresco-search\n====\n\t0.0.2\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: \n====\n\tKeywords: search\nsearch services\nalfresco search services\ninsight\ninsight engine\nalfresco insight engine" as alfresco_search_0_0_2 #GhostWhite
+
+'There are 4 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-content-repository-community\n====\n\tlatest" as alfresco_alfresco_content_repository_community_latest #Aqua
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-share\n====\n\t6.0.b" as alfresco_alfresco_share_6_0_b #LightSalmon
+usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t10.1" as postgres_10_1 #Ivory
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-search-services\n====\n\t1.1.1" as alfresco_alfresco_search_services_1_1_1 #Coral
+
+'Chart Dependencies
+alfresco_content_services_community_6_0_5_01--[#green]-|>alfresco_search_0_0_2
+alfresco_content_services_community_6_0_5_01--[#green]-|>postgresql_0_9_3
+postgresql_0_9_3--[#orange]-|>postgres_10_1
+alfresco_content_services_community_6_0_5_01--[#orange]-|>alfresco_alfresco_share_6_0_b
+alfresco_content_services_community_6_0_5_01--[#orange]-|>alfresco_alfresco_content_repository_community_latest
+alfresco_search_0_0_2--[#orange]-|>alfresco_alfresco_search_services_1_1_1
+
+center footer Generated on 2020/03/17 14:53:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

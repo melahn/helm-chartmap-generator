@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-search-services:0.0.1
+
+'There is one referenced Helm Chart
+artifact "alfresco-search-services:0.0.1\n====\n\talfresco-search-services\n====\n\t0.0.1\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: \n====\n\tKeywords: search\nsearch services\nalfresco search services" as alfresco_search_services_0_0_1 #LightCoral
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tquay.io\n====\n\talfresco/insight-engine:1.2.0-SNAPSHOT\n====\n\t1.2.0-SNAPSHOT" as quay_io_alfresco_insight_engine_1_2_0_SNAPSHOT #CornflowerBlue
+
+'Chart Dependencies
+alfresco_search_services_0_0_1--[#orange]-|>quay_io_alfresco_insight_engine_1_2_0_SNAPSHOT
+
+center footer Generated on 2020/03/17 14:57:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

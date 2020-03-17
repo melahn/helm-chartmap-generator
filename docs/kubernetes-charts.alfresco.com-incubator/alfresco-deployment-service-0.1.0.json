@@ -1,0 +1,9 @@
+{
+  "maintainers": [{"name": "Alfresco"}],
+  "children": [],
+  "name": "alfresco-deployment-service:0.1.0",
+  "description": "A Helm chart for the APS2 alfresco-deployment-service service",
+  "type": "chart",
+  "shortName": "alfresco-deployment-service",
+  "version": "0.1.0"
+}

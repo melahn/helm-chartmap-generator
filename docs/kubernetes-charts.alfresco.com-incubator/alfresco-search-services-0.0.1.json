@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "search",
+    "search services",
+    "alfresco search services"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "alfresco/insight-engine",
+    "type": "image",
+    "version": "1.2.0-SNAPSHOT"
+  }],
+  "name": "alfresco-search-services:0.0.1",
+  "description": "A Helm chart for deploying Alfresco Search Services",
+  "type": "chart",
+  "shortName": "alfresco-search-services",
+  "version": "0.0.1"
+}

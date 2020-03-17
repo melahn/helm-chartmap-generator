@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-event-gateway:0.1.1
+
+'There are 2 referenced Helm Charts
+artifact "activemq:1.0.0\n====\n\tactivemq\n====\n\t1.0.0\n====\n\thttps://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: \n====\n\tKeywords: activemq\nmessage broker" as activemq_1_0_0 #LightBlue
+artifact "alfresco-event-gateway:0.1.1\n====\n\talfresco-event-gateway\n====\n\t0.1.1\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: alfresco\nevents\ngateway" as alfresco_event_gateway_0_1_1 #Chartreuse
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-event-gateway\n====\n\t0.1-SNAPSHOT" as alfresco_alfresco_event_gateway_0_1_SNAPSHOT #LightSalmon
+usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-activemq\n====\n\t5.15.6-java-8-oracle-centos-7-ac5b98b35cd4" as alfresco_alfresco_activemq_5_15_6_java_8_oracle_centos_7_ac5b98b35cd4 #Khaki
+
+'Chart Dependencies
+alfresco_event_gateway_0_1_1--[#green]-|>activemq_1_0_0
+activemq_1_0_0--[#orange]-|>alfresco_alfresco_activemq_5_15_6_java_8_oracle_centos_7_ac5b98b35cd4
+alfresco_event_gateway_0_1_1--[#orange]-|>alfresco_alfresco_event_gateway_0_1_SNAPSHOT
+
+center footer Generated on 2020/03/17 14:54:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

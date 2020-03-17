@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-adf-app:2.1.4
+
+'There are 2 referenced Helm Charts
+artifact "common:1.1.28\n====\n\tcommon\n====\n\t1.1.28\n====\n\thttps://activiti.github.io/activiti-cloud-helm-charts\n====\n\tMaintainers: \n====\n\tKeywords: " as common_1_1_28 #DarkSeaGreen
+artifact "alfresco-adf-app:2.1.4\n====\n\talfresco-adf-app\n====\n\t2.1.4\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: alfresco\nadf\nalfresco development framework\ncontent\ncontent services\nalfresco content services\nprocess\nprocess services\nalfresco process services\nactiviti\nactiviti enterprise\nalfresco activiti enterprise" as alfresco_adf_app_2_1_4 #Fuchsia
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tquay.io\n====\n\talfresco/alfresco-adf-app:latest\n====\n\tlatest" as quay_io_alfresco_alfresco_adf_app_latest #Cornsilk
+
+'Chart Dependencies
+alfresco_adf_app_2_1_4--[#green]-|>common_1_1_28
+alfresco_adf_app_2_1_4--[#orange]-|>quay_io_alfresco_alfresco_adf_app_latest
+
+center footer Generated on 2020/03/17 14:52:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

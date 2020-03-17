@@ -1,0 +1,19 @@
+{
+  "maintainers": [{"name": "Alfresco"}],
+  "keywords": [
+    "alfresco",
+    "acs-consolidator"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "alfresco/acs-events-consolidator",
+    "type": "image",
+    "version": "0.3-SNAPSHOT"
+  }],
+  "name": "acs-events-consolidator:0.2",
+  "description": "ACS Events Consolidator",
+  "type": "chart",
+  "shortName": "acs-events-consolidator",
+  "version": "0.2"
+}

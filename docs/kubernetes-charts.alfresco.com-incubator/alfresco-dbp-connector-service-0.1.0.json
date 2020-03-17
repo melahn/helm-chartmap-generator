@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "alfresco/alfresco-dbp-connector-service",
+    "type": "image",
+    "version": "0.5.0-SNAPSHOT"
+  }],
+  "name": "alfresco-dbp-connector-service:0.1.0",
+  "description": "Alfresco DBP Connector Chart for Alfresco Content Services",
+  "type": "chart",
+  "shortName": "alfresco-dbp-connector-service",
+  "version": "0.1.0"
+}

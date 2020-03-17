@@ -1,0 +1,67 @@
+Chart Map for alfresco-content-services-community:6.0.5-01
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: postgresql:0.9.3
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: 2018-03-29T04:56:10.224673062Z
+	dependencies: None
+	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 828f019164cfbc9d97824fd6ef39748ec8f5677d8267b90de44b6df59ec2cbbc
+	icon: https://www.postgresql.org/media/img/about/press/elephant.png
+	keywords: postgresql,postgres,database,sql
+	maintainers: databus23
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: postgresql
+	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
+	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-0.9.3.tgz
+	version: 0.9.3
+Chart: alfresco-content-services-community:6.0.5-01
+	apiVersion: Not specified
+	appVersion: 6.0.5-ea
+	created: Not specified
+	dependencies: postgresql:0.9.3, alfresco-search:0.0.2
+	description: A Helm chart for deploying Alfresco Content Services Community
+	digest: Not specified
+	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
+	keywords: community,alfresco community,content,content services,alfresco,alfresco content services
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-content-services-community
+	sources: https://github.com/Alfresco/acs-community-deployment
+	urls: Not specified
+	version: 6.0.5-01
+Chart: alfresco-search:0.0.2
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: 2020-02-25T14:46:25.505939234Z
+	dependencies: None
+	description: A Helm chart for deploying Alfresco Search
+	digest: 6943f71e9e67c7715eb7169dac9e7159938f60586fb4d0289caf80e927718f73
+	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
+	keywords: search,search services,alfresco search services,insight,insight engine,alfresco insight engine
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-search
+	sources: Not specified
+	urls: http://kubernetes-charts.alfresco.com/incubator/alfresco-search-0.0.2.tgz
+	version: 0.0.2
+
+There are 4 referenced Docker Images
+------------------------------------
+Image: alfresco/alfresco-content-repository-community:latest
+Image: alfresco/alfresco-share:6.0.b
+Image: postgres:10.1
+Image: alfresco/alfresco-search-services:1.1.1
+
+Chart Dependencies
+------------------
+alfresco-content-services-community:6.0.5-01 depends on postgresql:0.9.3
+alfresco-content-services-community:6.0.5-01 depends on alfresco-search:0.0.2
+postgresql:0.9.3 uses postgres:10.1
+alfresco-content-services-community:6.0.5-01 uses alfresco/alfresco-share:6.0.b
+alfresco-content-services-community:6.0.5-01 uses alfresco/alfresco-content-repository-community:latest
+alfresco-search:0.0.2 uses alfresco/alfresco-search-services:1.1.1
+
+Generated on 2020/03/17 14:53:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

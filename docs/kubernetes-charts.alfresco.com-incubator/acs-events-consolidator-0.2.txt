@@ -1,0 +1,29 @@
+Chart Map for acs-events-consolidator:0.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: acs-events-consolidator:0.2
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: Not specified
+	dependencies: None
+	description: ACS Events Consolidator
+	digest: Not specified
+	icon: Not specified
+	keywords: alfresco,acs-consolidator
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: acs-events-consolidator
+	sources: https://github.com/Alfresco/acs-events-consolidator-deployment/helm
+	urls: Not specified
+	version: 0.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: quay.io/alfresco/acs-events-consolidator:0.3-SNAPSHOT
+
+Chart Dependencies
+------------------
+acs-events-consolidator:0.2 uses quay.io/alfresco/acs-events-consolidator:0.3-SNAPSHOT
+
+Generated on 2020/03/17 14:52:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
