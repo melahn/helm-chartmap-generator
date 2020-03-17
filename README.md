@@ -12,6 +12,8 @@ The generated reports can be in various formats including
 In addition to producing the dependency report files, an 'index.html' file is produced that lists the files
 and provided links to view them.
 
+You can see lots of examples here -> https://melahn.github.io/helm-chartmap-generator/ 
+
 ## Prerequisites
 
 * Java 8 or later.
