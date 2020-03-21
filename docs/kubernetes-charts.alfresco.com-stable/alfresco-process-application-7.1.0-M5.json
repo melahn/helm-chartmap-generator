@@ -10,32 +10,6 @@
   ],
   "children": [
     {
-      "maintainers": [{
-        "name": "steven-sheehy",
-        "email": "ssheehy@firescope.com"
-      }],
-      "keywords": [
-        "rabbitmq",
-        "message queue",
-        "AMQP",
-        "AMQPS",
-        "MQTT",
-        "STOMP"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "rabbitmq",
-        "type": "image",
-        "version": "3.7-alpine"
-      }],
-      "name": "rabbitmq-ha:1.19.0",
-      "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
-      "type": "chart",
-      "shortName": "rabbitmq-ha",
-      "version": "1.19.0"
-    },
-    {
       "children": [
         {
           "repoHost": "quay.io",
@@ -60,108 +34,30 @@
       "version": "7.1.196"
     },
     {
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-notifications-graphql-service",
-          "type": "image",
-          "version": "7.1.0.M5"
-        },
-        {
-          "children": [],
-          "name": "common:1.1.26",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.1.26"
-        }
-      ],
-      "name": "activiti-cloud-notifications-graphql:7.1.200",
-      "description": "A Helm chart for Activiti Cloud Notifications GraphQL Application",
-      "type": "chart",
-      "shortName": "activiti-cloud-notifications-graphql",
-      "version": "7.1.200"
-    },
-    {
-      "maintainers": [
-        {
-          "name": "Bitnami",
-          "email": "containers@bitnami.com"
-        },
-        {
-          "name": "desaintmartin",
-          "email": "cedric@desaintmartin.fr"
-        }
-      ],
+      "maintainers": [{
+        "name": "steven-sheehy",
+        "email": "ssheehy@firescope.com"
+      }],
       "keywords": [
-        "postgresql",
-        "postgres",
-        "database",
-        "sql",
-        "replication",
-        "cluster"
+        "rabbitmq",
+        "message queue",
+        "AMQP",
+        "AMQPS",
+        "MQTT",
+        "STOMP"
       ],
       "children": [{
-        "repoHost": "docker.io",
+        "repoHost": "Docker Hub",
         "children": [],
-        "name": "bitnami/postgresql",
+        "name": "rabbitmq",
         "type": "image",
-        "version": "10.7.0"
+        "version": "3.7-alpine"
       }],
-      "name": "postgresql:3.11.3",
-      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "name": "rabbitmq-ha:1.19.0",
+      "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
       "type": "chart",
-      "shortName": "postgresql",
-      "version": "3.11.3"
-    },
-    {
-      "children": [
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "activiti/example-runtime-bundle",
-          "type": "image",
-          "version": "7.1.0.M5"
-        },
-        {
-          "children": [],
-          "name": "common:1.1.26",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.1.26"
-        }
-      ],
-      "name": "runtime-bundle:7.1.239",
-      "description": "A Helm chart for Activiti Cloud Runtime Bundle Example",
-      "type": "chart",
-      "shortName": "runtime-bundle",
-      "version": "7.1.239"
-    },
-    {
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-audit-service",
-          "type": "image",
-          "version": "7.1.0.M5"
-        },
-        {
-          "children": [],
-          "name": "common:1.1.26",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.1.26"
-        }
-      ],
-      "name": "activiti-cloud-audit:7.1.204",
-      "description": "A Helm chart for Kubernetes",
-      "type": "chart",
-      "shortName": "activiti-cloud-audit",
-      "version": "7.1.204"
+      "shortName": "rabbitmq-ha",
+      "version": "1.19.0"
     },
     {
       "maintainers": [{"name": "Alfresco"}],
@@ -199,6 +95,110 @@
       "type": "chart",
       "shortName": "alfresco-process-springboot-service",
       "version": "2.1.0"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/postgresql",
+        "type": "image",
+        "version": "10.7.0"
+      }],
+      "name": "postgresql:3.11.3",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "3.11.3"
+    },
+    {
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-process-audit-service",
+          "type": "image",
+          "version": "7.1.0.M5"
+        },
+        {
+          "children": [],
+          "name": "common:1.1.26",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.1.26"
+        }
+      ],
+      "name": "activiti-cloud-audit:7.1.204",
+      "description": "A Helm chart for Kubernetes",
+      "type": "chart",
+      "shortName": "activiti-cloud-audit",
+      "version": "7.1.204"
+    },
+    {
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "activiti/example-runtime-bundle",
+          "type": "image",
+          "version": "7.1.0.M5"
+        },
+        {
+          "children": [],
+          "name": "common:1.1.26",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.1.26"
+        }
+      ],
+      "name": "runtime-bundle:7.1.239",
+      "description": "A Helm chart for Activiti Cloud Runtime Bundle Example",
+      "type": "chart",
+      "shortName": "runtime-bundle",
+      "version": "7.1.239"
+    },
+    {
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-process-notifications-graphql-service",
+          "type": "image",
+          "version": "7.1.0.M5"
+        },
+        {
+          "children": [],
+          "name": "common:1.1.26",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.1.26"
+        }
+      ],
+      "name": "activiti-cloud-notifications-graphql:7.1.200",
+      "description": "A Helm chart for Activiti Cloud Notifications GraphQL Application",
+      "type": "chart",
+      "shortName": "activiti-cloud-notifications-graphql",
+      "version": "7.1.200"
     }
   ],
   "name": "alfresco-process-application:7.1.0-M5",

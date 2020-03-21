@@ -229,6 +229,7 @@ public class ChartMapGenerator {
                     outputDirname.concat("/").concat(filename),
                     System.getenv("HELM_HOME"),
                     envFilename,
+                    true,
                     false,
                     false);
             testMap.print();
@@ -313,7 +314,7 @@ public class ChartMapGenerator {
     }
 
     /**
-     * Adds a single chart filename to the index file
+     * Adds a single chart filename to the index file.  If the file is a PlantUML file, also adds the png file to the index.
      *
      * @param f helm chart filename
      */
@@ -322,6 +323,13 @@ public class ChartMapGenerator {
         Files.write(Paths.get(indexFilename),
                 l.getBytes(),
                 StandardOpenOption.APPEND);
+        if (f.endsWith(".puml")) {
+            String p = f.replace("puml", "png");
+            l = "\t\t<li class=\"chartlink\">".concat("<a href=\"./").concat(p).concat("\">").concat(p).concat("</a>").concat("</li>\n");
+            Files.write(Paths.get(indexFilename),
+                    l.getBytes(),
+                    StandardOpenOption.APPEND);
+        }
     }
 
     /**

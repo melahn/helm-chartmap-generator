@@ -32,18 +32,18 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tactiviti/example-runtime-bundle\n===
 usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-activemq\n====\n\t5.15.8-java-8-oracle-centos-7-87b15e37ce8b" as alfresco_alfresco_activemq_5_15_8_java_8_oracle_centos_7_87b15e37ce8b #Khaki
 
 'Chart Dependencies
+alfresco_process_infrastructure_7_1_0_M5--[#green]-|>alfresco_process_springboot_service_2_1_0
+alfresco_process_springboot_service_2_1_0--[#green]-|>common_1_1_21
 alfresco_process_infrastructure_7_1_0_M5--[#green]-|>alfresco_infrastructure_5_1_1
 alfresco_infrastructure_5_1_1--[#green]-|>alfresco_event_gateway_0_1_2
 alfresco_event_gateway_0_1_2--[#green]-|>activemq_1_1_1
 alfresco_infrastructure_5_1_1--[#green]-|>alfresco_identity_service_1_1_2
 alfresco_identity_service_1_1_2--[#green]-|>keycloak_4_3_0
 keycloak_4_3_0--[#green]-|>postgresql_0_15_0
-alfresco_infrastructure_5_1_1--[#green]-|>nginx_ingress_0_14_0
 alfresco_infrastructure_5_1_1--[#green]-|>activemq_1_1_1
-alfresco_process_infrastructure_7_1_0_M5--[#green]-|>common_1_1_21
+alfresco_infrastructure_5_1_1--[#green]-|>nginx_ingress_0_14_0
 alfresco_process_infrastructure_7_1_0_M5--[#green]-|>postgresql_0_11_0
-alfresco_process_infrastructure_7_1_0_M5--[#green]-|>alfresco_process_springboot_service_2_1_0
-alfresco_process_springboot_service_2_1_0--[#green]-|>common_1_1_21
+alfresco_process_infrastructure_7_1_0_M5--[#green]-|>common_1_1_21
 postgresql_0_11_0--[#orange]-|>postgres_9_6_2
 alfresco_event_gateway_0_1_2--[#orange]-|>alfresco_alfresco_event_gateway_0_3_SNAPSHOT
 postgresql_0_15_0--[#orange]-|>postgres_11_3
@@ -53,5 +53,5 @@ nginx_ingress_0_14_0--[#orange]-|>k8s_gcr_io_defaultbackend_1_3
 nginx_ingress_0_14_0--[#orange]-|>quay_io_kubernetes_ingress_controller_nginx_ingress_controller_0_12_0
 activemq_1_1_1--[#orange]-|>alfresco_alfresco_activemq_5_15_8_java_8_oracle_centos_7_87b15e37ce8b
 
-center footer Generated on 2020/03/16 17:05:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/03/21 16:08:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

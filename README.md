@@ -6,7 +6,7 @@ the [ChartMap project](https://github.com/melahn/helm-chartmap) to generate the 
 
 The generated reports can be in various formats including
 * JSON which can be viewed using [helm-inspector](https://github.com/melahn/helm-inspector)  
-* PlantUML which can be turned into images using [PlantUML](https://plantuml.com/)
+* PlantUML which are then turned into images using [PlantUML](https://plantuml.com/)
 * Text which can of course be viewed using any text editor
 
 In addition to producing the dependency report files, an 'index.html' file is produced that lists the files
@@ -72,6 +72,13 @@ Flags:
 ```
     java -helm-chartmap-generator-1.0-SNAPSHOT.jar -r stable -f pt -n 3 -v 
 ``` 
+
+### Notes
+When using PlantUML files, the images that are then produced from those files will look best when the following
+system environment variable variable is set 
+```
+PLANTUML_LIMIT_SIZE 8192
+```
 ### Issues
 If you find any problems please open an [issue](https://github.com/melahn/helm-chartmap-generator/issues).
 

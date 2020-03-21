@@ -16,16 +16,16 @@
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-transform-misc",
+      "name": "alfresco/alfresco-shared-file-store",
       "type": "image",
-      "version": "2.1.0"
+      "version": "0.5.3"
     },
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-shared-file-store",
+      "name": "alfresco/alfresco-transform-misc",
       "type": "image",
-      "version": "0.5.3"
+      "version": "2.1.0"
     },
     {
       "repoHost": "Docker Hub",
@@ -91,6 +91,46 @@
       "version": "0.9.3"
     },
     {
+      "keywords": [
+        "alfresco",
+        "digital workspace"
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "alfresco/alfresco-digital-workspace",
+        "type": "image",
+        "version": "1.4.0"
+      }],
+      "name": "alfresco-digital-workspace:2.2.1",
+      "description": "A Helm chart for deploying Alfresco Digital Workspace application",
+      "type": "chart",
+      "shortName": "alfresco-digital-workspace",
+      "version": "2.2.1"
+    },
+    {
+      "keywords": [
+        "search",
+        "search services",
+        "alfresco search services",
+        "insight",
+        "insight engine",
+        "alfresco insight engine"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "alfresco/alfresco-search-services",
+        "type": "image",
+        "version": "1.4.0"
+      }],
+      "name": "alfresco-search:1.0.3",
+      "description": "A Helm chart for deploying Alfresco Search",
+      "type": "chart",
+      "shortName": "alfresco-search",
+      "version": "1.0.3"
+    },
+    {
       "maintainers": [{"name": "Alfresco Apps Repo Team"}],
       "keywords": [
         "syncservice",
@@ -132,46 +172,6 @@
       "type": "chart",
       "shortName": "alfresco-sync-service",
       "version": "3.0.2"
-    },
-    {
-      "keywords": [
-        "search",
-        "search services",
-        "alfresco search services",
-        "insight",
-        "insight engine",
-        "alfresco insight engine"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "alfresco/alfresco-search-services",
-        "type": "image",
-        "version": "1.4.0"
-      }],
-      "name": "alfresco-search:1.0.3",
-      "description": "A Helm chart for deploying Alfresco Search",
-      "type": "chart",
-      "shortName": "alfresco-search",
-      "version": "1.0.3"
-    },
-    {
-      "keywords": [
-        "alfresco",
-        "digital workspace"
-      ],
-      "children": [{
-        "repoHost": "quay.io",
-        "children": [],
-        "name": "alfresco/alfresco-digital-workspace",
-        "type": "image",
-        "version": "1.4.0"
-      }],
-      "name": "alfresco-digital-workspace:2.2.1",
-      "description": "A Helm chart for deploying Alfresco Digital Workspace application",
-      "type": "chart",
-      "shortName": "alfresco-digital-workspace",
-      "version": "2.2.1"
     }
   ],
   "name": "alfresco-content-services:3.0.8",

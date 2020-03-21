@@ -17,5 +17,5 @@ usecase "Image\n====\n\tquay.io\n====\n\talfresco/insight-zeppelin:1.4.0\n====\n
 'Chart Dependencies
 alfresco_insight_zeppelin_1_0_2--[#orange]-|>quay_io_alfresco_insight_zeppelin_1_4_0
 
-center footer Generated on 2020/03/16 17:02:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/03/21 16:05:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

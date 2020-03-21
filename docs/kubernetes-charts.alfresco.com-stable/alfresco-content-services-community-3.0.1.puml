@@ -37,5 +37,5 @@ alfresco_content_services_community_3_0_1--[#orange]-|>alfresco_alfresco_tika_2_
 alfresco_content_services_community_3_0_1--[#orange]-|>alfresco_alfresco_imagemagick_2_1_0
 alfresco_content_services_community_3_0_1--[#orange]-|>alfresco_alfresco_share_6_2_0
 
-center footer Generated on 2020/03/16 17:02:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/03/21 16:05:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
