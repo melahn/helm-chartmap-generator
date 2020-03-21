@@ -60,4 +60,4 @@ keycloak:5.1.7 depends on postgresql:5.3.9
 keycloak:5.1.7 uses quay.io/alfresco/alfresco-identity-service:1.2-jk
 postgresql:5.3.9 uses docker.io/bitnami/postgresql:11.4.0-debian-9-r0
 
-Generated on 2020/03/17 14:54:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/03/21 16:50:53 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

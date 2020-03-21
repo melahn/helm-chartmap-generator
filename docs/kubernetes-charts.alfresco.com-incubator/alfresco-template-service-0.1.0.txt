@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-template-service:0.1.0 uses quay.io/alfresco/alfresco-template-service:latest
 
-Generated on 2020/03/17 14:57:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/03/21 16:54:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

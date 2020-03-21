@@ -1,0 +1,132 @@
+Chart Map for alfresco-process-infrastructure:7.1.0-M7
+
+There are 7 referenced Helm Charts
+----------------------------------
+Chart: postgresql:0.11.0
+	apiVersion: Not specified
+	appVersion: 9.6.2
+	created: 2018-05-10T07:26:21.022197052Z
+	dependencies: None
+	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 07904fd939bf345e51f29cffe2a2235788b4dff0f167ede7c0e14f94bd59939e
+	icon: https://www.postgresql.org/media/img/about/press/elephant.png
+	keywords: postgresql,postgres,database,sql
+	maintainers: databus23
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: postgresql
+	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
+	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-0.11.0.tgz
+	version: 0.11.0
+Chart: alfresco-process-infrastructure:7.1.0-M7
+	apiVersion: v1
+	appVersion: 7.1.0.M6
+	created: Not specified
+	dependencies: alfresco-identity-service:1.1.1, common:1.1.28, postgresql:0.11.0, alfresco-process-springboot-service:2.1.0
+	description: A Helm chart for Alfresco Activiti Enterprise infrastructure
+	digest: Not specified
+	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
+	keywords: process,alfresco,activiti,alfresco activiti enterprise
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-process-infrastructure
+	sources: https://github.com/Alfresco/alfresco-process-infrastructure
+	urls: Not specified
+	version: 7.1.0-M7
+Chart: common:1.1.28
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-03-20T23:56:32.836634688Z
+	dependencies: None
+	description: A Helm chart for Activiti Cloud Common Templates
+	digest: aa605f53cce16bb4e02d8ee452269dabf56f01cd883bec4458019c7d779d6885
+	icon: https://salaboy.files.wordpress.com/2018/01/acitiviti_icon_fullcolor_github_400x400.png
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://activiti.github.io/activiti-cloud-helm-charts
+	name: common
+	sources: Not specified
+	urls: common-1.1.28.tgz
+	version: 1.1.28
+Chart: postgresql:0.15.0
+	apiVersion: Not specified
+	appVersion: 9.6.2
+	created: 2018-08-27T18:56:06.643545837Z
+	dependencies: None
+	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 6083155dd4d79178afe9b0413e70747ee22c514b56797d478d1976d995634f6e
+	icon: https://www.postgresql.org/media/img/about/press/elephant.png
+	keywords: postgresql,postgres,database,sql
+	maintainers: databus23
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: postgresql
+	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
+	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-0.15.0.tgz
+	version: 0.15.0
+Chart: alfresco-identity-service:1.1.1
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: 2020-02-25T14:46:28.603605643Z
+	dependencies: keycloak:4.3.0
+	description: The Alfresco Identity Service will become the central component responsible for identity-related capabilities needed by other Alfresco software, such as managing users, groups, roles, profiles, and authentication. Currently it deals just with authentication.
+	digest: 3f5076a00f6e862556779269d9d853164e89ace4dc36d5151a16020b817163b9
+	icon: Not specified
+	keywords: alfresco,keycloak,identity-service
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/stable
+	name: alfresco-identity-service
+	sources: https://github.com/Alfresco/alfresco-identity-service/helm
+	urls: http://kubernetes-charts.alfresco.com/stable/alfresco-identity-service-1.1.1.tgz
+	version: 1.1.1
+Chart: alfresco-process-springboot-service:2.1.0
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-02-25T14:46:28.738929897Z
+	dependencies: common:1.1.28
+	description: A Helm chart for a generic Alfresco Process/Activiti Spring Boot based microservice
+	digest: e4996336ce452851c406af625ed0f12db3324ba92286f77bbbd5c36155f8de12
+	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
+	keywords: alfresco,content,content services,alfresco content services,activiti,process,alfresco activiti enterprise,java,spring boot,microservice
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/stable
+	name: alfresco-process-springboot-service
+	sources: https://github.com/Alfresco/alfresco-process-springboot-service-deployment
+	urls: http://kubernetes-charts.alfresco.com/stable/alfresco-process-springboot-service-2.1.0.tgz
+	version: 2.1.0
+Chart: keycloak:4.3.0
+	apiVersion: Not specified
+	appVersion: 4.8.3.Final
+	created: 2019-02-07T13:26:11.548377387Z
+	dependencies: postgresql:0.15.0
+	description: Open Source Identity and Access Management For Modern Applications and Services
+	digest: fc74a8d9172b8b4647f383a8b087c3d27f95b68b587b97088dddacc102d9c5d7
+	icon: https://www.keycloak.org/resources/images/keycloak_logo_480x108.png
+	keywords: sso,idm,openid connect,saml,kerberos,ldap
+	maintainers: unguiculus:unguiculus@gmail.com,thomasdarimont:thomas.darimont+github@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: keycloak
+	sources: https://github.com/jboss-dockerfiles/keycloak
+	urls: https://kubernetes-charts.storage.googleapis.com/keycloak-4.3.0.tgz
+	version: 4.3.0
+
+There are 4 referenced Docker Images
+------------------------------------
+Image: postgres:11.3
+Image: postgres:9.6.2
+Image: jboss/keycloak:4.8.3.Final
+Image: activiti/example-runtime-bundle:7.0.0.SR1
+
+Chart Dependencies
+------------------
+alfresco-process-infrastructure:7.1.0-M7 depends on alfresco-identity-service:1.1.1
+alfresco-identity-service:1.1.1 depends on keycloak:4.3.0
+keycloak:4.3.0 depends on postgresql:0.15.0
+alfresco-process-infrastructure:7.1.0-M7 depends on common:1.1.28
+alfresco-process-infrastructure:7.1.0-M7 depends on postgresql:0.11.0
+alfresco-process-infrastructure:7.1.0-M7 depends on alfresco-process-springboot-service:2.1.0
+alfresco-process-springboot-service:2.1.0 depends on common:1.1.28
+postgresql:0.11.0 uses postgres:9.6.2
+postgresql:0.15.0 uses postgres:11.3
+alfresco-process-springboot-service:2.1.0 uses activiti/example-runtime-bundle:7.0.0.SR1
+keycloak:4.3.0 uses jboss/keycloak:4.8.3.Final
+
+Generated on 2020/03/21 16:52:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

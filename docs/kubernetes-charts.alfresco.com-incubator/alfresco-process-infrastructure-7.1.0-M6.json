@@ -75,35 +75,6 @@
       "version": "1.1.1"
     },
     {
-      "children": [],
-      "name": "common:1.1.28",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "1.1.28"
-    },
-    {
-      "maintainers": [{"name": "databus23"}],
-      "keywords": [
-        "postgresql",
-        "postgres",
-        "database",
-        "sql"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "postgres",
-        "type": "image",
-        "version": "9.6.2"
-      }],
-      "name": "postgresql:0.11.0",
-      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-      "type": "chart",
-      "shortName": "postgresql",
-      "version": "0.11.0"
-    },
-    {
       "maintainers": [{"name": "Alfresco"}],
       "keywords": [
         "alfresco",
@@ -139,6 +110,35 @@
       "type": "chart",
       "shortName": "alfresco-process-springboot-service",
       "version": "2.1.0"
+    },
+    {
+      "maintainers": [{"name": "databus23"}],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6.2"
+      }],
+      "name": "postgresql:0.11.0",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.11.0"
+    },
+    {
+      "children": [],
+      "name": "common:1.1.28",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.1.28"
     }
   ],
   "name": "alfresco-process-infrastructure:7.1.0-M6",

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-modeling-service:0.1.0 uses quay.io/alfresco/alfresco-modeling-service:latest
 
-Generated on 2020/03/17 14:54:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/03/21 16:51:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

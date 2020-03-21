@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-form-service:0.1.0 uses quay.io/alfresco/alfresco-form-service:latest
 
-Generated on 2020/03/17 14:54:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/03/21 16:50:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

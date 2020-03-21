@@ -51,7 +51,7 @@ Chart: alfresco-infrastructure:2.0.0-SNAPSHOT
 	apiVersion: v1
 	appVersion: Not specified
 	created: 2020-02-25T14:46:25.193848836Z
-	dependencies: nginx-ingress:0.14.0, activemq:0.1.0, rabbitmq-ha:0.1.1, alfresco-identity-service:0.3.1
+	dependencies: activemq:0.1.0, nginx-ingress:0.14.0, rabbitmq-ha:0.1.1, alfresco-identity-service:0.3.1
 	description: A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform. This includes activemq, alfresco-api-gateway, alfresco-identity-service, nginx-ingress and a persistent volume to use with the dbp chart.
 	digest: ffa1740d7c46f240853b2b11744598791f3a77a1b6b2c924f0b73739d1ef6dae
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -135,8 +135,8 @@ Image: jboss/keycloak:3.4.3.Final
 Chart Dependencies
 ------------------
 process-services-infrastructure:0.1.1 depends on alfresco-infrastructure:2.0.0-SNAPSHOT
-alfresco-infrastructure:2.0.0-SNAPSHOT depends on nginx-ingress:0.14.0
 alfresco-infrastructure:2.0.0-SNAPSHOT depends on activemq:0.1.0
+alfresco-infrastructure:2.0.0-SNAPSHOT depends on nginx-ingress:0.14.0
 alfresco-infrastructure:2.0.0-SNAPSHOT depends on rabbitmq-ha:0.1.1
 alfresco-infrastructure:2.0.0-SNAPSHOT depends on alfresco-identity-service:0.3.1
 alfresco-identity-service:0.3.1 depends on keycloak:2.0.0
@@ -148,4 +148,4 @@ rabbitmq-ha:0.1.1 uses rabbitmq:3.7-alpine
 nginx-ingress:0.14.0 uses k8s.gcr.io/defaultbackend:1.3
 nginx-ingress:0.14.0 uses quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.12.0
 
-Generated on 2020/03/17 14:57:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/03/21 16:54:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -28,12 +28,12 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tjboss/keycloak\n====\n\t3.4.3.Final"
 
 'Chart Dependencies
 process_services_infrastructure_0_1_1--[#green]-|>alfresco_infrastructure_2_0_0_SNAPSHOT
-alfresco_infrastructure_2_0_0_SNAPSHOT--[#green]-|>activemq_0_1_0
-alfresco_infrastructure_2_0_0_SNAPSHOT--[#green]-|>rabbitmq_ha_0_1_1
-alfresco_infrastructure_2_0_0_SNAPSHOT--[#green]-|>nginx_ingress_0_14_0
 alfresco_infrastructure_2_0_0_SNAPSHOT--[#green]-|>alfresco_identity_service_0_3_1
 alfresco_identity_service_0_3_1--[#green]-|>keycloak_2_0_0
 keycloak_2_0_0--[#green]-|>postgresql_0_12_0
+alfresco_infrastructure_2_0_0_SNAPSHOT--[#green]-|>rabbitmq_ha_0_1_1
+alfresco_infrastructure_2_0_0_SNAPSHOT--[#green]-|>nginx_ingress_0_14_0
+alfresco_infrastructure_2_0_0_SNAPSHOT--[#green]-|>activemq_0_1_0
 keycloak_2_0_0--[#orange]-|>jboss_keycloak_3_4_3_Final
 activemq_0_1_0--[#orange]-|>webcenter_activemq_latest
 postgresql_0_12_0--[#orange]-|>postgres_9_6_2
@@ -41,5 +41,5 @@ rabbitmq_ha_0_1_1--[#orange]-|>rabbitmq_3_7_alpine
 nginx_ingress_0_14_0--[#orange]-|>k8s_gcr_io_defaultbackend_1_3
 nginx_ingress_0_14_0--[#orange]-|>quay_io_kubernetes_ingress_controller_nginx_ingress_controller_0_12_0
 
-center footer Generated on 2020/03/17 14:57:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/03/21 16:54:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

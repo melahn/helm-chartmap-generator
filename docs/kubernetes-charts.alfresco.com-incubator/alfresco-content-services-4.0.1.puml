@@ -32,8 +32,8 @@ usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-content-repository
 usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-tika\n====\n\t2.1.0" as alfresco_alfresco_tika_2_1_0 #DeepSkyBlue
 
 'Chart Dependencies
-alfresco_content_services_4_0_1--[#green]-|>alfresco_search_1_0_1
 alfresco_content_services_4_0_1--[#green]-|>postgresql_0_9_3
+alfresco_content_services_4_0_1--[#green]-|>alfresco_search_1_0_1
 alfresco_content_services_4_0_1--[#green]-|>alfresco_sync_service_2_0_0
 alfresco_sync_service_2_0_0--[#green]-|>postgresql_0_9_3
 alfresco_content_services_4_0_1--[#green]-|>alfresco_digital_workspace_2_0_0
@@ -41,8 +41,8 @@ postgresql_0_9_3--[#orange]-|>postgres_11_4
 postgresql_0_9_3--[#orange]-|>postgres_10_1
 alfresco_content_services_4_0_1--[#orange]-|>alfresco_alfresco_content_repository_6_3_0_A1
 alfresco_content_services_4_0_1--[#orange]-|>alfresco_alfresco_libreoffice_2_1_0
-alfresco_content_services_4_0_1--[#orange]-|>alfresco_alfresco_transform_misc_2_1_0
 alfresco_content_services_4_0_1--[#orange]-|>alfresco_alfresco_shared_file_store_0_5_3
+alfresco_content_services_4_0_1--[#orange]-|>alfresco_alfresco_transform_misc_2_1_0
 alfresco_content_services_4_0_1--[#orange]-|>alfresco_alfresco_pdf_renderer_2_1_0
 alfresco_content_services_4_0_1--[#orange]-|>quay_io_alfresco_alfresco_transform_router_1_1_0
 alfresco_content_services_4_0_1--[#orange]-|>alfresco_alfresco_tika_2_1_0
@@ -52,5 +52,5 @@ alfresco_sync_service_2_0_0--[#orange]-|>quay_io_alfresco_service_sync_3_2_0
 alfresco_search_1_0_1--[#orange]-|>alfresco_alfresco_search_services_1_4_0
 alfresco_digital_workspace_2_0_0--[#orange]-|>quay_io_alfresco_alfresco_digital_workspace_1_2_0
 
-center footer Generated on 2020/03/17 14:53:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/03/21 16:49:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

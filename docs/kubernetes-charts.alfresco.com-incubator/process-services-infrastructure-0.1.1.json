@@ -2,27 +2,59 @@
   "children": [{
     "children": [
       {
-        "maintainers": [{
-          "name": "etiennetremel",
-          "email": "etienne.tremel@container-solutions.com"
-        }],
-        "keywords": [
-          "rabbitmq",
-          "message queue",
-          "AMQP"
-        ],
         "children": [{
           "repoHost": "Docker Hub",
           "children": [],
-          "name": "rabbitmq",
+          "name": "webcenter/activemq",
           "type": "image",
-          "version": "3.7-alpine"
+          "version": "latest"
         }],
-        "name": "rabbitmq-ha:0.1.1",
-        "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
+        "name": "activemq:0.1.0",
+        "description": "A Helm chart Providing Apache ActiveMQ.",
         "type": "chart",
-        "shortName": "rabbitmq-ha",
-        "version": "0.1.1"
+        "shortName": "activemq",
+        "version": "0.1.0"
+      },
+      {
+        "maintainers": [
+          {
+            "name": "jackzampolin",
+            "email": "jack.zampolin@gmail.com"
+          },
+          {
+            "name": "mgoodness",
+            "email": "mgoodness@gmail.com"
+          },
+          {
+            "name": "chancez",
+            "email": "chance.zibolski@coreos.com"
+          }
+        ],
+        "keywords": [
+          "ingress",
+          "nginx"
+        ],
+        "children": [
+          {
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "k8s.gcr.io/defaultbackend",
+            "type": "image",
+            "version": "1.3"
+          },
+          {
+            "repoHost": "quay.io",
+            "children": [],
+            "name": "kubernetes-ingress-controller/nginx-ingress-controller",
+            "type": "image",
+            "version": "0.12.0"
+          }
+        ],
+        "name": "nginx-ingress:0.14.0",
+        "description": "An nginx Ingress controller that uses ConfigMap to store the nginx configuration.",
+        "type": "chart",
+        "shortName": "nginx-ingress",
+        "version": "0.14.0"
       },
       {
         "maintainers": [{"name": "Alfresco"}],
@@ -93,59 +125,27 @@
         "version": "0.3.1"
       },
       {
-        "maintainers": [
-          {
-            "name": "jackzampolin",
-            "email": "jack.zampolin@gmail.com"
-          },
-          {
-            "name": "mgoodness",
-            "email": "mgoodness@gmail.com"
-          },
-          {
-            "name": "chancez",
-            "email": "chance.zibolski@coreos.com"
-          }
-        ],
+        "maintainers": [{
+          "name": "etiennetremel",
+          "email": "etienne.tremel@container-solutions.com"
+        }],
         "keywords": [
-          "ingress",
-          "nginx"
+          "rabbitmq",
+          "message queue",
+          "AMQP"
         ],
-        "children": [
-          {
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "k8s.gcr.io/defaultbackend",
-            "type": "image",
-            "version": "1.3"
-          },
-          {
-            "repoHost": "quay.io",
-            "children": [],
-            "name": "kubernetes-ingress-controller/nginx-ingress-controller",
-            "type": "image",
-            "version": "0.12.0"
-          }
-        ],
-        "name": "nginx-ingress:0.14.0",
-        "description": "An nginx Ingress controller that uses ConfigMap to store the nginx configuration.",
-        "type": "chart",
-        "shortName": "nginx-ingress",
-        "version": "0.14.0"
-      },
-      {
         "children": [{
           "repoHost": "Docker Hub",
           "children": [],
-          "name": "webcenter/activemq",
+          "name": "rabbitmq",
           "type": "image",
-          "version": "latest"
+          "version": "3.7-alpine"
         }],
-        "name": "activemq:0.1.0",
-        "description": "A Helm chart Providing Apache ActiveMQ.",
+        "name": "rabbitmq-ha:0.1.1",
+        "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
         "type": "chart",
-        "shortName": "activemq",
-        "version": "0.1.0"
+        "shortName": "rabbitmq-ha",
+        "version": "0.1.1"
       }
     ],
     "name": "alfresco-infrastructure:2.0.0-SNAPSHOT",

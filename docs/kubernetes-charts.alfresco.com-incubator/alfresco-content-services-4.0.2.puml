@@ -49,8 +49,8 @@ alfresco_content_services_4_0_2--[#orange]-|>alfresco_alfresco_transform_misc_2_
 alfresco_content_services_4_0_2--[#orange]-|>alfresco_alfresco_pdf_renderer_2_1_1
 alfresco_content_services_4_0_2--[#orange]-|>quay_io_alfresco_alfresco_transform_router_1_1_1
 alfresco_content_services_4_0_2--[#orange]-|>alfresco_alfresco_tika_2_1_1
-alfresco_content_services_4_0_2--[#orange]-|>alfresco_alfresco_imagemagick_2_1_1
 alfresco_content_services_4_0_2--[#orange]-|>alfresco_alfresco_share_6_2_0_RC2
+alfresco_content_services_4_0_2--[#orange]-|>alfresco_alfresco_imagemagick_2_1_1
 
-center footer Generated on 2020/03/17 14:53:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/03/21 16:49:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

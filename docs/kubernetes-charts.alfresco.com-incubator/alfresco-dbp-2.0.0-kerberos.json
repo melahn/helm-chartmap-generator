@@ -7,110 +7,7 @@
   ],
   "children": [
     {
-      "maintainers": [{"name": "Alfresco"}],
       "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-services-admin",
-          "type": "image",
-          "version": "1.10.0"
-        },
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-services",
-          "type": "image",
-          "version": "1.10.0"
-        },
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-workspace-app",
-          "type": "image",
-          "version": "1.3.4"
-        },
-        {
-          "keywords": [
-            "postgresql",
-            "postgres",
-            "database",
-            "sql"
-          ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "postgres",
-            "type": "image",
-            "version": "9.4.6"
-          }],
-          "name": "postgresql:1.0.0",
-          "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-          "type": "chart",
-          "shortName": "postgresql",
-          "version": "1.0.0"
-        }
-      ],
-      "name": "alfresco-process-services:0.2.0",
-      "description": "A Helm chart for Alfresco Process Services",
-      "type": "chart",
-      "shortName": "alfresco-process-services",
-      "version": "0.2.0"
-    },
-    {
-      "children": [
-        {
-          "maintainers": [{"name": "Alfresco"}],
-          "keywords": [
-            "alfresco",
-            "events",
-            "gateway"
-          ],
-          "children": [
-            {
-              "repoHost": "Docker Hub",
-              "children": [],
-              "name": "alfresco/alfresco-event-gateway",
-              "type": "image",
-              "version": "0.3-SNAPSHOT"
-            },
-            {
-              "keywords": [
-                "activemq",
-                "message broker"
-              ],
-              "children": [],
-              "name": "activemq:1.1.1",
-              "description": "A Helm chart Providing Apache ActiveMQ.",
-              "type": "chart",
-              "shortName": "activemq",
-              "version": "1.1.1"
-            }
-          ],
-          "name": "alfresco-event-gateway:0.1.2",
-          "description": "Alfresco Event Gateway",
-          "type": "chart",
-          "shortName": "alfresco-event-gateway",
-          "version": "0.1.2"
-        },
-        {
-          "keywords": [
-            "activemq",
-            "message broker"
-          ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "alfresco/alfresco-activemq",
-            "type": "image",
-            "version": "5.15.8-java-8-oracle-centos-7-87b15e37ce8b"
-          }],
-          "name": "activemq:1.1.1",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
-          "version": "1.1.1"
-        },
         {
           "maintainers": [
             {
@@ -151,6 +48,58 @@
           "type": "chart",
           "shortName": "nginx-ingress",
           "version": "0.14.0"
+        },
+        {
+          "keywords": [
+            "activemq",
+            "message broker"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "alfresco/alfresco-activemq",
+            "type": "image",
+            "version": "5.15.8-java-8-oracle-centos-7-87b15e37ce8b"
+          }],
+          "name": "activemq:1.1.1",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "1.1.1"
+        },
+        {
+          "maintainers": [{"name": "Alfresco"}],
+          "keywords": [
+            "alfresco",
+            "events",
+            "gateway"
+          ],
+          "children": [
+            {
+              "repoHost": "Docker Hub",
+              "children": [],
+              "name": "alfresco/alfresco-event-gateway",
+              "type": "image",
+              "version": "0.3-SNAPSHOT"
+            },
+            {
+              "keywords": [
+                "activemq",
+                "message broker"
+              ],
+              "children": [],
+              "name": "activemq:1.1.1",
+              "description": "A Helm chart Providing Apache ActiveMQ.",
+              "type": "chart",
+              "shortName": "activemq",
+              "version": "1.1.1"
+            }
+          ],
+          "name": "alfresco-event-gateway:0.1.2",
+          "description": "Alfresco Event Gateway",
+          "type": "chart",
+          "shortName": "alfresco-event-gateway",
+          "version": "0.1.2"
         },
         {
           "maintainers": [{"name": "Alfresco"}],
@@ -291,14 +240,14 @@
         {
           "repoHost": "quay.io",
           "children": [],
-          "name": "alfresco/alfresco-imagemagick",
+          "name": "alfresco/alfresco-libreoffice",
           "type": "image",
           "version": "2.0.17"
         },
         {
           "repoHost": "quay.io",
           "children": [],
-          "name": "alfresco/alfresco-libreoffice",
+          "name": "alfresco/alfresco-imagemagick",
           "type": "image",
           "version": "2.0.17"
         },
@@ -319,6 +268,27 @@
           "type": "chart",
           "shortName": "alfresco-digital-workspace",
           "version": "2.0.0"
+        },
+        {
+          "maintainers": [{"name": "databus23"}],
+          "keywords": [
+            "postgresql",
+            "postgres",
+            "database",
+            "sql"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "postgres",
+            "type": "image",
+            "version": "11.4"
+          }],
+          "name": "postgresql:0.9.3",
+          "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+          "type": "chart",
+          "shortName": "postgresql",
+          "version": "0.9.3"
         },
         {
           "keywords": [
@@ -384,9 +354,39 @@
           "type": "chart",
           "shortName": "alfresco-sync-service",
           "version": "1.1.1"
+        }
+      ],
+      "name": "alfresco-content-services:2.1.3-kerberosFix",
+      "description": "A Helm chart for deploying Alfresco Content Services",
+      "type": "chart",
+      "shortName": "alfresco-content-services",
+      "version": "2.1.3-kerberosFix"
+    },
+    {
+      "maintainers": [{"name": "Alfresco"}],
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-process-services-admin",
+          "type": "image",
+          "version": "1.10.0"
         },
         {
-          "maintainers": [{"name": "databus23"}],
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-process-services",
+          "type": "image",
+          "version": "1.10.0"
+        },
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-process-workspace-app",
+          "type": "image",
+          "version": "1.3.4"
+        },
+        {
           "keywords": [
             "postgresql",
             "postgres",
@@ -398,20 +398,20 @@
             "children": [],
             "name": "postgres",
             "type": "image",
-            "version": "11.4"
+            "version": "9.4.6"
           }],
-          "name": "postgresql:0.9.3",
+          "name": "postgresql:1.0.0",
           "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
           "type": "chart",
           "shortName": "postgresql",
-          "version": "0.9.3"
+          "version": "1.0.0"
         }
       ],
-      "name": "alfresco-content-services:2.1.3-kerberosFix",
-      "description": "A Helm chart for deploying Alfresco Content Services",
+      "name": "alfresco-process-services:0.2.0",
+      "description": "A Helm chart for Alfresco Process Services",
       "type": "chart",
-      "shortName": "alfresco-content-services",
-      "version": "2.1.3-kerberosFix"
+      "shortName": "alfresco-process-services",
+      "version": "0.2.0"
     }
   ],
   "name": "alfresco-dbp:2.0.0-kerberos",
