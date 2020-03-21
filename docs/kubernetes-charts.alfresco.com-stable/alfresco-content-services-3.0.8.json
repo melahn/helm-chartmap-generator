@@ -16,16 +16,16 @@
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-shared-file-store",
+      "name": "alfresco/alfresco-transform-misc",
       "type": "image",
-      "version": "0.5.3"
+      "version": "2.1.0"
     },
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-transform-misc",
+      "name": "alfresco/alfresco-shared-file-store",
       "type": "image",
-      "version": "2.1.0"
+      "version": "0.5.3"
     },
     {
       "repoHost": "Docker Hub",
@@ -44,16 +44,16 @@
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-tika",
+      "name": "alfresco/alfresco-content-repository",
       "type": "image",
-      "version": "2.1.0"
+      "version": "6.2.0.2"
     },
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-content-repository",
+      "name": "alfresco/alfresco-tika",
       "type": "image",
-      "version": "6.2.0.2"
+      "version": "2.1.0"
     },
     {
       "repoHost": "Docker Hub",
@@ -68,6 +68,49 @@
       "name": "alfresco/alfresco-share",
       "type": "image",
       "version": "6.2.0"
+    },
+    {
+      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
+      "keywords": [
+        "syncservice",
+        "alfresco",
+        "application"
+      ],
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/service-sync",
+          "type": "image",
+          "version": "3.3.1"
+        },
+        {
+          "maintainers": [{"name": "databus23"}],
+          "keywords": [
+            "postgresql",
+            "postgres",
+            "database",
+            "sql"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "postgres",
+            "type": "image",
+            "version": "10.1"
+          }],
+          "name": "postgresql:0.9.3",
+          "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+          "type": "chart",
+          "shortName": "postgresql",
+          "version": "0.9.3"
+        }
+      ],
+      "name": "alfresco-sync-service:3.0.2",
+      "description": "Alfresco Syncservice",
+      "type": "chart",
+      "shortName": "alfresco-sync-service",
+      "version": "3.0.2"
     },
     {
       "maintainers": [{"name": "databus23"}],
@@ -129,49 +172,6 @@
       "type": "chart",
       "shortName": "alfresco-search",
       "version": "1.0.3"
-    },
-    {
-      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
-      "keywords": [
-        "syncservice",
-        "alfresco",
-        "application"
-      ],
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/service-sync",
-          "type": "image",
-          "version": "3.3.1"
-        },
-        {
-          "maintainers": [{"name": "databus23"}],
-          "keywords": [
-            "postgresql",
-            "postgres",
-            "database",
-            "sql"
-          ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "postgres",
-            "type": "image",
-            "version": "10.1"
-          }],
-          "name": "postgresql:0.9.3",
-          "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-          "type": "chart",
-          "shortName": "postgresql",
-          "version": "0.9.3"
-        }
-      ],
-      "name": "alfresco-sync-service:3.0.2",
-      "description": "Alfresco Syncservice",
-      "type": "chart",
-      "shortName": "alfresco-sync-service",
-      "version": "3.0.2"
     }
   ],
   "name": "alfresco-content-services:3.0.8",

@@ -33,15 +33,15 @@ usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-tika\n====\n\t2.1.
 
 'Chart Dependencies
 alfresco_content_services_3_0_7--[#green]-|>postgresql_0_9_3
-alfresco_content_services_3_0_7--[#green]-|>alfresco_sync_service_3_0_1
-alfresco_sync_service_3_0_1--[#green]-|>postgresql_0_9_3
 alfresco_content_services_3_0_7--[#green]-|>alfresco_search_1_0_3
 alfresco_content_services_3_0_7--[#green]-|>alfresco_digital_workspace_2_2_1
+alfresco_content_services_3_0_7--[#green]-|>alfresco_sync_service_3_0_1
+alfresco_sync_service_3_0_1--[#green]-|>postgresql_0_9_3
 postgresql_0_9_3--[#orange]-|>postgres_11_4
 postgresql_0_9_3--[#orange]-|>postgres_10_1
 alfresco_content_services_3_0_7--[#orange]-|>alfresco_alfresco_libreoffice_2_1_0
-alfresco_content_services_3_0_7--[#orange]-|>alfresco_alfresco_transform_misc_2_1_0
 alfresco_content_services_3_0_7--[#orange]-|>alfresco_alfresco_shared_file_store_0_5_3
+alfresco_content_services_3_0_7--[#orange]-|>alfresco_alfresco_transform_misc_2_1_0
 alfresco_content_services_3_0_7--[#orange]-|>alfresco_alfresco_pdf_renderer_2_1_0
 alfresco_content_services_3_0_7--[#orange]-|>quay_io_alfresco_alfresco_transform_router_1_1_0
 alfresco_content_services_3_0_7--[#orange]-|>alfresco_alfresco_tika_2_1_0
@@ -52,5 +52,5 @@ alfresco_sync_service_3_0_1--[#orange]-|>quay_io_alfresco_service_sync_3_3_1
 alfresco_search_1_0_3--[#orange]-|>alfresco_alfresco_search_services_1_4_0
 alfresco_digital_workspace_2_2_1--[#orange]-|>quay_io_alfresco_alfresco_digital_workspace_1_3_0
 
-center footer Generated on 2020/03/21 16:05:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/03/21 16:59:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
