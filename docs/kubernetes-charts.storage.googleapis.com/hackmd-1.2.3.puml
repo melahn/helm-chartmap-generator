@@ -21,5 +21,5 @@ hackmd_1_2_3--[#green]-|>postgresql_0_8_4
 postgresql_0_8_4--[#orange]-|>postgres_9_6_2
 hackmd_1_2_3--[#orange]-|>hackmdio_hackmd_1_3_0_alpine
 
-center footer Generated on 2020/03/16 17:18:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:25:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

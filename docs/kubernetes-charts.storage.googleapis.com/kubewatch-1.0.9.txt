@@ -1,0 +1,29 @@
+Chart Map for kubewatch:1.0.9
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: kubewatch:1.0.9
+	apiVersion: v1
+	appVersion: 0.0.4
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED Kubewatch notifies your slack rooms when changes to your cluster occur
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/kubewatch/img/kubewatch-stack-220x234.png
+	keywords: kubernetes,slack,hipchat,mattermost,flock
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: kubewatch
+	sources: https://github.com/bitnami/bitnami-docker-kubewatch
+	urls: Not specified
+	version: 1.0.9
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/kubewatch:0.0.4-debian-10-r29
+
+Chart Dependencies
+------------------
+kubewatch:1.0.9 uses docker.io/bitnami/kubewatch:0.0.4-debian-10-r29
+
+Generated on 2020/04/21 20:29:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

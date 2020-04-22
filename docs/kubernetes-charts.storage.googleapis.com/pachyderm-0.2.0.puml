@@ -17,5 +17,5 @@ usecase "Image\n====\n\tquay.io\n====\n\tcoreos/etcd:v3.3.5\n====\n\tv3.3.5" as 
 'Chart Dependencies
 pachyderm_0_2_0--[#orange]-|>quay_io_coreos_etcd_v3_3_5
 
-center footer Generated on 2020/03/16 17:26:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:34:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

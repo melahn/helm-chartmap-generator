@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tk8s.gcr.io/spartakus-amd64\n====\n\t
 'Chart Dependencies
 spartakus_1_1_5--[#orange]-|>k8s_gcr_io_spartakus_amd64_v1_0_0
 
-center footer Generated on 2020/03/16 17:30:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:39:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

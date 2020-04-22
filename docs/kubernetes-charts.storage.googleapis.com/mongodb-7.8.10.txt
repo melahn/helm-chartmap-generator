@@ -1,0 +1,29 @@
+Chart Map for mongodb:7.8.10
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: mongodb:7.8.10
+	apiVersion: v1
+	appVersion: 4.2.4
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+	keywords: mongodb,database,nosql,cluster,replicaset,replication
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mongodb
+	sources: https://github.com/bitnami/bitnami-docker-mongodb
+	urls: Not specified
+	version: 7.8.10
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mongodb:4.2.4-debian-10-r0
+
+Chart Dependencies
+------------------
+mongodb:7.8.10 uses docker.io/bitnami/mongodb:4.2.4-debian-10-r0
+
+Generated on 2020/04/21 20:31:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

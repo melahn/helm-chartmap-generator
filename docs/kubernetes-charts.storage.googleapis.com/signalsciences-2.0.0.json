@@ -1,0 +1,20 @@
+{
+  "maintainers": [{
+    "name": "cpanato",
+    "email": "ctadeu@gmail.com"
+  }],
+  "keywords": [
+    "signalsciences",
+    "signal-sciences",
+    "sigsci",
+    "agent",
+    "firewall",
+    "waf"
+  ],
+  "children": [],
+  "name": "signalsciences:2.0.0",
+  "description": "SignalSciences is a web application firewall. This chart is the installable agent.",
+  "type": "chart",
+  "shortName": "signalsciences",
+  "version": "2.0.0"
+}

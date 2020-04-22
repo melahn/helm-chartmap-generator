@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 opa:1.13.3 uses openpolicyagent/opa:0.15.1
 
-Generated on 2020/03/16 17:25:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:33:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

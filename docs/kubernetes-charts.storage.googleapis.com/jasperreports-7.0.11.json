@@ -1,0 +1,49 @@
+{
+  "keywords": [
+    "business intelligence",
+    "java",
+    "jasper",
+    "reporting",
+    "analytic",
+    "visualization"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/jasperreports",
+      "type": "image",
+      "version": "7.2.0-debian-10-r24"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mariadb",
+        "mysql",
+        "database",
+        "sql",
+        "prometheus"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/mariadb",
+        "type": "image",
+        "version": "10.3.22-debian-10-r27"
+      }],
+      "name": "mariadb:7.3.12",
+      "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
+      "type": "chart",
+      "shortName": "mariadb",
+      "version": "7.3.12"
+    }
+  ],
+  "name": "jasperreports:7.0.11",
+  "description": "DEPRECATED The JasperReports server can be used as a stand-alone or embedded reporting and BI server that offers web-based reporting, analytic tools and visualization, and a dashboard feature for compiling multiple custom views",
+  "type": "chart",
+  "shortName": "jasperreports",
+  "version": "7.0.11"
+}

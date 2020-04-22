@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kube-lego:0.4.1 uses jetstack/kube-lego:0.1.5
 
-Generated on 2020/03/16 17:21:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:28:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tgesellix/couchdb-prometheus-exporter
 'Chart Dependencies
 prometheus_couchdb_exporter_0_1_0--[#orange]-|>gesellix_couchdb_prometheus_exporter_16
 
-center footer Generated on 2020/03/16 17:27:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:35:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

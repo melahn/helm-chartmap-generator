@@ -1,0 +1,27 @@
+Chart Map for cert-manager:v0.6.7
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: cert-manager:v0.6.7
+	apiVersion: Not specified
+	appVersion: v0.6.2
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for cert-manager
+	digest: Not specified
+	icon: Not specified
+	keywords: cert-manager,kube-lego,letsencrypt,tls
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: cert-manager
+	sources: https://github.com/jetstack/cert-manager
+	urls: Not specified
+	version: v0.6.7
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/04/21 20:20:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -22,5 +22,5 @@ hubot_1_0_1--[#orange]-|>docker_io_bitnami_redis_5_0_5_debian_9_r169
 hubot_1_0_1--[#orange]-|>minddocdev_hubot_3_3_2
 redis_9_4_3--[#orange]-|>docker_io_bitnami_redis_5_0_5_debian_9_r169
 
-center footer Generated on 2020/03/16 17:19:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:26:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

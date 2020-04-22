@@ -28,4 +28,4 @@ Chart Dependencies
 couchbase-operator:1.0.1 uses couchbase/operator:1.2.1
 couchbase-operator:1.0.1 uses couchbase/admission-controller:1.2.1
 
-Generated on 2020/03/16 17:14:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:21:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

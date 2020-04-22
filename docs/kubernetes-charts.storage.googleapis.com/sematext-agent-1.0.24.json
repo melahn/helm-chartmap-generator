@@ -1,0 +1,20 @@
+{
+  "maintainers": [{
+    "name": "hakman",
+    "email": "ciprian.hacman@sematext.com"
+  }],
+  "keywords": [
+    "sematext",
+    "observability",
+    "monitoring",
+    "logging",
+    "containers",
+    "ebpf"
+  ],
+  "children": [],
+  "name": "sematext-agent:1.0.24",
+  "description": "Helm chart for deploying Sematext Agent to Kubernetes",
+  "type": "chart",
+  "shortName": "sematext-agent",
+  "version": "1.0.24"
+}

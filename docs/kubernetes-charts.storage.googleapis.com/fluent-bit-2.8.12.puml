@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for fluent-bit:2.8.12
+
+'There is one referenced Helm Chart
+artifact "fluent-bit:2.8.12\n====\n\tfluent-bit\n====\n\t2.8.12\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: kfox1111, edsiper, hectorj2f\n====\n\tKeywords: logging\nmonitoring\nfluent\nfluentd" as fluent_bit_2_8_12 #AntiqueWhite
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2020/04/21 20:24:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

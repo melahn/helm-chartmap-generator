@@ -46,4 +46,4 @@ artifactory-ha:0.4.1 uses docker.bintray.io/jfrog/artifactory-pro:6.2.0
 artifactory-ha:0.4.1 uses docker.bintray.io/jfrog/nginx-artifactory-pro:6.2.0
 postgresql:0.8.7 uses postgres:9.6.2
 
-Generated on 2020/03/16 17:12:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:19:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

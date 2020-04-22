@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 nfs-client-provisioner:1.2.7 uses quay.io/external_storage/nfs-client-provisioner:v3.1.0-k8s1.11
 
-Generated on 2020/03/16 17:24:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:32:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -15,5 +15,5 @@ artifact "mysqldump:2.5.1\n====\n\tmysqldump\n====\n\t2.5.1\n====\n\thttps://kub
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:24:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:32:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

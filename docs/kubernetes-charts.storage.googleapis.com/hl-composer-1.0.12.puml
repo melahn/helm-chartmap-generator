@@ -19,5 +19,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\thyperledger/composer-playground\n===
 hl_composer_1_0_12--[#orange]-|>hyperledger_composer_cli_0_20_0
 hl_composer_1_0_12--[#orange]-|>hyperledger_composer_playground_0_20_0
 
-center footer Generated on 2020/03/16 17:18:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:25:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

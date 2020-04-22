@@ -1,0 +1,28 @@
+{
+  "maintainers": [
+    {
+      "name": "desaintmartin",
+      "email": "cdesaintmartin@wiremind.io"
+    },
+    {
+      "name": "davidkarlsen",
+      "email": "david@davidkarlsen.com"
+    },
+    {
+      "name": "wvidana",
+      "email": "wvidanas@gmail.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "lmenezes/cerebro",
+    "type": "image",
+    "version": "0.8.5"
+  }],
+  "name": "cerebro:1.7.0",
+  "description": "A Helm chart for Cerebro - a web admin tool that replaces Kopf.",
+  "type": "chart",
+  "shortName": "cerebro",
+  "version": "1.7.0"
+}

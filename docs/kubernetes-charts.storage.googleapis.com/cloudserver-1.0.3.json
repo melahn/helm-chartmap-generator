@@ -18,29 +18,6 @@
       "version": "8.1.5"
     },
     {
-      "maintainers": [{
-        "name": "ssalaues",
-        "email": "salimsalaues@gmail.com"
-      }],
-      "keywords": [
-        "redis",
-        "keyvalue",
-        "database"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "redis",
-        "type": "image",
-        "version": "4.0.11-stretch"
-      }],
-      "name": "redis-ha:3.0.0",
-      "description": "Highly available Kubernetes implementation of Redis",
-      "type": "chart",
-      "shortName": "redis-ha",
-      "version": "3.0.0"
-    },
-    {
       "maintainers": [
         {
           "name": "foxish",
@@ -63,6 +40,29 @@
       "type": "chart",
       "shortName": "mongodb-replicaset",
       "version": "3.6.4"
+    },
+    {
+      "maintainers": [{
+        "name": "ssalaues",
+        "email": "salimsalaues@gmail.com"
+      }],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "redis",
+        "type": "image",
+        "version": "4.0.11-stretch"
+      }],
+      "name": "redis-ha:3.0.0",
+      "description": "Highly available Kubernetes implementation of Redis",
+      "type": "chart",
+      "shortName": "redis-ha",
+      "version": "3.0.0"
     }
   ],
   "name": "cloudserver:1.0.3",

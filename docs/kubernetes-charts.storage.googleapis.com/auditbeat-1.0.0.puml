@@ -15,5 +15,5 @@ artifact "auditbeat:1.0.0\n====\n\tauditbeat\n====\n\t1.0.0\n====\n\thttps://kub
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:12:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:19:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

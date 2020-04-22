@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kubewatch:1.0.8 uses docker.io/bitnami/kubewatch:0.0.4-debian-10-r29
 
-Generated on 2020/03/16 17:21:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:29:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

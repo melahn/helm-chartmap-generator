@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 schema-registry-ui:0.4.1 uses landoop/schema-registry-ui:0.9.5
 
-Generated on 2020/03/16 17:29:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:38:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

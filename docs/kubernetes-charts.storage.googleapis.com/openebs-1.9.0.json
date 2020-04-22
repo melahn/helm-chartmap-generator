@@ -1,0 +1,67 @@
+{
+  "maintainers": [
+    {
+      "name": "kmova",
+      "email": "kiran.mova@openebs.io"
+    },
+    {
+      "name": "prateekpandey14",
+      "email": "prateek.pandey@openebs.io"
+    }
+  ],
+  "keywords": [
+    "cloud-native-storage",
+    "block-storage",
+    "iSCSI",
+    "storage"
+  ],
+  "children": [
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "openebs/provisioner-localpv",
+      "type": "image",
+      "version": "1.9.0"
+    },
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "openebs/m-apiserver",
+      "type": "image",
+      "version": "1.9.0"
+    },
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "openebs/openebs-k8s-provisioner",
+      "type": "image",
+      "version": "1.9.0"
+    },
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "openebs/node-disk-operator-amd64",
+      "type": "image",
+      "version": "v0.4.9"
+    },
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "openebs/snapshot-controller",
+      "type": "image",
+      "version": "1.9.0"
+    },
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "openebs/admission-server",
+      "type": "image",
+      "version": "1.9.0"
+    }
+  ],
+  "name": "openebs:1.9.0",
+  "description": "Containerized Storage for Containers",
+  "type": "chart",
+  "shortName": "openebs",
+  "version": "1.9.0"
+}

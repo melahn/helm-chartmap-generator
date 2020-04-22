@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for phpmyadmin:4.3.5
+
+'There is one referenced Helm Chart
+artifact "phpmyadmin:4.3.5\n====\n\tphpmyadmin\n====\n\t4.3.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: mariadb\nmysql\nphpmyadmin" as phpmyadmin_4_3_5 #LightCyan
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/phpmyadmin:5.0.1-debian-10-r30\n====\n\t5.0.1-debian-10-r30" as docker_io_bitnami_phpmyadmin_5_0_1_debian_10_r30 #BlanchedAlmond
+
+'Chart Dependencies
+phpmyadmin_4_3_5--[#orange]-|>docker_io_bitnami_phpmyadmin_5_0_1_debian_10_r30
+
+center footer Generated on 2020/04/21 20:34:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

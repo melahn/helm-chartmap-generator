@@ -1,0 +1,29 @@
+Chart Map for superset:1.1.10
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: superset:1.1.10
+	apiVersion: v1
+	appVersion: 0.35.2
+	created: Not specified
+	dependencies: None
+	description: Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application
+	digest: Not specified
+	icon: https://superset.incubator.apache.org/_images/s.png
+	keywords: bi
+	maintainers: marcussorealheis:marcuseagan@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: superset
+	sources: https://github.com/apache/incubator-superset
+	urls: Not specified
+	version: 1.1.10
+
+There is one referenced Docker Image
+------------------------------------
+Image: amancevice/superset:0.35.2
+
+Chart Dependencies
+------------------
+superset:1.1.10 uses amancevice/superset:0.35.2
+
+Generated on 2020/04/21 20:40:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

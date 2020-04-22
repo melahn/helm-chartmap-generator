@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for karma:1.5.0
+
+'There is one referenced Helm Chart
+artifact "karma:1.5.0\n====\n\tkarma\n====\n\t1.5.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: davidkarlsen, prymitive\n====\n\tKeywords: " as karma_1_5_0 #Aqua
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tlmierzwa/karma\n====\n\tv0.60" as lmierzwa_karma_v0_60 #Cyan
+
+'Chart Dependencies
+karma_1_5_0--[#orange]-|>lmierzwa_karma_v0_60
+
+center footer Generated on 2020/04/21 20:27:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

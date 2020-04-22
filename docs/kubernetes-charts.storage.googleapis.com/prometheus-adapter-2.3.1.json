@@ -1,0 +1,31 @@
+{
+  "maintainers": [
+    {
+      "name": "mattiasgees",
+      "email": "mattias.gees@jetstack.io"
+    },
+    {"name": "steven-sheehy"},
+    {
+      "name": "hectorj2f",
+      "email": "hfernandez@mesosphere.com"
+    }
+  ],
+  "keywords": [
+    "hpa",
+    "metrics",
+    "prometheus",
+    "adapter"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "directxman12/k8s-prometheus-adapter-amd64",
+    "type": "image",
+    "version": "v0.6.0"
+  }],
+  "name": "prometheus-adapter:2.3.1",
+  "description": "A Helm chart for k8s prometheus adapter",
+  "type": "chart",
+  "shortName": "prometheus-adapter",
+  "version": "2.3.1"
+}

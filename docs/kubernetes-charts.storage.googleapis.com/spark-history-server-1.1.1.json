@@ -1,0 +1,22 @@
+{
+  "maintainers": [{
+    "name": "yuchaoran2011",
+    "email": "yuchaoran2011@gmail.com"
+  }],
+  "keywords": [
+    "spark",
+    "history-server"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "lightbend/spark-history-server",
+    "type": "image",
+    "version": "2.4.0"
+  }],
+  "name": "spark-history-server:1.1.1",
+  "description": "A Helm chart for Spark History Server",
+  "type": "chart",
+  "shortName": "spark-history-server",
+  "version": "1.1.1"
+}

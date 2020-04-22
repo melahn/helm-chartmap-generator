@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for cert-manager:v0.6.6
+
+'There is one referenced Helm Chart
+artifact "cert-manager:v0.6.6\n====\n\tcert-manager\n====\n\tv0.6.6\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: munnerz\n====\n\tKeywords: cert-manager\nkube-lego\nletsencrypt\ntls" as cert_manager_v0_6_6 #Cornsilk
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2020/04/21 20:20:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

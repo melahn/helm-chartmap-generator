@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\ttelegraf\n====\n\t1.12-alpine" as te
 'Chart Dependencies
 telegraf_1_6_0--[#orange]-|>telegraf_1_12_alpine
 
-center footer Generated on 2020/03/16 17:31:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:40:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

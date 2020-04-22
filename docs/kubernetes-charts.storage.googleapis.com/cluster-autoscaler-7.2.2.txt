@@ -1,0 +1,27 @@
+Chart Map for cluster-autoscaler:7.2.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: cluster-autoscaler:7.2.2
+	apiVersion: v1
+	appVersion: 1.17.1
+	created: Not specified
+	dependencies: None
+	description: Scales worker nodes within autoscaling groups.
+	digest: Not specified
+	icon: https://github.com/kubernetes/kubernetes/blob/master/logo/logo.png
+	keywords: Not specified
+	maintainers: mgoodness:mgoodness@gmail.com,yurrriq:e.bailey@sportradar.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: cluster-autoscaler
+	sources: https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler,https://github.com/spotinst/kubernetes-autoscaler/tree/master/cluster-autoscaler
+	urls: Not specified
+	version: 7.2.2
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/04/21 20:20:53 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

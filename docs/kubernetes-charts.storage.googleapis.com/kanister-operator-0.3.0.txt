@@ -1,0 +1,29 @@
+Chart Map for kanister-operator:0.3.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: kanister-operator:0.3.0
+	apiVersion: v1
+	appVersion: 0.10.0
+	created: Not specified
+	dependencies: None
+	description: Kanister-operator Helm chart for Kubernetes
+	digest: Not specified
+	icon: https://kasten.io/assets/img/kanister-logo.png
+	keywords: Not specified
+	maintainers: depohmel:ilya@kasten.io,tdmanv:tom@kasten.io
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: kanister-operator
+	sources: Not specified
+	urls: Not specified
+	version: 0.3.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: kanisterio/controller:0.10.0
+
+Chart Dependencies
+------------------
+kanister-operator:0.3.0 uses kanisterio/controller:0.10.0
+
+Generated on 2020/04/21 20:27:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

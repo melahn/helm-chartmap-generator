@@ -17,5 +17,5 @@ usecase "Image\n====\n\tquay.io\n====\n\tgames_on_k8s/factorio:0.15.39\n====\n\t
 'Chart Dependencies
 factorio_0_4_0--[#orange]-|>quay_io_games_on_k8s_factorio_0_15_39
 
-center footer Generated on 2020/03/16 17:16:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:23:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for tensorflow-serving:1.1.0
+
+'There is one referenced Helm Chart
+artifact "tensorflow-serving:1.1.0\n====\n\ttensorflow-serving\n====\n\t1.1.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: cheyang\n====\n\tKeywords: " as tensorflow_serving_1_1_0 #DodgerBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tcheyang/tf-model-server\n====\n\t1.4" as cheyang_tf_model_server_1_4 #LavenderBlush
+
+'Chart Dependencies
+tensorflow_serving_1_1_0--[#orange]-|>cheyang_tf_model_server_1_4
+
+center footer Generated on 2020/04/21 20:40:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

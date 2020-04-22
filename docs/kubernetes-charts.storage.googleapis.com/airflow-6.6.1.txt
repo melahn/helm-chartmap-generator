@@ -1,0 +1,65 @@
+Chart Map for airflow:6.6.1
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: airflow:6.6.1
+	apiVersion: v1
+	appVersion: 1.10.4
+	created: Not specified
+	dependencies: postgresql:8.1.4, redis:10.3.4
+	description: Airflow is a platform to programmatically author, schedule and monitor workflows
+	digest: Not specified
+	icon: https://airflow.apache.org/_images/pin_large.png
+	keywords: workflow,dag
+	maintainers: gsemet:gaetan@xeberon.net
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: airflow
+	sources: https://airflow.apache.org/
+	urls: Not specified
+	version: 6.6.1
+Chart: redis:10.3.4
+	apiVersion: v1
+	appVersion: 5.0.7
+	created: 2020-01-24T04:28:27.641804318Z
+	dependencies: None
+	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: a0b2b42241fa16f89c7219360310a457b53783bae7b9dd75389edb16179c0f80
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://kubernetes-charts.storage.googleapis.com/redis-10.3.4.tgz
+	version: 10.3.4
+Chart: postgresql:8.1.4
+	apiVersion: v1
+	appVersion: 11.6.0
+	created: 2020-01-24T04:28:27.609303241Z
+	dependencies: None
+	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 8cc6e4fb98c8fad13843b5d095045326bbc8bb1e985466939a8c01a9044ea7bb
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql
+	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-8.1.4.tgz
+	version: 8.1.4
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: puckel/docker-airflow:1.10.4
+Image: docker.io/bitnami/redis:5.0.7-debian-9-r50
+Image: docker.io/bitnami/postgresql:11.6.0-debian-9-r48
+
+Chart Dependencies
+------------------
+airflow:6.6.1 depends on postgresql:8.1.4
+airflow:6.6.1 depends on redis:10.3.4
+airflow:6.6.1 uses puckel/docker-airflow:1.10.4
+redis:10.3.4 uses docker.io/bitnami/redis:5.0.7-debian-9-r50
+postgresql:8.1.4 uses docker.io/bitnami/postgresql:11.6.0-debian-9-r48
+
+Generated on 2020/04/21 20:19:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

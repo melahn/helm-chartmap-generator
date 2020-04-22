@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tcouchdb\n====\n\t2.3.1" as couchdb_2
 'Chart Dependencies
 couchdb_2_2_0--[#orange]-|>couchdb_2_3_1
 
-center footer Generated on 2020/03/16 17:14:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:21:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

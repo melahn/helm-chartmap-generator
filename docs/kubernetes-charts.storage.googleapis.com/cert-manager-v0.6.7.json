@@ -1,0 +1,14 @@
+{
+  "keywords": [
+    "cert-manager",
+    "kube-lego",
+    "letsencrypt",
+    "tls"
+  ],
+  "children": [],
+  "name": "cert-manager:v0.6.7",
+  "description": "A Helm chart for cert-manager",
+  "type": "chart",
+  "shortName": "cert-manager",
+  "version": "v0.6.7"
+}

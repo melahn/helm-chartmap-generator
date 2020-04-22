@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "mariadb",
+    "mysql",
+    "phpmyadmin"
+  ],
+  "children": [{
+    "repoHost": "docker.io",
+    "children": [],
+    "name": "bitnami/phpmyadmin",
+    "type": "image",
+    "version": "5.0.1-debian-10-r30"
+  }],
+  "name": "phpmyadmin:4.3.5",
+  "description": "DEPRECATED phpMyAdmin is an mysql administration frontend",
+  "type": "chart",
+  "shortName": "phpmyadmin",
+  "version": "4.3.5"
+}

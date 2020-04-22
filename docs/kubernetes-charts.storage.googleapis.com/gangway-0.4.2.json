@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "rk295",
+    "email": "robin@kearney.co.uk"
+  }],
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "heptio-images/gangway",
+    "type": "image",
+    "version": "v3.2.0"
+  }],
+  "name": "gangway:0.4.2",
+  "description": "An application that can be used to easily enable authentication flows via OIDC for a kubernetes cluster.",
+  "type": "chart",
+  "shortName": "gangway",
+  "version": "0.4.2"
+}

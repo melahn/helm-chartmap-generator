@@ -15,5 +15,5 @@ artifact "elastabot:1.1.0\n====\n\telastabot\n====\n\t1.1.0\n====\n\thttps://kub
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:15:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:22:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kuberos:0.2.0 uses negz/kuberos:ede4085
 
-Generated on 2020/03/16 17:21:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:29:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

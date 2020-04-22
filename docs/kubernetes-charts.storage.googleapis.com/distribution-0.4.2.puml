@@ -1,0 +1,27 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for distribution:0.4.2
+
+'There are 3 referenced Helm Charts
+artifact "redis:1.1.21\n====\n\tredis\n====\n\t1.1.21\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: bitnami-bot\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_1_1_21 #LightSeaGreen
+artifact "mongodb:2.0.5\n====\n\tmongodb\n====\n\t2.0.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mongodb\ndatabase\nnosql" as mongodb_2_0_5 #GreenYellow
+artifact "distribution:0.4.2\n====\n\tdistribution\n====\n\t0.4.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: distribution\njfrog" as distribution_0_4_2 #LawnGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tDocker Hub\n====\n\tbitnami/redis\n====\n\t4.0.9-r0" as bitnami_redis_4_0_9_r0 #Khaki
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mongodb:3.6.4\n====\n\t3.6.4" as docker_io_bitnami_mongodb_3_6_4 #Bisque
+
+'Chart Dependencies
+distribution_0_4_2--[#green]-|>mongodb_2_0_5
+distribution_0_4_2--[#green]-|>redis_1_1_21
+redis_1_1_21--[#orange]-|>bitnami_redis_4_0_9_r0
+mongodb_2_0_5--[#orange]-|>docker_io_bitnami_mongodb_3_6_4
+
+center footer Generated on 2020/04/21 20:22:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

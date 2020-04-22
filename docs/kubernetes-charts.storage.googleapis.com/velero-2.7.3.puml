@@ -15,5 +15,5 @@ artifact "velero:2.7.3\n====\n\tvelero\n====\n\t2.7.3\n====\n\thttps://kubernete
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:32:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:41:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

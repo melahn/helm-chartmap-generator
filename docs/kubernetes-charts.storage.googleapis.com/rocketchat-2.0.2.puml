@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for rocketchat:2.0.2
+
+'There are 2 referenced Helm Charts
+artifact "mongodb:7.1.1\n====\n\tmongodb\n====\n\t7.1.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mongodb\ndatabase\nnosql\ncluster\nreplicaset\nreplication" as mongodb_7_1_1 #GreenYellow
+artifact "rocketchat:2.0.2\n====\n\trocketchat\n====\n\t2.0.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: RocketChat, geekgonecrazy, pierreozoux, verwilst, srueg\n====\n\tKeywords: chat\ncommunication\nhttp\nweb\napplication\nnodejs\njavascript\nmeteor" as rocketchat_2_0_2 #Beige
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mongodb:4.0.12-debian-9-r5\n====\n\t4.0.12-debian-9-r5" as docker_io_bitnami_mongodb_4_0_12_debian_9_r5 #Bisque
+
+'Chart Dependencies
+rocketchat_2_0_2--[#green]-|>mongodb_7_1_1
+mongodb_7_1_1--[#orange]-|>docker_io_bitnami_mongodb_4_0_12_debian_9_r5
+
+center footer Generated on 2020/04/21 20:37:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

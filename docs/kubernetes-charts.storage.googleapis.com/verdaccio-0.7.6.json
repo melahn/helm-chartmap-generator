@@ -1,0 +1,22 @@
+{
+  "maintainers": [{
+    "name": "etiennetremel",
+    "email": "etienne.tremel@container-solutions.com"
+  }],
+  "keywords": [
+    "npm",
+    "nodejs"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "verdaccio/verdaccio",
+    "type": "image",
+    "version": "3.11.6"
+  }],
+  "name": "verdaccio:0.7.6",
+  "description": "A lightweight private npm proxy registry (sinopia fork)",
+  "type": "chart",
+  "shortName": "verdaccio",
+  "version": "0.7.6"
+}

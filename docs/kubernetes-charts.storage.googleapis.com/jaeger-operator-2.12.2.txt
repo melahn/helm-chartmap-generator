@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 jaeger-operator:2.12.2 uses jaegertracing/jaeger-operator:1.15.1
 
-Generated on 2020/03/16 17:19:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:27:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

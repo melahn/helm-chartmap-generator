@@ -15,5 +15,5 @@ artifact "fluentd-elasticsearch:2.0.6\n====\n\tfluentd-elasticsearch\n====\n\t2.
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:17:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:24:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

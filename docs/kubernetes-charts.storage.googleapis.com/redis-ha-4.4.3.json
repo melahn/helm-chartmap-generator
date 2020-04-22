@@ -1,0 +1,29 @@
+{
+  "maintainers": [
+    {
+      "name": "ssalaues",
+      "email": "salimsalaues@gmail.com"
+    },
+    {
+      "name": "dandydeveloper",
+      "email": "aaron.layfield@gmail.com"
+    }
+  ],
+  "keywords": [
+    "redis",
+    "keyvalue",
+    "database"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "redis",
+    "type": "image",
+    "version": "5.0.6-alpine"
+  }],
+  "name": "redis-ha:4.4.3",
+  "description": "Highly available Kubernetes implementation of Redis",
+  "type": "chart",
+  "shortName": "redis-ha",
+  "version": "4.4.3"
+}

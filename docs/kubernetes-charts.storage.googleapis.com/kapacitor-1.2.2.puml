@@ -15,5 +15,5 @@ artifact "kapacitor:1.2.2\n====\n\tkapacitor\n====\n\t1.2.2\n====\n\thttps://kub
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:20:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:27:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

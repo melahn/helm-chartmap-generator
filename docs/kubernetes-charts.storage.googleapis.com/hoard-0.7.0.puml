@@ -19,5 +19,5 @@ usecase "Image\n====\n\tquay.io\n====\n\tmonax/hoard:3.0.1\n====\n\t3.0.1" as qu
 hoard_0_7_0--[#orange]-|>quay_io_monax_hoard_3_0_1
 hoard_0_7_0--[#orange]-|>quay_io_monax_hoard_controller
 
-center footer Generated on 2020/03/16 17:19:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:26:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

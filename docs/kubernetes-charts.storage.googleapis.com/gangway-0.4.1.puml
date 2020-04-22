@@ -17,5 +17,5 @@ usecase "Image\n====\n\tgcr.io\n====\n\theptio-images/gangway:v3.2.0\n====\n\tv3
 'Chart Dependencies
 gangway_0_4_1--[#orange]-|>gcr_io_heptio_images_gangway_v3_2_0
 
-center footer Generated on 2020/03/16 17:17:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:24:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,33 @@
+{
+  "maintainers": [
+    {
+      "name": "desaintmartin",
+      "email": "cedric@desaintmartin.fr"
+    },
+    {
+      "name": "gianrubio",
+      "email": "gianrubio@gmail.com"
+    },
+    {
+      "name": "rsotnychenko",
+      "email": "me@sota.sh"
+    }
+  ],
+  "keywords": [
+    "prometheus",
+    "blackbox",
+    "monitoring"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prom/blackbox-exporter",
+    "type": "image",
+    "version": "v0.16.0"
+  }],
+  "name": "prometheus-blackbox-exporter:3.4.0",
+  "description": "Prometheus Blackbox Exporter",
+  "type": "chart",
+  "shortName": "prometheus-blackbox-exporter",
+  "version": "3.4.0"
+}

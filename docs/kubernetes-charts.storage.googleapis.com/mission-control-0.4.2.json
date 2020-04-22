@@ -1,0 +1,68 @@
+{
+  "maintainers": [
+    {
+      "name": "jainishshah17",
+      "email": "jainishs@jfrog.com"
+    },
+    {
+      "name": "eldada",
+      "email": "eldada@jfrog.com"
+    },
+    {
+      "name": "rimusz",
+      "email": "rimasm@jfrog.com"
+    }
+  ],
+  "keywords": [
+    "mission-control",
+    "jfrog"
+  ],
+  "children": [
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mongodb",
+        "database",
+        "nosql"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/mongodb",
+        "type": "image",
+        "version": "3.6.4"
+      }],
+      "name": "mongodb:2.0.5",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "type": "chart",
+      "shortName": "mongodb",
+      "version": "2.0.5"
+    },
+    {
+      "maintainers": [{
+        "name": "Christian Simon",
+        "email": "christian@jetstack.io"
+      }],
+      "children": [{
+        "repoHost": "docker.bintray.io",
+        "children": [],
+        "name": "elasticsearch/elasticsearch",
+        "type": "image",
+        "version": "6.1.1"
+      }],
+      "name": "elasticsearch:0.1.0",
+      "description": "Elasticsearch chart for Kubernetes",
+      "type": "chart",
+      "shortName": "elasticsearch",
+      "version": "0.1.0"
+    }
+  ],
+  "name": "mission-control:0.4.2",
+  "description": "A Helm chart for JFrog Mission Control",
+  "type": "chart",
+  "shortName": "mission-control",
+  "version": "0.4.2"
+}

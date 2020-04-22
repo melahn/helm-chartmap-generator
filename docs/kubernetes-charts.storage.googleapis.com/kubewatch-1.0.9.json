@@ -1,0 +1,21 @@
+{
+  "keywords": [
+    "kubernetes",
+    "slack",
+    "hipchat",
+    "mattermost",
+    "flock"
+  ],
+  "children": [{
+    "repoHost": "docker.io",
+    "children": [],
+    "name": "bitnami/kubewatch",
+    "type": "image",
+    "version": "0.0.4-debian-10-r29"
+  }],
+  "name": "kubewatch:1.0.9",
+  "description": "DEPRECATED Kubewatch notifies your slack rooms when changes to your cluster occur",
+  "type": "chart",
+  "shortName": "kubewatch",
+  "version": "1.0.9"
+}

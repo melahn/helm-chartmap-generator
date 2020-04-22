@@ -1,0 +1,29 @@
+{
+  "maintainers": [
+    {
+      "name": "billimek",
+      "email": "jeff@billimek.com"
+    },
+    {
+      "name": "runningman84",
+      "email": "phil@hellmi.de"
+    }
+  ],
+  "keywords": [
+    "home-assistant",
+    "hass",
+    "homeassistant"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "homeassistant/home-assistant",
+    "type": "image",
+    "version": "0.107.7"
+  }],
+  "name": "home-assistant:0.13.0",
+  "description": "Home Assistant",
+  "type": "chart",
+  "shortName": "home-assistant",
+  "version": "0.13.0"
+}

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-consul-exporter:0.1.4 uses prom/consul-exporter:v0.4.0
 
-Generated on 2020/03/16 17:27:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:35:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

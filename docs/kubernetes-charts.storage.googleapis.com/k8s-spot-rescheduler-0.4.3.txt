@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 k8s-spot-rescheduler:0.4.3 uses quay.io/pusher/k8s-spot-rescheduler:v0.2.0
 
-Generated on 2020/03/16 17:20:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:27:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

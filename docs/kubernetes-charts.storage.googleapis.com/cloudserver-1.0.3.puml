@@ -19,11 +19,11 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tmongo\n====\n\t3.6" as mongo_3_6 #Aq
 usecase "Image\n====\n\tDocker Hub\n====\n\tredis\n====\n\t4.0.11-stretch" as redis_4_0_11_stretch #LightSeaGreen
 
 'Chart Dependencies
-cloudserver_1_0_3--[#green]-|>redis_ha_3_0_0
 cloudserver_1_0_3--[#green]-|>mongodb_replicaset_3_6_4
+cloudserver_1_0_3--[#green]-|>redis_ha_3_0_0
 redis_ha_3_0_0--[#orange]-|>redis_4_0_11_stretch
 cloudserver_1_0_3--[#orange]-|>zenko_cloudserver_8_1_5
 mongodb_replicaset_3_6_4--[#orange]-|>mongo_3_6
 
-center footer Generated on 2020/03/16 17:13:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:20:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

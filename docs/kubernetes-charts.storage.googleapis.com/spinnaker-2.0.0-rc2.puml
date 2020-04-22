@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for spinnaker:2.0.0-rc2
+
+'There are 3 referenced Helm Charts
+artifact "spinnaker:2.0.0-rc2\n====\n\tspinnaker\n====\n\t2.0.0-rc2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: viglesiasce, ezimanyi, dwardu89, paulczar\n====\n\tKeywords: " as spinnaker_2_0_0_rc2 #AliceBlue
+artifact "redis:10.5.3\n====\n\tredis\n====\n\t10.5.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami, desaintmartin\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_10_5_3 #LightSeaGreen
+artifact "minio:5.0.9\n====\n\tminio\n====\n\t5.0.9\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Minio, Acaleph\n====\n\tKeywords: storage\nobject-storage\nS3" as minio_5_0_9 #Aqua
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\n\tgcr.io\n====\n\tspinnaker-marketplace/halyard:1.31.1\n====\n\t1.31.1" as gcr_io_spinnaker_marketplace_halyard_1_31_1 #LightCoral
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/redis:5.0.7-debian-10-r0\n====\n\t5.0.7-debian-10-r0" as docker_io_bitnami_redis_5_0_7_debian_10_r0 #Azure
+usecase "Image\n====\n\tDocker Hub\n====\n\tminio/minio\n====\n\tRELEASE.2020-01-03T19-12-21Z" as minio_minio_RELEASE_2020_01_03T19_12_21Z #IndianRed
+
+'Chart Dependencies
+spinnaker_2_0_0_rc2--[#green]-|>redis_10_5_3
+spinnaker_2_0_0_rc2--[#green]-|>minio_5_0_9
+spinnaker_2_0_0_rc2--[#orange]-|>gcr_io_spinnaker_marketplace_halyard_1_31_1
+redis_10_5_3--[#orange]-|>docker_io_bitnami_redis_5_0_7_debian_10_r0
+minio_5_0_9--[#orange]-|>minio_minio_RELEASE_2020_01_03T19_12_21Z
+
+center footer Generated on 2020/04/21 20:39:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

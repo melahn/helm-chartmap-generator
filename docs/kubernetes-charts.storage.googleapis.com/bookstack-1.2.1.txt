@@ -44,4 +44,4 @@ bookstack:1.2.1 depends on mariadb:4.4.0
 bookstack:1.2.1 uses solidnerd/bookstack:0.27.5
 mariadb:4.4.0 uses docker.io/bitnami/mariadb:10.1.35-debian-9
 
-Generated on 2020/03/16 17:13:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:20:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

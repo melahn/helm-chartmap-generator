@@ -15,5 +15,5 @@ artifact "sumokube:0.1.4\n====\n\tsumokube\n====\n\t0.1.4\n====\n\thttps://kuber
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:31:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:40:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

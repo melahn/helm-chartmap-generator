@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tcheyang/distributed-tf\n====\n\t1.6.
 'Chart Dependencies
 distributed_tensorflow_0_1_2--[#orange]-|>cheyang_distributed_tf_1_6_0
 
-center footer Generated on 2020/03/16 17:15:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:22:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

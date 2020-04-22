@@ -1,0 +1,27 @@
+Chart Map for elastalert:1.3.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: elastalert:1.3.0
+	apiVersion: v1
+	appVersion: 0.2.1
+	created: Not specified
+	dependencies: None
+	description: ElastAlert is a simple framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch.
+	digest: Not specified
+	icon: https://static-www.elastic.co/assets/blteb1c97719574938d/logo-elastic-elasticsearch-lt.svg
+	keywords: Not specified
+	maintainers: jertel:jertel@codesim.com,olemarkus:o.with@sportradar.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: elastalert
+	sources: https://github.com/jertel/elastalert-docker,https://github.com/Yelp/elastalert
+	urls: Not specified
+	version: 1.3.0
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/04/21 20:22:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

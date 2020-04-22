@@ -17,5 +17,5 @@ usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/dokuwiki:0.20180422.201901061
 'Chart Dependencies
 dokuwiki_6_0_10--[#orange]-|>docker_io_bitnami_dokuwiki_0_20180422_201901061035_debian_10_r28
 
-center footer Generated on 2020/03/16 17:15:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:22:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

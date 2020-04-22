@@ -7,14 +7,14 @@
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-server",
+      "name": "jfrog/xray-indexer",
       "type": "image",
       "version": "2.3.0"
     },
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-indexer",
+      "name": "jfrog/xray-server",
       "type": "image",
       "version": "2.3.0"
     },
@@ -31,6 +31,29 @@
       "name": "jfrog/xray-persist",
       "type": "image",
       "version": "2.3.0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mongodb",
+        "database",
+        "nosql"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/mongodb",
+        "type": "image",
+        "version": "3.6.3"
+      }],
+      "name": "mongodb:2.0.5",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "type": "chart",
+      "shortName": "mongodb",
+      "version": "2.0.5"
     },
     {
       "maintainers": [
@@ -55,29 +78,6 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "0.8.7"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "mongodb",
-        "database",
-        "nosql"
-      ],
-      "children": [{
-        "repoHost": "docker.io",
-        "children": [],
-        "name": "bitnami/mongodb",
-        "type": "image",
-        "version": "3.6.3"
-      }],
-      "name": "mongodb:2.0.5",
-      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
-      "type": "chart",
-      "shortName": "mongodb",
-      "version": "2.0.5"
     },
     {
       "maintainers": [{

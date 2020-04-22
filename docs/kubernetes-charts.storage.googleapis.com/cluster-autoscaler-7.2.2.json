@@ -1,0 +1,18 @@
+{
+  "maintainers": [
+    {
+      "name": "mgoodness",
+      "email": "mgoodness@gmail.com"
+    },
+    {
+      "name": "yurrriq",
+      "email": "e.bailey@sportradar.com"
+    }
+  ],
+  "children": [],
+  "name": "cluster-autoscaler:7.2.2",
+  "description": "Scales worker nodes within autoscaling groups.",
+  "type": "chart",
+  "shortName": "cluster-autoscaler",
+  "version": "7.2.2"
+}

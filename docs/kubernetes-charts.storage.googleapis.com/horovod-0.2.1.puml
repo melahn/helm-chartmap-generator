@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tuber/horovod\n====\n\t0.12.1-tf1.8.0
 'Chart Dependencies
 horovod_0_2_1--[#orange]-|>uber_horovod_0_12_1_tf1_8_0_py3_5
 
-center footer Generated on 2020/03/16 17:19:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:26:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

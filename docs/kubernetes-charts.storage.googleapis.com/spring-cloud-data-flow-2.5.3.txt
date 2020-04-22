@@ -64,4 +64,4 @@ spring-cloud-data-flow:2.5.3 uses springcloud/spring-cloud-skipper-server:2.2.2.
 mysql:1.1.0 uses mysql:5.7.14
 rabbitmq:0.6.16 uses bitnami/rabbitmq:3.7.2-r1
 
-Generated on 2020/03/16 17:30:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:39:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tneo4j\n====\n\t3.4.5-enterprise" as 
 'Chart Dependencies
 neo4j_1_2_2--[#orange]-|>neo4j_3_4_5_enterprise
 
-center footer Generated on 2020/03/16 17:24:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:32:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

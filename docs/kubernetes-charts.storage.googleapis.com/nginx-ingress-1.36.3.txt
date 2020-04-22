@@ -1,0 +1,31 @@
+Chart Map for nginx-ingress:1.36.3
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: nginx-ingress:1.36.3
+	apiVersion: v1
+	appVersion: 0.30.0
+	created: Not specified
+	dependencies: None
+	description: An nginx Ingress controller that uses ConfigMap to store the nginx configuration.
+	digest: Not specified
+	icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
+	keywords: ingress,nginx
+	maintainers: ChiefAlexander,taharah:Trevor.G.Wood@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: nginx-ingress
+	sources: https://github.com/kubernetes/ingress-nginx
+	urls: Not specified
+	version: 1.36.3
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: k8s.gcr.io/defaultbackend-amd64:1.5
+Image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.30.0
+
+Chart Dependencies
+------------------
+nginx-ingress:1.36.3 uses k8s.gcr.io/defaultbackend-amd64:1.5
+nginx-ingress:1.36.3 uses quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.30.0
+
+Generated on 2020/04/21 20:32:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -15,5 +15,5 @@ artifact "kiam:2.5.2\n====\n\tkiam\n====\n\t2.5.2\n====\n\thttps://kubernetes-ch
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:21:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:28:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

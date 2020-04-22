@@ -1,0 +1,63 @@
+Chart Map for mission-control:0.4.3
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: mission-control:0.4.3
+	apiVersion: v1
+	appVersion: 3.1.2
+	created: Not specified
+	dependencies: mongodb:2.0.5, elasticsearch:0.1.0
+	description: DEPRECATED A Helm chart for JFrog Mission Control
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/JFrogDev/artifactory-dcos/master/images/jfrog_med.png
+	keywords: mission-control,jfrog
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mission-control
+	sources: https://bintray.com/jfrog/product/mission-control/view,https://github.com/jfrog/charts
+	urls: Not specified
+	version: 0.4.3
+Chart: elasticsearch:0.1.0
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: 2016-10-18T22:41:06.733713214Z
+	dependencies: None
+	description: Elasticsearch chart for Kubernetes
+	digest: 1b27ab33eae1f99914e684dec5234ee816489edbb19f41f48b1d4bb9cfc64736
+	icon: Not specified
+	keywords: Not specified
+	maintainers: Christian Simon:christian@jetstack.io
+	repo url: https://kubernetes-charts-incubator.storage.googleapis.com
+	name: elasticsearch
+	sources: https://www.elastic.co/products/elasticsearch,https://github.com/jetstack/elasticsearch-pet
+	urls: http://storage.googleapis.com/kubernetes-charts-incubator/elasticsearch-0.1.0.tgz
+	version: 0.1.0
+Chart: mongodb:2.0.5
+	apiVersion: Not specified
+	appVersion: 3.6.4
+	created: 2018-05-20T20:56:49.599188376Z
+	dependencies: None
+	description: NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
+	digest: 6d77a80e5cf5a82c90e610bfeabc97ac053bad04f2f78809ef315498a4dcfbec
+	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+	keywords: mongodb,database,nosql
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mongodb
+	sources: https://github.com/bitnami/bitnami-docker-mongodb
+	urls: https://kubernetes-charts.storage.googleapis.com/mongodb-2.0.5.tgz
+	version: 2.0.5
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.bintray.io/elasticsearch/elasticsearch:6.1.1
+Image: docker.io/bitnami/mongodb:3.6.4
+
+Chart Dependencies
+------------------
+mission-control:0.4.3 depends on mongodb:2.0.5
+mission-control:0.4.3 depends on elasticsearch:0.1.0
+elasticsearch:0.1.0 uses docker.bintray.io/elasticsearch/elasticsearch:6.1.1
+mongodb:2.0.5 uses docker.io/bitnami/mongodb:3.6.4
+
+Generated on 2020/04/21 20:31:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -15,5 +15,5 @@ artifact "dmarc2logstash:1.1.0\n====\n\tdmarc2logstash\n====\n\t1.1.0\n====\n\th
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:15:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:22:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

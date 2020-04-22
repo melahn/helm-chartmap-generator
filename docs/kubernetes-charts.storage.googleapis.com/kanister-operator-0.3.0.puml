@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kanister-operator:0.3.0
+
+'There is one referenced Helm Chart
+artifact "kanister-operator:0.3.0\n====\n\tkanister-operator\n====\n\t0.3.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: depohmel, tdmanv\n====\n\tKeywords: " as kanister_operator_0_3_0 #LightSalmon
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tkanisterio/controller\n====\n\t0.10.0" as kanisterio_controller_0_10_0 #Cyan
+
+'Chart Dependencies
+kanister_operator_0_3_0--[#orange]-|>kanisterio_controller_0_10_0
+
+center footer Generated on 2020/04/21 20:27:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

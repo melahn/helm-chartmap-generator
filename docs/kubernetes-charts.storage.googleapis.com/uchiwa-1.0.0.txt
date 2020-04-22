@@ -62,4 +62,4 @@ redis:0.4.5 uses bitnami/redis:3.2.6-r2
 uchiwa:1.0.0 uses sstarcher/uchiwa:0.22
 sensu:0.1.2 uses sstarcher/sensu:0.28
 
-Generated on 2020/03/16 17:31:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:41:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

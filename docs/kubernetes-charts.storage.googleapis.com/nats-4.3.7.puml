@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for nats:4.3.7
+
+'There is one referenced Helm Chart
+artifact "nats:4.3.7\n====\n\tnats\n====\n\t4.3.7\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: nats\nmessaging\naddressing\ndiscovery" as nats_4_3_7 #AliceBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/nats:2.1.4-debian-10-r24\n====\n\t2.1.4-debian-10-r24" as docker_io_bitnami_nats_2_1_4_debian_10_r24 #Cornsilk
+
+'Chart Dependencies
+nats_4_3_7--[#orange]-|>docker_io_bitnami_nats_2_1_4_debian_10_r24
+
+center footer Generated on 2020/04/21 20:32:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

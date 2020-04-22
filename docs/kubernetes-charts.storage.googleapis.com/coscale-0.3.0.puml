@@ -15,5 +15,5 @@ artifact "coscale:0.3.0\n====\n\tcoscale\n====\n\t0.3.0\n====\n\thttps://kuberne
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:14:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:21:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

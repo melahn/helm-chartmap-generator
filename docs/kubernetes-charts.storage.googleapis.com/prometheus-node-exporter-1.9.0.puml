@@ -15,5 +15,5 @@ artifact "prometheus-node-exporter:1.9.0\n====\n\tprometheus-node-exporter\n====
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:27:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:36:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

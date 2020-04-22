@@ -1,0 +1,63 @@
+Chart Map for distribution:0.4.2
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: redis:1.1.21
+	apiVersion: Not specified
+	appVersion: 4.0.9
+	created: 2018-03-29T04:41:35.146866761Z
+	dependencies: None
+	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: 670ad28f8c8a19e5635466ab4b837353e03f38ae8df060f26f90d17fdc833d65
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: bitnami-bot:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://kubernetes-charts.storage.googleapis.com/redis-1.1.21.tgz
+	version: 1.1.21
+Chart: mongodb:2.0.5
+	apiVersion: Not specified
+	appVersion: 3.6.4
+	created: 2018-05-20T20:56:49.599188376Z
+	dependencies: None
+	description: NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
+	digest: 6d77a80e5cf5a82c90e610bfeabc97ac053bad04f2f78809ef315498a4dcfbec
+	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+	keywords: mongodb,database,nosql
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mongodb
+	sources: https://github.com/bitnami/bitnami-docker-mongodb
+	urls: https://kubernetes-charts.storage.googleapis.com/mongodb-2.0.5.tgz
+	version: 2.0.5
+Chart: distribution:0.4.2
+	apiVersion: v1
+	appVersion: 1.1.0
+	created: Not specified
+	dependencies: redis:1.1.21, mongodb:2.0.5
+	description: DEPRECATED A Helm chart for JFrog Distribution
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/JFrogDev/artifactory-dcos/master/images/jfrog_med.png
+	keywords: distribution,jfrog
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: distribution
+	sources: https://bintray.com/jfrog/product/distribution/view,https://github.com/JFrogDev
+	urls: Not specified
+	version: 0.4.2
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: bitnami/redis:4.0.9-r0
+Image: docker.io/bitnami/mongodb:3.6.4
+
+Chart Dependencies
+------------------
+distribution:0.4.2 depends on redis:1.1.21
+distribution:0.4.2 depends on mongodb:2.0.5
+redis:1.1.21 uses bitnami/redis:4.0.9-r0
+mongodb:2.0.5 uses docker.io/bitnami/mongodb:3.6.4
+
+Generated on 2020/04/21 20:22:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

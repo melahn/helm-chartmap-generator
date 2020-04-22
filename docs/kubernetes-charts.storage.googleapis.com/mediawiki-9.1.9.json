@@ -1,0 +1,40 @@
+{
+  "keywords": [
+    "mediawiki",
+    "wiki",
+    "http",
+    "web",
+    "application",
+    "php"
+  ],
+  "children": [{
+    "maintainers": [{
+      "name": "Bitnami",
+      "email": "containers@bitnami.com"
+    }],
+    "keywords": [
+      "mariadb",
+      "mysql",
+      "database",
+      "sql",
+      "prometheus"
+    ],
+    "children": [{
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/mariadb",
+      "type": "image",
+      "version": "10.3.22-debian-10-r17"
+    }],
+    "name": "mariadb:7.3.10",
+    "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
+    "type": "chart",
+    "shortName": "mariadb",
+    "version": "7.3.10"
+  }],
+  "name": "mediawiki:9.1.9",
+  "description": "DEPRECATED Extremely powerful, scalable software and a feature-rich wiki implementation that uses PHP to process and display data stored in a database.",
+  "type": "chart",
+  "shortName": "mediawiki",
+  "version": "9.1.9"
+}

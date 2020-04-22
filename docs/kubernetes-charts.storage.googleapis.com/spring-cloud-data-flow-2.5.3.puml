@@ -20,12 +20,12 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tspringcloud/spring-cloud-skipper-ser
 usecase "Image\n====\n\tDocker Hub\n====\n\tmysql\n====\n\t5.7.14" as mysql_5_7_14 #Aqua
 
 'Chart Dependencies
-spring_cloud_data_flow_2_5_3--[#green]-|>rabbitmq_0_6_16
 spring_cloud_data_flow_2_5_3--[#green]-|>mysql_1_1_0
+spring_cloud_data_flow_2_5_3--[#green]-|>rabbitmq_0_6_16
 spring_cloud_data_flow_2_5_3--[#orange]-|>springcloud_spring_cloud_dataflow_server_2_3_1_RELEASE
 spring_cloud_data_flow_2_5_3--[#orange]-|>springcloud_spring_cloud_skipper_server_2_2_2_RELEASE
 mysql_1_1_0--[#orange]-|>mysql_5_7_14
 rabbitmq_0_6_16--[#orange]-|>bitnami_rabbitmq_3_7_2_r1
 
-center footer Generated on 2020/03/16 17:30:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:39:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 janusgraph:0.2.1 uses gcr.io/cloud-solutions-images/janusgraph:v2
 
-Generated on 2020/03/16 17:19:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:27:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

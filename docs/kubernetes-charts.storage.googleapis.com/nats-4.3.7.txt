@@ -1,0 +1,29 @@
+Chart Map for nats:4.3.7
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: nats:4.3.7
+	apiVersion: v1
+	appVersion: 2.1.4
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED An open-source, cloud-native messaging system
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/nats/img/nats-stack-110x117.png
+	keywords: nats,messaging,addressing,discovery
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: nats
+	sources: https://github.com/bitnami/bitnami-docker-nats
+	urls: Not specified
+	version: 4.3.7
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/nats:2.1.4-debian-10-r24
+
+Chart Dependencies
+------------------
+nats:4.3.7 uses docker.io/bitnami/nats:2.1.4-debian-10-r24
+
+Generated on 2020/04/21 20:32:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

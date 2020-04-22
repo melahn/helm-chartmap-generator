@@ -1,0 +1,92 @@
+{
+  "maintainers": [
+    {
+      "name": "viglesiasce",
+      "email": "viglesias@google.com"
+    },
+    {
+      "name": "ezimanyi",
+      "email": "ezimanyi@google.com"
+    },
+    {
+      "name": "dwardu89",
+      "email": "hello@dwardu.com"
+    },
+    {
+      "name": "paulczar",
+      "email": "username.taken@gmail.com"
+    }
+  ],
+  "children": [
+    {
+      "repoHost": "gcr.io",
+      "children": [],
+      "name": "spinnaker-marketplace/halyard",
+      "type": "image",
+      "version": "1.32.0"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Minio",
+          "email": "dev@minio.io"
+        },
+        {
+          "name": "Acaleph",
+          "email": "hello@acale.ph"
+        }
+      ],
+      "keywords": [
+        "storage",
+        "object-storage",
+        "S3"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "minio/minio",
+        "type": "image",
+        "version": "RELEASE.2020-01-03T19-12-21Z"
+      }],
+      "name": "minio:5.0.9",
+      "description": "MinIO is a high performance data infrastructure for machine learning, analytics and application data workloads.",
+      "type": "chart",
+      "shortName": "minio",
+      "version": "5.0.9"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/redis",
+        "type": "image",
+        "version": "5.0.7-debian-10-r0"
+      }],
+      "name": "redis:10.5.3",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "10.5.3"
+    }
+  ],
+  "name": "spinnaker:2.0.0-rc3",
+  "description": "Open source, multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence.",
+  "type": "chart",
+  "shortName": "spinnaker",
+  "version": "2.0.0-rc3"
+}

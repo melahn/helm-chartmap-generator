@@ -1,0 +1,23 @@
+{
+  "maintainers": [{
+    "name": "jstriebel",
+    "email": "jonathan@scalableminds.com"
+  }],
+  "keywords": [
+    "kubernetes",
+    "monitoring",
+    "slack"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "willwill/kube-slack",
+    "type": "image",
+    "version": "v4.2.0"
+  }],
+  "name": "kube-slack:1.3.1",
+  "description": "Chart for kube-slack, a monitoring service for Kubernetes",
+  "type": "chart",
+  "shortName": "kube-slack",
+  "version": "1.3.1"
+}

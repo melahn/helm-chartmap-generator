@@ -17,5 +17,5 @@ usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/external-dns:0.7.0-debian-10-
 'Chart Dependencies
 external_dns_2_20_3--[#orange]-|>docker_io_bitnami_external_dns_0_7_0_debian_10_r0
 
-center footer Generated on 2020/03/16 17:16:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:23:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

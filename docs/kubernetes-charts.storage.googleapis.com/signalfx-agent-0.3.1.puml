@@ -15,5 +15,5 @@ artifact "signalfx-agent:0.3.1\n====\n\tsignalfx-agent\n====\n\t0.3.1\n====\n\th
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:29:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:38:50 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,12 @@
+{
+  "maintainers": [{
+    "name": "rowanruseler",
+    "email": "rowanruseler@gmail.com"
+  }],
+  "children": [],
+  "name": "pgadmin:1.2.2",
+  "description": "pgAdmin is a web based administration tool for PostgreSQL database",
+  "type": "chart",
+  "shortName": "pgadmin",
+  "version": "1.2.2"
+}

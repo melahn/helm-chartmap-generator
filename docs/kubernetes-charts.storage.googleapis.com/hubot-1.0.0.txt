@@ -45,4 +45,4 @@ redis:8.0.19 uses docker.io/bitnami/redis:5.0.5-debian-9-r36
 hubot:1.0.0 uses docker.io/bitnami/redis:5.0.5-debian-9-r36
 hubot:1.0.0 uses minddocdev/hubot:3.3.2
 
-Generated on 2020/03/16 17:19:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:26:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

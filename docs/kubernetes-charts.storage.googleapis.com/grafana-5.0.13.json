@@ -1,0 +1,28 @@
+{
+  "maintainers": [
+    {
+      "name": "zanhsieh",
+      "email": "zanhsieh@gmail.com"
+    },
+    {
+      "name": "rtluckie",
+      "email": "rluckie@cisco.com"
+    },
+    {
+      "name": "maorfr",
+      "email": "maor.friedman@redhat.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "grafana/grafana",
+    "type": "image",
+    "version": "6.7.1"
+  }],
+  "name": "grafana:5.0.13",
+  "description": "The leading tool for querying and visualizing time series and metrics.",
+  "type": "chart",
+  "shortName": "grafana",
+  "version": "5.0.13"
+}

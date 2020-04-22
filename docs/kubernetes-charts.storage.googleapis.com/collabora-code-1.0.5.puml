@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tcollabora/code\n====\n\t4.0.3.1" as 
 'Chart Dependencies
 collabora_code_1_0_5--[#orange]-|>collabora_code_4_0_3_1
 
-center footer Generated on 2020/03/16 17:14:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:21:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

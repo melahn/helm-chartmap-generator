@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for openvpn:4.2.1
+
+'There is one referenced Helm Chart
+artifact "openvpn:4.2.1\n====\n\topenvpn\n====\n\t4.2.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: jasongwartz, dippynark\n====\n\tKeywords: openvpn\nvpn\ntunnel\nnetwork\nservice\nconnectivity\nencryption" as openvpn_4_2_1 #GreenYellow
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tjfelten/openvpn-docker\n====\n\t1.1.0" as jfelten_openvpn_docker_1_1_0 #LightGray
+
+'Chart Dependencies
+openvpn_4_2_1--[#orange]-|>jfelten_openvpn_docker_1_1_0
+
+center footer Generated on 2020/04/21 20:33:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

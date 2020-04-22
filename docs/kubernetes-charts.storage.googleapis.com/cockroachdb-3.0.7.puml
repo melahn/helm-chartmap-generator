@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for cockroachdb:3.0.7
+
+'There is one referenced Helm Chart
+artifact "cockroachdb:3.0.7\n====\n\tcockroachdb\n====\n\t3.0.7\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: a-robinson, DuskEagle, joshimhoff, keith-mcclellan\n====\n\tKeywords: " as cockroachdb_3_0_7 #BlanchedAlmond
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tcockroachdb/cockroach\n====\n\tv19.2.5" as cockroachdb_cockroach_v19_2_5 #Beige
+
+'Chart Dependencies
+cockroachdb_3_0_7--[#orange]-|>cockroachdb_cockroach_v19_2_5
+
+center footer Generated on 2020/04/21 20:21:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -15,5 +15,5 @@ artifact "buildkite:0.2.4\n====\n\tbuildkite\n====\n\t0.2.4\n====\n\thttps://kub
 
 'Chart Dependencies
 
-center footer Generated on 2020/03/16 17:13:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:20:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tselenium/hub\n====\n\t3.141.59" as s
 'Chart Dependencies
 selenium_1_0_10--[#orange]-|>selenium_hub_3_141_59
 
-center footer Generated on 2020/03/16 17:29:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:38:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

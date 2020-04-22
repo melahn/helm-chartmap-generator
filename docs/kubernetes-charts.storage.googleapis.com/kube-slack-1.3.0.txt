@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kube-slack:1.3.0 uses willwill/kube-slack:v4.2.0
 
-Generated on 2020/03/16 17:21:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:28:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

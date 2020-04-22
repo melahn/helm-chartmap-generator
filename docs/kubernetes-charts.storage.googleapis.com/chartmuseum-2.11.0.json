@@ -1,0 +1,33 @@
+{
+  "maintainers": [
+    {
+      "name": "codefresh-io",
+      "email": "opensource@codefresh.io"
+    },
+    {
+      "name": "cloudposse",
+      "email": "hello@cloudposse.com"
+    },
+    {
+      "name": "chartmuseum",
+      "email": "chartmuseum@gmail.com"
+    }
+  ],
+  "keywords": [
+    "chartmuseum",
+    "helm",
+    "charts repo"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "chartmuseum/chartmuseum",
+    "type": "image",
+    "version": "v0.12.0"
+  }],
+  "name": "chartmuseum:2.11.0",
+  "description": "Host your own Helm Chart Repository",
+  "type": "chart",
+  "shortName": "chartmuseum",
+  "version": "2.11.0"
+}

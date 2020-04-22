@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tamancevice/superset\n====\n\t0.35.2"
 'Chart Dependencies
 superset_1_1_9--[#orange]-|>amancevice_superset_0_35_2
 
-center footer Generated on 2020/03/16 17:31:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:40:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

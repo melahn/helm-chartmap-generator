@@ -25,5 +25,5 @@ redis_0_4_5--[#orange]-|>bitnami_redis_3_2_6_r2
 uchiwa_1_0_0--[#orange]-|>sstarcher_uchiwa_0_22
 sensu_0_1_2--[#orange]-|>sstarcher_sensu_0_28
 
-center footer Generated on 2020/03/16 17:31:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:41:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

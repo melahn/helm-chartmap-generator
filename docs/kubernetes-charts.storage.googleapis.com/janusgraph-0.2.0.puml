@@ -17,5 +17,5 @@ usecase "Image\n====\n\tgcr.io\n====\n\tcloud-solutions-images/janusgraph:v2\n==
 'Chart Dependencies
 janusgraph_0_2_0--[#orange]-|>gcr_io_cloud_solutions_images_janusgraph_v2
 
-center footer Generated on 2020/03/16 17:20:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:27:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

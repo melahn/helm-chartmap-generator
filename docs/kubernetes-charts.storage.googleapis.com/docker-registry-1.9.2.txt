@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 docker-registry:1.9.2 uses registry:2.7.1
 
-Generated on 2020/03/16 17:15:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/21 20:22:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

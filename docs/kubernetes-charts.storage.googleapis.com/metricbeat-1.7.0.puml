@@ -17,5 +17,5 @@ usecase "Image\n====\n\tdocker.elastic.co\n====\n\tbeats/metricbeat:6.7.0\n====\
 'Chart Dependencies
 metricbeat_1_7_0--[#orange]-|>docker_elastic_co_beats_metricbeat_6_7_0
 
-center footer Generated on 2020/03/16 17:23:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:31:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

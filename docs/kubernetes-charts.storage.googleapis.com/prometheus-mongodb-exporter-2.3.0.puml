@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus-mongodb-exporter:2.3.0
+
+'There is one referenced Helm Chart
+artifact "prometheus-mongodb-exporter:2.3.0\n====\n\tprometheus-mongodb-exporter\n====\n\t2.3.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: steven-sheehy\n====\n\tKeywords: exporter\nmetrics\nmongodb\nprometheus" as prometheus_mongodb_exporter_2_3_0 #CornflowerBlue
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2020/04/21 20:35:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

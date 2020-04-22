@@ -17,5 +17,5 @@ usecase "Image\n====\n\tquay.io\n====\n\tinfluxdb/chronograf:1.7.12\n====\n\t1.7
 'Chart Dependencies
 chronograf_1_1_1--[#orange]-|>quay_io_influxdb_chronograf_1_7_12
 
-center footer Generated on 2020/03/16 17:13:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:20:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

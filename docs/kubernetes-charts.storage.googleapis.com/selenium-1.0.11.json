@@ -1,0 +1,29 @@
+{
+  "maintainers": [
+    {
+      "name": "flah00",
+      "email": "techops@adaptly.com"
+    },
+    {
+      "name": "diemol",
+      "email": "diemol@gmail.com"
+    },
+    {
+      "name": "ekirmayer",
+      "email": "ekirmayer@hotmail.com"
+    }
+  ],
+  "keywords": ["qa"],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "selenium/hub",
+    "type": "image",
+    "version": "3.141.59"
+  }],
+  "name": "selenium:1.0.11",
+  "description": "Chart for selenium grid",
+  "type": "chart",
+  "shortName": "selenium",
+  "version": "1.0.11"
+}

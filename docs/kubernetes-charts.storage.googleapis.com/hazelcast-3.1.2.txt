@@ -1,0 +1,31 @@
+Chart Map for hazelcast:3.1.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: hazelcast:3.1.2
+	apiVersion: v1
+	appVersion: 4.0
+	created: Not specified
+	dependencies: None
+	description: Hazelcast IMDG is the most widely used in-memory data grid with hundreds of thousands of installed clusters around the world. It offers caching solutions ensuring that data is in the right place when it’s needed for optimal performance.
+	digest: Not specified
+	icon: http://hazelcast.com/images/logos/Hazelcast-IMDG-Logo-Orange_Dark_Icon_200px.png
+	keywords: hazelcast,keyvalue,in-memory,database,caching
+	maintainers: leszko:rafal@hazelcast.com,hasancelik:hasan@hazelcast.com,mesutcelik:mesut@hazelcast.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: hazelcast
+	sources: https://github.com/hazelcast/hazelcast
+	urls: Not specified
+	version: 3.1.2
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: hazelcast/management-center:4.0
+Image: hazelcast/hazelcast:4.0
+
+Chart Dependencies
+------------------
+hazelcast:3.1.2 uses hazelcast/hazelcast:4.0
+hazelcast:3.1.2 uses hazelcast/management-center:4.0
+
+Generated on 2020/04/21 20:25:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

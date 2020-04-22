@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus-postgres-exporter:1.3.0
+
+'There is one referenced Helm Chart
+artifact "prometheus-postgres-exporter:1.3.0\n====\n\tprometheus-postgres-exporter\n====\n\t1.3.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: gianrubio\n====\n\tKeywords: postgresql\nprometheus\nexporter" as prometheus_postgres_exporter_1_3_0 #Gold
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\twrouesnel/postgres_exporter\n====\n\tv0.8.0" as wrouesnel_postgres_exporter_v0_8_0 #LightGreen
+
+'Chart Dependencies
+prometheus_postgres_exporter_1_3_0--[#orange]-|>wrouesnel_postgres_exporter_v0_8_0
+
+center footer Generated on 2020/04/21 20:36:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

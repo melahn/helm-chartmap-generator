@@ -1,0 +1,48 @@
+{
+  "keywords": [
+    "prestashop",
+    "e-commerce",
+    "http",
+    "web",
+    "php"
+  ],
+  "children": [{
+    "maintainers": [{
+      "name": "Bitnami",
+      "email": "containers@bitnami.com"
+    }],
+    "keywords": [
+      "mariadb",
+      "mysql",
+      "database",
+      "sql",
+      "prometheus"
+    ],
+    "children": [
+      {
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/mariadb",
+        "type": "image",
+        "version": "10.1.44-debian-10-r32"
+      },
+      {
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/mariadb",
+        "type": "image",
+        "version": "10.3.22-debian-10-r27"
+      }
+    ],
+    "name": "mariadb:7.3.12",
+    "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
+    "type": "chart",
+    "shortName": "mariadb",
+    "version": "7.3.12"
+  }],
+  "name": "prestashop:9.1.11",
+  "description": "DEPRECATED A popular open source ecommerce solution. Professional tools are easily accessible to increase online sales including instant guest checkout, abandoned cart reminders and automated Email marketing.",
+  "type": "chart",
+  "shortName": "prestashop",
+  "version": "9.1.11"
+}

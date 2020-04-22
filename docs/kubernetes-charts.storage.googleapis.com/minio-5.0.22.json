@@ -1,0 +1,29 @@
+{
+  "maintainers": [
+    {
+      "name": "Minio",
+      "email": "dev@minio.io"
+    },
+    {
+      "name": "Acaleph",
+      "email": "hello@acale.ph"
+    }
+  ],
+  "keywords": [
+    "storage",
+    "object-storage",
+    "S3"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "minio/minio",
+    "type": "image",
+    "version": "RELEASE.2020-03-25T07-03-04Z"
+  }],
+  "name": "minio:5.0.22",
+  "description": "MinIO is a high performance data infrastructure for machine learning, analytics and application data workloads.",
+  "type": "chart",
+  "shortName": "minio",
+  "version": "5.0.22"
+}

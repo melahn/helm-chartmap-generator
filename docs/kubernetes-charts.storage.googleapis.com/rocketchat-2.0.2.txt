@@ -1,0 +1,45 @@
+Chart Map for rocketchat:2.0.2
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: mongodb:7.1.1
+	apiVersion: v1
+	appVersion: 4.0.12
+	created: 2019-08-20T08:57:51.487014701Z
+	dependencies: None
+	description: NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
+	digest: 8d415df756f5f31a9891a200442de19ad1e76b2bc2c00bc5817dab772caa09cb
+	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+	keywords: mongodb,database,nosql,cluster,replicaset,replication
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: mongodb
+	sources: https://github.com/bitnami/bitnami-docker-mongodb
+	urls: https://kubernetes-charts.storage.googleapis.com/mongodb-7.1.1.tgz
+	version: 7.1.1
+Chart: rocketchat:2.0.2
+	apiVersion: v1
+	appVersion: 2.4.9
+	created: Not specified
+	dependencies: mongodb:7.1.1
+	description: Prepare to take off with the ultimate chat platform, experience the next level of team communications
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/RocketChat/Rocket.Chat.Artwork/master/Logos/icon.svg
+	keywords: chat,communication,http,web,application,nodejs,javascript,meteor
+	maintainers: RocketChat:buildmaster@rocket.chat,geekgonecrazy,pierreozoux,verwilst,srueg
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: rocketchat
+	sources: https://github.com/RocketChat/Docker.Official.Image/
+	urls: Not specified
+	version: 2.0.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mongodb:4.0.12-debian-9-r5
+
+Chart Dependencies
+------------------
+rocketchat:2.0.2 depends on mongodb:7.1.1
+mongodb:7.1.1 uses docker.io/bitnami/mongodb:4.0.12-debian-9-r5
+
+Generated on 2020/04/21 20:37:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

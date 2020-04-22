@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tkong-docker-kubernetes-ingress-contr
 'Chart Dependencies
 kong_0_36_5--[#orange]-|>kong_docker_kubernetes_ingress_controller_bintray_io_kong_ingress_controller_0_7_0
 
-center footer Generated on 2020/03/16 17:21:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/21 20:28:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
