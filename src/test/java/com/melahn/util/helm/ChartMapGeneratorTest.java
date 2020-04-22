@@ -14,7 +14,7 @@ public class ChartMapGeneratorTest {
     public void testHelp() {
         final String helpTextExpected = ChartMapGenerator.getHelp();
         try {
-            Process process = Runtime.getRuntime().exec("java -jar helm-chartmap-generator-1.0-SNAPSHOT.jar", null, new File("./resource/jar"));
+            Process process = Runtime.getRuntime().exec("java -jar helm-chartmap-generator-1.0.0.jar", null, new File("./resource/jar"));
             InputStream reader = process.getInputStream();
             byte[] b = new byte[helpTextExpected.length()];
             int i = 0;

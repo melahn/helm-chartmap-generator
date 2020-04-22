@@ -181,7 +181,7 @@ public class ChartMapGenerator {
      */
     public static String getHelp() {
         String help = "\nUsage:\n\n"
-                .concat("java -jar helm-chartmap-generator-1.0-SNAPSHOT.jar\n")
+                .concat("java -jar helm-chartmap-generator-1.0.0.jar\n")
                 .concat("\nFlags:\n")
                 .concat("\t-r\t<repo name>\t\tthe name of the local helm repo to use (required)\n")
                 .concat("\t-o\t<directory name>\tthe output directory to use (default <pwd>) (optional)\n")
