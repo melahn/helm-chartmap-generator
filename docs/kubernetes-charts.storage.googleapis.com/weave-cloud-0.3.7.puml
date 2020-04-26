@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tweaveworks/launcher-agent\n====\n\t1
 'Chart Dependencies
 weave_cloud_0_3_7--[#orange]-|>weaveworks_launcher_agent_1_4_0
 
-center footer Generated on 2020/04/21 20:42:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:03:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

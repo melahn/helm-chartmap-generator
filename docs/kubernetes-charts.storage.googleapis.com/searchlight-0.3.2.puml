@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tappscode/searchlight\n====\n\t5.0.0"
 'Chart Dependencies
 searchlight_0_3_2--[#orange]-|>appscode_searchlight_5_0_0
 
-center footer Generated on 2020/04/21 20:38:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:59:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

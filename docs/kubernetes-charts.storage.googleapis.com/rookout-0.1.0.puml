@@ -15,5 +15,5 @@ artifact "rookout:0.1.0\n====\n\trookout\n====\n\t0.1.0\n====\n\thttps://kuberne
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:37:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:59:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

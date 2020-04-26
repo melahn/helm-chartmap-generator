@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tk8s.gcr.io/cluster-autoscaler\n====\
 'Chart Dependencies
 aws_cluster_autoscaler_0_3_3--[#orange]-|>k8s_gcr_io_cluster_autoscaler_v0_6_1
 
-center footer Generated on 2020/04/21 20:19:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:41:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

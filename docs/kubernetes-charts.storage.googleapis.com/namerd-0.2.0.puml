@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tbuoyantio/namerd\n====\n\t0.9.1" as 
 'Chart Dependencies
 namerd_0_2_0--[#orange]-|>buoyantio_namerd_0_9_1
 
-center footer Generated on 2020/04/21 20:32:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:53:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -27,14 +27,14 @@
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "gocd/gocd-server",
+      "name": "gocd/gocd-agent-alpine-3.9",
       "type": "image",
       "version": "v20.2.0"
     },
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "gocd/gocd-agent-alpine-3.9",
+      "name": "gocd/gocd-server",
       "type": "image",
       "version": "v20.2.0"
     }

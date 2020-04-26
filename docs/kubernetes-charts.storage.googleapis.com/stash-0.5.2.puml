@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tappscode/stash\n====\n\t0.7.0-rc.1" 
 'Chart Dependencies
 stash_0_5_2--[#orange]-|>appscode_stash_0_7_0_rc_1
 
-center footer Generated on 2020/04/21 20:39:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:01:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

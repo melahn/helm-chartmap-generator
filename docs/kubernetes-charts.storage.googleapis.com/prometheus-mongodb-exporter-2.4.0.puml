@@ -15,5 +15,5 @@ artifact "prometheus-mongodb-exporter:2.4.0\n====\n\tprometheus-mongodb-exporter
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:35:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:57:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

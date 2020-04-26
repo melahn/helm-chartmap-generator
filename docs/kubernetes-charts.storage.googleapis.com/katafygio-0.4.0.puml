@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tbpineau/katafygio\n====\n\tv0.7.1" a
 'Chart Dependencies
 katafygio_0_4_0--[#orange]-|>bpineau_katafygio_v0_7_1
 
-center footer Generated on 2020/04/21 20:28:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:49:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

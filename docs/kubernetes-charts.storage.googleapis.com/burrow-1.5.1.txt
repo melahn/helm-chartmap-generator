@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 burrow:1.5.1 uses hyperledger/burrow:0.29.0
 
-Generated on 2020/04/21 20:20:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:42:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

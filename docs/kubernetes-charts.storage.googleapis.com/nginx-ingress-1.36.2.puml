@@ -19,5 +19,5 @@ usecase "Image\n====\n\tquay.io\n====\n\tkubernetes-ingress-controller/nginx-ing
 nginx_ingress_1_36_2--[#orange]-|>k8s_gcr_io_defaultbackend_amd64_1_5
 nginx_ingress_1_36_2--[#orange]-|>quay_io_kubernetes_ingress_controller_nginx_ingress_controller_0_30_0
 
-center footer Generated on 2020/04/21 20:32:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:54:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

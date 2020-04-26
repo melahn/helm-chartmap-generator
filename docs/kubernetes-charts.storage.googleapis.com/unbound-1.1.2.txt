@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 unbound:1.1.2 uses markbnj/unbound-docker:0.1.0
 
-Generated on 2020/04/21 20:41:27 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 14:02:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

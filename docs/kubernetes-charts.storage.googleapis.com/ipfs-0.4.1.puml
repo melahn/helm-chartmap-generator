@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tipfs/go-ipfs\n====\n\tv0.4.22" as ip
 'Chart Dependencies
 ipfs_0_4_1--[#orange]-|>ipfs_go_ipfs_v0_4_22
 
-center footer Generated on 2020/04/21 20:27:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:48:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

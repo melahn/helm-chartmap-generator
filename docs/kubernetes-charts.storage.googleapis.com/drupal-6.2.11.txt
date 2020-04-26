@@ -44,4 +44,4 @@ drupal:6.2.11 depends on mariadb:7.3.12
 mariadb:7.3.12 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r27
 drupal:6.2.11 uses docker.io/bitnami/drupal:8.8.3-debian-10-r1
 
-Generated on 2020/04/21 20:22:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:44:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

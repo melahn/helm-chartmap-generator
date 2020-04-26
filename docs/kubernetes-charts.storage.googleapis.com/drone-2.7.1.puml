@@ -15,5 +15,5 @@ artifact "drone:2.7.1\n====\n\tdrone\n====\n\t2.7.1\n====\n\thttps://kubernetes-
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:22:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:44:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

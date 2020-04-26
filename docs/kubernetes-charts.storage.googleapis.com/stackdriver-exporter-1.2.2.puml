@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tfrodenas/stackdriver-exporter\n====\
 'Chart Dependencies
 stackdriver_exporter_1_2_2--[#orange]-|>frodenas_stackdriver_exporter_v0_6_0
 
-center footer Generated on 2020/04/21 20:39:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:01:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

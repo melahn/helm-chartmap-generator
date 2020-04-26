@@ -28,4 +28,4 @@ Chart Dependencies
 nginx-ingress:1.36.3 uses k8s.gcr.io/defaultbackend-amd64:1.5
 nginx-ingress:1.36.3 uses quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.30.0
 
-Generated on 2020/04/21 20:32:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:54:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

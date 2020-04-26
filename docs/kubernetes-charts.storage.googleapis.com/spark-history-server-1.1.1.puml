@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tlightbend/spark-history-server\n====
 'Chart Dependencies
 spark_history_server_1_1_1--[#orange]-|>lightbend_spark_history_server_2_4_0
 
-center footer Generated on 2020/04/21 20:39:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:00:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

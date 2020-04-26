@@ -30,4 +30,4 @@ ethereum:1.0.0 uses ethereum/client-go:alltools-v1.7.3
 ethereum:1.0.0 uses ethereumex/eth-stats-dashboard:v0.0.1
 ethereum:1.0.0 uses ethereum/client-go:v1.7.3
 
-Generated on 2020/04/21 20:23:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:45:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

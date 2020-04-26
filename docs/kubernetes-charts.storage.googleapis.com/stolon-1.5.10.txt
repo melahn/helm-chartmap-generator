@@ -1,0 +1,27 @@
+Chart Map for stolon:1.5.10
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: stolon:1.5.10
+	apiVersion: v1
+	appVersion: 0.13.0
+	created: Not specified
+	dependencies: None
+	description: Stolon - PostgreSQL cloud native High Availability.
+	digest: Not specified
+	icon: https://i.imgur.com/tIW8sAW.png
+	keywords: Not specified
+	maintainers: rtluckie:rluckie@cisco.com,lwolf:ipaq.lw@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: stolon
+	sources: https://github.com/sorintlab/stolon,https://github.com/lwolf/stolon-chart
+	urls: Not specified
+	version: 1.5.10
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/04/26 14:01:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

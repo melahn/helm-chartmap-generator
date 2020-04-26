@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus-operator:8.13.1
+
+'There are 4 referenced Helm Charts
+artifact "prometheus-node-exporter:1.9.1\n====\n\tprometheus-node-exporter\n====\n\t1.9.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: gianrubio, vsliouniaev\n====\n\tKeywords: node-exporter\nprometheus\nexporter" as prometheus_node_exporter_1_9_1 #Coral
+artifact "kube-state-metrics:2.8.2\n====\n\tkube-state-metrics\n====\n\t2.8.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: fiunchinho, tariq1890, mrueg\n====\n\tKeywords: metric\nmonitoring\nprometheus\nkubernetes" as kube_state_metrics_2_8_2 #Gainsboro
+artifact "grafana:5.0.12\n====\n\tgrafana\n====\n\t5.0.12\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: zanhsieh, rtluckie, maorfr\n====\n\tKeywords: " as grafana_5_0_12 #Bisque
+artifact "prometheus-operator:8.13.1\n====\n\tprometheus-operator\n====\n\t8.13.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: vsliouniaev, bismarck, gianrubio\n====\n\tKeywords: operator\nprometheus" as prometheus_operator_8_13_1 #LightSteelBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\n\tquay.io\n====\n\tcoreos/prometheus-operator:v0.38.1\n====\n\tv0.38.1" as quay_io_coreos_prometheus_operator_v0_38_1 #AntiqueWhite
+usecase "Image\n====\n\tquay.io\n====\n\tcoreos/kube-state-metrics:v1.9.5\n====\n\tv1.9.5" as quay_io_coreos_kube_state_metrics_v1_9_5 #LightGrey
+
+'Chart Dependencies
+prometheus_operator_8_13_1--[#green]-|>grafana_5_0_12
+prometheus_operator_8_13_1--[#green]-|>kube_state_metrics_2_8_2
+prometheus_operator_8_13_1--[#green]-|>prometheus_node_exporter_1_9_1
+kube_state_metrics_2_8_2--[#orange]-|>quay_io_coreos_prometheus_operator_v0_38_1
+grafana_5_0_12--[#orange]-|>quay_io_coreos_kube_state_metrics_v1_9_5
+
+center footer Generated on 2020/04/26 13:57:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

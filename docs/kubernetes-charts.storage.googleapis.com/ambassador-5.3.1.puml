@@ -17,5 +17,5 @@ usecase "Image\n====\n\tquay.io\n====\n\tdatawire/ambassador:0.86.1\n====\n\t0.8
 'Chart Dependencies
 ambassador_5_3_1--[#orange]-|>quay_io_datawire_ambassador_0_86_1
 
-center footer Generated on 2020/04/21 20:19:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:40:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

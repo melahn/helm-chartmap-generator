@@ -25,5 +25,5 @@ prometheus_11_1_2--[#orange]-|>prom_pushgateway_v1_0_1
 prometheus_11_1_2--[#orange]-|>jimmidyson_configmap_reload_v0_3_0
 prometheus_11_1_2--[#orange]-|>prom_alertmanager_v0_20_0
 
-center footer Generated on 2020/04/21 20:35:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:56:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

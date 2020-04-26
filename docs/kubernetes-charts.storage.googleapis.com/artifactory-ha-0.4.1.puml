@@ -23,5 +23,5 @@ artifactory_ha_0_4_1--[#orange]-|>docker_bintray_io_jfrog_artifactory_pro_6_2_0
 artifactory_ha_0_4_1--[#orange]-|>docker_bintray_io_jfrog_nginx_artifactory_pro_6_2_0
 postgresql_0_8_7--[#orange]-|>postgres_9_6_2
 
-center footer Generated on 2020/04/21 20:19:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:41:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

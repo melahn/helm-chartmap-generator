@@ -62,4 +62,4 @@ cloudserver:1.0.4 uses zenko/cloudserver:8.1.5
 redis-ha:3.0.0 uses redis:4.0.11-stretch
 mongodb-replicaset:3.6.4 uses mongo:3.6
 
-Generated on 2020/04/21 20:20:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:42:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

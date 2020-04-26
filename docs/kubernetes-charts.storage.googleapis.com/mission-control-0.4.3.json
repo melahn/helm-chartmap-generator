@@ -6,24 +6,6 @@
   "children": [
     {
       "maintainers": [{
-        "name": "Christian Simon",
-        "email": "christian@jetstack.io"
-      }],
-      "children": [{
-        "repoHost": "docker.bintray.io",
-        "children": [],
-        "name": "elasticsearch/elasticsearch",
-        "type": "image",
-        "version": "6.1.1"
-      }],
-      "name": "elasticsearch:0.1.0",
-      "description": "Elasticsearch chart for Kubernetes",
-      "type": "chart",
-      "shortName": "elasticsearch",
-      "version": "0.1.0"
-    },
-    {
-      "maintainers": [{
         "name": "Bitnami",
         "email": "containers@bitnami.com"
       }],
@@ -44,6 +26,24 @@
       "type": "chart",
       "shortName": "mongodb",
       "version": "2.0.5"
+    },
+    {
+      "maintainers": [{
+        "name": "Christian Simon",
+        "email": "christian@jetstack.io"
+      }],
+      "children": [{
+        "repoHost": "docker.bintray.io",
+        "children": [],
+        "name": "elasticsearch/elasticsearch",
+        "type": "image",
+        "version": "6.1.1"
+      }],
+      "name": "elasticsearch:0.1.0",
+      "description": "Elasticsearch chart for Kubernetes",
+      "type": "chart",
+      "shortName": "elasticsearch",
+      "version": "0.1.0"
     }
   ],
   "name": "mission-control:0.4.3",

@@ -15,5 +15,5 @@ artifact "cluster-overprovisioner:0.2.6\n====\n\tcluster-overprovisioner\n====\n
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:21:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:42:50 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

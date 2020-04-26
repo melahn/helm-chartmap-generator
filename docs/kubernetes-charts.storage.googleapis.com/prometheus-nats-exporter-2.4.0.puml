@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tsynadia/prometheus-nats-exporter\n==
 'Chart Dependencies
 prometheus_nats_exporter_2_4_0--[#orange]-|>synadia_prometheus_nats_exporter_0_6_0
 
-center footer Generated on 2020/04/21 20:36:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:57:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

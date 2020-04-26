@@ -7,14 +7,14 @@
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-indexer",
+      "name": "jfrog/xray-server",
       "type": "image",
       "version": "2.3.0"
     },
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-server",
+      "name": "jfrog/xray-indexer",
       "type": "image",
       "version": "2.3.0"
     },
@@ -56,30 +56,6 @@
       "version": "2.0.5"
     },
     {
-      "maintainers": [
-        {"name": "swordbeta"},
-        {"name": "databus23"}
-      ],
-      "keywords": [
-        "postgresql",
-        "postgres",
-        "database",
-        "sql"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "postgres",
-        "type": "image",
-        "version": "9.6.2"
-      }],
-      "name": "postgresql:0.8.7",
-      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-      "type": "chart",
-      "shortName": "postgresql",
-      "version": "0.8.7"
-    },
-    {
       "maintainers": [{
         "name": "etiennetremel",
         "email": "etienne.tremel@container-solutions.com"
@@ -104,6 +80,30 @@
       "type": "chart",
       "shortName": "rabbitmq-ha",
       "version": "1.5.2"
+    },
+    {
+      "maintainers": [
+        {"name": "swordbeta"},
+        {"name": "databus23"}
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6.2"
+      }],
+      "name": "postgresql:0.8.7",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.8.7"
     }
   ],
   "name": "xray:0.4.2",

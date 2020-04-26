@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 seq:1.0.5 uses datalust/seq:5
 
-Generated on 2020/04/21 20:38:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 14:00:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

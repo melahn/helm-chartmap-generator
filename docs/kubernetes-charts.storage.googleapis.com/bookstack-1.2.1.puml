@@ -21,5 +21,5 @@ bookstack_1_2_1--[#green]-|>mariadb_4_4_0
 bookstack_1_2_1--[#orange]-|>solidnerd_bookstack_0_27_5
 mariadb_4_4_0--[#orange]-|>docker_io_bitnami_mariadb_10_1_35_debian_9
 
-center footer Generated on 2020/04/21 20:20:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:41:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

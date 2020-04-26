@@ -15,5 +15,5 @@ artifact "pgadmin:1.2.3\n====\n\tpgadmin\n====\n\t1.2.3\n====\n\thttps://kuberne
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:34:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:55:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\thyperledger/burrow\n====\n\t0.29.0" 
 'Chart Dependencies
 burrow_1_5_1--[#orange]-|>hyperledger_burrow_0_29_0
 
-center footer Generated on 2020/04/21 20:20:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:42:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

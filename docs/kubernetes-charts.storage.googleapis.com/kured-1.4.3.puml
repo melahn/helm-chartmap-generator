@@ -15,5 +15,5 @@ artifact "kured:1.4.3\n====\n\tkured\n====\n\t1.4.3\n====\n\thttps://kubernetes-
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:29:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:51:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,31 @@
+{
+  "maintainers": [
+    {
+      "name": "chrisingenhaag",
+      "email": "christian.ingenhaag@googlemail.com"
+    },
+    {
+      "name": "billimek",
+      "email": "jeff@billimek.com"
+    }
+  ],
+  "keywords": [
+    "nextcloud",
+    "storage",
+    "http",
+    "web",
+    "php"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "nextcloud",
+    "type": "image",
+    "version": "17.0.0-apache"
+  }],
+  "name": "nextcloud:1.9.3",
+  "description": "A file sharing server that puts the control and security of your own data back into your hands.",
+  "type": "chart",
+  "shortName": "nextcloud",
+  "version": "1.9.3"
+}

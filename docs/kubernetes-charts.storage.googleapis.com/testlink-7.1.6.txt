@@ -44,4 +44,4 @@ testlink:7.1.6 depends on mariadb:7.3.12
 mariadb:7.3.12 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r27
 testlink:7.1.6 uses docker.io/bitnami/testlink:1.9.20-debian-10-r19
 
-Generated on 2020/04/21 20:41:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 14:02:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

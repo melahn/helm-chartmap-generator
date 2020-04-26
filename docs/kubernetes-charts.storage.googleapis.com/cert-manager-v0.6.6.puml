@@ -15,5 +15,5 @@ artifact "cert-manager:v0.6.6\n====\n\tcert-manager\n====\n\tv0.6.6\n====\n\thtt
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:20:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:42:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

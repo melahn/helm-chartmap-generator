@@ -19,11 +19,11 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t9.6.2" as postgres
 usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/redis:4.0.14\n====\n\t4.0.14" as docker_io_bitnami_redis_4_0_14 #Azure
 
 'Chart Dependencies
-anchore_engine_1_5_2--[#green]-|>redis_6_4_5
 anchore_engine_1_5_2--[#green]-|>postgresql_1_0_0
+anchore_engine_1_5_2--[#green]-|>redis_6_4_5
 redis_6_4_5--[#orange]-|>docker_io_bitnami_redis_4_0_14
 anchore_engine_1_5_2--[#orange]-|>docker_io_anchore_anchore_engine_v0_7_0
 postgresql_1_0_0--[#orange]-|>postgres_9_6_2
 
-center footer Generated on 2020/04/21 20:19:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:41:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

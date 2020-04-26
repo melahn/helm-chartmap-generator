@@ -19,5 +19,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tbitnami/mariadb\n====\n\t10.1.23-r2"
 sugarcrm_1_0_7--[#green]-|>mariadb_0_7_0
 mariadb_0_7_0--[#orange]-|>bitnami_mariadb_10_1_23_r2
 
-center footer Generated on 2020/04/21 20:40:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:01:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 presto:0.1.1 uses bivas/presto:0.196
 
-Generated on 2020/04/21 20:35:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:56:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

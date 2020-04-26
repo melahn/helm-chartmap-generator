@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 percona-xtradb-cluster:1.0.3 uses percona/percona-xtradb-cluster:5.7.19
 
-Generated on 2020/04/21 20:34:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:55:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -27,5 +27,5 @@ spring_cloud_data_flow_2_5_3--[#orange]-|>springcloud_spring_cloud_skipper_serve
 mysql_1_1_0--[#orange]-|>mysql_5_7_14
 rabbitmq_0_6_16--[#orange]-|>bitnami_rabbitmq_3_7_2_r1
 
-center footer Generated on 2020/04/21 20:39:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:00:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

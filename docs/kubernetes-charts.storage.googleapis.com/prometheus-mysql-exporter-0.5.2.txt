@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-mysql-exporter:0.5.2 uses prom/mysqld-exporter:v0.11.0
 
-Generated on 2020/04/21 20:35:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:57:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

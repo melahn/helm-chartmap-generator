@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kanister-operator:0.2.3 uses kanisterio/controller:v0.2.0
 
-Generated on 2020/04/21 20:27:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:49:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

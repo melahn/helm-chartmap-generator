@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for nextcloud:1.9.3
+
+'There is one referenced Helm Chart
+artifact "nextcloud:1.9.3\n====\n\tnextcloud\n====\n\t1.9.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: chrisingenhaag, billimek\n====\n\tKeywords: nextcloud\nstorage\nhttp\nweb\nphp" as nextcloud_1_9_3 #GoldenRod
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tDocker Hub\n====\n\tnextcloud\n====\n\t17.0.0-apache" as nextcloud_17_0_0_apache #GoldenRod
+
+'Chart Dependencies
+nextcloud_1_9_3--[#orange]-|>nextcloud_17_0_0_apache
+
+center footer Generated on 2020/04/26 13:54:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -15,5 +15,5 @@ artifact "filebeat:4.0.0\n====\n\tfilebeat\n====\n\t4.0.0\n====\n\thttps://kuber
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:24:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:45:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

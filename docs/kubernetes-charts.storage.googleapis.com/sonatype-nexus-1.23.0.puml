@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tsonatype/nexus3\n====\n\t3.20.1" as 
 'Chart Dependencies
 sonatype_nexus_1_23_0--[#orange]-|>sonatype_nexus3_3_20_1
 
-center footer Generated on 2020/04/21 20:39:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:00:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

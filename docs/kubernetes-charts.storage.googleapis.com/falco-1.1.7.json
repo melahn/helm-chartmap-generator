@@ -1,0 +1,20 @@
+{
+  "maintainers": [{
+    "name": "nestorsalceda",
+    "email": "nestor.salceda@sysdig.com"
+  }],
+  "keywords": [
+    "monitoring",
+    "security",
+    "alerting",
+    "metric",
+    "troubleshooting",
+    "run-time"
+  ],
+  "children": [],
+  "name": "falco:1.1.7",
+  "description": "Falco",
+  "type": "chart",
+  "shortName": "falco",
+  "version": "1.1.7"
+}

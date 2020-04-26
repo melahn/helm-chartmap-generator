@@ -15,5 +15,5 @@ artifact "signalsciences:2.0.0\n====\n\tsignalsciences\n====\n\t2.0.0\n====\n\th
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:38:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:00:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

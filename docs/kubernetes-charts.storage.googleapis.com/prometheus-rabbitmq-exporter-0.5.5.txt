@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-rabbitmq-exporter:0.5.5 uses kbudde/rabbitmq-exporter:v0.29.0
 
-Generated on 2020/04/21 20:36:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:57:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

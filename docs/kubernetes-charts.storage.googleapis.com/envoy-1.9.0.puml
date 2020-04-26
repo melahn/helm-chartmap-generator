@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tenvoyproxy/envoy\n====\n\tv1.11.1" a
 'Chart Dependencies
 envoy_1_9_0--[#orange]-|>envoyproxy_envoy_v1_11_1
 
-center footer Generated on 2020/04/21 20:23:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:45:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

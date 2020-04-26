@@ -15,5 +15,5 @@ artifact "cluster-autoscaler:7.2.2\n====\n\tcluster-autoscaler\n====\n\t7.2.2\n=
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:20:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:42:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

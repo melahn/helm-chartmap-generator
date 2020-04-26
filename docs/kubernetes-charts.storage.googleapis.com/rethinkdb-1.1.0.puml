@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tcodylundquist/helm-rethinkdb-cluster
 'Chart Dependencies
 rethinkdb_1_1_0--[#orange]-|>codylundquist_helm_rethinkdb_cluster_0_1_0
 
-center footer Generated on 2020/04/21 20:37:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:58:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

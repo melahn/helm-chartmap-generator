@@ -15,5 +15,5 @@ artifact "ark:4.2.1\n====\n\tark\n====\n\t4.2.1\n====\n\thttps://kubernetes-char
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:19:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:41:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

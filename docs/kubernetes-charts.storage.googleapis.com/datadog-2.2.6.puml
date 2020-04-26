@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for datadog:2.2.6
+
+'There are 2 referenced Helm Charts
+artifact "kube-state-metrics:2.3.1\n====\n\tkube-state-metrics\n====\n\t2.3.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: fiunchinho, tariq1890\n====\n\tKeywords: metric\nmonitoring\nprometheus\nkubernetes" as kube_state_metrics_2_3_1 #Gainsboro
+artifact "datadog:2.2.6\n====\n\tdatadog\n====\n\t2.2.6\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: hkaj, irabinovitch, charlyf, mfpierre, clamoriniere, xlucas, L3n41c, celenechang\n====\n\tKeywords: monitoring\nalerting\nmetric" as datadog_2_2_6 #Khaki
+
+'There is one referenced Docker Image
+usecase "Image\n====\n\tquay.io\n====\n\tcoreos/kube-state-metrics:v1.7.2\n====\n\tv1.7.2" as quay_io_coreos_kube_state_metrics_v1_7_2 #LightGrey
+
+'Chart Dependencies
+datadog_2_2_6--[#green]-|>kube_state_metrics_2_3_1
+kube_state_metrics_2_3_1--[#orange]-|>quay_io_coreos_kube_state_metrics_v1_7_2
+
+center footer Generated on 2020/04/26 13:43:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

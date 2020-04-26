@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\ttomcat\n====\n\t7.0" as tomcat_7_0 #
 'Chart Dependencies
 tomcat_0_4_0--[#orange]-|>tomcat_7_0
 
-center footer Generated on 2020/04/21 20:41:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:02:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

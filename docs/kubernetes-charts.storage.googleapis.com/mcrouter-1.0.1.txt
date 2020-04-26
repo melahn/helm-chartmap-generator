@@ -42,4 +42,4 @@ Chart Dependencies
 mcrouter:1.0.1 depends on memcached:2.9.0
 memcached:2.9.0 uses memcached:1.5.12-alpine
 
-Generated on 2020/04/21 20:30:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:52:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

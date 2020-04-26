@@ -33,16 +33,16 @@
     {
       "repoHost": "quay.io",
       "children": [],
-      "name": "openebs/openebs-k8s-provisioner",
+      "name": "openebs/node-disk-operator-amd64",
       "type": "image",
-      "version": "1.9.0"
+      "version": "v0.4.9"
     },
     {
       "repoHost": "quay.io",
       "children": [],
-      "name": "openebs/node-disk-operator-amd64",
+      "name": "openebs/openebs-k8s-provisioner",
       "type": "image",
-      "version": "v0.4.9"
+      "version": "1.9.0"
     },
     {
       "repoHost": "quay.io",

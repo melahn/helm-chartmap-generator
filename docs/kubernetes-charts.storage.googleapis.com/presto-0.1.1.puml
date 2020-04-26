@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tbivas/presto\n====\n\t0.196" as biva
 'Chart Dependencies
 presto_0_1_1--[#orange]-|>bivas_presto_0_196
 
-center footer Generated on 2020/04/21 20:35:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:56:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

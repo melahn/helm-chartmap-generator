@@ -19,5 +19,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tjupyter/base-notebook\n====\n\t11be0
 dask_distributed_2_0_2--[#orange]-|>daskdev_dask_latest
 dask_distributed_2_0_2--[#orange]-|>jupyter_base_notebook_11be019e4079
 
-center footer Generated on 2020/04/21 20:21:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:43:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

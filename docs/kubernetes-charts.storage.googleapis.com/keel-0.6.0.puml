@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tkeelhq/keel\n====\n\t0.9.5" as keelh
 'Chart Dependencies
 keel_0_6_0--[#orange]-|>keelhq_keel_0_9_5
 
-center footer Generated on 2020/04/21 20:28:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:50:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

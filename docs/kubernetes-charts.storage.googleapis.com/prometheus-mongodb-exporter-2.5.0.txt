@@ -1,0 +1,27 @@
+Chart Map for prometheus-mongodb-exporter:2.5.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: prometheus-mongodb-exporter:2.5.0
+	apiVersion: v1
+	appVersion: v0.10.0
+	created: Not specified
+	dependencies: None
+	description: A Prometheus exporter for MongoDB metrics
+	digest: Not specified
+	icon: Not specified
+	keywords: exporter,metrics,mongodb,prometheus
+	maintainers: steven-sheehy:ssheehy@firescope.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: prometheus-mongodb-exporter
+	sources: https://github.com/percona/mongodb_exporter
+	urls: Not specified
+	version: 2.5.0
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2020/04/26 13:57:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

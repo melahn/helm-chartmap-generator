@@ -17,5 +17,5 @@ usecase "Image\n====\n\tgcr.io\n====\n\tgoogle_containers/metrics-server-amd64:v
 'Chart Dependencies
 metrics_server_2_11_0--[#orange]-|>gcr_io_google_containers_metrics_server_amd64_v0_3_6
 
-center footer Generated on 2020/04/21 20:31:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:52:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

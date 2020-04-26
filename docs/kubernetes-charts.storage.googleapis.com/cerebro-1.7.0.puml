@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tlmenezes/cerebro\n====\n\t0.8.5" as 
 'Chart Dependencies
 cerebro_1_7_0--[#orange]-|>lmenezes_cerebro_0_8_5
 
-center footer Generated on 2020/04/21 20:20:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:42:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

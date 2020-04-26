@@ -28,35 +28,6 @@
     {
       "maintainers": [
         {
-          "name": "Minio",
-          "email": "dev@minio.io"
-        },
-        {
-          "name": "Acaleph",
-          "email": "hello@acale.ph"
-        }
-      ],
-      "keywords": [
-        "storage",
-        "object-storage",
-        "S3"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "minio/minio",
-        "type": "image",
-        "version": "RELEASE.2020-01-03T19-12-21Z"
-      }],
-      "name": "minio:5.0.9",
-      "description": "MinIO is a high performance data infrastructure for machine learning, analytics and application data workloads.",
-      "type": "chart",
-      "shortName": "minio",
-      "version": "5.0.9"
-    },
-    {
-      "maintainers": [
-        {
           "name": "Bitnami",
           "email": "containers@bitnami.com"
         },
@@ -82,6 +53,35 @@
       "type": "chart",
       "shortName": "redis",
       "version": "10.5.3"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Minio",
+          "email": "dev@minio.io"
+        },
+        {
+          "name": "Acaleph",
+          "email": "hello@acale.ph"
+        }
+      ],
+      "keywords": [
+        "storage",
+        "object-storage",
+        "S3"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "minio/minio",
+        "type": "image",
+        "version": "RELEASE.2020-01-03T19-12-21Z"
+      }],
+      "name": "minio:5.0.9",
+      "description": "MinIO is a high performance data infrastructure for machine learning, analytics and application data workloads.",
+      "type": "chart",
+      "shortName": "minio",
+      "version": "5.0.9"
     }
   ],
   "name": "spinnaker:2.0.0-rc3",

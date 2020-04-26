@@ -1,0 +1,79 @@
+Chart Map for prometheus-operator:8.13.1
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: prometheus-node-exporter:1.9.1
+	apiVersion: v1
+	appVersion: 0.18.1
+	created: 2020-04-26T15:29:16.252757951Z
+	dependencies: None
+	description: A Helm chart for prometheus node-exporter
+	digest: 3793da5e2e09bc24540b33ee4b0a8329ae00969d0959343d6a19741e2e2bdac2
+	icon: Not specified
+	keywords: node-exporter,prometheus,exporter
+	maintainers: gianrubio:gianrubio@gmail.com,vsliouniaev
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: prometheus-node-exporter
+	sources: https://github.com/prometheus/node_exporter/
+	urls: https://kubernetes-charts.storage.googleapis.com/prometheus-node-exporter-1.9.1.tgz
+	version: 1.9.1
+Chart: kube-state-metrics:2.8.2
+	apiVersion: v1
+	appVersion: 1.9.5
+	created: 2020-04-24T16:00:52.31458702Z
+	dependencies: None
+	description: Install kube-state-metrics to generate and expose cluster-level metrics
+	digest: ad67470b86093a7ab9b573767690adc5d1572b5e413a3df73e463aaf0835c20d
+	icon: Not specified
+	keywords: metric,monitoring,prometheus,kubernetes
+	maintainers: fiunchinho:jose@armesto.net,tariq1890:tariq.ibrahim@mulesoft.com,mrueg:manuel@rueg.eu
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: kube-state-metrics
+	sources: https://github.com/kubernetes/kube-state-metrics/
+	urls: https://kubernetes-charts.storage.googleapis.com/kube-state-metrics-2.8.2.tgz
+	version: 2.8.2
+Chart: grafana:5.0.12
+	apiVersion: v1
+	appVersion: 6.7.1
+	created: 2020-04-16T23:59:50.337377101Z
+	dependencies: None
+	description: The leading tool for querying and visualizing time series and metrics.
+	digest: e4a8b8f1c429dcba078a7fbb42fb5dadae4569f1d9dafc36bf4a86680ec252bb
+	icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+	keywords: Not specified
+	maintainers: zanhsieh:zanhsieh@gmail.com,rtluckie:rluckie@cisco.com,maorfr:maor.friedman@redhat.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: grafana
+	sources: https://github.com/grafana/grafana
+	urls: https://kubernetes-charts.storage.googleapis.com/grafana-5.0.12.tgz
+	version: 5.0.12
+Chart: prometheus-operator:8.13.1
+	apiVersion: v1
+	appVersion: 0.38.1
+	created: Not specified
+	dependencies: grafana:5.0.12, prometheus-node-exporter:1.9.1, kube-state-metrics:2.8.2
+	description: Provides easy monitoring definitions for Kubernetes services, and deployment and management of Prometheus instances.
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+	keywords: operator,prometheus
+	maintainers: vsliouniaev,bismarck,gianrubio:gianrubio@gmail.com
+	repo url: https://kubernetes-charts.storage.googleapis.com
+	name: prometheus-operator
+	sources: https://github.com/coreos/kube-prometheus,https://github.com/coreos/prometheus-operator,https://coreos.com/operators/prometheus
+	urls: Not specified
+	version: 8.13.1
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: quay.io/coreos/prometheus-operator:v0.38.1
+Image: quay.io/coreos/kube-state-metrics:v1.9.5
+
+Chart Dependencies
+------------------
+prometheus-operator:8.13.1 depends on grafana:5.0.12
+prometheus-operator:8.13.1 depends on prometheus-node-exporter:1.9.1
+prometheus-operator:8.13.1 depends on kube-state-metrics:2.8.2
+kube-state-metrics:2.8.2 uses quay.io/coreos/prometheus-operator:v0.38.1
+grafana:5.0.12 uses quay.io/coreos/kube-state-metrics:v1.9.5
+
+Generated on 2020/04/26 13:57:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

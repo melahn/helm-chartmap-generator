@@ -6,29 +6,6 @@
   "children": [
     {
       "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "mongodb",
-        "database",
-        "nosql"
-      ],
-      "children": [{
-        "repoHost": "docker.io",
-        "children": [],
-        "name": "bitnami/mongodb",
-        "type": "image",
-        "version": "3.6.4"
-      }],
-      "name": "mongodb:2.0.5",
-      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
-      "type": "chart",
-      "shortName": "mongodb",
-      "version": "2.0.5"
-    },
-    {
-      "maintainers": [{
         "name": "bitnami-bot",
         "email": "containers@bitnami.com"
       }],
@@ -49,6 +26,29 @@
       "type": "chart",
       "shortName": "redis",
       "version": "1.1.21"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mongodb",
+        "database",
+        "nosql"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/mongodb",
+        "type": "image",
+        "version": "3.6.4"
+      }],
+      "name": "mongodb:2.0.5",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "type": "chart",
+      "shortName": "mongodb",
+      "version": "2.0.5"
     }
   ],
   "name": "distribution:0.4.2",

@@ -60,4 +60,4 @@ mission-control:0.4.3 depends on elasticsearch:0.1.0
 elasticsearch:0.1.0 uses docker.bintray.io/elasticsearch/elasticsearch:6.1.1
 mongodb:2.0.5 uses docker.io/bitnami/mongodb:3.6.4
 
-Generated on 2020/04/21 20:31:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:53:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

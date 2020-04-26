@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tstakater/reloader\n====\n\tv0.0.29" 
 'Chart Dependencies
 reloader_1_1_3--[#orange]-|>stakater_reloader_v0_0_29
 
-center footer Generated on 2020/04/21 20:37:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:58:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

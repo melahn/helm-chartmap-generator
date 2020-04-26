@@ -20,6 +20,30 @@
     {
       "maintainers": [
         {
+          "name": "unguiculus",
+          "email": "unguiculus@gmail.com"
+        },
+        {
+          "name": "steven-sheehy",
+          "email": "ssheehy@firescope.com"
+        }
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "mongo",
+        "type": "image",
+        "version": "3.6"
+      }],
+      "name": "mongodb-replicaset:3.11.2",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "type": "chart",
+      "shortName": "mongodb-replicaset",
+      "version": "3.11.2"
+    },
+    {
+      "maintainers": [
+        {
           "name": "simonswine",
           "email": "christian@jetstack.io"
         },
@@ -56,30 +80,6 @@
       "type": "chart",
       "shortName": "elasticsearch",
       "version": "1.32.2"
-    },
-    {
-      "maintainers": [
-        {
-          "name": "unguiculus",
-          "email": "unguiculus@gmail.com"
-        },
-        {
-          "name": "steven-sheehy",
-          "email": "ssheehy@firescope.com"
-        }
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "mongo",
-        "type": "image",
-        "version": "3.6"
-      }],
-      "name": "mongodb-replicaset:3.11.2",
-      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
-      "type": "chart",
-      "shortName": "mongodb-replicaset",
-      "version": "3.11.2"
     }
   ],
   "name": "graylog:1.6.1",

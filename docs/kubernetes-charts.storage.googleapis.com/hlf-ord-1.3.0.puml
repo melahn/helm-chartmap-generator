@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\thyperledger/fabric-orderer\n====\n\t
 'Chart Dependencies
 hlf_ord_1_3_0--[#orange]-|>hyperledger_fabric_orderer_1_4_3
 
-center footer Generated on 2020/04/21 20:26:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:48:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 spark-history-server:1.1.1 uses lightbend/spark-history-server:2.4.0
 
-Generated on 2020/04/21 20:39:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 14:00:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -15,5 +15,5 @@ artifact "weave-scope:1.1.9\n====\n\tweave-scope\n====\n\t1.1.9\n====\n\thttps:/
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:42:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:03:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tpercona\n====\n\t5.7.17" as percona_
 'Chart Dependencies
 percona_1_2_0--[#orange]-|>percona_5_7_17
 
-center footer Generated on 2020/04/21 20:34:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:55:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kube2iam:2.3.0
+
+'There is one referenced Helm Chart
+artifact "kube2iam:2.3.0\n====\n\tkube2iam\n====\n\t2.3.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: jmcarp, icereval, mgoodness\n====\n\tKeywords: kube2iam\naws\niam\nsecurity" as kube2iam_2_3_0 #Gold
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2020/04/26 13:50:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

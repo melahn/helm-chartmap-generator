@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tzenko/zenko-cosbench\n====\n\t0.0.6"
 'Chart Dependencies
 cosbench_1_0_0--[#orange]-|>zenko_zenko_cosbench_0_0_6
 
-center footer Generated on 2020/04/21 20:21:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:43:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

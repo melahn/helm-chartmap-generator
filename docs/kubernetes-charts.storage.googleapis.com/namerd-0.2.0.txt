@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 namerd:0.2.0 uses buoyantio/namerd:0.9.1
 
-Generated on 2020/04/21 20:32:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:53:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

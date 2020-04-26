@@ -1,0 +1,12 @@
+{
+  "maintainers": [{
+    "name": "jertel",
+    "email": "jertel@codesim.com"
+  }],
+  "children": [],
+  "name": "dmarc2logstash:1.3.0",
+  "description": "Provides a POP3-polled DMARC XML report injector into Elasticsearch via Logstash and Filebeat",
+  "type": "chart",
+  "shortName": "dmarc2logstash",
+  "version": "1.3.0"
+}

@@ -1,0 +1,76 @@
+{
+  "maintainers": [
+    {
+      "name": "hkaj",
+      "email": "haissam@datadoghq.com"
+    },
+    {
+      "name": "irabinovitch",
+      "email": "ilan@datadoghq.com"
+    },
+    {
+      "name": "charlyf",
+      "email": "charly@datadoghq.com"
+    },
+    {
+      "name": "mfpierre",
+      "email": "pierre.margueritte@datadoghq.com"
+    },
+    {
+      "name": "clamoriniere",
+      "email": "cedric.lamoriniere@datadoghq.com"
+    },
+    {
+      "name": "xlucas",
+      "email": "xavier.lucas@datadoghq.com"
+    },
+    {
+      "name": "L3n41c",
+      "email": "lenaic.huard@datadoghq.com"
+    },
+    {
+      "name": "celenechang",
+      "email": "celene@datadoghq.com"
+    }
+  ],
+  "keywords": [
+    "monitoring",
+    "alerting",
+    "metric"
+  ],
+  "children": [{
+    "maintainers": [
+      {
+        "name": "fiunchinho",
+        "email": "jose@armesto.net"
+      },
+      {
+        "name": "tariq1890",
+        "email": "tariq.ibrahim@mulesoft.com"
+      }
+    ],
+    "keywords": [
+      "metric",
+      "monitoring",
+      "prometheus",
+      "kubernetes"
+    ],
+    "children": [{
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "coreos/kube-state-metrics",
+      "type": "image",
+      "version": "v1.7.2"
+    }],
+    "name": "kube-state-metrics:2.3.1",
+    "description": "Install kube-state-metrics to generate and expose cluster-level metrics",
+    "type": "chart",
+    "shortName": "kube-state-metrics",
+    "version": "2.3.1"
+  }],
+  "name": "datadog:2.2.7",
+  "description": "Datadog Agent",
+  "type": "chart",
+  "shortName": "datadog",
+  "version": "2.2.7"
+}

@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tjacobalberty/unifi\n====\n\t5.12.35"
 'Chart Dependencies
 unifi_0_6_5--[#orange]-|>jacobalberty_unifi_5_12_35
 
-center footer Generated on 2020/04/21 20:41:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:02:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

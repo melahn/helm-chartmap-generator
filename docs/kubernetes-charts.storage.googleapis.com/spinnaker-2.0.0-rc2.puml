@@ -25,5 +25,5 @@ spinnaker_2_0_0_rc2--[#orange]-|>gcr_io_spinnaker_marketplace_halyard_1_31_1
 redis_10_5_3--[#orange]-|>docker_io_bitnami_redis_5_0_7_debian_10_r0
 minio_5_0_9--[#orange]-|>minio_minio_RELEASE_2020_01_03T19_12_21Z
 
-center footer Generated on 2020/04/21 20:39:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:00:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

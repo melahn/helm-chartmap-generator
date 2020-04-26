@@ -15,5 +15,5 @@ artifact "stolon:1.5.9\n====\n\tstolon\n====\n\t1.5.9\n====\n\thttps://kubernete
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:40:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:01:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

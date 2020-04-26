@@ -19,5 +19,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tcouchbase/operator\n====\n\t1.2.1" a
 couchbase_operator_1_0_1--[#orange]-|>couchbase_operator_1_2_1
 couchbase_operator_1_0_1--[#orange]-|>couchbase_admission_controller_1_2_1
 
-center footer Generated on 2020/04/21 20:21:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:43:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

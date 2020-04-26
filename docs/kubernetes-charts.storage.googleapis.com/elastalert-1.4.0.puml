@@ -15,5 +15,5 @@ artifact "elastalert:1.4.0\n====\n\telastalert\n====\n\t1.4.0\n====\n\thttps://k
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:22:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:44:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

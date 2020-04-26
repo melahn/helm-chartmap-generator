@@ -60,4 +60,4 @@ distribution:0.4.2 depends on mongodb:2.0.5
 redis:1.1.21 uses bitnami/redis:4.0.9-r0
 mongodb:2.0.5 uses docker.io/bitnami/mongodb:3.6.4
 
-Generated on 2020/04/21 20:22:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:44:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-redis-exporter:3.4.0 uses oliver006/redis_exporter:v1.3.4
 
-Generated on 2020/04/21 20:36:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:58:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

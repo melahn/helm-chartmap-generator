@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 metricbeat:1.7.0 uses docker.elastic.co/beats/metricbeat:6.7.0
 
-Generated on 2020/04/21 20:31:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:52:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

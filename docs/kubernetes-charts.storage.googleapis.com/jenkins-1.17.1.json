@@ -1,0 +1,36 @@
+{
+  "maintainers": [
+    {
+      "name": "lachie83",
+      "email": "lachlan.evenson@microsoft.com"
+    },
+    {
+      "name": "viglesiasce",
+      "email": "viglesias@google.com"
+    },
+    {
+      "name": "maorfr",
+      "email": "maor.friedman@redhat.com"
+    },
+    {
+      "name": "torstenwalter",
+      "email": "mail@torstenwalter.de"
+    },
+    {
+      "name": "mogaal",
+      "email": "garridomota@gmail.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "jenkins/jenkins",
+    "type": "image",
+    "version": "lts"
+  }],
+  "name": "jenkins:1.17.1",
+  "description": "Open source continuous integration server. It supports multiple SCM tools including CVS, Subversion and Git. It can execute Apache Ant and Apache Maven-based projects as well as arbitrary scripts.",
+  "type": "chart",
+  "shortName": "jenkins",
+  "version": "1.17.1"
+}

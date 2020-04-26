@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tdirectxman12/k8s-prometheus-adapter-
 'Chart Dependencies
 prometheus_adapter_2_3_1--[#orange]-|>directxman12_k8s_prometheus_adapter_amd64_v0_6_0
 
-center footer Generated on 2020/04/21 20:35:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:56:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

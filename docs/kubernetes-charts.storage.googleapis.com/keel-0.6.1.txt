@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 keel:0.6.1 uses keelhq/keel:0.9.5
 
-Generated on 2020/04/21 20:28:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:49:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

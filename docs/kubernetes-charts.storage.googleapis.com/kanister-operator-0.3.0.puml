@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tkanisterio/controller\n====\n\t0.10.
 'Chart Dependencies
 kanister_operator_0_3_0--[#orange]-|>kanisterio_controller_0_10_0
 
-center footer Generated on 2020/04/21 20:27:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:49:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

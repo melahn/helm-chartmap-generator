@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-postgres-exporter:1.2.0 uses wrouesnel/postgres_exporter:v0.8.0
 
-Generated on 2020/04/21 20:36:27 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:57:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

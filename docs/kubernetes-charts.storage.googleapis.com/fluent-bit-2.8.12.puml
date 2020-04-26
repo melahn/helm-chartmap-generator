@@ -15,5 +15,5 @@ artifact "fluent-bit:2.8.12\n====\n\tfluent-bit\n====\n\t2.8.12\n====\n\thttps:/
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:24:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:46:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

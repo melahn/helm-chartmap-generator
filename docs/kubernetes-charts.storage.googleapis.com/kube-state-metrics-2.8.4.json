@@ -1,0 +1,34 @@
+{
+  "maintainers": [
+    {
+      "name": "fiunchinho",
+      "email": "jose@armesto.net"
+    },
+    {
+      "name": "tariq1890",
+      "email": "tariq.ibrahim@mulesoft.com"
+    },
+    {
+      "name": "mrueg",
+      "email": "manuel@rueg.eu"
+    }
+  ],
+  "keywords": [
+    "metric",
+    "monitoring",
+    "prometheus",
+    "kubernetes"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "coreos/kube-state-metrics",
+    "type": "image",
+    "version": "v1.9.5"
+  }],
+  "name": "kube-state-metrics:2.8.4",
+  "description": "Install kube-state-metrics to generate and expose cluster-level metrics",
+  "type": "chart",
+  "shortName": "kube-state-metrics",
+  "version": "2.8.4"
+}

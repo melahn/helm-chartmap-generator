@@ -15,5 +15,5 @@ artifact "instana-agent:1.0.27\n====\n\tinstana-agent\n====\n\t1.0.27\n====\n\th
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:26:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:48:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

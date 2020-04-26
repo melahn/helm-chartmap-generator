@@ -15,5 +15,5 @@ artifact "falco:1.1.6\n====\n\tfalco\n====\n\t1.1.6\n====\n\thttps://kubernetes-
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:23:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:45:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

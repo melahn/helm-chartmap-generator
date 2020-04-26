@@ -15,5 +15,5 @@ artifact "logdna-agent:1.2.0\n====\n\tlogdna-agent\n====\n\t1.2.0\n====\n\thttps
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:29:50 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:51:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

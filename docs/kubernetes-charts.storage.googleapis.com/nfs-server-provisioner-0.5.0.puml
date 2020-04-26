@@ -17,5 +17,5 @@ usecase "Image\n====\n\tquay.io\n====\n\tkubernetes_incubator/nfs-provisioner:v2
 'Chart Dependencies
 nfs_server_provisioner_0_5_0--[#orange]-|>quay_io_kubernetes_incubator_nfs_provisioner_v2_3_0
 
-center footer Generated on 2020/04/21 20:32:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:54:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

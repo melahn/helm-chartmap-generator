@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tmetallb/controller\n====\n\tv0.8.1" 
 'Chart Dependencies
 metallb_0_11_2--[#orange]-|>metallb_controller_v0_8_1
 
-center footer Generated on 2020/04/21 20:31:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:52:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

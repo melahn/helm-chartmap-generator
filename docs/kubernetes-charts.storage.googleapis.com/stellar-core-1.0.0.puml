@@ -21,5 +21,5 @@ stellar_core_1_0_0--[#green]-|>postgresql_0_19_0
 stellar_core_1_0_0--[#orange]-|>satoshipay_stellar_core_10_0_0_2
 postgresql_0_19_0--[#orange]-|>postgres_9_6_2
 
-center footer Generated on 2020/04/21 20:40:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 14:01:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

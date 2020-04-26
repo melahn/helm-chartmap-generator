@@ -15,5 +15,5 @@ artifact "newrelic-infrastructure:0.13.30\n====\n\tnewrelic-infrastructure\n====
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:32:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:54:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

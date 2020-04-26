@@ -62,4 +62,4 @@ redis:6.4.5 uses docker.io/bitnami/redis:4.0.14
 postgresql:1.0.0 uses postgres:9.6.2
 anchore-engine:1.5.1 uses docker.io/anchore/anchore-engine:v0.7.0
 
-Generated on 2020/04/21 20:19:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:41:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

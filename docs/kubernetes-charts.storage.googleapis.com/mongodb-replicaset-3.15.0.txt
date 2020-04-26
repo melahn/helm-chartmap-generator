@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 mongodb-replicaset:3.15.0 uses mongo:3.6
 
-Generated on 2020/04/21 20:31:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:53:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

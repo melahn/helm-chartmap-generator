@@ -17,5 +17,5 @@ usecase "Image\n====\n\tdocker.io\n====\n\tanapsix/satisfy@sha256:fae78e3809e9d0
 'Chart Dependencies
 satisfy_0_1_2--[#orange]-|>docker_io_anapsix_satisfy@sha256_fae78e3809e9d08990c7d7d6699a734f7e584c28ce49381a1a699e1694481ab8
 
-center footer Generated on 2020/04/21 20:38:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:59:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

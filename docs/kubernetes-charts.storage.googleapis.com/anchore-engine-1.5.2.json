@@ -28,6 +28,26 @@
       "version": "v0.7.0"
     },
     {
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6.2"
+      }],
+      "name": "postgresql:1.0.0",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "1.0.0"
+    },
+    {
       "maintainers": [
         {
           "name": "Bitnami",
@@ -55,26 +75,6 @@
       "type": "chart",
       "shortName": "redis",
       "version": "6.4.5"
-    },
-    {
-      "keywords": [
-        "postgresql",
-        "postgres",
-        "database",
-        "sql"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "postgres",
-        "type": "image",
-        "version": "9.6.2"
-      }],
-      "name": "postgresql:1.0.0",
-      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-      "type": "chart",
-      "shortName": "postgresql",
-      "version": "1.0.0"
     }
   ],
   "name": "anchore-engine:1.5.2",

@@ -17,5 +17,5 @@ usecase "Image\n====\n\tgcr.io\n====\n\tkubernetes-helm/tiller:v2.8.1\n====\n\tv
 'Chart Dependencies
 magic_namespace_0_5_2--[#orange]-|>gcr_io_kubernetes_helm_tiller_v2_8_1
 
-center footer Generated on 2020/04/21 20:30:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:52:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

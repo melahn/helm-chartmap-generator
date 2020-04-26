@@ -15,5 +15,5 @@ artifact "goldpinger:2.0.1\n====\n\tgoldpinger\n====\n\t2.0.1\n====\n\thttps://k
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:25:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:47:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -15,5 +15,5 @@ artifact "kube2iam:2.2.0\n====\n\tkube2iam\n====\n\t2.2.0\n====\n\thttps://kuber
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/21 20:28:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:50:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

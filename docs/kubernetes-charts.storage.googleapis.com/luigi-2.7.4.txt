@@ -44,4 +44,4 @@ luigi:2.7.4 depends on mysql:0.3.4
 mysql:0.3.4 uses mysql:5.7.14
 luigi:2.7.4 uses axiom/docker-luigi:2.7.2-alpine
 
-Generated on 2020/04/21 20:30:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:51:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

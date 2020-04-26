@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tprismagraphql/prisma\n====\n\t1.29.1
 'Chart Dependencies
 prisma_1_2_2--[#orange]-|>prismagraphql_prisma_1_29_1_heroku
 
-center footer Generated on 2020/04/21 20:35:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:56:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

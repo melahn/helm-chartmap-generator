@@ -17,5 +17,5 @@ usecase "Image\n====\n\tgcr.io\n====\n\theptio-images/contour:v0.15.0\n====\n\tv
 'Chart Dependencies
 contour_0_1_1--[#orange]-|>gcr_io_heptio_images_contour_v0_15_0
 
-center footer Generated on 2020/04/21 20:21:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:43:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

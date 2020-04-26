@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 tensorflow-notebook:0.1.2 uses tensorflow/tensorflow:1.6.0-devel
 
-Generated on 2020/04/21 20:40:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 14:02:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

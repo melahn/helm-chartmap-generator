@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for node-problem-detector:1.7.6
+
+'There is one referenced Helm Chart
+artifact "node-problem-detector:1.7.6\n====\n\tnode-problem-detector\n====\n\t1.7.6\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: max-rocket-internet, Random-Liu, andyxning, wangzhen127\n====\n\tKeywords: node\nproblem\ndetector\nmonitoring" as node_problem_detector_1_7_6 #Ivory
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2020/04/26 13:54:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

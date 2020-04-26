@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tdanisla/hadoop\n====\n\t2.9.0" as da
 'Chart Dependencies
 hadoop_1_1_1--[#orange]-|>danisla_hadoop_2_9_0
 
-center footer Generated on 2020/04/21 20:25:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:47:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

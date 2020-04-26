@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 katafygio:1.0.0 uses bpineau/katafygio:v0.8.1
 
-Generated on 2020/04/21 20:28:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:49:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

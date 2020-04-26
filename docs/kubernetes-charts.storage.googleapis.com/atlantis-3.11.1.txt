@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 atlantis:3.11.1 uses runatlantis/atlantis:v0.11.1
 
-Generated on 2020/04/21 20:19:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:41:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -17,5 +17,5 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tcentrifugo/centrifugo\n====\n\tv2.1.
 'Chart Dependencies
 centrifugo_3_1_1--[#orange]-|>centrifugo_centrifugo_v2_1_0
 
-center footer Generated on 2020/04/21 20:20:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:42:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

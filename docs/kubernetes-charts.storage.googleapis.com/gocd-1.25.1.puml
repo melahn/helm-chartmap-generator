@@ -16,8 +16,8 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tgocd/gocd-agent-alpine-3.9\n====\n\t
 usecase "Image\n====\n\tDocker Hub\n====\n\tgocd/gocd-server\n====\n\tv20.2.0" as gocd_gocd_server_v20_2_0 #Aqua
 
 'Chart Dependencies
-gocd_1_25_1--[#orange]-|>gocd_gocd_server_v20_2_0
 gocd_1_25_1--[#orange]-|>gocd_gocd_agent_alpine_3_9_v20_2_0
+gocd_1_25_1--[#orange]-|>gocd_gocd_server_v20_2_0
 
-center footer Generated on 2020/04/21 20:25:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:47:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
