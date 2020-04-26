@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.melahn</groupId>
+  <groupId>com.melahn</groupId>
   <artifactId>helm-chartmap-generator</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -17,8 +17,8 @@
     </dependency>
     <dependency>
       <groupId>com.melahn</groupId>
-      <artifactId>chartmap</artifactId>
-      <version>1.0.1</version>
+      <artifactId>helm-chartmap</artifactId>
+      <version>1.0.2</version>
     </dependency>
   </dependencies>
   <build>

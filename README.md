@@ -1,5 +1,5 @@
 # helm-chartmap-generator
-![version](https://img.shields.io/badge/version-1.0.0-green)
+![version](https://img.shields.io/badge/version-1.0.1-green)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
@@ -28,7 +28,7 @@ You can see lots of examples here -> https://melahn.github.io/helm-chartmap-gene
 
 ### Command Line Syntax
 ```
-java -jar helm-chartmap-generator-1.0-SNAPSHOT.jar
+java -jar helm-chartmap-generator-1.0.1.jar
 
 Flags:
 	-r	<repo name>		the name of the local helm repo to use (required)
@@ -67,12 +67,12 @@ Flags:
     
 ##### Generating reports from the incubator repo using all the detaults
 ```
-    java -helm-chartmap-generator-1.0-SNAPSHOT.jar -r incubator 
+    java -helm-chartmap-generator-1.0.1.jar -r incubator 
 ``` 
      
 ##### Generating JSON and PlantUML reports from the stable repo, with up to 3 versions printed with verbose output
 ```
-    java -helm-chartmap-generator-1.0-SNAPSHOT.jar -r stable -f pt -n 3 -v 
+    java -helm-chartmap-generator-1.0.1.jar -r stable -f pt -n 3 -v 
 ``` 
 
 ### Notes
