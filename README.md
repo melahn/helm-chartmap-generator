@@ -1,4 +1,6 @@
 # helm-chartmap-generator
+![version](https://img.shields.io/badge/version-1.0.0-green)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 This project generates a set of helm dependency reports in various formats for a given helm chart repository.  It uses
@@ -37,7 +39,7 @@ Flags:
 	-v	verbose			print verbose output (optional)
 	-h	help			provide help (optional)
 ```
-#### Parameters
+#### Flags
 * **Required**
    * **-r** \<repo name\>
      * The name of the local helm repo to use.  Run 'helm repo list' to see the names of the local helm repos and use any one
