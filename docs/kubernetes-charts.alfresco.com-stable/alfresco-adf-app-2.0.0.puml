@@ -17,5 +17,5 @@ usecase "Image\n====\n\tquay.io\n====\n\talfresco/alfresco-adf-app:latest\n====\
 'Chart Dependencies
 alfresco_adf_app_2_0_0--[#orange]-|>quay_io_alfresco_alfresco_adf_app_latest
 
-center footer Generated on 2020/03/21 16:59:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:30:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

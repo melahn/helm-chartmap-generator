@@ -21,7 +21,7 @@ Chart: hello-world-app:0.1
 	apiVersion: Not specified
 	appVersion: Not specified
 	created: Not specified
-	dependencies: hello-world-service:0.1, hello-world-ui:0.1
+	dependencies: hello-world-ui:0.1, hello-world-service:0.1
 	description: Hello world sample app to demonstrate deployment capabilities
 	digest: Not specified
 	icon: Not specified
@@ -35,7 +35,7 @@ Chart: hello-world-app:0.1
 Chart: hello-world-ui:0.1
 	apiVersion: Not specified
 	appVersion: Not specified
-	created: 2020-02-25T14:46:25.52445367Z
+	created: 2020-03-31T17:10:40.633486085Z
 	dependencies: None
 	description: Hello world sample UI to demonstrate deployment capabilities
 	digest: c26c9aa55ac49d5f32721e3d74af4a93e25267f371a256045d975c542c4bc068
@@ -50,7 +50,7 @@ Chart: hello-world-ui:0.1
 Chart: hello-world-service:0.1
 	apiVersion: Not specified
 	appVersion: Not specified
-	created: 2020-02-25T14:46:25.522756173Z
+	created: 2020-03-31T17:10:40.631077158Z
 	dependencies: postgresql:0.11.0
 	description: Hello world sample service to demonstrate deployment capabilities
 	digest: 298bbe0424f0e002ef034a53c2fcdb8012e163467c9a1cad4ba7a6a12eaabd1d
@@ -71,11 +71,11 @@ Image: postgres:10.1
 
 Chart Dependencies
 ------------------
+hello-world-app:0.1 depends on hello-world-ui:0.1
 hello-world-app:0.1 depends on hello-world-service:0.1
 hello-world-service:0.1 depends on postgresql:0.11.0
-hello-world-app:0.1 depends on hello-world-ui:0.1
 postgresql:0.11.0 uses postgres:10.1
 hello-world-ui:0.1 uses quay.io/alfresco/anaxes-hello-world-ui:0.1-SNAPSHOT
 hello-world-service:0.1 uses quay.io/alfresco/anaxes-hello-world-service:0.1-SNAPSHOT
 
-Generated on 2020/03/21 17:02:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:33:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -20,7 +20,7 @@ Chart: postgresql:0.9.3
 Chart: alfresco-search:1.0.1
 	apiVersion: Not specified
 	appVersion: Not specified
-	created: 2020-02-25T14:46:28.744342014Z
+	created: 2020-03-31T17:10:44.202606845Z
 	dependencies: None
 	description: A Helm chart for deploying Alfresco Search
 	digest: c7111413f0b8e7af1ef52e96128149314398ed8407b1df56b29b56e4d80dfb53
@@ -74,4 +74,4 @@ alfresco-content-services-community:3.0.1 uses alfresco/alfresco-tika:2.1.0
 alfresco-content-services-community:3.0.1 uses alfresco/alfresco-imagemagick:2.1.0
 alfresco-content-services-community:3.0.1 uses alfresco/alfresco-share:6.2.0
 
-Generated on 2020/03/21 16:59:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:30:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -7,30 +7,6 @@
   ],
   "children": [
     {
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-query-service",
-          "type": "image",
-          "version": "7.1.0.M6"
-        },
-        {
-          "children": [],
-          "name": "common:1.1.28",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.1.28"
-        }
-      ],
-      "name": "activiti-cloud-query:7.1.319",
-      "description": "A Helm chart for Kubernetes",
-      "type": "chart",
-      "shortName": "activiti-cloud-query",
-      "version": "7.1.319"
-    },
-    {
       "maintainers": [
         {
           "name": "Bitnami",
@@ -61,6 +37,30 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "3.11.3"
+    },
+    {
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-process-notifications-graphql-service",
+          "type": "image",
+          "version": "7.1.0.M6"
+        },
+        {
+          "children": [],
+          "name": "common:1.1.28",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.1.28"
+        }
+      ],
+      "name": "activiti-cloud-notifications-graphql:7.1.344",
+      "description": "A Helm chart for Activiti Cloud Notifications GraphQL Application",
+      "type": "chart",
+      "shortName": "activiti-cloud-notifications-graphql",
+      "version": "7.1.344"
     },
     {
       "children": [
@@ -188,54 +188,6 @@
     {
       "children": [
         {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-runtime-bundle-service",
-          "type": "image",
-          "version": "7.1.0.M6"
-        },
-        {
-          "children": [],
-          "name": "common:1.1.28",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.1.28"
-        }
-      ],
-      "name": "runtime-bundle:7.1.374",
-      "description": "A Helm chart for Activiti Cloud Runtime Bundle Example",
-      "type": "chart",
-      "shortName": "runtime-bundle",
-      "version": "7.1.374"
-    },
-    {
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-notifications-graphql-service",
-          "type": "image",
-          "version": "7.1.0.M6"
-        },
-        {
-          "children": [],
-          "name": "common:1.1.28",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.1.28"
-        }
-      ],
-      "name": "activiti-cloud-notifications-graphql:7.1.344",
-      "description": "A Helm chart for Activiti Cloud Notifications GraphQL Application",
-      "type": "chart",
-      "shortName": "activiti-cloud-notifications-graphql",
-      "version": "7.1.344"
-    },
-    {
-      "children": [
-        {
           "repoHost": "docker.io",
           "children": [],
           "name": "activiti/activiti-cloud-connector",
@@ -256,6 +208,54 @@
       "type": "chart",
       "shortName": "activiti-cloud-connector",
       "version": "7.1.326"
+    },
+    {
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-process-query-service",
+          "type": "image",
+          "version": "7.1.0.M6"
+        },
+        {
+          "children": [],
+          "name": "common:1.1.28",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.1.28"
+        }
+      ],
+      "name": "activiti-cloud-query:7.1.319",
+      "description": "A Helm chart for Kubernetes",
+      "type": "chart",
+      "shortName": "activiti-cloud-query",
+      "version": "7.1.319"
+    },
+    {
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-process-runtime-bundle-service",
+          "type": "image",
+          "version": "7.1.0.M6"
+        },
+        {
+          "children": [],
+          "name": "common:1.1.28",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.1.28"
+        }
+      ],
+      "name": "runtime-bundle:7.1.374",
+      "description": "A Helm chart for Activiti Cloud Runtime Bundle Example",
+      "type": "chart",
+      "shortName": "runtime-bundle",
+      "version": "7.1.374"
     }
   ],
   "name": "alfresco-process-application:7.1.0-M6",

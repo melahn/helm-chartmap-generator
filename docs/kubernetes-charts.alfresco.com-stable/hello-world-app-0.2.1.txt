@@ -35,7 +35,7 @@ Chart: postgresql:0.11.0
 Chart: hello-world-service:0.2.1
 	apiVersion: Not specified
 	appVersion: Not specified
-	created: 2020-02-25T14:46:25.523481825Z
+	created: 2020-03-31T17:10:40.631826697Z
 	dependencies: postgresql:0.11.0
 	description: Hello world sample service to demonstrate deployment capabilities
 	digest: 562a17fda5f17a5aed5cbb7564f7453b7ef9642e172154c1407b06bd93bdec01
@@ -50,7 +50,7 @@ Chart: hello-world-service:0.2.1
 Chart: hello-world-ui:0.2
 	apiVersion: Not specified
 	appVersion: Not specified
-	created: 2020-02-25T14:46:25.524725592Z
+	created: 2020-03-31T17:10:40.634071053Z
 	dependencies: None
 	description: Hello world sample UI to demonstrate deployment capabilities
 	digest: 9e06e2be894d6d2a814e3ebf86a5e8fef493068bb70a23351d33767bf011acbf
@@ -78,4 +78,4 @@ postgresql:0.11.0 uses postgres:10.1
 hello-world-service:0.2.1 uses quay.io/alfresco/anaxes-hello-world-service:0.1-SNAPSHOT
 hello-world-ui:0.2 uses quay.io/alfresco/anaxes-hello-world-ui:0.1-SNAPSHOT
 
-Generated on 2020/03/21 17:02:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:33:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
