@@ -37,18 +37,18 @@ alfresco_process_application_7_1_0_M6--[#green]-|>runtime_bundle_7_1_374
 runtime_bundle_7_1_374--[#green]-|>common_1_1_28
 alfresco_process_application_7_1_0_M6--[#green]-|>activiti_cloud_connector_7_1_326
 activiti_cloud_connector_7_1_326--[#green]-|>common_1_1_28
-alfresco_process_application_7_1_0_M6--[#green]-|>activiti_cloud_query_7_1_319
-activiti_cloud_query_7_1_319--[#green]-|>common_1_1_28
 alfresco_process_application_7_1_0_M6--[#green]-|>rabbitmq_ha_1_38_1
 alfresco_process_application_7_1_0_M6--[#green]-|>activiti_cloud_audit_7_1_311
 activiti_cloud_audit_7_1_311--[#green]-|>common_1_1_28
-alfresco_process_application_7_1_0_M6--[#green]-|>alfresco_adf_app_2_1_3
-alfresco_adf_app_2_1_3--[#green]-|>common_1_1_28
 alfresco_process_application_7_1_0_M6--[#green]-|>alfresco_process_springboot_service_2_1_0
 alfresco_process_springboot_service_2_1_0--[#green]-|>common_1_1_28
 alfresco_process_application_7_1_0_M6--[#green]-|>postgresql_3_11_3
 alfresco_process_application_7_1_0_M6--[#green]-|>activiti_cloud_notifications_graphql_7_1_344
 activiti_cloud_notifications_graphql_7_1_344--[#green]-|>common_1_1_28
+alfresco_process_application_7_1_0_M6--[#green]-|>activiti_cloud_query_7_1_319
+activiti_cloud_query_7_1_319--[#green]-|>common_1_1_28
+alfresco_process_application_7_1_0_M6--[#green]-|>alfresco_adf_app_2_1_3
+alfresco_adf_app_2_1_3--[#green]-|>common_1_1_28
 alfresco_adf_app_2_1_3--[#orange]-|>quay_io_alfresco_alfresco_adf_app_latest
 rabbitmq_ha_1_38_1--[#orange]-|>rabbitmq_3_8_0_alpine
 activiti_cloud_connector_7_1_326--[#orange]-|>docker_io_activiti_activiti_cloud_connector_7_1_326
@@ -59,5 +59,5 @@ activiti_cloud_notifications_graphql_7_1_344--[#orange]-|>quay_io_alfresco_alfre
 alfresco_process_springboot_service_2_1_0--[#orange]-|>activiti_example_runtime_bundle_7_0_0_SR1
 runtime_bundle_7_1_374--[#orange]-|>quay_io_alfresco_alfresco_process_runtime_bundle_service_7_1_0_M6
 
-center footer Generated on 2020/03/21 16:52:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:01:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

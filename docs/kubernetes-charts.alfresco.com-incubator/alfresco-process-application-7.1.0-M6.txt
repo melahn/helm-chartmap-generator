@@ -5,7 +5,7 @@ There are 11 referenced Helm Charts
 Chart: alfresco-adf-app:2.1.3
 	apiVersion: v1
 	appVersion: 2.1.0
-	created: 2020-02-25T14:46:28.429507404Z
+	created: 2020-03-31T17:10:43.876738331Z
 	dependencies: common:1.1.28
 	description: A Helm chart for a generic Alfresco ADF frontend application
 	digest: 4e2074d5ce856542c1eb308c14f362ff72d49764b0ead7cc8e7cc7d3bd224893
@@ -35,7 +35,7 @@ Chart: rabbitmq-ha:1.38.1
 Chart: activiti-cloud-connector:7.1.326
 	apiVersion: v1
 	appVersion: Not specified
-	created: 2020-03-20T23:56:26.040872605Z
+	created: 2020-04-24T17:53:51.345456559Z
 	dependencies: common:1.1.28
 	description: A Helm chart for Kubernetes
 	digest: ecbe1131e61340985f9951b8254861516dc87301d586049c6be7711897bde48f
@@ -50,7 +50,7 @@ Chart: activiti-cloud-connector:7.1.326
 Chart: common:1.1.28
 	apiVersion: v1
 	appVersion: Not specified
-	created: 2020-03-20T23:56:32.836634688Z
+	created: 2020-04-24T17:53:58.40966376Z
 	dependencies: None
 	description: A Helm chart for Activiti Cloud Common Templates
 	digest: aa605f53cce16bb4e02d8ee452269dabf56f01cd883bec4458019c7d779d6885
@@ -65,7 +65,7 @@ Chart: common:1.1.28
 Chart: activiti-cloud-audit:7.1.311
 	apiVersion: v1
 	appVersion: Not specified
-	created: 2020-03-20T23:56:25.783486714Z
+	created: 2020-04-24T17:53:51.067829684Z
 	dependencies: common:1.1.28
 	description: A Helm chart for Kubernetes
 	digest: d773e8653cbfd4b7b5a3c0acba3c0d602d52fbeac1c5dcef690ba449ae75acdc
@@ -80,7 +80,7 @@ Chart: activiti-cloud-audit:7.1.311
 Chart: activiti-cloud-query:7.1.319
 	apiVersion: v1
 	appVersion: Not specified
-	created: 2020-03-20T23:56:32.742189819Z
+	created: 2020-04-24T17:53:58.243007652Z
 	dependencies: common:1.1.28
 	description: A Helm chart for Kubernetes
 	digest: c089fbc8a7d7eb001df5a9525a8130b2e58ef77b1010cae2b755b6117a6044a1
@@ -110,7 +110,7 @@ Chart: postgresql:3.11.3
 Chart: activiti-cloud-notifications-graphql:7.1.344
 	apiVersion: v1
 	appVersion: Not specified
-	created: 2020-03-20T23:56:32.396279393Z
+	created: 2020-04-24T17:53:57.910858118Z
 	dependencies: common:1.1.28
 	description: A Helm chart for Activiti Cloud Notifications GraphQL Application
 	digest: c98a42483dd36b818d3cd20a07c1b897e2618b9409f2bbebb24d80536d3f031a
@@ -125,7 +125,7 @@ Chart: activiti-cloud-notifications-graphql:7.1.344
 Chart: alfresco-process-springboot-service:2.1.0
 	apiVersion: v1
 	appVersion: Not specified
-	created: 2020-02-25T14:46:28.738929897Z
+	created: 2020-03-31T17:10:44.196031062Z
 	dependencies: common:1.1.28
 	description: A Helm chart for a generic Alfresco Process/Activiti Spring Boot based microservice
 	digest: e4996336ce452851c406af625ed0f12db3324ba92286f77bbbd5c36155f8de12
@@ -140,7 +140,7 @@ Chart: alfresco-process-springboot-service:2.1.0
 Chart: runtime-bundle:7.1.374
 	apiVersion: v1
 	appVersion: Not specified
-	created: 2020-03-20T23:56:33.316413301Z
+	created: 2020-04-24T17:53:58.871529327Z
 	dependencies: common:1.1.28
 	description: A Helm chart for Activiti Cloud Runtime Bundle Example
 	digest: ef64d2239e47dd8228b84805c28376aa02dc9f427c9fe5acc6854d802134109d
@@ -156,7 +156,7 @@ Chart: alfresco-process-application:7.1.0-M6
 	apiVersion: v1
 	appVersion: 7.1.0.M6
 	created: Not specified
-	dependencies: postgresql:3.11.3, alfresco-adf-app:2.1.3, alfresco-process-springboot-service:2.1.0, runtime-bundle:7.1.374, activiti-cloud-notifications-graphql:7.1.344, rabbitmq-ha:1.38.1, activiti-cloud-connector:7.1.326, activiti-cloud-query:7.1.319, activiti-cloud-audit:7.1.311
+	dependencies: activiti-cloud-audit:7.1.311, activiti-cloud-connector:7.1.326, alfresco-process-springboot-service:2.1.0, runtime-bundle:7.1.374, rabbitmq-ha:1.38.1, activiti-cloud-query:7.1.319, activiti-cloud-notifications-graphql:7.1.344, postgresql:3.11.3, alfresco-adf-app:2.1.3
 	description: A Helm chart for an Alfresco Activiti Enterprise application
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -182,22 +182,22 @@ Image: quay.io/alfresco/alfresco-process-runtime-bundle-service:7.1.0.M6
 
 Chart Dependencies
 ------------------
-alfresco-process-application:7.1.0-M6 depends on postgresql:3.11.3
-alfresco-process-application:7.1.0-M6 depends on alfresco-adf-app:2.1.3
-alfresco-adf-app:2.1.3 depends on common:1.1.28
+alfresco-process-application:7.1.0-M6 depends on activiti-cloud-audit:7.1.311
+activiti-cloud-audit:7.1.311 depends on common:1.1.28
+alfresco-process-application:7.1.0-M6 depends on activiti-cloud-connector:7.1.326
+activiti-cloud-connector:7.1.326 depends on common:1.1.28
 alfresco-process-application:7.1.0-M6 depends on alfresco-process-springboot-service:2.1.0
 alfresco-process-springboot-service:2.1.0 depends on common:1.1.28
 alfresco-process-application:7.1.0-M6 depends on runtime-bundle:7.1.374
 runtime-bundle:7.1.374 depends on common:1.1.28
-alfresco-process-application:7.1.0-M6 depends on activiti-cloud-notifications-graphql:7.1.344
-activiti-cloud-notifications-graphql:7.1.344 depends on common:1.1.28
 alfresco-process-application:7.1.0-M6 depends on rabbitmq-ha:1.38.1
-alfresco-process-application:7.1.0-M6 depends on activiti-cloud-connector:7.1.326
-activiti-cloud-connector:7.1.326 depends on common:1.1.28
 alfresco-process-application:7.1.0-M6 depends on activiti-cloud-query:7.1.319
 activiti-cloud-query:7.1.319 depends on common:1.1.28
-alfresco-process-application:7.1.0-M6 depends on activiti-cloud-audit:7.1.311
-activiti-cloud-audit:7.1.311 depends on common:1.1.28
+alfresco-process-application:7.1.0-M6 depends on activiti-cloud-notifications-graphql:7.1.344
+activiti-cloud-notifications-graphql:7.1.344 depends on common:1.1.28
+alfresco-process-application:7.1.0-M6 depends on postgresql:3.11.3
+alfresco-process-application:7.1.0-M6 depends on alfresco-adf-app:2.1.3
+alfresco-adf-app:2.1.3 depends on common:1.1.28
 alfresco-adf-app:2.1.3 uses quay.io/alfresco/alfresco-adf-app:latest
 rabbitmq-ha:1.38.1 uses rabbitmq:3.8.0-alpine
 activiti-cloud-connector:7.1.326 uses docker.io/activiti/activiti-cloud-connector:7.1.326
@@ -208,4 +208,4 @@ activiti-cloud-notifications-graphql:7.1.344 uses quay.io/alfresco/alfresco-proc
 alfresco-process-springboot-service:2.1.0 uses activiti/example-runtime-bundle:7.0.0.SR1
 runtime-bundle:7.1.374 uses quay.io/alfresco/alfresco-process-runtime-bundle-service:7.1.0.M6
 
-Generated on 2020/03/21 16:52:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:01:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

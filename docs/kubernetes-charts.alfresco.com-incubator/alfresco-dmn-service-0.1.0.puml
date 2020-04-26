@@ -21,5 +21,5 @@ alfresco_dmn_service_0_1_0--[#green]-|>alfresco_process_springboot_service_2_1_0
 alfresco_process_springboot_service_2_1_0--[#green]-|>common_1_1_21
 alfresco_process_springboot_service_2_1_0--[#orange]-|>activiti_example_runtime_bundle_7_0_0_SR1
 
-center footer Generated on 2020/03/21 16:50:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 12:59:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -27,5 +27,5 @@ alfresco_search_0_0_2--[#orange]-|>alfresco_alfresco_search_services_1_1_1
 alfresco_content_services_community_6_0_7_01--[#orange]-|>alfresco_alfresco_content_repository_community_6_0_7_ga
 alfresco_content_services_community_6_0_7_01--[#orange]-|>alfresco_alfresco_share_6_0_b
 
-center footer Generated on 2020/03/21 16:49:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 12:59:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

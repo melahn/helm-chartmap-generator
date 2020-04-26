@@ -20,7 +20,7 @@ Chart: postgresql:0.9.3
 Chart: alfresco-search:1.0.3
 	apiVersion: Not specified
 	appVersion: Not specified
-	created: 2020-02-25T14:46:28.745370211Z
+	created: 2020-03-31T17:10:44.203638088Z
 	dependencies: None
 	description: A Helm chart for deploying Alfresco Search
 	digest: 0c223af2c9af213be974008dcc967d1a84c6f877b1142f46c5b70db66c2e3281
@@ -35,7 +35,7 @@ Chart: alfresco-search:1.0.3
 Chart: alfresco-digital-workspace:2.3.0
 	apiVersion: Not specified
 	appVersion: v1.4.0
-	created: 2020-02-25T14:46:28.598329502Z
+	created: 2020-03-31T17:10:44.048265526Z
 	dependencies: None
 	description: A Helm chart for deploying Alfresco Digital Workspace application
 	digest: af3156796f9837cfe7f5bf9c8f4f893d83931088dd96f0b4d1ac8608e4e27792
@@ -50,7 +50,7 @@ Chart: alfresco-digital-workspace:2.3.0
 Chart: alfresco-sync-service:3.0.2
 	apiVersion: Not specified
 	appVersion: 3.3.1
-	created: 2020-02-25T14:46:28.756201928Z
+	created: 2020-03-31T17:10:44.21325985Z
 	dependencies: postgresql:0.9.3
 	description: Alfresco Syncservice
 	digest: 2d87c51a4da90bae02d749dbf62306c1cf90de6d1a30df0c4a61af39a779eefc
@@ -66,7 +66,7 @@ Chart: alfresco-content-services:4.0.2
 	apiVersion: Not specified
 	appVersion: 6.3.0
 	created: Not specified
-	dependencies: postgresql:0.9.3, alfresco-search:1.0.3, alfresco-sync-service:3.0.2, alfresco-digital-workspace:2.3.0
+	dependencies: alfresco-search:1.0.3, alfresco-digital-workspace:2.3.0, alfresco-sync-service:3.0.2, postgresql:0.9.3
 	description: A Helm chart for deploying Alfresco Content Services
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -97,18 +97,18 @@ Image: alfresco/alfresco-content-repository:6.3.0-A1
 
 Chart Dependencies
 ------------------
-alfresco-content-services:4.0.2 depends on postgresql:0.9.3
 alfresco-content-services:4.0.2 depends on alfresco-search:1.0.3
+alfresco-content-services:4.0.2 depends on alfresco-digital-workspace:2.3.0
 alfresco-content-services:4.0.2 depends on alfresco-sync-service:3.0.2
 alfresco-sync-service:3.0.2 depends on postgresql:0.9.3
-alfresco-content-services:4.0.2 depends on alfresco-digital-workspace:2.3.0
+alfresco-content-services:4.0.2 depends on postgresql:0.9.3
 postgresql:0.9.3 uses postgres:11.4
 postgresql:0.9.3 uses postgres:10.1
 alfresco-search:1.0.3 uses alfresco/alfresco-search-services:1.4.0
 alfresco-digital-workspace:2.3.0 uses quay.io/alfresco/alfresco-digital-workspace:1.4.0
 alfresco-sync-service:3.0.2 uses quay.io/alfresco/service-sync:3.3.1
-alfresco-content-services:4.0.2 uses alfresco/alfresco-content-repository:6.3.0-A1
 alfresco-content-services:4.0.2 uses alfresco/alfresco-libreoffice:2.1.1
+alfresco-content-services:4.0.2 uses alfresco/alfresco-content-repository:6.3.0-A1
 alfresco-content-services:4.0.2 uses alfresco/alfresco-shared-file-store:0.6.0
 alfresco-content-services:4.0.2 uses alfresco/alfresco-transform-misc:2.1.1
 alfresco-content-services:4.0.2 uses alfresco/alfresco-pdf-renderer:2.1.1
@@ -117,4 +117,4 @@ alfresco-content-services:4.0.2 uses alfresco/alfresco-tika:2.1.1
 alfresco-content-services:4.0.2 uses alfresco/alfresco-imagemagick:2.1.1
 alfresco-content-services:4.0.2 uses alfresco/alfresco-share:6.2.0-RC2
 
-Generated on 2020/03/21 16:49:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 12:58:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

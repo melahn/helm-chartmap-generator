@@ -20,12 +20,12 @@ usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t10.1" as postgres_
 usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-search-services\n====\n\t1.1.1" as alfresco_alfresco_search_services_1_1_1 #Coral
 
 'Chart Dependencies
-alfresco_content_services_community_6_0_5_01--[#green]-|>postgresql_0_9_3
 alfresco_content_services_community_6_0_5_01--[#green]-|>alfresco_search_0_0_2
+alfresco_content_services_community_6_0_5_01--[#green]-|>postgresql_0_9_3
 postgresql_0_9_3--[#orange]-|>postgres_10_1
 alfresco_content_services_community_6_0_5_01--[#orange]-|>alfresco_alfresco_share_6_0_b
 alfresco_content_services_community_6_0_5_01--[#orange]-|>alfresco_alfresco_content_repository_community_latest
 alfresco_search_0_0_2--[#orange]-|>alfresco_alfresco_search_services_1_1_1
 
-center footer Generated on 2020/03/21 16:49:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 12:59:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

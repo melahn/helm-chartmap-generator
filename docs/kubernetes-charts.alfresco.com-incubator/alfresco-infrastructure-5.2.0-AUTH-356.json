@@ -121,6 +121,18 @@
       "version": "0.14.0"
     },
     {
+      "keywords": [
+        "activemq",
+        "message broker"
+      ],
+      "children": [],
+      "name": "activemq:1.1.1",
+      "description": "A Helm chart Providing Apache ActiveMQ.",
+      "type": "chart",
+      "shortName": "activemq",
+      "version": "1.1.1"
+    },
+    {
       "maintainers": [{"name": "Alfresco"}],
       "keywords": [
         "alfresco",
@@ -159,18 +171,6 @@
       "type": "chart",
       "shortName": "alfresco-event-gateway",
       "version": "0.1.2"
-    },
-    {
-      "keywords": [
-        "activemq",
-        "message broker"
-      ],
-      "children": [],
-      "name": "activemq:1.1.1",
-      "description": "A Helm chart Providing Apache ActiveMQ.",
-      "type": "chart",
-      "shortName": "activemq",
-      "version": "1.1.1"
     }
   ],
   "name": "alfresco-infrastructure:5.2.0-AUTH-356",

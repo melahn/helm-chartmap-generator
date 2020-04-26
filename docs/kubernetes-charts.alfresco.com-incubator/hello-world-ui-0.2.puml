@@ -17,5 +17,5 @@ usecase "Image\n====\n\tquay.io\n====\n\talfresco/anaxes-hello-world-ui:0.1-SNAP
 'Chart Dependencies
 hello_world_ui_0_2--[#orange]-|>quay_io_alfresco_anaxes_hello_world_ui_0_1_SNAPSHOT
 
-center footer Generated on 2020/03/21 16:54:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:03:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

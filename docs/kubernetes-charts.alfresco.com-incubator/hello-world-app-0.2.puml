@@ -20,12 +20,12 @@ usecase "Image\n====\n\tquay.io\n====\n\talfresco/anaxes-hello-world-ui:0.1-SNAP
 usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t10.1" as postgres_10_1 #Ivory
 
 'Chart Dependencies
+hello_world_app_0_2--[#green]-|>hello_world_ui_0_2
 hello_world_app_0_2--[#green]-|>hello_world_service_0_2
 hello_world_service_0_2--[#green]-|>postgresql_0_11_0
-hello_world_app_0_2--[#green]-|>hello_world_ui_0_2
 postgresql_0_11_0--[#orange]-|>postgres_10_1
 hello_world_service_0_2--[#orange]-|>quay_io_alfresco_anaxes_hello_world_service_0_1_SNAPSHOT
 hello_world_ui_0_2--[#orange]-|>quay_io_alfresco_anaxes_hello_world_ui_0_1_SNAPSHOT
 
-center footer Generated on 2020/03/21 16:54:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2020/04/26 13:03:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

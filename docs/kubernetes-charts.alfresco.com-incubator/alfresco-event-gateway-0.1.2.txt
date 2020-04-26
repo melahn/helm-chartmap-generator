@@ -20,7 +20,7 @@ Chart: alfresco-event-gateway:0.1.2
 Chart: activemq:1.1.1
 	apiVersion: v1
 	appVersion: 5.15.8
-	created: 2020-02-25T14:46:28.428104976Z
+	created: 2020-03-31T17:10:43.875368053Z
 	dependencies: None
 	description: A Helm chart Providing Apache ActiveMQ.
 	digest: 28a35a28b9dc29fb99a110072cb200f92849c80beb5688c3b1f3fbb3f42fae08
@@ -44,4 +44,4 @@ alfresco-event-gateway:0.1.2 depends on activemq:1.1.1
 alfresco-event-gateway:0.1.2 uses alfresco/alfresco-event-gateway:0.3-SNAPSHOT
 activemq:1.1.1 uses alfresco/alfresco-activemq:5.15.8-java-8-oracle-centos-7-87b15e37ce8b
 
-Generated on 2020/03/21 16:50:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 12:59:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -20,10 +20,10 @@ Chart: postgresql:0.9.3
 Chart: alfresco-process-services:0.2.0
 	apiVersion: v1
 	appVersion: 1.10.0
-	created: 2020-02-25T14:46:28.738235855Z
+	created: 2020-03-31T17:10:44.19122979Z
 	dependencies: postgresql:1.0.0
 	description: A Helm chart for Alfresco Process Services
-	digest: 41da94b3b907186fd25c056da57ac8d1f174e31bb0a327626ccd83c48313286a
+	digest: c487ed1c54cd5043d8ddbbbc16be12e212690509b68b7ffcb6ddc2b7c8fd3a93
 	icon: Not specified
 	keywords: Not specified
 	maintainers: Alfresco
@@ -35,7 +35,7 @@ Chart: alfresco-process-services:0.2.0
 Chart: alfresco-sync-service:1.1.1
 	apiVersion: Not specified
 	appVersion: 3.1.2
-	created: 2020-02-25T14:46:28.750623836Z
+	created: 2020-03-31T17:10:44.207628265Z
 	dependencies: postgresql:0.9.3
 	description: Alfresco Syncservice
 	digest: be82940299c4d50c72c0982ab43cd9d16d7707c8a755028636d9847dc4f69851
@@ -50,7 +50,7 @@ Chart: alfresco-sync-service:1.1.1
 Chart: alfresco-event-gateway:0.1.2
 	apiVersion: Not specified
 	appVersion: Not specified
-	created: 2020-02-25T14:46:25.110628134Z
+	created: 2020-03-31T17:10:40.195524691Z
 	dependencies: activemq:1.1.1
 	description: Alfresco Event Gateway
 	digest: 1c3c912a0899bbdde18c6ef8a69489cb65cb445a50413e0c202546c3222d70d9
@@ -80,7 +80,7 @@ Chart: keycloak:6.0.0
 Chart: alfresco-identity-service:2.0.0
 	apiVersion: Not specified
 	appVersion: 1.2.0
-	created: 2020-02-25T14:46:28.606430041Z
+	created: 2020-03-31T17:10:44.056586287Z
 	dependencies: keycloak:6.0.0
 	description: The Alfresco Identity Service will become the central component responsible for identity-related capabilities needed by other Alfresco software, such as managing users, groups, roles, profiles, and authentication. Currently it deals just with authentication.
 	digest: 9c47a80edc96dfd7e6388438bfe227b91886eafaecc6b51b646ab5e968e9c372
@@ -96,7 +96,7 @@ Chart: alfresco-dbp:2.0.0-kerberos
 	apiVersion: Not specified
 	appVersion: 2
 	created: Not specified
-	dependencies: alfresco-content-services:2.1.3-kerberosFix, alfresco-infrastructure:5.2.0, alfresco-process-services:0.2.0
+	dependencies: alfresco-process-services:0.2.0, alfresco-content-services:2.1.3-kerberosFix, alfresco-infrastructure:5.2.0
 	description: A Helm chart for the Alfresco Digital Business Platform
 	digest: Not specified
 	icon: Not specified
@@ -110,7 +110,7 @@ Chart: alfresco-dbp:2.0.0-kerberos
 Chart: alfresco-digital-workspace:2.0.0
 	apiVersion: Not specified
 	appVersion: v1.2.0
-	created: 2020-02-25T14:46:28.597385001Z
+	created: 2020-03-31T17:10:44.047259071Z
 	dependencies: None
 	description: A Helm chart for deploying Alfresco Digital Workspace application
 	digest: 1b8d51c06cc14db69ee4976f59f77f5ae3b1d63700ed76db516f06e13f687bac
@@ -125,7 +125,7 @@ Chart: alfresco-digital-workspace:2.0.0
 Chart: activemq:1.1.1
 	apiVersion: v1
 	appVersion: 5.15.8
-	created: 2020-02-25T14:46:28.428104976Z
+	created: 2020-03-31T17:10:43.875368053Z
 	dependencies: None
 	description: A Helm chart Providing Apache ActiveMQ.
 	digest: 28a35a28b9dc29fb99a110072cb200f92849c80beb5688c3b1f3fbb3f42fae08
@@ -155,7 +155,7 @@ Chart: postgresql:6.3.13
 Chart: alfresco-search:1.0.1
 	apiVersion: Not specified
 	appVersion: Not specified
-	created: 2020-02-25T14:46:28.744342014Z
+	created: 2020-03-31T17:10:44.202606845Z
 	dependencies: None
 	description: A Helm chart for deploying Alfresco Search
 	digest: c7111413f0b8e7af1ef52e96128149314398ed8407b1df56b29b56e4d80dfb53
@@ -170,8 +170,8 @@ Chart: alfresco-search:1.0.1
 Chart: alfresco-infrastructure:5.2.0
 	apiVersion: v1
 	appVersion: Not specified
-	created: 2020-02-25T14:46:25.251088387Z
-	dependencies: activemq:1.1.1, alfresco-identity-service:2.0.0, nginx-ingress:0.14.0, alfresco-event-gateway:0.1.2
+	created: 2020-03-31T17:10:40.338563489Z
+	dependencies: activemq:1.1.1, nginx-ingress:0.14.0, alfresco-event-gateway:0.1.2, alfresco-identity-service:2.0.0
 	description: A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform. This includes activemq, alfresco-identity-service, nginx-ingress and a persistent volume to use with the DBP chart.
 	digest: 9a0efeac6673bf7f2589796442a5279bf45411e3a0b67a56634b6df1d7042058
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -215,8 +215,8 @@ Chart: nginx-ingress:0.14.0
 Chart: alfresco-content-services:2.1.3-kerberosFix
 	apiVersion: Not specified
 	appVersion: 6.1.1.2
-	created: 2020-02-25T14:46:24.59798699Z
-	dependencies: alfresco-digital-workspace:2.0.0, alfresco-search:1.0.1, postgresql:0.9.3, alfresco-sync-service:1.1.1
+	created: 2020-03-31T17:10:39.664536784Z
+	dependencies: alfresco-sync-service:1.1.1, postgresql:0.9.3, alfresco-digital-workspace:2.0.0, alfresco-search:1.0.1
 	description: A Helm chart for deploying Alfresco Content Services
 	digest: a15788c2a50dae27f0703f10987d1cbaf0b7a99cf5dda213fd11c32525e6c498
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -256,22 +256,22 @@ Image: quay.io/alfresco/alfresco-identity-service:1.2
 
 Chart Dependencies
 ------------------
+alfresco-dbp:2.0.0-kerberos depends on alfresco-process-services:0.2.0
+alfresco-process-services:0.2.0 depends on postgresql:1.0.0
 alfresco-dbp:2.0.0-kerberos depends on alfresco-content-services:2.1.3-kerberosFix
-alfresco-content-services:2.1.3-kerberosFix depends on alfresco-digital-workspace:2.0.0
-alfresco-content-services:2.1.3-kerberosFix depends on alfresco-search:1.0.1
-alfresco-content-services:2.1.3-kerberosFix depends on postgresql:0.9.3
 alfresco-content-services:2.1.3-kerberosFix depends on alfresco-sync-service:1.1.1
 alfresco-sync-service:1.1.1 depends on postgresql:0.9.3
+alfresco-content-services:2.1.3-kerberosFix depends on postgresql:0.9.3
+alfresco-content-services:2.1.3-kerberosFix depends on alfresco-digital-workspace:2.0.0
+alfresco-content-services:2.1.3-kerberosFix depends on alfresco-search:1.0.1
 alfresco-dbp:2.0.0-kerberos depends on alfresco-infrastructure:5.2.0
 alfresco-infrastructure:5.2.0 depends on activemq:1.1.1
-alfresco-infrastructure:5.2.0 depends on alfresco-identity-service:2.0.0
-alfresco-identity-service:2.0.0 depends on keycloak:6.0.0
-keycloak:6.0.0 depends on postgresql:6.3.13
 alfresco-infrastructure:5.2.0 depends on nginx-ingress:0.14.0
 alfresco-infrastructure:5.2.0 depends on alfresco-event-gateway:0.1.2
 alfresco-event-gateway:0.1.2 depends on activemq:1.1.1
-alfresco-dbp:2.0.0-kerberos depends on alfresco-process-services:0.2.0
-alfresco-process-services:0.2.0 depends on postgresql:1.0.0
+alfresco-infrastructure:5.2.0 depends on alfresco-identity-service:2.0.0
+alfresco-identity-service:2.0.0 depends on keycloak:6.0.0
+keycloak:6.0.0 depends on postgresql:6.3.13
 postgresql:0.9.3 uses postgres:11.4
 postgresql:0.9.3 uses postgres:10.1
 alfresco-process-services:0.2.0 uses quay.io/alfresco/alfresco-process-services-admin:1.10.0
@@ -296,4 +296,4 @@ alfresco-content-services:2.1.3-kerberosFix uses quay.io/alfresco/alfresco-trans
 alfresco-content-services:2.1.3-kerberosFix uses quay.io/alfresco/alfresco-libreoffice:2.0.17
 alfresco-content-services:2.1.3-kerberosFix uses quay.io/alfresco/alfresco-imagemagick:2.0.17
 
-Generated on 2020/03/21 16:49:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 12:59:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

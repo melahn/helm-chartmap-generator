@@ -20,7 +20,7 @@ Chart: postgresql:6.3.13
 Chart: alfresco-event-gateway:0.1.2
 	apiVersion: Not specified
 	appVersion: Not specified
-	created: 2020-02-25T14:46:25.110628134Z
+	created: 2020-03-31T17:10:40.195524691Z
 	dependencies: activemq:1.1.1
 	description: Alfresco Event Gateway
 	digest: 1c3c912a0899bbdde18c6ef8a69489cb65cb445a50413e0c202546c3222d70d9
@@ -51,7 +51,7 @@ Chart: alfresco-infrastructure:5.2.0
 	apiVersion: v1
 	appVersion: Not specified
 	created: Not specified
-	dependencies: activemq:1.1.1, alfresco-event-gateway:0.1.2, alfresco-identity-service:2.0.0, nginx-ingress:0.14.0
+	dependencies: alfresco-identity-service:2.0.0, nginx-ingress:0.14.0, alfresco-event-gateway:0.1.2, activemq:1.1.1
 	description: A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform. This includes activemq, alfresco-identity-service, nginx-ingress and a persistent volume to use with the DBP chart.
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -65,7 +65,7 @@ Chart: alfresco-infrastructure:5.2.0
 Chart: alfresco-identity-service:2.0.0
 	apiVersion: Not specified
 	appVersion: 1.2.0
-	created: 2020-02-25T14:46:28.606430041Z
+	created: 2020-03-31T17:10:44.056586287Z
 	dependencies: keycloak:6.0.0
 	description: The Alfresco Identity Service will become the central component responsible for identity-related capabilities needed by other Alfresco software, such as managing users, groups, roles, profiles, and authentication. Currently it deals just with authentication.
 	digest: 9c47a80edc96dfd7e6388438bfe227b91886eafaecc6b51b646ab5e968e9c372
@@ -95,7 +95,7 @@ Chart: nginx-ingress:0.14.0
 Chart: activemq:1.1.1
 	apiVersion: v1
 	appVersion: 5.15.8
-	created: 2020-02-25T14:46:28.428104976Z
+	created: 2020-03-31T17:10:43.875368053Z
 	dependencies: None
 	description: A Helm chart Providing Apache ActiveMQ.
 	digest: 28a35a28b9dc29fb99a110072cb200f92849c80beb5688c3b1f3fbb3f42fae08
@@ -119,13 +119,13 @@ Image: alfresco/alfresco-identity-service:1.2
 
 Chart Dependencies
 ------------------
-alfresco-infrastructure:5.2.0 depends on activemq:1.1.1
-alfresco-infrastructure:5.2.0 depends on alfresco-event-gateway:0.1.2
-alfresco-event-gateway:0.1.2 depends on activemq:1.1.1
 alfresco-infrastructure:5.2.0 depends on alfresco-identity-service:2.0.0
 alfresco-identity-service:2.0.0 depends on keycloak:6.0.0
 keycloak:6.0.0 depends on postgresql:6.3.13
 alfresco-infrastructure:5.2.0 depends on nginx-ingress:0.14.0
+alfresco-infrastructure:5.2.0 depends on alfresco-event-gateway:0.1.2
+alfresco-event-gateway:0.1.2 depends on activemq:1.1.1
+alfresco-infrastructure:5.2.0 depends on activemq:1.1.1
 postgresql:6.3.13 uses docker.io/bitnami/postgresql:11.5.0-debian-9-r60
 alfresco-event-gateway:0.1.2 uses alfresco/alfresco-event-gateway:0.3-SNAPSHOT
 keycloak:6.0.0 uses alfresco/alfresco-identity-service:1.2
@@ -133,4 +133,4 @@ nginx-ingress:0.14.0 uses k8s.gcr.io/defaultbackend:1.3
 nginx-ingress:0.14.0 uses quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.12.0
 activemq:1.1.1 uses alfresco/alfresco-activemq:5.15.8-java-8-oracle-centos-7-87b15e37ce8b
 
-Generated on 2020/03/21 16:50:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 13:00:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

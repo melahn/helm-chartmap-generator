@@ -28,6 +28,51 @@
       "version": "0.11.0"
     },
     {
+      "children": [],
+      "name": "common:1.1.28",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.1.28"
+    },
+    {
+      "maintainers": [{"name": "Alfresco"}],
+      "keywords": [
+        "alfresco",
+        "content",
+        "content services",
+        "alfresco content services",
+        "activiti",
+        "process",
+        "alfresco activiti enterprise",
+        "java",
+        "spring boot",
+        "microservice"
+      ],
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "activiti/example-runtime-bundle",
+          "type": "image",
+          "version": "7.0.0.SR1"
+        },
+        {
+          "children": [],
+          "name": "common:1.1.28",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.1.28"
+        }
+      ],
+      "name": "alfresco-process-springboot-service:2.2.0",
+      "description": "A Helm chart for a generic Alfresco Process/Activiti Spring Boot based microservice",
+      "type": "chart",
+      "shortName": "alfresco-process-springboot-service",
+      "version": "2.2.0"
+    },
+    {
       "maintainers": [{"name": "Alfresco"}],
       "keywords": [
         "alfresco",
@@ -96,34 +141,28 @@
       "version": "1.1.1"
     },
     {
-      "children": [],
-      "name": "common:1.1.28",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "1.1.28"
-    },
-    {
       "maintainers": [{"name": "Alfresco"}],
       "keywords": [
         "alfresco",
+        "adf",
+        "alfresco development framework",
         "content",
         "content services",
         "alfresco content services",
-        "activiti",
         "process",
-        "alfresco activiti enterprise",
-        "java",
-        "spring boot",
-        "microservice"
+        "process services",
+        "alfresco process services",
+        "activiti",
+        "activiti enterprise",
+        "alfresco activiti enterprise"
       ],
       "children": [
         {
-          "repoHost": "Docker Hub",
+          "repoHost": "quay.io",
           "children": [],
-          "name": "activiti/example-runtime-bundle",
+          "name": "alfresco/alfresco-adf-app",
           "type": "image",
-          "version": "7.0.0.SR1"
+          "version": "latest"
         },
         {
           "children": [],
@@ -134,11 +173,11 @@
           "version": "1.1.28"
         }
       ],
-      "name": "alfresco-process-springboot-service:2.1.0",
-      "description": "A Helm chart for a generic Alfresco Process/Activiti Spring Boot based microservice",
+      "name": "alfresco-adf-app:2.1.4",
+      "description": "A Helm chart for a generic Alfresco ADF frontend application",
       "type": "chart",
-      "shortName": "alfresco-process-springboot-service",
-      "version": "2.1.0"
+      "shortName": "alfresco-adf-app",
+      "version": "2.1.4"
     }
   ],
   "name": "alfresco-process-infrastructure:7.1.0-M7",

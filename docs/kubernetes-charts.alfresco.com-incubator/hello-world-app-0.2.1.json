@@ -15,27 +15,6 @@
         "hello",
         "world"
       ],
-      "children": [{
-        "repoHost": "quay.io",
-        "children": [],
-        "name": "alfresco/anaxes-hello-world-ui",
-        "type": "image",
-        "version": "0.1-SNAPSHOT"
-      }],
-      "name": "hello-world-ui:0.2",
-      "description": "Hello world sample UI to demonstrate deployment capabilities",
-      "type": "chart",
-      "shortName": "hello-world-ui",
-      "version": "0.2"
-    },
-    {
-      "maintainers": [{"name": "Alfresco"}],
-      "keywords": [
-        "alfresco",
-        "anaxes",
-        "hello",
-        "world"
-      ],
       "children": [
         {
           "repoHost": "quay.io",
@@ -71,6 +50,27 @@
       "type": "chart",
       "shortName": "hello-world-service",
       "version": "0.2.1"
+    },
+    {
+      "maintainers": [{"name": "Alfresco"}],
+      "keywords": [
+        "alfresco",
+        "anaxes",
+        "hello",
+        "world"
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "alfresco/anaxes-hello-world-ui",
+        "type": "image",
+        "version": "0.1-SNAPSHOT"
+      }],
+      "name": "hello-world-ui:0.2",
+      "description": "Hello world sample UI to demonstrate deployment capabilities",
+      "type": "chart",
+      "shortName": "hello-world-ui",
+      "version": "0.2"
     }
   ],
   "name": "hello-world-app:0.2.1",

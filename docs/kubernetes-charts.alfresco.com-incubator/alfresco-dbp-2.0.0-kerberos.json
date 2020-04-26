@@ -9,58 +9,11 @@
     {
       "children": [
         {
-          "maintainers": [
-            {
-              "name": "jackzampolin",
-              "email": "jack.zampolin@gmail.com"
-            },
-            {
-              "name": "mgoodness",
-              "email": "mgoodness@gmail.com"
-            },
-            {
-              "name": "chancez",
-              "email": "chance.zibolski@coreos.com"
-            }
-          ],
-          "keywords": [
-            "ingress",
-            "nginx"
-          ],
-          "children": [
-            {
-              "repoHost": "Docker Hub",
-              "children": [],
-              "name": "k8s.gcr.io/defaultbackend",
-              "type": "image",
-              "version": "1.3"
-            },
-            {
-              "repoHost": "quay.io",
-              "children": [],
-              "name": "kubernetes-ingress-controller/nginx-ingress-controller",
-              "type": "image",
-              "version": "0.12.0"
-            }
-          ],
-          "name": "nginx-ingress:0.14.0",
-          "description": "An nginx Ingress controller that uses ConfigMap to store the nginx configuration.",
-          "type": "chart",
-          "shortName": "nginx-ingress",
-          "version": "0.14.0"
-        },
-        {
           "keywords": [
             "activemq",
             "message broker"
           ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "alfresco/alfresco-activemq",
-            "type": "image",
-            "version": "5.15.8-java-8-oracle-centos-7-87b15e37ce8b"
-          }],
+          "children": [],
           "name": "activemq:1.1.1",
           "description": "A Helm chart Providing Apache ActiveMQ.",
           "type": "chart",
@@ -87,7 +40,13 @@
                 "activemq",
                 "message broker"
               ],
-              "children": [],
+              "children": [{
+                "repoHost": "Docker Hub",
+                "children": [],
+                "name": "alfresco/alfresco-activemq",
+                "type": "image",
+                "version": "5.15.8-java-8-oracle-centos-7-87b15e37ce8b"
+              }],
               "name": "activemq:1.1.1",
               "description": "A Helm chart Providing Apache ActiveMQ.",
               "type": "chart",
@@ -179,6 +138,47 @@
           "type": "chart",
           "shortName": "alfresco-identity-service",
           "version": "2.0.0"
+        },
+        {
+          "maintainers": [
+            {
+              "name": "jackzampolin",
+              "email": "jack.zampolin@gmail.com"
+            },
+            {
+              "name": "mgoodness",
+              "email": "mgoodness@gmail.com"
+            },
+            {
+              "name": "chancez",
+              "email": "chance.zibolski@coreos.com"
+            }
+          ],
+          "keywords": [
+            "ingress",
+            "nginx"
+          ],
+          "children": [
+            {
+              "repoHost": "Docker Hub",
+              "children": [],
+              "name": "k8s.gcr.io/defaultbackend",
+              "type": "image",
+              "version": "1.3"
+            },
+            {
+              "repoHost": "quay.io",
+              "children": [],
+              "name": "kubernetes-ingress-controller/nginx-ingress-controller",
+              "type": "image",
+              "version": "0.12.0"
+            }
+          ],
+          "name": "nginx-ingress:0.14.0",
+          "description": "An nginx Ingress controller that uses ConfigMap to store the nginx configuration.",
+          "type": "chart",
+          "shortName": "nginx-ingress",
+          "version": "0.14.0"
         }
       ],
       "name": "alfresco-infrastructure:5.2.0",
@@ -240,14 +240,14 @@
         {
           "repoHost": "quay.io",
           "children": [],
-          "name": "alfresco/alfresco-libreoffice",
+          "name": "alfresco/alfresco-imagemagick",
           "type": "image",
           "version": "2.0.17"
         },
         {
           "repoHost": "quay.io",
           "children": [],
-          "name": "alfresco/alfresco-imagemagick",
+          "name": "alfresco/alfresco-libreoffice",
           "type": "image",
           "version": "2.0.17"
         },

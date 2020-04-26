@@ -35,7 +35,7 @@ Chart: alfresco-content-services-community:6.0.5-01
 Chart: alfresco-search:0.0.2
 	apiVersion: Not specified
 	appVersion: Not specified
-	created: 2020-02-25T14:46:25.505939234Z
+	created: 2020-03-31T17:10:40.613797795Z
 	dependencies: None
 	description: A Helm chart for deploying Alfresco Search
 	digest: 6943f71e9e67c7715eb7169dac9e7159938f60586fb4d0289caf80e927718f73
@@ -64,4 +64,4 @@ alfresco-content-services-community:6.0.5-01 uses alfresco/alfresco-share:6.0.b
 alfresco-content-services-community:6.0.5-01 uses alfresco/alfresco-content-repository-community:latest
 alfresco-search:0.0.2 uses alfresco/alfresco-search-services:1.1.1
 
-Generated on 2020/03/21 16:49:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2020/04/26 12:59:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

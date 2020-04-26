@@ -167,18 +167,18 @@
           "version": "2.0.4-EA"
         },
         {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "alfresco/alfresco-shared-file-store",
-          "type": "image",
-          "version": "0.3"
-        },
-        {
           "repoHost": "quay.io",
           "children": [],
           "name": "alfresco/alfresco-libreoffice",
           "type": "image",
           "version": "2.0.4-EA"
+        },
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "alfresco/alfresco-shared-file-store",
+          "type": "image",
+          "version": "0.3"
         },
         {
           "repoHost": "Docker Hub",
@@ -193,20 +193,6 @@
           "name": "alfresco/alfresco-transform-router",
           "type": "image",
           "version": "0.2.1-EA"
-        },
-        {
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "webcenter/activemq",
-            "type": "image",
-            "version": "latest"
-          }],
-          "name": "activemq:0.1.0",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
-          "version": "0.1.0"
         },
         {
           "maintainers": [{"name": "databus23"}],
@@ -250,6 +236,20 @@
           "type": "chart",
           "shortName": "alfresco-search",
           "version": "0.0.4"
+        },
+        {
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "webcenter/activemq",
+            "type": "image",
+            "version": "latest"
+          }],
+          "name": "activemq:0.1.0",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "0.1.0"
         }
       ],
       "name": "alfresco-content-services:1.1.4",
