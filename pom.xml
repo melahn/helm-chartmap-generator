@@ -5,7 +5,39 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.melahn</groupId>
   <artifactId>helm-chartmap-generator</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
+  <name>${project.groupId}:${project.artifactId}</name>
+  <description>A tool that generates a set of helm dependency reports in various formats for a given helm chart repository</description>
+  <url>https://github.com/melahn/helm-chartmap-generator</url>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:git://github.com/melahn/helm-chartmap-generator.git</connection>
+    <developerConnection>scm:git:ssh://github.com:melahn/helm-chartmap-generator.git</developerConnection>
+    <url>https://github.com/melahn/helm-chartmap-generator/tree/master</url>
+  </scm>
+  <developers>
+    <developer>
+      <name>Gregory Melahn</name>
+      <email>gregorymelahn@gmail.com</email>
+      <organization>melahn.com</organization>
+      <organizationUrl>http://melahn.com</organizationUrl>
+    </developer>
+  </developers>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -23,6 +55,68 @@
   </dependencies>
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.8</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>ossrh</serverId>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        </configuration>
+        <dependencies>
+          <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+          <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.6</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <source>8</source>
+        </configuration>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -96,6 +190,8 @@
                   <directory>${basedir}/target</directory>
                   <includes>
                     <include>${project.artifactId}-${project.version}.jar</include>
+                    <include>${project.artifactId}-${project.version}-javadoc.jar</include>
+                    <include>${project.artifactId}-${project.version}-sources.jar</include>
                   </includes>
                 </resource>
               </resources>

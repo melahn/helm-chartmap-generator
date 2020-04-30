@@ -1,5 +1,5 @@
 # helm-chartmap-generator
-![version](https://img.shields.io/badge/version-1.0.1-green)
+![version](https://img.shields.io/badge/version-1.0.2-green)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
@@ -16,19 +16,32 @@ and provided links to view them.
 
 You can see lots of examples here -> https://melahn.github.io/helm-chartmap-generator/ 
 
+## Maven Central 
+
+The jar file, along with source and javadoc, is available from **Maven Central**.  
+```
+<dependency>
+  <groupId>com.melahn</groupId>
+  <artifactId>helm-chartmap-generator</artifactId>
+  <version>1.0.2</version>
+</dependency>
+```
+
 ## Prerequisites
 
 * Java 8 or later.
 
 ## Usage
 
-1. Download the executable jar from the [resource directory](./resource/jar), or build it yourself from source (see below).
+1. Download the executable jar from the [resource directory](./resource/jar),
+or download it from [Maven Central](https://oss.sonatype.org/service/local/repositories/releases/content/com/melahn/helm-chartmap-generator/1.0.2/helm-chartmap-generator-1.0.2.jar) 
+or build it yourself from source (see below).
 
 2. Run the command line.  See Syntax and Examples below.
 
 ### Command Line Syntax
 ```
-java -jar helm-chartmap-generator-1.0.1.jar
+java -jar helm-chartmap-generator-1.0.2.jar
 
 Flags:
 	-r	<repo name>		the name of the local helm repo to use (required)
@@ -67,12 +80,12 @@ Flags:
     
 ##### Generating reports from the incubator repo using all the detaults
 ```
-    java -helm-chartmap-generator-1.0.1.jar -r incubator 
+    java -helm-chartmap-generator-1.0.2.jar -r incubator 
 ``` 
      
 ##### Generating JSON and PlantUML reports from the stable repo, with up to 3 versions printed with verbose output
 ```
-    java -helm-chartmap-generator-1.0.1.jar -r stable -f pt -n 3 -v 
+    java -helm-chartmap-generator-1.0.2.jar -r stable -f pt -n 3 -v 
 ``` 
 
 ### Notes
