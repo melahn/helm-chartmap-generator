@@ -36,7 +36,7 @@ class ChartMapGeneratorTest {
     @Test
     void helpTest() throws IOException {
         String helpTextExpected = "\nUsage:\n\n"
-                .concat("java -jar helm-chartmap-generator-1.0.0.jar\n")
+                .concat("java -jar helm-chartmap-generator-1.0.0-SNAPSHOT.jar\n")
                 .concat("\nFlags:\n")
                 .concat("\t-r\t<repo name>\t\tthe name of the local helm repo to use (required)\n")
                 .concat("\t-o\t<directory name>\tthe output directory to use (default <pwd>) (optional)\n")
@@ -46,7 +46,7 @@ class ChartMapGeneratorTest {
                 .concat("\t-v\tverbose\t\t\tprint verbose output (optional)\n")
                 .concat("\t-h\thelp\t\t\tprovide help (optional)\n")
                 .concat("\nSee https://github.com/melahn/helm-chartmap-generator for more information\n");
-        String helpText = new ChartMapGenerator().getHelp();
+        String helpText = ChartMapGenerator.getHelp();
         assertEquals(helpText, helpTextExpected);
         System.out.println(new Throwable().getStackTrace()[0].getMethodName().concat(" completed"));
     }

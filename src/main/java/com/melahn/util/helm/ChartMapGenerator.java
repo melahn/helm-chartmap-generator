@@ -1,7 +1,10 @@
 package com.melahn.util.helm;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
@@ -9,6 +12,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -30,6 +34,11 @@ public class ChartMapGenerator {
     private String chartMapGeneratorVerbose = "CHARTMAP_GENERATOR_VERBOSE";
     private Level logLevelVerbose;
 
+    private String helmCommand;
+    private String helmCachePath;
+    private String helmConfigPath;
+    private String helmRepositoryCachePath;
+    private String helmRepositoryConfigPath;
     private String localRepoName = null;
     private String outputDirname = System.getProperty("user.dir");
     private String envFilename = null;
@@ -39,6 +48,9 @@ public class ChartMapGenerator {
     private String indexFilename = null;
     private int maxVersions = 0;
 
+    protected static final int PROCESS_TIMEOUT = 100000;
+    protected static final String INTERRUPTED_EXCEPTION = "InterruptedException {} running command %s : %s";
+       
     private static final String DEFAULT_LOCATION_MESSAGE = File.pathSeparator.concat(" will be used");
     private static final boolean GENERATE_IMAGE_SWITCH = true;
     private static final boolean REFRESH_REPOS_SWITCH = false;
@@ -51,9 +63,13 @@ public class ChartMapGenerator {
      */
     public static void main(String[] arg) {
         ChartMapGenerator generator = new ChartMapGenerator();
+        generator.setVerboseLogLevel();
         try {
-            generator.parseArgs(arg);
-            generator.generate();
+            generator.checkHelmVersion();
+            generator.getHelmClientInformation();
+            if (generator.parseArgs(arg)) {
+                generator.generate();
+            }
         } catch (ChartMapGeneratorException e) {
             generator.logger.error("ChartMapGeneratorException: {} ", e.getMessage());
         }
@@ -108,7 +124,7 @@ public class ChartMapGenerator {
             if (a.length == 0
                     || cmd.hasOption("h")
                     || localRepoName == null) {
-                logger.info(ChartMap.getHelp());
+                logger.info(ChartMapGenerator.getHelp());
                 return false;
             }
             parseFormatString();
@@ -179,13 +195,13 @@ public class ChartMapGenerator {
     }
 
     /**
-     * Prints some help
+     * Prints some help.
      *
      * @return a string containing some help
      */
-    public String getHelp() {
+    public static String getHelp() {
         return "\nUsage:\n\n"
-                .concat("java -jar helm-chartmap-generator-1.0.0.jar\n")
+                .concat("java -jar helm-chartmap-generator-1.0.0-SNAPSHOT.jar\n")
                 .concat("\nFlags:\n")
                 .concat("\t-r\t<repo name>\t\tthe name of the local helm repo to use (required)\n")
                 .concat("\t-o\t<directory name>\tthe output directory to use (default <pwd>) (optional)\n")
@@ -203,7 +219,6 @@ public class ChartMapGenerator {
      * @param h helm chart
      */
     private void printChart(HelmChart h) {
-
         try {
             logger.info("Printing chart: {}", h.getNameFull());
             startStanzaInIndex(h.getNameFull());
@@ -384,6 +399,164 @@ public class ChartMapGenerator {
         }
     }
 
+    /**
+     * Gets the environment variable. Using my own function for this allows testing
+     * of different environment variable values using mocks and spies.  
+     * 
+     * @param e The name of the variable to fetch
+     * @return The value of the variable or null
+     */
+    protected String getEnv(String e) {
+       return System.getenv(e);
+    }
+
+    /**
+     * Sets the helm information, include the helm command, version and paths.
+     * 
+     * @throws ChartMapGeneratorException if any of the helm information cannot be set
+     */
+    void setHelmEnvironment() throws ChartMapGeneratorException {
+        helmCommand = getHelmCommand();
+        checkHelmVersion();
+        getHelmClientInformation();
+    }
+
+    /**
+     * Return the helm command to use, giving priority to the value of HELM_BIN if
+     * set explictly. Setting HELM_BIN explicitly is arguably more secure since the
+     * user does not need to worry then about some evil helm command in the PATH,
+     * though it does then rely on the value of HELM_BIN itself being secure.
+     * 
+     * @return the helm command
+     */
+    protected String getHelmCommand() {
+        String helmBin = getEnv("HELM_BIN");
+        return helmBin == null ? "helm" : helmBin;
+    }
+
+    /**
+     * Gets the major version of the helm client and sets helmMajorVersionUsed.
+     * 
+     * The helm version command offers templated output using go template syntax but
+     * the values were not designed to be forward or backward compatible (!) hence
+     * the tortured logic here
+     * 
+     * @throws ChartMapGeneratorException if a version other than V3 is found
+     */
+    protected void checkHelmVersion() throws ChartMapGeneratorException {
+        String[] c = { getHelmCommand(), "version", "--template", "{{ .Version }}" };
+        try {
+            Process p = getProcess(c, null);
+            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            p.waitFor(PROCESS_TIMEOUT, TimeUnit.MILLISECONDS);
+            int exitValue = p.exitValue();
+            if (exitValue == 0) {
+                String o = br.readLine();
+                if (o != null && o.length() > 1 && o.charAt(1) == '3') {
+                    return;
+                }
+                throw new ChartMapGeneratorException(
+                        "Unsupported Helm Version. Please upgrade to helm V3 or use a previous version of ChartMapGenerator.");
+            } else { // we could not even execute the helm command
+                throw new ChartMapGeneratorException("Error Code: " + exitValue + " executing command " + c[0]
+                        + c[1] + c[2] + c[3]);
+            }
+        } catch (IOException e) {
+            // we could not get the output of the helm command
+            throw new ChartMapGeneratorException(
+                    String.format("Exception trying to discover Helm Version: %s ", e.getMessage()));
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new ChartMapGeneratorException(String.format(INTERRUPTED_EXCEPTION, getHelmCommand(), e.getMessage()));
+        }
+    }
+
+    /**
+     * Finds the helm client environment information.
+     * 
+     * @throws ChartMapGeneratorException if an error occurs finding the client information
+     *                           
+     */
+    protected void getHelmClientInformation() throws ChartMapGeneratorException {
+        // run the helm env command to get the client information
+        try {
+            File tempEnvFile = getTempFile("helm-chartmap-env", ".txt");  
+            // Guard against a vulnerability in the temp file by restricting to owner permissions
+            // Note: Not using Posix permissions here for reasons of Windows portability
+            boolean br = tempEnvFile.setReadable(true, true);
+            boolean bw = tempEnvFile.setWritable(true, true);
+            boolean be = tempEnvFile.setExecutable(true, true);
+            if (!br || !bw || !be) {
+                throw new ChartMapGeneratorException(String.format("Failure to set permissions on %s: r=%b, w=%b, e=%b ", tempEnvFile.toString(), br, bw, be));
+            }
+            ProcessBuilder pb = getProcessBuilder(getHelmCommand(), "env");
+            pb.redirectOutput(tempEnvFile);
+            Process p = pb.start();
+            p.waitFor(PROCESS_TIMEOUT, TimeUnit.MILLISECONDS);
+            int exitValue = p.exitValue();
+            if (exitValue == 0) {
+                FileReader fileReader = new FileReader(tempEnvFile);
+                // read the file and extract the useful information
+                String line = null;
+                try (BufferedReader bufferedReader = new BufferedReader(fileReader)) {
+                    line = bufferedReader.readLine();
+                    while (line != null) {
+                        extractHelmClientInformation(line);
+                        line = bufferedReader.readLine();
+                    }
+                }
+            } else {
+                throw new ChartMapGeneratorException(
+                        String.format("Error Code: %c executing helm env command ", exitValue));
+            }
+        } catch (IOException e) {
+            throw (new ChartMapGeneratorException("IOException executing helm env command"));
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw (new ChartMapGeneratorException("IOException executing helm env command"));
+        }
+    }
+
+    /**
+     * Creates a temporary file and returns that as a File solely for
+     * the purpose of testing exception conditions in the automated tests. 
+     * 
+     * @param p prefix to use
+     * @param s suffix to use
+     * @return a new temp File
+     * @throws IOException when an error occurs creating the temp file
+     */
+    protected File getTempFile(String p, String s) throws IOException {
+        File f = File.createTempFile(p, s);
+        f.deleteOnExit();
+        return f;
+    }
+
+    /**
+     * Extracts the relevant helm path from the string.  Note that
+     * the values returned in a line returned by the helm env command 
+     * are enclosed in double quotes so these double quotes
+     * must be stripped out so as not to cause problems later 
+     * when the values are referenced.
+     * 
+     * @param l a line containing some helm client information
+     *  in format name=\"value\"
+     */
+    private void extractHelmClientInformation(String l) {
+        String[] a = l.split("=");
+        if (a[0].equals("HELM_CACHE_HOME")) {
+            setHelmCachePath(a[1].substring(1,a[1].length()-1));
+        }
+        else if (a[0].equals("HELM_CONFIG_HOME")) {
+            setHelmConfigPath(a[1].substring(1,a[1].length()-1));
+        }
+        else if (a[0].equals("HELM_REPOSITORY_CACHE")) {
+            setHelmRepositoryCachePath(a[1].substring(1,a[1].length()-1));
+        }
+        else if (a[0].equals("HELM_REPOSITORY_CONFIG")) {
+            setHelmRepositoryConfigPath(a[1].substring(1,a[1].length()-1));
+        }
+    }
 
     /**
      * If the user has specified the verbose flag, set the log level so it has a
@@ -412,6 +585,65 @@ public class ChartMapGenerator {
         }
     }
 
+    /**
+     * 
+     * This method was introduced to allow providing a test version of a Process so
+     * as to return non zero exit codes for testing.
+     * 
+     * @param c the command and its parameters
+     * @param d the working directory
+     * @return a Process
+     * @throws IOException if an error occurs getting the process
+     */
+    public Process getProcess(String[] c, File d) throws IOException {
+        return d!=null?Runtime.getRuntime().exec(c, null, d):Runtime.getRuntime().exec(c, null);
+    }
+
+    /**
+     * 
+     * This method was introduced to allow providing a test version of a ProcessBuilder so
+     * as to return non zero exit codes for testing.
+     * 
+     * @param c the command 
+     * @param a the arg 
+     * @return a ProcessBuilder
+     * @throws IOException if an error occurs getting the process
+     */
+    public ProcessBuilder getProcessBuilder(String c, String a) throws IOException {
+        return new ProcessBuilder(c, a);
+    }
+
+    public String getHelmCachePath() {
+        return helmCachePath;
+    }
+
+    protected void setHelmCachePath(String s) {
+        helmCachePath = s;
+    }
+
+    public String getHelmConfigPath() {
+        return helmConfigPath;
+    }
+
+    protected void setHelmConfigPath(String s) {
+        helmConfigPath = s;
+    }
+
+    public String getHelmRepositoryCachePath() {
+        return helmRepositoryCachePath;
+    }
+
+    protected void setHelmRepositoryCachePath(String s) {
+        helmRepositoryCachePath = s;
+    }
+
+    public String getHelmRepositoryConfigPath() {
+        return helmRepositoryConfigPath;
+    }
+
+    protected void setHelmRepositoryConfigPath(String s) {
+        helmRepositoryConfigPath = s;
+    }
     public boolean isVerbose() {
         return verbose;
     }
