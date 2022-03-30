@@ -41,7 +41,7 @@ public class ChartMapGenerator {
     private String helmRepositoryCachePath;
     private String helmRepositoryConfigPath;
     private String localRepoName = null;
-    private String outputDirname = System.getProperty("user.dir");
+    private String outputDirName = System.getProperty("user.dir");
     private String envFilename = null;
     private boolean verbose = false;
     private String formatString = "";
@@ -52,10 +52,10 @@ public class ChartMapGenerator {
     protected static final int PROCESS_TIMEOUT = 100000;
     protected static final String INTERRUPTED_EXCEPTION = "InterruptedException {} running command %s : %s";
        
-    private static final String DEFAULT_LOCATION_MESSAGE = File.pathSeparator.concat(" will be used");
-    private static final boolean GENERATE_IMAGE_SWITCH = true;
-    private static final boolean REFRESH_REPOS_SWITCH = false;
-    private static final boolean VERBOSE_SWITCH = false;
+    private static final String DEFAULT_LOCATION_MESSAGE = File.separator.concat(" will be used");
+    private static final boolean CHARTMAP_GENERATE_IMAGE_SWITCH = true;
+    private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH = false;
+    private static final boolean CHARTMAP_VERBOSE_SWITCH = false;
 
     /**
      * Parses the command line and generates a set of reports
@@ -79,7 +79,7 @@ public class ChartMapGenerator {
      * Constructor
      *
      * @param repoName       The name of the helm repo from which to generate charts
-     * @param outputDirname  The name of the directopry to which the cnart maps will be generated
+     * @param outputDirName  The name of the directopry to which the cnart maps will be generated
      * @param fileFormatMask The file format mast controlling which file types get generated
      * @param maxVersions    The maximum number of file versions to generate
      * @param envFilename    The name of a yaml file that contains a set of
@@ -90,16 +90,16 @@ public class ChartMapGenerator {
      * @throws ChartMapGeneratorException when an error occurs generating the chart maps
      **/
 
-    public ChartMapGenerator(String repoName, String outputDirname, String fileFormatMask, int maxVersions, String envFilename, boolean verbose)
+    public ChartMapGenerator(String repoName, String outputDirName, String fileFormatMask, int maxVersions, String envFilename, boolean verbose)
             throws ChartMapGeneratorException {
         setVerbose(verbose);  
         setVerboseLogLevel();
         ArrayList<String> args = new ArrayList<>();
         args.add("-r");
         args.add(repoName);
-        if (outputDirname != null) {
+        if (outputDirName != null) {
             args.add("-o");
-            args.add(outputDirname);
+            args.add(outputDirName);
         }
         if (fileFormatMask != null) {
             args.add("-f");
@@ -150,29 +150,19 @@ public class ChartMapGenerator {
                 verbose = true;
             }
             if (cmd.hasOption("o")) {
-                outputDirname = cmd.getOptionValue("o");
-                logger.log(logLevelVerbose, "Files will be written to directory \"{}\".", outputDirname);
+                outputDirName = cmd.getOptionValue("o");
             }
             if (cmd.hasOption("r")) {
                 localRepoName = cmd.getOptionValue("r");
-                logger.log(logLevelVerbose, "Local helm chart repo \"{}{}\"", localRepoName, DEFAULT_LOCATION_MESSAGE);
             }
             if (cmd.hasOption("f")) {
                 formatString = cmd.getOptionValue("f");
-                logger.log(logLevelVerbose, "Format string \"{}{}\"", formatString, DEFAULT_LOCATION_MESSAGE);
             }
             if (cmd.hasOption("n")) {
                 maxVersions = Integer.parseInt(cmd.getOptionValue("n"));
-                if (maxVersions == 1) {
-                    logger.log(logLevelVerbose, "Only one version of each chart will be printed.");
-                }
-                else {
-                    logger.log(logLevelVerbose, "A maximum of {} versions of each chart will be printed.", cmd.getOptionValue("n"));
-                }
             }
             if (cmd.hasOption("e")) {
                 envFilename = cmd.getOptionValue("e");
-                logger.log(logLevelVerbose, "Environment file \"{}{}\"", envFilename, DEFAULT_LOCATION_MESSAGE);
             }
             if (a.length == 0
                     || cmd.hasOption("h")
@@ -181,6 +171,19 @@ public class ChartMapGenerator {
                 return false;
             }
             parseFormatString();
+            setVerboseLogLevel();
+            logger.log(logLevelVerbose, "Local helm chart repo \"{}\"", localRepoName);
+            logger.log(logLevelVerbose, "Format string \"{}\"", formatString);
+            logger.log(logLevelVerbose, "Files will be written to directory \"{}\".", outputDirName);
+            if (maxVersions == 1) {
+                logger.log(logLevelVerbose, "Only one version of each chart will be printed.");
+            }
+            else {
+                logger.log(logLevelVerbose, "A maximum of {} versions of each chart will be printed.", cmd.getOptionValue("n"));
+            }
+            if (envFilename != null) {
+                logger.log(logLevelVerbose, "Environment file \"{}\"", envFilename);
+            }
             return true;
         } catch (ParseException e) {
             throw (new ChartMapGeneratorException(e.getMessage()));
@@ -188,49 +191,23 @@ public class ChartMapGenerator {
     }
 
     /**
-     * Constructs a helm repo file name from the short name of a helm repo
-     *
-     * @param r A repo name (e.g. stable)
-     * @return The fqfn of a local yaml file where helm chart info can be found, null otherwise
-     */
-    private String constructRepoFilename(String r) {
-        String helmHome = System.getenv("HELM_HOME");
-        if (helmHome != null) {
-            String repoFileName = helmHome.concat("/").concat("/repository/cache/").concat(r).concat("-index.yaml");
-            File f = new File(repoFileName);
-            if (f.exists()) {
-                return repoFileName;
-            }
-        }
-        return null;
-    }
-
-    /**
-     * Generates a set of reports
+     * Using a local chart repo, prints each chart, keeping a count along the way.
      *
      */
-    private void generate() {
-        String localRepoFilename = constructRepoFilename(localRepoName);
-        if (localRepoFilename != null) {
-            loadChartsFromCache(localRepoFilename);
-        }
-    }
-
-    /**
-     * Takes the name of a file containing helm charts in yaml form and constructs a HelmChart object from
-     * each and prints it, keeping a count aling the way
-     *
-     * @param f a file containing helm charts in yaml form
-     */
-    private void loadChartsFromCache(String f) {
-        logger.info("Loading charts from {}", f);
+    private void generate() throws ChartMapGeneratorException {
+        String localRepoFilename = getHelmRepositoryCachePath().concat(File.separator).concat(localRepoName).concat("-index.yaml");
+        logger.info("Loading charts from {}", localRepoFilename);
         HelmChartLocalCache cache;
         try {
             ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
             mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-            cache = mapper.readValue(new File(f), HelmChartLocalCache.class);
+            cache = mapper.readValue(new File(localRepoFilename), HelmChartLocalCache.class);
             Map<String, HelmChart[]> entries = cache.getEntries();
-            logger.info("{} charts were found", entries.size());
+            if (entries.size() == 1) {
+                logger.info("One chart was found");
+            } else {
+                logger.info("{} charts were found", entries.size());
+            }
             createIndex();
             for (Map.Entry<String, HelmChart[]> entry : entries.entrySet()) {
                 int i = 1;
@@ -242,8 +219,9 @@ public class ChartMapGenerator {
                 }
             }
             endIndex();
-        } catch (Exception e) {
+        } catch (IOException e) {
             logger.error("Exception: {}",e.getMessage());
+            throw new ChartMapGeneratorException(String.format("Error generating charts from repo %s", localRepoFilename));
         }
     }
 
@@ -254,7 +232,7 @@ public class ChartMapGenerator {
      */
     public static String getHelp() {
         return "\nUsage:\n\n"
-                .concat("java -jar helm-chartmap-generator-1.0.0-SNAPSHOT.jar\n")
+                .concat("java -jar helm-chartmap-generator-1.1.0-SNAPSHOT.jar\n")
                 .concat("\nFlags:\n")
                 .concat("\t-r\t<repo name>\t\tthe name of the local helm repo to use (required)\n")
                 .concat("\t-o\t<directory name>\tthe output directory to use (default <pwd>) (optional)\n")
@@ -290,20 +268,24 @@ public class ChartMapGenerator {
      * @param h helm chart
      * @param f the file extension to use
      */
-    private void printChart(HelmChart h, String f) {
+    private void printChart(HelmChart h, String f) throws ChartMapException {
         String filename = h.getName().concat("-").concat(h.getVersion()).concat(f);
         try {
             ChartMap testMap = new ChartMap(
                     ChartOption.CHARTNAME,
                     h.getNameFull(),
-                    outputDirname.concat("/").concat(filename),
+                    outputDirName.concat(File.separator).concat(filename),
                     envFilename,
-                    new boolean[]{ GENERATE_IMAGE_SWITCH, REFRESH_REPOS_SWITCH, VERBOSE_SWITCH});
+                    new boolean[]{ CHARTMAP_GENERATE_IMAGE_SWITCH, CHARTMAP_REFRESH_REPOS_SWITCH, CHARTMAP_VERBOSE_SWITCH});
             testMap.print();
             addChartToIndex(filename);
             logger.info("File {} created.", filename);
-        } catch (Exception e) {
-            logger.error("Exception creating file \"{}\" : {}", filename, e.getMessage());
+        } catch (IOException e) {
+            logger.error("IOException creating file \"{}\" : {}", filename, e.getMessage());
+            throw new ChartMapException(e.getLocalizedMessage());
+        }
+        catch (ChartMapException e) {
+            logger.error("ChartMapException creating file \"{}\" : {}", filename, e.getLocalizedMessage());
         }
     }
 
@@ -312,7 +294,7 @@ public class ChartMapGenerator {
      *
      */
     private void createIndex() throws ChartMapGeneratorException {
-        indexFilename = outputDirname.concat("/index.html");
+        indexFilename = outputDirName.concat("/index.html");
         String h = "<!DOCTYPE HTML>\n<html>\n";
         try {
             Files.write(Paths.get(indexFilename),
@@ -347,7 +329,7 @@ public class ChartMapGenerator {
      *
      */
     private void createStyleFile () throws IOException {
-        String styleFilename = outputDirname.concat("/style.css");
+        String styleFilename = outputDirName.concat("/style.css");
         String s = "* {\n\tfont-family: \"Arial\", Helvetica, san-serif;\n\tcolor: lightgray;\n\tbackground-color: black;\n}\n"
                 .concat("a:visited {\n\tcolor: grey;\n}\n")
                 .concat(".header {").concat("\n\tfont: 30px sans-serif;\n}\n")

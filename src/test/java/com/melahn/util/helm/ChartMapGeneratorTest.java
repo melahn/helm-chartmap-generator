@@ -131,7 +131,7 @@ class ChartMapGeneratorTest {
     @Test
     void helpTest() throws IOException {
         String helpTextExpected = "\nUsage:\n\n"
-                .concat("java -jar helm-chartmap-generator-1.0.0-SNAPSHOT.jar\n")
+                .concat("java -jar helm-chartmap-generator-1.1.0-SNAPSHOT.jar\n")
                 .concat("\nFlags:\n")
                 .concat("\t-r\t<repo name>\t\tthe name of the local helm repo to use (required)\n")
                 .concat("\t-o\t<directory name>\tthe output directory to use (default <pwd>) (optional)\n")
@@ -150,9 +150,6 @@ class ChartMapGeneratorTest {
             int maxVersions, String envFilename, boolean verbose) throws ChartMapGeneratorException {
         ChartMapGenerator cmg = new ChartMapGenerator(repoName, outputDirName, fileFormatMask, maxVersions, envFilename,
                 verbose);
-        // cmg. // set this explictly so that test cases can test helm dependent methods
-        // without
-        // necessarily calling print
         return cmg;
     }
 }
