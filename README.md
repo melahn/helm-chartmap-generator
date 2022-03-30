@@ -2,6 +2,7 @@
 
 ![version](https://img.shields.io/badge/version-1.0.2-green)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=melahn_helm-chartmap-generator&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=melahn_helm-chartmap-generator)
 
 ## Overview
 
