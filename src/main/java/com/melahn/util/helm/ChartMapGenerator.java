@@ -10,6 +10,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -63,7 +64,6 @@ public class ChartMapGenerator {
      */
     public static void main(String[] arg) {
         ChartMapGenerator generator = new ChartMapGenerator();
-        generator.setVerboseLogLevel();
         try {
             generator.checkHelmVersion();
             generator.getHelmClientInformation();
@@ -73,6 +73,59 @@ public class ChartMapGenerator {
         } catch (ChartMapGeneratorException e) {
             generator.logger.error("ChartMapGeneratorException: {} ", e.getMessage());
         }
+    }
+
+    /**
+     * Constructor
+     *
+     * @param repoName       The name of the helm repo from which to generate charts
+     * @param outputDirname  The name of the directopry to which the cnart maps will be generated
+     * @param fileFormatMask The file format mast controlling which file types get generated
+     * @param maxVersions    The maximum number of file versions to generate
+     * @param envFilename    The name of a yaml file that contains a set of
+     *                       environment variables which may influence the way the
+     *                       charts are rendered by helm
+     * @param verbose        A flag controlling which messages are displayed.
+
+     * @throws ChartMapGeneratorException when an error occurs generating the chart maps
+     **/
+
+    public ChartMapGenerator(String repoName, String outputDirname, String fileFormatMask, int maxVersions, String envFilename, boolean verbose)
+            throws ChartMapGeneratorException {
+        setVerbose(verbose);  
+        setVerboseLogLevel();
+        ArrayList<String> args = new ArrayList<>();
+        args.add("-r");
+        args.add(repoName);
+        if (outputDirname != null) {
+            args.add("-o");
+            args.add(outputDirname);
+        }
+        if (fileFormatMask != null) {
+            args.add("-f");
+            args.add(fileFormatMask);
+        }
+        args.add("-n");
+        args.add(Integer.toString(maxVersions));
+        if (envFilename != null) {
+            args.add("-e");
+            args.add(envFilename);
+        }
+        for (String a : args) {
+            if (a == null) {
+                throw new ChartMapGeneratorException("Null parameter");
+            }
+        }
+        parseArgs(args.toArray(new String[args.size()]));
+    }
+
+     /**
+     * Default constructor.
+     * 
+     * Just sets the debug log level.
+     */
+    public ChartMapGenerator() {
+        setVerboseLogLevel();
     }
 
     /**
