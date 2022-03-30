@@ -46,7 +46,7 @@ class ChartMapGeneratorTest {
                 .concat("\t-v\tverbose\t\t\tprint verbose output (optional)\n")
                 .concat("\t-h\thelp\t\t\tprovide help (optional)\n")
                 .concat("\nSee https://github.com/melahn/helm-chartmap-generator for more information\n");
-        String helpText = ChartMapGenerator.getHelp();
+        String helpText = new ChartMapGenerator().getHelp();
         assertEquals(helpText, helpTextExpected);
         System.out.println(new Throwable().getStackTrace()[0].getMethodName().concat(" completed"));
     }
