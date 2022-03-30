@@ -236,7 +236,7 @@ public class ChartMapGenerator {
      * Creates the index file and adds a head element
      *
      */
-    private static void createIndex() throws Exception {
+    private static void createIndex() throws ChartMapGeneratorException {
         indexFilename = outputDirname.concat("/index.html");
         String h = "<!DOCTYPE HTML>\n<html>\n";
         try {
@@ -246,7 +246,7 @@ public class ChartMapGenerator {
                     StandardOpenOption.WRITE);
             addHead();
         } catch (IOException e) {
-            throw (new Exception("Error creating index file ".concat(indexFilename).concat(".  Possibly it already exists")));
+            throw (new ChartMapGeneratorException("Error creating index file ".concat(indexFilename).concat(".  Possibly it already exists")));
         }
     }
 

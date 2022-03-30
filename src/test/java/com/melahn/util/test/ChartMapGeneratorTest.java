@@ -1,7 +1,6 @@
-package com.melahn.util.helm;
+package com.melahn.util.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -9,28 +8,14 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
-/*
- Tests the integrity of the jar by executing it to get the command line help
- */
+import com.melahn.util.helm.ChartMapGenerator;
 class ChartMapGeneratorTest {
-
     private final static String DIVIDER = "-------------------------------------";
 
     @BeforeAll
     static void setUp() {
         System.out.println(DIVIDER.concat(" UNIT TESTS START ").concat(DIVIDER));
-        try {
-            //if (!Files.exists(Paths.get(".", testInputFileName))) {
-            //    throw new Exception(String.format("test Input File %s does not exist", testInputFileName));
-           // }
-            //ChartMapTestUtil.cleanDirectory(testOutputPumlFilePathRV.getParent());
-       //     Files.createDirectories(testOutputPumlFilePathRV.getParent());
-        } catch (Exception e) {
-            fail("Test setup failed: " + e.getMessage());
-        }
         System.out.println(new Throwable().getStackTrace()[0].getMethodName().concat(" completed"));
     }
 
@@ -41,11 +26,13 @@ class ChartMapGeneratorTest {
          * might be handy to have around to diagnose issues in test failures. They are
          * deleted anyway when the test is next run.
          */
-        //System.out.println("Test complete.  Any generated file can be found in "
-        //        .concat(Paths.get(targetTestDirectory).toAbsolutePath().toString()));
         System.out.println(DIVIDER.concat(" UNIT TESTS END ").concat(DIVIDER));
     }
-
+    /**
+     * Tests the Help
+     * 
+     * @throws IOException
+     */
     @Test
     void helpTest() throws IOException {
         String helpTextExpected = "\nUsage:\n\n"
