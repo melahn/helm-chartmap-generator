@@ -29,10 +29,13 @@ public class ChartMapGenerator {
     private static String envFilename = null;
     private static boolean verbose = false;
     private static String formatString = "";
-    private static HashSet<String> extensions = new HashSet<String>();
+    private static HashSet<String> extensions = new HashSet<>();
     private static String indexFilename = null;
-    private static String styleFilename = null;
     private static int maxVersions = 0;
+    private static final String DEFAULT_LOCATION_MESSAGE = File.pathSeparator.concat(" will be used");
+    private static final boolean GENERATE_IMAGE_SWITCH = true;
+    private static final boolean REFRESH_REPOS_SWITCH = false;
+    private static final boolean VERBOSE_SWITCH = false;
 
     /**
      * Parses the command line and generates a set of reports
@@ -43,8 +46,6 @@ public class ChartMapGenerator {
         try {
             parseArgs(arg);
             generate();
-        } catch (IOException e) {
-            System.out.println("IOException: " + e.getMessage());
         } catch (ParseException e) {
             System.out.println("ParseException: " + e.getMessage());
         } catch (Exception e) {
@@ -57,7 +58,7 @@ public class ChartMapGenerator {
      *
      * @param a The command line args
      */
-    private static void parseArgs(String[] a) throws IOException, ParseException {
+    private static void parseArgs(String[] a) throws ParseException {
         Options options = new Options();
         options.addOption("h", false, "Help");
         options.addOption("o", true, "The Output Directory name");
@@ -66,15 +67,11 @@ public class ChartMapGenerator {
         options.addOption("n", true, "The Max Number of Chart Versions to Print");
         options.addOption("e", true, "Environment Specification File");
         options.addOption("v", false, "Verbose");
-        options.addOption("z", false, "Debug Mode");
         CommandLineParser parser = new DefaultParser();
         try {
             CommandLine cmd = parser.parse(options, a);
             if (cmd.hasOption("v")) {
                 verbose = true;
-            }
-            if (cmd.hasOption("z")) {
-                boolean debug = true;
             }
             if (cmd.hasOption("o")) {
                 outputDirname = cmd.getOptionValue("o");
@@ -82,11 +79,11 @@ public class ChartMapGenerator {
             }
             if (cmd.hasOption("r")) {
                 localRepoName = cmd.getOptionValue("r");
-                log("local helm chart repo \"".concat(localRepoName).concat("\" will be used"));
+                log("local helm chart repo \"".concat(localRepoName).concat(DEFAULT_LOCATION_MESSAGE));
             }
             if (cmd.hasOption("f")) {
                 formatString = cmd.getOptionValue("f");
-                log("format string \"".concat(formatString).concat("\" will be used"));
+                log("format string \"".concat(formatString).concat(DEFAULT_LOCATION_MESSAGE));
             }
             if (cmd.hasOption("n")) {
                 maxVersions = Integer.parseInt(cmd.getOptionValue("n"));
@@ -99,7 +96,7 @@ public class ChartMapGenerator {
             }
             if (cmd.hasOption("e")) {
                 envFilename = cmd.getOptionValue("e");
-                log("Environment file \"".concat(envFilename).concat("\" will be used"));
+                log("Environment file \"".concat(envFilename).concat(DEFAULT_LOCATION_MESSAGE));
             }
             if (a.length == 0
                     || cmd.hasOption("h")
@@ -180,7 +177,7 @@ public class ChartMapGenerator {
      * @return a string containing some help
      */
     public static String getHelp() {
-        String help = "\nUsage:\n\n"
+        return "\nUsage:\n\n"
                 .concat("java -jar helm-chartmap-generator-1.0.0.jar\n")
                 .concat("\nFlags:\n")
                 .concat("\t-r\t<repo name>\t\tthe name of the local helm repo to use (required)\n")
@@ -191,8 +188,6 @@ public class ChartMapGenerator {
                 .concat("\t-v\tverbose\t\t\tprint verbose output (optional)\n")
                 .concat("\t-h\thelp\t\t\tprovide help (optional)\n")
                 .concat("\nSee https://github.com/melahn/helm-chartmap-generator for more information\n");
-
-        return help;
     }
 
     /**
@@ -227,11 +222,8 @@ public class ChartMapGenerator {
                     ChartOption.CHARTNAME,
                     h.getNameFull(),
                     outputDirname.concat("/").concat(filename),
-                    System.getenv("HELM_HOME"),
                     envFilename,
-                    true,
-                    false,
-                    false);
+                    new boolean[]{ GENERATE_IMAGE_SWITCH, REFRESH_REPOS_SWITCH, VERBOSE_SWITCH});
             testMap.print();
             addChartToIndex(filename);
             log(filename.concat(filename.concat(" created")));
@@ -280,7 +272,7 @@ public class ChartMapGenerator {
      *
      */
     private static void createStyleFile () throws IOException {
-        styleFilename = outputDirname.concat("/style.css");
+        String styleFilename = outputDirname.concat("/style.css");
         String s = "* {\n\tfont-family: \"Arial\", Helvetica, san-serif;\n\tcolor: lightgray;\n\tbackground-color: black;\n}\n"
                 .concat("a:visited {\n\tcolor: grey;\n}\n")
                 .concat(".header {").concat("\n\tfont: 30px sans-serif;\n}\n")

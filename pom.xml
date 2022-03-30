@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>com.melahn</groupId>
   <artifactId>helm-chartmap-generator</artifactId>
-  <version>1.0.2</version>
+  <version>1.1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
   <name>${project.groupId}:${project.artifactId}</name>
   <description>A tool that generates a set of helm dependency reports in various formats for a given helm chart repository</description>
   <url>https://github.com/melahn/helm-chartmap-generator</url>
+  <inceptionYear>2020</inceptionYear>
   <licenses>
     <license>
       <name>MIT License</name>
       <url>http://www.opensource.org/licenses/mit-license.php</url>
     </license>
   </licenses>
-  <scm>
-    <connection>scm:git:git://github.com/melahn/helm-chartmap-generator.git</connection>
-    <developerConnection>scm:git:ssh://github.com:melahn/helm-chartmap-generator.git</developerConnection>
-    <url>https://github.com/melahn/helm-chartmap-generator/tree/master</url>
-  </scm>
+
   <developers>
     <developer>
       <name>Gregory Melahn</name>
@@ -28,6 +26,12 @@
       <organizationUrl>http://melahn.com</organizationUrl>
     </developer>
   </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/melahn/helm-chartmap-generator.git</connection>
+    <developerConnection>scm:git:ssh://github.com:melahn/helm-chartmap-generator.git</developerConnection>
+    <url>https://github.com/melahn/helm-chartmap-generator/tree/master</url>
+  </scm>
   <distributionManagement>
     <snapshotRepository>
       <id>ossrh</id>
@@ -38,167 +42,47 @@
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <sonar.projectKey>helm-chartmap-generator</sonar.projectKey>
+    <sonar.organization>melahn</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
+
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.1</version>
-    </dependency>
     <dependency>
       <groupId>com.melahn</groupId>
       <artifactId>helm-chartmap</artifactId>
-      <version>1.0.2</version>
+      <version>1.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.17.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.8.2</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
+
   <build>
+    <resources>
+      <resource>
+        <!--used to extract the project version to derive the name of the shaded jar for integration-tests-->
+        <directory>src/main/resources/resources-filtered</directory>
+        <filtering>true</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>false</filtering>
+      </resource>
+    </resources>
     <plugins>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.8</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>ossrh</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
-        </configuration>
-        <dependencies>
-          <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
-          <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore</artifactId>
-            <version>4.4.6</version>
-          </dependency>
-        </dependencies>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>3.2.1</version>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.2.0</version>
-        <configuration>
-          <source>8</source>
-        </configuration>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.5</version>
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>sign</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-          <testSource>1.8</testSource>
-          <testTarget>1.8</testTarget>
-          <compilerArgument>-Xlint:unchecked</compilerArgument>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>buildnumber-maven-plugin</artifactId>
-        <version>1.4</version>
-        <executions>
-          <execution>
-            <phase>validate</phase>
-            <goals>
-              <goal>create</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <doCheck>false</doCheck>
-          <doUpdate>true</doUpdate>
-          <useLastCommittedRevision>true</useLastCommittedRevision>
-          <scmConnectionUrl>scm:git:https://github.com/melahn/helm-chartmap-generator.git</scmConnectionUrl>
-          <shortRevisionLength>10</shortRevisionLength>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.1.1</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-            <configuration>
-              <transformers>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <manifestEntries>
-                    <Main-Class>com.melahn.util.helm.ChartMapGenerator</Main-Class>
-                    <Build-Number>${buildNumber}</Build-Number>
-                  </manifestEntries>
-                </transformer>
-              </transformers>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>3.0.2</version>
-        <executions>
-          <execution>
-            <id>copy-resources</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/resource/jar</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>${basedir}/target</directory>
-                  <includes>
-                    <include>${project.artifactId}-${project.version}.jar</include>
-                    <include>${project.artifactId}-${project.version}-javadoc.jar</include>
-                    <include>${project.artifactId}-${project.version}-sources.jar</include>
-                  </includes>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
+      <!-- Is this still needed given the -g parm -->
       <plugin>
         <groupId>com.github.jeluard</groupId>
         <artifactId>plantuml-maven-plugin</artifactId>
@@ -221,7 +105,531 @@
           </dependency>
         </dependencies>
       </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.7</version>
+        <executions>
+          <execution>
+            <id>default-prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>default-report</id>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>default-check</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <rule>
+                  <element>BUNDLE</element>
+                  <limits>
+                    <limit>
+                      <counter>COMPLEXITY</counter>
+                      <value>COVEREDRATIO</value>
+                      <!-- Change to 1.00 once all the sonar stats are in -->
+                      <minimum>0.00</minimum>
+                    </limit>
+                  </limits>
+                </rule>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
+        <configuration>
+          <!-- Specifying release should be sufficient but specifying source is also needed because of a JDK bug that causes
+            the javadoc plugin to fail. See https://bugs.openjdk.java.net/browse/JDK-8217177 
+            Note that this is fixed in Java 13.
+            Note that adding source to the javadoc plugin configuration is not sufficient
+          -->
+          <source>8</source>
+          <release>8</release>
+          <showDeprecation>true</showDeprecation>
+          <showWarnings>true</showWarnings>
+          <optimize>true</optimize>
+          <compilerArgument>-Xlint:unchecked</compilerArgument>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <id>no-duplicate-declared-dependencies</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <banDuplicatePomDependencyVersions />
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>3.0.0-M5</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- 
+          Show which profile is in use to confirm the right one is being 
+          activated
+      -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-help-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <?m2e execute onConfiguration?>
+            <id>show-profiles</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>active-profiles</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- 
+          Including the maven-jar-plugin explictly (even though I am also usimg
+          the apache-shade-plugin) is to prevent the deplicating class issue when
+          not building clean. See https://issues.apache.org/jira/browse/MSHADE-126
+      -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+          <forceCreation>true</forceCreation>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.3.2</version>
+        <configuration>
+          <source>8</source>
+        </configuration>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.4</version>
+        <configuration>
+          <minimizeJar>true</minimizeJar>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <!--
+                  filter out unneeded class and META-INF globally
+              -->
+              <filters>
+                <!--
+                  filter out unneeded class and META-INF globally
+              -->
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>module-info.class</exclude>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                  </excludes>
+                </filter>
+                <!--
+                    filter out redundancies coming in from the archive extract jar
+                -->
+                <filter>
+                  <artifact>com.melahn:archive-extract</artifact>
+                  <excludes>
+                    <exclude>log4j2.xml</exclude>
+                    <exclude>Log4j-charsets.properties</exclude>
+                    <exclude>Log4j-config.xsd</exclude>
+                    <exclude>Log4j-events.dtd</exclude>
+                    <exclude>Log4j-events.xsd</exclude>
+                    <exclude>Log4j-levels.xsd</exclude>
+                    <exclude>Log4j-events.dtd</exclude>
+                    <exclude>org/apache/logging/log4j/**</exclude>
+                    <exclude>org/apache/commons/compress/**</exclude>
+                    <exclude>META-INF/versions/9/**</exclude>
+                    <exclude>META-INF/maven/org.apache.commons/commons-compress/pom.properties</exclude>
+                    <exclude>META-INF/maven/org.apache.commons/commons-compress/pom.xml</exclude>
+                    <exclude>META-INF/maven/org.apache.logging.log4j/pom.properties</exclude>
+                    <exclude>META-INF/maven/org.apache.logging.log4j/pom.xml</exclude>
+                    <exclude>META-INF/maven/org.apache.logging.log4j/pom.properties</exclude>
+                    <exclude>META-INF/maven/org.apache.logging.log4j/pom.xml</exclude>
+                    <exclude>META-INF/maven/org.apache.logging.log4j/log4j-api/pom.properties</exclude>
+                    <exclude>META-INF/maven/org.apache.logging.log4j/log4j-api/pom.xml</exclude>
+                    <exclude>META-INF/maven/org.apache.logging.log4j/log4j-core/pom.properties</exclude>
+                    <exclude>META-INF/maven/org.apache.logging.log4j/log4j-core/pom.xml</exclude>
+                    <exclude>META-INF/org/apache/logging/log4j/core/config/plugins/Log4j2Plugins.dat</exclude>
+                  </excludes>
+                </filter>
+                <!--
+                    filter out redundancies coming in from the com.fasterxml.jackson jars
+                -->
+                <filter>
+                  <artifact>com.fasterxml.jackson.core:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/versions/9/module-info.class</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>com.fasterxml.jackson.dataformat:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/versions/9/module-info.class</exclude>
+                  </excludes>
+                </filter>
+                <!--
+                    filter out the resources.properties because it is 
+                    only needed to compute the name of the shaded jar
+                    for running tests
+                -->
+                <filter>
+                  <artifact>com.melahn:helm-chartmap</artifact>
+                  <excludes>
+                    <exclude>**/resources.properties</exclude>
+                  </excludes>
+                </filter>
+                <!-- 
+                    This is necessary because the httpclient component depends on 
+                    the commons-logging component but not all the dependencies
+                    will be found as transitive hull dependencies, notably the impl classes.
+                -->
+                <filter>
+                  <artifact>commons-logging:commons-logging</artifact>
+                  <includes>
+                    <include>**</include>
+                  </includes>
+                </filter>
+                <!--
+                    explictly include all the log4j elements to
+                    avoid the 'ERROR StatusLogger Unrecognized format specifier'
+                    error which occurs because the minimize jar option cannot
+                    understand all the elements needed when computing the transitive 
+                    hull in particular, non-classfile elements
+                -->
+                <filter>
+                  <artifact>org.apache.logging.log4j:log4j-core</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                  <includes>
+                    <include>**</include>
+                  </includes>
+                </filter>
+                <!--
+                    filter out any duplicate manifests
+                -->
+                <filter>
+                  <artifact>org.apache.*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>com.melahn:archive-extract:*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>commons-cli:*:*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>commons-codec:*:*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>commons-logging:*:*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>com.fasterxml.jackson.core:*:*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>com.fasterxml.jackson.dataformat:*:*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>net.sourceforge.plantuml:*:*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>org.json:*:*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>org.yaml:*:*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <manifestEntries>
+                    <Main-Class>com.melahn.util.helm.ChartMap</Main-Class>
+                    <Multi-Release>true</Multi-Release>
+                    <Build-Timestamp>${maven.build.timestamp}</Build-Timestamp>
+                    <Builder-Id>${builder.id}</Builder-Id>
+                    <url>${project.url}</url>
+                  </manifestEntries>
+                </transformer>
+                <!--
+                    Aggregate license files
+                -->
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer" />
+                <!--
+                    Aggregate Notice files
+                -->
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
+                  <addHeader>false</addHeader>
+                </transformer>
+                <!--
+                    Aggregate META-INF/DEPENDENCIES
+                -->
+                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                  <resource>META-INF/DEPENDENCIES</resource>
+                </transformer>
+                <!--
+                    Aggregate Services
+                -->
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+          <skip>true</skip>
+          <trimStackTrace>false</trimStackTrace>
+        </configuration>
+        <executions>
+          <execution>
+            <id>unit-tests</id>
+            <phase>test</phase>
+            <goals>
+              <goal>test</goal>
+            </goals>
+            <configuration>
+              <skip>false</skip>
+              <includes>
+                <include>**/*Test.java</include>
+              </includes>
+              <excludes>
+                <exclude>**/*IntegrationTest.java</exclude>
+              </excludes>
+            </configuration>
+          </execution>
+          <execution>
+            <id>integration-tests</id>
+            <phase>integration-test</phase>
+            <goals>
+              <goal>test</goal>
+            </goals>
+            <configuration>
+              <skip>false</skip>
+              <includes>
+                <include>**/*IntegrationTest.java</include>
+              </includes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
-    <finalName>${project.artifactId}-${project.version}</finalName>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
+
+  <profiles>
+    <!-- 
+        This profile is used when building outside of 
+        GitHub actions, such as on the command line, using Java 9
+        or later.  The specification of <maven.compiler.release> 
+        assures that the compiler does not include any api calls that 
+        require java 9 or later (so it will run on Java 8).
+
+        It sets builder.id, useful in a manifest.
+
+        Deployment should only be done using GitHub 
+        CI/CD so no distributionManagement section
+        is defined.
+    -->
+    <profile>
+      <id>local-java9+</id>
+      <properties>
+        <builder.id>${user.name}</builder.id>
+        <maven.compiler.release>8</maven.compiler.release>
+      </properties>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+        <jdk>[9,)</jdk>
+      </activation>
+    </profile>
+    <!-- 
+        This profile is used when building outside of 
+        GitHub actions, such as on the command line, using Java 8
+        The specification of <maven.compiler.source> and
+        <maven.compiler.target> assures that the compiler does not 
+        include any api calls that require java 9 or later 
+        (so it will run on Java 8). 
+
+        It sets builder.id, useful in a manifest.
+
+        Deployment should only be done using GitHub 
+        CI/CD so no distributionManagement section
+        is defined.
+    -->
+    <profile>
+      <id>local-java8</id>
+      <properties>
+        <builder.id>${user.name}</builder.id>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+      </properties>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+        <jdk>1.8</jdk>
+      </activation>
+    </profile>
+    <!-- 
+        This profile is used with a GitHub Action.
+
+        It sets builder.id, useful in a MANIFEST.
+
+        It also sets up the repository to be
+        used for a deploy to GitHub Packages.
+    -->
+    <profile>
+      <id>github</id>
+      <properties>
+        <builder.id>${env.GITHUB_ACTOR}</builder.id>
+        <maven.compiler.release>8</maven.compiler.release>
+      </properties>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <distributionManagement>
+        <repository>
+          <id>github</id>
+          <name>GitHub melahn Apache Maven Packages</name>
+          <url>https://maven.pkg.github.com/melahn/helm-chartmap</url>
+        </repository>
+      </distributionManagement>
+    </profile>
+    <!-- 
+        This profile is used with a GitHub Action.
+
+        It sets builder.id, useful in a MANIFEST.
+
+        It also sets up the repository to be
+        used for a deploy to the Maven Central
+        Repository.
+    -->
+    <profile>
+      <id>ossrh</id>
+      <properties>
+        <builder.id>${env.GITHUB_ACTOR}</builder.id>
+        <maven.compiler.release>8</maven.compiler.release>
+      </properties>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <distributionManagement>
+        <repository>
+          <id>ossrh</id>
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+      </distributionManagement>
+    </profile>
+  </profiles>
 </project>
