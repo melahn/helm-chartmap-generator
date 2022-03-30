@@ -20,18 +20,25 @@ import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
-
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ChartMapGenerator {
 
-    private static String localRepoName = null;
-    private static String outputDirname = System.getProperty("user.dir");
-    private static String envFilename = null;
-    private static boolean verbose = false;
-    private static String formatString = "";
-    private static HashSet<String> extensions = new HashSet<>();
-    private static String indexFilename = null;
-    private static int maxVersions = 0;
+    protected Logger logger;
+    private String chartMapGeneratorVerbose = "CHARTMAP_GENERATOR_VERBOSE";
+    private Level logLevelVerbose;
+
+    private String localRepoName = null;
+    private String outputDirname = System.getProperty("user.dir");
+    private String envFilename = null;
+    private boolean verbose = false;
+    private String formatString = "";
+    private HashSet<String> extensions = new HashSet<>();
+    private String indexFilename = null;
+    private int maxVersions = 0;
+
     private static final String DEFAULT_LOCATION_MESSAGE = File.pathSeparator.concat(" will be used");
     private static final boolean GENERATE_IMAGE_SWITCH = true;
     private static final boolean REFRESH_REPOS_SWITCH = false;
@@ -43,13 +50,12 @@ public class ChartMapGenerator {
      * @param arg The command line args
      */
     public static void main(String[] arg) {
+        ChartMapGenerator generator = new ChartMapGenerator();
         try {
-            parseArgs(arg);
-            generate();
-        } catch (ParseException e) {
-            System.out.println("ParseException: " + e.getMessage());
-        } catch (Exception e) {
-            System.out.println("Exception: " + e.getMessage());
+            generator.parseArgs(arg);
+            generator.generate();
+        } catch (ChartMapGeneratorException e) {
+            generator.logger.error("ChartMapGeneratorException: {} ", e.getMessage());
         }
     }
 
@@ -57,8 +63,9 @@ public class ChartMapGenerator {
      * Parses the command line
      *
      * @param a The command line args
+     * @return false if a parse error occurs or help is reqquested, true otherwise
      */
-    private static void parseArgs(String[] a) throws ParseException {
+    private boolean parseArgs(String[] a) throws ChartMapGeneratorException {
         Options options = new Options();
         options.addOption("h", false, "Help");
         options.addOption("o", true, "The Output Directory name");
@@ -75,39 +82,39 @@ public class ChartMapGenerator {
             }
             if (cmd.hasOption("o")) {
                 outputDirname = cmd.getOptionValue("o");
-                log("Files will be written to directory \"".concat(outputDirname).concat("\""));
+                logger.log(logLevelVerbose, "Files will be written to directory \"{}\".", outputDirname);
             }
             if (cmd.hasOption("r")) {
                 localRepoName = cmd.getOptionValue("r");
-                log("local helm chart repo \"".concat(localRepoName).concat(DEFAULT_LOCATION_MESSAGE));
+                logger.log(logLevelVerbose, "Local helm chart repo \"{}{}\"", localRepoName, DEFAULT_LOCATION_MESSAGE);
             }
             if (cmd.hasOption("f")) {
                 formatString = cmd.getOptionValue("f");
-                log("format string \"".concat(formatString).concat(DEFAULT_LOCATION_MESSAGE));
+                logger.log(logLevelVerbose, "Format string \"{}{}\"", formatString, DEFAULT_LOCATION_MESSAGE);
             }
             if (cmd.hasOption("n")) {
                 maxVersions = Integer.parseInt(cmd.getOptionValue("n"));
                 if (maxVersions == 1) {
-                    log("Only one version of each chart will be printed");
+                    logger.log(logLevelVerbose, "Only one version of each chart will be printed.");
                 }
                 else {
-                    log("A maximum of ".concat(cmd.getOptionValue("n")).concat(" versions of each chart will be printed"));
+                    logger.log(logLevelVerbose, "A maximum of {} versions of each chart will be printed.", cmd.getOptionValue("n"));
                 }
             }
             if (cmd.hasOption("e")) {
                 envFilename = cmd.getOptionValue("e");
-                log("Environment file \"".concat(envFilename).concat(DEFAULT_LOCATION_MESSAGE));
+                logger.log(logLevelVerbose, "Environment file \"{}{}\"", envFilename, DEFAULT_LOCATION_MESSAGE);
             }
             if (a.length == 0
                     || cmd.hasOption("h")
                     || localRepoName == null) {
-                System.out.println(getHelp());
-                System.exit(0);
+                logger.info(ChartMap.getHelp());
+                return false;
             }
             parseFormatString();
+            return true;
         } catch (ParseException e) {
-            System.out.println(e.getMessage());
-            throw (e);
+            throw (new ChartMapGeneratorException(e.getMessage()));
         }
     }
 
@@ -117,7 +124,7 @@ public class ChartMapGenerator {
      * @param r A repo name (e.g. stable)
      * @return The fqfn of a local yaml file where helm chart info can be found, null otherwise
      */
-    private static String constructRepoFilename(String r) {
+    private String constructRepoFilename(String r) {
         String helmHome = System.getenv("HELM_HOME");
         if (helmHome != null) {
             String repoFileName = helmHome.concat("/").concat("/repository/cache/").concat(r).concat("-index.yaml");
@@ -133,7 +140,7 @@ public class ChartMapGenerator {
      * Generates a set of reports
      *
      */
-    private static void generate() {
+    private void generate() {
         String localRepoFilename = constructRepoFilename(localRepoName);
         if (localRepoFilename != null) {
             loadChartsFromCache(localRepoFilename);
@@ -146,15 +153,15 @@ public class ChartMapGenerator {
      *
      * @param f a file containing helm charts in yaml form
      */
-    private static void loadChartsFromCache(String f) {
-        log("loading charts from ".concat(f));
+    private void loadChartsFromCache(String f) {
+        logger.info("Loading charts from {}", f);
         HelmChartLocalCache cache;
         try {
             ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
             mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             cache = mapper.readValue(new File(f), HelmChartLocalCache.class);
             Map<String, HelmChart[]> entries = cache.getEntries();
-            log(String.valueOf(entries.size()).concat(" charts found"));
+            logger.info("{} charts were found", entries.size());
             createIndex();
             for (Map.Entry<String, HelmChart[]> entry : entries.entrySet()) {
                 int i = 1;
@@ -167,7 +174,7 @@ public class ChartMapGenerator {
             }
             endIndex();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            logger.error("Exception: {}",e.getMessage());
         }
     }
 
@@ -176,7 +183,7 @@ public class ChartMapGenerator {
      *
      * @return a string containing some help
      */
-    public static String getHelp() {
+    public String getHelp() {
         return "\nUsage:\n\n"
                 .concat("java -jar helm-chartmap-generator-1.0.0.jar\n")
                 .concat("\nFlags:\n")
@@ -195,17 +202,17 @@ public class ChartMapGenerator {
      *
      * @param h helm chart
      */
-    private static void printChart(HelmChart h) {
+    private void printChart(HelmChart h) {
 
         try {
-            log("printing chart: " + h.getNameFull());
+            logger.info("Printing chart: {}", h.getNameFull());
             startStanzaInIndex(h.getNameFull());
             for (String e : extensions) {
                 printChart(h, e);
             }
             closeStanzaInIndex();
         } catch (Exception e) {
-            System.out.println("Exception printing Chart " + h.getNameFull() + " : " + e.getMessage());
+            logger.error("Exception printing Chart \"{}\" : {}", h.getNameFull(), e.getMessage());
         }
     }
 
@@ -215,7 +222,7 @@ public class ChartMapGenerator {
      * @param h helm chart
      * @param f the file extension to use
      */
-    private static void printChart(HelmChart h, String f) {
+    private void printChart(HelmChart h, String f) {
         String filename = h.getName().concat("-").concat(h.getVersion()).concat(f);
         try {
             ChartMap testMap = new ChartMap(
@@ -226,9 +233,9 @@ public class ChartMapGenerator {
                     new boolean[]{ GENERATE_IMAGE_SWITCH, REFRESH_REPOS_SWITCH, VERBOSE_SWITCH});
             testMap.print();
             addChartToIndex(filename);
-            log(filename.concat(filename.concat(" created")));
+            logger.info("File {} created.", filename);
         } catch (Exception e) {
-            System.out.println("Exception creating file ".concat(filename).concat(" : ").concat(e.getMessage()));
+            logger.error("Exception creating file \"{}\" : {}", filename, e.getMessage());
         }
     }
 
@@ -236,7 +243,7 @@ public class ChartMapGenerator {
      * Creates the index file and adds a head element
      *
      */
-    private static void createIndex() throws ChartMapGeneratorException {
+    private void createIndex() throws ChartMapGeneratorException {
         indexFilename = outputDirname.concat("/index.html");
         String h = "<!DOCTYPE HTML>\n<html>\n";
         try {
@@ -254,7 +261,7 @@ public class ChartMapGenerator {
      * Adds head elements to the index file and adds a H1 tag, then creates css file
      *
      */
-    private static void addHead () throws IOException {
+    private void addHead () throws IOException {
         String h = "<head>"
                 .concat("\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n")
                 .concat("\t<link rel=\"stylesheet\" href=\"./style.css\">\n")
@@ -271,7 +278,7 @@ public class ChartMapGenerator {
      * Creates a css style file.  If the file already exists, the file is left as-is
      *
      */
-    private static void createStyleFile () throws IOException {
+    private void createStyleFile () throws IOException {
         String styleFilename = outputDirname.concat("/style.css");
         String s = "* {\n\tfont-family: \"Arial\", Helvetica, san-serif;\n\tcolor: lightgray;\n\tbackground-color: black;\n}\n"
                 .concat("a:visited {\n\tcolor: grey;\n}\n")
@@ -287,7 +294,7 @@ public class ChartMapGenerator {
      * Starts one chart stanza with the chartname to the index file
      *
      */
-    private static void startStanzaInIndex(String s) throws IOException {
+    private void startStanzaInIndex(String s) throws IOException {
         String l = "\t<p class=\"chartname\">".concat(s).concat("</p>\n\t<ul>\n");
         Files.write(Paths.get(indexFilename),
                 l.getBytes(),
@@ -298,7 +305,7 @@ public class ChartMapGenerator {
      * Closes a stanza in the index file
      *
      */
-    private static void closeStanzaInIndex() throws IOException {
+    private void closeStanzaInIndex() throws IOException {
         String l = "\t</ul>\n";
         Files.write(Paths.get(indexFilename),
                 l.getBytes(),
@@ -310,7 +317,7 @@ public class ChartMapGenerator {
      *
      * @param f helm chart filename
      */
-    private static void addChartToIndex(String f) throws IOException {
+    private void addChartToIndex(String f) throws IOException {
         String l = "\t\t<li class=\"chartlink\">".concat("<a href=\"./").concat(f).concat("\">").concat(f).concat("</a>").concat("</li>\n");
         Files.write(Paths.get(indexFilename),
                 l.getBytes(),
@@ -336,7 +343,7 @@ public class ChartMapGenerator {
      * Adds end elements to the index file
      *
      */
-    private static void addFooterToIndex() throws IOException {
+    private void addFooterToIndex() throws IOException {
         String f = "<hr/>Generated on "
                 .concat(getCurrentDateTime())
                 .concat(" by ")
@@ -352,7 +359,7 @@ public class ChartMapGenerator {
      * Adds closing elements to the index file
      *
      */
-    private static void endIndex () throws IOException {
+    private void endIndex () throws IOException {
         addFooterToIndex();
         String e = "</body>\n</html>";
         Files.write(Paths.get(indexFilename),
@@ -365,7 +372,7 @@ public class ChartMapGenerator {
      * adds a set of corresponding extensions to
      * the extensions set which is later used for file writing
      */
-    private static void parseFormatString() {
+    private void parseFormatString() {
         if (formatString.indexOf('j') >= 0) {
             extensions.add(".json");
         }
@@ -377,12 +384,39 @@ public class ChartMapGenerator {
         }
     }
 
+
     /**
-     * Logs a string if verbose is on
+     * If the user has specified the verbose flag, set the log level so it has a
+     * higher priority (ie. a lower level value) than the logger configured in
+     * log4j2.xml, which is INFO (level 400). Otherwise set it to a higher level
+     * number so verbose log entries will be ignored.
+     * 
+     * Note that log4j will ignore the integer values if the level already exists so
+     * there is no point in calling this method twice or initializing the Levels
+     * when they are declared.
+     * 
+     * The reason for the timestamped value for the levels is that they are static
+     * in Log4j2 and this can cause issues across multiple usages of ChartMap if a
+     * common name is used with some pretty hard to debug problems. This can be seen
+     * for example in Junit tests when different debug and verbose levels are used
+     * in different tests.
      */
-    private static void log(String s) {
-        if (verbose) {
-            System.out.println(s);
+    protected void setVerboseLogLevel() {
+        String t = String.valueOf(System.currentTimeMillis());
+        chartMapGeneratorVerbose = chartMapGeneratorVerbose.concat(t);
+        logger = LogManager.getLogger(t);
+        if (isVerbose()) {
+            logLevelVerbose = Level.forName(chartMapGeneratorVerbose, 350); // higher priority than INFO
+        } else {
+            logLevelVerbose = Level.forName(chartMapGeneratorVerbose, 450); // lower priority than INFO
         }
+    }
+
+    public boolean isVerbose() {
+        return verbose;
+    }
+
+    protected void setVerbose(boolean v) {
+        this.verbose = v;
     }
 }
