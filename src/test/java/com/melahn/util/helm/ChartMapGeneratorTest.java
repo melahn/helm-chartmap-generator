@@ -34,6 +34,7 @@ class ChartMapGeneratorTest {
 
     private static String targetTest = "target/test";
     private static String targetTestDirectory = Paths.get(targetTest).toString();
+    private final static String FORMAT_ALL = "-jpt";
     private final static String FORMAT_JSON = "-j";
     private final static String FORMAT_PUML = "-p";
     private final static String FORMAT_TEXT = "-t";

@@ -18,6 +18,8 @@ import java.util.stream.Stream;
 
 public class ChartMapGeneratorTestUtil {
 
+    private static final int WAIT_TIME = 60;  // wait for a long time because a fair number of charts need to be generated
+
     /**
      * Answers true if the log contains a particular entry.
      * 
@@ -97,7 +99,7 @@ public class ChartMapGeneratorTestUtil {
         pb.command().add("java");
         pb.command().add("-javaagent:".concat(j));
         pb.command().add("-cp");
-        pb.command().add("../".concat(shadedJarName)); // expect the jar one level up
+        pb.command().add("../../".concat(shadedJarName)); // expect the jar two levels up
         if (o != null) {
             pb.command().add("-Dos.name=".concat(o));
         }
@@ -124,8 +126,7 @@ public class ChartMapGeneratorTestUtil {
         pb.redirectErrorStream(true);
         pb.redirectOutput(Redirect.appendTo(l.toFile()));
         Process process = pb.start();
-        final int waitTime = 20;
-        process.waitFor(waitTime, TimeUnit.SECONDS);
+        process.waitFor(WAIT_TIME, TimeUnit.SECONDS);
         return process.exitValue();
     }
 
@@ -137,7 +138,7 @@ public class ChartMapGeneratorTestUtil {
     public String getShadedJarName() throws IOException {
         final Properties properties = new Properties();
         properties.load(this.getClass().getClassLoader().getResourceAsStream("resources.properties"));
-        return "helm-chartmap-".concat(properties.getProperty("shaded.jar.version")).concat(".jar");
+        return "helm-chartmap-generator-".concat(properties.getProperty("shaded.jar.version")).concat(".jar");
     }
 
     /**

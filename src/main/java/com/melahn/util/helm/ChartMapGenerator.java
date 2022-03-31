@@ -52,7 +52,6 @@ public class ChartMapGenerator {
     protected static final int PROCESS_TIMEOUT = 100000;
     protected static final String INTERRUPTED_EXCEPTION = "InterruptedException {} running command %s : %s";
        
-    private static final String DEFAULT_LOCATION_MESSAGE = File.separator.concat(" will be used");
     private static final boolean CHARTMAP_GENERATE_IMAGE_SWITCH = true;
     private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH = false;
     private static final boolean CHARTMAP_VERBOSE_SWITCH = false;
