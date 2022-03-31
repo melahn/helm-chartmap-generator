@@ -37,7 +37,7 @@ jobs:
           helm version
           helm repo add alfresco-incubator	https://kubernetes-charts.alfresco.com/incubator
           helm repo add alfresco-stable   	https://kubernetes-charts.alfresco.com/stable   
-          helm repo add melahn            	https://melahn.github.io/helm-repo              
+          helm repo add melahn            	https://melahn.github.io/helm-repo-test       
           helm repo add stable            	https://charts.helm.sh/stable                   
           helm repo add incubator         	https://charts.helm.sh/incubator                
           helm repo add bitnami           	https://charts.bitnami.com/bitnami              
