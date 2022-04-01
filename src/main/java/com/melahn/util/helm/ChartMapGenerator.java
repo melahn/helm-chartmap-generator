@@ -477,7 +477,7 @@ public class ChartMapGenerator {
      * @throws ChartMapGeneratorException if a version other than V3 is found
      */
     protected void checkHelmVersion() throws ChartMapGeneratorException {
-        String[] c = { getHelmCommand(), "version", "--template", "{{ .Version }}" };
+        String[] c = { helmCommand,  "version", "--template", "{{ .Version }}" };
         try {
             Process p = getProcess(c, null);
             BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -500,7 +500,7 @@ public class ChartMapGenerator {
                     String.format("Exception trying to discover Helm Version: %s ", e.getMessage()));
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            throw new ChartMapGeneratorException(String.format(INTERRUPTED_EXCEPTION, getHelmCommand(), e.getMessage()));
+            throw new ChartMapGeneratorException(String.format(INTERRUPTED_EXCEPTION, helmCommand, e.getMessage()));
         }
     }
 
@@ -522,7 +522,7 @@ public class ChartMapGenerator {
             if (!br || !bw || !be) {
                 throw new ChartMapGeneratorException(String.format("Failure to set permissions on %s: r=%b, w=%b, e=%b ", tempEnvFile.toString(), br, bw, be));
             }
-            ProcessBuilder pb = getProcessBuilder(getHelmCommand(), "env");
+            ProcessBuilder pb = getProcessBuilder(helmCommand, "env");
             pb.redirectOutput(tempEnvFile);
             Process p = pb.start();
             p.waitFor(PROCESS_TIMEOUT, TimeUnit.MILLISECONDS);
