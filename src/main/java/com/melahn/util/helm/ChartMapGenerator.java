@@ -64,8 +64,7 @@ public class ChartMapGenerator {
     public static void main(String[] arg) {
         ChartMapGenerator generator = new ChartMapGenerator();
         try {
-            generator.checkHelmVersion();
-            generator.getHelmClientInformation();
+            generator.setHelmEnvironment();
             if (generator.parseArgs(arg)) {
                 generator.generate();
             }
