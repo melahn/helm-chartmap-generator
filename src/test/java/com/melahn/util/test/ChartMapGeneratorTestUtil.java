@@ -18,7 +18,7 @@ import java.util.stream.Stream;
 
 public class ChartMapGeneratorTestUtil {
 
-    private static final int WAIT_TIME = 60;  // wait for a long time because a fair number of charts need to be generated
+    private static final int WAIT_TIME = 120; // wait for a long time because a fair number of charts need to be generated
 
     /**
      * Answers true if the log contains a particular entry.
