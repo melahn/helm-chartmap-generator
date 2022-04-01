@@ -4,7 +4,7 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/melahn/helm-chartmap-generator)](https://github.com/melahn/helm-chartmap-generator/releases/tag/v1.1.0)
 [![GitHub Release Date](https://img.shields.io/github/release-date/melahn/helm-chartmap-generator)](https://github.com/melahn/helm-chartmap-generator/releases/tag/v1.1.0)
 [![Maven Central](https://img.shields.io/maven-central/v/com.melahn/helm-chartmap-generator)](https://search.maven.org/artifact/com.melahn/helm-chartmap-generator/1.1.0/jar)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/)
 [![Sonar Cloud Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=helm-chartmap-generator&metric=alert_status)](https://sonarcloud.io/dashboard?id=helm-chartmap-generator)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=helm-chartmap-generator&metric=coverage)](https://sonarcloud.io/summary/new_code?id=helm-chartmap-generator)
 
