@@ -36,10 +36,7 @@ public class ChartMapGenerator {
     private Level logLevelVerbose;
 
     private String helmCommand;
-    private String helmCachePath;
-    private String helmConfigPath;
     private String helmRepositoryCachePath;
-    private String helmRepositoryConfigPath;
     private String localRepoName = null;
     private String outputDirName = System.getProperty("user.dir");
     private String envFilename = null;
@@ -577,17 +574,8 @@ public class ChartMapGenerator {
      */
     private void extractHelmClientInformation(String l) {
         String[] a = l.split("=");
-        if (a[0].equals("HELM_CACHE_HOME")) {
-            setHelmCachePath(a[1].substring(1,a[1].length()-1));
-        }
-        else if (a[0].equals("HELM_CONFIG_HOME")) {
-            setHelmConfigPath(a[1].substring(1,a[1].length()-1));
-        }
-        else if (a[0].equals("HELM_REPOSITORY_CACHE")) {
+        if (a[0].equals("HELM_REPOSITORY_CACHE")) {
             setHelmRepositoryCachePath(a[1].substring(1,a[1].length()-1));
-        }
-        else if (a[0].equals("HELM_REPOSITORY_CONFIG")) {
-            setHelmRepositoryConfigPath(a[1].substring(1,a[1].length()-1));
         }
     }
 
@@ -646,37 +634,14 @@ public class ChartMapGenerator {
         return new ProcessBuilder(c, a);
     }
 
-    public String getHelmCachePath() {
-        return helmCachePath;
-    }
-
-    protected void setHelmCachePath(String s) {
-        helmCachePath = s;
-    }
-
-    public String getHelmConfigPath() {
-        return helmConfigPath;
-    }
-
-    protected void setHelmConfigPath(String s) {
-        helmConfigPath = s;
-    }
-
     public String getHelmRepositoryCachePath() {
-        return helmRepositoryCachePath;
+      return helmRepositoryCachePath;
     }
 
     protected void setHelmRepositoryCachePath(String s) {
         helmRepositoryCachePath = s;
     }
 
-    public String getHelmRepositoryConfigPath() {
-        return helmRepositoryConfigPath;
-    }
-
-    protected void setHelmRepositoryConfigPath(String s) {
-        helmRepositoryConfigPath = s;
-    }
     public boolean isVerbose() {
         return verbose;
     }
