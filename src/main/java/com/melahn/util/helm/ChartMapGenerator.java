@@ -58,10 +58,9 @@ public class ChartMapGenerator {
      *
      * @param arg The command line args
      */
-    public static void main(String[] arg) {
+    public static void main(String[] arg) throws ChartMapGeneratorException {
         ChartMapGenerator generator = new ChartMapGenerator();
         try {
-            generator.setHelmEnvironment();
             if (generator.parseArgs(arg)) {
                 generator.generate();
             }
@@ -87,8 +86,7 @@ public class ChartMapGenerator {
 
     public ChartMapGenerator(String repoName, String outputDirName, String fileFormatMask, int maxVersions, String envFilename, boolean verbose)
             throws ChartMapGeneratorException {
-        setVerbose(verbose);  
-        setVerboseLogLevel();
+        this();
         ArrayList<String> args = new ArrayList<>();
         args.add("-r");
         args.add(repoName);
@@ -117,10 +115,12 @@ public class ChartMapGenerator {
      /**
      * Default constructor.
      * 
-     * Just sets the debug log level.
+     * Just sets the debug log level and helm environment.
      */
-    public ChartMapGenerator() {
+    public ChartMapGenerator() throws ChartMapGeneratorException {
+        setVerbose(verbose);  
         setVerboseLogLevel();
+        setHelmEnvironment();
     }
 
     /**
@@ -189,9 +189,9 @@ public class ChartMapGenerator {
      * Using a local chart repo, prints each chart, keeping a count along the way.
      *
      */
-    private void generate() throws ChartMapGeneratorException {
+    public void generate() throws ChartMapGeneratorException {
         String localRepoFilename = getHelmRepositoryCachePath().concat(File.separator).concat(localRepoName).concat("-index.yaml");
-        logger.info("Loading charts from {}", localRepoFilename);
+        logger.log(logLevelVerbose,"Loading charts from {}", localRepoFilename);
         HelmChartLocalCache cache;
         try {
             ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
@@ -199,9 +199,9 @@ public class ChartMapGenerator {
             cache = mapper.readValue(new File(localRepoFilename), HelmChartLocalCache.class);
             Map<String, HelmChart[]> entries = cache.getEntries();
             if (entries.size() == 1) {
-                logger.info("One chart was found");
+                logger.log(logLevelVerbose,"One chart was found");
             } else {
-                logger.info("{} charts were found", entries.size());
+                logger.log(logLevelVerbose,"{} charts were found", entries.size());
             }
             createIndex();
             for (Map.Entry<String, HelmChart[]> entry : entries.entrySet()) {
@@ -244,7 +244,7 @@ public class ChartMapGenerator {
      *
      * @param h helm chart
      */
-    private void printChart(HelmChart h) {
+    private void printChart(HelmChart h) throws ChartMapGeneratorException{
         try {
             logger.info("Printing chart: {}", h.getNameFull());
             startStanzaInIndex(h.getNameFull());
@@ -254,6 +254,7 @@ public class ChartMapGenerator {
             closeStanzaInIndex();
         } catch (Exception e) {
             logger.error("Exception printing Chart \"{}\" : {}", h.getNameFull(), e.getMessage());
+            throw new ChartMapGeneratorException(e.getLocalizedMessage());
         }
     }
 
@@ -274,13 +275,13 @@ public class ChartMapGenerator {
                     new boolean[]{ CHARTMAP_GENERATE_IMAGE_SWITCH, CHARTMAP_REFRESH_REPOS_SWITCH, CHARTMAP_VERBOSE_SWITCH});
             testMap.print();
             addChartToIndex(filename);
-            logger.info("File {} created.", filename);
         } catch (IOException e) {
             logger.error("IOException creating file \"{}\" : {}", filename, e.getMessage());
             throw new ChartMapException(e.getLocalizedMessage());
         }
         catch (ChartMapException e) {
             logger.error("ChartMapException creating file \"{}\" : {}", filename, e.getLocalizedMessage());
+            throw e;
         }
     }
 

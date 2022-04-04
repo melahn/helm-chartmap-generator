@@ -20,28 +20,37 @@ import static org.mockito.Mockito.spy;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.internal.matchers.Null;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 
 import com.melahn.util.helm.ChartMapGenerator;
 import com.melahn.util.helm.ChartMapGeneratorException;
+import com.melahn.util.test.ChartMapGeneratorTestUtil;
 class ChartMapGeneratorTest {
 
+    private static final String DIVIDER = "-------------------------------------";
+    private static final String FORMAT_ALL = "-jpt";
+    private static final String FORMAT_JSON = "-j";
+    private static final String FORMAT_PUML = "-p";
+    private static final String FORMAT_TEXT = "-t";
+    private static final String INDEX_FILENAME = "index.html";
+    private static final String TARGET_TEST_DIR_NAME = "target/test";
+    private static final Path   TARGET_TEST_DIR_PATH = Paths.get(TARGET_TEST_DIR_NAME);
+    private static final String TEST_REPO_NAME = "melahn";
+
+    private static Path indexFilePath = Paths.get(INDEX_FILENAME);
     private static String targetTest = "target/test";
     private static String targetTestDirectory = Paths.get(targetTest).toString();
-    private final static String FORMAT_ALL = "-jpt";
-    private final static String FORMAT_JSON = "-j";
-    private final static String FORMAT_PUML = "-p";
-    private final static String FORMAT_TEXT = "-t";
-    
-    private final static String TEST_REPO_NAME = "melahn";
-    private final static String DIVIDER = "-------------------------------------";
+    private static String testEnvSpec = "./resource/example/example-env-spec.yaml";
 
+ 
     @BeforeAll
     static void setUp() {
         System.out.println(DIVIDER.concat(" UNIT TESTS START ").concat(DIVIDER));
@@ -58,7 +67,21 @@ class ChartMapGeneratorTest {
         System.out.println(DIVIDER.concat(" UNIT TESTS END ").concat(DIVIDER));
     }
 
-        /**
+    @Test
+    void parameterTest() throws ChartMapGeneratorException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        String testDirName = createTestDir(m, "-1");
+        // An environment spec that does not exist
+        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, 1, "no-spec-here.yaml", false);
+        assertThrows(ChartMapGeneratorException.class, () -> cmg1.generate());
+        System.out.println("A ChartMapGeneratorException was thrown as expected since the env file does not exist");
+        testDirName = createTestDir(m, "-2");
+        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, 1, testEnvSpec, false);
+        cmg2.generate();
+        System.out.println(m.concat(" completed"));
+    }
+
+    /**
      * Tests the ChartMap.checkHelmVersion method.
      * 
      * @throws ChartMapException
@@ -147,10 +170,36 @@ class ChartMapGeneratorTest {
         System.out.println(new Throwable().getStackTrace()[0].getMethodName().concat(" completed"));
     }
 
+    /**
+     * Helper Function to create a ChartMapGenerator
+     * @param repoName the name of the repo
+     * @param outputDirName the name of the output directory
+     * @param fileFormatMask the file format mask
+     * @param maxVersions how many chart versions to print, at most
+     * @param envFilename the name of the env file
+     * @param verbose whether verbose output is desired
+     * @return
+     * @throws ChartMapGeneratorException if an error occurs creating the ChartMapGenerator
+     */
     private ChartMapGenerator createTestMapGenerator(String repoName, String outputDirName, String fileFormatMask,
             int maxVersions, String envFilename, boolean verbose) throws ChartMapGeneratorException {
         ChartMapGenerator cmg = new ChartMapGenerator(repoName, outputDirName, fileFormatMask, maxVersions, envFilename,
                 verbose);
         return cmg;
+    }
+
+    /**
+     * Helper function to clean a subdirectory if it exists within
+     * the target/test directory. then creates the directory for a test 
+     * case to run in.
+     * 
+     * @param s the name of the subdirectory 
+     * @param i a string that makes this subdirectory unique 
+     */
+    private String createTestDir(String s, String i) throws IOException {
+        Path p = Paths.get(TARGET_TEST_DIR_NAME, s.concat(i));
+        ChartMapGeneratorTestUtil.cleanDirectory(p);
+        Files.createDirectories(p);
+        return p.toString();
     }
 }
