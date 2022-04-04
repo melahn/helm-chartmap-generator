@@ -115,11 +115,9 @@ public class ChartMapGenerator {
      /**
      * Default constructor.
      * 
-     * Just sets the debug log level and helm environment.
+     * Just sets the helm environment.
      */
     public ChartMapGenerator() throws ChartMapGeneratorException {
-        setVerbose(verbose);  
-        setVerboseLogLevel();
         setHelmEnvironment();
     }
 
