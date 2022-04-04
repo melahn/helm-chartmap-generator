@@ -115,9 +115,12 @@ public class ChartMapGenerator {
      /**
      * Default constructor.
      * 
-     * Just sets the helm environment.
+     * Just sets the helm environment and logger.
      */
     public ChartMapGenerator() throws ChartMapGeneratorException {
+        String t = String.valueOf(System.currentTimeMillis());
+        chartMapGeneratorVerbose = chartMapGeneratorVerbose.concat(t);
+        logger = LogManager.getLogger(t);
         setHelmEnvironment();
     }
 
@@ -595,9 +598,6 @@ public class ChartMapGenerator {
      * in different tests.
      */
     protected void setVerboseLogLevel() {
-        String t = String.valueOf(System.currentTimeMillis());
-        chartMapGeneratorVerbose = chartMapGeneratorVerbose.concat(t);
-        logger = LogManager.getLogger(t);
         if (isVerbose()) {
             logLevelVerbose = Level.forName(chartMapGeneratorVerbose, 350); // higher priority than INFO
         } else {
