@@ -314,6 +314,7 @@
                     <exclude>Log4j-events.xsd</exclude>
                     <exclude>Log4j-levels.xsd</exclude>
                     <exclude>Log4j-charsets.properties</exclude>
+                    <exclude>log4j2.xml</exclude>
                     <exclude>META-INF/versions/9/org/apache/logging/log4j/core/util/SystemClock.class</exclude>
                     <exclude>META-INF/versions/9/org/apache/logging/log4j/util/Base64Util.class</exclude>
                     <exclude>META-INF/versions/9/org/apache/logging/log4j/util/ProcessIdUtil.class</exclude>
