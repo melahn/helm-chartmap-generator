@@ -36,6 +36,8 @@ import com.melahn.util.test.ChartMapGeneratorTestUtil;
 class ChartMapGeneratorTest {
 
     private static final String DIVIDER = "-------------------------------------";
+    private static final int PRINT_ONE_VERSION = 1;
+    private static final int PRINT_ALL_VERSIONS = 99;
     private static final String FORMAT_ALL = "-jpt";
     private static final String FORMAT_JSON = "-j";
     private static final String FORMAT_PUML = "-p";
@@ -72,12 +74,33 @@ class ChartMapGeneratorTest {
         String m = new Throwable().getStackTrace()[0].getMethodName();
         String testDirName = createTestDir(m, "-1");
         // An environment spec that does not exist
-        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, 1, "no-spec-here.yaml", false);
+        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, "no-spec-here.yaml", false);
         assertThrows(ChartMapGeneratorException.class, () -> cmg1.generate());
         System.out.println("A ChartMapGeneratorException was thrown as expected since the env file does not exist");
+         // An environment spec that does exist, print one version of each chart
         testDirName = createTestDir(m, "-2");
-        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, 1, testEnvSpec, false);
+        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, testEnvSpec, false);
         cmg2.generate();
+        // validate that one and only one (the most recent) version of each of the charts is printed
+        assertTrue(Files.exists(Paths.get(testDirName,"test-app-a-0.1.0.txt")));
+        assertTrue(Files.exists(Paths.get(testDirName,"test-app-b-0.2.0.txt")));
+        assertTrue(Files.exists(Paths.get(testDirName,"test-app-c-0.3.0.txt")));
+        assertFalse(Files.exists(Paths.get(testDirName,"test-app-b-0.1.0.txt"))); // prior version not printed
+        assertFalse(Files.exists(Paths.get(testDirName,"test-app-c-0.1.0.txt"))); // prior version not printed
+        assertFalse(Files.exists(Paths.get(testDirName,"test-app-c-0.2.0.txt"))); // prior version not printed
+        System.out.println("One version of each chart was successfully printed");
+        // An environment spec that does exist, print all versions of each chart
+        testDirName = createTestDir(m, "-3");
+        ChartMapGenerator cmg3 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, testEnvSpec, false);
+        cmg3.generate();
+        // validate that one and all versions of each of the charts is printed
+        assertTrue(Files.exists(Paths.get(testDirName,"test-app-a-0.1.0.txt")));
+        assertTrue(Files.exists(Paths.get(testDirName,"test-app-b-0.1.0.txt"))); 
+        assertTrue(Files.exists(Paths.get(testDirName,"test-app-b-0.2.0.txt")));
+        assertTrue(Files.exists(Paths.get(testDirName,"test-app-c-0.1.0.txt")));
+        assertTrue(Files.exists(Paths.get(testDirName,"test-app-c-0.2.0.txt")));
+        assertTrue(Files.exists(Paths.get(testDirName,"test-app-c-0.3.0.txt")));
+        System.out.println("All versions of each chart were successfully printed");
         System.out.println(m.concat(" completed"));
     }
 
