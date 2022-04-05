@@ -57,6 +57,8 @@ public class ChartMapGenerator {
      * Parses the command line and generates a set of reports
      *
      * @param arg The command line args
+     * 
+     * @throws ChartMapGeneratorException should any error occur generating the chart reports.
      */
     public static void main(String[] arg) throws ChartMapGeneratorException {
         ChartMapGenerator generator = new ChartMapGenerator();
@@ -116,6 +118,8 @@ public class ChartMapGenerator {
      * Default constructor.
      * 
      * Just sets the helm environment and logger.
+     * 
+     * @throws ChartMapGeneratorException should an error occurs setting the helm environment.
      */
     public ChartMapGenerator() throws ChartMapGeneratorException {
         String t = String.valueOf(System.currentTimeMillis());
@@ -188,6 +192,8 @@ public class ChartMapGenerator {
 
     /**
      * Using a local chart repo, prints each chart, keeping a count along the way.
+     * 
+     * @throws ChartMapGeneratorException should an IOException occur geneerating the chart.
      *
      */
     public void generate() throws ChartMapGeneratorException {
@@ -244,8 +250,10 @@ public class ChartMapGenerator {
      * Prints a chart
      *
      * @param h helm chart
+     * 
+     * @throws ChartMapGeneratorException when an IOException or ChartMapGeneratorException occurs printing the Chart Map.
      */
-    private void printChart(HelmChart h) throws ChartMapGeneratorException{
+    private void printChart(HelmChart h) throws ChartMapGeneratorException, IOException {
         try {
             logger.info("Printing chart: {}", h.getNameFull());
             startStanzaInIndex(h.getNameFull());
@@ -253,9 +261,12 @@ public class ChartMapGenerator {
                 printChart(h, e);
             }
             closeStanzaInIndex();
-        } catch (Exception e) {
+        } catch (IOException e) {
             logger.error("Exception printing Chart \"{}\" : {}", h.getNameFull(), e.getMessage());
             throw new ChartMapGeneratorException(e.getLocalizedMessage());
+        } catch (ChartMapGeneratorException e) {
+            logger.error("ChartMapException printing chart for helm chart \"{}\" : {}", h.getNameFull(), e.getLocalizedMessage());
+            throw e;
         }
     }
 
@@ -264,8 +275,10 @@ public class ChartMapGenerator {
      *
      * @param h helm chart
      * @param f the file extension to use
+     * 
+     * @throws ChartMapGeneratorException when an IOException or ChartMapException occurs printing the Chart Map.
      */
-    private void printChart(HelmChart h, String f) throws ChartMapException {
+    private void printChart(HelmChart h, String f) throws ChartMapGeneratorException {
         String filename = h.getName().concat("-").concat(h.getVersion()).concat(f);
         try {
             ChartMap testMap = new ChartMap(
@@ -278,16 +291,19 @@ public class ChartMapGenerator {
             addChartToIndex(filename);
         } catch (IOException e) {
             logger.error("IOException creating file \"{}\" : {}", filename, e.getMessage());
-            throw new ChartMapException(e.getLocalizedMessage());
+            throw new ChartMapGeneratorException(e.getLocalizedMessage());
         }
         catch (ChartMapException e) {
             logger.error("ChartMapException creating file \"{}\" : {}", filename, e.getLocalizedMessage());
-            throw e;
+            throw new ChartMapGeneratorException(e.getLocalizedMessage());
         }
     }
 
     /**
-     * Creates the index file and adds a head element
+     * Creates the index file and adds a head element.
+     * 
+     * 
+     * @throws ChartMapGeneratorException when an IOException occurs creating the index file.
      *
      */
     private void createIndex() throws ChartMapGeneratorException {
