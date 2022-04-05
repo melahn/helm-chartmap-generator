@@ -46,11 +46,17 @@ class ChartMapGeneratorTest {
     private static final String TARGET_TEST_DIR_NAME = "target/test";
     private static final Path   TARGET_TEST_DIR_PATH = Paths.get(TARGET_TEST_DIR_NAME);
     private static final String TEST_REPO_NAME = "melahn";
+    private static final String TEST_ENV_SPEC = "./resource/example/example-env-spec.yaml";
+    private static final String TEST_ENV_SPEC_NOT_EXIST = "./resource/example/no-spec-here.yaml";
+    private static final boolean VERBOSE_FALSE = false;
+    private static final boolean VERBOSE_TRUE = true;
+
 
     private static Path indexFilePath = Paths.get(INDEX_FILENAME);
     private static String targetTest = "target/test";
     private static String targetTestDirectory = Paths.get(targetTest).toString();
-    private static String testEnvSpec = "./resource/example/example-env-spec.yaml";
+
+    private int testVariation = 0; // used to generate unique subdirectory names
 
  
     @BeforeAll
@@ -72,14 +78,15 @@ class ChartMapGeneratorTest {
     @Test
     void parameterTest() throws ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
-        String testDirName = createTestDir(m, "-1");
-        // An environment spec that does not exist
-        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, "no-spec-here.yaml", false);
+        testVariation = 0;
+        String testDirName = createTestDir(m, getTestVariation());
+        // An environment spec that does not exist.  Note that you can't reuse cmg1 because it must be final or effetively final for jupiter asserts
+        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC_NOT_EXIST, VERBOSE_FALSE);
         assertThrows(ChartMapGeneratorException.class, () -> cmg1.generate());
         System.out.println("A ChartMapGeneratorException was thrown as expected since the env file does not exist");
          // An environment spec that does exist, print one version of each chart
-        testDirName = createTestDir(m, "-2");
-        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, testEnvSpec, false);
+        testDirName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg2.generate();
         // validate that one and only one (the most recent) version of each of the charts is printed
         assertTrue(Files.exists(Paths.get(testDirName,"test-app-a-0.1.0.txt")));
@@ -90,9 +97,9 @@ class ChartMapGeneratorTest {
         assertFalse(Files.exists(Paths.get(testDirName,"test-app-c-0.2.0.txt"))); // prior version not printed
         System.out.println("One version of each chart was successfully printed");
         // An environment spec that does exist, print all versions of each chart
-        testDirName = createTestDir(m, "-3");
-        ChartMapGenerator cmg3 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, testEnvSpec, false);
-        cmg3.generate();
+        testDirName = createTestDir(m, getTestVariation());
+        cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg2.generate();
         // validate that one and all versions of each of the charts is printed
         assertTrue(Files.exists(Paths.get(testDirName,"test-app-a-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirName,"test-app-b-0.1.0.txt"))); 
@@ -224,5 +231,15 @@ class ChartMapGeneratorTest {
         ChartMapGeneratorTestUtil.cleanDirectory(p);
         Files.createDirectories(p);
         return p.toString();
+    }
+
+    /**
+     * Helper function to get a string to use for a subdirectory for storing test artifacts
+     * separate from other test variations.
+     * 
+     * @return
+     */
+    private String getTestVariation() {
+        return String.format("-%d", ++testVariation);
     }
 }
