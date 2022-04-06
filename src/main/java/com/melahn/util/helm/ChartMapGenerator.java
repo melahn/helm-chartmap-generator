@@ -49,9 +49,9 @@ public class ChartMapGenerator {
     protected static final int PROCESS_TIMEOUT = 100000;
     protected static final String INTERRUPTED_EXCEPTION = "InterruptedException {} running command %s : %s";
        
-    private static final boolean CHARTMAP_GENERATE_IMAGE_SWITCH = true;
-    private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH = false;
-    private static final boolean CHARTMAP_VERBOSE_SWITCH = false;
+    private static final boolean CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE = true;
+    private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH_FALSE = false;
+    private static final boolean CHARTMAP_VERBOSE_SWITCH_FALSE = false;
 
     /**
      * Parses the command line and generates a set of reports
@@ -286,7 +286,7 @@ public class ChartMapGenerator {
                     h.getNameFull(),
                     outputDirName.concat(File.separator).concat(filename),
                     envFilename,
-                    new boolean[]{ CHARTMAP_GENERATE_IMAGE_SWITCH, CHARTMAP_REFRESH_REPOS_SWITCH, CHARTMAP_VERBOSE_SWITCH});
+                    new boolean[]{ CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE, CHARTMAP_REFRESH_REPOS_SWITCH_FALSE, CHARTMAP_VERBOSE_SWITCH_FALSE});
             testMap.print();
             addChartToIndex(filename);
         } catch (IOException e) {
