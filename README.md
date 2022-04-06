@@ -97,8 +97,8 @@ Flags:
 
 ### Notes
 
-When using PlantUML files, the images that are then produced from those files will look best when the following
-system environment variable variable is set
+When generating PlantUML files, the images that are then produced from those files will have the best layout when the following
+system environment variable is set before running *helm-chart-generator*.
 
 ``` java
 PLANTUML_LIMIT_SIZE 8192
