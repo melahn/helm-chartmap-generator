@@ -90,6 +90,9 @@ public class ChartMapGenerator {
             throws ChartMapGeneratorException {
         this();
         ArrayList<String> args = new ArrayList<>();
+        if (repoName == null) {
+            throw new ChartMapGeneratorException("No repository name was provided");
+        }
         args.add("-r");
         args.add(repoName);
         if (outputDirName != null) {
@@ -109,11 +112,7 @@ public class ChartMapGenerator {
         if (verbose) {
             args.add("-v");
         }
-        for (String a : args) {
-            if (a == null) {
-                throw new ChartMapGeneratorException("Null parameter");
-            }
-        }
+        
         parseArgs(args.toArray(new String[args.size()]));
     }
 
@@ -124,7 +123,7 @@ public class ChartMapGenerator {
      * 
      * @throws ChartMapGeneratorException should an error occurs setting the helm environment.
      */
-    public ChartMapGenerator() throws ChartMapGeneratorException {
+    private ChartMapGenerator() throws ChartMapGeneratorException {
         String t = String.valueOf(System.currentTimeMillis());
         chartMapGeneratorVerbose = chartMapGeneratorVerbose.concat(t);
         logger = LogManager.getLogger(t);
@@ -439,13 +438,14 @@ public class ChartMapGenerator {
      * the extensions set which is later used for file writing
      */
     private void parseFormatString() {
-        if (formatString.indexOf('j') >= 0) {
+        String f = formatString.toLowerCase();
+        if (f.indexOf('j') >= 0) {
             extensions.add(".json");
         }
-        if (formatString.indexOf('p') >= 0) {
+        if (f.indexOf('p') >= 0) {
             extensions.add(".puml");
         }
-        if (formatString.indexOf('t') >= 0 || extensions.isEmpty()) {
+        if (f.indexOf('t') >= 0 || extensions.isEmpty()) {
             extensions.add(".txt");
         }
     }

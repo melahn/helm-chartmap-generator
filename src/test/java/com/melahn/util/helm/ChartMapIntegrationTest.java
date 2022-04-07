@@ -1,7 +1,5 @@
 package com.melahn.util.helm;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -9,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -39,11 +38,14 @@ class ChartMapIntegrationTest {
     private static final String TEST_REPO_NAME = "melahn";
 
     private static Path indexFilePath = Paths.get(INDEX_FILENAME);
+
     private List<String> args = null;
     private final String className = "com.melahn.util.helm.ChartMapGenerator";
-    private final Path JaCocoAgentPath = Paths.get("", "lib/org.jacoco.agent-0.8.7-runtime").toAbsolutePath();
-    private final String JaCocoAgentString = JaCocoAgentPath.toString()
+    private final Path jaCocoAgentPath = Paths.get("", "lib/org.jacoco.agent-0.8.7-runtime").toAbsolutePath();
+    private final String jaCocoAgentString = jaCocoAgentPath.toString()
             .concat(".jar=destfile=../../jacoco.exec,append=true");
+    private String testDirectoryName = null;
+    private int testVariation = 0; // used to generate unique subdirectory names
     private final ChartMapGeneratorTestUtil utility = new ChartMapGeneratorTestUtil();
 
     /**
@@ -96,7 +98,7 @@ class ChartMapIntegrationTest {
         args = Arrays.asList("-r", TEST_REPO_NAME, "-f", TEST_FILE_FORMAT_MASK_ALL, "-n", TEST_MAX_VERSIONS,
                 "-v");
         utility.createProcess(args, new String[][] { new String[] {}, new String[] {} }, null,
-                JaCocoAgentString,
+                jaCocoAgentString,
                 className, p, l);
         assertTrue(true);
         assertTrue(Files.exists(Paths.get(d, TEST_CHART_NAME.concat(".json"))));
@@ -115,15 +117,27 @@ class ChartMapIntegrationTest {
     @Test
     void helpTest() throws InterruptedException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
-        Path p = Paths.get(TARGET_TEST_INT_DIR_NAME, m);
+        // Test the -h parm 
+        Path p = Paths.get(TARGET_TEST_INT_DIR_NAME, m.concat("0"));
         Files.createDirectories(p);
         String d = p.toString();
         Path l = Paths.get(d, "sub-process-out.txt");
         args = Arrays.asList("-h");
         utility.createProcess(args, new String[][] { new String[] {}, new String[] {} }, null,
-                JaCocoAgentString,
+                jaCocoAgentString,
                 className, p, l);
         assertTrue(ChartMapGeneratorTestUtil.fileContains(l, "Usage:"));
+        System.out.println("Help in the shaded jar is shown with the -h parameter");
+        // Test no parms 
+        p = Paths.get(TARGET_TEST_INT_DIR_NAME, m.concat("1"));
+        Files.createDirectories(p);
+        d = p.toString();
+        l = Paths.get(d, "sub-process-out.txt");
+        utility.createProcess(new ArrayList<String>(), new String[][] { new String[] {}, new String[] {} }, null,
+                jaCocoAgentString,
+                className, p, l);
+        assertTrue(ChartMapGeneratorTestUtil.fileContains(l, "Usage:"));
+        System.out.println("Help in the shaded jar is shown when no parameters are used");
         System.out.println(m.concat(" completed"));
     }
 }

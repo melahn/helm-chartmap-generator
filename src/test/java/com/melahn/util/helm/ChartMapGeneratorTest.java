@@ -7,9 +7,6 @@ import static com.melahn.util.test.ChartMapGeneratorTestUtil.streamContains;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -22,14 +19,9 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 
-import com.melahn.util.helm.ChartMapGenerator;
-import com.melahn.util.helm.ChartMapGeneratorException;
-
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.internal.matchers.Null;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -88,6 +80,29 @@ class ChartMapGeneratorTest {
     }
 
     /**
+     * Test variations with the repo name parameter.
+     * 
+     * @throws ChartMapGeneratorException
+     * @throws IOException
+     */
+    @Test
+    void RepoNameParameterTest() throws ChartMapGeneratorException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        testVariation = 0;
+        testDirectoryName = createTestDir(m, getTestVariation());
+        // No repo name was provided. 
+          assertThrows(ChartMapGeneratorException.class, () -> createTestMapGenerator(null, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC_NOT_EXIST, VERBOSE_FALSE));
+        System.out.println("A ChartMapGeneratorException was thrown as expected since no repo name was provided");
+        // A bogus repo name was provided.
+        testDirectoryName = createTestDir(m, getTestVariation());
+        String bogus = String.valueOf(System.currentTimeMillis());
+        ChartMapGenerator cmg = createTestMapGenerator(bogus, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
+        assertThrows(ChartMapGeneratorException.class, () -> cmg.generate());
+        System.out.println(String.format("A ChartMapGeneratorException was thrown as expected since a bogus repo name \'%s\' was provided", bogus));
+        System.out.println(m.concat(" completed"));
+    }
+
+    /**
      * Test variations with the environment spec file.
      * 
      * @throws ChartMapGeneratorException
@@ -126,11 +141,11 @@ class ChartMapGeneratorTest {
     @Test
     void versionsParameterTest() throws ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
+        // all versions of each of the charts are printed in text format
         testVariation = 0;
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg.generate();
-        // validate that all versions of each of the charts are printed in text format
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.1.0.txt"))); 
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.txt")));
@@ -138,10 +153,10 @@ class ChartMapGeneratorTest {
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.2.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.3.0.txt")));
         System.out.println("All versions of each chart were successfully printed in text format");
+        //one and only one (the most recent) version of each of the charts is printed in text format
         testDirectoryName = createTestDir(m, getTestVariation());
         cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg .generate();
-        // validate that one and only one (the most recent) version of each of the charts is printed in text format
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.3.0.txt")));
@@ -161,9 +176,9 @@ class ChartMapGeneratorTest {
     @Test
     void verboseParameterTest() throws ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
+        // all versions of each of the charts are printed in text format
         testVariation = 0;
         testDirectoryName = createTestDir(m, getTestVariation());
-        // validate that all versions of each of the charts are printed in text format
         try (ByteArrayOutputStream o = new ByteArrayOutputStream()) {
             System.setOut(new PrintStream(o));
             ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_TRUE);
@@ -186,11 +201,11 @@ class ChartMapGeneratorTest {
     @Test
     void formatParameterTest() throws ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
+        // all versions of each of the charts are printed in text format
         testVariation = 0;
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_TRUE);
         cmg.generate();
-        // validate that all versions of each of the charts are printed in text format
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.1.0.txt"))); 
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.txt")));
@@ -198,10 +213,10 @@ class ChartMapGeneratorTest {
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.2.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.3.0.txt")));
         System.out.println("All versions of each chart were successfully printed in text format");
+        // all versions of each of the charts are printed in json format 
         testDirectoryName = createTestDir(m, getTestVariation());
         cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_JSON, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg.generate();
-        // validate that all versions of each of the charts are printed in json format 
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.json")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.1.0.json"))); 
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.json")));
@@ -209,23 +224,37 @@ class ChartMapGeneratorTest {
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.2.0.json")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.3.0.json")));
         System.out.println("All versions of each chart were successfully printed in json format");
+        // one version of each of the charts are printed in puml format with an accompanying image file
         testDirectoryName = createTestDir(m, getTestVariation());
-        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_PUML, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_PUML, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg.generate();
-        // validate that all versions of each of the charts are printed in puml format with an accompanying image file
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.puml")));
-        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.1.0.puml"))); 
-        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.puml")));
-        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.1.0.puml")));
-        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.2.0.puml")));
+        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.puml"))); 
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.3.0.puml")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.png")));
-        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.1.0.png"))); 
-        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.png")));
-        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.1.0.png")));
-        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.2.0.png")));
+        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.png"))); 
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.3.0.png")));
-        System.out.println("All versions of each chart were successfully printed in puml and png format");
+        System.out.println("One version of each chart were successfully printed in puml and png format");
+        // null format specifier
+        testDirectoryName = createTestDir(m, getTestVariation());
+        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), null, 1, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg.generate();
+        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
+        System.out.println("null file format mask was handled correctly");
+        // empty string format specifier
+        testDirectoryName = createTestDir(m, getTestVariation());
+        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), null, 1, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg.generate();
+        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
+        System.out.println("empty file format mask was handled correctly");
+        // mixed case format specifier
+        testDirectoryName = createTestDir(m, getTestVariation());
+        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), "tJp", 1, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg.generate();
+        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
+        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.json")));
+        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.puml")));
+        System.out.println("mixed case file format mask was handled correctly");
         System.out.println(m.concat(" completed"));
     }
 
@@ -303,7 +332,9 @@ class ChartMapGeneratorTest {
      * @throws IOException
      */
     @Test
-    void helpTest() throws IOException {
+    void helpTest() throws ChartMapGeneratorException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        // help text is correct
         String helpTextExpected = "\nUsage:\n\n"
                 .concat("java -jar helm-chartmap-generator-1.1.0-SNAPSHOT.jar\n")
                 .concat("\nFlags:\n")
@@ -317,7 +348,8 @@ class ChartMapGeneratorTest {
                 .concat("\nSee https://github.com/melahn/helm-chartmap-generator for more information\n");
         String helpText = ChartMapGenerator.getHelp();
         assertEquals(helpText, helpTextExpected);
-        System.out.println(new Throwable().getStackTrace()[0].getMethodName().concat(" completed"));
+        System.out.println("Help text is what is expected");
+        System.out.println(m.concat(" completed"));
     }
 
     /**
