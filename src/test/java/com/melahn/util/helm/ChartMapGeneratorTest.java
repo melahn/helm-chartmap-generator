@@ -1,6 +1,10 @@
 package com.melahn.util.helm;
 
+import static com.melahn.util.test.ChartMapGeneratorTestUtil.cleanDirectory;
+import static com.melahn.util.test.ChartMapGeneratorTestUtil.createTestMapGenerator;
 import static com.melahn.util.test.ChartMapGeneratorTestUtil.isWindows;
+import static com.melahn.util.test.ChartMapGeneratorTestUtil.streamContains;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -18,6 +22,9 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 
+import com.melahn.util.helm.ChartMapGenerator;
+import com.melahn.util.helm.ChartMapGeneratorException;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -30,9 +37,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 
-import com.melahn.util.helm.ChartMapGenerator;
-import com.melahn.util.helm.ChartMapGeneratorException;
-import com.melahn.util.test.ChartMapGeneratorTestUtil;
 class ChartMapGeneratorTest {
 
     private static final String DIVIDER = "-------------------------------------";
@@ -164,7 +168,7 @@ class ChartMapGeneratorTest {
             System.setOut(new PrintStream(o));
             ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_TRUE);
             cmg.generate();
-            assertTrue(ChartMapGeneratorTestUtil.streamContains(o, "charts were found"));
+            assertTrue(streamContains(o, "charts were found"));
             System.setOut(initialOut);
             System.out.println("Verbose string found as expected");
         }
@@ -317,24 +321,6 @@ class ChartMapGeneratorTest {
     }
 
     /**
-     * Helper Function to create a ChartMapGenerator
-     * @param repoName the name of the repo
-     * @param outputDirName the name of the output directory
-     * @param fileFormatMask the file format mask
-     * @param maxVersions how many chart versions to print, at most
-     * @param envFilename the name of the env file
-     * @param verbose whether verbose output is desired
-     * @return
-     * @throws ChartMapGeneratorException if an error occurs creating the ChartMapGenerator
-     */
-    private ChartMapGenerator createTestMapGenerator(String repoName, String outputDirName, String fileFormatMask,
-            int maxVersions, String envFilename, boolean verbose) throws ChartMapGeneratorException {
-        ChartMapGenerator cmg = new ChartMapGenerator(repoName, outputDirName, fileFormatMask, maxVersions, envFilename,
-                verbose);
-        return cmg;
-    }
-
-    /**
      * Helper function to clean a subdirectory if it exists within
      * the target/test directory. then creates the directory for a test 
      * case to run in.
@@ -344,7 +330,7 @@ class ChartMapGeneratorTest {
      */
     private String createTestDir(String s, String i) throws IOException {
         Path p = Paths.get(TARGET_TEST_DIR_NAME, s.concat(i));
-        ChartMapGeneratorTestUtil.cleanDirectory(p);
+        cleanDirectory(p);
         Files.createDirectories(p);
         return p.toString();
     }

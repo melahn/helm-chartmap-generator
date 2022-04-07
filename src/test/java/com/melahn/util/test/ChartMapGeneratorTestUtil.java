@@ -16,6 +16,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import com.melahn.util.helm.ChartMapGenerator;
+import com.melahn.util.helm.ChartMapGeneratorException;
+
 public class ChartMapGeneratorTestUtil {
 
     private static final int WAIT_TIME = 120; // wait for a long time because a fair number of charts need to be generated
@@ -73,6 +76,24 @@ public class ChartMapGeneratorTestUtil {
                 System.out.println("Error walking directory: " + d);
             }
         }
+    }
+
+    /**
+     * Creates a ChartMapGenerator.
+     * 
+     * @param repoName the name of the repo
+     * @param outputDirName the name of the output directory
+     * @param fileFormatMask the file format mask
+     * @param maxVersions how many chart versions to print, at most
+     * @param envFilename the name of the env file
+     * @param verbose whether verbose output is desired
+     * @return a new ChartMapGenerator
+     * @throws ChartMapGeneratorException if an error occurs creating the ChartMapGenerator
+     */
+    public static ChartMapGenerator createTestMapGenerator(String repoName, String outputDirName, String fileFormatMask,
+            int maxVersions, String envFilename, boolean verbose) throws ChartMapGeneratorException {
+        return new ChartMapGenerator(repoName, outputDirName, fileFormatMask, maxVersions, envFilename,
+                verbose);
     }
 
     /**
