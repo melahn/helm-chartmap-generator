@@ -38,10 +38,10 @@ class ChartMapGeneratorTest {
     private static final String DIVIDER = "-------------------------------------";
     private static final int PRINT_ONE_VERSION = 1;
     private static final int PRINT_ALL_VERSIONS = 99;
-    private static final String FORMAT_ALL = "-jpt";
-    private static final String FORMAT_JSON = "-j";
-    private static final String FORMAT_PUML = "-p";
-    private static final String FORMAT_TEXT = "-t";
+    private static final String FORMAT_ALL = "jpt";
+    private static final String FORMAT_JSON = "j";
+    private static final String FORMAT_PUML = "p";
+    private static final String FORMAT_TEXT = "t";
     private static final String INDEX_FILENAME = "index.html";
     private static final String TARGET_TEST_DIR_NAME = "target/test";
     private static final Path   TARGET_TEST_DIR_PATH = Paths.get(TARGET_TEST_DIR_NAME);
@@ -55,6 +55,8 @@ class ChartMapGeneratorTest {
     private static Path indexFilePath = Paths.get(INDEX_FILENAME);
     private static String targetTest = "target/test";
     private static String targetTestDirectory = Paths.get(targetTest).toString();
+
+    private final PrintStream initialOut = System.out;
 
     private String testDirectoryName = null;
     private int testVariation = 0; // used to generate unique subdirectory names
@@ -146,6 +148,30 @@ class ChartMapGeneratorTest {
         System.out.println(m.concat(" completed"));
     }
 
+ /**
+     * Test variations using the verbose parameter.
+     * 
+     * @throws ChartMapGeneratorException
+     * @throws IOException
+     */
+    @Test
+    void verboseParameterTest() throws ChartMapGeneratorException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        testVariation = 0;
+        testDirectoryName = createTestDir(m, getTestVariation());
+        // validate that all versions of each of the charts are printed in text format
+        try (ByteArrayOutputStream o = new ByteArrayOutputStream()) {
+            System.setOut(new PrintStream(o));
+            ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_TRUE);
+            cmg.generate();
+            assertTrue(ChartMapGeneratorTestUtil.streamContains(o, "charts were found"));
+            System.setOut(initialOut);
+            System.out.println("Verbose string found as expected");
+        }
+        System.out.println("All versions of each chart were successfully printed in puml and png format");
+        System.out.println(m.concat(" completed"));
+    }
+
     /**
      * Test variations on the format parameter.
      * 
@@ -158,7 +184,7 @@ class ChartMapGeneratorTest {
         String m = new Throwable().getStackTrace()[0].getMethodName();
         testVariation = 0;
         testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
+        ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_TRUE);
         cmg.generate();
         // validate that all versions of each of the charts are printed in text format
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));

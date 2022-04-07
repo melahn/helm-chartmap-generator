@@ -106,6 +106,9 @@ public class ChartMapGenerator {
             args.add("-e");
             args.add(envFilename);
         }
+        if (verbose) {
+            args.add("-v");
+        }
         for (String a : args) {
             if (a == null) {
                 throw new ChartMapGeneratorException("Null parameter");
