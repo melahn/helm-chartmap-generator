@@ -658,8 +658,4 @@ public class ChartMapGenerator {
     public boolean isVerbose() {
         return verbose;
     }
-
-    protected void setVerbose(boolean v) {
-        this.verbose = v;
-    }
 }
