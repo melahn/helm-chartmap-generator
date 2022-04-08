@@ -9,14 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 
 import org.junit.jupiter.api.AfterAll;
@@ -31,24 +27,21 @@ import java.util.concurrent.TimeUnit;
 
 class ChartMapGeneratorTest {
 
+    private static final String CSS_FILENAME = "style.css";
     private static final String DIVIDER = "-------------------------------------";
-    private static final int PRINT_ONE_VERSION = 1;
-    private static final int PRINT_ALL_VERSIONS = 99;
-    private static final String FORMAT_ALL = "jpt";
     private static final String FORMAT_JSON = "j";
     private static final String FORMAT_PUML = "p";
     private static final String FORMAT_TEXT = "t";
     private static final String INDEX_FILENAME = "index.html";
+    private static final int PRINT_ONE_VERSION = 1;
+    private static final int PRINT_ALL_VERSIONS = 99;
     private static final String TARGET_TEST_DIR_NAME = "target/test";
-    private static final Path   TARGET_TEST_DIR_PATH = Paths.get(TARGET_TEST_DIR_NAME);
     private static final String TEST_REPO_NAME = "melahn";
     private static final String TEST_ENV_SPEC = "./resource/example/example-env-spec.yaml";
     private static final String TEST_ENV_SPEC_NOT_EXIST = "./resource/example/no-spec-here.yaml";
     private static final boolean VERBOSE_FALSE = false;
     private static final boolean VERBOSE_TRUE = true;
 
-
-    private static Path indexFilePath = Paths.get(INDEX_FILENAME);
     private static String targetTest = "target/test";
     private static String targetTestDirectory = Paths.get(targetTest).toString();
 
@@ -122,13 +115,43 @@ class ChartMapGeneratorTest {
         ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg2.generate();
         // validate that one and only one (the most recent) version of each of the charts is printed in text format
-        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
-        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.txt")));
-        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.3.0.txt")));
-        assertFalse(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.1.0.txt"))); 
-        assertFalse(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.1.0.txt"))); 
-        assertFalse(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.2.0.txt"))); 
+        assertTrue(Files.exists(Paths.get(testDirectoryName, "test-app-a-0.1.0.txt")));
+        assertTrue(Files.exists(Paths.get(testDirectoryName, "test-app-b-0.2.0.txt")));
+        assertTrue(Files.exists(Paths.get(testDirectoryName, "test-app-c-0.3.0.txt")));
+        assertFalse(Files.exists(Paths.get(testDirectoryName, "test-app-b-0.1.0.txt"))); 
+        assertFalse(Files.exists(Paths.get(testDirectoryName, "test-app-c-0.1.0.txt"))); 
+        assertFalse(Files.exists(Paths.get(testDirectoryName, "test-app-c-0.2.0.txt"))); 
         System.out.println("One version of each chart was successfully printed in text format");
+        System.out.println(m.concat(" completed"));
+    }
+
+       /**
+     * Test variations with the output directory parameter.
+     * 
+     * @throws ChartMapGeneratorException
+     * @throws IOException
+     */
+    @Test
+    void OutputDirParameterTest() throws ChartMapGeneratorException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        // No output parameter is provided so expect the files are generated in the target directory.
+        ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, null, FORMAT_TEXT, PRINT_ONE_VERSION, null, VERBOSE_FALSE);
+        Files.deleteIfExists(Paths.get(".", CSS_FILENAME));
+        Files.deleteIfExists(Paths.get(".", INDEX_FILENAME));
+        cmg.generate();
+        // these are generated in the project root
+        assertTrue(Files.exists(Paths.get(".", "test-app-a-0.1.0.txt")));
+        assertTrue(Files.exists(Paths.get(".", "test-app-b-0.2.0.txt")));
+        assertTrue(Files.exists(Paths.get(".", "test-app-c-0.3.0.txt")));
+        assertTrue(Files.exists(Paths.get(".", CSS_FILENAME)));
+        assertTrue(Files.exists(Paths.get(".", INDEX_FILENAME)));
+        // don't clutter up the project root
+        Files.deleteIfExists(Paths.get(".", "test-app-a-0.1.0.txt"));
+        Files.deleteIfExists(Paths.get(".", "test-app-b-0.2.0.txt"));
+        Files.deleteIfExists(Paths.get(".", "test-app-c-0.3.0.txt"));
+        Files.deleteIfExists(Paths.get(".", CSS_FILENAME));
+        Files.deleteIfExists(Paths.get(".", INDEX_FILENAME));
+        System.out.println("No output directory was provided so the pwd was used");
         System.out.println(m.concat(" completed"));
     }
 
@@ -183,7 +206,7 @@ class ChartMapGeneratorTest {
             System.setOut(new PrintStream(o));
             ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_TRUE);
             cmg.generate();
-            assertTrue(streamContains(o, "charts were found"));
+            assertTrue(streamContains(o, "Number of charts found in local helm repo"));
             System.setOut(initialOut);
             System.out.println("Verbose string found as expected");
         }
@@ -349,6 +372,14 @@ class ChartMapGeneratorTest {
         String helpText = ChartMapGenerator.getHelp();
         assertEquals(helpText, helpTextExpected);
         System.out.println("Help text is what is expected");
+        // no args
+        try (ByteArrayOutputStream o = new ByteArrayOutputStream()) {
+            System.setOut(new PrintStream(o));
+            ChartMapGenerator.main(new String[0]);
+            assertTrue(streamContains(o, "Usage:"));
+            System.setOut(initialOut);
+            System.out.println("Help was returned as expected when no parameters were passed");
+        }
         System.out.println(m.concat(" completed"));
     }
 

@@ -165,10 +165,9 @@ public class ChartMapGenerator {
             }
             if (cmd.hasOption("e")) {
                 envFilename = cmd.getOptionValue("e");
-            }
+            } 
             if (a.length == 0
-                    || cmd.hasOption("h")
-                    || localRepoName == null) {
+                    || cmd.hasOption("h")) {
                 logger.info(ChartMapGenerator.getHelp());
                 return false;
             }
@@ -207,11 +206,7 @@ public class ChartMapGenerator {
             mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             cache = mapper.readValue(new File(localRepoFilename), HelmChartLocalCache.class);
             Map<String, HelmChart[]> entries = cache.getEntries();
-            if (entries.size() == 1) {
-                logger.log(logLevelVerbose,"One chart was found");
-            } else {
-                logger.log(logLevelVerbose,"{} charts were found", entries.size());
-            }
+            logger.log(logLevelVerbose,"Number of charts found in local helm repo {}: {}", localRepoName, entries.size());
             createIndex();
             for (Map.Entry<String, HelmChart[]> entry : entries.entrySet()) {
                 int i = 1;
