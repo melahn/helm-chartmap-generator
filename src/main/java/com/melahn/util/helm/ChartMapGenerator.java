@@ -147,7 +147,7 @@ public class ChartMapGenerator {
         options.addOption("v", false, "Verbose");
         CommandLineParser parser = new DefaultParser();
         try {
-            CommandLine cmd = parser.parse(options, a);
+            CommandLine cmd = parser.parse(options, a, false);
             if (cmd.hasOption("v")) {
                 verbose = true;
             }
@@ -167,7 +167,8 @@ public class ChartMapGenerator {
                 envFilename = cmd.getOptionValue("e");
             } 
             if (a.length == 0
-                    || cmd.hasOption("h")) {
+                    || cmd.hasOption("h")
+                    || localRepoName == null) {
                 logger.info(ChartMapGenerator.getHelp());
                 return false;
             }

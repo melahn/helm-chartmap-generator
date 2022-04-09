@@ -73,6 +73,26 @@ class ChartMapGeneratorTest {
     }
 
     /**
+     * Tests bad arguments.
+     * 
+     * @throws ChartMapGeneratorException
+     * @throws IOException
+    */
+    @Test
+    void badArgsTest() throws ChartMapGeneratorException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        // undefined argument
+        try (ByteArrayOutputStream o = new ByteArrayOutputStream()) {
+            System.setOut(new PrintStream(o));
+            ChartMapGenerator.main(new String[] {"-x"});
+            assertTrue(streamContains(o, "ChartMapGeneratorException: Unrecognized option: -x "));
+            System.setOut(initialOut);
+            System.out.println("Unrecognized option message found as expected");
+        }
+        System.out.println(m.concat(" completed"));
+    }
+
+    /**
      * Test variations with the repo name parameter.
      * 
      * @throws ChartMapGeneratorException
@@ -372,13 +392,21 @@ class ChartMapGeneratorTest {
         String helpText = ChartMapGenerator.getHelp();
         assertEquals(helpText, helpTextExpected);
         System.out.println("Help text is what is expected");
-        // no args
+        // no arguments
         try (ByteArrayOutputStream o = new ByteArrayOutputStream()) {
             System.setOut(new PrintStream(o));
             ChartMapGenerator.main(new String[0]);
             assertTrue(streamContains(o, "Usage:"));
             System.setOut(initialOut);
-            System.out.println("Help was returned as expected when no parameters were passed");
+            System.out.println("Help was returned as expected when no arguments were provided");
+        }
+        // missing repo name
+        try (ByteArrayOutputStream o = new ByteArrayOutputStream()) {
+            System.setOut(new PrintStream(o));
+            ChartMapGenerator.main(new String[]{"-n", "2"});
+            assertTrue(streamContains(o, "Usage:"));
+            System.setOut(initialOut);
+            System.out.println("Help was returned as expected when no repo name was provided");
         }
         System.out.println(m.concat(" completed"));
     }
