@@ -493,7 +493,7 @@ public class ChartMapGenerator {
     protected void checkHelmVersion() throws ChartMapGeneratorException {
         String[] c = { helmCommand,  "version", "--template", "{{ .Version }}" };
         try {
-            Process p = getProcess(c, null);
+            Process p = getProcess(c);
             BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
             p.waitFor(PROCESS_TIMEOUT, TimeUnit.MILLISECONDS);
             int exitValue = p.exitValue();
@@ -626,12 +626,11 @@ public class ChartMapGenerator {
      * as to return non zero exit codes for testing.
      * 
      * @param c the command and its parameters
-     * @param d the working directory
      * @return a Process
      * @throws IOException if an error occurs getting the process
      */
-    public Process getProcess(String[] c, File d) throws IOException {
-        return d!=null?Runtime.getRuntime().exec(c, null, d):Runtime.getRuntime().exec(c, null);
+    public Process getProcess(String[] c) throws IOException {
+        return Runtime.getRuntime().exec(c, null);
     }
 
     /**

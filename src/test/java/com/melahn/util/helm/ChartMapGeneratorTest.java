@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.spy;
@@ -316,9 +315,9 @@ class ChartMapGeneratorTest {
         // Use a command that is the same across all the OS's so it will run
         Process p1 = Runtime.getRuntime().exec(new String[] { "echo", "I am the foo process" });
         Process sp1 = spy(p1);
-        doReturn(sp1).when(scmg1).getProcess(any(), eq(null));
+        doReturn(sp1).when(scmg1).getProcess(any());
         doReturn("helm").when(scmg1).getHelmCommand();
-        // Return 1 to mimic a bad helm command forcing a ChartMapException
+        // Return 1 to mimic a bad helm command forcing a ChartMapGeneratorException
         doReturn(1).when(sp1).exitValue();
         assertThrows(ChartMapGeneratorException.class, () -> scmg1.checkHelmVersion());
         System.out.println("ChartMapGeneratorException thrown as expected");
@@ -327,34 +326,34 @@ class ChartMapGeneratorTest {
         ChartMapGenerator scmg2 = spy(cmg2);
         // Use a command that is the same across all the OS's to mimic a helm not v3
         Process p2 = Runtime.getRuntime().exec(new String[] { "echo", "I am not helm version 3" });
-        doReturn(p2).when(scmg2).getProcess(any(), eq(null));
+        doReturn(p2).when(scmg2).getProcess(any());
         assertThrows(ChartMapGeneratorException.class, () -> scmg2.checkHelmVersion());
         System.out.println("ChartMapGeneratorException thrown as expected");
         // Use a command that will cause the process' BufferedReader to return null and
-        // force the ChartMapException.
+        // force the ChartMapGeneratorException.
         ChartMapGenerator cmg3 = createTestMapGenerator(TEST_REPO_NAME, targetTestDirectory, FORMAT_TEXT, 1, null, true);
         ChartMapGenerator scmg3 = spy(cmg3);
         String nullCommand = isWindows() ? "type" : "cat";
         String nullArgument = isWindows() ? "NUL" : "/dev/null";
         Process p3 = Runtime.getRuntime().exec(new String[] { nullCommand, nullArgument });
-        doReturn(p3).when(scmg3).getProcess(any(), eq(null));
+        doReturn(p3).when(scmg3).getProcess(any());
         assertThrows(ChartMapGeneratorException.class, () -> scmg3.checkHelmVersion());
         System.out.println("ChartMapGeneratorException thrown as expected");
         // Use a command that will cause the process' BufferedReader to just one
-        // character and force the ChartMapException
+        // character and force the ChartMapGeneratorException
         ChartMapGenerator cmg4 = createTestMapGenerator(TEST_REPO_NAME, targetTestDirectory, FORMAT_TEXT, 1, null, true);
         ChartMapGenerator scmg4 = spy(cmg4);
         Process p4 = Runtime.getRuntime().exec(new String[] { "echo", "1" });
-        doReturn(p4).when(scmg4).getProcess(any(), eq(null));
+        doReturn(p4).when(scmg4).getProcess(any());
         assertThrows(ChartMapGeneratorException.class, () -> scmg4.checkHelmVersion());
         System.out.println("ChartMapGeneratorException thrown as expected");
-        // Cause an IOException -> ChartMapException on getProcess()
+        // Cause an IOException -> ChartMapGeneratorException on getProcess()
         ChartMapGenerator cmg5 = createTestMapGenerator(TEST_REPO_NAME, targetTestDirectory, FORMAT_TEXT, 1, null, true);
         ChartMapGenerator scmg5 = spy(cmg5);
-        doThrow(IOException.class).when(scmg5).getProcess(any(), eq(null));
+        doThrow(IOException.class).when(scmg5).getProcess(any());
         assertThrows(ChartMapGeneratorException.class, () -> scmg5.checkHelmVersion());
         System.out.println("IOException -> ChartMapGeneratorException thrown as expected");
-        // Cause an InterruptedException -> ChartMapException on waitFor()
+        // Cause an InterruptedException -> ChartMapGeneratorException on waitFor()
         // Be careful to put InterruptedException case last in the test case since the
         // thread is not usable after that
         ChartMapGenerator cmg6 = createTestMapGenerator(TEST_REPO_NAME, targetTestDirectory, FORMAT_TEXT, 1, null, true);
@@ -362,11 +361,87 @@ class ChartMapGeneratorTest {
         Process p6 = Runtime.getRuntime()
                 .exec(new String[] { "echo", "I am going to throw an InterruptedException!!" });
         Process sp6 = spy(p6);
-        doReturn(sp6).when(scmg6).getProcess(any(), eq(null));
+        doReturn(sp6).when(scmg6).getProcess(any());
         doThrow(InterruptedException.class).when(sp6).waitFor(ChartMapGenerator.PROCESS_TIMEOUT, TimeUnit.MILLISECONDS);
         assertThrows(ChartMapGeneratorException.class, () -> scmg6.checkHelmVersion());
         System.out.println("InterruptedException -> ChartMapGeneratorException thrown as expected");
         System.out.println(new Throwable().getStackTrace()[0].getMethodName().concat(" completed"));
+    }
+
+    /**
+     * Test helmClientInformationTest
+     * 
+     * @throws ChartMapGeneratorException
+     * @throws IOException
+     * @throws InterruptedException
+     */
+    @Test
+    void helmClientInformationTest() throws ChartMapGeneratorException, IOException, InterruptedException{
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        testVariation = 0;
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
+        ChartMapGenerator scmg1 = spy(cmg1);
+        // force setExecutable to return false to force ChartMapGeneratorException
+        File f1 = new File("foo");
+        File sf1 = spy(f1);
+        doReturn(sf1).when(scmg1).getTempFile(any(), any());
+        doReturn(false).when(sf1).setExecutable(true, true);
+        doReturn(true).when(sf1).setWritable(true, true);
+        doReturn(true).when(sf1).setReadable(true, true);
+        assertThrows(ChartMapGeneratorException.class, () -> scmg1.getHelmClientInformation());
+        System.out.println("ChartMapGeneratorException thrown as expected testing setExecutable");
+        // force setWritable to return false to force ChartMapGeneratorException
+        File f2 = new File("foo");
+        File sf2 = spy(f2);
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
+        ChartMapGenerator scmg2 = spy(cmg2);
+        doReturn(sf2).when(scmg2).getTempFile(any(), any());
+        doReturn(true).when(sf2).setExecutable(true, true);
+        doReturn(false).when(sf2).setWritable(true, true);
+        doReturn(true).when(sf2).setReadable(true, true);
+        assertThrows(ChartMapGeneratorException.class, () -> scmg2.getHelmClientInformation());
+        System.out.println("ChartMapGeneratorException thrown as expected testing setWritable");
+        // force setReadable to return false to force ChartMapGeneratorException
+        File f3 = new File("foo");
+        File sf3 = spy(f3);
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg3 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
+        ChartMapGenerator scmg3 = spy(cmg3);
+        doReturn(sf3).when(scmg3).getTempFile(any(), any());
+        doReturn(true).when(sf3).setExecutable(true, true);
+        doReturn(true).when(sf3).setWritable(true, true);
+        doReturn(false).when(sf3).setReadable(true, true);
+        assertThrows(ChartMapGeneratorException.class, () -> scmg3.getHelmClientInformation());
+        System.out.println("ChartMapGeneratorException thrown as expected testing setReadable");
+        // force a bad exit value 
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg4 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
+        ChartMapGenerator scmg4 = spy(cmg4);
+        ProcessBuilder pb4 = new ProcessBuilder("foo", "bar");
+        ProcessBuilder spb4 = spy(pb4);
+        Process p4 = Runtime.getRuntime().exec(new String[] { "echo", "I am going to return a bad exitValue ... just watch me!!" });
+        Process sp4 = spy(p4);
+        doReturn(1).when(sp4).exitValue();
+        doReturn(sp4).when(spb4).start();
+        doReturn(spb4).when(scmg4).getProcessBuilder(any(), any());
+        assertThrows(ChartMapGeneratorException.class, () -> scmg4.getHelmClientInformation());
+        System.out.println("IOException -> ChartMapGeneratorException thrown as expected with simulated bad exit code");
+        // force an InterruptedException on waitFor
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg5 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
+        ChartMapGenerator scmg5 = spy(cmg5);
+        ProcessBuilder pb5 = new ProcessBuilder("foo", "bar");
+        ProcessBuilder spb5 = spy(pb5);
+        Process p5 = Runtime.getRuntime().exec(new String[] { "echo", "I am going to throw an InterruptedException on waitFor ... just watch me!!" });
+        Process sp5 = spy(p5);
+        doThrow(InterruptedException.class).when(sp5).waitFor(ChartMapGenerator.PROCESS_TIMEOUT, TimeUnit.MILLISECONDS);
+        doReturn(sp5).when(spb5).start();
+        doReturn(spb5).when(scmg5).getProcessBuilder(any(), any());
+        assertThrows(ChartMapGeneratorException.class, () -> scmg5.getHelmClientInformation());
+        System.out.println("InterruptedException -> ChartMapException thrown as expected");
+        System.out.println(m.concat(" completed"));
     }
 
     /**
