@@ -427,7 +427,7 @@ class ChartMapGeneratorTest {
         doReturn(sp4).when(spb4).start();
         doReturn(spb4).when(scmg4).getProcessBuilder(any(), any());
         assertThrows(ChartMapGeneratorException.class, () -> scmg4.getHelmClientInformation());
-        System.out.println("IOException -> ChartMapGeneratorException thrown as expected with simulated bad exit code");
+        System.out.println("ChartMapGeneratorException thrown as expected with simulated bad exit code");
         // force an InterruptedException on waitFor
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg5 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
@@ -440,7 +440,18 @@ class ChartMapGeneratorTest {
         doReturn(sp5).when(spb5).start();
         doReturn(spb5).when(scmg5).getProcessBuilder(any(), any());
         assertThrows(ChartMapGeneratorException.class, () -> scmg5.getHelmClientInformation());
+        Thread.interrupted(); // Since the interrupt was interruped, make sure to set the interrupt flag or the next test will fail
         System.out.println("InterruptedException -> ChartMapException thrown as expected");
+        // force an IOException on process start
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg6 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
+        ChartMapGenerator scmg6 = spy(cmg6);
+        ProcessBuilder pb6 = new ProcessBuilder("foo", "bar");
+        ProcessBuilder spb6 = spy(pb6);
+        doThrow(IOException.class).when(spb6).start(); 
+        doReturn(spb6).when(scmg6).getProcessBuilder(any(), any());
+        assertThrows(ChartMapGeneratorException.class, () -> scmg6.getHelmClientInformation());
+        System.out.println("IOException -> ChartMapException thrown as expected");
         System.out.println(m.concat(" completed"));
     }
 
