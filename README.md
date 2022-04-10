@@ -179,13 +179,43 @@ public class ChartMapGeneratorExample {
 
 More examples illustrating the use of the Java interface can be found in [ChartMapGeneratorTest.java](./src/test/java/com/melahn/util/helm/ChartMapGeneratorTest.java).
 
-### Notes
+### PlantUML Notes
 
 When generating PlantUML files, the images that are then produced from those files will have the best layout when the following system environment variable is set before running *helm-chart-generator*.
 
 ``` java
 PLANTUML_LIMIT_SIZE 8192
 ```
+
+## Build Notes
+
+### Maven Commands
+
+#### Building the jar from source and running tests
+
+1. git clone this repository
+2. run maven
+
+``` maven
+mvn clean install 
+```
+
+Note: The jar targets Java 8 for the widest compatibiity. You can target a different
+version of Java by modifying the configuration in the maven-compiler-plugin to use a different target like in the example below.
+
+``` xml
+<target>11</target>
+```
+
+### Build Warnings
+
+When the shaded jar is built by the maven-shade-plugin there is a warning produced like this...
+
+```text
+     target/classes (Is a directory)
+```
+
+This warning is due to a long-standing issue where the shade plugin checks if a classpath element is a jar, and if it is not, swallows useful error information.  It instead prints out this meaningless warning.  See <https://issues.apache.org/jira/browse/MSHADE-376> for more details. See <https://github.com/melahn/maven-shade-plugin> if you want to install your own version of the plugin, with a fix that eliminates this warning.
 
 ### Issues
 
