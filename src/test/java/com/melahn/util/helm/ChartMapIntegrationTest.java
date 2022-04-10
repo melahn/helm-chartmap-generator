@@ -103,6 +103,53 @@ class ChartMapIntegrationTest {
     }
 
     /**
+     * Tests the use of the HELM_BIN environment variable.  
+     * 
+     * @throws InterruptedException
+     * @throws IOException
+     */
+    @Test
+    void setHelmBinTest() throws InterruptedException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        // The HELM_BIN env var is set to a fake value and that value 
+        // is tested for in the output log.  Note that the generation itself 
+        // does not work but that is not important for the test
+        Path p = Paths.get(TARGET_TEST_INT_DIR_NAME, m.concat("-0"));
+        String d = p.toString();
+        Path l = Paths.get(d, "sub-process-out.txt");
+        Path i = Paths.get(d, "index.html");
+        // delete the index file if it already exists
+        if (Files.exists(i)) {
+            Files.delete(i);
+        }
+        Files.createDirectories(p);
+        args = Arrays.asList("-r", "foo-repo");
+        String h = "fake-helm-bin-test-resolved";
+        utility.createProcess(args, new String[][] { new String[] {"HELM_BIN", h}, new String[] {} }, null,
+                jaCocoAgentString,
+                className, p, l);
+        assertTrue(ChartMapGeneratorTestUtil.fileContains(l, String.format("The helm command \'%s\' will be used to discover path information.",h)));
+        // The HELM_BIN env var is removed from the environment and the log is
+        // is inspected to be sure the correct default value is used.
+        p = Paths.get(TARGET_TEST_INT_DIR_NAME, m.concat("-1"));
+        d = p.toString();
+        l = Paths.get(d, "sub-process-out.txt");
+        i = Paths.get(d, "index.html");
+        // delete the index file if it already exists
+        if (Files.exists(i)) {
+            Files.delete(i);
+        }
+        Files.createDirectories(p);
+        args = Arrays.asList("-r", ChartMapGeneratorTest.TEST_REPO_NAME,"-n", "1");
+        h = "helm";
+        utility.createProcess(args, new String[][] { new String[] {}, new String[] {"HELM_BIN", h} }, null,
+                jaCocoAgentString,
+                className, p, l);
+        assertTrue(ChartMapGeneratorTestUtil.fileContains(l, String.format("The helm command \'%s\' will be used to discover path information.",h)));
+        System.out.println(m.concat(" completed"));
+    }
+
+    /**
      * Tests help in the shaded jar.
      * 
      * @throws InterruptedException

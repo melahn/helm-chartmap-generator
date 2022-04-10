@@ -35,7 +35,7 @@ class ChartMapGeneratorTest {
     private static final int PRINT_ONE_VERSION = 1;
     private static final int PRINT_ALL_VERSIONS = 99;
     private static final String TARGET_TEST_DIR_NAME = "target/test";
-    private static final String TEST_REPO_NAME = "melahn";
+    protected static final String TEST_REPO_NAME = "melahn";
     private static final String TEST_ENV_SPEC = "./resource/example/example-env-spec.yaml";
     private static final String TEST_ENV_SPEC_NOT_EXIST = "./resource/example/no-spec-here.yaml";
     private static final boolean VERBOSE_FALSE = false;

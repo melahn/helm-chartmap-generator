@@ -181,7 +181,7 @@ public class ChartMapGenerator {
                 logger.log(logLevelVerbose, "Only one version of each chart will be printed.");
             }
             else {
-                logger.log(logLevelVerbose, "A maximum of {} versions of each chart will be printed.", cmd.getOptionValue("n"));
+                logger.log(logLevelVerbose, "A maximum of {} versions of each chart will be printed.", maxVersions);
             }
             if (envFilename != null) {
                 logger.log(logLevelVerbose, "Environment file \"{}\"", envFilename);
@@ -478,7 +478,9 @@ public class ChartMapGenerator {
      */
     protected String getHelmCommand() {
         String helmBin = getEnv("HELM_BIN");
-        return helmBin == null ? "helm" : helmBin;
+        String helmCommandResolved = getEnv("HELM_BIN") == null ? "helm" : helmBin;
+        logger.info("The helm command \'{}\' will be used to discover path information.", helmCommandResolved);
+        return helmCommandResolved;
     }
 
     /**
