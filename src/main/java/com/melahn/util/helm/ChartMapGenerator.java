@@ -251,7 +251,7 @@ public class ChartMapGenerator {
      * 
      * @throws ChartMapGeneratorException when an IOException or ChartMapGeneratorException occurs printing the Chart Map.
      */
-    private void printChart(HelmChart h) throws ChartMapGeneratorException, IOException {
+    protected void printChart(HelmChart h) throws ChartMapGeneratorException, IOException {
         try {
             logger.info("Printing chart: {}", h.getNameFull());
             startStanzaInIndex(h.getNameFull());
@@ -276,7 +276,7 @@ public class ChartMapGenerator {
      * 
      * @throws ChartMapGeneratorException when an IOException or ChartMapException occurs printing the Chart Map.
      */
-    private void printChart(HelmChart h, String f) throws ChartMapGeneratorException {
+    protected void printChart(HelmChart h, String f) throws ChartMapGeneratorException {
         String filename = h.getName().concat("-").concat(h.getVersion()).concat(f);
         try {
             ChartMap testMap = new ChartMap(
@@ -304,7 +304,7 @@ public class ChartMapGenerator {
      * @throws ChartMapGeneratorException when an IOException occurs creating the index file.
      *
      */
-    private void createIndex() throws ChartMapGeneratorException {
+    protected void createIndex() throws ChartMapGeneratorException {
         indexFilename = outputDirName.concat("/index.html");
         String h = "<!DOCTYPE HTML>\n<html>\n";
         try {
@@ -322,7 +322,7 @@ public class ChartMapGenerator {
      * Adds head elements to the index file and adds a H1 tag, then creates css file
      *
      */
-    private void addHead () throws IOException {
+    protected void addHead () throws IOException {
         String h = "<head>"
                 .concat("\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n")
                 .concat("\t<link rel=\"stylesheet\" href=\"./style.css\">\n")
@@ -339,7 +339,7 @@ public class ChartMapGenerator {
      * Creates a css style file.  If the file already exists, the file is left as-is
      *
      */
-    private void createStyleFile () throws IOException {
+    protected void createStyleFile () throws IOException {
         String styleFilename = outputDirName.concat("/style.css");
         String s = "* {\n\tfont-family: \"Arial\", Helvetica, san-serif;\n\tcolor: lightgray;\n\tbackground-color: black;\n}\n"
                 .concat("a:visited {\n\tcolor: grey;\n}\n")
@@ -355,7 +355,7 @@ public class ChartMapGenerator {
      * Starts one chart stanza with the chartname to the index file
      *
      */
-    private void startStanzaInIndex(String s) throws IOException {
+    protected void startStanzaInIndex(String s) throws IOException {
         String l = "\t<p class=\"chartname\">".concat(s).concat("</p>\n\t<ul>\n");
         Files.write(Paths.get(indexFilename),
                 l.getBytes(),
@@ -366,7 +366,7 @@ public class ChartMapGenerator {
      * Closes a stanza in the index file
      *
      */
-    private void closeStanzaInIndex() throws IOException {
+    protected void closeStanzaInIndex() throws IOException {
         String l = "\t</ul>\n";
         Files.write(Paths.get(indexFilename),
                 l.getBytes(),
@@ -378,7 +378,7 @@ public class ChartMapGenerator {
      *
      * @param f helm chart filename
      */
-    private void addChartToIndex(String f) throws IOException {
+    protected void addChartToIndex(String f) throws IOException {
         String l = "\t\t<li class=\"chartlink\">".concat("<a href=\"./").concat(f).concat("\">").concat(f).concat("</a>").concat("</li>\n");
         Files.write(Paths.get(indexFilename),
                 l.getBytes(),
@@ -393,7 +393,7 @@ public class ChartMapGenerator {
     }
 
     /**
-     * @return A format for date and time
+     * @return a format for date and time
      *
      */
     private static String getCurrentDateTime() {
@@ -404,7 +404,7 @@ public class ChartMapGenerator {
      * Adds end elements to the index file
      *
      */
-    private void addFooterToIndex() throws IOException {
+    protected void addFooterToIndex() throws IOException {
         String f = "<hr/>Generated on "
                 .concat(getCurrentDateTime())
                 .concat(" by ")
@@ -420,7 +420,7 @@ public class ChartMapGenerator {
      * Adds closing elements to the index file
      *
      */
-    private void endIndex () throws IOException {
+    protected void endIndex () throws IOException {
         addFooterToIndex();
         String e = "</body>\n</html>";
         Files.write(Paths.get(indexFilename),
@@ -479,7 +479,7 @@ public class ChartMapGenerator {
     protected String getHelmCommand() {
         String helmBin = getEnv("HELM_BIN");
         String helmCommandResolved = getEnv("HELM_BIN") == null ? "helm" : helmBin;
-        logger.info("The helm command \'{}\' will be used to discover path information.", helmCommandResolved);
+        logger.info("The helm command \'{}\' will be used to discover helm path information.", helmCommandResolved);
         return helmCommandResolved;
     }
 

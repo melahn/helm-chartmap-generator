@@ -25,6 +25,7 @@ import org.junit.jupiter.api.Test;
 class ChartMapIntegrationTest {
 
     private static final String DIVIDER = "-------------------------------------";
+    private static String HELM_BIN_MESSAGE = "The helm command \'%s\' will be used to discover helm path information.";
     private static final String INDEX_FILENAME = "target/index.html";
     private static final String TARGET_TEST_INT_DIR_NAME = "target/integration-test";
     private static final Path   TARGET_TEST_INT_DIR_PATH = Paths.get(TARGET_TEST_INT_DIR_NAME);
@@ -128,7 +129,7 @@ class ChartMapIntegrationTest {
         utility.createProcess(args, new String[][] { new String[] {"HELM_BIN", h}, new String[] {} }, null,
                 jaCocoAgentString,
                 className, p, l);
-        assertTrue(ChartMapGeneratorTestUtil.fileContains(l, String.format("The helm command \'%s\' will be used to discover path information.",h)));
+        assertTrue(ChartMapGeneratorTestUtil.fileContains(l, String.format(HELM_BIN_MESSAGE,h)));
         // The HELM_BIN env var is removed from the environment and the log is
         // is inspected to be sure the correct default value is used.
         p = Paths.get(TARGET_TEST_INT_DIR_NAME, m.concat("-1"));
@@ -145,7 +146,7 @@ class ChartMapIntegrationTest {
         utility.createProcess(args, new String[][] { new String[] {}, new String[] {"HELM_BIN", h} }, null,
                 jaCocoAgentString,
                 className, p, l);
-        assertTrue(ChartMapGeneratorTestUtil.fileContains(l, String.format("The helm command \'%s\' will be used to discover path information.",h)));
+        assertTrue(ChartMapGeneratorTestUtil.fileContains(l, String.format(HELM_BIN_MESSAGE,h)));
         System.out.println(m.concat(" completed"));
     }
 

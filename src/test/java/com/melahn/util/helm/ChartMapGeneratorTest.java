@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.spy;
@@ -98,7 +99,7 @@ class ChartMapGeneratorTest {
      * @throws IOException
      */
     @Test
-    void RepoNameParameterTest() throws ChartMapGeneratorException, IOException {
+    void repoNameParameterTest() throws ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
         testVariation = 0;
         testDirectoryName = createTestDir(m, getTestVariation());
@@ -121,7 +122,7 @@ class ChartMapGeneratorTest {
      * @throws IOException
      */
     @Test
-    void EnvSpecParameterTest() throws ChartMapGeneratorException, IOException {
+    void envSpecParameterTest() throws ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
         testVariation = 0;
         testDirectoryName = createTestDir(m, getTestVariation());
@@ -151,7 +152,7 @@ class ChartMapGeneratorTest {
      * @throws IOException
      */
     @Test
-    void OutputDirParameterTest() throws ChartMapGeneratorException, IOException {
+    void outputDirParameterTest() throws ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
         // No output parameter is provided so expect the files are generated in the target directory.
         ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, null, FORMAT_TEXT, PRINT_ONE_VERSION, null, VERBOSE_FALSE);
@@ -441,7 +442,7 @@ class ChartMapGeneratorTest {
         doReturn(spb5).when(scmg5).getProcessBuilder(any(), any());
         assertThrows(ChartMapGeneratorException.class, () -> scmg5.getHelmClientInformation());
         Thread.interrupted(); // Since the interrupt was interruped, make sure to set the interrupt flag or the next test will fail
-        System.out.println("InterruptedException -> ChartMapException thrown as expected");
+        System.out.println("InterruptedException -> ChartMapGeneratorException thrown as expected");
         // force an IOException on process start
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg6 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
@@ -451,7 +452,42 @@ class ChartMapGeneratorTest {
         doThrow(IOException.class).when(spb6).start(); 
         doReturn(spb6).when(scmg6).getProcessBuilder(any(), any());
         assertThrows(ChartMapGeneratorException.class, () -> scmg6.getHelmClientInformation());
-        System.out.println("IOException -> ChartMapException thrown as expected");
+        System.out.println("IOException -> ChartMapGeneratorException thrown as expected");
+        System.out.println(m.concat(" completed"));
+    }
+
+     /**
+     * Forces various IOException conditions using spies for complete
+     * code coverage.
+     * @throws IOException
+     * @throws ChartMapGeneratorException
+     * 
+     */
+    @Test
+    void ioExceptionTest() throws ChartMapGeneratorException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        testVariation = 0;
+        // test startStanzaInIndex
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
+        ChartMapGenerator scmg1 = spy(cmg1);
+        doThrow(IOException.class).when(scmg1).startStanzaInIndex(anyString()); 
+        assertThrows(ChartMapGeneratorException.class, ()->scmg1.generate());
+        System.out.println("IOException -> ChartMapGeneratorException thrown as expected by startStanzaInIndex");
+        // test addChartToIndex
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
+        ChartMapGenerator scmg2 = spy(cmg2);
+        doThrow(IOException.class).when(scmg2).addChartToIndex(anyString()); 
+        assertThrows(ChartMapGeneratorException.class, ()->scmg2.generate());
+        System.out.println("IOException -> ChartMapGeneratorException thrown as expected by addChartToIndex");
+        // test addHead
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg3 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
+        ChartMapGenerator scmg3 = spy(cmg3);
+        doThrow(IOException.class).when(scmg3).addHead(); 
+        assertThrows(ChartMapGeneratorException.class, ()->scmg3.generate());
+        System.out.println("IOException -> ChartMapGeneratorException thrown as expected by addHead");
         System.out.println(m.concat(" completed"));
     }
 
