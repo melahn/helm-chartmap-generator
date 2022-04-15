@@ -52,6 +52,7 @@ public class ChartMapGenerator {
     private static final boolean CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE = true;
     private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH_FALSE = false;
     private static final boolean CHARTMAP_VERBOSE_SWITCH_FALSE = false;
+    private static final String LI_END = "</li>\n";
 
     /**
      * Parses the command line and generates a set of reports
@@ -251,21 +252,21 @@ public class ChartMapGenerator {
      * 
      * @throws ChartMapGeneratorException when an IOException or ChartMapGeneratorException occurs printing the Chart Map.
      */
-    protected void printChart(HelmChart h) throws ChartMapGeneratorException, IOException {
+    protected void printChart(HelmChart h) throws ChartMapGeneratorException {
         try {
             logger.info("Printing chart: {}", h.getNameFull());
             startStanzaInIndex(h.getNameFull());
             for (String e : extensions) {
-                printChart(h, e);
+                int rc = printChart(h, e);
+                if (rc < 0) {
+                    break;
+                }
             }
             closeStanzaInIndex();
         } catch (IOException e) {
             logger.error("Exception printing Chart \"{}\" : {}", h.getNameFull(), e.getMessage());
             throw new ChartMapGeneratorException(e.getLocalizedMessage());
-        } catch (ChartMapGeneratorException e) {
-            logger.error("ChartMapException printing chart for helm chart \"{}\" : {}", h.getNameFull(), e.getLocalizedMessage());
-            throw e;
-        }
+        } 
     }
 
     /**
@@ -273,10 +274,10 @@ public class ChartMapGenerator {
      *
      * @param h helm chart
      * @param f the file extension to use
-     * 
-     * @throws ChartMapGeneratorException when an IOException or ChartMapException occurs printing the Chart Map.
+     * @return 0 if successful, -1 otherwise
+     * @throws IOException if an IO error occurs awriting the error message returned by ChartMap
      */
-    protected void printChart(HelmChart h, String f) throws ChartMapGeneratorException {
+    protected int printChart(HelmChart h, String f) throws IOException {
         String filename = h.getName().concat("-").concat(h.getVersion()).concat(f);
         try {
             ChartMap testMap = new ChartMap(
@@ -287,22 +288,25 @@ public class ChartMapGenerator {
                     new boolean[]{ CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE, CHARTMAP_REFRESH_REPOS_SWITCH_FALSE, CHARTMAP_VERBOSE_SWITCH_FALSE});
             testMap.print();
             addChartToIndex(filename);
+            return 0;
         } catch (IOException e) {
-            logger.error("IOException creating file \"{}\" : {}", filename, e.getMessage());
-            throw new ChartMapGeneratorException(e.getLocalizedMessage());
+            logger.error("IOExceptioncd creating file \"{}\" : {}", filename, e.getMessage());
+            return -1; 
         }
         catch (ChartMapException e) {
-            logger.error("ChartMapException creating file \"{}\" : {}", filename, e.getLocalizedMessage());
-            throw new ChartMapGeneratorException(e.getLocalizedMessage());
+            String l = "\t\t<li class=\"charterror\">".concat("Error generating ChartMap: ")
+                    .concat(e.getMessage().concat(LI_END));
+            Files.write(Paths.get(indexFilename),
+                    l.getBytes(),
+                    StandardOpenOption.APPEND);
+            return -1;
         }
     }
 
     /**
      * Creates the index file and adds a head element.
      * 
-     * 
      * @throws ChartMapGeneratorException when an IOException occurs creating the index file.
-     *
      */
     protected void createIndex() throws ChartMapGeneratorException {
         indexFilename = outputDirName.concat("/index.html");
@@ -319,8 +323,9 @@ public class ChartMapGenerator {
     }
 
     /**
-     * Adds head elements to the index file and adds a H1 tag, then creates css file
-     *
+     * Adds head elements to the index file and adds a H1 tag, then creates css file.
+     * 
+     * @throws IOException if an IO error occurs adding the head
      */
     protected void addHead () throws IOException {
         String h = "<head>"
@@ -336,24 +341,28 @@ public class ChartMapGenerator {
     }
 
     /**
-     * Creates a css style file.  If the file already exists, the file is left as-is
+     * Creates a css style file.  If the file already exists, the file is left as-is.
      *
+     * @throws IOException if an IO error occurs creating the css style file
      */
     protected void createStyleFile () throws IOException {
         String styleFilename = outputDirName.concat("/style.css");
-        String s = "* {\n\tfont-family: \"Arial\", Helvetica, san-serif;\n\tcolor: lightgray;\n\tbackground-color: black;\n}\n"
-                .concat("a:visited {\n\tcolor: grey;\n}\n")
-                .concat(".header {").concat("\n\tfont: 30px sans-serif;\n}\n")
-                .concat(".chartname {").concat("\n\tfont-weight: bold;\n\tfont: 16px sans-serif;\n}\n")
-                .concat(".chartlink {").concat("\n\tfont: 16px sans-serif;\n}\n");
+        String s = "* {\n\tfont-family: \"Andale Mono\";\n\tcolor: #66ff00;\n\tbackground-color: #000000;\n}\n"
+                .concat("a:visited {\n\tcolor: #00FFFF;\n}\n")
+                .concat(".header {").concat("\n\tfont: 30px;\n}\n")
+                .concat(".charterror {").concat("\n\tfont: 16px;\n\tcolor: #FF0000;\n}\n")
+                .concat(".chartname  {").concat("\n\tfont-weight: bold;\n\tfont: 16px;\n}\n")
+                .concat(".chartlink  {").concat("\n\tfont: 16px;\n}\n");
         Files.write(Paths.get(styleFilename),
                 s.getBytes(),
                 StandardOpenOption.CREATE);
     }
 
     /**
-     * Starts one chart stanza with the chartname to the index file
-     *
+     * Starts one chart stanza with the chartname to the index file.
+     * 
+     * @param s the name of the chart
+     * @throws IOException if an IO error occurs starting the stanza
      */
     protected void startStanzaInIndex(String s) throws IOException {
         String l = "\t<p class=\"chartname\">".concat(s).concat("</p>\n\t<ul>\n");
@@ -363,8 +372,9 @@ public class ChartMapGenerator {
     }
 
     /**
-     * Closes a stanza in the index file
-     *
+     * Closes a stanza in the index file.
+     * 
+     * @throws IOException if an IO error occurs closing the stanza
      */
     protected void closeStanzaInIndex() throws IOException {
         String l = "\t</ul>\n";
@@ -377,15 +387,16 @@ public class ChartMapGenerator {
      * Adds a single chart filename to the index file.  If the file is a PlantUML file, also adds the png file to the index.
      *
      * @param f helm chart filename
+     * @throws IOException if an IO error occurs adding the chart to the index.
      */
     protected void addChartToIndex(String f) throws IOException {
-        String l = "\t\t<li class=\"chartlink\">".concat("<a href=\"./").concat(f).concat("\">").concat(f).concat("</a>").concat("</li>\n");
+        String l = "\t\t<li class=\"chartlink\">".concat("<a href=\"./").concat(f).concat("\">").concat(f).concat("</a>").concat(LI_END);
         Files.write(Paths.get(indexFilename),
                 l.getBytes(),
                 StandardOpenOption.APPEND);
         if (f.endsWith(".puml")) {
             String p = f.replace("puml", "png");
-            l = "\t\t<li class=\"chartlink\">".concat("<a href=\"./").concat(p).concat("\">").concat(p).concat("</a>").concat("</li>\n");
+            l = "\t\t<li class=\"chartlink\">".concat("<a href=\"./").concat(p).concat("\">").concat(p).concat("</a>").concat(LI_END);
             Files.write(Paths.get(indexFilename),
                     l.getBytes(),
                     StandardOpenOption.APPEND);
@@ -394,15 +405,15 @@ public class ChartMapGenerator {
 
     /**
      * @return a format for date and time
-     *
      */
     private static String getCurrentDateTime() {
         DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         return (f.format(LocalDateTime.now()));
     }
     /**
-     * Adds end elements to the index file
+     * Adds end elements to the index file.
      *
+     * @throws IOException if an IO error occurs adding the footer
      */
     protected void addFooterToIndex() throws IOException {
         String f = "<hr/>Generated on "
@@ -417,8 +428,9 @@ public class ChartMapGenerator {
     }
 
     /**
-     * Adds closing elements to the index file
-     *
+     * Adds closing elements to the index file.
+     * 
+     * @throws IOException if an IO error occurs ending the index.
      */
     protected void endIndex () throws IOException {
         addFooterToIndex();
@@ -523,8 +535,7 @@ public class ChartMapGenerator {
     /**
      * Finds the helm client environment information.
      * 
-     * @throws ChartMapGeneratorException if an error occurs finding the client information
-     *                           
+     * @throws ChartMapGeneratorException if an error occurs finding the client information                   
      */
     protected void getHelmClientInformation() throws ChartMapGeneratorException {
         // run the helm env command to get the client information

@@ -126,10 +126,6 @@ class ChartMapGeneratorTest {
         String m = new Throwable().getStackTrace()[0].getMethodName();
         testVariation = 0;
         testDirectoryName = createTestDir(m, getTestVariation());
-        // An environment spec that does not exist.  Note that you can't reuse cmg1 because it must be final or effectively so for jupiter assertThrow
-        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC_NOT_EXIST, VERBOSE_FALSE);
-        assertThrows(ChartMapGeneratorException.class, () -> cmg1.generate());
-        System.out.println("A ChartMapGeneratorException was thrown as expected since the env file does not exist");
         // An environment spec that does exist, print one version of each chart
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
@@ -474,13 +470,6 @@ class ChartMapGeneratorTest {
         doThrow(IOException.class).when(scmg1).startStanzaInIndex(anyString()); 
         assertThrows(ChartMapGeneratorException.class, ()->scmg1.generate());
         System.out.println("IOException -> ChartMapGeneratorException thrown as expected by startStanzaInIndex");
-        // test addChartToIndex
-        testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
-        ChartMapGenerator scmg2 = spy(cmg2);
-        doThrow(IOException.class).when(scmg2).addChartToIndex(anyString()); 
-        assertThrows(ChartMapGeneratorException.class, ()->scmg2.generate());
-        System.out.println("IOException -> ChartMapGeneratorException thrown as expected by addChartToIndex");
         // test addHead
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg3 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
