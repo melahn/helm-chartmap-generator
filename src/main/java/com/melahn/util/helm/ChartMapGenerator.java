@@ -257,8 +257,7 @@ public class ChartMapGenerator {
             logger.info("Printing chart: {}", h.getNameFull());
             startStanzaInIndex(h.getNameFull());
             for (String e : extensions) {
-                int rc = printChart(h, e);
-                if (rc < 0) {
+                if (printChart(h, e) < 0) {
                     break;
                 }
             }
@@ -290,7 +289,7 @@ public class ChartMapGenerator {
             addChartToIndex(filename);
             return 0;
         } catch (IOException e) {
-            logger.error("IOExceptioncd creating file \"{}\" : {}", filename, e.getMessage());
+            logger.error("IOException creating file \"{}\" : {}", filename, e.getMessage());
             return -1; 
         }
         catch (ChartMapException e) {
