@@ -77,7 +77,7 @@ Flags:
   * **-e** \<filename\>
     * The location of an Environment Specification which is a yaml file containing a list of environment variables to set before rendering helm templates. See the example environment specification provided in resource/example-env-spec.yaml to understand the format. The default is that no environment specification will be used.
   * **-v**
-    * Verbose. If specified, some extra command line output is shown.
+    * Verbose. If specified, some extra output is shown on the command line and in the index file.
   * **-h**
     * Help. Whenever specified, any other parameters are ignored. When no parameters are specified, *-h* is assumed.
 
