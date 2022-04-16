@@ -97,7 +97,6 @@ Flags:
 
 Note: Since PlantUML reports are generated in this example, corresonding image files will also be produced.
 
-
 ### Java Methods
 
 In addition to the command line interface, a Java API is provided.

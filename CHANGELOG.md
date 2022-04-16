@@ -7,7 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- added much more code coverage
+- added 100% code test coverage
+- improved error handling when a ChartMap can't be generated because of a helm chart error
+- added counts and generation time
+- improved index style
+- updated dependencies
 - added .gitignore
 - Fixed sec vuln in junit
 

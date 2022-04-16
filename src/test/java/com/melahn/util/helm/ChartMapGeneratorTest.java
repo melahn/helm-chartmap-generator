@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.spy;
@@ -460,22 +459,15 @@ class ChartMapGeneratorTest {
      * 
      */
     @Test
-    void ioExceptionTest() throws ChartMapGeneratorException, IOException {
+    void addHeadTest() throws ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
         testVariation = 0;
-        // test startStanzaInIndex
+        // test addHead
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
         ChartMapGenerator scmg1 = spy(cmg1);
-        doThrow(IOException.class).when(scmg1).startStanzaInIndex(anyString()); 
+        doThrow(IOException.class).when(scmg1).addHead(); 
         assertThrows(ChartMapGeneratorException.class, ()->scmg1.generate());
-        System.out.println("IOException -> ChartMapGeneratorException thrown as expected by startStanzaInIndex");
-        // test addHead
-        testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg3 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, false);
-        ChartMapGenerator scmg3 = spy(cmg3);
-        doThrow(IOException.class).when(scmg3).addHead(); 
-        assertThrows(ChartMapGeneratorException.class, ()->scmg3.generate());
         System.out.println("IOException -> ChartMapGeneratorException thrown as expected by addHead");
         System.out.println(m.concat(" completed"));
     }
