@@ -269,6 +269,7 @@ public class ChartMapGenerator {
         }
         catch (ChartMapGeneratorException | IOException e) {
             chartCountBad++;
+            chartsWithErrors.add(h.getNameFull());
         }
         writeBuffer = "";
         chartCount++;
@@ -294,7 +295,6 @@ public class ChartMapGenerator {
             addChartToIndex(filename);
         } 
         catch (ChartMapException c) {
-            chartsWithErrors.add(h.getNameFull());
             throw new ChartMapGeneratorException(c.getMessage());
         }
     }
@@ -411,13 +411,8 @@ public class ChartMapGenerator {
      * @throws IOException if an IO error occurs adding the footer
      */
     protected void addFooterToIndex() throws IOException {
-        String s = "<hr>";
-        if (verbose) {
-            s = s.concat(String.format("<p>Charts successfully printed: %s</p>%n", chartCountGood));
-            s = s.concat(String.format("<p>Charts in error: %s</p>%n", chartCountBad));
-            s = s.concat(String.format("<p>Total Charts: %s</p>%n%n", chartCount));
-        }
-        s = s.concat("Generated on ")
+        String s = getDetails();
+        s = s.concat("<hr>Generated on ")
                 .concat(getCurrentDateTime())
                 .concat(" by ")
                 .concat(ChartMapGenerator.class.getCanonicalName())
@@ -426,6 +421,30 @@ public class ChartMapGenerator {
         Files.write(Paths.get(indexFilename),
                 s.getBytes(),
                 StandardOpenOption.APPEND);
+    }
+
+    /**
+     * Adds more details about the charts that were processed.
+     * 
+     * @return the string with details if verbose is set, otherwise an empty string
+     */
+    protected String getDetails() {
+        String s = "";
+        if (verbose) {
+            s = s.concat(String.format("<hr><p>Charts successfully processed: %s</p>%n", chartCountGood))
+                    .concat(String.format("<p>Charts with errors: %s</p>%n", chartCountBad))
+                    .concat(String.format("<p>Total charts processed: %s</p>%n%n", chartCount));
+            if (chartCountBad > 0) {
+                s = s.concat(
+                        "<p>Here is a list of the charts with errors (consult the output log to see the specific error messages)</p>\n\t<ul>\n");
+                for (String c : chartsWithErrors) {
+                    s = s.concat("\t\t<li class=\"charterror\">");
+                    s = s.concat(c).concat(LI_END);
+                }
+                s = s.concat("\t</ul>\n");
+            }
+        }
+        return s;
     }
 
     /**

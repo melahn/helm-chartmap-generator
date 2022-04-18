@@ -2,6 +2,7 @@ package com.melahn.util.helm;
 
 import static com.melahn.util.test.ChartMapGeneratorTestUtil.cleanDirectory;
 import static com.melahn.util.test.ChartMapGeneratorTestUtil.createTestMapGenerator;
+import static com.melahn.util.test.ChartMapGeneratorTestUtil.fileContains;
 import static com.melahn.util.test.ChartMapGeneratorTestUtil.isWindows;
 import static com.melahn.util.test.ChartMapGeneratorTestUtil.streamContains;
 
@@ -143,7 +144,7 @@ class ChartMapGeneratorTest {
         System.out.println(m.concat(" completed"));
     }
 
-       /**
+    /**
      * Test variations with the output directory parameter.
      * 
      * @throws ChartMapGeneratorException
@@ -173,6 +174,12 @@ class ChartMapGeneratorTest {
         System.out.println(m.concat(" completed"));
     }
 
+    /**
+     * Test the printChart methods.
+     * 
+     * @throws ChartMapGeneratorException
+     * @throws IOException
+     */
     @Test
     void printChartTest() throws ChartMapException, ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
@@ -197,6 +204,36 @@ class ChartMapGeneratorTest {
         assertEquals(0, scmg2.getChartCountGood());
         assertEquals(3, scmg2.getChartCount());
         System.out.println("Bad chart count = 3 as expected when getChartMap() throws an exception");
+        System.out.println(m.concat(" completed"));
+    }
+
+    /**
+     * Tests the getDetails method.
+     * 
+     * @throws ChartMapGeneratorException
+     * @throws IOException
+     */
+    @Test
+    void getDetails() throws ChartMapGeneratorException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        testVariation = 0;
+        // test getDetails with a simulated bad chart
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_TRUE);
+        ChartMapGenerator scmg1 = spy(cmg1);
+        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString());
+        scmg1.generate();
+        assertTrue(fileContains(Paths.get(testDirectoryName, INDEX_FILENAME), "Here is a list of the charts with errors (consult the output log to see the specific error messages)"));
+        System.out.println("A list of charts with errors is found, as expected");
+        // test getDetails without a simulated bad chart
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_TRUE);
+        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString());
+        cmg2.generate();
+        assertFalse(fileContains(Paths.get(testDirectoryName, INDEX_FILENAME), "Here is a list of the charts with errors (consult the output log to see the specific error messages)"));
+        System.out.println("A list of charts with errors was not found");
+        assertEquals(0, cmg2.getChartCountBad());
+        System.out.println("The bad chart count is 0, as expected");
         System.out.println(m.concat(" completed"));
     }
 
