@@ -81,12 +81,12 @@ public class ChartMapGenerator {
      *
      * @param repoName       The name of the helm repo from which to generate charts
      * @param outputDirName  The name of the directopry to which the cnart maps will be generated
-     * @param fileFormatMask The file format mast controlling which file types get generated
+     * @param fileFormatMask The file format mask controlling which file types get generated
      * @param maxVersions    The maximum number of file versions to generate
      * @param envFilename    The name of a yaml file that contains a set of
      *                       environment variables which may influence the way the
      *                       charts are rendered by helm
-     * @param verbose        A flag controlling which messages are displayed.
+     * @param verbose        A flag controlling what output is displayed.
 
      * @throws ChartMapGeneratorException when an error occurs generating the chart maps
      **/
@@ -116,8 +116,7 @@ public class ChartMapGenerator {
         }
         if (verbose) {
             args.add("-v");
-        }
-        
+        }        
         parseArgs(args.toArray(new String[args.size()]));
     }
 
@@ -269,7 +268,6 @@ public class ChartMapGenerator {
             chartCountGood++;
         }
         catch (ChartMapGeneratorException | IOException e) {
-            logger.error(e.getMessage());
             chartCountBad++;
         }
         writeBuffer = "";
@@ -286,7 +284,7 @@ public class ChartMapGenerator {
     protected void printChart(HelmChart h, String e) throws ChartMapGeneratorException{
         String filename = h.getName().concat("-").concat(h.getVersion()).concat(e);
         try {
-            ChartMap testMap = new ChartMap(
+            ChartMap testMap = getChartMap(
                     ChartOption.CHARTNAME,
                     h.getNameFull(),
                     outputDirName.concat(File.separator).concat(filename),
@@ -299,6 +297,22 @@ public class ChartMapGenerator {
             chartsWithErrors.add(h.getNameFull());
             throw new ChartMapGeneratorException(c.getMessage());
         }
+    }
+
+    /**
+     * Returns an instance of a ChartMap. The reason for this method is to allow injection of 
+     * a spy for complete test coverage.
+     * 
+     * @param o chart option
+     * @param h helm chart name
+     * @param f file name to write the chartmap
+     * @param e env spec filename
+     * @param s switches
+     * @return a ChartMap
+     * @throws ChartMapException when the ChartMap could not be created
+     */
+    protected ChartMap getChartMap(ChartOption o, String h, String f, String e, boolean[] s) throws ChartMapException  {
+        return new ChartMap(o, h, f, e, s);
     }
 
     /**
@@ -657,5 +671,17 @@ public class ChartMapGenerator {
 
     public boolean isVerbose() {
         return verbose;
+    }
+
+    int getChartCount() {
+        return chartCount;
+    }
+
+    int getChartCountBad() {
+        return chartCountBad;
+    }
+
+    int getChartCountGood() {
+        return chartCountGood;
     }
 }

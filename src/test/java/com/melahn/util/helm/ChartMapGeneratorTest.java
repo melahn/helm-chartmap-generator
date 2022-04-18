@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.spy;
@@ -23,6 +24,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
+
+import com.melahn.util.helm.model.HelmChart;
 
 class ChartMapGeneratorTest {
 
@@ -167,6 +170,33 @@ class ChartMapGeneratorTest {
         Files.deleteIfExists(Paths.get(".", CSS_FILENAME));
         Files.deleteIfExists(Paths.get(".", INDEX_FILENAME));
         System.out.println("No output directory was provided so the pwd was used");
+        System.out.println(m.concat(" completed"));
+    }
+
+    @Test
+    void printChartTest() throws ChartMapException, ChartMapGeneratorException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        testVariation = 0;
+        // test printChart(HelmChart) ChartMapGeneratorException
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
+        ChartMapGenerator scmg1 = spy(cmg1);
+        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString());
+        scmg1.generate();
+        assertEquals(3, scmg1.getChartCountBad());
+        assertEquals(0, scmg1.getChartCountGood());
+        assertEquals(3, scmg1.getChartCount());
+        System.out.println("Bad chart count = 3 as expected when printChart(HelmChart, String) throws an exception");
+        // test printChart(HelmChart, String) ChartMapGeneratorException
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
+        ChartMapGenerator scmg2 = spy(cmg2);
+        doThrow(ChartMapException.class).when(scmg2).getChartMap(any(), any(), any(), any(), any());
+        scmg2.generate();
+        assertEquals(3, scmg2.getChartCountBad());
+        assertEquals(0, scmg2.getChartCountGood());
+        assertEquals(3, scmg2.getChartCount());
+        System.out.println("Bad chart count = 3 as expected when getChartMap() throws an exception");
         System.out.println(m.concat(" completed"));
     }
 
