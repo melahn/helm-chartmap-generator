@@ -55,6 +55,7 @@ public class ChartMapGenerator {
        
     private static final boolean CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE = true;
     private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH_FALSE = false;
+    private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH_TRUE = true;
     private static final boolean CHARTMAP_VERBOSE_SWITCH_FALSE = false;
     private static final String LI_END = "</li>\n";
 
@@ -72,7 +73,7 @@ public class ChartMapGenerator {
                 generator.generate();
             }
         } catch (ChartMapGeneratorException e) {
-            generator.logger.error("ChartMapGeneratorException: {} ", e.getMessage());
+            generator.logger.info("ChartMapGeneratorException: {} ", e.getMessage());
         }
     }
 
@@ -277,26 +278,45 @@ public class ChartMapGenerator {
 
     /**
      * Prints a chart of a specific format using the ChartMap API.
+     * 
+     * First, an attempt is made to print the chart without the refresh flag. 
+     * 
+     * If that fails, then an attempt is made to print the chart with the 
+     * refresh flag set.  
      *
      * @param h helm chart
      * @param e the file extension to use
      * @throws ChartMapGeneratorException if ChartMap throws a ChartMapException generating the chart
      */
-    protected void printChart(HelmChart h, String e) throws ChartMapGeneratorException{
+    protected void printChart(HelmChart h, String e) throws ChartMapGeneratorException {
         String filename = h.getName().concat("-").concat(h.getVersion()).concat(e);
+        ChartMap cm = null;
         try {
-            ChartMap testMap = getChartMap(
+            cm = getChartMap(
                     ChartOption.CHARTNAME,
                     h.getNameFull(),
                     outputDirName.concat(File.separator).concat(filename),
                     envFilename,
-                    new boolean[]{ CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE, CHARTMAP_REFRESH_REPOS_SWITCH_FALSE, CHARTMAP_VERBOSE_SWITCH_FALSE});
-            testMap.print();
-            addChartToIndex(filename);
-        } 
-        catch (ChartMapException c) {
-            throw new ChartMapGeneratorException(c.getMessage());
+                    new boolean[] { CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE, CHARTMAP_REFRESH_REPOS_SWITCH_FALSE,
+                            CHARTMAP_VERBOSE_SWITCH_FALSE });
+            cm.print();
+        } catch (ChartMapException e1) {
+            try {
+                logger.info("Chart {} failed to print. Retrying with the refresh option", h.getNameFull());
+                cm = getChartMap(
+                        ChartOption.CHARTNAME,
+                        h.getNameFull(),
+                        outputDirName.concat(File.separator).concat(filename),
+                        envFilename,
+                        new boolean[] { CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE, CHARTMAP_REFRESH_REPOS_SWITCH_TRUE,
+                                CHARTMAP_VERBOSE_SWITCH_FALSE });
+                cm.print();
+                logger.info("Chart {} printed successfully with the refresh option", h.getNameFull());
+            } catch (ChartMapException e2) {
+                throw new ChartMapGeneratorException(e2.getMessage());
+            }
         }
+        addChartToIndex(filename);
     }
 
     /**
