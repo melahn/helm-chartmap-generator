@@ -1,0 +1,29 @@
+{
+  "maintainers": [{
+    "name": "thomasdarimont",
+    "email": "thomas.darimont+github@gmail.com"
+  }],
+  "keywords": [
+    "sso",
+    "idm",
+    "openid connect",
+    "saml",
+    "kerberos",
+    "oauth",
+    "ldap",
+    "keycloakx",
+    "quarkus"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "keycloak/keycloak:17.0.1",
+    "type": "image",
+    "version": "17.0.1"
+  }],
+  "name": "keycloakx:1.3.2",
+  "description": "Keycloak.X - Open Source Identity and Access Management for Modern Applications and Services",
+  "type": "chart",
+  "shortName": "keycloakx",
+  "version": "1.3.2"
+}

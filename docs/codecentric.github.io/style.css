@@ -1,0 +1,22 @@
+* {
+	font-family: "Andale Mono";
+	color: #66ff00;
+	background-color: #000000;
+}
+a:visited {
+	color: #00FFFF;
+}
+.header {
+	font: 30px;
+}
+.charterror {
+	font: 16px;
+	color: #FF0000;
+}
+.chartname  {
+	font-weight: bold;
+	font: 16px;
+}
+.chartlink  {
+	font: 16px;
+}

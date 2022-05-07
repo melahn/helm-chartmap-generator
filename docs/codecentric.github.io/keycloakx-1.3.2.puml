@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for keycloakx:1.3.2
+
+'There is one referenced Helm Chart
+artifact "keycloakx:1.3.2\n====\n\tType: application\n====\n\tRepo: https://codecentric.github.io/helm-charts\n====\n\tMaintainers: thomasdarimont\n====\n\tKeywords: \n\t\tsso\n\t\tidm\n\t\topenid connect\n\t\tsaml\n\t\tkerberos\n\t\toauth\n\t\tldap\n\t\tkeycloakx\n\t\tquarkus" as keycloakx_1_3_2 #Cornsilk
+
+'There is one referenced Docker Image
+usecase "Image\n====\nquay.io\n====\nkeycloak/keycloak:17.0.1\n====\n17.0.1" as quay_io_keycloak_keycloak_17_0_1 #CadetBlue
+
+'Chart Dependencies
+keycloakx_1_3_2--[#orange]-|>quay_io_keycloak_keycloak_17_0_1
+
+center footer Generated on 2022/05/07 15:11:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

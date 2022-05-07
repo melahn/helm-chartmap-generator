@@ -1,0 +1,26 @@
+{
+  "maintainers": [{
+    "name": "unguiculus",
+    "email": "unguiculus@gmail.com"
+  }],
+  "keywords": [
+    "ci",
+    "continuous integration",
+    "continuous delivery",
+    "continuous deployment",
+    "devops",
+    "automation"
+  ],
+  "children": [{
+    "repoHost": "docker.io",
+    "children": [],
+    "name": "jenkins/jenkins:2.222.3-alpine",
+    "type": "image",
+    "version": "2.222.3-alpine"
+  }],
+  "name": "jenkins:1.7.0",
+  "description": "The leading open source automation server",
+  "type": "chart",
+  "shortName": "jenkins",
+  "version": "1.7.0"
+}

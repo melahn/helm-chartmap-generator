@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for jenkins:1.6.1
+
+'There is one referenced Helm Chart
+artifact "jenkins:1.6.1\n====\n\tType: application\n====\n\tRepo: https://codecentric.github.io/helm-charts\n====\n\tMaintainers: unguiculus\n====\n\tKeywords: \n\t\tci\n\t\tcontinuous integration\n\t\tcontinuous delivery\n\t\tcontinuous deployment\n\t\tdevops\n\t\tautomation" as jenkins_1_6_1 #LightCoral
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\njenkins/jenkins\n====\n2.190.1-alpine" as jenkins_jenkins_2_190_1_alpine #DarkSalmon
+
+'Chart Dependencies
+jenkins_1_6_1--[#orange]-|>jenkins_jenkins_2_190_1_alpine
+
+center footer Generated on 2022/05/07 15:11:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml
