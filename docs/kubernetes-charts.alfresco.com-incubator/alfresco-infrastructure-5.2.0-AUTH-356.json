@@ -1,85 +1,6 @@
 {
   "children": [
     {
-      "maintainers": [{"name": "Alfresco"}],
-      "keywords": [
-        "alfresco",
-        "keycloak",
-        "identity-service"
-      ],
-      "children": [{
-        "maintainers": [
-          {
-            "name": "unguiculus",
-            "email": "unguiculus@gmail.com"
-          },
-          {
-            "name": "thomasdarimont",
-            "email": "thomas.darimont+github@gmail.com"
-          }
-        ],
-        "keywords": [
-          "sso",
-          "idm",
-          "openid connect",
-          "saml",
-          "kerberos",
-          "ldap"
-        ],
-        "children": [
-          {
-            "repoHost": "quay.io",
-            "children": [],
-            "name": "alfresco/alfresco-identity-service",
-            "type": "image",
-            "version": "1.2-AUTH-356"
-          },
-          {
-            "maintainers": [
-              {
-                "name": "Bitnami",
-                "email": "containers@bitnami.com"
-              },
-              {
-                "name": "desaintmartin",
-                "email": "cedric@desaintmartin.fr"
-              }
-            ],
-            "keywords": [
-              "postgresql",
-              "postgres",
-              "database",
-              "sql",
-              "replication",
-              "cluster"
-            ],
-            "children": [{
-              "repoHost": "docker.io",
-              "children": [],
-              "name": "bitnami/postgresql",
-              "type": "image",
-              "version": "11.4.0-debian-9-r0"
-            }],
-            "name": "postgresql:5.3.9",
-            "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-            "type": "chart",
-            "shortName": "postgresql",
-            "version": "5.3.9"
-          }
-        ],
-        "name": "keycloak:5.1.7",
-        "description": "Open Source Identity and Access Management For Modern Applications and Services",
-        "type": "chart",
-        "shortName": "keycloak",
-        "version": "5.1.7"
-      }],
-      "name": "alfresco-identity-service:2.0.0-AUTH-356",
-      "description": "The Alfresco Identity Service will become the central component responsible for identity-related capabilities needed by other Alfresco software, such as managing users, groups, roles, profiles, and authentication. Currently it deals just with authentication.",
-      "type": "chart",
-      "shortName": "alfresco-identity-service",
-      "version": "2.0.0-AUTH-356"
-    },
-    {
       "maintainers": [
         {
           "name": "jackzampolin",
@@ -109,7 +30,7 @@
         {
           "repoHost": "quay.io",
           "children": [],
-          "name": "kubernetes-ingress-controller/nginx-ingress-controller",
+          "name": "kubernetes-ingress-controller/nginx-ingress-controller:0.12.0",
           "type": "image",
           "version": "0.12.0"
         }
@@ -131,6 +52,85 @@
       "type": "chart",
       "shortName": "activemq",
       "version": "1.1.1"
+    },
+    {
+      "maintainers": [{"name": "Alfresco"}],
+      "keywords": [
+        "alfresco",
+        "keycloak",
+        "identity-service"
+      ],
+      "children": [{
+        "maintainers": [
+          {
+            "name": "unguiculus",
+            "email": "unguiculus@gmail.com"
+          },
+          {
+            "name": "thomasdarimont",
+            "email": "thomas.darimont+github@gmail.com"
+          }
+        ],
+        "keywords": [
+          "sso",
+          "idm",
+          "openid connect",
+          "saml",
+          "kerberos",
+          "ldap"
+        ],
+        "children": [
+          {
+            "repoHost": "quay.io",
+            "children": [],
+            "name": "alfresco/alfresco-identity-service:1.2-AUTH-356",
+            "type": "image",
+            "version": "1.2-AUTH-356"
+          },
+          {
+            "maintainers": [
+              {
+                "name": "Bitnami",
+                "email": "containers@bitnami.com"
+              },
+              {
+                "name": "desaintmartin",
+                "email": "cedric@desaintmartin.fr"
+              }
+            ],
+            "keywords": [
+              "postgresql",
+              "postgres",
+              "database",
+              "sql",
+              "replication",
+              "cluster"
+            ],
+            "children": [{
+              "repoHost": "docker.io",
+              "children": [],
+              "name": "bitnami/postgresql:11.4.0-debian-9-r0",
+              "type": "image",
+              "version": "11.4.0-debian-9-r0"
+            }],
+            "name": "postgresql:5.3.9",
+            "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+            "type": "chart",
+            "shortName": "postgresql",
+            "version": "5.3.9"
+          }
+        ],
+        "name": "keycloak:5.1.7",
+        "description": "Open Source Identity and Access Management For Modern Applications and Services",
+        "type": "chart",
+        "shortName": "keycloak",
+        "version": "5.1.7"
+      }],
+      "name": "alfresco-identity-service:2.0.0-AUTH-356",
+      "description": "The Alfresco Identity Service will become the central component responsible for identity-related capabilities needed by other Alfresco software, such as managing users, groups, roles, profiles, and authentication. Currently it deals just with authentication.",
+      "type": "chart",
+      "shortName": "alfresco-identity-service",
+      "version": "2.0.0-AUTH-356"
     },
     {
       "maintainers": [{"name": "Alfresco"}],

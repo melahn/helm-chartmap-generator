@@ -3,9 +3,9 @@ Chart Map for alfresco-infrastructure:5.2.0-AUTH-356
 There are 7 referenced Helm Charts
 ----------------------------------
 Chart: alfresco-identity-service:2.0.0-AUTH-356
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: 1.2.0
-	created: 2020-03-31T17:10:40.250359345Z
+	created: 2020-07-08T12:03:09.459316287Z
 	dependencies: keycloak:5.1.7
 	description: The Alfresco Identity Service will become the central component responsible for identity-related capabilities needed by other Alfresco software, such as managing users, groups, roles, profiles, and authentication. Currently it deals just with authentication.
 	digest: cefdda8f86b45174a88c1a720098ebce7086b1c3c129f70d7d7f5047c1a339ec
@@ -21,7 +21,7 @@ Chart: alfresco-infrastructure:5.2.0-AUTH-356
 	apiVersion: v1
 	appVersion: Not specified
 	created: Not specified
-	dependencies: activemq:1.1.1, alfresco-identity-service:2.0.0-AUTH-356, alfresco-event-gateway:0.1.2, nginx-ingress:0.14.0
+	dependencies: alfresco-event-gateway:0.1.2, activemq:1.1.1, nginx-ingress:0.14.0, alfresco-identity-service:2.0.0-AUTH-356
 	description: A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform. This includes activemq, alfresco-identity-service, nginx-ingress and a persistent volume to use with the DBP chart.
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -48,9 +48,9 @@ Chart: keycloak:5.1.7
 	urls: https://github.com/codecentric/helm-charts/releases/download/keycloak-5.1.7/keycloak-5.1.7.tgz
 	version: 5.1.7
 Chart: alfresco-event-gateway:0.1.2
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: Not specified
-	created: 2020-03-31T17:10:40.195524691Z
+	created: 2020-07-08T12:03:09.404502078Z
 	dependencies: activemq:1.1.1
 	description: Alfresco Event Gateway
 	digest: 1c3c912a0899bbdde18c6ef8a69489cb65cb445a50413e0c202546c3222d70d9
@@ -65,37 +65,37 @@ Chart: alfresco-event-gateway:0.1.2
 Chart: postgresql:5.3.9
 	apiVersion: v1
 	appVersion: 11.4.0
-	created: 2019-06-25T11:28:13.832445214Z
+	created: 2019-06-25T12:33:24.981790138Z
 	dependencies: None
 	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
-	digest: 97231606ab04ae3af97d71aa6fcc2ebac8f8a00fe7bdcb1ff1b016141407832e
+	digest: 7d1905c71fe6fa24181a21ff06d33f6ee4c36f970cf75a5a1e4c044d1b30fbd8
 	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
 	keywords: postgresql,postgres,database,sql,replication,cluster
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: postgresql
 	sources: https://github.com/bitnami/bitnami-docker-postgresql
-	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-5.3.9.tgz
+	urls: https://charts.bitnami.com/bitnami/postgresql-5.3.9.tgz
 	version: 5.3.9
 Chart: nginx-ingress:0.14.0
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: 0.12.0
-	created: 2018-04-18T21:56:29.224709184Z
+	created: 2020-10-15T15:46:20.507697-04:00
 	dependencies: None
 	description: An nginx Ingress controller that uses ConfigMap to store the nginx configuration.
 	digest: 0beadee0eee1de15580fd741628e0b05de744c6521ebd3884583901a73666346
 	icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
 	keywords: ingress,nginx
 	maintainers: jackzampolin:jack.zampolin@gmail.com,mgoodness:mgoodness@gmail.com,chancez:chance.zibolski@coreos.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: nginx-ingress
 	sources: https://github.com/kubernetes/ingress-nginx
-	urls: https://kubernetes-charts.storage.googleapis.com/nginx-ingress-0.14.0.tgz
+	urls: https://charts.helm.sh/stable/packages/nginx-ingress-0.14.0.tgz
 	version: 0.14.0
 Chart: activemq:1.1.1
 	apiVersion: v1
 	appVersion: 5.15.8
-	created: 2020-03-31T17:10:43.875368053Z
+	created: 2020-07-08T12:03:13.070000058Z
 	dependencies: None
 	description: A Helm chart Providing Apache ActiveMQ.
 	digest: 28a35a28b9dc29fb99a110072cb200f92849c80beb5688c3b1f3fbb3f42fae08
@@ -119,13 +119,13 @@ Image: alfresco/alfresco-activemq:5.15.8-java-8-oracle-centos-7-87b15e37ce8b
 
 Chart Dependencies
 ------------------
+alfresco-infrastructure:5.2.0-AUTH-356 depends on alfresco-event-gateway:0.1.2
+alfresco-event-gateway:0.1.2 depends on activemq:1.1.1
 alfresco-infrastructure:5.2.0-AUTH-356 depends on activemq:1.1.1
+alfresco-infrastructure:5.2.0-AUTH-356 depends on nginx-ingress:0.14.0
 alfresco-infrastructure:5.2.0-AUTH-356 depends on alfresco-identity-service:2.0.0-AUTH-356
 alfresco-identity-service:2.0.0-AUTH-356 depends on keycloak:5.1.7
 keycloak:5.1.7 depends on postgresql:5.3.9
-alfresco-infrastructure:5.2.0-AUTH-356 depends on alfresco-event-gateway:0.1.2
-alfresco-event-gateway:0.1.2 depends on activemq:1.1.1
-alfresco-infrastructure:5.2.0-AUTH-356 depends on nginx-ingress:0.14.0
 keycloak:5.1.7 uses quay.io/alfresco/alfresco-identity-service:1.2-AUTH-356
 alfresco-event-gateway:0.1.2 uses alfresco/alfresco-event-gateway:0.3-SNAPSHOT
 postgresql:5.3.9 uses docker.io/bitnami/postgresql:11.4.0-debian-9-r0
@@ -133,4 +133,4 @@ nginx-ingress:0.14.0 uses k8s.gcr.io/defaultbackend:1.3
 nginx-ingress:0.14.0 uses quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.12.0
 activemq:1.1.1 uses alfresco/alfresco-activemq:5.15.8-java-8-oracle-centos-7-87b15e37ce8b
 
-Generated on 2020/04/26 13:00:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 09:52:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

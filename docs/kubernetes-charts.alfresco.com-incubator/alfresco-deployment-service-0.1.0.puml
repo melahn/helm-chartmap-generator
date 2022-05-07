@@ -8,11 +8,20 @@ skinparam artifactArrowColor LightSlateGray
 
 title Chart Map for alfresco-deployment-service:0.1.0
 
-'There are 0 referenced Helm Charts
+'There are 2 referenced Helm Charts
+artifact "postgresql:0.11.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: databus23\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql" as postgresql_0_11_0 #LightSteelBlue
+artifact "alfresco-deployment-service:0.1.0\n====\n\tType: application\n====\n\tRepo: https://activiti.github.io/activiti-cloud-helm-charts\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: " as alfresco_deployment_service_0_1_0 #DarkTurquoise
 
-'There are 0 referenced Docker Images
+'There are 3 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n11.4" as postgres_11_4 #Ivory
+usecase "Image\n====\nquay.io\n====\nalfresco/alfresco-deployment-service:latest\n====\nlatest" as quay_io_alfresco_alfresco_deployment_service_latest #LavenderBlush
+usecase "Image\n====\nDocker Hub\n====\ndocker\n====\n18.06.1-dind" as docker_18_06_1_dind #HotPink
 
 'Chart Dependencies
+alfresco_deployment_service_0_1_0--[#green]-|>postgresql_0_11_0
+postgresql_0_11_0--[#orange]-|>postgres_11_4
+alfresco_deployment_service_0_1_0--[#orange]-|>docker_18_06_1_dind
+alfresco_deployment_service_0_1_0--[#orange]-|>quay_io_alfresco_alfresco_deployment_service_latest
 
-center footer Generated on 2020/04/26 12:59:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 09:51:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

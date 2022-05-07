@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for hello-world-ui:0.1
 
 'There is one referenced Helm Chart
-artifact "hello-world-ui:0.1\n====\n\thello-world-ui\n====\n\t0.1\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: alfresco\nanaxes\nhello\nworld" as hello_world_ui_0_1 #CadetBlue
+artifact "hello-world-ui:0.1\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: \n\t\talfresco\n\t\tanaxes\n\t\thello\n\t\tworld" as hello_world_ui_0_1 #CadetBlue
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tquay.io\n====\n\talfresco/anaxes-hello-world-ui:0.1-SNAPSHOT\n====\n\t0.1-SNAPSHOT" as quay_io_alfresco_anaxes_hello_world_ui_0_1_SNAPSHOT #BurlyWood
+usecase "Image\n====\nquay.io\n====\nalfresco/anaxes-hello-world-ui:0.1-SNAPSHOT\n====\n0.1-SNAPSHOT" as quay_io_alfresco_anaxes_hello_world_ui_0_1_SNAPSHOT #BurlyWood
 
 'Chart Dependencies
 hello_world_ui_0_1--[#orange]-|>quay_io_alfresco_anaxes_hello_world_ui_0_1_SNAPSHOT
 
-center footer Generated on 2020/04/26 13:03:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 09:58:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

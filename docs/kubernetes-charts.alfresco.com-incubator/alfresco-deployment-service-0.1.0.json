@@ -1,6 +1,42 @@
 {
   "maintainers": [{"name": "Alfresco"}],
-  "children": [],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "docker",
+      "type": "image",
+      "version": "18.06.1-dind"
+    },
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "alfresco/alfresco-deployment-service:latest",
+      "type": "image",
+      "version": "latest"
+    },
+    {
+      "maintainers": [{"name": "databus23"}],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "11.4"
+      }],
+      "name": "postgresql:0.11.0",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.11.0"
+    }
+  ],
   "name": "alfresco-deployment-service:0.1.0",
   "description": "A Helm chart for the APS2 alfresco-deployment-service service",
   "type": "chart",

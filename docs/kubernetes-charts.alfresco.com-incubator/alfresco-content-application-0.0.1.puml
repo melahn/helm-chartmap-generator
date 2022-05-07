@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for alfresco-content-application:0.0.1
 
 'There is one referenced Helm Chart
-artifact "alfresco-content-application:0.0.1\n====\n\talfresco-content-application\n====\n\t0.0.1\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: \n====\n\tKeywords: content application\nalfresco\nalfresco content application" as alfresco_content_application_0_0_1 #BurlyWood
+artifact "alfresco-content-application:0.0.1\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tcontent application\n\t\talfresco\n\t\talfresco content application" as alfresco_content_application_0_0_1 #BurlyWood
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-content-app\n====\n\tdevelopment-latest" as alfresco_alfresco_content_app_development_latest #GhostWhite
+usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-content-app\n====\ndevelopment-latest" as alfresco_alfresco_content_app_development_latest #GhostWhite
 
 'Chart Dependencies
 alfresco_content_application_0_0_1--[#orange]-|>alfresco_alfresco_content_app_development_latest
 
-center footer Generated on 2020/04/26 12:58:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 09:46:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

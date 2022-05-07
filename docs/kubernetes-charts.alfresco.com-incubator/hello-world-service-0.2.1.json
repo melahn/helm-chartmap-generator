@@ -10,7 +10,7 @@
     {
       "repoHost": "quay.io",
       "children": [],
-      "name": "alfresco/anaxes-hello-world-service",
+      "name": "alfresco/anaxes-hello-world-service:0.1-SNAPSHOT",
       "type": "image",
       "version": "0.1-SNAPSHOT"
     },

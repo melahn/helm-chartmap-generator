@@ -5,7 +5,7 @@ There are 2 referenced Helm Charts
 Chart: activemq:1.0.0
 	apiVersion: v1
 	appVersion: 5.15.6
-	created: 2020-03-31T17:10:43.8748456Z
+	created: 2020-07-08T12:03:13.069474951Z
 	dependencies: None
 	description: A Helm chart Providing Apache ActiveMQ.
 	digest: aecf50f9d87680e561b32861b344e9a1e7d0d338f1bf433d401ef026c26a3e16
@@ -44,4 +44,4 @@ alfresco-event-gateway:0.1.1 depends on activemq:1.0.0
 activemq:1.0.0 uses alfresco/alfresco-activemq:5.15.6-java-8-oracle-centos-7-ac5b98b35cd4
 alfresco-event-gateway:0.1.1 uses alfresco/alfresco-event-gateway:0.1-SNAPSHOT
 
-Generated on 2020/04/26 13:00:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 09:52:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

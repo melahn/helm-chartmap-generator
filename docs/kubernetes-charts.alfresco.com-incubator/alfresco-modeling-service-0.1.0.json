@@ -3,7 +3,7 @@
   "children": [{
     "repoHost": "quay.io",
     "children": [],
-    "name": "alfresco/alfresco-modeling-service",
+    "name": "alfresco/alfresco-modeling-service:latest",
     "type": "image",
     "version": "latest"
   }],

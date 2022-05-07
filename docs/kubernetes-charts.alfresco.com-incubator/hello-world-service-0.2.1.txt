@@ -3,19 +3,19 @@ Chart Map for hello-world-service:0.2.1
 There are 2 referenced Helm Charts
 ----------------------------------
 Chart: postgresql:0.11.0
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: 9.6.2
-	created: 2018-05-10T07:26:21.022197052Z
+	created: 2020-10-15T15:46:22.328388-04:00
 	dependencies: None
 	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
 	digest: 07904fd939bf345e51f29cffe2a2235788b4dff0f167ede7c0e14f94bd59939e
 	icon: https://www.postgresql.org/media/img/about/press/elephant.png
 	keywords: postgresql,postgres,database,sql
 	maintainers: databus23
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: postgresql
 	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
-	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-0.11.0.tgz
+	urls: https://charts.helm.sh/stable/packages/postgresql-0.11.0.tgz
 	version: 0.11.0
 Chart: hello-world-service:0.2.1
 	apiVersion: Not specified
@@ -44,4 +44,4 @@ hello-world-service:0.2.1 depends on postgresql:0.11.0
 postgresql:0.11.0 uses postgres:10.1
 hello-world-service:0.2.1 uses quay.io/alfresco/anaxes-hello-world-service:0.1-SNAPSHOT
 
-Generated on 2020/04/26 13:03:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 09:58:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

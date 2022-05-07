@@ -1,0 +1,29 @@
+Chart Map for alfresco-search:0.0.9-tls
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: alfresco-search:0.0.9-tls
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for deploying Alfresco Search
+	digest: Not specified
+	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
+	keywords: search,search services,alfresco search services,insight,insight engine,alfresco insight engine
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-search
+	sources: https://github.com/alfresco/alfresco-search-deployment
+	urls: Not specified
+	version: 0.0.9-tls
+
+There is one referenced Docker Image
+------------------------------------
+Image: alfresco/alfresco-search-services:1.3.0-RC2
+
+Chart Dependencies
+------------------
+alfresco-search:0.0.9-tls uses alfresco/alfresco-search-services:1.3.0-RC2
+
+Generated on 2022/05/07 09:57:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

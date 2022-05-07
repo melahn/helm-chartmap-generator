@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-insight-zeppelin:0.0.4
+
+'There is one referenced Helm Chart
+artifact "alfresco-insight-zeppelin:0.0.4\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tzeppelin\n\t\tinsight zeppelin\n\t\talfresco zeppelin\n\t\talfresco insight zeppelin" as alfresco_insight_zeppelin_0_0_4 #GhostWhite
+
+'There is one referenced Docker Image
+usecase "Image\n====\nquay.io\n====\nalfresco/insight-zeppelin:1.1.0.1\n====\n1.1.0.1" as quay_io_alfresco_insight_zeppelin_1_1_0_1 #GreenYellow
+
+'Chart Dependencies
+alfresco_insight_zeppelin_0_0_4--[#orange]-|>quay_io_alfresco_insight_zeppelin_1_1_0_1
+
+center footer Generated on 2022/05/07 09:53:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

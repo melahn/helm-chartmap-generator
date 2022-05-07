@@ -1,0 +1,29 @@
+Chart Map for alfresco-insight-zeppelin:0.0.4
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: alfresco-insight-zeppelin:0.0.4
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for deploying Alfresco Insight Zeppelin
+	digest: Not specified
+	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
+	keywords: zeppelin,insight zeppelin,alfresco zeppelin,alfresco insight zeppelin
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-insight-zeppelin
+	sources: Not specified
+	urls: Not specified
+	version: 0.0.4
+
+There is one referenced Docker Image
+------------------------------------
+Image: quay.io/alfresco/insight-zeppelin:1.1.0.1
+
+Chart Dependencies
+------------------
+alfresco-insight-zeppelin:0.0.4 uses quay.io/alfresco/insight-zeppelin:1.1.0.1
+
+Generated on 2022/05/07 09:53:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for alfresco-dbp-connector-service:0.1.0
 
 'There is one referenced Helm Chart
-artifact "alfresco-dbp-connector-service:0.1.0\n====\n\talfresco-dbp-connector-service\n====\n\t0.1.0\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: \n====\n\tKeywords: " as alfresco_dbp_connector_service_0_1_0 #LightPink
+artifact "alfresco-dbp-connector-service:0.1.0\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: \n====\n\tKeywords: " as alfresco_dbp_connector_service_0_1_0 #LightPink
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tquay.io\n====\n\talfresco/alfresco-dbp-connector-service:0.5.0-SNAPSHOT\n====\n\t0.5.0-SNAPSHOT" as quay_io_alfresco_alfresco_dbp_connector_service_0_5_0_SNAPSHOT #AntiqueWhite
+usecase "Image\n====\nquay.io\n====\nalfresco/alfresco-dbp-connector-service:0.5.0-SNAPSHOT\n====\n0.5.0-SNAPSHOT" as quay_io_alfresco_alfresco_dbp_connector_service_0_5_0_SNAPSHOT #AntiqueWhite
 
 'Chart Dependencies
 alfresco_dbp_connector_service_0_1_0--[#orange]-|>quay_io_alfresco_alfresco_dbp_connector_service_0_5_0_SNAPSHOT
 
-center footer Generated on 2020/04/26 12:59:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 09:51:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

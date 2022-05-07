@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for acs-events-consolidator:0.2
 
 'There is one referenced Helm Chart
-artifact "acs-events-consolidator:0.2\n====\n\tacs-events-consolidator\n====\n\t0.2\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: alfresco\nacs-consolidator" as acs_events_consolidator_0_2 #Darkorange
+artifact "acs-events-consolidator:0.2\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: \n\t\talfresco\n\t\tacs-consolidator" as acs_events_consolidator_0_2 #Darkorange
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tquay.io\n====\n\talfresco/acs-events-consolidator:0.3-SNAPSHOT\n====\n\t0.3-SNAPSHOT" as quay_io_alfresco_acs_events_consolidator_0_3_SNAPSHOT #LightBlue
+usecase "Image\n====\nquay.io\n====\nalfresco/acs-events-consolidator:0.3-SNAPSHOT\n====\n0.3-SNAPSHOT" as quay_io_alfresco_acs_events_consolidator_0_3_SNAPSHOT #LightBlue
 
 'Chart Dependencies
 acs_events_consolidator_0_2--[#orange]-|>quay_io_alfresco_acs_events_consolidator_0_3_SNAPSHOT
 
-center footer Generated on 2020/04/26 12:58:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 09:45:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

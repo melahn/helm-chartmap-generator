@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for alfresco-process-springboot-service:7.1.0-M11
+
+'There are 2 referenced Helm Charts
+artifact "common:1.1.36\n====\n\tType: application\n====\n\tRepo: https://activiti.github.io/activiti-cloud-helm-charts\n====\n\tMaintainers: \n====\n\tKeywords: " as common_1_1_36 #DarkSeaGreen
+artifact "alfresco-process-springboot-service:7.1.0-M11\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: \n\t\talfresco\n\t\tcontent\n\t\tcontent services\n\t\talfresco content services\n\t\tactiviti\n\t\tprocess\n\t\talfresco activiti enterprise\n\t\tjava\n\t\tspring boot\n\t\tmicroservice" as alfresco_process_springboot_service_7_1_0_M11 #Coral
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nactiviti/example-runtime-bundle\n====\n" as activiti_example_runtime_bundle_ #LightSkyBlue
+
+'Chart Dependencies
+alfresco_process_springboot_service_7_1_0_M11--[#green]-|>common_1_1_36
+alfresco_process_springboot_service_7_1_0_M11--[#orange]-|>activiti_example_runtime_bundle_
+
+center footer Generated on 2022/05/07 09:57:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

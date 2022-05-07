@@ -7,7 +7,7 @@
   "children": [{
     "repoHost": "quay.io",
     "children": [],
-    "name": "alfresco/insight-engine",
+    "name": "alfresco/insight-engine:1.2.0-SNAPSHOT",
     "type": "image",
     "version": "1.2.0-SNAPSHOT"
   }],

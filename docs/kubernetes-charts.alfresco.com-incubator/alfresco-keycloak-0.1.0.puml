@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for alfresco-keycloak:0.1.0
 
 'There is one referenced Helm Chart
-artifact "alfresco-keycloak:0.1.0\n====\n\talfresco-keycloak\n====\n\t0.1.0\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: " as alfresco_keycloak_0_1_0 #Cyan
+artifact "alfresco-keycloak:0.1.0\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: " as alfresco_keycloak_0_1_0 #Cyan
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\talfresco/alfresco-keycloak\n====\n\tlatest" as alfresco_alfresco_keycloak_latest #Khaki
+usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-keycloak\n====\nlatest" as alfresco_alfresco_keycloak_latest #Khaki
 
 'Chart Dependencies
 alfresco_keycloak_0_1_0--[#orange]-|>alfresco_alfresco_keycloak_latest
 
-center footer Generated on 2020/04/26 13:00:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 09:53:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

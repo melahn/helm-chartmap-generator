@@ -2,7 +2,7 @@
   "children": [{
     "repoHost": "quay.io",
     "children": [],
-    "name": "alfresco/alfresco-dbp-connector-service",
+    "name": "alfresco/alfresco-dbp-connector-service:0.5.0-SNAPSHOT",
     "type": "image",
     "version": "0.5.0-SNAPSHOT"
   }],

@@ -7,7 +7,7 @@
   "children": [{
     "repoHost": "quay.io",
     "children": [],
-    "name": "alfresco/acs-events-consolidator",
+    "name": "alfresco/acs-events-consolidator:0.3-SNAPSHOT",
     "type": "image",
     "version": "0.3-SNAPSHOT"
   }],

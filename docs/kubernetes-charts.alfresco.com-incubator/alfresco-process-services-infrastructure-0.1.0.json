@@ -3,6 +3,24 @@
     {
       "children": [
         {
+          "keywords": [
+            "activemq",
+            "message broker"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "alfresco/alfresco-activemq",
+            "type": "image",
+            "version": "5.15.6-java-8-oracle-centos-7-ac5b98b35cd4"
+          }],
+          "name": "activemq:1.0.0",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "1.0.0"
+        },
+        {
           "maintainers": [{"name": "Alfresco"}],
           "keywords": [
             "alfresco",
@@ -11,16 +29,12 @@
           ],
           "children": [{
             "maintainers": [{
-              "name": "unguiculus",
-              "email": "unguiculus@gmail.com"
+              "name": "Bitnami",
+              "email": "containers@bitnami.com"
             }],
             "keywords": [
-              "sso",
-              "idm",
-              "openid connect",
-              "saml",
-              "kerberos",
-              "ldap"
+              "keycloak",
+              "access-management"
             ],
             "children": [
               {
@@ -53,7 +67,7 @@
               }
             ],
             "name": "keycloak:4.0.3",
-            "description": "Open Source Identity and Access Management For Modern Applications and Services",
+            "description": "Keycloak is a high performance Java-based identity and access management solution. It lets developers add an authentication layer to their applications with minimum effort.",
             "type": "chart",
             "shortName": "keycloak",
             "version": "4.0.3"
@@ -62,24 +76,6 @@
           "description": "The Alfresco Identity Service will become the central component responsible for identity-related capabilities needed by other Alfresco software, such as managing users, groups, roles, profiles, and authentication. Currently it deals just with authentication.",
           "type": "chart",
           "shortName": "alfresco-identity-service",
-          "version": "1.0.0"
-        },
-        {
-          "keywords": [
-            "activemq",
-            "message broker"
-          ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "alfresco/alfresco-activemq",
-            "type": "image",
-            "version": "5.15.6-java-8-oracle-centos-7-ac5b98b35cd4"
-          }],
-          "name": "activemq:1.0.0",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
           "version": "1.0.0"
         },
         {
@@ -112,7 +108,7 @@
             {
               "repoHost": "quay.io",
               "children": [],
-              "name": "kubernetes-ingress-controller/nginx-ingress-controller",
+              "name": "kubernetes-ingress-controller/nginx-ingress-controller:0.12.0",
               "type": "image",
               "version": "0.12.0"
             }
@@ -141,14 +137,14 @@
         {
           "repoHost": "quay.io",
           "children": [],
-          "name": "alfresco/alfresco-tika",
+          "name": "alfresco/alfresco-tika:2.0.4-EA",
           "type": "image",
           "version": "2.0.4-EA"
         },
         {
           "repoHost": "quay.io",
           "children": [],
-          "name": "alfresco/alfresco-imagemagick",
+          "name": "alfresco/alfresco-imagemagick:2.0.4-EA",
           "type": "image",
           "version": "2.0.4-EA"
         },
@@ -162,14 +158,7 @@
         {
           "repoHost": "quay.io",
           "children": [],
-          "name": "alfresco/alfresco-pdf-renderer",
-          "type": "image",
-          "version": "2.0.4-EA"
-        },
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-libreoffice",
+          "name": "alfresco/alfresco-pdf-renderer:2.0.4-EA",
           "type": "image",
           "version": "2.0.4-EA"
         },
@@ -181,6 +170,13 @@
           "version": "0.3"
         },
         {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-libreoffice:2.0.4-EA",
+          "type": "image",
+          "version": "2.0.4-EA"
+        },
+        {
           "repoHost": "Docker Hub",
           "children": [],
           "name": "alfresco/alfresco-content-repository",
@@ -190,9 +186,23 @@
         {
           "repoHost": "quay.io",
           "children": [],
-          "name": "alfresco/alfresco-transform-router",
+          "name": "alfresco/alfresco-transform-router:0.2.1-EA",
           "type": "image",
           "version": "0.2.1-EA"
+        },
+        {
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "webcenter/activemq",
+            "type": "image",
+            "version": "latest"
+          }],
+          "name": "activemq:0.1.0",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "0.1.0"
         },
         {
           "maintainers": [{"name": "databus23"}],
@@ -216,6 +226,14 @@
           "version": "0.9.3"
         },
         {
+          "children": [],
+          "name": "alfresco-infrastructure:1.0.0",
+          "description": "A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform.",
+          "type": "chart",
+          "shortName": "alfresco-infrastructure",
+          "version": "1.0.0"
+        },
+        {
           "keywords": [
             "search",
             "search services",
@@ -236,20 +254,6 @@
           "type": "chart",
           "shortName": "alfresco-search",
           "version": "0.0.4"
-        },
-        {
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "webcenter/activemq",
-            "type": "image",
-            "version": "latest"
-          }],
-          "name": "activemq:0.1.0",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
-          "version": "0.1.0"
         }
       ],
       "name": "alfresco-content-services:1.1.4",

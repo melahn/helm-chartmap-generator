@@ -1,0 +1,20 @@
+{
+  "keywords": [
+    "zeppelin",
+    "insight zeppelin",
+    "alfresco zeppelin",
+    "alfresco insight zeppelin"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "alfresco/insight-zeppelin:1.1.0.1",
+    "type": "image",
+    "version": "1.1.0.1"
+  }],
+  "name": "alfresco-insight-zeppelin:0.0.4",
+  "description": "A Helm chart for deploying Alfresco Insight Zeppelin",
+  "type": "chart",
+  "shortName": "alfresco-insight-zeppelin",
+  "version": "0.0.4"
+}
