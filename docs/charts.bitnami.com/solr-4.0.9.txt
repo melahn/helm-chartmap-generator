@@ -1,0 +1,64 @@
+Chart Map for solr:4.0.9
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: solr:4.0.9
+	apiVersion: v2
+	appVersion: 8.11.1
+	created: Not specified
+	dependencies: common:1.13.0, zookeeper:9.1.0
+	description: Apache Solr is an extremely powerful, open source enterprise search platform built on Apache Lucene. It is highly reliable and flexible, scalable, and designed to add value very quickly after launch.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/solr/img/solr-stack-110x117.png
+	keywords: solr,zookeeper,apache
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: solr
+	sources: https://github.com/bitnami/bitnami-docker-solr,https://lucene.apache.org/solr/
+	urls: Not specified
+	version: 4.0.9
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: zookeeper:9.1.0
+	apiVersion: v2
+	appVersion: 3.8.0
+	created: 2022-04-22T09:44:18.725314277Z
+	dependencies: common:1.13.0
+	description: Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.
+	digest: sha256:dff8e548957bf564a30f97f1efcd9d8f87bf6c2f239ab07daa24a763135a3ea9
+	icon: https://bitnami.com/assets/stacks/zookeeper/img/zookeeper-stack-220x234.png
+	keywords: zookeeper
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: zookeeper
+	sources: https://github.com/bitnami/bitnami-docker-zookeeper,https://zookeeper.apache.org/
+	urls: https://charts.bitnami.com/bitnami/zookeeper-9.1.0.tgz
+	version: 9.1.0
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/zookeeper:3.8.0-debian-10-r37
+Image: docker.io/bitnami/solr:8.11.1-debian-10-r125
+
+Chart Dependencies
+------------------
+solr:4.0.9 depends on common:1.13.0
+solr:4.0.9 depends on zookeeper:9.1.0
+zookeeper:9.1.0 depends on common:1.13.0
+solr:4.0.9 uses docker.io/bitnami/solr:8.11.1-debian-10-r125
+zookeeper:9.1.0 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r37
+
+Generated on 2022/05/07 15:45:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

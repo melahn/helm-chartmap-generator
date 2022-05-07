@@ -1,0 +1,181 @@
+Chart Map for dataplatform-bp1:11.0.2
+
+There are 9 referenced Helm Charts
+----------------------------------
+Chart: solr:4.0.5
+	apiVersion: v2
+	appVersion: 8.11.1
+	created: 2022-04-05T14:34:21.852459505Z
+	dependencies: zookeeper:9.0.3, common:1.13.0
+	description: Apache Solr is an extremely powerful, open source enterprise search platform built on Apache Lucene. It is highly reliable and flexible, scalable, and designed to add value very quickly after launch.
+	digest: 179279702f7eb6d6ef504fbff0ac06e189d20faf9af5cf1b67ce6a608ae2b285
+	icon: https://bitnami.com/assets/stacks/solr/img/solr-stack-110x117.png
+	keywords: solr,zookeeper,apache
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: solr
+	sources: https://github.com/bitnami/bitnami-docker-solr,https://lucene.apache.org/solr/
+	urls: https://charts.bitnami.com/bitnami/solr-4.0.5.tgz
+	version: 4.0.5
+Chart: spark:5.9.8
+	apiVersion: v2
+	appVersion: 3.2.1
+	created: 2022-04-05T20:10:33.973498233Z
+	dependencies: common:1.13.0
+	description: Apache Spark is a high-performance engine for large-scale computing tasks, such as data processing, machine learning and real-time data streaming. It includes APIs for Java, Python, Scala and R.
+	digest: fc14922ff7cda6e055c1e6e7a4cedfd9a63035920fc0e610707e242a53fbb6fe
+	icon: https://bitnami.com/assets/stacks/spark/img/spark-stack-220x234.png
+	keywords: apache,spark
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: spark
+	sources: https://github.com/bitnami/bitnami-docker-spark,https://spark.apache.org/
+	urls: https://charts.bitnami.com/bitnami/spark-5.9.8.tgz
+	version: 5.9.8
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: kube-state-metrics:2.2.14
+	apiVersion: v2
+	appVersion: 2.4.2
+	created: 2022-03-27T19:39:44.460842285Z
+	dependencies: common:1.13.0
+	description: kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.
+	digest: 5af51782fdcc3b189def4f58b03136621ad63e62d5c44ce8220a5d99456e12e4
+	icon: https://bitnami.com/assets/stacks/kube-state-metrics/img/kube-state-metrics-stack-220x234.png
+	keywords: prometheus,kube-state-metrics,monitoring
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: kube-state-metrics
+	sources: https://github.com/bitnami/bitnami-docker-kube-state-metrics,https://github.com/kubernetes/kube-state-metrics
+	urls: https://charts.bitnami.com/bitnami/kube-state-metrics-2.2.14.tgz
+	version: 2.2.14
+Chart: kafka:16.2.3
+	apiVersion: v2
+	appVersion: 3.1.0
+	created: 2022-04-05T14:31:25.918451222Z
+	dependencies: zookeeper:9.0.3, common:1.13.0
+	description: Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.
+	digest: 9b620737c11251cc32f0fcbf5ca6b93ad47a5c2670727cb68ddbaf7b58c52cdb
+	icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
+	keywords: kafka,zookeeper,streaming,producer,consumer
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: kafka
+	sources: https://github.com/bitnami/bitnami-docker-kafka,https://kafka.apache.org/
+	urls: https://charts.bitnami.com/bitnami/kafka-16.2.3.tgz
+	version: 16.2.3
+Chart: dataplatform-bp1:11.0.2
+	apiVersion: v2
+	appVersion: 1.0.1
+	created: Not specified
+	dependencies: kafka:16.2.3, solr:4.0.5, wavefront:3.3.2, common:1.13.0, zookeeper:9.0.4, spark:5.9.8
+	description: This Helm chart can be used for the automated deployment of a data platform blueprint containing Kafka, Apache Spark, and Solr. It covers optimized pod sizing and placement diversity rules.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/dataplatform-bp1/img/dataplatform-bp1-stack-220x234.png
+	keywords: dataplatform,kafka,spark,solr,zookeeper,wavefront,observability,apache,tanzuobservability
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: dataplatform-bp1
+	sources: https://github.com/bitnami/bitnami-docker-kafka,https://kafka.apache.org/,https://github.com/bitnami/bitnami-docker-spark,https://spark.apache.org/,https://lucene.apache.org/solr/,https://github.com/bitnami/bitnami-docker-solr,https://zookeeper.apache.org/,https://github.com/bitnami/bitnami-docker-zookeeper,https://github.com/bitnami/bitnami-docker-wavefront-kubernetes-collector,https://github.com/bitnami/bitnami-docker-wavefront-proxy,https://github.com/wavefrontHQ/wavefront-collector-for-kubernetes,https://github.com/wavefrontHQ/wavefront-proxy
+	urls: Not specified
+	version: 11.0.2
+Chart: zookeeper:9.0.3
+	apiVersion: v2
+	appVersion: 3.8.0
+	created: 2022-04-02T09:26:25.498639881Z
+	dependencies: common:1.13.0
+	description: Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.
+	digest: 03412883cd36f80f4b1b6e2a414f5bca7586c9ee2a98a5c299355d65ffbacab4
+	icon: https://bitnami.com/assets/stacks/zookeeper/img/zookeeper-stack-220x234.png
+	keywords: zookeeper
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: zookeeper
+	sources: https://github.com/bitnami/bitnami-docker-zookeeper,https://zookeeper.apache.org/
+	urls: https://charts.bitnami.com/bitnami/zookeeper-9.0.3.tgz
+	version: 9.0.3
+Chart: wavefront:3.3.2
+	apiVersion: v2
+	appVersion: 1.10.0
+	created: 2022-03-29T14:10:56.090421923Z
+	dependencies: kube-state-metrics:2.2.14, common:1.13.0
+	description: Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.
+	digest: 9818ebe1742007dac5c889e5fc8bb9bd890cac4ce33fc9aa57e1e0bf08a77370
+	icon: https://bitnami.com/assets/stacks/wavefront-collector/img/wavefront-collector-stack-220x234.png
+	keywords: metric,monitoring,observability,alerting
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: wavefront
+	sources: https://github.com/bitnami/bitnami-docker-wavefront-kubernetes-collector,https://github.com/bitnami/bitnami-docker-wavefront-proxy,https://github.com/wavefrontHQ/wavefront-collector-for-kubernetes,https://github.com/wavefrontHQ/wavefront-proxy
+	urls: https://charts.bitnami.com/bitnami/wavefront-3.3.2.tgz
+	version: 3.3.2
+Chart: zookeeper:9.0.4
+	apiVersion: v2
+	appVersion: 3.8.0
+	created: 2022-04-05T17:46:37.514048856Z
+	dependencies: common:1.13.0
+	description: Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.
+	digest: e35e86e58daf7a579394aa03f39199f44f688499ae7f32415c7ad8d2a1b27700
+	icon: https://bitnami.com/assets/stacks/zookeeper/img/zookeeper-stack-220x234.png
+	keywords: zookeeper
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: zookeeper
+	sources: https://github.com/bitnami/bitnami-docker-zookeeper,https://zookeeper.apache.org/
+	urls: https://charts.bitnami.com/bitnami/zookeeper-9.0.4.tgz
+	version: 9.0.4
+
+There are 9 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/solr:8.11.1-debian-10-r105
+Image: docker.io/bitnami/zookeeper:3.8.0-debian-10-r20
+Image: docker.io/bitnami/zookeeper:3.8.0-debian-10-r16
+Image: docker.io/bitnami/spark:3.2.1-debian-10-r64
+Image: docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r18
+Image: docker.io/bitnami/kafka:3.1.0-debian-10-r68
+Image: docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r4
+Image: docker.io/bitnami/dataplatform-exporter:1.0.1-scratch-r23
+Image: docker.io/bitnami/dataplatform-emitter:1.0.1-scratch-r25
+
+Chart Dependencies
+------------------
+dataplatform-bp1:11.0.2 depends on kafka:16.2.3
+kafka:16.2.3 depends on zookeeper:9.0.3
+zookeeper:9.0.3 depends on common:1.13.0
+kafka:16.2.3 depends on common:1.13.0
+dataplatform-bp1:11.0.2 depends on solr:4.0.5
+solr:4.0.5 depends on zookeeper:9.0.3
+solr:4.0.5 depends on common:1.13.0
+dataplatform-bp1:11.0.2 depends on wavefront:3.3.2
+wavefront:3.3.2 depends on kube-state-metrics:2.2.14
+kube-state-metrics:2.2.14 depends on common:1.13.0
+wavefront:3.3.2 depends on common:1.13.0
+dataplatform-bp1:11.0.2 depends on common:1.13.0
+dataplatform-bp1:11.0.2 depends on zookeeper:9.0.4
+zookeeper:9.0.4 depends on common:1.13.0
+dataplatform-bp1:11.0.2 depends on spark:5.9.8
+spark:5.9.8 depends on common:1.13.0
+solr:4.0.5 uses docker.io/bitnami/solr:8.11.1-debian-10-r105
+spark:5.9.8 uses docker.io/bitnami/spark:3.2.1-debian-10-r64
+kube-state-metrics:2.2.14 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r18
+kafka:16.2.3 uses docker.io/bitnami/kafka:3.1.0-debian-10-r68
+dataplatform-bp1:11.0.2 uses docker.io/bitnami/dataplatform-emitter:1.0.1-scratch-r25
+dataplatform-bp1:11.0.2 uses docker.io/bitnami/dataplatform-exporter:1.0.1-scratch-r23
+zookeeper:9.0.3 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r16
+wavefront:3.3.2 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r4
+zookeeper:9.0.4 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r20
+
+Generated on 2022/05/07 15:23:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

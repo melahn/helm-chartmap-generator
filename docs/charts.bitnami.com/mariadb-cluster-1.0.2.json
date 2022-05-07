@@ -1,0 +1,22 @@
+{
+  "keywords": [
+    "mariadb",
+    "mysql",
+    "database",
+    "sql",
+    "cluster",
+    "high availablity"
+  ],
+  "children": [{
+    "repoHost": "docker.io",
+    "children": [],
+    "name": "bitnami/mariadb:10.2.14",
+    "type": "image",
+    "version": "10.2.14"
+  }],
+  "name": "mariadb-cluster:1.0.2",
+  "description": "DEPRECATED Chart to create a Highly available MariaDB cluster",
+  "type": "chart",
+  "shortName": "mariadb-cluster",
+  "version": "1.0.2"
+}

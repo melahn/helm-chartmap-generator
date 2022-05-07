@@ -1,0 +1,62 @@
+Chart Map for elasticsearch:18.0.1
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: common:1.13.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-04-25T15:57:31.777233Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: e614e4799be726f265faeb19af43ece886d6312a5d28fe180c3c9c9db4e208ee
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.1.tgz
+	version: 1.13.1
+Chart: kibana:10.0.5
+	apiVersion: v2
+	appVersion: 8.1.3
+	created: 2022-04-28T14:08:58.342054972Z
+	dependencies: common:1.13.1
+	description: Kibana is an open source, browser based analytics and search dashboard for Elasticsearch. Kibana strives to be easy to get started with, while also being flexible and powerful.
+	digest: sha256:0c81f915f3019014dc851848ebbd40411d8f2b650de48eabd24811b6a6de7233
+	icon: https://bitnami.com/assets/stacks/kibana/img/kibana-stack-220x234.png
+	keywords: kibana,analytics,monitoring,metrics,logs
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: kibana
+	sources: https://github.com/bitnami/bitnami-docker-kibana,https://www.elastic.co/products/kibana
+	urls: https://charts.bitnami.com/bitnami/kibana-10.0.5.tgz
+	version: 10.0.5
+Chart: elasticsearch:18.0.1
+	apiVersion: v2
+	appVersion: 8.2.0
+	created: Not specified
+	dependencies: common:1.13.1, kibana:10.0.5
+	description: Elasticsearch is a distributed search and analytics engine. It is used for web search, log monitoring, and real-time analytics. Ideal for Big Data applications.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/elasticsearch/img/elasticsearch-stack-220x234.png
+	keywords: elasticsearch
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: elasticsearch
+	sources: https://github.com/bitnami/bitnami-docker-elasticsearch,https://www.elastic.co/products/elasticsearch
+	urls: Not specified
+	version: 18.0.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/elasticsearch:8.2.0-debian-10-r1
+
+Chart Dependencies
+------------------
+elasticsearch:18.0.1 depends on common:1.13.1
+elasticsearch:18.0.1 depends on kibana:10.0.5
+kibana:10.0.5 depends on common:1.13.1
+elasticsearch:18.0.1 uses docker.io/bitnami/elasticsearch:8.2.0-debian-10-r1
+
+Generated on 2022/05/07 15:26:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

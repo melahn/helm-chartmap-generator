@@ -1,0 +1,45 @@
+Chart Map for nats:7.1.17
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: nats:7.1.17
+	apiVersion: v2
+	appVersion: 2.8.0
+	created: Not specified
+	dependencies: common:1.13.0
+	description: NATS is an open source, lightweight and high-performance messaging system. It is ideal for distributed systems and supports modern cloud architectures and pub-sub, request-reply and queuing models.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/nats/img/nats-stack-220x234.png
+	keywords: nats,messaging,addressing,discovery
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: nats
+	sources: https://github.com/bitnami/bitnami-docker-nats,https://nats.io/
+	urls: Not specified
+	version: 7.1.17
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/nats:2.8.0-debian-10-r1
+
+Chart Dependencies
+------------------
+nats:7.1.17 depends on common:1.13.0
+nats:7.1.17 uses docker.io/bitnami/nats:2.8.0-debian-10-r1
+
+Generated on 2022/05/07 15:38:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

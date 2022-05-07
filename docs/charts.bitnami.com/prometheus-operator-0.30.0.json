@@ -1,0 +1,66 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "prometheus",
+    "alertmanager",
+    "operator",
+    "monitoring"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/prometheus-operator:0.41.0-debian-10-r5",
+      "type": "image",
+      "version": "0.41.0-debian-10-r5"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "prometheus",
+        "node-exporter",
+        "monitoring"
+      ],
+      "children": [],
+      "name": "node-exporter:1.0.3",
+      "description": "Prometheus exporter for hardware and OS metrics exposed by UNIX kernels, with pluggable metric collectors.",
+      "type": "chart",
+      "shortName": "node-exporter",
+      "version": "1.0.3"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "prometheus",
+        "kube-state-metrics",
+        "monitoring"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/kube-state-metrics:1.9.7-debian-10-r51",
+        "type": "image",
+        "version": "1.9.7-debian-10-r51"
+      }],
+      "name": "kube-state-metrics:0.4.3",
+      "description": "kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.",
+      "type": "chart",
+      "shortName": "kube-state-metrics",
+      "version": "0.4.3"
+    }
+  ],
+  "name": "prometheus-operator:0.30.0",
+  "description": "The Prometheus Operator for Kubernetes provides easy monitoring definitions for Kubernetes services and deployment and management of Prometheus instances.",
+  "type": "chart",
+  "shortName": "prometheus-operator",
+  "version": "0.30.0"
+}

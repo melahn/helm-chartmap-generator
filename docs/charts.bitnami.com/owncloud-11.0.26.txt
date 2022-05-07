@@ -1,0 +1,62 @@
+Chart Map for owncloud:11.0.26
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: mariadb:10.5.1
+	apiVersion: v2
+	appVersion: 10.5.15
+	created: 2022-04-19T11:37:06.543876684Z
+	dependencies: common:1.13.0
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: sha256:6daa7746f2057ca7f10000345646e2eaaafbcf0354bfb1ed62bef4c05858a9bb
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-10.5.1.tgz
+	version: 10.5.1
+Chart: owncloud:11.0.26
+	apiVersion: v2
+	appVersion: 10.9.1
+	created: Not specified
+	dependencies: mariadb:10.5.1, common:1.13.0
+	description: ownCloud is an open source content collaboration platform used to store and share files from any device. It grants data privacy, synchronization between devices, and file access control.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/owncloud/img/owncloud-stack-220x234.png
+	keywords: owncloud,storage,http,web,php
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: owncloud
+	sources: https://github.com/bitnami/bitnami-docker-owncloud,https://owncloud.org/
+	urls: Not specified
+	version: 11.0.26
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.5.15-debian-10-r62
+
+Chart Dependencies
+------------------
+owncloud:11.0.26 depends on mariadb:10.5.1
+mariadb:10.5.1 depends on common:1.13.0
+owncloud:11.0.26 depends on common:1.13.0
+mariadb:10.5.1 uses docker.io/bitnami/mariadb:10.5.15-debian-10-r62
+
+Generated on 2022/05/07 15:41:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

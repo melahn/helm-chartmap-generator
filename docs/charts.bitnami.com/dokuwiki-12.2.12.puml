@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for dokuwiki:12.2.12
+
+'There are 2 referenced Helm Charts
+artifact "dokuwiki:12.2.12\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tdokuwiki\n\t\twiki\n\t\thttp\n\t\tweb\n\t\tapplication\n\t\tphp" as dokuwiki_12_2_12 #Gainsboro
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/dokuwiki:20200729.0.0-debian-10-r553\n====\n20200729.0.0-debian-10-r553" as docker_io_bitnami_dokuwiki_20200729_0_0_debian_10_r553 #GoldenRod
+
+'Chart Dependencies
+dokuwiki_12_2_12--[#green]-|>common_1_13_0
+dokuwiki_12_2_12--[#orange]-|>docker_io_bitnami_dokuwiki_20200729_0_0_debian_10_r553
+
+center footer Generated on 2022/05/07 15:25:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

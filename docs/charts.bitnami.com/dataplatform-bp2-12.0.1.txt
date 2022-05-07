@@ -1,0 +1,197 @@
+Chart Map for dataplatform-bp2:12.0.1
+
+There are 10 referenced Helm Charts
+-----------------------------------
+Chart: spark:5.9.6
+	apiVersion: v2
+	appVersion: 3.2.1
+	created: 2022-03-27T16:23:09.945682913Z
+	dependencies: common:1.13.0
+	description: Apache Spark is a high-performance engine for large-scale computing tasks, such as data processing, machine learning and real-time data streaming. It includes APIs for Java, Python, Scala and R.
+	digest: 7b8f010d0d5cc006a08e35559f26b6a7d794439eec730df3b82883bd157a8cef
+	icon: https://bitnami.com/assets/stacks/spark/img/spark-stack-220x234.png
+	keywords: apache,spark
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: spark
+	sources: https://github.com/bitnami/bitnami-docker-spark,https://spark.apache.org/
+	urls: https://charts.bitnami.com/bitnami/spark-5.9.6.tgz
+	version: 5.9.6
+Chart: logstash:3.8.4
+	apiVersion: v2
+	appVersion: 7.17.1
+	created: 2022-03-28T16:10:54.319869798Z
+	dependencies: common:1.13.0
+	description: Logstash is an open source data processing engine. It ingests data from multiple sources, processes it, and sends the output to final destination in real-time. It is a core component of the ELK stack.
+	digest: f7946c7db5dcce4c88ea15d9fae5006b1170f49d5cdcb3f8d70e099922e8ad77
+	icon: https://bitnami.com/assets/stacks/logstash/img/logstash-stack-220x234.png
+	keywords: logstash,logging,elk
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: logstash
+	sources: https://github.com/bitnami/bitnami-docker-logstash,https://www.elastic.co/products/logstash
+	urls: https://charts.bitnami.com/bitnami/logstash-3.8.4.tgz
+	version: 3.8.4
+Chart: dataplatform-bp2:12.0.1
+	apiVersion: v2
+	appVersion: 1.0.1
+	created: Not specified
+	dependencies: elasticsearch:17.9.19, spark:5.9.6, kafka:16.1.3, wavefront:3.3.1, common:1.13.0, logstash:3.8.4
+	description: This Helm chart can be used for the automated deployment of a data platform blueprint containing Kafka, Apache Spark and Elasticsearch. It covers optimized pod sizing and placement diversity rules.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/dataplatform-bp1/img/dataplatform-bp1-stack-220x234.png
+	keywords: dataplatform,kafka,spark,elasticsearch,logstash,kibana,zookeeper,apache,tanzuobservability,wavefront
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: dataplatform-bp2
+	sources: https://github.com/bitnami/bitnami-docker-kafka,https://kafka.apache.org/,https://github.com/bitnami/bitnami-docker-spark,https://spark.apache.org/,https://github.com/bitnami/bitnami-docker-elasticsearch,https://www.elastic.co/products/elasticsearch,https://github.com/bitnami/bitnami-docker-logstash,https://www.elastic.co/products/logstash,https://zookeeper.apache.org/,https://github.com/bitnami/bitnami-docker-zookeeper
+	urls: Not specified
+	version: 12.0.1
+Chart: wavefront:3.3.1
+	apiVersion: v2
+	appVersion: 1.10.0
+	created: 2022-03-28T13:34:40.261292044Z
+	dependencies: common:1.13.0, kube-state-metrics:2.2.14
+	description: Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.
+	digest: d8971db4ac1ef31b91bae901cd88acdfd660b67afed0f6f371b2f8165d084d14
+	icon: https://bitnami.com/assets/stacks/wavefront-collector/img/wavefront-collector-stack-220x234.png
+	keywords: metric,monitoring,observability,alerting
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: wavefront
+	sources: https://github.com/bitnami/bitnami-docker-wavefront-kubernetes-collector,https://github.com/bitnami/bitnami-docker-wavefront-proxy,https://github.com/wavefrontHQ/wavefront-collector-for-kubernetes,https://github.com/wavefrontHQ/wavefront-proxy
+	urls: https://charts.bitnami.com/bitnami/wavefront-3.3.1.tgz
+	version: 3.3.1
+Chart: zookeeper:9.0.2
+	apiVersion: v2
+	appVersion: 3.8.0
+	created: 2022-03-28T09:22:19.747962728Z
+	dependencies: common:1.13.0
+	description: Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.
+	digest: 2cea8f4ef7d296d99bef21c6498de5a896a5ddc4d61b88dae969b525494b3edd
+	icon: https://bitnami.com/assets/stacks/zookeeper/img/zookeeper-stack-220x234.png
+	keywords: zookeeper
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: zookeeper
+	sources: https://github.com/bitnami/bitnami-docker-zookeeper,https://zookeeper.apache.org/
+	urls: https://charts.bitnami.com/bitnami/zookeeper-9.0.2.tgz
+	version: 9.0.2
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: elasticsearch:17.9.19
+	apiVersion: v2
+	appVersion: 7.17.1
+	created: 2022-03-29T11:59:37.658208312Z
+	dependencies: kibana:9.3.13, common:1.13.0
+	description: Elasticsearch is a distributed search and analytics engine. It is used for web search, log monitoring, and real-time analytics. Ideal for Big Data applications.
+	digest: 5a6636b3b3aed910bfcea40e18c91824cc788f03ee3862b92a6015fad2cb592d
+	icon: https://bitnami.com/assets/stacks/elasticsearch/img/elasticsearch-stack-220x234.png
+	keywords: elasticsearch
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: elasticsearch
+	sources: https://github.com/bitnami/bitnami-docker-elasticsearch,https://www.elastic.co/products/elasticsearch
+	urls: https://charts.bitnami.com/bitnami/elasticsearch-17.9.19.tgz
+	version: 17.9.19
+Chart: kafka:16.1.3
+	apiVersion: v2
+	appVersion: 3.1.0
+	created: 2022-03-29T11:08:37.79347656Z
+	dependencies: common:1.13.0, zookeeper:9.0.2
+	description: Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.
+	digest: a79d07537684f04c0cbc50673be697ae91470673c955e1226efc969b18114e06
+	icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
+	keywords: kafka,zookeeper,streaming,producer,consumer
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: kafka
+	sources: https://github.com/bitnami/bitnami-docker-kafka,https://kafka.apache.org/
+	urls: https://charts.bitnami.com/bitnami/kafka-16.1.3.tgz
+	version: 16.1.3
+Chart: kube-state-metrics:2.2.14
+	apiVersion: v2
+	appVersion: 2.4.2
+	created: 2022-03-27T19:39:44.460842285Z
+	dependencies: common:1.13.0
+	description: kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.
+	digest: 5af51782fdcc3b189def4f58b03136621ad63e62d5c44ce8220a5d99456e12e4
+	icon: https://bitnami.com/assets/stacks/kube-state-metrics/img/kube-state-metrics-stack-220x234.png
+	keywords: prometheus,kube-state-metrics,monitoring
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: kube-state-metrics
+	sources: https://github.com/bitnami/bitnami-docker-kube-state-metrics,https://github.com/kubernetes/kube-state-metrics
+	urls: https://charts.bitnami.com/bitnami/kube-state-metrics-2.2.14.tgz
+	version: 2.2.14
+Chart: kibana:9.3.13
+	apiVersion: v2
+	appVersion: 7.17.1
+	created: 2022-03-28T19:03:26.110311285Z
+	dependencies: common:1.13.0
+	description: Kibana is an open source, browser based analytics and search dashboard for Elasticsearch. Kibana strives to be easy to get started with, while also being flexible and powerful.
+	digest: d4a9be7caeb53f3a9262845844534ce012d492db2d084a310f10d1dc723a790c
+	icon: https://bitnami.com/assets/stacks/kibana/img/kibana-stack-220x234.png
+	keywords: kibana,analytics,monitoring,metrics,logs
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: kibana
+	sources: https://github.com/bitnami/bitnami-docker-kibana,https://www.elastic.co/products/kibana
+	urls: https://charts.bitnami.com/bitnami/kibana-9.3.13.tgz
+	version: 9.3.13
+
+There are 9 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/zookeeper:3.8.0-debian-10-r11
+Image: docker.io/bitnami/logstash:7.17.1-debian-10-r28
+Image: docker.io/bitnami/elasticsearch:7.17.1-debian-10-r22
+Image: docker.io/bitnami/spark:3.2.1-debian-10-r54
+Image: docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r18
+Image: docker.io/bitnami/dataplatform-exporter:1.0.1-scratch-r21
+Image: docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r3
+Image: docker.io/bitnami/dataplatform-emitter:1.0.1-scratch-r24
+Image: docker.io/bitnami/kafka:3.1.0-debian-10-r60
+
+Chart Dependencies
+------------------
+dataplatform-bp2:12.0.1 depends on elasticsearch:17.9.19
+elasticsearch:17.9.19 depends on kibana:9.3.13
+kibana:9.3.13 depends on common:1.13.0
+elasticsearch:17.9.19 depends on common:1.13.0
+dataplatform-bp2:12.0.1 depends on spark:5.9.6
+spark:5.9.6 depends on common:1.13.0
+dataplatform-bp2:12.0.1 depends on kafka:16.1.3
+kafka:16.1.3 depends on common:1.13.0
+kafka:16.1.3 depends on zookeeper:9.0.2
+zookeeper:9.0.2 depends on common:1.13.0
+dataplatform-bp2:12.0.1 depends on wavefront:3.3.1
+wavefront:3.3.1 depends on common:1.13.0
+wavefront:3.3.1 depends on kube-state-metrics:2.2.14
+kube-state-metrics:2.2.14 depends on common:1.13.0
+dataplatform-bp2:12.0.1 depends on common:1.13.0
+dataplatform-bp2:12.0.1 depends on logstash:3.8.4
+logstash:3.8.4 depends on common:1.13.0
+spark:5.9.6 uses docker.io/bitnami/spark:3.2.1-debian-10-r54
+logstash:3.8.4 uses docker.io/bitnami/logstash:7.17.1-debian-10-r28
+dataplatform-bp2:12.0.1 uses docker.io/bitnami/dataplatform-emitter:1.0.1-scratch-r24
+dataplatform-bp2:12.0.1 uses docker.io/bitnami/dataplatform-exporter:1.0.1-scratch-r21
+wavefront:3.3.1 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r3
+zookeeper:9.0.2 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r11
+elasticsearch:17.9.19 uses docker.io/bitnami/elasticsearch:7.17.1-debian-10-r22
+kafka:16.1.3 uses docker.io/bitnami/kafka:3.1.0-debian-10-r60
+kube-state-metrics:2.2.14 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r18
+
+Generated on 2022/05/07 15:24:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,63 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for dataplatform-bp2:12.0.3
+
+'There are 10 referenced Helm Charts
+artifact "kube-state-metrics:2.2.17\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tprometheus\n\t\tkube-state-metrics\n\t\tmonitoring" as kube_state_metrics_2_2_17 #Gainsboro
+artifact "wavefront:3.4.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmetric\n\t\tmonitoring\n\t\tobservability\n\t\talerting" as wavefront_3_4_0 #LavenderBlush
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "spark:5.9.11\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tapache\n\t\tspark" as spark_5_9_11 #LightSeaGreen
+artifact "elasticsearch:17.9.28\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: elasticsearch" as elasticsearch_17_9_28 #Aquamarine
+artifact "kafka:16.2.6\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkafka\n\t\tzookeeper\n\t\tstreaming\n\t\tproducer\n\t\tconsumer" as kafka_16_2_6 #Aqua
+artifact "logstash:3.8.8\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tlogstash\n\t\tlogging\n\t\telk" as logstash_3_8_8 #Aqua
+artifact "dataplatform-bp2:12.0.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tdataplatform\n\t\tkafka\n\t\tspark\n\t\telasticsearch\n\t\tlogstash\n\t\tkibana\n\t\tzookeeper\n\t\tapache\n\t\ttanzuobservability\n\t\twavefront" as dataplatform_bp2_12_0_3 #BurlyWood
+artifact "kibana:9.3.17\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkibana\n\t\tanalytics\n\t\tmonitoring\n\t\tmetrics\n\t\tlogs" as kibana_9_3_17 #GhostWhite
+artifact "zookeeper:9.0.6\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: zookeeper" as zookeeper_9_0_6 #LemonChiffon
+
+'There are 9 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/zookeeper:3.8.0-debian-10-r34\n====\n3.8.0-debian-10-r34" as docker_io_bitnami_zookeeper_3_8_0_debian_10_r34 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/kafka:3.1.0-debian-10-r84\n====\n3.1.0-debian-10-r84" as docker_io_bitnami_kafka_3_1_0_debian_10_r84 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/logstash:7.17.2-debian-10-r5\n====\n7.17.2-debian-10-r5" as docker_io_bitnami_logstash_7_17_2_debian_10_r5 #Beige
+usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:2.4.2-debian-10-r28\n====\n2.4.2-debian-10-r28" as docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r28 #CornflowerBlue
+usecase "Image\n====\ndocker.io\n====\nbitnami/wavefront-proxy:11.0.0-debian-10-r17\n====\n11.0.0-debian-10-r17" as docker_io_bitnami_wavefront_proxy_11_0_0_debian_10_r17 #Cyan
+usecase "Image\n====\ndocker.io\n====\nbitnami/spark:3.2.1-debian-10-r78\n====\n3.2.1-debian-10-r78" as docker_io_bitnami_spark_3_2_1_debian_10_r78 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/dataplatform-emitter:1.0.1-scratch-r31\n====\n1.0.1-scratch-r31" as docker_io_bitnami_dataplatform_emitter_1_0_1_scratch_r31 #DarkSalmon
+usecase "Image\n====\ndocker.io\n====\nbitnami/elasticsearch:7.17.2-debian-10-r20\n====\n7.17.2-debian-10-r20" as docker_io_bitnami_elasticsearch_7_17_2_debian_10_r20 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/dataplatform-exporter:1.0.1-scratch-r26\n====\n1.0.1-scratch-r26" as docker_io_bitnami_dataplatform_exporter_1_0_1_scratch_r26 #Fuchsia
+
+'Chart Dependencies
+dataplatform_bp2_12_0_3--[#green]-|>kafka_16_2_6
+kafka_16_2_6--[#green]-|>common_1_13_0
+kafka_16_2_6--[#green]-|>zookeeper_9_0_6
+zookeeper_9_0_6--[#green]-|>common_1_13_0
+dataplatform_bp2_12_0_3--[#green]-|>elasticsearch_17_9_28
+elasticsearch_17_9_28--[#green]-|>common_1_13_0
+elasticsearch_17_9_28--[#green]-|>kibana_9_3_17
+kibana_9_3_17--[#green]-|>common_1_13_0
+dataplatform_bp2_12_0_3--[#green]-|>wavefront_3_4_0
+wavefront_3_4_0--[#green]-|>kube_state_metrics_2_2_17
+kube_state_metrics_2_2_17--[#green]-|>common_1_13_0
+wavefront_3_4_0--[#green]-|>common_1_13_0
+dataplatform_bp2_12_0_3--[#green]-|>logstash_3_8_8
+logstash_3_8_8--[#green]-|>common_1_13_0
+dataplatform_bp2_12_0_3--[#green]-|>common_1_13_0
+dataplatform_bp2_12_0_3--[#green]-|>spark_5_9_11
+spark_5_9_11--[#green]-|>common_1_13_0
+kube_state_metrics_2_2_17--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r28
+wavefront_3_4_0--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_0_0_debian_10_r17
+spark_5_9_11--[#orange]-|>docker_io_bitnami_spark_3_2_1_debian_10_r78
+elasticsearch_17_9_28--[#orange]-|>docker_io_bitnami_elasticsearch_7_17_2_debian_10_r20
+kafka_16_2_6--[#orange]-|>docker_io_bitnami_kafka_3_1_0_debian_10_r84
+logstash_3_8_8--[#orange]-|>docker_io_bitnami_logstash_7_17_2_debian_10_r5
+dataplatform_bp2_12_0_3--[#orange]-|>docker_io_bitnami_dataplatform_emitter_1_0_1_scratch_r31
+dataplatform_bp2_12_0_3--[#orange]-|>docker_io_bitnami_dataplatform_exporter_1_0_1_scratch_r26
+zookeeper_9_0_6--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r34
+
+center footer Generated on 2022/05/07 15:24:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

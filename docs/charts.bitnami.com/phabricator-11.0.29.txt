@@ -1,0 +1,77 @@
+Chart Map for phabricator:11.0.29
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: phabricator:11.0.29
+	apiVersion: v2
+	appVersion: 2021.26.0
+	created: Not specified
+	dependencies: mariadb:9.6.0, common:1.9.1
+	description: Collection of open source web applications that help software companies build better software.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/phabricator/img/phabricator-stack-220x234.png
+	keywords: phabricator,http,https,web,application,collaboration,project management,bug tracking,code review,wiki,git,mercurial,subversion
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: phabricator
+	sources: https://github.com/bitnami/bitnami-docker-phabricator,https://www.phacility.com/phabricator/
+	urls: Not specified
+	version: 11.0.29
+Chart: mariadb:9.6.0
+	apiVersion: v2
+	appVersion: 10.5.12
+	created: 2021-09-16T12:15:41.860673535Z
+	dependencies: common:1.8.0
+	description: Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.
+	digest: d6020a56c0a7ef1848a1c73aa1bff007f03fc2f489626e3a038becbac63304b2
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-9.6.0.tgz
+	version: 9.6.0
+Chart: common:1.9.1
+	apiVersion: v2
+	appVersion: 1.8.0
+	created: 2021-09-22T20:16:23.304781697Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 1ed5337c33e62d3c24309795b9df85331ddd1ed6fc23bec15aef434ee1fdbdc9
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,http://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.9.1.tgz
+	version: 1.9.1
+Chart: common:1.8.0
+	apiVersion: v2
+	appVersion: 1.8.0
+	created: 2021-08-04T14:18:54.754655728Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 8cd256d62b4c79a805993db483adecd515f4d93b5f92a268048ca3ca54d40083
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,http://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.8.0.tgz
+	version: 1.8.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.5.12-debian-10-r32
+
+Chart Dependencies
+------------------
+phabricator:11.0.29 depends on mariadb:9.6.0
+mariadb:9.6.0 depends on common:1.8.0
+phabricator:11.0.29 depends on common:1.9.1
+mariadb:9.6.0 uses docker.io/bitnami/mariadb:10.5.12-debian-10-r32
+
+Generated on 2022/05/07 15:41:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

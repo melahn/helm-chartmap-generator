@@ -1,0 +1,137 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "alerting",
+    "adapter",
+    "istio",
+    "metrics",
+    "monitoring",
+    "observability",
+    "wavefront"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/wavefront-adapter-for-istio:0.1.5-debian-10-r371",
+      "type": "image",
+      "version": "0.1.5-debian-10-r371"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "metric",
+        "monitoring",
+        "observability",
+        "alerting"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/wavefront-proxy:11.0.0-debian-10-r26",
+          "type": "image",
+          "version": "11.0.0-debian-10-r26"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "prometheus",
+            "kube-state-metrics",
+            "monitoring"
+          ],
+          "children": [
+            {
+              "repoHost": "docker.io",
+              "children": [],
+              "name": "bitnami/kube-state-metrics:2.4.2-debian-10-r42",
+              "type": "image",
+              "version": "2.4.2-debian-10-r42"
+            },
+            {
+              "maintainers": [{
+                "name": "Bitnami",
+                "email": "containers@bitnami.com"
+              }],
+              "keywords": [
+                "common",
+                "helper",
+                "template",
+                "function",
+                "bitnami"
+              ],
+              "children": [],
+              "name": "common:1.13.0",
+              "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+              "type": "chart",
+              "shortName": "common",
+              "version": "1.13.0"
+            }
+          ],
+          "name": "kube-state-metrics:2.2.19",
+          "description": "kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.",
+          "type": "chart",
+          "shortName": "kube-state-metrics",
+          "version": "2.2.19"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.13.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.13.0"
+        }
+      ],
+      "name": "wavefront:3.4.1",
+      "description": "Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.",
+      "type": "chart",
+      "shortName": "wavefront",
+      "version": "3.4.1"
+    }
+  ],
+  "name": "wavefront-adapter-for-istio:1.1.2",
+  "description": "Wavefront Adapter for Istio is an adapter for Istio to expose Istio metrics to Wavefront. It is a lightweight tool written in Go. It supports Istio v1.4+ and Kubernetes v1.15+.",
+  "type": "chart",
+  "shortName": "wavefront-adapter-for-istio",
+  "version": "1.1.2"
+}

@@ -1,0 +1,83 @@
+Chart Map for wavefront-adapter-for-istio:1.1.1
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: kube-state-metrics:2.2.17
+	apiVersion: v2
+	appVersion: 2.4.2
+	created: 2022-04-08T13:53:28.098714569Z
+	dependencies: common:1.13.0
+	description: kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.
+	digest: c320427384a1fe1727066b6c4ab1d583f41ed3abaff86f9297d6967651544d9a
+	icon: https://bitnami.com/assets/stacks/kube-state-metrics/img/kube-state-metrics-stack-220x234.png
+	keywords: prometheus,kube-state-metrics,monitoring
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: kube-state-metrics
+	sources: https://github.com/bitnami/bitnami-docker-kube-state-metrics,https://github.com/kubernetes/kube-state-metrics
+	urls: https://charts.bitnami.com/bitnami/kube-state-metrics-2.2.17.tgz
+	version: 2.2.17
+Chart: wavefront:3.4.0
+	apiVersion: v2
+	appVersion: 1.10.0
+	created: 2022-04-12T14:38:28.645217846Z
+	dependencies: kube-state-metrics:2.2.17, common:1.13.0
+	description: Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.
+	digest: sha256:1bcdfea5aeeb5e58875a6847e45c853912d034daba9f334cb3e2ca041d37fd63
+	icon: https://bitnami.com/assets/stacks/wavefront-collector/img/wavefront-collector-stack-220x234.png
+	keywords: metric,monitoring,observability,alerting
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: wavefront
+	sources: https://github.com/bitnami/bitnami-docker-wavefront-kubernetes-collector,https://github.com/bitnami/bitnami-docker-wavefront-proxy,https://github.com/wavefrontHQ/wavefront-collector-for-kubernetes,https://github.com/wavefrontHQ/wavefront-proxy
+	urls: https://charts.bitnami.com/bitnami/wavefront-3.4.0.tgz
+	version: 3.4.0
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: wavefront-adapter-for-istio:1.1.1
+	apiVersion: v2
+	appVersion: 0.1.5
+	created: Not specified
+	dependencies: wavefront:3.4.0, common:1.13.0
+	description: Wavefront Adapter for Istio is an adapter for Istio to expose Istio metrics to Wavefront. It is a lightweight tool written in Go. It supports Istio v1.4+ and Kubernetes v1.15+.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/wavefront-adapter-for-istio/img/wavefront-adapter-for-istio-stack-220x234.png
+	keywords: alerting,adapter,istio,metrics,monitoring,observability,wavefront
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: wavefront-adapter-for-istio
+	sources: https://github.com/bitnami/bitnami-docker-wavefront-adapter-for-istio
+	urls: Not specified
+	version: 1.1.1
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r28
+Image: docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r17
+Image: docker.io/bitnami/wavefront-adapter-for-istio:0.1.5-debian-10-r364
+
+Chart Dependencies
+------------------
+wavefront-adapter-for-istio:1.1.1 depends on wavefront:3.4.0
+wavefront:3.4.0 depends on kube-state-metrics:2.2.17
+kube-state-metrics:2.2.17 depends on common:1.13.0
+wavefront:3.4.0 depends on common:1.13.0
+wavefront-adapter-for-istio:1.1.1 depends on common:1.13.0
+kube-state-metrics:2.2.17 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r28
+wavefront:3.4.0 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r17
+wavefront-adapter-for-istio:1.1.1 uses docker.io/bitnami/wavefront-adapter-for-istio:0.1.5-debian-10-r364
+
+Generated on 2022/05/07 15:48:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

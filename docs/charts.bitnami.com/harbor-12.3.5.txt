@@ -1,0 +1,101 @@
+Chart Map for harbor:12.3.5
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: postgresql:11.1.22
+	apiVersion: v2
+	appVersion: 14.2.0
+	created: 2022-04-20T11:37:08.403578154Z
+	dependencies: common:1.13.0
+	description: PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+	digest: sha256:be29cb8d8d17a940f7cab65293d9ca9be483d146da44db3e45ebdbb123350bad
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql,https://www.postgresql.org/
+	urls: https://charts.bitnami.com/bitnami/postgresql-11.1.22.tgz
+	version: 11.1.22
+Chart: harbor:12.3.5
+	apiVersion: v2
+	appVersion: 2.5.0
+	created: Not specified
+	dependencies: redis:16.8.7, common:1.13.0, postgresql:11.1.22
+	description: Harbor is an open source trusted cloud-native registry to store, sign, and scan content. It adds functionalities like security, identity, and management to the open source Docker distribution.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/harbor-core/img/harbor-core-stack-220x234.png
+	keywords: docker,registry,vulnerability,scan
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: harbor
+	sources: https://github.com/bitnami/bitnami-docker-harbor-core,https://github.com/bitnami/bitnami-docker-harbor-portal,https://github.com/bitnami/bitnami-docker-harbor-jobservice,https://github.com/bitnami/bitnami-docker-harbor-registry,https://github.com/bitnami/bitnami-docker-harbor-registryctl,https://goharbor.io/
+	urls: Not specified
+	version: 12.3.5
+Chart: redis:16.8.7
+	apiVersion: v2
+	appVersion: 6.2.6
+	created: 2022-04-20T10:40:43.709739754Z
+	dependencies: common:1.13.0
+	description: Redis(TM) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: sha256:ddb2c69104d39b91e17dc29757607fc37ea8b4c9bd666d30100ca2683b811fd4
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://charts.bitnami.com/bitnami/redis-16.8.7.tgz
+	version: 16.8.7
+
+There are 12 referenced Docker Images
+-------------------------------------
+Image: docker.io/bitnami/postgresql:11.15.0-debian-10-r71
+Image: docker.io/bitnami/harbor-jobservice:2.5.0-debian-10-r2
+Image: docker.io/bitnami/redis:6.2.6-debian-10-r192
+Image: docker.io/bitnami/harbor-portal:2.5.0-debian-10-r12
+Image: docker.io/bitnami/harbor-notary-server:2.5.0-debian-10-r11
+Image: docker.io/bitnami/harbor-registry:2.5.0-debian-10-r10
+Image: docker.io/bitnami/harbor-registryctl:2.5.0-debian-10-r11
+Image: docker.io/bitnami/nginx:1.21.6-debian-10-r83
+Image: docker.io/bitnami/harbor-adapter-trivy:2.5.0-debian-10-r11
+Image: docker.io/bitnami/harbor-core:2.5.0-debian-10-r11
+Image: docker.io/bitnami/harbor-notary-signer:2.5.0-debian-10-r10
+Image: docker.io/bitnami/chartmuseum:0.14.0-debian-10-r77
+
+Chart Dependencies
+------------------
+harbor:12.3.5 depends on redis:16.8.7
+redis:16.8.7 depends on common:1.13.0
+harbor:12.3.5 depends on common:1.13.0
+harbor:12.3.5 depends on postgresql:11.1.22
+postgresql:11.1.22 depends on common:1.13.0
+postgresql:11.1.22 uses docker.io/bitnami/postgresql:11.15.0-debian-10-r71
+harbor:12.3.5 uses docker.io/bitnami/harbor-registry:2.5.0-debian-10-r10
+harbor:12.3.5 uses docker.io/bitnami/harbor-notary-signer:2.5.0-debian-10-r10
+harbor:12.3.5 uses docker.io/bitnami/harbor-registryctl:2.5.0-debian-10-r11
+harbor:12.3.5 uses docker.io/bitnami/harbor-jobservice:2.5.0-debian-10-r2
+harbor:12.3.5 uses docker.io/bitnami/harbor-portal:2.5.0-debian-10-r12
+harbor:12.3.5 uses docker.io/bitnami/harbor-core:2.5.0-debian-10-r11
+harbor:12.3.5 uses docker.io/bitnami/harbor-adapter-trivy:2.5.0-debian-10-r11
+harbor:12.3.5 uses docker.io/bitnami/chartmuseum:0.14.0-debian-10-r77
+harbor:12.3.5 uses docker.io/bitnami/harbor-notary-server:2.5.0-debian-10-r11
+harbor:12.3.5 uses docker.io/bitnami/nginx:1.21.6-debian-10-r83
+redis:16.8.7 uses docker.io/bitnami/redis:6.2.6-debian-10-r192
+
+Generated on 2022/05/07 15:29:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

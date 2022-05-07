@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for ejbca:5.1.12
+
+'There are 3 referenced Helm Charts
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "mariadb:10.5.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_10_5_0 #DarkTurquoise
+artifact "ejbca:5.1.12\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tejbca\n\t\tca\n\t\tpki\n\t\tcertificate" as ejbca_5_1_12 #LightSeaGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.5.15-debian-10-r52\n====\n10.5.15-debian-10-r52" as docker_io_bitnami_mariadb_10_5_15_debian_10_r52 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/ejbca:7.4.3-2-debian-10-r142\n====\n7.4.3-2-debian-10-r142" as docker_io_bitnami_ejbca_7_4_3_2_debian_10_r142 #Azure
+
+'Chart Dependencies
+ejbca_5_1_12--[#green]-|>common_1_13_0
+ejbca_5_1_12--[#green]-|>mariadb_10_5_0
+mariadb_10_5_0--[#green]-|>common_1_13_0
+mariadb_10_5_0--[#orange]-|>docker_io_bitnami_mariadb_10_5_15_debian_10_r52
+ejbca_5_1_12--[#orange]-|>docker_io_bitnami_ejbca_7_4_3_2_debian_10_r142
+
+center footer Generated on 2022/05/07 15:26:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

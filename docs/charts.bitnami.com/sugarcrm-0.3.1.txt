@@ -1,0 +1,45 @@
+Chart Map for sugarcrm:0.3.1
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: mariadb:0.7.0
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-10-15T15:46:19.178168-04:00
+	dependencies: None
+	description: Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software.
+	digest: eb5fb8821ef7671ce14132551de5e777276654043ad723042bcef0dd0d7eae30
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.helm.sh/stable
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb
+	urls: https://charts.helm.sh/stable/packages/mariadb-0.7.0.tgz
+	version: 0.7.0
+Chart: sugarcrm:0.3.1
+	apiVersion: Not specified
+	appVersion: 6.5.26
+	created: Not specified
+	dependencies: mariadb:0.7.0
+	description: SugarCRM enables businesses to create extraordinary customer relationships with the most innovative and affordable CRM solution in the market.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/sugarcrm/img/sugarcrm-stack-110x117.png
+	keywords: sugarcrm,CRM
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: sugarcrm
+	sources: https://github.com/bitnami/bitnami-docker-sugarcrm
+	urls: Not specified
+	version: 0.3.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: bitnami/mariadb:10.1.23-r2
+
+Chart Dependencies
+------------------
+sugarcrm:0.3.1 depends on mariadb:0.7.0
+mariadb:0.7.0 uses bitnami/mariadb:10.1.23-r2
+
+Generated on 2022/05/07 15:46:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

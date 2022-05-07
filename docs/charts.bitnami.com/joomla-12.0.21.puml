@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for joomla:12.0.21
+
+'There are 3 referenced Helm Charts
+artifact "joomla:12.0.21\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tjoomla\n\t\tcms\n\t\tblog\n\t\thttp\n\t\tphp" as joomla_12_0_21 #Gold
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "mariadb:10.5.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_10_5_1 #DarkTurquoise
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.5.15-debian-10-r62\n====\n10.5.15-debian-10-r62" as docker_io_bitnami_mariadb_10_5_15_debian_10_r62 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/joomla:4.1.2-debian-10-r20\n====\n4.1.2-debian-10-r20" as docker_io_bitnami_joomla_4_1_2_debian_10_r20 #BlanchedAlmond
+
+'Chart Dependencies
+joomla_12_0_21--[#green]-|>common_1_13_0
+joomla_12_0_21--[#green]-|>mariadb_10_5_1
+mariadb_10_5_1--[#green]-|>common_1_13_0
+joomla_12_0_21--[#orange]-|>docker_io_bitnami_joomla_4_1_2_debian_10_r20
+mariadb_10_5_1--[#orange]-|>docker_io_bitnami_mariadb_10_5_15_debian_10_r62
+
+center footer Generated on 2022/05/07 15:30:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

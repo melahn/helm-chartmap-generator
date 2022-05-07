@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for keycloak:7.1.16
+
+'There are 3 referenced Helm Charts
+artifact "postgresql:11.1.21\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_1_21 #LightSteelBlue
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "keycloak:7.1.16\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkeycloak\n\t\taccess-management" as keycloak_7_1_16 #LightBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.2.0-debian-10-r69\n====\n14.2.0-debian-10-r69" as docker_io_bitnami_postgresql_14_2_0_debian_10_r69 #DarkSalmon
+usecase "Image\n====\ndocker.io\n====\nbitnami/keycloak:16.1.1-debian-10-r83\n====\n16.1.1-debian-10-r83" as docker_io_bitnami_keycloak_16_1_1_debian_10_r83 #LightGoldenRodYellow
+
+'Chart Dependencies
+keycloak_7_1_16--[#green]-|>common_1_13_0
+keycloak_7_1_16--[#green]-|>postgresql_11_1_21
+postgresql_11_1_21--[#green]-|>common_1_13_0
+postgresql_11_1_21--[#orange]-|>docker_io_bitnami_postgresql_14_2_0_debian_10_r69
+keycloak_7_1_16--[#orange]-|>docker_io_bitnami_keycloak_16_1_1_debian_10_r83
+
+center footer Generated on 2022/05/07 15:31:50 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

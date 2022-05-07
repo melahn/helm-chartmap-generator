@@ -1,0 +1,52 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for harbor:12.3.6
+
+'There are 5 referenced Helm Charts
+artifact "common:1.13.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_1 #DarkSeaGreen
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "harbor:12.3.6\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tdocker\n\t\tregistry\n\t\tvulnerability\n\t\tscan" as harbor_12_3_6 #GreenYellow
+artifact "postgresql:11.1.25\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_1_25 #LightSteelBlue
+artifact "redis:16.8.9\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_16_8_9 #LightSeaGreen
+
+'There are 12 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/harbor-jobservice:2.5.0-debian-10-r11\n====\n2.5.0-debian-10-r11" as docker_io_bitnami_harbor_jobservice_2_5_0_debian_10_r11 #Ivory
+usecase "Image\n====\ndocker.io\n====\nbitnami/harbor-registryctl:2.5.0-debian-10-r19\n====\n2.5.0-debian-10-r19" as docker_io_bitnami_harbor_registryctl_2_5_0_debian_10_r19 #Cyan
+usecase "Image\n====\ndocker.io\n====\nbitnami/harbor-notary-signer:2.5.0-debian-10-r19\n====\n2.5.0-debian-10-r19" as docker_io_bitnami_harbor_notary_signer_2_5_0_debian_10_r19 #AntiqueWhite
+usecase "Image\n====\ndocker.io\n====\nbitnami/harbor-core:2.5.0-debian-10-r19\n====\n2.5.0-debian-10-r19" as docker_io_bitnami_harbor_core_2_5_0_debian_10_r19 #Darkorange
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:11.15.0-debian-10-r80\n====\n11.15.0-debian-10-r80" as docker_io_bitnami_postgresql_11_15_0_debian_10_r80 #DarkSalmon
+usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.7-debian-10-r0\n====\n6.2.7-debian-10-r0" as docker_io_bitnami_redis_6_2_7_debian_10_r0 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/harbor-portal:2.5.0-debian-10-r21\n====\n2.5.0-debian-10-r21" as docker_io_bitnami_harbor_portal_2_5_0_debian_10_r21 #Ivory
+usecase "Image\n====\ndocker.io\n====\nbitnami/chartmuseum:0.14.0-debian-10-r86\n====\n0.14.0-debian-10-r86" as docker_io_bitnami_chartmuseum_0_14_0_debian_10_r86 #LawnGreen
+usecase "Image\n====\ndocker.io\n====\nbitnami/harbor-adapter-trivy:2.5.0-debian-10-r20\n====\n2.5.0-debian-10-r20" as docker_io_bitnami_harbor_adapter_trivy_2_5_0_debian_10_r20 #LavenderBlush
+usecase "Image\n====\ndocker.io\n====\nbitnami/harbor-registry:2.5.0-debian-10-r19\n====\n2.5.0-debian-10-r19" as docker_io_bitnami_harbor_registry_2_5_0_debian_10_r19 #DarkSeaGreen
+usecase "Image\n====\ndocker.io\n====\nbitnami/nginx:1.21.6-debian-10-r93\n====\n1.21.6-debian-10-r93" as docker_io_bitnami_nginx_1_21_6_debian_10_r93 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/harbor-notary-server:2.5.0-debian-10-r19\n====\n2.5.0-debian-10-r19" as docker_io_bitnami_harbor_notary_server_2_5_0_debian_10_r19 #LightSkyBlue
+
+'Chart Dependencies
+harbor_12_3_6--[#green]-|>postgresql_11_1_25
+postgresql_11_1_25--[#green]-|>common_1_13_0
+harbor_12_3_6--[#green]-|>common_1_13_1
+harbor_12_3_6--[#green]-|>redis_16_8_9
+redis_16_8_9--[#green]-|>common_1_13_1
+harbor_12_3_6--[#orange]-|>docker_io_bitnami_harbor_jobservice_2_5_0_debian_10_r11
+harbor_12_3_6--[#orange]-|>docker_io_bitnami_harbor_notary_server_2_5_0_debian_10_r19
+harbor_12_3_6--[#orange]-|>docker_io_bitnami_harbor_registry_2_5_0_debian_10_r19
+harbor_12_3_6--[#orange]-|>docker_io_bitnami_harbor_notary_signer_2_5_0_debian_10_r19
+harbor_12_3_6--[#orange]-|>docker_io_bitnami_chartmuseum_0_14_0_debian_10_r86
+harbor_12_3_6--[#orange]-|>docker_io_bitnami_nginx_1_21_6_debian_10_r93
+harbor_12_3_6--[#orange]-|>docker_io_bitnami_harbor_registryctl_2_5_0_debian_10_r19
+harbor_12_3_6--[#orange]-|>docker_io_bitnami_harbor_portal_2_5_0_debian_10_r21
+harbor_12_3_6--[#orange]-|>docker_io_bitnami_harbor_core_2_5_0_debian_10_r19
+harbor_12_3_6--[#orange]-|>docker_io_bitnami_harbor_adapter_trivy_2_5_0_debian_10_r20
+postgresql_11_1_25--[#orange]-|>docker_io_bitnami_postgresql_11_15_0_debian_10_r80
+redis_16_8_9--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r0
+
+center footer Generated on 2022/05/07 15:29:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

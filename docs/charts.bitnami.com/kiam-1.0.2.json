@@ -1,0 +1,35 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "aws",
+    "iam",
+    "security"
+  ],
+  "children": [{
+    "maintainers": [{
+      "name": "Bitnami",
+      "email": "containers@bitnami.com"
+    }],
+    "keywords": [
+      "common",
+      "helper",
+      "template",
+      "function",
+      "bitnami"
+    ],
+    "children": [],
+    "name": "common:1.13.0",
+    "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+    "type": "chart",
+    "shortName": "common",
+    "version": "1.13.0"
+  }],
+  "name": "kiam:1.0.2",
+  "description": "kiam is a proxy that captures AWS Metadata API requests. It allows AWS IAM roles to be set for Kubernetes workloads.",
+  "type": "chart",
+  "shortName": "kiam",
+  "version": "1.0.2"
+}

@@ -1,0 +1,27 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus-operator:0.31.0
+
+'There are 3 referenced Helm Charts
+artifact "node-exporter:1.1.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tprometheus\n\t\tnode-exporter\n\t\tmonitoring" as node_exporter_1_1_0 #Aqua
+artifact "kube-state-metrics:0.5.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tprometheus\n\t\tkube-state-metrics\n\t\tmonitoring" as kube_state_metrics_0_5_0 #Gainsboro
+artifact "prometheus-operator:0.31.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tprometheus\n\t\talertmanager\n\t\toperator\n\t\tmonitoring" as prometheus_operator_0_31_0 #LightSteelBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:1.9.7-debian-10-r51\n====\n1.9.7-debian-10-r51" as docker_io_bitnami_kube_state_metrics_1_9_7_debian_10_r51 #CornflowerBlue
+usecase "Image\n====\ndocker.io\n====\nbitnami/prometheus-operator:0.41.0-debian-10-r5\n====\n0.41.0-debian-10-r5" as docker_io_bitnami_prometheus_operator_0_41_0_debian_10_r5 #IndianRed
+
+'Chart Dependencies
+prometheus_operator_0_31_0--[#green]-|>node_exporter_1_1_0
+prometheus_operator_0_31_0--[#green]-|>kube_state_metrics_0_5_0
+kube_state_metrics_0_5_0--[#orange]-|>docker_io_bitnami_kube_state_metrics_1_9_7_debian_10_r51
+prometheus_operator_0_31_0--[#orange]-|>docker_io_bitnami_prometheus_operator_0_41_0_debian_10_r5
+
+center footer Generated on 2022/05/07 15:43:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

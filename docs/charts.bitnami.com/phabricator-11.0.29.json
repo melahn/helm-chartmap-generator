@@ -1,0 +1,93 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "phabricator",
+    "http",
+    "https",
+    "web",
+    "application",
+    "collaboration",
+    "project management",
+    "bug tracking",
+    "code review",
+    "wiki",
+    "git",
+    "mercurial",
+    "subversion"
+  ],
+  "children": [
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mariadb",
+        "mysql",
+        "database",
+        "sql",
+        "prometheus"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/mariadb:10.5.12-debian-10-r32",
+          "type": "image",
+          "version": "10.5.12-debian-10-r32"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.8.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.8.0"
+        }
+      ],
+      "name": "mariadb:9.6.0",
+      "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
+      "type": "chart",
+      "shortName": "mariadb",
+      "version": "9.6.0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.9.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.9.1"
+    }
+  ],
+  "name": "phabricator:11.0.29",
+  "description": "Collection of open source web applications that help software companies build better software.",
+  "type": "chart",
+  "shortName": "phabricator",
+  "version": "11.0.29"
+}

@@ -1,0 +1,57 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "postgresql",
+    "repmgr",
+    "pgpool",
+    "postgres",
+    "database",
+    "sql",
+    "replication",
+    "cluster",
+    "high availability"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/pgpool:4.3.1-debian-10-r62",
+      "type": "image",
+      "version": "4.3.1-debian-10-r62"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/postgresql-repmgr:14.2.0-debian-10-r70",
+      "type": "image",
+      "version": "14.2.0-debian-10-r70"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.0"
+    }
+  ],
+  "name": "postgresql-ha:9.0.4",
+  "description": "This PostgreSQL cluster solution includes the PostgreSQL replication manager, an open-source tool for managing replication and failover on PostgreSQL clusters.",
+  "type": "chart",
+  "shortName": "postgresql-ha",
+  "version": "9.0.4"
+}

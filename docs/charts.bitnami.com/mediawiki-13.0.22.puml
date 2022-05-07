@@ -1,0 +1,26 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for mediawiki:13.0.22
+
+'There are 3 referenced Helm Charts
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "mediawiki:13.0.22\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmediawiki\n\t\twiki\n\t\thttp\n\t\tweb\n\t\tapplication\n\t\tphp" as mediawiki_13_0_22 #LightSteelBlue
+artifact "mariadb:10.5.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_10_5_1 #DarkTurquoise
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.5.15-debian-10-r62\n====\n10.5.15-debian-10-r62" as docker_io_bitnami_mariadb_10_5_15_debian_10_r62 #DarkGoldenRod
+
+'Chart Dependencies
+mediawiki_13_0_22--[#green]-|>mariadb_10_5_1
+mariadb_10_5_1--[#green]-|>common_1_13_0
+mediawiki_13_0_22--[#green]-|>common_1_13_0
+mariadb_10_5_1--[#orange]-|>docker_io_bitnami_mariadb_10_5_15_debian_10_r62
+
+center footer Generated on 2022/05/07 15:35:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

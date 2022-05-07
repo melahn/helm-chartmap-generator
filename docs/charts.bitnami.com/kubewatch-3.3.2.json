@@ -1,0 +1,53 @@
+{
+  "maintainers": [
+    {
+      "name": "compleatang",
+      "email": "casey@monax.io"
+    },
+    {
+      "name": "Bitnami",
+      "email": "containers@bitnami.com"
+    }
+  ],
+  "keywords": [
+    "kubernetes",
+    "slack",
+    "hipchat",
+    "mattermost",
+    "flock",
+    "msteams"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/kubewatch:0.1.0-debian-10-r563",
+      "type": "image",
+      "version": "0.1.0-debian-10-r563"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.11.3",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.11.3"
+    }
+  ],
+  "name": "kubewatch:3.3.2",
+  "description": "Kubewatch is a Kubernetes watcher that currently publishes notification to Slack. Run it in your k8s cluster, and you will get event notifications in a slack channel.",
+  "type": "chart",
+  "shortName": "kubewatch",
+  "version": "3.3.2"
+}

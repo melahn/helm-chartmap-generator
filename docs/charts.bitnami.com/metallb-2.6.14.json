@@ -1,0 +1,54 @@
+{
+  "maintainers": [
+    {
+      "name": "cellebyte",
+      "email": "cellebyte@gmail.com"
+    },
+    {
+      "name": "Bitnami",
+      "email": "containers@bitnami.com"
+    }
+  ],
+  "keywords": [
+    "load-balancer",
+    "balancer",
+    "lb",
+    "bgp",
+    "arp",
+    "vrrp",
+    "vip"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/metallb-controller:0.12.1-debian-10-r59",
+      "type": "image",
+      "version": "0.12.1-debian-10-r59"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.0"
+    }
+  ],
+  "name": "metallb:2.6.14",
+  "description": "MetalLB is a load-balancer implementation for bare metal Kubernetes clusters, using standard routing protocols.",
+  "type": "chart",
+  "shortName": "metallb",
+  "version": "2.6.14"
+}

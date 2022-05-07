@@ -1,0 +1,162 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "magento",
+    "e-commerce",
+    "http",
+    "web",
+    "php"
+  ],
+  "children": [
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mariadb",
+        "mysql",
+        "database",
+        "sql",
+        "prometheus"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/mariadb:10.4.24-debian-10-r79",
+          "type": "image",
+          "version": "10.4.24-debian-10-r79"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.10.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.10.1"
+        }
+      ],
+      "name": "mariadb:9.8.1",
+      "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
+      "type": "chart",
+      "shortName": "mariadb",
+      "version": "9.8.1"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.1"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": ["elasticsearch"],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/elasticsearch:7.17.3-debian-10-r0",
+          "type": "image",
+          "version": "7.17.3-debian-10-r0"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.13.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.13.0"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "kibana",
+            "analytics",
+            "monitoring",
+            "metrics",
+            "logs"
+          ],
+          "children": [{
+            "maintainers": [{
+              "name": "Bitnami",
+              "email": "containers@bitnami.com"
+            }],
+            "keywords": [
+              "common",
+              "helper",
+              "template",
+              "function",
+              "bitnami"
+            ],
+            "children": [],
+            "name": "common:1.13.0",
+            "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+            "type": "chart",
+            "shortName": "common",
+            "version": "1.13.0"
+          }],
+          "name": "kibana:9.3.17",
+          "description": "Kibana is an open source, browser based analytics and search dashboard for Elasticsearch. Kibana strives to be easy to get started with, while also being flexible and powerful.",
+          "type": "chart",
+          "shortName": "kibana",
+          "version": "9.3.17"
+        }
+      ],
+      "name": "elasticsearch:17.9.29",
+      "description": "Elasticsearch is a distributed search and analytics engine. It is used for web search, log monitoring, and real-time analytics. Ideal for Big Data applications.",
+      "type": "chart",
+      "shortName": "elasticsearch",
+      "version": "17.9.29"
+    }
+  ],
+  "name": "magento:19.2.26",
+  "description": "Magento is a powerful open source e-commerce platform. With easy customizations and rich features, it allows retailers to grow their online businesses in a cost-effective way.",
+  "type": "chart",
+  "shortName": "magento",
+  "version": "19.2.26"
+}

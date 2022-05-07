@@ -1,0 +1,63 @@
+Chart Map for mean:6.1.2
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: bitnami-common:0.0.5
+	apiVersion: v1
+	appVersion: 0.0.1
+	created: 2019-02-11T09:02:24.221128553Z
+	dependencies: None
+	description: Chart with custom tempaltes used in Bitnami charts.
+	digest: fe23ecf647c79bfbed831f01321e05727f390cdb9133748785a68bac14233e34
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: helper,template,bitnami,broker,service,catalog
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: bitnami-common
+	sources: Not specified
+	urls: https://charts.bitnami.com/bitnami/bitnami-common-0.0.5.tgz
+	version: 0.0.5
+Chart: mongodb:5.6.0
+	apiVersion: v1
+	appVersion: 4.0.6
+	created: 2019-02-27T11:31:40.413518267Z
+	dependencies: None
+	description: NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
+	digest: 2158ccc3d4150fcc843b389bc38f49ce4bfcdc49d54ce4a03d910d55a20a1654
+	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+	keywords: mongodb,database,nosql,cluster,replicaset,replication
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: mongodb
+	sources: https://github.com/bitnami/bitnami-docker-mongodb
+	urls: https://charts.bitnami.com/bitnami/mongodb-5.6.0.tgz
+	version: 5.6.0
+Chart: mean:6.1.2
+	apiVersion: v1
+	appVersion: 4.6.2
+	created: Not specified
+	dependencies: mongodb:5.6.0, bitnami-common:0.0.5
+	description: DEPRECATED MEAN is a free and open-source JavaScript software stack for building dynamic web sites and web applications. The MEAN stack is MongoDB, Express.js, Angular, and Node.js. Because all components of the MEAN stack support programs written in JavaScript, MEAN applications can be written in one language for both server-side and client-side execution environments.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/meanstack/img/meanstack-stack-220x234.png
+	keywords: node,javascript,mongodb,express,angular,nodejs,git
+	maintainers: Not specified
+	repo url: https://charts.bitnami.com/bitnami
+	name: mean
+	sources: https://github.com/bitnami/bitnami-docker-node
+	urls: Not specified
+	version: 6.1.2
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/node:8.12.0-prod
+Image: docker.io/bitnami/mongodb:4.0.6
+
+Chart Dependencies
+------------------
+mean:6.1.2 depends on mongodb:5.6.0
+mean:6.1.2 depends on bitnami-common:0.0.5
+mongodb:5.6.0 uses docker.io/bitnami/mongodb:4.0.6
+mean:6.1.2 uses docker.io/bitnami/node:8.12.0-prod
+
+Generated on 2022/05/07 15:35:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

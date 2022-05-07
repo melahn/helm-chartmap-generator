@@ -1,0 +1,45 @@
+Chart Map for mongodb-sharded:5.0.0
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.13.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-04-25T15:57:31.777233Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: e614e4799be726f265faeb19af43ece886d6312a5d28fe180c3c9c9db4e208ee
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.1.tgz
+	version: 1.13.1
+Chart: mongodb-sharded:5.0.0
+	apiVersion: v2
+	appVersion: 5.0.8
+	created: Not specified
+	dependencies: common:1.13.1
+	description: MongoDB(R) is an open source NoSQL database that uses JSON for data storage. MongoDB(TM) Sharded improves scalability and reliability for large datasets by distributing data across multiple machines.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+	keywords: mongodb,database,nosql,cluster,replicaset,replication
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: mongodb-sharded
+	sources: https://github.com/bitnami/bitnami-docker-mongodb-sharded,https://mongodb.org
+	urls: Not specified
+	version: 5.0.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mongodb-sharded:5.0.8-debian-10-r5
+
+Chart Dependencies
+------------------
+mongodb-sharded:5.0.0 depends on common:1.13.1
+mongodb-sharded:5.0.0 uses docker.io/bitnami/mongodb-sharded:5.0.8-debian-10-r5
+
+Generated on 2022/05/07 15:37:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

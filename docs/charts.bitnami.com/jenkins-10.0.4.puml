@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for jenkins:10.0.4
+
+'There are 2 referenced Helm Charts
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "jenkins:10.0.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tjenkins\n\t\tci\n\t\tcd\n\t\thttp\n\t\tweb\n\t\tapplication" as jenkins_10_0_4 #LightCoral
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/jenkins:2.332.2-debian-10-r1\n====\n2.332.2-debian-10-r1" as docker_io_bitnami_jenkins_2_332_2_debian_10_r1 #Gainsboro
+
+'Chart Dependencies
+jenkins_10_0_4--[#green]-|>common_1_13_0
+jenkins_10_0_4--[#orange]-|>docker_io_bitnami_jenkins_2_332_2_debian_10_r1
+
+center footer Generated on 2022/05/07 15:30:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

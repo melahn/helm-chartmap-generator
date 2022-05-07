@@ -1,0 +1,64 @@
+Chart Map for oauth2-proxy:2.0.19
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: oauth2-proxy:2.0.19
+	apiVersion: v2
+	appVersion: 7.2.1
+	created: Not specified
+	dependencies: redis:16.8.7, common:1.13.0
+	description: A reverse proxy and static file server that provides authentication using Providers (Google, GitHub, and others) to validate accounts by email, domain or group.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/oauth2-proxy/img/oauth2-proxy-stack-220x234.png
+	keywords: kubernetes,oauth,oauth2,authentication,google,github
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: oauth2-proxy
+	sources: https://github.com/bitnami/bitnami-docker-oauth2-proxy,https://github.com/oauth2-proxy/oauth2-proxy
+	urls: Not specified
+	version: 2.0.19
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: redis:16.8.7
+	apiVersion: v2
+	appVersion: 6.2.6
+	created: 2022-04-20T10:40:43.709739754Z
+	dependencies: common:1.13.0
+	description: Redis(TM) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: sha256:ddb2c69104d39b91e17dc29757607fc37ea8b4c9bd666d30100ca2683b811fd4
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://charts.bitnami.com/bitnami/redis-16.8.7.tgz
+	version: 16.8.7
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/redis:6.2.6-debian-10-r192
+Image: docker.io/bitnami/oauth2-proxy:7.2.1-debian-10-r118
+
+Chart Dependencies
+------------------
+oauth2-proxy:2.0.19 depends on redis:16.8.7
+redis:16.8.7 depends on common:1.13.0
+oauth2-proxy:2.0.19 depends on common:1.13.0
+oauth2-proxy:2.0.19 uses docker.io/bitnami/oauth2-proxy:7.2.1-debian-10-r118
+redis:16.8.7 uses docker.io/bitnami/redis:6.2.6-debian-10-r192
+
+Generated on 2022/05/07 15:39:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,26 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "tensorflow",
+    "serving",
+    "inception",
+    "machine",
+    "learning",
+    "library"
+  ],
+  "children": [{
+    "repoHost": "docker.io",
+    "children": [],
+    "name": "bitnami/tensorflow-serving:1.13.0",
+    "type": "image",
+    "version": "1.13.0"
+  }],
+  "name": "tensorflow-inception:3.3.1",
+  "description": "Open-source software library for serving machine learning models",
+  "type": "chart",
+  "shortName": "tensorflow-inception",
+  "version": "3.3.1"
+}

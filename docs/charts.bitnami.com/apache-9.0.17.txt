@@ -1,0 +1,45 @@
+Chart Map for apache:9.0.17
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: apache:9.0.17
+	apiVersion: v2
+	appVersion: 2.4.53
+	created: Not specified
+	dependencies: common:1.13.0
+	description: Apache HTTP Server is an open-source HTTP server. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/apache/img/apache-stack-220x234.png
+	keywords: apache,http,https,www,web,reverse proxy
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: apache
+	sources: https://github.com/bitnami/bitnami-docker-apache,https://httpd.apache.org
+	urls: Not specified
+	version: 9.0.17
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/apache:2.4.53-debian-10-r36
+
+Chart Dependencies
+------------------
+apache:9.0.17 depends on common:1.13.0
+apache:9.0.17 uses docker.io/bitnami/apache:2.4.53-debian-10-r36
+
+Generated on 2022/05/07 15:20:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

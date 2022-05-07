@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for phpmyadmin:9.0.20
+
+'There are 3 referenced Helm Charts
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "mariadb:10.5.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_10_5_1 #DarkTurquoise
+artifact "phpmyadmin:9.0.20\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tphpmyadmin" as phpmyadmin_9_0_20 #LightCyan
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.5.15-debian-10-r62\n====\n10.5.15-debian-10-r62" as docker_io_bitnami_mariadb_10_5_15_debian_10_r62 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/phpmyadmin:5.1.3-debian-10-r63\n====\n5.1.3-debian-10-r63" as docker_io_bitnami_phpmyadmin_5_1_3_debian_10_r63 #BlanchedAlmond
+
+'Chart Dependencies
+phpmyadmin_9_0_20--[#green]-|>mariadb_10_5_1
+mariadb_10_5_1--[#green]-|>common_1_13_0
+phpmyadmin_9_0_20--[#green]-|>common_1_13_0
+mariadb_10_5_1--[#orange]-|>docker_io_bitnami_mariadb_10_5_15_debian_10_r62
+phpmyadmin_9_0_20--[#orange]-|>docker_io_bitnami_phpmyadmin_5_1_3_debian_10_r63
+
+center footer Generated on 2022/05/07 15:42:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

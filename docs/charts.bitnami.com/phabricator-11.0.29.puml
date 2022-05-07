@@ -1,0 +1,27 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for phabricator:11.0.29
+
+'There are 4 referenced Helm Charts
+artifact "phabricator:11.0.29\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tphabricator\n\t\thttp\n\t\thttps\n\t\tweb\n\t\tapplication\n\t\tcollaboration\n\t\tproject management\n\t\tbug tracking\n\t\tcode review\n\t\twiki\n\t\tgit\n\t\tmercurial\n\t\tsubversion" as phabricator_11_0_29 #Chartreuse
+artifact "mariadb:9.6.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_9_6_0 #DarkTurquoise
+artifact "common:1.9.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_9_1 #DarkSeaGreen
+artifact "common:1.8.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_8_0 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.5.12-debian-10-r32\n====\n10.5.12-debian-10-r32" as docker_io_bitnami_mariadb_10_5_12_debian_10_r32 #DarkGoldenRod
+
+'Chart Dependencies
+phabricator_11_0_29--[#green]-|>common_1_9_1
+phabricator_11_0_29--[#green]-|>mariadb_9_6_0
+mariadb_9_6_0--[#green]-|>common_1_8_0
+mariadb_9_6_0--[#orange]-|>docker_io_bitnami_mariadb_10_5_12_debian_10_r32
+
+center footer Generated on 2022/05/07 15:41:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

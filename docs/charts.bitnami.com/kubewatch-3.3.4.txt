@@ -1,0 +1,45 @@
+Chart Map for kubewatch:3.3.4
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: kubewatch:3.3.4
+	apiVersion: v2
+	appVersion: 0.1.0
+	created: Not specified
+	dependencies: common:1.12.0
+	description: DEPRECATED Kubewatch is a Kubernetes watcher that currently publishes notification to Slack. Run it in your k8s cluster, and you will get event notifications in a slack channel.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/kubewatch/img/kubewatch-stack-220x234.png
+	keywords: kubernetes,slack,hipchat,mattermost,flock,msteams
+	maintainers: Not specified
+	repo url: https://charts.bitnami.com/bitnami
+	name: kubewatch
+	sources: https://github.com/bitnami/bitnami-docker-kubewatch,https://github.com/bitnami-labs/kubewatch
+	urls: Not specified
+	version: 3.3.4
+Chart: common:1.12.0
+	apiVersion: v2
+	appVersion: 1.12.0
+	created: 2022-03-16T14:24:47.893518855Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 3355fa44a1d4f2e920490d345e0085927ab7a2f8a58297d53428234e8f7d22a6
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.12.0.tgz
+	version: 1.12.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/kubewatch:0.1.0-debian-10-r571
+
+Chart Dependencies
+------------------
+kubewatch:3.3.4 depends on common:1.12.0
+kubewatch:3.3.4 uses docker.io/bitnami/kubewatch:0.1.0-debian-10-r571
+
+Generated on 2022/05/07 15:33:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

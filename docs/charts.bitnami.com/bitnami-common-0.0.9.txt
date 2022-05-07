@@ -1,0 +1,27 @@
+Chart Map for bitnami-common:0.0.9
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: bitnami-common:0.0.9
+	apiVersion: v1
+	appVersion: 0.0.9
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED Chart with custom templates used in Bitnami charts.
+	digest: Not specified
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: helper,template,bitnami,broker,service,catalog
+	maintainers: Not specified
+	repo url: https://charts.bitnami.com/bitnami
+	name: bitnami-common
+	sources: Not specified
+	urls: Not specified
+	version: 0.0.9
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2022/05/07 15:21:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

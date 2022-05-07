@@ -1,0 +1,90 @@
+{
+  "keywords": [
+    "orangehrm",
+    "http",
+    "https",
+    "web",
+    "application",
+    "php",
+    "human resources"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/orangehrm:4.9.0-0-debian-10-r57",
+      "type": "image",
+      "version": "4.9.0-0-debian-10-r57"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.10.3",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.10.3"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mariadb",
+        "mysql",
+        "database",
+        "sql",
+        "prometheus"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/mariadb:10.5.13-debian-10-r58",
+          "type": "image",
+          "version": "10.5.13-debian-10-r58"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.10.3",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.10.3"
+        }
+      ],
+      "name": "mariadb:10.3.1",
+      "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
+      "type": "chart",
+      "shortName": "mariadb",
+      "version": "10.3.1"
+    }
+  ],
+  "name": "orangehrm:11.0.3",
+  "description": "DEPRECATED OrangeHRM is a free HR management system that offers a wealth of modules to suit the needs of your business.",
+  "type": "chart",
+  "shortName": "orangehrm",
+  "version": "11.0.3"
+}

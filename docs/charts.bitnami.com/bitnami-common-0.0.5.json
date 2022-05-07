@@ -1,0 +1,20 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "helper",
+    "template",
+    "bitnami",
+    "broker",
+    "service",
+    "catalog"
+  ],
+  "children": [],
+  "name": "bitnami-common:0.0.5",
+  "description": "Chart with custom tempaltes used in Bitnami charts.",
+  "type": "chart",
+  "shortName": "bitnami-common",
+  "version": "0.0.5"
+}

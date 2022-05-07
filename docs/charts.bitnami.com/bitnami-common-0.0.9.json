@@ -1,0 +1,16 @@
+{
+  "keywords": [
+    "helper",
+    "template",
+    "bitnami",
+    "broker",
+    "service",
+    "catalog"
+  ],
+  "children": [],
+  "name": "bitnami-common:0.0.9",
+  "description": "DEPRECATED Chart with custom templates used in Bitnami charts.",
+  "type": "chart",
+  "shortName": "bitnami-common",
+  "version": "0.0.9"
+}

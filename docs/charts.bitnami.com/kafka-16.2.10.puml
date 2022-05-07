@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kafka:16.2.10
+
+'There are 4 referenced Helm Charts
+artifact "common:1.13.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_1 #DarkSeaGreen
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "kafka:16.2.10\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkafka\n\t\tzookeeper\n\t\tstreaming\n\t\tproducer\n\t\tconsumer" as kafka_16_2_10 #Aqua
+artifact "zookeeper:9.1.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: zookeeper" as zookeeper_9_1_1 #LemonChiffon
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/zookeeper:3.8.0-debian-10-r37\n====\n3.8.0-debian-10-r37" as docker_io_bitnami_zookeeper_3_8_0_debian_10_r37 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/kafka:3.1.0-debian-10-r89\n====\n3.1.0-debian-10-r89" as docker_io_bitnami_kafka_3_1_0_debian_10_r89 #LightPink
+
+'Chart Dependencies
+kafka_16_2_10--[#green]-|>common_1_13_1
+kafka_16_2_10--[#green]-|>zookeeper_9_1_1
+zookeeper_9_1_1--[#green]-|>common_1_13_0
+kafka_16_2_10--[#orange]-|>docker_io_bitnami_kafka_3_1_0_debian_10_r89
+zookeeper_9_1_1--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r37
+
+center footer Generated on 2022/05/07 15:31:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,47 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "alerting",
+    "adapter",
+    "metrics",
+    "monitoring",
+    "observability",
+    "wavefront"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/wavefront-hpa-adapter:0.9.8-scratch-r16",
+      "type": "image",
+      "version": "0.9.8-scratch-r16"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.12.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.12.0"
+    }
+  ],
+  "name": "wavefront-hpa-adapter:1.1.0",
+  "description": "Wavefront HPA Adapter for Kubernetes is a Kubernetes Horizontal Pod Autoscaler adapter. It allows to scale your Kubernetes workloads based on Wavefront metrics.",
+  "type": "chart",
+  "shortName": "wavefront-hpa-adapter",
+  "version": "1.1.0"
+}

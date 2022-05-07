@@ -1,0 +1,64 @@
+Chart Map for osclass:14.0.1
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: mariadb:11.0.0
+	apiVersion: v2
+	appVersion: 10.6.7
+	created: 2022-04-20T23:44:45.286102597Z
+	dependencies: common:1.13.0
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: sha256:95337d90c732a08b52aa89e896ea0dbdfaf99afa8b4de3aaa7f5969ce338e1e8
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.0.0.tgz
+	version: 11.0.0
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: osclass:14.0.1
+	apiVersion: v2
+	appVersion: 8.0.1
+	created: Not specified
+	dependencies: common:1.13.0, mariadb:11.0.0
+	description: Osclass allows you to easily create a classifieds site without any technical knowledge. It provides support for presenting general ads or specialized ads, is customizable, extensible and multilingual.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/osclass/img/osclass-stack-220x234.png
+	keywords: osclass,classifieds,http,web,php
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: osclass
+	sources: https://github.com/bitnami/bitnami-docker-osclass,https://osclass.org/
+	urls: Not specified
+	version: 14.0.1
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.6.7-debian-10-r62
+Image: docker.io/bitnami/osclass:8.0.1-debian-10-r103
+
+Chart Dependencies
+------------------
+osclass:14.0.1 depends on common:1.13.0
+osclass:14.0.1 depends on mariadb:11.0.0
+mariadb:11.0.0 depends on common:1.13.0
+mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
+osclass:14.0.1 uses docker.io/bitnami/osclass:8.0.1-debian-10-r103
+
+Generated on 2022/05/07 15:40:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

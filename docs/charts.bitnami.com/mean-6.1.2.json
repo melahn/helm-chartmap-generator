@@ -1,0 +1,71 @@
+{
+  "keywords": [
+    "node",
+    "javascript",
+    "mongodb",
+    "express",
+    "angular",
+    "nodejs",
+    "git"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/node:8.12.0-prod",
+      "type": "image",
+      "version": "8.12.0-prod"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mongodb",
+        "database",
+        "nosql",
+        "cluster",
+        "replicaset",
+        "replication"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/mongodb:4.0.6",
+        "type": "image",
+        "version": "4.0.6"
+      }],
+      "name": "mongodb:5.6.0",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "type": "chart",
+      "shortName": "mongodb",
+      "version": "5.6.0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "helper",
+        "template",
+        "bitnami",
+        "broker",
+        "service",
+        "catalog"
+      ],
+      "children": [],
+      "name": "bitnami-common:0.0.5",
+      "description": "Chart with custom tempaltes used in Bitnami charts.",
+      "type": "chart",
+      "shortName": "bitnami-common",
+      "version": "0.0.5"
+    }
+  ],
+  "name": "mean:6.1.2",
+  "description": "DEPRECATED MEAN is a free and open-source JavaScript software stack for building dynamic web sites and web applications. The MEAN stack is MongoDB, Express.js, Angular, and Node.js. Because all components of the MEAN stack support programs written in JavaScript, MEAN applications can be written in one language for both server-side and client-side execution environments.",
+  "type": "chart",
+  "shortName": "mean",
+  "version": "6.1.2"
+}

@@ -1,0 +1,136 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "alerting",
+    "adapter",
+    "metrics",
+    "monitoring",
+    "observability",
+    "wavefront"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/wavefront-prometheus-storage-adapter:1.0.5-debian-10-r138",
+      "type": "image",
+      "version": "1.0.5-debian-10-r138"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "metric",
+        "monitoring",
+        "observability",
+        "alerting"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/wavefront-proxy:11.0.0-debian-10-r11",
+          "type": "image",
+          "version": "11.0.0-debian-10-r11"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "prometheus",
+            "kube-state-metrics",
+            "monitoring"
+          ],
+          "children": [
+            {
+              "repoHost": "docker.io",
+              "children": [],
+              "name": "bitnami/kube-state-metrics:2.4.2-debian-10-r28",
+              "type": "image",
+              "version": "2.4.2-debian-10-r28"
+            },
+            {
+              "maintainers": [{
+                "name": "Bitnami",
+                "email": "containers@bitnami.com"
+              }],
+              "keywords": [
+                "common",
+                "helper",
+                "template",
+                "function",
+                "bitnami"
+              ],
+              "children": [],
+              "name": "common:1.13.0",
+              "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+              "type": "chart",
+              "shortName": "common",
+              "version": "1.13.0"
+            }
+          ],
+          "name": "kube-state-metrics:2.2.16",
+          "description": "kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.",
+          "type": "chart",
+          "shortName": "kube-state-metrics",
+          "version": "2.2.16"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.13.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.13.0"
+        }
+      ],
+      "name": "wavefront:3.3.4",
+      "description": "Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.",
+      "type": "chart",
+      "shortName": "wavefront",
+      "version": "3.3.4"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.0"
+    }
+  ],
+  "name": "wavefront-prometheus-storage-adapter:1.1.1",
+  "description": "Wavefront Storage Adapter is a Prometheus integration to transfer metrics from Prometheus to Wavefront. It lets you save Prometheus data in Wavefront without changing your existing Prometheus setup.",
+  "type": "chart",
+  "shortName": "wavefront-prometheus-storage-adapter",
+  "version": "1.1.1"
+}

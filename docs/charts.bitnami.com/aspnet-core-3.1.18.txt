@@ -1,0 +1,45 @@
+Chart Map for aspnet-core:3.1.18
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: aspnet-core:3.1.18
+	apiVersion: v2
+	appVersion: 6.0.4
+	created: Not specified
+	dependencies: common:1.13.0
+	description: ASP.NET Core is an open-source framework for web application development created by Microsoft. It runs on both the full .NET Framework, on Windows, and the cross-platform .NET Core.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/aspnet-core/img/aspnet-core-stack-220x234.png
+	keywords: asp.net,dotnet
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: aspnet-core
+	sources: https://github.com/bitnami/bitnami-docker-aspnet-core,https://dotnet.microsoft.com/apps/aspnet
+	urls: Not specified
+	version: 3.1.18
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/aspnet-core:6.0.4-debian-10-r7
+
+Chart Dependencies
+------------------
+aspnet-core:3.1.18 depends on common:1.13.0
+aspnet-core:3.1.18 uses docker.io/bitnami/aspnet-core:6.0.4-debian-10-r7
+
+Generated on 2022/05/07 15:21:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

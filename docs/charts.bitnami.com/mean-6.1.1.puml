@@ -1,0 +1,27 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for mean:6.1.1
+
+'There are 3 referenced Helm Charts
+artifact "bitnami-common:0.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\thelper\n\t\ttemplate\n\t\tbitnami\n\t\tbroker\n\t\tservice\n\t\tcatalog" as bitnami_common_0_0_5 #Aquamarine
+artifact "mean:6.1.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tnode\n\t\tjavascript\n\t\tmongodb\n\t\texpress\n\t\tangular\n\t\tnodejs\n\t\tgit" as mean_6_1_1 #LightSteelBlue
+artifact "mongodb:5.6.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmongodb\n\t\tdatabase\n\t\tnosql\n\t\tcluster\n\t\treplicaset\n\t\treplication" as mongodb_5_6_0 #GreenYellow
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/node:8.12.0-prod\n====\n8.12.0-prod" as docker_io_bitnami_node_8_12_0_prod #Cornsilk
+usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:4.0.6\n====\n4.0.6" as docker_io_bitnami_mongodb_4_0_6 #Bisque
+
+'Chart Dependencies
+mean_6_1_1--[#green]-|>bitnami_common_0_0_5
+mean_6_1_1--[#green]-|>mongodb_5_6_0
+mean_6_1_1--[#orange]-|>docker_io_bitnami_node_8_12_0_prod
+mongodb_5_6_0--[#orange]-|>docker_io_bitnami_mongodb_4_0_6
+
+center footer Generated on 2022/05/07 15:35:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml
