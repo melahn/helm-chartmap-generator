@@ -1,27 +1,87 @@
 Chart Map for alfresco-content-services-community:6.0.5-ea
 
-There are 2 referenced Helm Charts
+There are 8 referenced Helm Charts
 ----------------------------------
 Chart: postgresql:0.9.3
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: Not specified
-	created: 2018-03-29T04:56:10.224673062Z
+	created: 2020-10-15T15:46:22.353424-04:00
 	dependencies: None
 	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
 	digest: 828f019164cfbc9d97824fd6ef39748ec8f5677d8267b90de44b6df59ec2cbbc
 	icon: https://www.postgresql.org/media/img/about/press/elephant.png
 	keywords: postgresql,postgres,database,sql
 	maintainers: databus23
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: postgresql
 	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
-	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-0.9.3.tgz
+	urls: https://charts.helm.sh/stable/packages/postgresql-0.9.3.tgz
 	version: 0.9.3
+Chart: alfresco-api-gateway:0.1.0
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-07-08T12:03:08.74645604Z
+	dependencies: None
+	description: A Helm chart for Alfresco API Gateway
+	digest: 3833c561c0ec734ae644f3d44df4cb32d6588653a25f976c6484f9b5053f7b94
+	icon: Not specified
+	keywords: Not specified
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-api-gateway
+	sources: Not specified
+	urls: http://kubernetes-charts.alfresco.com/incubator/alfresco-api-gateway-0.1.0.tgz
+	version: 0.1.0
+Chart: alfresco-activiti-cloud-registry:0.1.0
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-07-08T12:03:08.739280283Z
+	dependencies: None
+	description: A Helm chart for Alfresco Activiti Cloud Registry
+	digest: 9938b8090a8c882feea30f0478f6df813f0908f77caaec6aa50512c2d6c05a43
+	icon: Not specified
+	keywords: Not specified
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-activiti-cloud-registry
+	sources: Not specified
+	urls: http://kubernetes-charts.alfresco.com/incubator/alfresco-activiti-cloud-registry-0.1.0.tgz
+	version: 0.1.0
+Chart: alfresco-infrastructure:0.1.0
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-07-08T12:03:09.490947973Z
+	dependencies: rabbitmq-ha:0.1.1, alfresco-api-gateway:0.1.0, alfresco-activiti-cloud-registry:0.1.0, alfresco-keycloak:0.1.0, activemq:0.1.0
+	description: A Helm chart Providing the required Alfresco infrastructure. This includes nginx-ingress, activemq, alfresco-api-gateway, alfresco-identity-service, and the content services volume.
+	digest: 54af5ce5dbfad5c6e3fb1cebe2cd15899713a24db00f29524a9acb822f0f980c
+	icon: Not specified
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-infrastructure
+	sources: Not specified
+	urls: http://kubernetes-charts.alfresco.com/incubator/alfresco-infrastructure-0.1.0.tgz
+	version: 0.1.0
+Chart: alfresco-keycloak:0.1.0
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-07-08T12:03:09.564125419Z
+	dependencies: None
+	description: A Helm chart for Alfresco and Activiti SSO identity-service
+	digest: 0a3d030cc9fbaf8b0e0dc01a45895985083b0f3dc2b8fd132f8720eb67512df6
+	icon: Not specified
+	keywords: Not specified
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: alfresco-keycloak
+	sources: Not specified
+	urls: http://kubernetes-charts.alfresco.com/incubator/alfresco-keycloak-0.1.0.tgz
+	version: 0.1.0
 Chart: alfresco-content-services-community:6.0.5-ea
 	apiVersion: Not specified
 	appVersion: Not specified
 	created: Not specified
-	dependencies: postgresql:0.9.3
+	dependencies: alfresco-infrastructure:0.1.0, postgresql:0.9.3
 	description: A Helm chart for deploying Alfresco Content Services Community
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -32,20 +92,66 @@ Chart: alfresco-content-services-community:6.0.5-ea
 	sources: https://github.com/Alfresco/acs-community-packaging/tree/master/helm
 	urls: Not specified
 	version: 6.0.5-ea
+Chart: activemq:0.1.0
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-07-08T12:03:08.737557967Z
+	dependencies: None
+	description: A Helm chart Providing Apache ActiveMQ.
+	digest: 09c410a23fb2f1cff867a5b0b1154109ac99a265bda870e702e0f0468d126df0
+	icon: Not specified
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://kubernetes-charts.alfresco.com/incubator
+	name: activemq
+	sources: Not specified
+	urls: http://kubernetes-charts.alfresco.com/incubator/activemq-0.1.0.tgz
+	version: 0.1.0
+Chart: rabbitmq-ha:0.1.1
+	apiVersion: v1
+	appVersion: 3.7.0
+	created: 2020-10-15T15:46:26.66692-04:00
+	dependencies: None
+	description: Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).
+	digest: 25d23efee7a53392f97a8b3f52f2272e6566871bf91e76bd3633ca57890a024c
+	icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+	keywords: rabbitmq,message queue,AMQP
+	maintainers: etiennetremel:etienne.tremel@container-solutions.com
+	repo url: https://charts.helm.sh/stable
+	name: rabbitmq-ha
+	sources: https://github.com/rabbitmq/rabbitmq,https://github.com/docker-library/rabbitmq
+	urls: https://charts.helm.sh/stable/packages/rabbitmq-ha-0.1.1.tgz
+	version: 0.1.1
 
-There are 4 referenced Docker Images
+There are 9 referenced Docker Images
 ------------------------------------
+Image: rabbitmq:3.7-alpine
 Image: alfresco/alfresco-share:6.0.a
+Image: alfresco/alfresco-keycloak:latest
 Image: postgres:10.1
+Image: activiti/activiti-cloud-registry:latest
+Image: webcenter/activemq:latest
 Image: alfresco/alfresco-content-repository-community:6.0.5-ea
+Image: alfresco/alfresco-api-gateway:latest
 Image: alfresco/alfresco-search-services:1.1.1
 
 Chart Dependencies
 ------------------
+alfresco-content-services-community:6.0.5-ea depends on alfresco-infrastructure:0.1.0
+alfresco-infrastructure:0.1.0 depends on rabbitmq-ha:0.1.1
+alfresco-infrastructure:0.1.0 depends on alfresco-api-gateway:0.1.0
+alfresco-infrastructure:0.1.0 depends on alfresco-activiti-cloud-registry:0.1.0
+alfresco-infrastructure:0.1.0 depends on alfresco-keycloak:0.1.0
+alfresco-infrastructure:0.1.0 depends on activemq:0.1.0
 alfresco-content-services-community:6.0.5-ea depends on postgresql:0.9.3
 postgresql:0.9.3 uses postgres:10.1
+alfresco-api-gateway:0.1.0 uses alfresco/alfresco-api-gateway:latest
+alfresco-activiti-cloud-registry:0.1.0 uses activiti/activiti-cloud-registry:latest
+alfresco-keycloak:0.1.0 uses alfresco/alfresco-keycloak:latest
 alfresco-content-services-community:6.0.5-ea uses alfresco/alfresco-content-repository-community:6.0.5-ea
 alfresco-content-services-community:6.0.5-ea uses alfresco/alfresco-search-services:1.1.1
 alfresco-content-services-community:6.0.5-ea uses alfresco/alfresco-share:6.0.a
+activemq:0.1.0 uses webcenter/activemq:latest
+rabbitmq-ha:0.1.1 uses rabbitmq:3.7-alpine
 
-Generated on 2020/04/26 13:30:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 09:13:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

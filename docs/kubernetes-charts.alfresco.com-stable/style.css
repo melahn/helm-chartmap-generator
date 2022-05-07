@@ -1,18 +1,22 @@
 * {
-	font-family: "Arial", Helvetica, san-serif;
-	color: lightgray;
-	background-color: black;
+	font-family: "Andale Mono";
+	color: #66ff00;
+	background-color: #000000;
 }
 a:visited {
-	color: grey;
+	color: #00FFFF;
 }
 .header {
-	font: 30px sans-serif;
+	font: 30px;
 }
-.chartname {
+.charterror {
+	font: 16px;
+	color: #FF0000;
+}
+.chartname  {
 	font-weight: bold;
-	font: 16px sans-serif;
+	font: 16px;
 }
-.chartlink {
-	font: 16px sans-serif;
+.chartlink  {
+	font: 16px;
 }

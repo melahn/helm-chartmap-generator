@@ -8,23 +8,13 @@
         "identity-service"
       ],
       "children": [{
-        "maintainers": [
-          {
-            "name": "unguiculus",
-            "email": "unguiculus@gmail.com"
-          },
-          {
-            "name": "thomasdarimont",
-            "email": "thomas.darimont+github@gmail.com"
-          }
-        ],
+        "maintainers": [{
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        }],
         "keywords": [
-          "sso",
-          "idm",
-          "openid connect",
-          "saml",
-          "kerberos",
-          "ldap"
+          "keycloak",
+          "access-management"
         ],
         "children": [
           {
@@ -57,7 +47,7 @@
           }
         ],
         "name": "keycloak:4.3.0",
-        "description": "Open Source Identity and Access Management For Modern Applications and Services",
+        "description": "Keycloak is a high performance Java-based identity and access management solution. It lets developers add an authentication layer to their applications with minimum effort.",
         "type": "chart",
         "shortName": "keycloak",
         "version": "4.3.0"
@@ -98,7 +88,7 @@
         {
           "repoHost": "quay.io",
           "children": [],
-          "name": "kubernetes-ingress-controller/nginx-ingress-controller",
+          "name": "kubernetes-ingress-controller/nginx-ingress-controller:0.12.0",
           "type": "image",
           "version": "0.12.0"
         }

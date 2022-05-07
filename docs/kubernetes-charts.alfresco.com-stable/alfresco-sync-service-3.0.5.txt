@@ -1,0 +1,47 @@
+Chart Map for alfresco-sync-service:3.0.5
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: alfresco-sync-service:3.0.5
+	apiVersion: v1
+	appVersion: 3.3.3
+	created: Not specified
+	dependencies: postgresql:0.9.3
+	description: Alfresco Syncservice
+	digest: Not specified
+	icon: Not specified
+	keywords: syncservice,alfresco,application
+	maintainers: Alfresco Apps Repo Team
+	repo url: https://kubernetes-charts.alfresco.com/stable
+	name: alfresco-sync-service
+	sources: Not specified
+	urls: Not specified
+	version: 3.0.5
+Chart: postgresql:0.9.3
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-10-15T15:46:22.353424-04:00
+	dependencies: None
+	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 828f019164cfbc9d97824fd6ef39748ec8f5677d8267b90de44b6df59ec2cbbc
+	icon: https://www.postgresql.org/media/img/about/press/elephant.png
+	keywords: postgresql,postgres,database,sql
+	maintainers: databus23
+	repo url: https://charts.helm.sh/stable
+	name: postgresql
+	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
+	urls: https://charts.helm.sh/stable/packages/postgresql-0.9.3.tgz
+	version: 0.9.3
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: quay.io/alfresco/service-sync:3.3.3
+Image: postgres:10.1
+
+Chart Dependencies
+------------------
+alfresco-sync-service:3.0.5 depends on postgresql:0.9.3
+alfresco-sync-service:3.0.5 uses quay.io/alfresco/service-sync:3.3.3
+postgresql:0.9.3 uses postgres:10.1
+
+Generated on 2022/05/07 09:20:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

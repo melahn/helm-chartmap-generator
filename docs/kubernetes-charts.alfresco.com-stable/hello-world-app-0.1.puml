@@ -9,15 +9,15 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for hello-world-app:0.1
 
 'There are 4 referenced Helm Charts
-artifact "postgresql:0.11.0\n====\n\tpostgresql\n====\n\t0.11.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: databus23\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql" as postgresql_0_11_0 #LightSteelBlue
-artifact "hello-world-app:0.1\n====\n\thello-world-app\n====\n\t0.1\n====\n\thttps://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: alfresco\nanaxes\nhello\nworld" as hello_world_app_0_1 #Gainsboro
-artifact "hello-world-ui:0.1\n====\n\thello-world-ui\n====\n\t0.1\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: alfresco\nanaxes\nhello\nworld" as hello_world_ui_0_1 #CadetBlue
-artifact "hello-world-service:0.1\n====\n\thello-world-service\n====\n\t0.1\n====\n\thttps://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: alfresco\nanaxes\nhello\nworld" as hello_world_service_0_1 #Ivory
+artifact "postgresql:0.11.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: databus23\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql" as postgresql_0_11_0 #LightSteelBlue
+artifact "hello-world-app:0.1\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: \n\t\talfresco\n\t\tanaxes\n\t\thello\n\t\tworld" as hello_world_app_0_1 #Gainsboro
+artifact "hello-world-ui:0.1\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: \n\t\talfresco\n\t\tanaxes\n\t\thello\n\t\tworld" as hello_world_ui_0_1 #CadetBlue
+artifact "hello-world-service:0.1\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: \n\t\talfresco\n\t\tanaxes\n\t\thello\n\t\tworld" as hello_world_service_0_1 #Ivory
 
 'There are 3 referenced Docker Images
-usecase "Image\n====\n\tquay.io\n====\n\talfresco/anaxes-hello-world-ui:0.1-SNAPSHOT\n====\n\t0.1-SNAPSHOT" as quay_io_alfresco_anaxes_hello_world_ui_0_1_SNAPSHOT #BurlyWood
-usecase "Image\n====\n\tquay.io\n====\n\talfresco/anaxes-hello-world-service:0.1-SNAPSHOT\n====\n\t0.1-SNAPSHOT" as quay_io_alfresco_anaxes_hello_world_service_0_1_SNAPSHOT #DarkSalmon
-usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t10.1" as postgres_10_1 #Ivory
+usecase "Image\n====\nquay.io\n====\nalfresco/anaxes-hello-world-ui:0.1-SNAPSHOT\n====\n0.1-SNAPSHOT" as quay_io_alfresco_anaxes_hello_world_ui_0_1_SNAPSHOT #BurlyWood
+usecase "Image\n====\nquay.io\n====\nalfresco/anaxes-hello-world-service:0.1-SNAPSHOT\n====\n0.1-SNAPSHOT" as quay_io_alfresco_anaxes_hello_world_service_0_1_SNAPSHOT #DarkSalmon
+usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n10.1" as postgres_10_1 #Ivory
 
 'Chart Dependencies
 hello_world_app_0_1--[#green]-|>hello_world_service_0_1
@@ -27,5 +27,5 @@ postgresql_0_11_0--[#orange]-|>postgres_10_1
 hello_world_ui_0_1--[#orange]-|>quay_io_alfresco_anaxes_hello_world_ui_0_1_SNAPSHOT
 hello_world_service_0_1--[#orange]-|>quay_io_alfresco_anaxes_hello_world_service_0_1_SNAPSHOT
 
-center footer Generated on 2020/04/26 13:33:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 09:20:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

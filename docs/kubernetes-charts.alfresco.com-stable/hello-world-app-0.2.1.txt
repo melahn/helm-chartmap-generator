@@ -6,7 +6,7 @@ Chart: hello-world-app:0.2.1
 	apiVersion: Not specified
 	appVersion: Not specified
 	created: Not specified
-	dependencies: hello-world-service:0.2.1, hello-world-ui:0.2
+	dependencies: hello-world-ui:0.2, hello-world-service:0.2.1
 	description: Hello world sample app to demonstrate deployment capabilities
 	digest: Not specified
 	icon: Not specified
@@ -18,27 +18,27 @@ Chart: hello-world-app:0.2.1
 	urls: Not specified
 	version: 0.2.1
 Chart: postgresql:0.11.0
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: 9.6.2
-	created: 2018-05-10T07:26:21.022197052Z
+	created: 2020-10-15T15:46:22.328388-04:00
 	dependencies: None
 	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
 	digest: 07904fd939bf345e51f29cffe2a2235788b4dff0f167ede7c0e14f94bd59939e
 	icon: https://www.postgresql.org/media/img/about/press/elephant.png
 	keywords: postgresql,postgres,database,sql
 	maintainers: databus23
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: postgresql
 	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
-	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-0.11.0.tgz
+	urls: https://charts.helm.sh/stable/packages/postgresql-0.11.0.tgz
 	version: 0.11.0
 Chart: hello-world-service:0.2.1
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: Not specified
-	created: 2020-03-31T17:10:40.631826697Z
+	created: 2020-07-08T12:03:09.875479974Z
 	dependencies: postgresql:0.11.0
 	description: Hello world sample service to demonstrate deployment capabilities
-	digest: 562a17fda5f17a5aed5cbb7564f7453b7ef9642e172154c1407b06bd93bdec01
+	digest: a79fde9b2e65847a48868c6d9201b7d281be96e993a16e02e273cf27c3c7f2cb
 	icon: Not specified
 	keywords: alfresco,anaxes,hello,world
 	maintainers: Alfresco
@@ -48,9 +48,9 @@ Chart: hello-world-service:0.2.1
 	urls: http://kubernetes-charts.alfresco.com/incubator/hello-world-service-0.2.1.tgz
 	version: 0.2.1
 Chart: hello-world-ui:0.2
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: Not specified
-	created: 2020-03-31T17:10:40.634071053Z
+	created: 2020-07-08T12:03:09.876970522Z
 	dependencies: None
 	description: Hello world sample UI to demonstrate deployment capabilities
 	digest: 9e06e2be894d6d2a814e3ebf86a5e8fef493068bb70a23351d33767bf011acbf
@@ -71,11 +71,11 @@ Image: postgres:10.1
 
 Chart Dependencies
 ------------------
+hello-world-app:0.2.1 depends on hello-world-ui:0.2
 hello-world-app:0.2.1 depends on hello-world-service:0.2.1
 hello-world-service:0.2.1 depends on postgresql:0.11.0
-hello-world-app:0.2.1 depends on hello-world-ui:0.2
 postgresql:0.11.0 uses postgres:10.1
 hello-world-service:0.2.1 uses quay.io/alfresco/anaxes-hello-world-service:0.1-SNAPSHOT
 hello-world-ui:0.2 uses quay.io/alfresco/anaxes-hello-world-ui:0.1-SNAPSHOT
 
-Generated on 2020/04/26 13:33:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 09:20:27 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

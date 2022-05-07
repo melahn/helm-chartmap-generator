@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for alfresco-insight-zeppelin:1.0.1
 
 'There is one referenced Helm Chart
-artifact "alfresco-insight-zeppelin:1.0.1\n====\n\talfresco-insight-zeppelin\n====\n\t1.0.1\n====\n\thttps://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: \n====\n\tKeywords: zeppelin\ninsight zeppelin\nalfresco zeppelin\nalfresco insight zeppelin" as alfresco_insight_zeppelin_1_0_1 #GhostWhite
+artifact "alfresco-insight-zeppelin:1.0.1\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tzeppelin\n\t\tinsight zeppelin\n\t\talfresco zeppelin\n\t\talfresco insight zeppelin" as alfresco_insight_zeppelin_1_0_1 #GhostWhite
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tquay.io\n====\n\talfresco/insight-zeppelin:1.4.0\n====\n\t1.4.0" as quay_io_alfresco_insight_zeppelin_1_4_0 #GreenYellow
+usecase "Image\n====\nquay.io\n====\nalfresco/insight-zeppelin:1.4.0\n====\n1.4.0" as quay_io_alfresco_insight_zeppelin_1_4_0 #GreenYellow
 
 'Chart Dependencies
 alfresco_insight_zeppelin_1_0_1--[#orange]-|>quay_io_alfresco_insight_zeppelin_1_4_0
 
-center footer Generated on 2020/03/16 14:35:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 09:15:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

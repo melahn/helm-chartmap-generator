@@ -8,7 +8,7 @@
   "children": [{
     "repoHost": "quay.io",
     "children": [],
-    "name": "alfresco/insight-zeppelin",
+    "name": "alfresco/insight-zeppelin:1.4.0",
     "type": "image",
     "version": "1.4.0"
   }],

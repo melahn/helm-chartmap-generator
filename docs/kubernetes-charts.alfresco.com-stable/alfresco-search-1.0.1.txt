@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-search:1.0.1 uses alfresco/alfresco-search-services:1.4.0
 
-Generated on 2020/03/16 14:38:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 09:20:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
