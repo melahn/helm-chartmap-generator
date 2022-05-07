@@ -24,9 +24,9 @@ and provided links to view them.
 
 You can see lots of examples here -> (<https://melahn.github.io/helm-chartmap-generator/>)
 
-## Maven Central
+## Dependency Info
 
-The jar file, along with source and javadoc, is available from **Maven Central**.
+Available from the [Maven Central Repository](https://mvnrepository.com/artifact/com.melahn/helm-chartmap-generator/1.0.2).
 
 ``` xml
 <dependency>
