@@ -200,7 +200,7 @@ public class ChartMapGenerator {
     /**
      * Using a local chart repo, prints each chart, keeping a count along the way.
      * 
-     * @throws ChartMapGeneratorException should an IOException occur geneerating the chart.
+     * @throws ChartMapGeneratorException should an IOException occur generating the chart.
      *
      */
     public void generate() throws ChartMapGeneratorException {
