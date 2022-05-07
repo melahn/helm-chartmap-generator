@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "docker.packages.nuxeo.com",
+    "children": [],
+    "name": "nuxeo/nuxeo-web-ui:3.0.0-SNAPSHOT",
+    "type": "image",
+    "version": "3.0.0-SNAPSHOT"
+  }],
+  "name": "nuxeo-web-ui:0.0.1",
+  "description": "A Helm chart for Nuxeo Web UI 3.0.0-SNAPSHOT",
+  "type": "chart",
+  "shortName": "nuxeo-web-ui",
+  "version": "0.0.1"
+}

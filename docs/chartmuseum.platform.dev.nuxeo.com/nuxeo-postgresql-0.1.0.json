@@ -1,0 +1,39 @@
+{
+  "children": [{
+    "maintainers": [
+      {
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      },
+      {
+        "name": "desaintmartin",
+        "email": "cedric@desaintmartin.fr"
+      }
+    ],
+    "keywords": [
+      "postgresql",
+      "postgres",
+      "database",
+      "sql",
+      "replication",
+      "cluster"
+    ],
+    "children": [{
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/postgresql:9.6.11",
+      "type": "image",
+      "version": "9.6.11"
+    }],
+    "name": "postgresql:3.1.0",
+    "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+    "type": "chart",
+    "shortName": "postgresql",
+    "version": "3.1.0"
+  }],
+  "name": "nuxeo-postgresql:0.1.0",
+  "description": "A Nuxeo pre-configured PostgreSQL Helm chart",
+  "type": "chart",
+  "shortName": "nuxeo-postgresql",
+  "version": "0.1.0"
+}

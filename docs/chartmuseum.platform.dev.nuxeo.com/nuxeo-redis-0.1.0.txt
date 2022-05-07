@@ -1,0 +1,45 @@
+Chart Map for nuxeo-redis:0.1.0
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: redis:5.2.0
+	apiVersion: v1
+	appVersion: 4.0.12
+	created: 2019-01-12T10:06:15.177810048Z
+	dependencies: None
+	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: a92751238913810615e0c212d053708073bad5c683cd974fb52d31e6f911d5e6
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://charts.bitnami.com/bitnami/redis-5.2.0.tgz
+	version: 5.2.0
+Chart: nuxeo-redis:0.1.0
+	apiVersion: v1
+	appVersion: Not specified
+	created: Not specified
+	dependencies: redis:5.2.0
+	description: A Helm chart for deploying a Redis instance for Nuxeo
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://chartmuseum.platform.dev.nuxeo.com/
+	name: nuxeo-redis
+	sources: Not specified
+	urls: Not specified
+	version: 0.1.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/redis:4.0.12
+
+Chart Dependencies
+------------------
+nuxeo-redis:0.1.0 depends on redis:5.2.0
+redis:5.2.0 uses docker.io/bitnami/redis:4.0.12
+
+Generated on 2022/05/07 10:17:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

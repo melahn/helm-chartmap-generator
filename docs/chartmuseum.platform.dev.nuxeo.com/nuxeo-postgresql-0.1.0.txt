@@ -1,0 +1,45 @@
+Chart Map for nuxeo-postgresql:0.1.0
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: nuxeo-postgresql:0.1.0
+	apiVersion: v1
+	appVersion: 1.0
+	created: Not specified
+	dependencies: postgresql:3.1.0
+	description: A Nuxeo pre-configured PostgreSQL Helm chart
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://chartmuseum.platform.dev.nuxeo.com/
+	name: nuxeo-postgresql
+	sources: Not specified
+	urls: Not specified
+	version: 0.1.0
+Chart: postgresql:3.1.0
+	apiVersion: v1
+	appVersion: 10.6.0
+	created: 2018-12-12T08:30:32.801303419Z
+	dependencies: None
+	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 874800353a70fd196844f28272fc25cfaceb08b974dee1ed07f284d6960f1de4
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql
+	urls: https://charts.bitnami.com/bitnami/postgresql-3.1.0.tgz
+	version: 3.1.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/postgresql:9.6.11
+
+Chart Dependencies
+------------------
+nuxeo-postgresql:0.1.0 depends on postgresql:3.1.0
+postgresql:3.1.0 uses docker.io/bitnami/postgresql:9.6.11
+
+Generated on 2022/05/07 10:17:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for nuxeo-redis:0.1.0
+
+'There are 2 referenced Helm Charts
+artifact "redis:5.2.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_5_2_0 #LightSeaGreen
+artifact "nuxeo-redis:0.1.0\n====\n\tType: application\n====\n\tRepo: https://chartmuseum.platform.dev.nuxeo.com/\n====\n\tMaintainers: \n====\n\tKeywords: " as nuxeo_redis_0_1_0 #CornflowerBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/redis:4.0.12\n====\n4.0.12" as docker_io_bitnami_redis_4_0_12 #Azure
+
+'Chart Dependencies
+nuxeo_redis_0_1_0--[#green]-|>redis_5_2_0
+redis_5_2_0--[#orange]-|>docker_io_bitnami_redis_4_0_12
+
+center footer Generated on 2022/05/07 10:17:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

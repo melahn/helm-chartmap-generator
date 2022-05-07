@@ -1,0 +1,36 @@
+{
+  "children": [{
+    "maintainers": [
+      {
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      },
+      {
+        "name": "desaintmartin",
+        "email": "cedric@desaintmartin.fr"
+      }
+    ],
+    "keywords": [
+      "redis",
+      "keyvalue",
+      "database"
+    ],
+    "children": [{
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/redis:4.0.12",
+      "type": "image",
+      "version": "4.0.12"
+    }],
+    "name": "redis:5.2.0",
+    "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+    "type": "chart",
+    "shortName": "redis",
+    "version": "5.2.0"
+  }],
+  "name": "nuxeo-redis:0.1.0",
+  "description": "A Helm chart for deploying a Redis instance for Nuxeo",
+  "type": "chart",
+  "shortName": "nuxeo-redis",
+  "version": "0.1.0"
+}
