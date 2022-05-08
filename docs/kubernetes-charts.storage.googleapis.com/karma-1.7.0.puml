@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for karma:1.7.0
+
+'There is one referenced Helm Chart
+artifact "karma:1.7.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tdavidkarlsen\n\t\tprymitive\n====\n\tKeywords: " as karma_1_7_0 #Aqua
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nlmierzwa/karma\n====\nv0.72" as lmierzwa_karma_v0_72 #Cyan
+
+'Chart Dependencies
+karma_1_7_0--[#orange]-|>lmierzwa_karma_v0_72
+
+center footer Generated on 2022/05/07 20:09:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

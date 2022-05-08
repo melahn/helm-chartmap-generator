@@ -12,7 +12,7 @@ Chart: nats:4.3.5
 	icon: https://bitnami.com/assets/stacks/nats/img/nats-stack-110x117.png
 	keywords: nats,messaging,addressing,discovery
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: nats
 	sources: https://github.com/bitnami/bitnami-docker-nats
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 nats:4.3.5 uses docker.io/bitnami/nats:2.1.4-debian-10-r24
 
-Generated on 2020/03/16 17:24:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:20:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for hlf-ca:1.2.0
 
 'There is one referenced Helm Chart
-artifact "hlf-ca:1.2.0\n====\n\thlf-ca\n====\n\t1.2.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: alexvicegrab, inzamam-iqbal, dbandin\n====\n\tKeywords: blockchain\nhyperledger\nfabric" as hlf_ca_1_2_0 #DodgerBlue
+artifact "hlf-ca:1.2.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\talexvicegrab\n\t\tinzamam-iqbal\n\t\tdbandin\n====\n\tKeywords: \n\t\tblockchain\n\t\thyperledger\n\t\tfabric" as hlf_ca_1_2_0 #DodgerBlue
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\thyperledger/fabric-ca\n====\n\t1.4.3" as hyperledger_fabric_ca_1_4_3 #LightSkyBlue
+usecase "Image\n====\nDocker Hub\n====\nhyperledger/fabric-ca\n====\n1.4.3" as hyperledger_fabric_ca_1_4_3 #LightSkyBlue
 
 'Chart Dependencies
 hlf_ca_1_2_0--[#orange]-|>hyperledger_fabric_ca_1_4_3
 
-center footer Generated on 2020/04/26 13:47:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:04:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "ldap",
+    "openldap"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "osixia/openldap",
+    "type": "image",
+    "version": "1.2.4"
+  }],
+  "name": "openldap:1.2.7",
+  "description": "DEPRECATED - Community developed LDAP software",
+  "type": "chart",
+  "shortName": "openldap",
+  "version": "1.2.7"
+}

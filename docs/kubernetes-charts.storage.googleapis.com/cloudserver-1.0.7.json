@@ -1,0 +1,59 @@
+{
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "zenko/cloudserver",
+      "type": "image",
+      "version": "8.1.5"
+    },
+    {
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "mongo",
+        "type": "image",
+        "version": "3.6"
+      }],
+      "name": "mongodb-replicaset:3.17.2",
+      "description": "DEPRECATED - NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "type": "chart",
+      "shortName": "mongodb-replicaset",
+      "version": "3.17.2"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "ssalaues",
+          "email": "salimsalaues@gmail.com"
+        },
+        {
+          "name": "dandydeveloper",
+          "email": "aaron.layfield@gmail.com"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "redis",
+        "type": "image",
+        "version": "5.0.6-alpine"
+      }],
+      "name": "redis-ha:4.4.4",
+      "description": "Highly available Kubernetes implementation of Redis",
+      "type": "chart",
+      "shortName": "redis-ha",
+      "version": "4.4.4"
+    }
+  ],
+  "name": "cloudserver:1.0.7",
+  "description": "DEPRECATED An open-source Node.js implementation of the Amazon S3 protocol on the front-end and backend storage capabilities to multiple clouds, including Azure and Google.",
+  "type": "chart",
+  "shortName": "cloudserver",
+  "version": "1.0.7"
+}

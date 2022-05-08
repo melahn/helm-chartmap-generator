@@ -12,7 +12,7 @@ Chart: dokuwiki:6.0.10
 	icon: https://bitnami.com/assets/stacks/dokuwiki/img/dokuwiki-stack-110x117.png
 	keywords: dokuwiki,wiki,http,web,application,php
 	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: dokuwiki
 	sources: https://github.com/bitnami/bitnami-docker-dokuwiki
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 dokuwiki:6.0.10 uses docker.io/bitnami/dokuwiki:0.20180422.201901061035-debian-10-r28
 
-Generated on 2020/04/26 13:44:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 19:55:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

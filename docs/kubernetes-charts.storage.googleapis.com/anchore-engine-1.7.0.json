@@ -1,0 +1,80 @@
+{
+  "keywords": [
+    "analysis",
+    "docker",
+    "anchore",
+    "anchore-engine",
+    "image",
+    "security",
+    "vulnerability",
+    "scanner"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "anchore/anchore-engine:v0.7.3",
+      "type": "image",
+      "version": "v0.7.3"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/redis:5.0.7-debian-10-r32",
+        "type": "image",
+        "version": "5.0.7-debian-10-r32"
+      }],
+      "name": "redis:10.5.7",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "10.5.7"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "postgresql",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6.18"
+      }],
+      "name": "postgresql:1.0.1",
+      "description": "Chart for PostgreSQL",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "1.0.1"
+    }
+  ],
+  "name": "anchore-engine:1.7.0",
+  "description": "Anchore container analysis and policy evaluation engine service",
+  "type": "chart",
+  "shortName": "anchore-engine",
+  "version": "1.7.0"
+}

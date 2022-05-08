@@ -9,11 +9,11 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for msoms:0.2.0
 
 'There is one referenced Helm Chart
-artifact "msoms:0.2.0\n====\n\tmsoms\n====\n\t0.2.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Sambit Mishra, Keiko Harada\n====\n\tKeywords: monitoring\nalerting\nmetric\nevent\nlogging" as msoms_0_2_0 #LightSeaGreen
+artifact "msoms:0.2.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tSambit Mishra\n\t\tKeiko Harada\n====\n\tKeywords: \n\t\tmonitoring\n\t\talerting\n\t\tmetric\n\t\tevent\n\t\tlogging" as msoms_0_2_0 #LightSeaGreen
 
 'There are 0 referenced Docker Images
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/26 13:53:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:19:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

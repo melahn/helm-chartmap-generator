@@ -1,0 +1,15 @@
+{
+  "keywords": ["bi"],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "amancevice/superset",
+    "type": "image",
+    "version": "0.36.0"
+  }],
+  "name": "superset:1.1.13",
+  "description": "DEPRECATED - Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application",
+  "type": "chart",
+  "shortName": "superset",
+  "version": "1.1.13"
+}

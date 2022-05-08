@@ -1,0 +1,26 @@
+{
+  "maintainers": [
+    {
+      "name": "kierranm",
+      "email": "kierranm@gmail.com"
+    },
+    {
+      "name": "egeland",
+      "email": "egeland@gmail.com"
+    },
+    {
+      "name": "mariusv",
+      "email": "myself@mariusv.com"
+    }
+  ],
+  "keywords": [
+    "spot",
+    "termination"
+  ],
+  "children": [],
+  "name": "k8s-spot-termination-handler:1.4.10",
+  "description": "The K8s Spot Termination handler handles draining AWS Spot Instances in response to termination requests.",
+  "type": "chart",
+  "shortName": "k8s-spot-termination-handler",
+  "version": "1.4.10"
+}

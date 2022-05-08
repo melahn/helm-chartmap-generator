@@ -10,7 +10,7 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/joomla",
+      "name": "bitnami/joomla:3.9.15-debian-10-r10",
       "type": "image",
       "version": "3.9.15-debian-10-r10"
     },
@@ -30,14 +30,14 @@
         {
           "repoHost": "docker.io",
           "children": [],
-          "name": "bitnami/mariadb",
+          "name": "bitnami/mariadb:10.1.44-debian-10-r25",
           "type": "image",
           "version": "10.1.44-debian-10-r25"
         },
         {
           "repoHost": "docker.io",
           "children": [],
-          "name": "bitnami/mariadb",
+          "name": "bitnami/mariadb:10.3.22-debian-10-r27",
           "type": "image",
           "version": "10.3.22-debian-10-r27"
         }

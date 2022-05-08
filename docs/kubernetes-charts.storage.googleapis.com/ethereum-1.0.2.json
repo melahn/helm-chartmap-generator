@@ -1,0 +1,34 @@
+{
+  "keywords": [
+    "ethereum",
+    "blockchain"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "ethereum/client-go",
+      "type": "image",
+      "version": "alltools-v1.7.3"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "ethereumex/eth-stats-dashboard",
+      "type": "image",
+      "version": "v0.0.1"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "ethereum/client-go",
+      "type": "image",
+      "version": "v1.7.3"
+    }
+  ],
+  "name": "ethereum:1.0.2",
+  "description": "DEPRECATED private Ethereum network Helm chart for Kubernetes",
+  "type": "chart",
+  "shortName": "ethereum",
+  "version": "1.0.2"
+}

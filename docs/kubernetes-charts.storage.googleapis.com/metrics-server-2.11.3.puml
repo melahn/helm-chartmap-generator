@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for metrics-server:2.11.3
+
+'There is one referenced Helm Chart
+artifact "metrics-server:2.11.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tolemarkus\n\t\tkennethaasan\n====\n\tKeywords: metrics-server" as metrics_server_2_11_3 #Cyan
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/metrics-server-amd64\n====\nv0.3.6" as k8s_gcr_io_metrics_server_amd64_v0_3_6 #DarkSeaGreen
+
+'Chart Dependencies
+metrics_server_2_11_3--[#orange]-|>k8s_gcr_io_metrics_server_amd64_v0_3_6
+
+center footer Generated on 2022/05/07 20:17:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

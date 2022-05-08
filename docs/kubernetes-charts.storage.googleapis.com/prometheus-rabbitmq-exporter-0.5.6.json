@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "kbudde/rabbitmq-exporter",
+    "type": "image",
+    "version": "v0.29.0"
+  }],
+  "name": "prometheus-rabbitmq-exporter:0.5.6",
+  "description": "DEPRECATED Rabbitmq metrics exporter for prometheus",
+  "type": "chart",
+  "shortName": "prometheus-rabbitmq-exporter",
+  "version": "0.5.6"
+}

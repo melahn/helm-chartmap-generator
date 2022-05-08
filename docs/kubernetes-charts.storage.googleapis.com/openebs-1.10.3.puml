@@ -1,0 +1,33 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for openebs:1.10.3
+
+'There is one referenced Helm Chart
+artifact "openebs:1.10.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tkmova\n\t\tprateekpandey14\n====\n\tKeywords: \n\t\tcloud-native-storage\n\t\tblock-storage\n\t\tiSCSI\n\t\tstorage" as openebs_1_10_3 #GreenYellow
+
+'There are 7 referenced Docker Images
+usecase "Image\n====\nquay.io\n====\nopenebs/snapshot-provisioner:1.10.0\n====\n1.10.0" as quay_io_openebs_snapshot_provisioner_1_10_0 #Beige
+usecase "Image\n====\nquay.io\n====\nopenebs/openebs-k8s-provisioner:1.10.0\n====\n1.10.0" as quay_io_openebs_openebs_k8s_provisioner_1_10_0 #Khaki
+usecase "Image\n====\nquay.io\n====\nopenebs/m-apiserver:1.10.0\n====\n1.10.0" as quay_io_openebs_m_apiserver_1_10_0 #DarkSeaGreen
+usecase "Image\n====\nquay.io\n====\nopenebs/node-disk-operator-amd64:0.5.0\n====\n0.5.0" as quay_io_openebs_node_disk_operator_amd64_0_5_0 #IndianRed
+usecase "Image\n====\nquay.io\n====\nopenebs/provisioner-localpv:1.10.0\n====\n1.10.0" as quay_io_openebs_provisioner_localpv_1_10_0 #GhostWhite
+usecase "Image\n====\nquay.io\n====\nopenebs/snapshot-controller:1.10.0\n====\n1.10.0" as quay_io_openebs_snapshot_controller_1_10_0 #LightPink
+usecase "Image\n====\nquay.io\n====\nopenebs/admission-server:1.10.0\n====\n1.10.0" as quay_io_openebs_admission_server_1_10_0 #LawnGreen
+
+'Chart Dependencies
+openebs_1_10_3--[#orange]-|>quay_io_openebs_snapshot_controller_1_10_0
+openebs_1_10_3--[#orange]-|>quay_io_openebs_admission_server_1_10_0
+openebs_1_10_3--[#orange]-|>quay_io_openebs_snapshot_provisioner_1_10_0
+openebs_1_10_3--[#orange]-|>quay_io_openebs_provisioner_localpv_1_10_0
+openebs_1_10_3--[#orange]-|>quay_io_openebs_m_apiserver_1_10_0
+openebs_1_10_3--[#orange]-|>quay_io_openebs_node_disk_operator_amd64_0_5_0
+openebs_1_10_3--[#orange]-|>quay_io_openebs_openebs_k8s_provisioner_1_10_0
+
+center footer Generated on 2022/05/07 20:23:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

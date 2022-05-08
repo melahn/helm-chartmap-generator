@@ -5,17 +5,17 @@ There are 2 referenced Helm Charts
 Chart: mariadb:7.3.11
 	apiVersion: v1
 	appVersion: 10.3.22
-	created: 2020-02-27T09:29:04.473566843Z
+	created: 2020-02-27T10:38:04.688330461Z
 	dependencies: None
 	description: Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.
 	digest: ef8cc2a802242b8110de91a567b5f6f46918400730cdc4c3ec2770a9d1752f7f
 	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
 	keywords: mariadb,mysql,database,sql,prometheus
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: mariadb
 	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter
-	urls: https://kubernetes-charts.storage.googleapis.com/mariadb-7.3.11.tgz
+	urls: https://charts.bitnami.com/bitnami/mariadb-7.3.11.tgz
 	version: 7.3.11
 Chart: joomla:7.1.10
 	apiVersion: v1
@@ -27,7 +27,7 @@ Chart: joomla:7.1.10
 	icon: https://bitnami.com/assets/stacks/joomla/img/joomla-stack-220x234.png
 	keywords: joomla,cms,blog,http,php
 	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: joomla
 	sources: https://github.com/bitnami/bitnami-docker-joomla
 	urls: Not specified
@@ -46,4 +46,4 @@ mariadb:7.3.11 uses docker.io/bitnami/mariadb:10.1.44-debian-10-r25
 mariadb:7.3.11 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r27
 joomla:7.1.10 uses docker.io/bitnami/joomla:3.9.15-debian-10-r10
 
-Generated on 2020/04/26 13:49:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:08:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

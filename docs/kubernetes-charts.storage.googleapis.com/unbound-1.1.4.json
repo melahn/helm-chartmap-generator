@@ -1,0 +1,23 @@
+{
+  "children": [
+    {
+      "repoHost": "gcr.io",
+      "children": [],
+      "name": "google-containers/exechealthz:1.2",
+      "type": "image",
+      "version": "1.2"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "markbnj/unbound-docker",
+      "type": "image",
+      "version": "0.1.0"
+    }
+  ],
+  "name": "unbound:1.1.4",
+  "description": "DEPRECATED - Unbound is a fast caching DNS resolver",
+  "type": "chart",
+  "shortName": "unbound",
+  "version": "1.1.4"
+}

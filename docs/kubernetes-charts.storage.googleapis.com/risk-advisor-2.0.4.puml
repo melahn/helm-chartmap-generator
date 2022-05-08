@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for risk-advisor:2.0.4
 
 'There is one referenced Helm Chart
-artifact "risk-advisor:2.0.4\n====\n\trisk-advisor\n====\n\t2.0.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: pposkrobko, Prytu, GraczykowskiMichal, jackmax\n====\n\tKeywords: " as risk_advisor_2_0_4 #Darkorange
+artifact "risk-advisor:2.0.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tpposkrobko\n\t\tPrytu\n\t\tGraczykowskiMichal\n\t\tjackmax\n====\n\tKeywords: " as risk_advisor_2_0_4 #Darkorange
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tpposkrobko/risk-advisor\n====\n\tv1.0.0" as pposkrobko_risk_advisor_v1_0_0 #LawnGreen
+usecase "Image\n====\nDocker Hub\n====\npposkrobko/risk-advisor\n====\nv1.0.0" as pposkrobko_risk_advisor_v1_0_0 #LawnGreen
 
 'Chart Dependencies
 risk_advisor_2_0_4--[#orange]-|>pposkrobko_risk_advisor_v1_0_0
 
-center footer Generated on 2020/04/26 13:59:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:33:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

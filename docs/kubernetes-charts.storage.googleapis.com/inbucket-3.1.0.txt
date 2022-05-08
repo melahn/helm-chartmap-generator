@@ -12,7 +12,7 @@ Chart: inbucket:3.1.0
 	icon: Not specified
 	keywords: inbucket,mail,smtp,pop3,email,testing,disposable webmail
 	maintainers: cpanato:ctadeu@gmail.com,jhillyerd:github@hillyerd.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: inbucket
 	sources: https://github.com/jhillyerd/inbucket
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 inbucket:3.1.0 uses jhillyerd/inbucket:release-2.0.0
 
-Generated on 2020/04/26 13:48:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:06:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -12,7 +12,7 @@ Chart: percona:1.2.1
 	icon: https://www.percona.com/sites/all/themes/percona2015/logo.png
 	keywords: mysql,percona,database,sql
 	maintainers: CaptTofu:patg@patg.net
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: percona
 	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/percona
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 percona:1.2.1 uses percona:5.7.26
 
-Generated on 2020/04/26 13:55:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:25:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

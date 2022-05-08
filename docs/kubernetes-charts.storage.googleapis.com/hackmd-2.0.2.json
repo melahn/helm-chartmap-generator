@@ -1,0 +1,60 @@
+{
+  "maintainers": [{
+    "name": "yuanying",
+    "email": "yuanying@fraction.jp"
+  }],
+  "keywords": [
+    "hackmd",
+    "cms",
+    "markdown",
+    "http",
+    "web",
+    "application"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "hackmdio/hackmd",
+      "type": "image",
+      "version": "1.3.0-alpine"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/postgresql:9.6",
+        "type": "image",
+        "version": "9.6"
+      }],
+      "name": "postgresql:8.1.4",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "8.1.4"
+    }
+  ],
+  "name": "hackmd:2.0.2",
+  "description": "Realtime collaborative markdown notes on all platforms.",
+  "type": "chart",
+  "shortName": "hackmd",
+  "version": "2.0.2"
+}

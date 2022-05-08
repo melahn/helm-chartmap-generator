@@ -1,0 +1,27 @@
+{
+  "maintainers": [{
+    "name": "danielfrg",
+    "email": "df.rodriguez143@gmail.com"
+  }],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "daskdev/dask",
+      "type": "image",
+      "version": "latest"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "jupyter/base-notebook",
+      "type": "image",
+      "version": "11be019e4079"
+    }
+  ],
+  "name": "dask-distributed:2.0.0",
+  "description": "Distributed computation in Python",
+  "type": "chart",
+  "shortName": "dask-distributed",
+  "version": "2.0.0"
+}

@@ -1,4 +1,8 @@
 {
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
   "keywords": [
     "mariadb",
     "mysql",
@@ -9,12 +13,12 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/mariadb",
+    "name": "bitnami/mariadb:10.3.22-debian-10-r44",
     "type": "image",
-    "version": "10.3.22-debian-10-r27"
+    "version": "10.3.22-debian-10-r44"
   }],
   "name": "mariadb:7.3.14",
-  "description": "DEPRECATED Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
+  "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
   "type": "chart",
   "shortName": "mariadb",
   "version": "7.3.14"

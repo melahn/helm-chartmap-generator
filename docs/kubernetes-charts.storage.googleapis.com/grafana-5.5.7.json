@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "grafana/grafana",
+    "type": "image",
+    "version": "7.1.1"
+  }],
+  "name": "grafana:5.5.7",
+  "description": "DEPRECATED - The leading tool for querying and visualizing time series and metrics.",
+  "type": "chart",
+  "shortName": "grafana",
+  "version": "5.5.7"
+}

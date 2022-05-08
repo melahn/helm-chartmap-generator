@@ -1,4 +1,8 @@
 {
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
   "keywords": [
     "joomla",
     "cms",
@@ -10,9 +14,9 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/joomla",
+      "name": "bitnami/joomla:3.9.16-debian-10-r2",
       "type": "image",
-      "version": "3.9.15-debian-10-r10"
+      "version": "3.9.16-debian-10-r2"
     },
     {
       "maintainers": [{
@@ -30,27 +34,27 @@
         {
           "repoHost": "docker.io",
           "children": [],
-          "name": "bitnami/mariadb",
+          "name": "bitnami/mariadb:10.1.44-debian-10-r39",
           "type": "image",
-          "version": "10.1.44-debian-10-r25"
+          "version": "10.1.44-debian-10-r39"
         },
         {
           "repoHost": "docker.io",
           "children": [],
-          "name": "bitnami/mariadb",
+          "name": "bitnami/mariadb:10.3.22-debian-10-r44",
           "type": "image",
-          "version": "10.3.22-debian-10-r27"
+          "version": "10.3.22-debian-10-r44"
         }
       ],
-      "name": "mariadb:7.3.11",
+      "name": "mariadb:7.3.14",
       "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
       "type": "chart",
       "shortName": "mariadb",
-      "version": "7.3.11"
+      "version": "7.3.14"
     }
   ],
   "name": "joomla:7.1.11",
-  "description": "DEPRECATED PHP content management system (CMS) for publishing web content",
+  "description": "PHP content management system (CMS) for publishing web content",
   "type": "chart",
   "shortName": "joomla",
   "version": "7.1.11"

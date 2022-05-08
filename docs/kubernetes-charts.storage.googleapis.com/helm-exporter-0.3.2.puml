@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for helm-exporter:0.3.2
 
 'There is one referenced Helm Chart
-artifact "helm-exporter:0.3.2\n====\n\thelm-exporter\n====\n\t0.3.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: sstarcher\n====\n\tKeywords: " as helm_exporter_0_3_2 #LawnGreen
+artifact "helm-exporter:0.3.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: sstarcher\n====\n\tKeywords: " as helm_exporter_0_3_2 #LawnGreen
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tsstarcher/helm-exporter\n====\n\t0.4.2" as sstarcher_helm_exporter_0_4_2 #LightPink
+usecase "Image\n====\nDocker Hub\n====\nsstarcher/helm-exporter\n====\n0.4.2" as sstarcher_helm_exporter_0_4_2 #LightPink
 
 'Chart Dependencies
 helm_exporter_0_3_2--[#orange]-|>sstarcher_helm_exporter_0_4_2
 
-center footer Generated on 2020/04/26 13:47:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:04:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

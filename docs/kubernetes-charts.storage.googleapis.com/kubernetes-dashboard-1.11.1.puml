@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kubernetes-dashboard:1.11.1
+
+'There is one referenced Helm Chart
+artifact "kubernetes-dashboard:1.11.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tkubernetes\n\t\tdashboard" as kubernetes_dashboard_1_11_1 #Gainsboro
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/kubernetes-dashboard-amd64\n====\nv1.10.1" as k8s_gcr_io_kubernetes_dashboard_amd64_v1_10_1 #LightSteelBlue
+
+'Chart Dependencies
+kubernetes_dashboard_1_11_1--[#orange]-|>k8s_gcr_io_kubernetes_dashboard_amd64_v1_10_1
+
+center footer Generated on 2022/05/07 20:13:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

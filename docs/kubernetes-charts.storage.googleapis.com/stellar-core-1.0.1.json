@@ -1,0 +1,52 @@
+{
+  "maintainers": [
+    {
+      "name": "andrenarchy",
+      "email": "andre.extern@satoshipay.io"
+    },
+    {
+      "name": "rendhalver",
+      "email": "pete.brown@powerhrg.com"
+    }
+  ],
+  "keywords": [
+    "stellar",
+    "stellar-core",
+    "cryptocurrency",
+    "blockchain"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "satoshipay/stellar-core",
+      "type": "image",
+      "version": "10.0.0-2"
+    },
+    {
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6.2"
+      }],
+      "name": "postgresql:0.19.0",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.19.0"
+    }
+  ],
+  "name": "stellar-core:1.0.1",
+  "description": "Backbone node of the Stellar cryptocurrency network.",
+  "type": "chart",
+  "shortName": "stellar-core",
+  "version": "1.0.1"
+}

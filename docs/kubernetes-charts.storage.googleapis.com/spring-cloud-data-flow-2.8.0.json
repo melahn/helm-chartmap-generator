@@ -1,0 +1,95 @@
+{
+  "maintainers": [
+    {
+      "name": "trisberg",
+      "email": "trisberg@pivotal.io"
+    },
+    {
+      "name": "chrisjs",
+      "email": "cschaefer@vmware.com"
+    },
+    {
+      "name": "sabbyanandan",
+      "email": "sanandan@pivotal.io"
+    }
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "springcloud/spring-cloud-skipper-server",
+      "type": "image",
+      "version": "2.5.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "springcloud/spring-cloud-dataflow-server",
+      "type": "image",
+      "version": "2.6.0"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "rabbitmq",
+        "message queue",
+        "AMQP"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/rabbitmq:3.8.2-debian-10-r0",
+        "type": "image",
+        "version": "3.8.2-debian-10-r0"
+      }],
+      "name": "rabbitmq:6.16.6",
+      "description": "Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
+      "type": "chart",
+      "shortName": "rabbitmq",
+      "version": "6.16.6"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "olemarkus",
+          "email": "o.with@sportradar.com"
+        },
+        {
+          "name": "viglesiasce",
+          "email": "viglesias@google.com"
+        }
+      ],
+      "keywords": [
+        "mysql",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "mysql",
+        "type": "image",
+        "version": "5.7.28"
+      }],
+      "name": "mysql:1.6.2",
+      "description": "Fast, reliable, scalable, and easy to use open-source relational database system.",
+      "type": "chart",
+      "shortName": "mysql",
+      "version": "1.6.2"
+    }
+  ],
+  "name": "spring-cloud-data-flow:2.8.0",
+  "description": "Toolkit for building data processing pipelines.",
+  "type": "chart",
+  "shortName": "spring-cloud-data-flow",
+  "version": "2.8.0"
+}

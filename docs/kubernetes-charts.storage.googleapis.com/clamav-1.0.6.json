@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "zakkg3",
+    "email": "zakkg3@gmail.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "mailu/clamav",
+    "type": "image",
+    "version": "1.6"
+  }],
+  "name": "clamav:1.0.6",
+  "description": "An Open-Source antivirus engine for detecting trojans, viruses, malware & other malicious threats.",
+  "type": "chart",
+  "shortName": "clamav",
+  "version": "1.0.6"
+}

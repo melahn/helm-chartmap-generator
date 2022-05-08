@@ -11,7 +11,7 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/phpmyadmin",
+    "name": "bitnami/phpmyadmin:5.0.1-debian-10-r30",
     "type": "image",
     "version": "5.0.1-debian-10-r30"
   }],

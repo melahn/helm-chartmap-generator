@@ -9,15 +9,17 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for hl-composer:1.0.12
 
 'There is one referenced Helm Chart
-artifact "hl-composer:1.0.12\n====\n\thl-composer\n====\n\t1.0.12\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: alexvicegrab, inzamam-iqbal, dbandin\n====\n\tKeywords: blockchain\nhyperledger\nfabric\ncomposer" as hl_composer_1_0_12 #Aquamarine
+artifact "hl-composer:1.0.12\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\talexvicegrab\n\t\tinzamam-iqbal\n\t\tdbandin\n====\n\tKeywords: \n\t\tblockchain\n\t\thyperledger\n\t\tfabric\n\t\tcomposer" as hl_composer_1_0_12 #Aquamarine
 
-'There are 2 referenced Docker Images
-usecase "Image\n====\n\tDocker Hub\n====\n\thyperledger/composer-cli\n====\n\t0.20.0" as hyperledger_composer_cli_0_20_0 #Fuchsia
-usecase "Image\n====\n\tDocker Hub\n====\n\thyperledger/composer-playground\n====\n\t0.20.0" as hyperledger_composer_playground_0_20_0 #GoldenRod
+'There are 3 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nhyperledger/composer-cli\n====\n0.20.0" as hyperledger_composer_cli_0_20_0 #Fuchsia
+usecase "Image\n====\nDocker Hub\n====\nhyperledger/composer-playground\n====\n0.20.0" as hyperledger_composer_playground_0_20_0 #GoldenRod
+usecase "Image\n====\nDocker Hub\n====\nhyperledger/composer-rest-server\n====\n0.20.0" as hyperledger_composer_rest_server_0_20_0 #AliceBlue
 
 'Chart Dependencies
 hl_composer_1_0_12--[#orange]-|>hyperledger_composer_cli_0_20_0
+hl_composer_1_0_12--[#orange]-|>hyperledger_composer_rest_server_0_20_0
 hl_composer_1_0_12--[#orange]-|>hyperledger_composer_playground_0_20_0
 
-center footer Generated on 2020/04/26 13:47:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:04:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

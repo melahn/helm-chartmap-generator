@@ -1,0 +1,18 @@
+{
+  "maintainers": [
+    {
+      "name": "rendhalver",
+      "email": "pete.brown@powerhrg.com"
+    },
+    {
+      "name": "sstarcher",
+      "email": "shane.starcher@gmail.com"
+    }
+  ],
+  "children": [],
+  "name": "filebeat:4.0.1",
+  "description": "A Helm chart to collect Kubernetes logs with filebeat",
+  "type": "chart",
+  "shortName": "filebeat",
+  "version": "4.0.1"
+}

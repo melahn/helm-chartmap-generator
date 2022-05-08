@@ -12,7 +12,7 @@ Chart: redis:10.5.6
 	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
 	keywords: redis,keyvalue,database
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: redis
 	sources: https://github.com/bitnami/bitnami-docker-redis
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 redis:10.5.6 uses docker.io/bitnami/redis:5.0.7-debian-10-r32
 
-Generated on 2020/04/26 13:58:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:32:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

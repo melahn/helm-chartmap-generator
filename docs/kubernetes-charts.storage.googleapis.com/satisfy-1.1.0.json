@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "anapsix",
+    "email": "anapsix@random.io"
+  }],
+  "children": [{
+    "repoHost": "docker.io",
+    "children": [],
+    "name": "anapsix/satisfy@sha256:fae78e3809e9d08990c7d7d6699a734f7e584c28ce49381a1a699e1694481ab8",
+    "type": "image",
+    "version": "fae78e3809e9d08990c7d7d6699a734f7e584c28ce49381a1a699e1694481ab8"
+  }],
+  "name": "satisfy:1.1.0",
+  "description": "Composer repo hosting with Satisfy",
+  "type": "chart",
+  "shortName": "satisfy",
+  "version": "1.1.0"
+}

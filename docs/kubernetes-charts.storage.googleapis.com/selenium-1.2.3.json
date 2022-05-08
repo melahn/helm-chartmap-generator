@@ -1,0 +1,15 @@
+{
+  "keywords": ["qa"],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "selenium/hub",
+    "type": "image",
+    "version": "3.141.59"
+  }],
+  "name": "selenium:1.2.3",
+  "description": "DEPRECATED - Chart for selenium grid",
+  "type": "chart",
+  "shortName": "selenium",
+  "version": "1.2.3"
+}

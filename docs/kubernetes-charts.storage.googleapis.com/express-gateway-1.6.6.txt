@@ -1,0 +1,47 @@
+Chart Map for express-gateway:1.6.6
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: redis:10.5.7
+	apiVersion: v1
+	appVersion: 5.0.8
+	created: 2020-04-07T10:40:02.202453352Z
+	dependencies: None
+	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: 34f81e25cb8fecf2f8c05bf65099f70ee598140f0168cb426fc1013b2e5d9d86
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://charts.bitnami.com/bitnami/redis-10.5.7.tgz
+	version: 10.5.7
+Chart: express-gateway:1.6.6
+	apiVersion: v1
+	appVersion: 1.16.9
+	created: Not specified
+	dependencies: redis:10.5.7
+	description: DEPRECATED Express Gateway is an API Gateway that sits at the heart of any microservices architecture
+	digest: Not specified
+	icon: https://cdn.rawgit.com/ExpressGateway/express-gateway/1757a863/logo/mark-only/ExpressGateway_logomark.png
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: express-gateway
+	sources: https://github.com/expressgateway/express-gateway
+	urls: Not specified
+	version: 1.6.6
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/redis:5.0.7-debian-10-r32
+Image: expressgateway/express-gateway:v1.16.9
+
+Chart Dependencies
+------------------
+express-gateway:1.6.6 depends on redis:10.5.7
+redis:10.5.7 uses docker.io/bitnami/redis:5.0.7-debian-10-r32
+express-gateway:1.6.6 uses expressgateway/express-gateway:v1.16.9
+
+Generated on 2022/05/07 19:58:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -12,7 +12,7 @@ Chart: auditbeat:1.1.0
 	icon: https://www.elastic.co/assets/blt27d1fd26b0862613/icon-auditbeat-bb.svg
 	keywords: Not specified
 	maintainers: cpanato:ctadeu@gmail.com,mumoshu:ykuoka@gmail.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: auditbeat
 	sources: https://www.elastic.co/guide/en/beats/auditbeat/current/index.html
 	urls: Not specified
@@ -24,4 +24,4 @@ There are 0 referenced Docker Images
 Chart Dependencies
 ------------------
 
-Generated on 2020/04/26 13:41:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 19:47:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

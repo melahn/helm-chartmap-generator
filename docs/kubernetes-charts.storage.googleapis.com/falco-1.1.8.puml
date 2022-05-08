@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for falco:1.1.8
+
+'There is one referenced Helm Chart
+artifact "falco:1.1.8\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as falco_1_1_8 #LightSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nnginx\n====\nstable" as nginx_stable #Aqua
+
+'Chart Dependencies
+falco_1_1_8--[#orange]-|>nginx_stable
+
+center footer Generated on 2022/05/07 19:58:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

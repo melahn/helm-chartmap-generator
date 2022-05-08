@@ -1,0 +1,31 @@
+Chart Map for couchbase-operator:1.0.3
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: couchbase-operator:1.0.3
+	apiVersion: v1
+	appVersion: 1.2.2
+	created: Not specified
+	dependencies: None
+	description: A Helm chart to deploy the Couchbase Autonomous Operator for easily deploying, managing, and maintaining Couchbase Clusters.
+	digest: Not specified
+	icon: https://couchbase-partners.github.io/helm-charts/assets/img/CB_Logomark_220.png
+	keywords: couchbase,operator,database,nosql,cluster,replication
+	maintainers: tahmmee:tahmmee@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: couchbase-operator
+	sources: https://github.com/couchbase/docker/tree/master/enterprise/couchbase-operator/1.0.0
+	urls: Not specified
+	version: 1.0.3
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: couchbase/admission-controller:1.2.2
+Image: couchbase/operator:1.2.2
+
+Chart Dependencies
+------------------
+couchbase-operator:1.0.3 uses couchbase/operator:1.2.2
+couchbase-operator:1.0.3 uses couchbase/admission-controller:1.2.2
+
+Generated on 2022/05/07 19:53:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

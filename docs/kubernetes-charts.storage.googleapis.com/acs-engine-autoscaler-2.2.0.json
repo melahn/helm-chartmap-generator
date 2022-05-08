@@ -1,0 +1,18 @@
+{
+  "maintainers": [
+    {
+      "name": "ritazh",
+      "email": "ritazh@microsoft.com"
+    },
+    {
+      "name": "wbuchwalter",
+      "email": "wibuch@microsoft.com"
+    }
+  ],
+  "children": [],
+  "name": "acs-engine-autoscaler:2.2.0",
+  "description": "Scales worker nodes within agent pools",
+  "type": "chart",
+  "shortName": "acs-engine-autoscaler",
+  "version": "2.2.0"
+}

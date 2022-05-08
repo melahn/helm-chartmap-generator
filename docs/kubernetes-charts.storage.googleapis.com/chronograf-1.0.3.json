@@ -1,0 +1,23 @@
+{
+  "maintainers": [{
+    "name": "jackzampolin",
+    "email": "jack@influxdb.com"
+  }],
+  "keywords": [
+    "chronograf",
+    "visualizaion",
+    "timeseries"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "docker.io/chronograf",
+    "type": "image",
+    "version": "1.7.11-alpine"
+  }],
+  "name": "chronograf:1.0.3",
+  "description": "Open-source web application written in Go and React.js that provides the tools to visualize your monitoring data and easily create alerting and automation rules.",
+  "type": "chart",
+  "shortName": "chronograf",
+  "version": "1.0.3"
+}

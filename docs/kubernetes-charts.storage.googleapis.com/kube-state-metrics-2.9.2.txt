@@ -1,0 +1,29 @@
+Chart Map for kube-state-metrics:2.9.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: kube-state-metrics:2.9.2
+	apiVersion: v1
+	appVersion: 1.9.7
+	created: Not specified
+	dependencies: None
+	description: Install kube-state-metrics to generate and expose cluster-level metrics
+	digest: Not specified
+	icon: Not specified
+	keywords: metric,monitoring,prometheus,kubernetes
+	maintainers: fiunchinho:jose@armesto.net,tariq1890:tariq.ibrahim@mulesoft.com,mrueg:manuel@rueg.eu
+	repo url: https://charts.helm.sh/stable
+	name: kube-state-metrics
+	sources: https://github.com/kubernetes/kube-state-metrics/
+	urls: Not specified
+	version: 2.9.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: quay.io/coreos/kube-state-metrics:v1.9.7
+
+Chart Dependencies
+------------------
+kube-state-metrics:2.9.2 uses quay.io/coreos/kube-state-metrics:v1.9.7
+
+Generated on 2022/05/07 20:12:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

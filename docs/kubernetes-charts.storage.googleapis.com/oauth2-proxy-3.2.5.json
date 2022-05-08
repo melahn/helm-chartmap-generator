@@ -1,0 +1,22 @@
+{
+  "keywords": [
+    "kubernetes",
+    "oauth",
+    "oauth2",
+    "authentication",
+    "google",
+    "github"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "pusher/oauth2_proxy:v5.1.0",
+    "type": "image",
+    "version": "v5.1.0"
+  }],
+  "name": "oauth2-proxy:3.2.5",
+  "description": "DEPRECATED - A reverse proxy that provides authentication with Google, Github or other providers",
+  "type": "chart",
+  "shortName": "oauth2-proxy",
+  "version": "3.2.5"
+}

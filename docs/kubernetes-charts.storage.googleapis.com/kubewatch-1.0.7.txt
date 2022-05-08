@@ -12,7 +12,7 @@ Chart: kubewatch:1.0.7
 	icon: https://bitnami.com/assets/stacks/kubewatch/img/kubewatch-stack-220x234.png
 	keywords: kubernetes,slack,hipchat,mattermost,flock
 	maintainers: compleatang:casey@monax.io,Bitnami:containers@bitnami.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: kubewatch
 	sources: https://github.com/bitnami/bitnami-docker-kubewatch
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kubewatch:1.0.7 uses docker.io/bitnami/kubewatch:0.0.4-debian-10-r29
 
-Generated on 2020/03/16 17:22:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:13:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

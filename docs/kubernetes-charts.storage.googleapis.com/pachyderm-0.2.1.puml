@@ -9,13 +9,15 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for pachyderm:0.2.1
 
 'There is one referenced Helm Chart
-artifact "pachyderm:0.2.1\n====\n\tpachyderm\n====\n\t0.2.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: jonandernovella, dwhitena, jdoliner\n====\n\tKeywords: pachyderm\nworkflows\nreproducibility\ndistributed\nprocessing" as pachyderm_0_2_1 #CadetBlue
+artifact "pachyderm:0.2.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tjonandernovella\n\t\tdwhitena\n\t\tjdoliner\n====\n\tKeywords: \n\t\tpachyderm\n\t\tworkflows\n\t\treproducibility\n\t\tdistributed\n\t\tprocessing" as pachyderm_0_2_1 #CadetBlue
 
-'There is one referenced Docker Image
-usecase "Image\n====\n\tquay.io\n====\n\tcoreos/etcd:v3.3.5\n====\n\tv3.3.5" as quay_io_coreos_etcd_v3_3_5 #Cornsilk
+'There are 2 referenced Docker Images
+usecase "Image\n====\nquay.io\n====\ncoreos/etcd:v3.3.5\n====\nv3.3.5" as quay_io_coreos_etcd_v3_3_5 #Cornsilk
+usecase "Image\n====\nDocker Hub\n====\npachyderm/pachd\n====\n1.8.6" as pachyderm_pachd_1_8_6 #Ivory
 
 'Chart Dependencies
+pachyderm_0_2_1--[#orange]-|>pachyderm_pachd_1_8_6
 pachyderm_0_2_1--[#orange]-|>quay_io_coreos_etcd_v3_3_5
 
-center footer Generated on 2020/04/26 13:55:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:25:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

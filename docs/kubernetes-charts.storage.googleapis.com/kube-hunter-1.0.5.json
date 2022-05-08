@@ -1,0 +1,13 @@
+{
+  "keywords": [
+    "kubernetes",
+    "kube-hunter",
+    "security"
+  ],
+  "children": [],
+  "name": "kube-hunter:1.0.5",
+  "description": "DEPRECATED - A Helm chart for Kube-hunter",
+  "type": "chart",
+  "shortName": "kube-hunter",
+  "version": "1.0.5"
+}

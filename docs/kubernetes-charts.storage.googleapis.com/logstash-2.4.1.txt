@@ -1,0 +1,29 @@
+Chart Map for logstash:2.4.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: logstash:2.4.1
+	apiVersion: v1
+	appVersion: 7.1.1
+	created: Not specified
+	dependencies: None
+	description: Logstash is an open source, server-side data processing pipeline
+	digest: Not specified
+	icon: https://www.elastic.co/assets/blt86e4472872eed314/logo-elastic-logstash-lt.svg
+	keywords: Not specified
+	maintainers: rendhalver:pete.brown@powerhrg.com,jar361:jrodgers@powerhrg.com,christian-roggia:christian.roggia@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: logstash
+	sources: https://www.docker.elastic.co,https://www.elastic.co/guide/en/logstash/current/index.html
+	urls: Not specified
+	version: 2.4.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.elastic.co/logstash/logstash-oss:7.1.1
+
+Chart Dependencies
+------------------
+logstash:2.4.1 uses docker.elastic.co/logstash/logstash-oss:7.1.1
+
+Generated on 2022/05/07 20:14:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "kubernetes",
+    "dashboard",
+    "operations"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "hjacobs/kube-ops-view",
+    "type": "image",
+    "version": "20.4.0"
+  }],
+  "name": "kube-ops-view:1.2.4",
+  "description": "DEPRECATED - Kubernetes Operational View - read-only system dashboard for multiple K8s clusters",
+  "type": "chart",
+  "shortName": "kube-ops-view",
+  "version": "1.2.4"
+}

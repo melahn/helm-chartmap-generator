@@ -19,7 +19,7 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/kubewatch",
+    "name": "bitnami/kubewatch:0.0.4-debian-10-r29",
     "type": "image",
     "version": "0.0.4-debian-10-r29"
   }],

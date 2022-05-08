@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for ignite:1.2.2
+
+'There is one referenced Helm Chart
+artifact "ignite:1.2.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tjava\n\t\tdatagrid\n\t\tcaching\n\t\tjvm\n\t\tsql\n\t\tkey-value\n\t\tnosql\n\t\tdistributed" as ignite_1_2_2 #GoldenRod
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\napacheignite/ignite\n====\n2.7.6" as apacheignite_ignite_2_7_6 #LightSalmon
+
+'Chart Dependencies
+ignite_1_2_2--[#orange]-|>apacheignite_ignite_2_7_6
+
+center footer Generated on 2022/05/07 20:06:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

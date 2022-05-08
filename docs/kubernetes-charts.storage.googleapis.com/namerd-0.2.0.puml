@@ -9,13 +9,15 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for namerd:0.2.0
 
 'There is one referenced Helm Chart
-artifact "namerd:0.2.0\n====\n\tnamerd\n====\n\t0.2.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Sean Knox\n====\n\tKeywords: " as namerd_0_2_0 #Gainsboro
+artifact "namerd:0.2.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Sean Knox\n====\n\tKeywords: " as namerd_0_2_0 #Gainsboro
 
-'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tbuoyantio/namerd\n====\n\t0.9.1" as buoyantio_namerd_0_9_1 #AliceBlue
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nbuoyantio/kubectl\n====\nv1.4.0" as buoyantio_kubectl_v1_4_0 #DarkTurquoise
+usecase "Image\n====\nDocker Hub\n====\nbuoyantio/namerd\n====\n0.9.1" as buoyantio_namerd_0_9_1 #AliceBlue
 
 'Chart Dependencies
 namerd_0_2_0--[#orange]-|>buoyantio_namerd_0_9_1
+namerd_0_2_0--[#orange]-|>buoyantio_kubectl_v1_4_0
 
-center footer Generated on 2020/04/26 13:53:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:20:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

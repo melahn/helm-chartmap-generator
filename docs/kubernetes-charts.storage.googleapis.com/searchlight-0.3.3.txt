@@ -12,18 +12,22 @@ Chart: searchlight:0.3.3
 	icon: https://cdn.appscode.com/images/icon/searchlight.png
 	keywords: Not specified
 	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: searchlight
 	sources: https://github.com/appscode/searchlight
 	urls: Not specified
 	version: 0.3.3
 
-There is one referenced Docker Image
+There are 3 referenced Docker Images
 ------------------------------------
+Image: appscode/postgres:9.5-alpine
 Image: appscode/searchlight:5.0.0
+Image: appscode/icinga:5.0.0-k8s
 
 Chart Dependencies
 ------------------
+searchlight:0.3.3 uses appscode/postgres:9.5-alpine
+searchlight:0.3.3 uses appscode/icinga:5.0.0-k8s
 searchlight:0.3.3 uses appscode/searchlight:5.0.0
 
-Generated on 2020/04/26 13:59:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:34:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

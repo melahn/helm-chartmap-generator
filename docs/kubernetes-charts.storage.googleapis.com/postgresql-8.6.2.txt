@@ -12,7 +12,7 @@ Chart: postgresql:8.6.2
 	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
 	keywords: postgresql,postgres,database,sql,replication,cluster
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: postgresql
 	sources: https://github.com/bitnami/bitnami-docker-postgresql
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 postgresql:8.6.2 uses docker.io/bitnami/postgresql:11.7.0-debian-10-r9
 
-Generated on 2020/03/16 17:26:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:27:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

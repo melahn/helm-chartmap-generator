@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for memcached:3.2.5
+
+'There is one referenced Helm Chart
+artifact "memcached:3.2.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tmemcached\n\t\tcache" as memcached_3_2_5 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nmemcached\n====\n1.5.20" as memcached_1_5_20 #DarkSeaGreen
+
+'Chart Dependencies
+memcached_3_2_5--[#orange]-|>memcached_1_5_20
+
+center footer Generated on 2022/05/07 20:16:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

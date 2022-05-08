@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "negz/kuberos",
+    "type": "image",
+    "version": "ede4085"
+  }],
+  "name": "kuberos:0.2.3",
+  "description": "DEPRECATED - An OIDC authentication helper for Kubernetes",
+  "type": "chart",
+  "shortName": "kuberos",
+  "version": "0.2.3"
+}

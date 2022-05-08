@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "memcached",
+    "cache"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "memcached",
+    "type": "image",
+    "version": "1.5.20"
+  }],
+  "name": "memcached:3.2.5",
+  "description": "DEPRECATED - Free & open source, high-performance, distributed memory object caching system.",
+  "type": "chart",
+  "shortName": "memcached",
+  "version": "3.2.5"
+}

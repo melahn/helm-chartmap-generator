@@ -1,0 +1,18 @@
+{
+  "maintainers": [
+    {
+      "name": "domcar",
+      "email": "d-caruso@hotmail.it"
+    },
+    {
+      "name": "unguiculus",
+      "email": "unguiculus@gmail.com"
+    }
+  ],
+  "children": [],
+  "name": "ark:4.2.0",
+  "description": "A Helm chart for ark",
+  "type": "chart",
+  "shortName": "ark",
+  "version": "4.2.0"
+}

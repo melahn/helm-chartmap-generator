@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for coredns:1.13.7
+
+'There is one referenced Helm Chart
+artifact "coredns:1.13.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tAcaleph\n\t\tshashidharatd\n\t\tandor44\n\t\tmrueg\n====\n\tKeywords: \n\t\tcoredns\n\t\tdns\n\t\tkubedns" as coredns_1_13_7 #DodgerBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\ncoredns/coredns\n====\n1.7.1" as coredns_coredns_1_7_1 #LightPink
+
+'Chart Dependencies
+coredns_1_13_7--[#orange]-|>coredns_coredns_1_7_1
+
+center footer Generated on 2022/05/07 19:52:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

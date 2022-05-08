@@ -12,7 +12,7 @@ Chart: couchbase-operator:1.0.2
 	icon: https://couchbase-partners.github.io/helm-charts/assets/img/CB_Logomark_220.png
 	keywords: couchbase,operator,database,nosql,cluster,replication
 	maintainers: tahmmee:tahmmee@gmail.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: couchbase-operator
 	sources: https://github.com/couchbase/docker/tree/master/enterprise/couchbase-operator/1.0.0
 	urls: Not specified
@@ -28,4 +28,4 @@ Chart Dependencies
 couchbase-operator:1.0.2 uses couchbase/operator:1.2.2
 couchbase-operator:1.0.2 uses couchbase/admission-controller:1.2.2
 
-Generated on 2020/04/26 13:43:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 19:53:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

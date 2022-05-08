@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for metabase:0.13.1
+
+'There is one referenced Helm Chart
+artifact "metabase:0.13.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: pmint93\n====\n\tKeywords: " as metabase_0_13_1 #Chartreuse
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nmetabase/metabase\n====\nv0.36.3" as metabase_metabase_v0_36_3 #GhostWhite
+
+'Chart Dependencies
+metabase_0_13_1--[#orange]-|>metabase_metabase_v0_36_3
+
+center footer Generated on 2022/05/07 20:17:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kafka-manager:2.3.4
+
+'There is one referenced Helm Chart
+artifact "kafka-manager:2.3.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tgiacomoguiulfo\n\t\tssalaues\n====\n\tKeywords: \n\t\tkafka\n\t\tzookeeper\n\t\tkafka-manager" as kafka_manager_2_3_4 #Ivory
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nzenko/kafka-manager\n====\n1.3.3.22" as zenko_kafka_manager_1_3_3_22 #LightCoral
+
+'Chart Dependencies
+kafka_manager_2_3_4--[#orange]-|>zenko_kafka_manager_1_3_3_22
+
+center footer Generated on 2022/05/07 20:09:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

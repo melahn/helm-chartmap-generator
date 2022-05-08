@@ -1,0 +1,74 @@
+{
+  "maintainers": [
+    {
+      "name": "kmova",
+      "email": "kiran.mova@openebs.io"
+    },
+    {
+      "name": "prateekpandey14",
+      "email": "prateek.pandey@openebs.io"
+    }
+  ],
+  "keywords": [
+    "cloud-native-storage",
+    "block-storage",
+    "iSCSI",
+    "storage"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "openebs/openebs-k8s-provisioner",
+      "type": "image",
+      "version": "1.11.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "openebs/snapshot-controller",
+      "type": "image",
+      "version": "1.11.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "openebs/snapshot-provisioner",
+      "type": "image",
+      "version": "1.11.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "openebs/node-disk-operator-amd64",
+      "type": "image",
+      "version": "0.6.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "openebs/provisioner-localpv",
+      "type": "image",
+      "version": "1.11.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "openebs/m-apiserver",
+      "type": "image",
+      "version": "1.11.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "openebs/admission-server",
+      "type": "image",
+      "version": "1.11.0"
+    }
+  ],
+  "name": "openebs:1.11.0",
+  "description": "Containerized Storage for Containers",
+  "type": "chart",
+  "shortName": "openebs",
+  "version": "1.11.0"
+}

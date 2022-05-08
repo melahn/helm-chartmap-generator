@@ -1,0 +1,12 @@
+{
+  "maintainers": [{
+    "name": "itamaro",
+    "email": "itamarost@gmail.com"
+  }],
+  "children": [],
+  "name": "gcp-night-king:1.0.3",
+  "description": "A Helm chart for GCP Night King",
+  "type": "chart",
+  "shortName": "gcp-night-king",
+  "version": "1.0.3"
+}

@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "centrifugo",
+    "websocket",
+    "golang"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "centrifugo/centrifugo",
+    "type": "image",
+    "version": "v2.4.0"
+  }],
+  "name": "centrifugo:3.2.2",
+  "description": "DEPRECATED Centrifugo is a real-time messaging server.",
+  "type": "chart",
+  "shortName": "centrifugo",
+  "version": "3.2.2"
+}

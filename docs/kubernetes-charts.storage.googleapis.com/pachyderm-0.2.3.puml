@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for pachyderm:0.2.3
+
+'There is one referenced Helm Chart
+artifact "pachyderm:0.2.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tpachyderm\n\t\tworkflows\n\t\treproducibility\n\t\tdistributed\n\t\tprocessing" as pachyderm_0_2_3 #CadetBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\nquay.io\n====\ncoreos/etcd:v3.3.5\n====\nv3.3.5" as quay_io_coreos_etcd_v3_3_5 #Cornsilk
+usecase "Image\n====\nDocker Hub\n====\npachyderm/pachd\n====\n1.8.6" as pachyderm_pachd_1_8_6 #Ivory
+
+'Chart Dependencies
+pachyderm_0_2_3--[#orange]-|>pachyderm_pachd_1_8_6
+pachyderm_0_2_3--[#orange]-|>quay_io_coreos_etcd_v3_3_5
+
+center footer Generated on 2022/05/07 20:25:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

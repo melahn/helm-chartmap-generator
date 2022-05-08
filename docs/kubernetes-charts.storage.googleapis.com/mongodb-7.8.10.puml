@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for mongodb:7.8.10
 
 'There is one referenced Helm Chart
-artifact "mongodb:7.8.10\n====\n\tmongodb\n====\n\t7.8.10\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: mongodb\ndatabase\nnosql\ncluster\nreplicaset\nreplication" as mongodb_7_8_10 #GreenYellow
+artifact "mongodb:7.8.10\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmongodb\n\t\tdatabase\n\t\tnosql\n\t\tcluster\n\t\treplicaset\n\t\treplication" as mongodb_7_8_10 #GreenYellow
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mongodb:4.2.4-debian-10-r0\n====\n\t4.2.4-debian-10-r0" as docker_io_bitnami_mongodb_4_2_4_debian_10_r0 #Bisque
+usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:4.2.4-debian-10-r3\n====\n4.2.4-debian-10-r3" as docker_io_bitnami_mongodb_4_2_4_debian_10_r3 #Bisque
 
 'Chart Dependencies
-mongodb_7_8_10--[#orange]-|>docker_io_bitnami_mongodb_4_2_4_debian_10_r0
+mongodb_7_8_10--[#orange]-|>docker_io_bitnami_mongodb_4_2_4_debian_10_r3
 
-center footer Generated on 2020/04/26 13:53:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:18:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

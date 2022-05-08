@@ -1,0 +1,24 @@
+{
+  "maintainers": [
+    {
+      "name": "jpds",
+      "email": "jpds@protonmail.com"
+    },
+    {
+      "name": "rendhalver",
+      "email": "pete.brown@powerhrg.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "registry",
+    "type": "image",
+    "version": "2.7.1"
+  }],
+  "name": "docker-registry:1.9.4",
+  "description": "A Helm chart for Docker Registry",
+  "type": "chart",
+  "shortName": "docker-registry",
+  "version": "1.9.4"
+}

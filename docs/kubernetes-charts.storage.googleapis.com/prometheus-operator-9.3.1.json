@@ -1,0 +1,126 @@
+{
+  "maintainers": [
+    {"name": "vsliouniaev"},
+    {"name": "bismarck"},
+    {
+      "name": "gianrubio",
+      "email": "gianrubio@gmail.com"
+    }
+  ],
+  "keywords": [
+    "operator",
+    "prometheus"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "squareup/ghostunnel",
+      "type": "image",
+      "version": "v1.5.2"
+    },
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "coreos/prometheus-operator:v0.38.1",
+      "type": "image",
+      "version": "v0.38.1"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "fiunchinho",
+          "email": "jose@armesto.net"
+        },
+        {
+          "name": "tariq1890",
+          "email": "tariq.ibrahim@mulesoft.com"
+        },
+        {
+          "name": "mrueg",
+          "email": "manuel@rueg.eu"
+        }
+      ],
+      "keywords": [
+        "metric",
+        "monitoring",
+        "prometheus",
+        "kubernetes"
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "coreos/kube-state-metrics:v1.9.7",
+        "type": "image",
+        "version": "v1.9.7"
+      }],
+      "name": "kube-state-metrics:2.8.10",
+      "description": "Install kube-state-metrics to generate and expose cluster-level metrics",
+      "type": "chart",
+      "shortName": "kube-state-metrics",
+      "version": "2.8.10"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "zanhsieh",
+          "email": "zanhsieh@gmail.com"
+        },
+        {
+          "name": "rtluckie",
+          "email": "rluckie@cisco.com"
+        },
+        {
+          "name": "maorfr",
+          "email": "maor.friedman@redhat.com"
+        }
+      ],
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "kiwigrid/k8s-sidecar",
+          "type": "image",
+          "version": "0.1.151"
+        },
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "grafana/grafana",
+          "type": "image",
+          "version": "7.0.3"
+        }
+      ],
+      "name": "grafana:5.3.0",
+      "description": "The leading tool for querying and visualizing time series and metrics.",
+      "type": "chart",
+      "shortName": "grafana",
+      "version": "5.3.0"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "gianrubio",
+          "email": "gianrubio@gmail.com"
+        },
+        {"name": "vsliouniaev"}
+      ],
+      "keywords": [
+        "node-exporter",
+        "prometheus",
+        "exporter"
+      ],
+      "children": [],
+      "name": "prometheus-node-exporter:1.10.0",
+      "description": "A Helm chart for prometheus node-exporter",
+      "type": "chart",
+      "shortName": "prometheus-node-exporter",
+      "version": "1.10.0"
+    }
+  ],
+  "name": "prometheus-operator:9.3.1",
+  "description": "Provides easy monitoring definitions for Kubernetes services, and deployment and management of Prometheus instances.",
+  "type": "chart",
+  "shortName": "prometheus-operator",
+  "version": "9.3.1"
+}

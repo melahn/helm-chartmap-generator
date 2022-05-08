@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for cloudserver:1.0.6
+
+'There are 3 referenced Helm Charts
+artifact "redis-ha:4.4.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tssalaues\n\t\tdandydeveloper\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_ha_4_4_4 #IndianRed
+artifact "cloudserver:1.0.6\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tssalaues\n\t\ttmacro\n====\n\tKeywords: " as cloudserver_1_0_6 #Cornsilk
+artifact "mongodb-replicaset:3.17.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as mongodb_replicaset_3_17_2 #Fuchsia
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nredis\n====\n5.0.6-alpine" as redis_5_0_6_alpine #LightSeaGreen
+usecase "Image\n====\nDocker Hub\n====\nzenko/cloudserver\n====\n8.1.5" as zenko_cloudserver_8_1_5 #CornflowerBlue
+usecase "Image\n====\nDocker Hub\n====\nmongo\n====\n3.6" as mongo_3_6 #Aqua
+
+'Chart Dependencies
+cloudserver_1_0_6--[#green]-|>mongodb_replicaset_3_17_2
+cloudserver_1_0_6--[#green]-|>redis_ha_4_4_4
+redis_ha_4_4_4--[#orange]-|>redis_5_0_6_alpine
+cloudserver_1_0_6--[#orange]-|>zenko_cloudserver_8_1_5
+mongodb_replicaset_3_17_2--[#orange]-|>mongo_3_6
+
+center footer Generated on 2022/05/07 19:50:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -12,7 +12,7 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/drupal",
+      "name": "bitnami/drupal:8.8.3-debian-10-r1",
       "type": "image",
       "version": "8.8.3-debian-10-r1"
     },
@@ -31,7 +31,7 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mariadb",
+        "name": "bitnami/mariadb:10.3.22-debian-10-r27",
         "type": "image",
         "version": "10.3.22-debian-10-r27"
       }],

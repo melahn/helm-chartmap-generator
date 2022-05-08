@@ -1,0 +1,39 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for xray:0.4.3
+
+'There are 4 referenced Helm Charts
+artifact "mongodb:2.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmongodb\n\t\tdatabase\n\t\tnosql" as mongodb_2_0_5 #GreenYellow
+artifact "rabbitmq-ha:1.5.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: etiennetremel\n====\n\tKeywords: \n\t\trabbitmq\n\t\tmessage queue\n\t\tAMQP\n\t\tAMQPS\n\t\tMQTT\n\t\tSTOMP" as rabbitmq_ha_1_5_2 #Chocolate
+artifact "postgresql:0.8.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tswordbeta\n\t\tdatabus23\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql" as postgresql_0_8_7 #LightSteelBlue
+artifact "xray:0.4.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\txray\n\t\tjfrog" as xray_0_4_3 #AliceBlue
+
+'There are 7 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nrabbitmq\n====\n3.7-alpine" as rabbitmq_3_7_alpine #Aqua
+usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:3.6.3\n====\n3.6.3" as docker_io_bitnami_mongodb_3_6_3 #Bisque
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/xray-analysis:2.3.0\n====\n2.3.0" as docker_bintray_io_jfrog_xray_analysis_2_3_0 #LightBlue
+usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n9.6.2" as postgres_9_6_2 #Ivory
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/xray-indexer:2.3.0\n====\n2.3.0" as docker_bintray_io_jfrog_xray_indexer_2_3_0 #DodgerBlue
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/xray-persist:2.3.0\n====\n2.3.0" as docker_bintray_io_jfrog_xray_persist_2_3_0 #Ivory
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/xray-server:2.3.0\n====\n2.3.0" as docker_bintray_io_jfrog_xray_server_2_3_0 #Coral
+
+'Chart Dependencies
+xray_0_4_3--[#green]-|>mongodb_2_0_5
+xray_0_4_3--[#green]-|>rabbitmq_ha_1_5_2
+xray_0_4_3--[#green]-|>postgresql_0_8_7
+mongodb_2_0_5--[#orange]-|>docker_io_bitnami_mongodb_3_6_3
+rabbitmq_ha_1_5_2--[#orange]-|>rabbitmq_3_7_alpine
+postgresql_0_8_7--[#orange]-|>postgres_9_6_2
+xray_0_4_3--[#orange]-|>docker_bintray_io_jfrog_xray_indexer_2_3_0
+xray_0_4_3--[#orange]-|>docker_bintray_io_jfrog_xray_server_2_3_0
+xray_0_4_3--[#orange]-|>docker_bintray_io_jfrog_xray_analysis_2_3_0
+xray_0_4_3--[#orange]-|>docker_bintray_io_jfrog_xray_persist_2_3_0
+
+center footer Generated on 2022/05/07 20:44:42 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

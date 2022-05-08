@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "metrics",
+    "consul",
+    "monitoring"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prom/consul-exporter",
+    "type": "image",
+    "version": "v0.4.0"
+  }],
+  "name": "prometheus-consul-exporter:0.1.6",
+  "description": "DEPRECATED A Helm chart for the Prometheus Consul Exporter",
+  "type": "chart",
+  "shortName": "prometheus-consul-exporter",
+  "version": "0.1.6"
+}

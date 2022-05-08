@@ -12,18 +12,20 @@ Chart: stash:0.5.3
 	icon: https://cdn.appscode.com/images/icon/stash.png
 	keywords: Not specified
 	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: stash
 	sources: https://github.com/appscode/stash
 	urls: Not specified
 	version: 0.5.3
 
-There is one referenced Docker Image
+There are 2 referenced Docker Images
 ------------------------------------
 Image: appscode/stash:0.7.0-rc.1
+Image: prom/pushgateway:v0.4.0
 
 Chart Dependencies
 ------------------
+stash:0.5.3 uses prom/pushgateway:v0.4.0
 stash:0.5.3 uses appscode/stash:0.7.0-rc.1
 
-Generated on 2020/04/26 14:01:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:38:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for influxdb:4.3.1
 
 'There is one referenced Helm Chart
-artifact "influxdb:4.3.1\n====\n\tinfluxdb\n====\n\t4.3.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: jackzampolin, aisuko, naseemkullah\n====\n\tKeywords: influxdb\ndatabase\ntimeseries" as influxdb_4_3_1 #Azure
+artifact "influxdb:4.3.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tjackzampolin\n\t\taisuko\n\t\tnaseemkullah\n====\n\tKeywords: \n\t\tinfluxdb\n\t\tdatabase\n\t\ttimeseries" as influxdb_4_3_1 #Azure
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tinfluxdb\n====\n\t1.7.9-alpine" as influxdb_1_7_9_alpine #Azure
+usecase "Image\n====\nDocker Hub\n====\ninfluxdb\n====\n1.7.9-alpine" as influxdb_1_7_9_alpine #Azure
 
 'Chart Dependencies
 influxdb_4_3_1--[#orange]-|>influxdb_1_7_9_alpine
 
-center footer Generated on 2020/04/26 13:48:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:06:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,91 @@
+{
+  "maintainers": [
+    {
+      "name": "rothgar",
+      "email": "justin@linux.com"
+    },
+    {
+      "name": "okgolove",
+      "email": "okgolove@markeloff.net"
+    }
+  ],
+  "keywords": [
+    "debugging",
+    "logging"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "sentry",
+      "type": "image",
+      "version": "9.1.2"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/redis:5.0.5-debian-9-r141",
+        "type": "image",
+        "version": "5.0.5-debian-9-r141"
+      }],
+      "name": "redis:9.3.2",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "9.3.2"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/postgresql:11.5.0-debian-9-r60",
+        "type": "image",
+        "version": "11.5.0-debian-9-r60"
+      }],
+      "name": "postgresql:6.5.0",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "6.5.0"
+    }
+  ],
+  "name": "sentry:4.3.0",
+  "description": "Sentry is a cross-platform crash reporting and aggregation platform.",
+  "type": "chart",
+  "shortName": "sentry",
+  "version": "4.3.0"
+}

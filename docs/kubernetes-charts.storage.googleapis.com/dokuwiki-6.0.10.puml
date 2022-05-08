@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for dokuwiki:6.0.10
 
 'There is one referenced Helm Chart
-artifact "dokuwiki:6.0.10\n====\n\tdokuwiki\n====\n\t6.0.10\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: dokuwiki\nwiki\nhttp\nweb\napplication\nphp" as dokuwiki_6_0_10 #Gainsboro
+artifact "dokuwiki:6.0.10\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tdokuwiki\n\t\twiki\n\t\thttp\n\t\tweb\n\t\tapplication\n\t\tphp" as dokuwiki_6_0_10 #Gainsboro
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/dokuwiki:0.20180422.201901061035-debian-10-r28\n====\n\t0.20180422.201901061035-debian-10-r28" as docker_io_bitnami_dokuwiki_0_20180422_201901061035_debian_10_r28 #GoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/dokuwiki:0.20180422.201901061035-debian-10-r28\n====\n0.20180422.201901061035-debian-10-r28" as docker_io_bitnami_dokuwiki_0_20180422_201901061035_debian_10_r28 #GoldenRod
 
 'Chart Dependencies
 dokuwiki_6_0_10--[#orange]-|>docker_io_bitnami_dokuwiki_0_20180422_201901061035_debian_10_r28
 
-center footer Generated on 2020/04/26 13:44:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:55:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,35 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus-operator:9.3.1
+
+'There are 4 referenced Helm Charts
+artifact "grafana:5.3.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tzanhsieh\n\t\trtluckie\n\t\tmaorfr\n====\n\tKeywords: " as grafana_5_3_0 #Bisque
+artifact "kube-state-metrics:2.8.10\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tfiunchinho\n\t\ttariq1890\n\t\tmrueg\n====\n\tKeywords: \n\t\tmetric\n\t\tmonitoring\n\t\tprometheus\n\t\tkubernetes" as kube_state_metrics_2_8_10 #Gainsboro
+artifact "prometheus-operator:9.3.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tvsliouniaev\n\t\tbismarck\n\t\tgianrubio\n====\n\tKeywords: \n\t\toperator\n\t\tprometheus" as prometheus_operator_9_3_1 #LightSteelBlue
+artifact "prometheus-node-exporter:1.10.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tgianrubio\n\t\tvsliouniaev\n====\n\tKeywords: \n\t\tnode-exporter\n\t\tprometheus\n\t\texporter" as prometheus_node_exporter_1_10_0 #Coral
+
+'There are 5 referenced Docker Images
+usecase "Image\n====\nquay.io\n====\ncoreos/prometheus-operator:v0.38.1\n====\nv0.38.1" as quay_io_coreos_prometheus_operator_v0_38_1 #AntiqueWhite
+usecase "Image\n====\nDocker Hub\n====\nkiwigrid/k8s-sidecar\n====\n0.1.151" as kiwigrid_k8s_sidecar_0_1_151 #Cornsilk
+usecase "Image\n====\nquay.io\n====\ncoreos/kube-state-metrics:v1.9.7\n====\nv1.9.7" as quay_io_coreos_kube_state_metrics_v1_9_7 #LightGrey
+usecase "Image\n====\nDocker Hub\n====\ngrafana/grafana\n====\n7.0.3" as grafana_grafana_7_0_3 #LemonChiffon
+usecase "Image\n====\nDocker Hub\n====\nsquareup/ghostunnel\n====\nv1.5.2" as squareup_ghostunnel_v1_5_2 #LightPink
+
+'Chart Dependencies
+prometheus_operator_9_3_1--[#green]-|>grafana_5_3_0
+prometheus_operator_9_3_1--[#green]-|>kube_state_metrics_2_8_10
+prometheus_operator_9_3_1--[#green]-|>prometheus_node_exporter_1_10_0
+grafana_5_3_0--[#orange]-|>kiwigrid_k8s_sidecar_0_1_151
+grafana_5_3_0--[#orange]-|>grafana_grafana_7_0_3
+kube_state_metrics_2_8_10--[#orange]-|>quay_io_coreos_kube_state_metrics_v1_9_7
+prometheus_operator_9_3_1--[#orange]-|>squareup_ghostunnel_v1_5_2
+prometheus_operator_9_3_1--[#orange]-|>quay_io_coreos_prometheus_operator_v0_38_1
+
+center footer Generated on 2022/05/07 20:30:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

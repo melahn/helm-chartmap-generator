@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for nginx-ldapauth-proxy:0.1.5
+
+'There is one referenced Helm Chart
+artifact "nginx-ldapauth-proxy:0.1.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\trendhalver\n\t\tjar361\n====\n\tKeywords: " as nginx_ldapauth_proxy_0_1_5 #IndianRed
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\ndweomer/nginx-auth-ldap\n====\n1.13.5-on-alpine-3.5" as dweomer_nginx_auth_ldap_1_13_5_on_alpine_3_5 #LightGrey
+
+'Chart Dependencies
+nginx_ldapauth_proxy_0_1_5--[#orange]-|>dweomer_nginx_auth_ldap_1_13_5_on_alpine_3_5
+
+center footer Generated on 2022/05/07 20:21:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

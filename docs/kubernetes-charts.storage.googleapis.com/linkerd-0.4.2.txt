@@ -1,0 +1,27 @@
+Chart Map for linkerd:0.4.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: linkerd:0.4.2
+	apiVersion: v1
+	appVersion: 1.1.2
+	created: Not specified
+	dependencies: None
+	description: Service mesh for cloud native apps
+	digest: Not specified
+	icon: https://pbs.twimg.com/profile_images/690258997237014528/KNgQd9GL_400x400.png
+	keywords: Not specified
+	maintainers: viglesiasce:viglesias@google.com
+	repo url: https://charts.helm.sh/stable
+	name: linkerd
+	sources: https://github.com/BuoyantIO/linkerd
+	urls: Not specified
+	version: 0.4.2
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2022/05/07 20:14:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

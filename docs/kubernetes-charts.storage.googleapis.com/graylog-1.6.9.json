@@ -1,0 +1,90 @@
+{
+  "maintainers": [{
+    "name": "KongZ",
+    "email": "goonohc@gmail.com"
+  }],
+  "keywords": [
+    "graylog",
+    "logs",
+    "syslog",
+    "gelf"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "graylog/graylog",
+      "type": "image",
+      "version": "3.1"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "simonswine",
+          "email": "christian@jetstack.io"
+        },
+        {
+          "name": "icereval",
+          "email": "michael.haselton@gmail.com"
+        },
+        {
+          "name": "rendhalver",
+          "email": "pete.brown@powerhrg.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        },
+        {
+          "name": "KongZ",
+          "email": "goonohc@gmail.com"
+        },
+        {
+          "name": "hectorj2f",
+          "email": "hfernandez@mesosphere.com"
+        }
+      ],
+      "children": [{
+        "repoHost": "docker.elastic.co",
+        "children": [],
+        "name": "elasticsearch/elasticsearch-oss:6.5.4",
+        "type": "image",
+        "version": "6.5.4"
+      }],
+      "name": "elasticsearch:1.32.2",
+      "description": "Flexible and powerful open source, distributed real-time search and analytics engine.",
+      "type": "chart",
+      "shortName": "elasticsearch",
+      "version": "1.32.2"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "unguiculus",
+          "email": "unguiculus@gmail.com"
+        },
+        {
+          "name": "steven-sheehy",
+          "email": "ssheehy@firescope.com"
+        }
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "mongo",
+        "type": "image",
+        "version": "3.6"
+      }],
+      "name": "mongodb-replicaset:3.11.2",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "type": "chart",
+      "shortName": "mongodb-replicaset",
+      "version": "3.11.2"
+    }
+  ],
+  "name": "graylog:1.6.9",
+  "description": "Graylog is the centralized log management solution built to open standards for capturing, storing, and enabling real-time analysis of terabytes of machine data.",
+  "type": "chart",
+  "shortName": "graylog",
+  "version": "1.6.9"
+}

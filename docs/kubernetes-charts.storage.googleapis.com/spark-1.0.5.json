@@ -1,0 +1,22 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "apache",
+    "spark"
+  ],
+  "children": [{
+    "repoHost": "docker.io",
+    "children": [],
+    "name": "bitnami/spark:2.4.3-debian-9-r79",
+    "type": "image",
+    "version": "2.4.3-debian-9-r79"
+  }],
+  "name": "spark:1.0.5",
+  "description": "Spark is a fast and general-purpose cluster computing system.",
+  "type": "chart",
+  "shortName": "spark",
+  "version": "1.0.5"
+}

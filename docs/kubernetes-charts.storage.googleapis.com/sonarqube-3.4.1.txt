@@ -1,0 +1,47 @@
+Chart Map for sonarqube:3.4.1
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: postgresql:8.2.0
+	apiVersion: v1
+	appVersion: 11.6.0
+	created: 2020-01-29T20:38:08.30434518Z
+	dependencies: None
+	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 464ae1182291245e104322850d33a3f418dc3f6b7e803cab920f5899610bb4e2
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql
+	urls: https://charts.bitnami.com/bitnami/postgresql-8.2.0.tgz
+	version: 8.2.0
+Chart: sonarqube:3.4.1
+	apiVersion: v1
+	appVersion: 7.9.2
+	created: Not specified
+	dependencies: postgresql:8.2.0
+	description: SonarQube is an open sourced code quality scanning tool
+	digest: Not specified
+	icon: https://www.sonarqube.org/assets/logo-31ad3115b1b4b120f3d1efd63e6b13ac9f1f89437f0cf6881cc4d8b5603a52b4.svg
+	keywords: coverage,security,code,quality
+	maintainers: rjkernick:rjkernick@gmail.com,tsiddique:tsiddique@live.com
+	repo url: https://charts.helm.sh/stable
+	name: sonarqube
+	sources: https://github.com/SonarSource/docker-sonarqube
+	urls: Not specified
+	version: 3.4.1
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/postgresql:11.6.0-debian-10-r0
+Image: sonarqube:7.9.2-community
+
+Chart Dependencies
+------------------
+sonarqube:3.4.1 depends on postgresql:8.2.0
+postgresql:8.2.0 uses docker.io/bitnami/postgresql:11.6.0-debian-10-r0
+sonarqube:3.4.1 uses sonarqube:7.9.2-community
+
+Generated on 2022/05/07 20:36:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for traefik:1.87.6
+
+'There is one referenced Helm Chart
+artifact "traefik:1.87.6\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tkrancour\n\t\temilevauge\n\t\tdtomcej\n\t\tldez\n====\n\tKeywords: \n\t\ttraefik\n\t\tingress\n\t\tacme\n\t\tletsencrypt" as traefik_1_87_6 #Gainsboro
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\ntraefik\n====\n1.7.26" as traefik_1_7_26 #Gainsboro
+
+'Chart Dependencies
+traefik_1_87_6--[#orange]-|>traefik_1_7_26
+
+center footer Generated on 2022/05/07 20:42:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

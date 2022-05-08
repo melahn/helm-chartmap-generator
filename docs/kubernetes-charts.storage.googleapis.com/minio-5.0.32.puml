@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for minio:5.0.32
+
+'There is one referenced Helm Chart
+artifact "minio:5.0.32\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tMinio\n\t\tAcaleph\n====\n\tKeywords: \n\t\tstorage\n\t\tobject-storage\n\t\tS3" as minio_5_0_32 #Aqua
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nminio/minio\n====\nRELEASE.2020-06-14T18-32-17Z" as minio_minio_RELEASE_2020_06_14T18_32_17Z #IndianRed
+
+'Chart Dependencies
+minio_5_0_32--[#orange]-|>minio_minio_RELEASE_2020_06_14T18_32_17Z
+
+center footer Generated on 2022/05/07 20:18:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

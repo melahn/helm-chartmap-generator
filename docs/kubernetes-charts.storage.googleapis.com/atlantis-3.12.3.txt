@@ -1,0 +1,29 @@
+Chart Map for atlantis:3.12.3
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: atlantis:3.12.3
+	apiVersion: v1
+	appVersion: v0.14.0
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED A Helm chart for Atlantis https://www.runatlantis.io
+	digest: Not specified
+	icon: https://www.runatlantis.io/hero.png
+	keywords: terraform
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: atlantis
+	sources: https://github.com/runatlantis/atlantis
+	urls: Not specified
+	version: 3.12.3
+
+There is one referenced Docker Image
+------------------------------------
+Image: runatlantis/atlantis:v0.14.0
+
+Chart Dependencies
+------------------
+atlantis:3.12.3 uses runatlantis/atlantis:v0.14.0
+
+Generated on 2022/05/07 19:47:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

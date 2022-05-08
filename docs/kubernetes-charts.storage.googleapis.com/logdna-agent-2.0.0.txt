@@ -1,0 +1,27 @@
+Chart Map for logdna-agent:2.0.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: logdna-agent:2.0.0
+	apiVersion: v1
+	appVersion: 2.1.9
+	created: Not specified
+	dependencies: None
+	description: Run this, get logs. All cluster containers. LogDNA collector agent daemonset for Kubernetes.
+	digest: Not specified
+	icon: https://logdna.com/assets/images/logdna_logo_240w.png
+	keywords: logs,logging,log-management,agent,alerts,metrics,events,daemonset,logger
+	maintainers: leeliu:lee@logdna.com,jakedipity:jacob.hull@logdna.com
+	repo url: https://charts.helm.sh/stable
+	name: logdna-agent
+	sources: https://github.com/logdna/logdna-agent-v2
+	urls: Not specified
+	version: 2.0.0
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2022/05/07 20:14:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

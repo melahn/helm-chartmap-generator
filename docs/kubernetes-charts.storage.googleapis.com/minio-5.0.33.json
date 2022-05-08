@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "storage",
+    "object-storage",
+    "S3"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "minio/minio",
+    "type": "image",
+    "version": "RELEASE.2020-06-14T18-32-17Z"
+  }],
+  "name": "minio:5.0.33",
+  "description": "DEPRECATED MinIO is a high performance data infrastructure for machine learning, analytics and application data workloads.",
+  "type": "chart",
+  "shortName": "minio",
+  "version": "5.0.33"
+}

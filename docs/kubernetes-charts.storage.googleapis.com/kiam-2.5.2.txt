@@ -12,7 +12,7 @@ Chart: kiam:2.5.2
 	icon: Not specified
 	keywords: kiam,aws,iam,security
 	maintainers: ewbankkit:Kit_Ewbank@hotmail.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: kiam
 	sources: https://github.com/uswitch/kiam
 	urls: Not specified
@@ -24,4 +24,4 @@ There are 0 referenced Docker Images
 Chart Dependencies
 ------------------
 
-Generated on 2020/04/26 13:50:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:10:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

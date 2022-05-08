@@ -1,4 +1,8 @@
 {
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
   "keywords": [
     "opencart",
     "e-commerce",
@@ -21,18 +25,18 @@
     "children": [{
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/mariadb",
+      "name": "bitnami/mariadb:10.3.22-debian-10-r44",
       "type": "image",
-      "version": "10.3.22-debian-10-r17"
+      "version": "10.3.22-debian-10-r44"
     }],
-    "name": "mariadb:7.3.10",
+    "name": "mariadb:7.3.14",
     "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
     "type": "chart",
     "shortName": "mariadb",
-    "version": "7.3.10"
+    "version": "7.3.14"
   }],
   "name": "opencart:7.0.8",
-  "description": "DEPRECATED A free and open source e-commerce platform for online merchants. It provides a professional and reliable foundation for a successful online store.",
+  "description": "A free and open source e-commerce platform for online merchants. It provides a professional and reliable foundation for a successful online store.",
   "type": "chart",
   "shortName": "opencart",
   "version": "7.0.8"

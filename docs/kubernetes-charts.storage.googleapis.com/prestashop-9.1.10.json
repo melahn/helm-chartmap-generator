@@ -22,14 +22,14 @@
       {
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mariadb",
+        "name": "bitnami/mariadb:10.1.44-debian-10-r32",
         "type": "image",
         "version": "10.1.44-debian-10-r32"
       },
       {
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mariadb",
+        "name": "bitnami/mariadb:10.3.22-debian-10-r27",
         "type": "image",
         "version": "10.3.22-debian-10-r27"
       }

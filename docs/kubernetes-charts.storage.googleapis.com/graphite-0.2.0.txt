@@ -1,0 +1,29 @@
+Chart Map for graphite:0.2.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: graphite:0.2.0
+	apiVersion: v1
+	appVersion: 1.1.5-3
+	created: Not specified
+	dependencies: None
+	description: Graphite metrics server
+	digest: Not specified
+	icon: https://graphiteapp.org/img/graphite-logo_color.png
+	keywords: metrics
+	maintainers: fabian-schlegel:fabian.schlegel@kiwigrid.com,monotek:andre.bauer@kiwigrid.com
+	repo url: https://charts.helm.sh/stable
+	name: graphite
+	sources: https://github.com/graphite-project,https://github.com/graphite-project/docker-graphite-statsd
+	urls: Not specified
+	version: 0.2.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: graphiteapp/graphite-statsd:1.1.5-3
+
+Chart Dependencies
+------------------
+graphite:0.2.0 uses graphiteapp/graphite-statsd:1.1.5-3
+
+Generated on 2022/05/07 20:02:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

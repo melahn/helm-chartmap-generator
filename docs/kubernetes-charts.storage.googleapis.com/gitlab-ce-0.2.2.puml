@@ -9,19 +9,19 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for gitlab-ce:0.2.2
 
 'There are 3 referenced Helm Charts
-artifact "gitlab-ce:0.2.2\n====\n\tgitlab-ce\n====\n\t0.2.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: git\nci\ndeploy\nissue tracker\ncode review\nwiki" as gitlab_ce_0_2_2 #Aqua
-artifact "redis:0.9.0\n====\n\tredis\n====\n\t0.9.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: bitnami-bot\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_0_9_0 #LightSeaGreen
-artifact "postgresql:0.8.1\n====\n\tpostgresql\n====\n\t0.8.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: swordbeta, databus23\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql" as postgresql_0_8_1 #LightSteelBlue
+artifact "gitlab-ce:0.2.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tgit\n\t\tci\n\t\tdeploy\n\t\tissue tracker\n\t\tcode review\n\t\twiki" as gitlab_ce_0_2_2 #Aqua
+artifact "redis:0.9.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: bitnami-bot\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_0_9_0 #LightSeaGreen
+artifact "postgresql:0.8.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tswordbeta\n\t\tdatabus23\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql" as postgresql_0_8_1 #LightSteelBlue
 
 'There are 2 referenced Docker Images
-usecase "Image\n====\n\tDocker Hub\n====\n\tbitnami/redis\n====\n\t3.2.9-r2" as bitnami_redis_3_2_9_r2 #Khaki
-usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t9.6" as postgres_9_6 #Ivory
+usecase "Image\n====\nDocker Hub\n====\nbitnami/redis\n====\n3.2.9-r2" as bitnami_redis_3_2_9_r2 #Khaki
+usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n9.6" as postgres_9_6 #Ivory
 
 'Chart Dependencies
-gitlab_ce_0_2_2--[#green]-|>redis_0_9_0
 gitlab_ce_0_2_2--[#green]-|>postgresql_0_8_1
+gitlab_ce_0_2_2--[#green]-|>redis_0_9_0
 redis_0_9_0--[#orange]-|>bitnami_redis_3_2_9_r2
 postgresql_0_8_1--[#orange]-|>postgres_9_6
 
-center footer Generated on 2020/04/26 13:46:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:01:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

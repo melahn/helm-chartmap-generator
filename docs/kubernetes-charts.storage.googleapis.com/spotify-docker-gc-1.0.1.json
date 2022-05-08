@@ -1,0 +1,12 @@
+{
+  "maintainers": [{
+    "name": "vdice",
+    "email": "vadice@microsoft.com"
+  }],
+  "children": [],
+  "name": "spotify-docker-gc:1.0.1",
+  "description": "A simple Docker container and image garbage collection script.",
+  "type": "chart",
+  "shortName": "spotify-docker-gc",
+  "version": "1.0.1"
+}

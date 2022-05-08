@@ -7,12 +7,12 @@ Chart: rabbitmq:6.18.2
 	appVersion: 3.8.2
 	created: Not specified
 	dependencies: None
-	description: DEPRECATED Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)
+	description: Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
 	keywords: rabbitmq,message queue,AMQP
-	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: rabbitmq
 	sources: https://github.com/bitnami/bitnami-docker-rabbitmq
 	urls: Not specified
@@ -20,10 +20,10 @@ Chart: rabbitmq:6.18.2
 
 There is one referenced Docker Image
 ------------------------------------
-Image: docker.io/bitnami/rabbitmq:3.8.2-debian-10-r30
+Image: docker.io/bitnami/rabbitmq:3.8.2-debian-10-r41
 
 Chart Dependencies
 ------------------
-rabbitmq:6.18.2 uses docker.io/bitnami/rabbitmq:3.8.2-debian-10-r30
+rabbitmq:6.18.2 uses docker.io/bitnami/rabbitmq:3.8.2-debian-10-r41
 
-Generated on 2020/04/26 13:58:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:31:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

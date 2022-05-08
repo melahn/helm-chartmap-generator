@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "elastabot:1.2.1",
+  "description": "DEPRECATED A Helm chart for Elastabot - a Slack bot companion for Elasticsearch and ElastAlert",
+  "type": "chart",
+  "shortName": "elastabot",
+  "version": "1.2.1"
+}

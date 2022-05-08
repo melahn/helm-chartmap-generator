@@ -12,7 +12,7 @@ Chart: metricbeat:1.7.1
 	icon: https://www.elastic.co/assets/blt47799dcdcf08438d/logo-elastic-beats-lt.svg
 	keywords: Not specified
 	maintainers: at-k:atushi.k@gmail.com,mumoshu:ykuoka@gmail.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: metricbeat
 	sources: https://www.elastic.co/guide/en/beats/metricbeat/current/index.html
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 metricbeat:1.7.1 uses docker.elastic.co/beats/metricbeat:6.7.0
 
-Generated on 2020/04/26 13:52:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:17:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

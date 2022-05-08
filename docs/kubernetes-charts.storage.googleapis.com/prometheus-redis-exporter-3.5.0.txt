@@ -1,0 +1,29 @@
+Chart Map for prometheus-redis-exporter:3.5.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: prometheus-redis-exporter:3.5.0
+	apiVersion: v1
+	appVersion: 1.3.4
+	created: Not specified
+	dependencies: None
+	description: Prometheus exporter for Redis metrics
+	digest: Not specified
+	icon: Not specified
+	keywords: prometheus,redis
+	maintainers: acondrat:arcadie.condrat@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: prometheus-redis-exporter
+	sources: https://github.com/oliver006/redis_exporter
+	urls: Not specified
+	version: 3.5.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: oliver006/redis_exporter:v1.3.4
+
+Chart Dependencies
+------------------
+prometheus-redis-exporter:3.5.0 uses oliver006/redis_exporter:v1.3.4
+
+Generated on 2022/05/07 20:30:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

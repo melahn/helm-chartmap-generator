@@ -14,7 +14,7 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/dokuwiki",
+    "name": "bitnami/dokuwiki:0.20180422.201901061035-debian-10-r28",
     "type": "image",
     "version": "0.20180422.201901061035-debian-10-r28"
   }],

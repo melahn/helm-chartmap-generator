@@ -12,25 +12,25 @@ Chart: artifactory-ha:0.4.0
 	icon: https://raw.githubusercontent.com/JFrogDev/artifactory-dcos/master/images/jfrog_med.png
 	keywords: artifactory,jfrog
 	maintainers: jainishshah17:jainishs@jfrog.com,eldada:eldada@jfrog.com,rimusz:rimasm@jfrog.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: artifactory-ha
 	sources: https://bintray.com/jfrog/product/JFrog-Artifactory-Pro/view,https://github.com/jfrog/charts
 	urls: Not specified
 	version: 0.4.0
 Chart: postgresql:0.8.7
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: Not specified
-	created: 2018-01-24T08:49:08.805316243Z
+	created: 2020-10-15T15:46:22.348697-04:00
 	dependencies: None
 	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
 	digest: 97bdd1bcd6d42aba230a36e2bff4113469fa7f0ab6f609ff6b13a8a097da409b
 	icon: https://www.postgresql.org/media/img/about/press/elephant.png
 	keywords: postgresql,postgres,database,sql
 	maintainers: swordbeta,databus23
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: postgresql
 	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
-	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-0.8.7.tgz
+	urls: https://charts.helm.sh/stable/packages/postgresql-0.8.7.tgz
 	version: 0.8.7
 
 There are 3 referenced Docker Images
@@ -46,4 +46,4 @@ artifactory-ha:0.4.0 uses docker.bintray.io/jfrog/artifactory-pro:6.2.0
 artifactory-ha:0.4.0 uses docker.bintray.io/jfrog/nginx-artifactory-pro:6.2.0
 postgresql:0.8.7 uses postgres:9.6.2
 
-Generated on 2020/04/26 13:41:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 19:47:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

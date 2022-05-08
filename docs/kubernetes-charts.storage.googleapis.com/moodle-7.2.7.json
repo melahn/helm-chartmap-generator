@@ -8,7 +8,7 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/moodle",
+      "name": "bitnami/moodle:3.8.2-debian-10-r0",
       "type": "image",
       "version": "3.8.2-debian-10-r0"
     },
@@ -27,7 +27,7 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mariadb",
+        "name": "bitnami/mariadb:10.3.22-debian-10-r27",
         "type": "image",
         "version": "10.3.22-debian-10-r27"
       }],

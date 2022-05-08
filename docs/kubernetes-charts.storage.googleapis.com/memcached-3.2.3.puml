@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for memcached:3.2.3
 
 'There is one referenced Helm Chart
-artifact "memcached:3.2.3\n====\n\tmemcached\n====\n\t3.2.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: gtaylor, olemarkus, kennethaasan\n====\n\tKeywords: memcached\ncache" as memcached_3_2_3 #DarkSeaGreen
+artifact "memcached:3.2.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tgtaylor\n\t\tolemarkus\n\t\tkennethaasan\n====\n\tKeywords: \n\t\tmemcached\n\t\tcache" as memcached_3_2_3 #DarkSeaGreen
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tmemcached\n====\n\t1.5.20" as memcached_1_5_20 #DarkSeaGreen
+usecase "Image\n====\nDocker Hub\n====\nmemcached\n====\n1.5.20" as memcached_1_5_20 #DarkSeaGreen
 
 'Chart Dependencies
 memcached_3_2_3--[#orange]-|>memcached_1_5_20
 
-center footer Generated on 2020/04/26 13:52:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:17:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

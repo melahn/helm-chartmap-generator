@@ -1,0 +1,31 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for elastic-stack:2.0.5
+
+'There are 4 referenced Helm Charts
+artifact "logstash:2.4.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\trendhalver\n\t\tjar361\n\t\tchristian-roggia\n====\n\tKeywords: " as logstash_2_4_1 #Aqua
+artifact "kibana:3.2.8\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\telasticsearch\n\t\tkibana" as kibana_3_2_8 #GhostWhite
+artifact "elastic-stack:2.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\trendhalver\n\t\tjar361\n\t\tchristian-roggia\n====\n\tKeywords: " as elastic_stack_2_0_5 #BlanchedAlmond
+artifact "elasticsearch:1.32.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as elasticsearch_1_32_5 #Aquamarine
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\ndocker.elastic.co\n====\nelasticsearch/elasticsearch-oss:6.8.6\n====\n6.8.6" as docker_elastic_co_elasticsearch_elasticsearch_oss_6_8_6 #IndianRed
+usecase "Image\n====\ndocker.elastic.co\n====\nlogstash/logstash-oss:7.1.1\n====\n7.1.1" as docker_elastic_co_logstash_logstash_oss_7_1_1 #BlanchedAlmond
+usecase "Image\n====\ndocker.elastic.co\n====\nkibana/kibana-oss:6.7.0\n====\n6.7.0" as docker_elastic_co_kibana_kibana_oss_6_7_0 #DarkTurquoise
+
+'Chart Dependencies
+elastic_stack_2_0_5--[#green]-|>logstash_2_4_1
+elastic_stack_2_0_5--[#green]-|>elasticsearch_1_32_5
+elastic_stack_2_0_5--[#green]-|>kibana_3_2_8
+logstash_2_4_1--[#orange]-|>docker_elastic_co_logstash_logstash_oss_7_1_1
+kibana_3_2_8--[#orange]-|>docker_elastic_co_kibana_kibana_oss_6_7_0
+elasticsearch_1_32_5--[#orange]-|>docker_elastic_co_elasticsearch_elasticsearch_oss_6_8_6
+
+center footer Generated on 2022/05/07 19:56:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

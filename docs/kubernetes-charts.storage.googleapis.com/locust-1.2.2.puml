@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for locust:1.2.2
+
+'There is one referenced Helm Chart
+artifact "locust:1.2.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\thaugene\n\t\tsekka1\n====\n\tKeywords: " as locust_1_2_2 #GhostWhite
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\ngreenbirdit/locust\n====\n0.9.0" as greenbirdit_locust_0_9_0 #Aquamarine
+
+'Chart Dependencies
+locust_1_2_2--[#orange]-|>greenbirdit_locust_0_9_0
+
+center footer Generated on 2022/05/07 20:14:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

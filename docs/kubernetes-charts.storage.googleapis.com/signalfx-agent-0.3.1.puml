@@ -9,11 +9,11 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for signalfx-agent:0.3.1
 
 'There is one referenced Helm Chart
-artifact "signalfx-agent:0.3.1\n====\n\tsignalfx-agent\n====\n\t0.3.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: monitoring\nalerting\nmetrics\nstats" as signalfx_agent_0_3_1 #AntiqueWhite
+artifact "signalfx-agent:0.3.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tmonitoring\n\t\talerting\n\t\tmetrics\n\t\tstats" as signalfx_agent_0_3_1 #AntiqueWhite
 
 'There are 0 referenced Docker Images
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/26 14:00:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:36:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -9,11 +9,11 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for kiam:2.5.3
 
 'There is one referenced Helm Chart
-artifact "kiam:2.5.3\n====\n\tkiam\n====\n\t2.5.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: kiam\naws\niam\nsecurity" as kiam_2_5_3 #AliceBlue
+artifact "kiam:2.5.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tkiam\n\t\taws\n\t\tiam\n\t\tsecurity" as kiam_2_5_3 #AliceBlue
 
 'There are 0 referenced Docker Images
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/26 13:50:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:10:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

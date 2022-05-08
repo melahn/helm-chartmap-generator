@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "chaos-monkey",
+    "chaos-engineering"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "linki/chaoskube:v0.21.0",
+    "type": "image",
+    "version": "v0.21.0"
+  }],
+  "name": "chaoskube:3.3.2",
+  "description": "DEPRECATED Chaoskube periodically kills random pods in your Kubernetes cluster.",
+  "type": "chart",
+  "shortName": "chaoskube",
+  "version": "3.3.2"
+}

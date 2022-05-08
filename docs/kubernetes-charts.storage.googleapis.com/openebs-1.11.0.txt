@@ -1,0 +1,41 @@
+Chart Map for openebs:1.11.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: openebs:1.11.0
+	apiVersion: v1
+	appVersion: 1.11.0
+	created: Not specified
+	dependencies: None
+	description: Containerized Storage for Containers
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/openebs/icon/color/openebs-icon-color.png
+	keywords: cloud-native-storage,block-storage,iSCSI,storage
+	maintainers: kmova:kiran.mova@openebs.io,prateekpandey14:prateek.pandey@openebs.io
+	repo url: https://charts.helm.sh/stable
+	name: openebs
+	sources: https://github.com/openebs/openebs
+	urls: Not specified
+	version: 1.11.0
+
+There are 7 referenced Docker Images
+------------------------------------
+Image: openebs/snapshot-controller:1.11.0
+Image: openebs/m-apiserver:1.11.0
+Image: openebs/snapshot-provisioner:1.11.0
+Image: openebs/node-disk-operator-amd64:0.6.0
+Image: openebs/admission-server:1.11.0
+Image: openebs/openebs-k8s-provisioner:1.11.0
+Image: openebs/provisioner-localpv:1.11.0
+
+Chart Dependencies
+------------------
+openebs:1.11.0 uses openebs/openebs-k8s-provisioner:1.11.0
+openebs:1.11.0 uses openebs/snapshot-controller:1.11.0
+openebs:1.11.0 uses openebs/snapshot-provisioner:1.11.0
+openebs:1.11.0 uses openebs/node-disk-operator-amd64:0.6.0
+openebs:1.11.0 uses openebs/provisioner-localpv:1.11.0
+openebs:1.11.0 uses openebs/m-apiserver:1.11.0
+openebs:1.11.0 uses openebs/admission-server:1.11.0
+
+Generated on 2022/05/07 20:23:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

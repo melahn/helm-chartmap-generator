@@ -1,0 +1,23 @@
+{
+  "maintainers": [{
+    "name": "timm088",
+    "email": "8890118+timm088@users.noreply.github.com"
+  }],
+  "keywords": [
+    "metrics",
+    "consul",
+    "monitoring"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prom/consul-exporter",
+    "type": "image",
+    "version": "v0.4.0"
+  }],
+  "name": "prometheus-consul-exporter:0.1.5",
+  "description": "A Helm chart for the Prometheus Consul Exporter",
+  "type": "chart",
+  "shortName": "prometheus-consul-exporter",
+  "version": "0.1.5"
+}

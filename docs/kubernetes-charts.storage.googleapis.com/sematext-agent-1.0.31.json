@@ -1,0 +1,16 @@
+{
+  "keywords": [
+    "sematext",
+    "observability",
+    "monitoring",
+    "logging",
+    "containers",
+    "ebpf"
+  ],
+  "children": [],
+  "name": "sematext-agent:1.0.31",
+  "description": "DEPRECATED Helm chart for deploying Sematext Agent and Logagent to Kubernetes",
+  "type": "chart",
+  "shortName": "sematext-agent",
+  "version": "1.0.31"
+}

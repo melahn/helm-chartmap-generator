@@ -12,7 +12,7 @@ Chart: sematext-docker-agent:1.0.0
 	icon: https://sematext.com/wp-content/uploads/2017/09/octi-square-logo-200x200-2.png
 	keywords: alerts,metrics,events,logs
 	maintainers: komljen:alen.komljen@live.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: sematext-docker-agent
 	sources: https://github.com/sematext/sematext-agent-docker
 	urls: Not specified
@@ -24,4 +24,4 @@ There are 0 referenced Docker Images
 Chart Dependencies
 ------------------
 
-Generated on 2020/04/26 13:59:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:35:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

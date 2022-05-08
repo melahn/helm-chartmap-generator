@@ -1,0 +1,12 @@
+{
+  "keywords": [
+    "spot",
+    "termination"
+  ],
+  "children": [],
+  "name": "k8s-spot-termination-handler:1.4.11",
+  "description": "DEPRECATED - The K8s Spot Termination handler handles draining AWS Spot Instances in response to termination requests.",
+  "type": "chart",
+  "shortName": "k8s-spot-termination-handler",
+  "version": "1.4.11"
+}

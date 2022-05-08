@@ -1,0 +1,29 @@
+Chart Map for zeppelin:1.1.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: zeppelin:1.1.1
+	apiVersion: v1
+	appVersion: 0.7.2
+	created: Not specified
+	dependencies: None
+	description: Web-based notebook that enables data-driven, interactive data analytics and collaborative documents with SQL, Scala and more.
+	digest: Not specified
+	icon: https://zeppelin.apache.org/assets/themes/zeppelin/img/zeppelin_classic_logo.png
+	keywords: Not specified
+	maintainers: danisla:disla@google.com
+	repo url: https://charts.helm.sh/stable
+	name: zeppelin
+	sources: https://github.com/apache/zeppelin
+	urls: Not specified
+	version: 1.1.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: dylanmei/zeppelin:0.7.2
+
+Chart Dependencies
+------------------
+zeppelin:1.1.1 uses dylanmei/zeppelin:0.7.2
+
+Generated on 2022/05/07 20:45:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

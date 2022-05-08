@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for graphite:0.2.0
+
+'There is one referenced Helm Chart
+artifact "graphite:0.2.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tfabian-schlegel\n\t\tmonotek\n====\n\tKeywords: metrics" as graphite_0_2_0 #Aqua
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\ngraphiteapp/graphite-statsd\n====\n1.1.5-3" as graphiteapp_graphite_statsd_1_1_5_3 #IndianRed
+
+'Chart Dependencies
+graphite_0_2_0--[#orange]-|>graphiteapp_graphite_statsd_1_1_5_3
+
+center footer Generated on 2022/05/07 20:02:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

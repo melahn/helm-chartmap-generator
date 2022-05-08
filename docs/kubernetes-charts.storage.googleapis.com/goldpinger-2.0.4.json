@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "goldpinger:2.0.4",
+  "description": "DEPRECATED Goldpinger makes calls between its instances for visibility and alerting.",
+  "type": "chart",
+  "shortName": "goldpinger",
+  "version": "2.0.4"
+}

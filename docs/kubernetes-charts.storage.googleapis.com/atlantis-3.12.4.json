@@ -1,0 +1,15 @@
+{
+  "keywords": ["terraform"],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "runatlantis/atlantis",
+    "type": "image",
+    "version": "v0.14.0"
+  }],
+  "name": "atlantis:3.12.4",
+  "description": "DEPRECATED A Helm chart for Atlantis https://www.runatlantis.io",
+  "type": "chart",
+  "shortName": "atlantis",
+  "version": "3.12.4"
+}

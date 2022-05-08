@@ -1,0 +1,83 @@
+{
+  "maintainers": [
+    {
+      "name": "rendhalver",
+      "email": "pete.brown@powerhrg.com"
+    },
+    {
+      "name": "jar361",
+      "email": "jrodgers@powerhrg.com"
+    },
+    {
+      "name": "christian-roggia",
+      "email": "christian.roggia@gmail.com"
+    }
+  ],
+  "children": [
+    {
+      "children": [{
+        "repoHost": "docker.elastic.co",
+        "children": [],
+        "name": "elasticsearch/elasticsearch-oss:6.8.6",
+        "type": "image",
+        "version": "6.8.6"
+      }],
+      "name": "elasticsearch:1.32.5",
+      "description": "DEPRECATED Flexible and powerful open source, distributed real-time search and analytics engine.",
+      "type": "chart",
+      "shortName": "elasticsearch",
+      "version": "1.32.5"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "rendhalver",
+          "email": "pete.brown@powerhrg.com"
+        },
+        {
+          "name": "jar361",
+          "email": "jrodgers@powerhrg.com"
+        },
+        {
+          "name": "christian-roggia",
+          "email": "christian.roggia@gmail.com"
+        }
+      ],
+      "children": [{
+        "repoHost": "docker.elastic.co",
+        "children": [],
+        "name": "logstash/logstash-oss:7.1.1",
+        "type": "image",
+        "version": "7.1.1"
+      }],
+      "name": "logstash:2.4.1",
+      "description": "Logstash is an open source, server-side data processing pipeline",
+      "type": "chart",
+      "shortName": "logstash",
+      "version": "2.4.1"
+    },
+    {
+      "keywords": [
+        "elasticsearch",
+        "kibana"
+      ],
+      "children": [{
+        "repoHost": "docker.elastic.co",
+        "children": [],
+        "name": "kibana/kibana-oss:6.7.0",
+        "type": "image",
+        "version": "6.7.0"
+      }],
+      "name": "kibana:3.2.8",
+      "description": "DEPRECATED - Kibana is an open source data visualization plugin for Elasticsearch",
+      "type": "chart",
+      "shortName": "kibana",
+      "version": "3.2.8"
+    }
+  ],
+  "name": "elastic-stack:2.0.5",
+  "description": "A Helm chart for ELK",
+  "type": "chart",
+  "shortName": "elastic-stack",
+  "version": "2.0.5"
+}

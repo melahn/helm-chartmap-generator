@@ -1,0 +1,20 @@
+{
+  "maintainers": [{
+    "name": "rimusz",
+    "email": "rmocius@gmail.com"
+  }],
+  "keywords": [
+    "google",
+    "cloud",
+    "postgresql",
+    "mysql",
+    "sql",
+    "sqlproxy"
+  ],
+  "children": [],
+  "name": "gcloud-sqlproxy:0.5.0",
+  "description": "Google Cloud SQL Proxy",
+  "type": "chart",
+  "shortName": "gcloud-sqlproxy",
+  "version": "0.5.0"
+}

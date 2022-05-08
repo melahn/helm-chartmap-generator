@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "pushgateway",
+    "prometheus"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prom/pushgateway",
+    "type": "image",
+    "version": "v1.2.0"
+  }],
+  "name": "prometheus-pushgateway:1.4.3",
+  "description": "DEPRECATED A Helm chart for prometheus pushgateway",
+  "type": "chart",
+  "shortName": "prometheus-pushgateway",
+  "version": "1.4.3"
+}

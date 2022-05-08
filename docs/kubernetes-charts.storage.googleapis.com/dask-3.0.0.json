@@ -1,0 +1,37 @@
+{
+  "maintainers": [
+    {
+      "name": "danielfrg",
+      "email": "df.rodriguez143@gmail.com"
+    },
+    {
+      "name": "mrocklin",
+      "email": "mrocklin@gmail.com"
+    },
+    {
+      "name": "beberg",
+      "email": "beberg@gmail.com"
+    }
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "daskdev/dask",
+      "type": "image",
+      "version": "1.1.5"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "daskdev/dask-notebook",
+      "type": "image",
+      "version": "1.1.5"
+    }
+  ],
+  "name": "dask:3.0.0",
+  "description": "Distributed computation in Python with task scheduling",
+  "type": "chart",
+  "shortName": "dask",
+  "version": "3.0.0"
+}

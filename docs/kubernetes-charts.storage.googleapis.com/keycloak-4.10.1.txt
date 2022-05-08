@@ -3,19 +3,19 @@ Chart Map for keycloak:4.10.1
 There are 2 referenced Helm Charts
 ----------------------------------
 Chart: postgresql:0.15.0
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: 9.6.2
-	created: 2018-08-27T18:56:06.643545837Z
+	created: 2020-10-15T15:46:22.333977-04:00
 	dependencies: None
 	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
 	digest: 6083155dd4d79178afe9b0413e70747ee22c514b56797d478d1976d995634f6e
 	icon: https://www.postgresql.org/media/img/about/press/elephant.png
 	keywords: postgresql,postgres,database,sql
 	maintainers: databus23
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: postgresql
 	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
-	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-0.15.0.tgz
+	urls: https://charts.helm.sh/stable/packages/postgresql-0.15.0.tgz
 	version: 0.15.0
 Chart: keycloak:4.10.1
 	apiVersion: Not specified
@@ -27,7 +27,7 @@ Chart: keycloak:4.10.1
 	icon: https://www.keycloak.org/resources/images/keycloak_logo_480x108.png
 	keywords: sso,idm,openid connect,saml,kerberos,ldap
 	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: keycloak
 	sources: https://github.com/jboss-dockerfiles/keycloak
 	urls: Not specified
@@ -44,4 +44,4 @@ keycloak:4.10.1 depends on postgresql:0.15.0
 postgresql:0.15.0 uses postgres:9.6.2
 keycloak:4.10.1 uses jboss/keycloak:5.0.0
 
-Generated on 2020/04/26 13:50:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:10:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

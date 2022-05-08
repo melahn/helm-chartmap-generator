@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "coredns",
+    "dns",
+    "kubedns"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "coredns/coredns",
+    "type": "image",
+    "version": "1.7.1"
+  }],
+  "name": "coredns:1.13.8",
+  "description": "DEPRECATED CoreDNS is a DNS server that chains plugins and provides Kubernetes DNS Services",
+  "type": "chart",
+  "shortName": "coredns",
+  "version": "1.13.8"
+}

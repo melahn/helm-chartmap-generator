@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "kured:1.6.0",
+  "description": "DEPRECATED - A Helm chart for kured",
+  "type": "chart",
+  "shortName": "kured",
+  "version": "1.6.0"
+}

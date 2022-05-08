@@ -26,7 +26,7 @@
   "children": [{
     "repoHost": "quay.io",
     "children": [],
-    "name": "comcast/kuberhealthy",
+    "name": "comcast/kuberhealthy:v1.0.2",
     "type": "image",
     "version": "v1.0.2"
   }],

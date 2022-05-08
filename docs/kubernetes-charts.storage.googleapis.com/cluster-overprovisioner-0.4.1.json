@@ -1,0 +1,14 @@
+{
+  "keywords": [
+    "cluster",
+    "autoscaling",
+    "overprovision",
+    "cluster-autoscaler"
+  ],
+  "children": [],
+  "name": "cluster-overprovisioner:0.4.1",
+  "description": "Installs the a deployment that overprovisions the cluster",
+  "type": "chart",
+  "shortName": "cluster-overprovisioner",
+  "version": "0.4.1"
+}

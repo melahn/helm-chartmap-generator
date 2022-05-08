@@ -1,0 +1,43 @@
+{
+  "maintainers": [{
+    "name": "Sapho",
+    "email": "support@sapho.com"
+  }],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "sapho/ops-docker-tomcat",
+      "type": "image",
+      "version": "8-jre8"
+    },
+    {
+      "maintainers": [{
+        "name": "Vic Iglesias",
+        "email": "viglesias@google.com"
+      }],
+      "keywords": [
+        "mysql",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "mysql",
+        "type": "image",
+        "version": "5.7.14"
+      }],
+      "name": "mysql:0.3.7",
+      "description": "Fast, reliable, scalable, and easy to use open-source relational database system.",
+      "type": "chart",
+      "shortName": "mysql",
+      "version": "0.3.7"
+    }
+  ],
+  "name": "sapho:0.2.3",
+  "description": "A micro application development and integration platform that enables organizations to create and deliver secure micro applications that tie into existing business systems and track changes to key business data.",
+  "type": "chart",
+  "shortName": "sapho",
+  "version": "0.2.3"
+}

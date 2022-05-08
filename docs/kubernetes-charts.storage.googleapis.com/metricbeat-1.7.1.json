@@ -12,7 +12,7 @@
   "children": [{
     "repoHost": "docker.elastic.co",
     "children": [],
-    "name": "beats/metricbeat",
+    "name": "beats/metricbeat:6.7.0",
     "type": "image",
     "version": "6.7.0"
   }],

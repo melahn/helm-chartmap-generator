@@ -9,17 +9,17 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for wordpress:9.0.3
 
 'There are 2 referenced Helm Charts
-artifact "mariadb:7.3.12\n====\n\tmariadb\n====\n\t7.3.12\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mariadb\nmysql\ndatabase\nsql\nprometheus" as mariadb_7_3_12 #DarkTurquoise
-artifact "wordpress:9.0.3\n====\n\twordpress\n====\n\t9.0.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: wordpress\ncms\nblog\nhttp\nweb\napplication\nphp" as wordpress_9_0_3 #GreenYellow
+artifact "mariadb:7.3.14\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_7_3_14 #DarkTurquoise
+artifact "wordpress:9.0.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\twordpress\n\t\tcms\n\t\tblog\n\t\thttp\n\t\tweb\n\t\tapplication\n\t\tphp" as wordpress_9_0_3 #GreenYellow
 
 'There are 2 referenced Docker Images
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/wordpress:5.3.2-debian-10-r32\n====\n\t5.3.2-debian-10-r32" as docker_io_bitnami_wordpress_5_3_2_debian_10_r32 #Darkorange
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mariadb:10.3.22-debian-10-r27\n====\n\t10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/wordpress:5.3.2-debian-10-r43\n====\n5.3.2-debian-10-r43" as docker_io_bitnami_wordpress_5_3_2_debian_10_r43 #Darkorange
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.3.22-debian-10-r44\n====\n10.3.22-debian-10-r44" as docker_io_bitnami_mariadb_10_3_22_debian_10_r44 #DarkGoldenRod
 
 'Chart Dependencies
-wordpress_9_0_3--[#green]-|>mariadb_7_3_12
-mariadb_7_3_12--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r27
-wordpress_9_0_3--[#orange]-|>docker_io_bitnami_wordpress_5_3_2_debian_10_r32
+wordpress_9_0_3--[#green]-|>mariadb_7_3_14
+mariadb_7_3_14--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r44
+wordpress_9_0_3--[#orange]-|>docker_io_bitnami_wordpress_5_3_2_debian_10_r43
 
-center footer Generated on 2020/04/26 14:03:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:44:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

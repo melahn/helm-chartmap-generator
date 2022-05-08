@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "lmierzwa/karma",
+    "type": "image",
+    "version": "v0.72"
+  }],
+  "name": "karma:1.7.2",
+  "description": "DEPRECATED - A Helm chart for Karma - an UI for Prometheus Alertmanager",
+  "type": "chart",
+  "shortName": "karma",
+  "version": "1.7.2"
+}

@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "samizuh",
+    "email": "samiz@google.com"
+  }],
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "cloud-solutions-images/janusgraph:v2",
+    "type": "image",
+    "version": "v2"
+  }],
+  "name": "janusgraph:0.2.3",
+  "description": "Open source, scalable graph database.",
+  "type": "chart",
+  "shortName": "janusgraph",
+  "version": "0.2.3"
+}

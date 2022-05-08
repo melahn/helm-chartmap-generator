@@ -1,0 +1,20 @@
+{
+  "keywords": [
+    "backup",
+    "dump",
+    "katafygio",
+    "git"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "bpineau/katafygio",
+    "type": "image",
+    "version": "v0.8.1"
+  }],
+  "name": "katafygio:1.0.3",
+  "description": "DEPRECATED - Continuously backup Kubernetes objets as YAML files in git",
+  "type": "chart",
+  "shortName": "katafygio",
+  "version": "1.0.3"
+}

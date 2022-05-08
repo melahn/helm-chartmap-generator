@@ -12,7 +12,7 @@ Chart: node-red:1.4.2
 	icon: https://nodered.org/about/resources/media/node-red-icon-2.png
 	keywords: nodered,node-red
 	maintainers: billimek:jeff@billimek.com,batazor:batazor111@gmail.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: node-red
 	sources: https://github.com/node-red/node-red-docker,https://github.com/kubernetes/charts/stable/node-red
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 node-red:1.4.2 uses nodered/node-red:1.0.4-12-minimal
 
-Generated on 2020/04/26 13:54:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:22:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

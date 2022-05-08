@@ -1,0 +1,31 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus:11.12.1
+
+'There are 2 referenced Helm Charts
+artifact "kube-state-metrics:2.8.14\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tfiunchinho\n\t\ttariq1890\n\t\tmrueg\n====\n\tKeywords: \n\t\tmetric\n\t\tmonitoring\n\t\tprometheus\n\t\tkubernetes" as kube_state_metrics_2_8_14 #Gainsboro
+artifact "prometheus:11.12.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as prometheus_11_12_1 #DarkGoldenRod
+
+'There are 5 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nprom/alertmanager\n====\nv0.21.0" as prom_alertmanager_v0_21_0 #Beige
+usecase "Image\n====\nDocker Hub\n====\njimmidyson/configmap-reload\n====\nv0.4.0" as jimmidyson_configmap_reload_v0_4_0 #LightGray
+usecase "Image\n====\nDocker Hub\n====\nprom/pushgateway\n====\nv1.2.0" as prom_pushgateway_v1_2_0 #Lavender
+usecase "Image\n====\nquay.io\n====\ncoreos/kube-state-metrics:v1.9.7\n====\nv1.9.7" as quay_io_coreos_kube_state_metrics_v1_9_7 #LightGrey
+usecase "Image\n====\nDocker Hub\n====\nprom/prometheus\n====\nv2.20.1" as prom_prometheus_v2_20_1 #LightGoldenRodYellow
+
+'Chart Dependencies
+prometheus_11_12_1--[#green]-|>kube_state_metrics_2_8_14
+kube_state_metrics_2_8_14--[#orange]-|>quay_io_coreos_kube_state_metrics_v1_9_7
+prometheus_11_12_1--[#orange]-|>prom_prometheus_v2_20_1
+prometheus_11_12_1--[#orange]-|>prom_pushgateway_v1_2_0
+prometheus_11_12_1--[#orange]-|>prom_alertmanager_v0_21_0
+prometheus_11_12_1--[#orange]-|>jimmidyson_configmap_reload_v0_4_0
+
+center footer Generated on 2022/05/07 20:27:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

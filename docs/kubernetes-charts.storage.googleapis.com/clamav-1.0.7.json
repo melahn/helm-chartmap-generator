@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "mailu/clamav",
+    "type": "image",
+    "version": "1.6"
+  }],
+  "name": "clamav:1.0.7",
+  "description": "DEPRECATED An Open-Source antivirus engine for detecting trojans, viruses, malware & other malicious threats.",
+  "type": "chart",
+  "shortName": "clamav",
+  "version": "1.0.7"
+}

@@ -3,64 +3,64 @@ Chart Map for xray:0.4.2
 There are 4 referenced Helm Charts
 ----------------------------------
 Chart: mongodb:2.0.5
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: 3.6.4
-	created: 2018-05-20T20:56:49.599188376Z
+	created: 2018-05-21T11:12:06.082150457Z
 	dependencies: None
 	description: NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
 	digest: 6d77a80e5cf5a82c90e610bfeabc97ac053bad04f2f78809ef315498a4dcfbec
 	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
 	keywords: mongodb,database,nosql
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: mongodb
 	sources: https://github.com/bitnami/bitnami-docker-mongodb
-	urls: https://kubernetes-charts.storage.googleapis.com/mongodb-2.0.5.tgz
+	urls: https://charts.bitnami.com/bitnami/mongodb-2.0.5.tgz
 	version: 2.0.5
 Chart: rabbitmq-ha:1.5.2
 	apiVersion: v1
 	appVersion: 3.7.4
-	created: 2018-06-01T15:24:40.644583694Z
+	created: 2020-10-15T15:46:26.807549-04:00
 	dependencies: None
 	description: Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).
 	digest: 6b1afec0fa7f0f9cae6746571c22039fa2ecb22ad01c36e0ce6457b18f54917d
 	icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
 	keywords: rabbitmq,message queue,AMQP,AMQPS,MQTT,STOMP
 	maintainers: etiennetremel:etienne.tremel@container-solutions.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: rabbitmq-ha
 	sources: https://github.com/rabbitmq/rabbitmq,https://github.com/docker-library/rabbitmq
-	urls: https://kubernetes-charts.storage.googleapis.com/rabbitmq-ha-1.5.2.tgz
+	urls: https://charts.helm.sh/stable/packages/rabbitmq-ha-1.5.2.tgz
 	version: 1.5.2
 Chart: xray:0.4.2
 	apiVersion: v1
 	appVersion: 2.3.0
 	created: Not specified
-	dependencies: postgresql:0.8.7, rabbitmq-ha:1.5.2, mongodb:2.0.5
+	dependencies: mongodb:2.0.5, rabbitmq-ha:1.5.2, postgresql:0.8.7
 	description: DEPRECATED Universal component scan for security and license inventory and impact analysis
 	digest: Not specified
 	icon: https://raw.githubusercontent.com/JFrogDev/artifactory-dcos/master/images/jfrog_med.png
 	keywords: xray,jfrog
 	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: xray
 	sources: https://bintray.com/jfrog/product/xray/view,https://github.com/jfrog/charts
 	urls: Not specified
 	version: 0.4.2
 Chart: postgresql:0.8.7
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: Not specified
-	created: 2018-01-24T08:49:08.805316243Z
+	created: 2020-10-15T15:46:22.348697-04:00
 	dependencies: None
 	description: Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
 	digest: 97bdd1bcd6d42aba230a36e2bff4113469fa7f0ab6f609ff6b13a8a097da409b
 	icon: https://www.postgresql.org/media/img/about/press/elephant.png
 	keywords: postgresql,postgres,database,sql
 	maintainers: swordbeta,databus23
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: postgresql
 	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/postgres
-	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-0.8.7.tgz
+	urls: https://charts.helm.sh/stable/packages/postgresql-0.8.7.tgz
 	version: 0.8.7
 
 There are 7 referenced Docker Images
@@ -75,15 +75,15 @@ Image: docker.bintray.io/jfrog/xray-server:2.3.0
 
 Chart Dependencies
 ------------------
-xray:0.4.2 depends on postgresql:0.8.7
-xray:0.4.2 depends on rabbitmq-ha:1.5.2
 xray:0.4.2 depends on mongodb:2.0.5
+xray:0.4.2 depends on rabbitmq-ha:1.5.2
+xray:0.4.2 depends on postgresql:0.8.7
 mongodb:2.0.5 uses docker.io/bitnami/mongodb:3.6.3
 rabbitmq-ha:1.5.2 uses rabbitmq:3.7-alpine
-xray:0.4.2 uses docker.bintray.io/jfrog/xray-indexer:2.3.0
 xray:0.4.2 uses docker.bintray.io/jfrog/xray-server:2.3.0
+xray:0.4.2 uses docker.bintray.io/jfrog/xray-indexer:2.3.0
 xray:0.4.2 uses docker.bintray.io/jfrog/xray-analysis:2.3.0
 xray:0.4.2 uses docker.bintray.io/jfrog/xray-persist:2.3.0
 postgresql:0.8.7 uses postgres:9.6.2
 
-Generated on 2020/04/26 14:03:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:44:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

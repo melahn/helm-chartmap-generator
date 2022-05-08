@@ -9,7 +9,7 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/phpbb",
+      "name": "bitnami/phpbb:3.3.0-debian-10-r25",
       "type": "image",
       "version": "3.3.0-debian-10-r25"
     },
@@ -28,7 +28,7 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mariadb",
+        "name": "bitnami/mariadb:10.3.22-debian-10-r17",
         "type": "image",
         "version": "10.3.22-debian-10-r17"
       }],

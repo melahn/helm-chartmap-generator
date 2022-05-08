@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "rowanruseler",
+    "email": "rowanruseler@gmail.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "dpage/pgadmin4",
+    "type": "image",
+    "version": "4.18"
+  }],
+  "name": "pgadmin:1.2.1",
+  "description": "pgAdmin is a web based administration tool for PostgreSQL database",
+  "type": "chart",
+  "shortName": "pgadmin",
+  "version": "1.2.1"
+}

@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for telegraf:1.6.1
 
 'There is one referenced Helm Chart
-artifact "telegraf:1.6.1\n====\n\ttelegraf\n====\n\t1.6.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: telegraf\ncollector\ntimeseries\ninfluxdata" as telegraf_1_6_1 #IndianRed
+artifact "telegraf:1.6.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\ttelegraf\n\t\tcollector\n\t\ttimeseries\n\t\tinfluxdata" as telegraf_1_6_1 #IndianRed
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\ttelegraf\n====\n\t1.12-alpine" as telegraf_1_12_alpine #IndianRed
+usecase "Image\n====\nDocker Hub\n====\ntelegraf\n====\n1.12-alpine" as telegraf_1_12_alpine #IndianRed
 
 'Chart Dependencies
 telegraf_1_6_1--[#orange]-|>telegraf_1_12_alpine
 
-center footer Generated on 2020/04/26 14:01:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:40:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

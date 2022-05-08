@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for hlf-peer:1.6.3
+
+'There is one referenced Helm Chart
+artifact "hlf-peer:1.6.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tblockchain\n\t\thyperledger\n\t\tfabric" as hlf_peer_1_6_3 #GreenYellow
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nhyperledger/fabric-peer\n====\n1.4.3" as hyperledger_fabric_peer_1_4_3 #FloralWhite
+
+'Chart Dependencies
+hlf_peer_1_6_3--[#orange]-|>hyperledger_fabric_peer_1_4_3
+
+center footer Generated on 2022/05/07 20:05:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

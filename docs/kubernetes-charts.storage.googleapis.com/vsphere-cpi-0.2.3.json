@@ -1,0 +1,14 @@
+{
+  "keywords": [
+    "vsphere",
+    "vmware",
+    "cloud",
+    "provider"
+  ],
+  "children": [],
+  "name": "vsphere-cpi:0.2.3",
+  "description": "DEPRECATED - A Helm chart for vSphere Cloud Provider Interface Manager (CPI)",
+  "type": "chart",
+  "shortName": "vsphere-cpi",
+  "version": "0.2.3"
+}

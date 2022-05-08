@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for aws-cluster-autoscaler:0.3.2
 
 'There is one referenced Helm Chart
-artifact "aws-cluster-autoscaler:0.3.2\n====\n\taws-cluster-autoscaler\n====\n\t0.3.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Michael Goodness\n====\n\tKeywords: " as aws_cluster_autoscaler_0_3_2 #HoneyDew
+artifact "aws-cluster-autoscaler:0.3.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Michael Goodness\n====\n\tKeywords: " as aws_cluster_autoscaler_0_3_2 #HoneyDew
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tk8s.gcr.io/cluster-autoscaler\n====\n\tv0.6.1" as k8s_gcr_io_cluster_autoscaler_v0_6_1 #LightCyan
+usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/cluster-autoscaler\n====\nv0.6.1" as k8s_gcr_io_cluster_autoscaler_v0_6_1 #LightCyan
 
 'Chart Dependencies
 aws_cluster_autoscaler_0_3_2--[#orange]-|>k8s_gcr_io_cluster_autoscaler_v0_6_1
 
-center footer Generated on 2020/04/26 13:41:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:48:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

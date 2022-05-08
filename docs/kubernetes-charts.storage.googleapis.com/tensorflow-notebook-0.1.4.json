@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "cheyang",
+    "email": "cheyang@163.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "tensorflow/tensorflow",
+    "type": "image",
+    "version": "1.6.0-devel"
+  }],
+  "name": "tensorflow-notebook:0.1.4",
+  "description": "A Helm chart for tensorflow notebook and tensorboard",
+  "type": "chart",
+  "shortName": "tensorflow-notebook",
+  "version": "0.1.4"
+}

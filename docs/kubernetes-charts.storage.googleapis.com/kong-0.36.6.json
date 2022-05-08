@@ -9,13 +9,22 @@
       "email": "harry@konghq.com"
     }
   ],
-  "children": [{
-    "repoHost": "Docker Hub",
-    "children": [],
-    "name": "kong-docker-kubernetes-ingress-controller.bintray.io/kong-ingress-controller",
-    "type": "image",
-    "version": "0.7.0"
-  }],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "kong",
+      "type": "image",
+      "version": "1.4"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "kong-docker-kubernetes-ingress-controller.bintray.io/kong-ingress-controller",
+      "type": "image",
+      "version": "0.7.0"
+    }
+  ],
   "name": "kong:0.36.6",
   "description": "DEPRECATED The Cloud-Native Ingress and API-management",
   "type": "chart",

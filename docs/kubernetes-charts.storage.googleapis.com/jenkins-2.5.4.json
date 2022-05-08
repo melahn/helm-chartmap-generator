@@ -1,0 +1,23 @@
+{
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "jenkins/jenkins",
+      "type": "image",
+      "version": "lts"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "kiwigrid/k8s-sidecar",
+      "type": "image",
+      "version": "0.1.144"
+    }
+  ],
+  "name": "jenkins:2.5.4",
+  "description": "DEPRECATED - Open source continuous integration server. It supports multiple SCM tools including CVS, Subversion and Git. It can execute Apache Ant and Apache Maven-based projects as well as arbitrary scripts.",
+  "type": "chart",
+  "shortName": "jenkins",
+  "version": "2.5.4"
+}

@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "gcp-night-king:1.0.4",
+  "description": "DEPRECATED A Helm chart for GCP Night King",
+  "type": "chart",
+  "shortName": "gcp-night-king",
+  "version": "1.0.4"
+}

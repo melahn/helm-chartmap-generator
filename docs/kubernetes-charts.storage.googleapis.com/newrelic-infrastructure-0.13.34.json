@@ -1,0 +1,27 @@
+{
+  "maintainers": [
+    {
+      "name": "rk295",
+      "email": "robin@kearney.co.uk"
+    },
+    {
+      "name": "jfjoly",
+      "email": "jjoly@newrelic.com"
+    },
+    {"name": "smoya"},
+    {"name": "areina"},
+    {"name": "douglascamata"},
+    {"name": "rk295"}
+  ],
+  "keywords": [
+    "infrastructure",
+    "newrelic",
+    "monitoring"
+  ],
+  "children": [],
+  "name": "newrelic-infrastructure:0.13.34",
+  "description": "A Helm chart to deploy the New Relic Infrastructure Agent as a DaemonSet",
+  "type": "chart",
+  "shortName": "newrelic-infrastructure",
+  "version": "0.13.34"
+}

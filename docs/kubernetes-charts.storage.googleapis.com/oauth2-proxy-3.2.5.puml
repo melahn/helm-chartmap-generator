@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for oauth2-proxy:3.2.5
+
+'There is one referenced Helm Chart
+artifact "oauth2-proxy:3.2.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tkubernetes\n\t\toauth\n\t\toauth2\n\t\tauthentication\n\t\tgoogle\n\t\tgithub" as oauth2_proxy_3_2_5 #LightGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\nquay.io\n====\npusher/oauth2_proxy:v5.1.0\n====\nv5.1.0" as quay_io_pusher_oauth2_proxy_v5_1_0 #LemonChiffon
+
+'Chart Dependencies
+oauth2_proxy_3_2_5--[#orange]-|>quay_io_pusher_oauth2_proxy_v5_1_0
+
+center footer Generated on 2022/05/07 20:22:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

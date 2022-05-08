@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for clamav:1.0.7
+
+'There is one referenced Helm Chart
+artifact "clamav:1.0.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as clamav_1_0_7 #IndianRed
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nmailu/clamav\n====\n1.6" as mailu_clamav_1_6 #DarkTurquoise
+
+'Chart Dependencies
+clamav_1_0_7--[#orange]-|>mailu_clamav_1_6
+
+center footer Generated on 2022/05/07 19:50:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for mailhog:2.2.0
+
+'There is one referenced Helm Chart
+artifact "mailhog:2.2.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: unguiculus\n====\n\tKeywords: \n\t\tmailhog\n\t\tmail\n\t\tsmtp\n\t\temail\n\t\te-mail\n\t\ttesting" as mailhog_2_2_0 #HotPink
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nmailhog/mailhog\n====\nv1.0.0" as mailhog_mailhog_v1_0_0 #GhostWhite
+
+'Chart Dependencies
+mailhog_2_2_0--[#orange]-|>mailhog_mailhog_v1_0_0
+
+center footer Generated on 2022/05/07 20:15:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

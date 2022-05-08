@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for cosbench:1.0.3
+
+'There is one referenced Helm Chart
+artifact "cosbench:1.0.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as cosbench_1_0_3 #LightCoral
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nzenko/zenko-cosbench\n====\n0.0.6" as zenko_zenko_cosbench_0_0_6 #Ivory
+
+'Chart Dependencies
+cosbench_1_0_3--[#orange]-|>zenko_zenko_cosbench_0_0_6
+
+center footer Generated on 2022/05/07 19:52:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

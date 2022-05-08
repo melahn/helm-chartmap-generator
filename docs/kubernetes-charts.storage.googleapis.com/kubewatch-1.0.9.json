@@ -1,4 +1,14 @@
 {
+  "maintainers": [
+    {
+      "name": "compleatang",
+      "email": "casey@monax.io"
+    },
+    {
+      "name": "Bitnami",
+      "email": "containers@bitnami.com"
+    }
+  ],
   "keywords": [
     "kubernetes",
     "slack",
@@ -9,12 +19,12 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/kubewatch",
+    "name": "bitnami/kubewatch:0.0.4-debian-10-r45",
     "type": "image",
-    "version": "0.0.4-debian-10-r29"
+    "version": "0.0.4-debian-10-r45"
   }],
   "name": "kubewatch:1.0.9",
-  "description": "DEPRECATED Kubewatch notifies your slack rooms when changes to your cluster occur",
+  "description": "Kubewatch notifies your slack rooms when changes to your cluster occur",
   "type": "chart",
   "shortName": "kubewatch",
   "version": "1.0.9"

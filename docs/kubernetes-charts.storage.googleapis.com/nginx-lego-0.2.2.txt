@@ -1,0 +1,31 @@
+Chart Map for nginx-lego:0.2.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: nginx-lego:0.2.2
+	apiVersion: Not specified
+	appVersion: Not specified
+	created: Not specified
+	dependencies: None
+	description: Chart for nginx-ingress-controller and kube-lego
+	digest: Not specified
+	icon: Not specified
+	keywords: kube-lego,nginx-ingress-controller,nginx,letsencrypt
+	maintainers: Jack Zampolin:jack.zampolin@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: nginx-lego
+	sources: https://github.com/kubernetes/contrib/tree/master/ingress/controllers/nginx,https://github.com/jetstack/kube-lego/tree/master/examples/nginx
+	urls: Not specified
+	version: 0.2.2
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: gcr.io/google_containers/nginx-ingress-controller:0.8.3
+Image: gcr.io/google_containers/defaultbackend:1.0
+
+Chart Dependencies
+------------------
+nginx-lego:0.2.2 uses gcr.io/google_containers/defaultbackend:1.0
+nginx-lego:0.2.2 uses gcr.io/google_containers/nginx-ingress-controller:0.8.3
+
+Generated on 2022/05/07 20:22:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

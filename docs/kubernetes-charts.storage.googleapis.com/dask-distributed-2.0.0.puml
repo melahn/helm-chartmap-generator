@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for dask-distributed:2.0.0
+
+'There is one referenced Helm Chart
+artifact "dask-distributed:2.0.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: danielfrg\n====\n\tKeywords: " as dask_distributed_2_0_0 #LightSeaGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\ndaskdev/dask\n====\nlatest" as daskdev_dask_latest #LemonChiffon
+usecase "Image\n====\nDocker Hub\n====\njupyter/base-notebook\n====\n11be019e4079" as jupyter_base_notebook_11be019e4079 #LightCyan
+
+'Chart Dependencies
+dask_distributed_2_0_0--[#orange]-|>daskdev_dask_latest
+dask_distributed_2_0_0--[#orange]-|>jupyter_base_notebook_11be019e4079
+
+center footer Generated on 2022/05/07 19:53:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

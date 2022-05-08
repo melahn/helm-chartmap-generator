@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for contour:0.2.1
+
+'There is one referenced Helm Chart
+artifact "contour:0.2.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tcpanato\n\t\tscottrigby\n====\n\tKeywords: \n\t\tingress\n\t\tenvoy\n\t\tcontour" as contour_0_2_1 #DodgerBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nenvoyproxy/envoy:v1.11.1\n====\nv1.11.1" as docker_io_envoyproxy_envoy_v1_11_1 #DodgerBlue
+usecase "Image\n====\ngcr.io\n====\nheptio-images/contour:v0.15.0\n====\nv0.15.0" as gcr_io_heptio_images_contour_v0_15_0 #LightCoral
+
+'Chart Dependencies
+contour_0_2_1--[#orange]-|>gcr_io_heptio_images_contour_v0_15_0
+contour_0_2_1--[#orange]-|>docker_io_envoyproxy_envoy_v1_11_1
+
+center footer Generated on 2022/05/07 19:52:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

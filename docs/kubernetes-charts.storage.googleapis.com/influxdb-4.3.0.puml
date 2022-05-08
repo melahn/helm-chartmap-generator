@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for influxdb:4.3.0
+
+'There is one referenced Helm Chart
+artifact "influxdb:4.3.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tjackzampolin\n\t\taisuko\n\t\tnaseemkullah\n====\n\tKeywords: \n\t\tinfluxdb\n\t\tdatabase\n\t\ttimeseries" as influxdb_4_3_0 #Azure
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\ninfluxdb\n====\n1.7.9-alpine" as influxdb_1_7_9_alpine #Azure
+
+'Chart Dependencies
+influxdb_4_3_0--[#orange]-|>influxdb_1_7_9_alpine
+
+center footer Generated on 2022/05/07 20:06:50 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

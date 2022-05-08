@@ -1,0 +1,24 @@
+{
+  "maintainers": [
+    {
+      "name": "moxious",
+      "email": "david.allen@neo4j.com"
+    },
+    {
+      "name": "mneedham",
+      "email": "mark.needham@neo4j.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "neo4j",
+    "type": "image",
+    "version": "4.0.3-enterprise"
+  }],
+  "name": "neo4j:3.0.0",
+  "description": "Neo4j is the world's leading graph database",
+  "type": "chart",
+  "shortName": "neo4j",
+  "version": "3.0.0"
+}

@@ -1,0 +1,47 @@
+{
+  "maintainers": [
+    {
+      "name": "arvindsv",
+      "email": "arvind@thoughtworks.com"
+    },
+    {
+      "name": "ganeshspatil",
+      "email": "ganeshpl@thoughtworks.com"
+    },
+    {
+      "name": "varshavaradarajan",
+      "email": "varshasvaradarajan@gmail.com"
+    }
+  ],
+  "keywords": [
+    "gocd",
+    "ci",
+    "cd",
+    "ci/cd",
+    "continuous-integration",
+    "continuous-delivery",
+    "continuous-deployment",
+    "continuous-testing"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "gocd/gocd-agent-alpine-3.9",
+      "type": "image",
+      "version": "v20.7.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "gocd/gocd-server",
+      "type": "image",
+      "version": "v20.7.0"
+    }
+  ],
+  "name": "gocd:1.30.0",
+  "description": "GoCD is an open-source continuous delivery server to model and visualize complex workflows with ease.",
+  "type": "chart",
+  "shortName": "gocd",
+  "version": "1.30.0"
+}

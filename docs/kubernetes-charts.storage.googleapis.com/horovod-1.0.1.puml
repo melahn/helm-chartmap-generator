@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for horovod:1.0.1
+
+'There is one referenced Helm Chart
+artifact "horovod:1.0.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: cheyang\n====\n\tKeywords: " as horovod_1_0_1 #Fuchsia
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nuber/horovod\n====\n0.12.1-tf1.8.0-py3.5" as uber_horovod_0_12_1_tf1_8_0_py3_5 #Gainsboro
+
+'Chart Dependencies
+horovod_1_0_1--[#orange]-|>uber_horovod_0_12_1_tf1_8_0_py3_5
+
+center footer Generated on 2022/05/07 20:05:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

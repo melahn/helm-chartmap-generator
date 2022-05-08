@@ -1,0 +1,73 @@
+{
+  "maintainers": [
+    {
+      "name": "ssalaues",
+      "email": "salimsalaues@gmail.com"
+    },
+    {
+      "name": "tmacro",
+      "email": "mail@tmacs.space"
+    }
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "zenko/cloudserver",
+      "type": "image",
+      "version": "8.1.5"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "foxish",
+          "email": "ramanathana@google.com"
+        },
+        {
+          "name": "unguiculus",
+          "email": "unguiculus@gmail.com"
+        }
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "mongo",
+        "type": "image",
+        "version": "3.6"
+      }],
+      "name": "mongodb-replicaset:3.6.4",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "type": "chart",
+      "shortName": "mongodb-replicaset",
+      "version": "3.6.4"
+    },
+    {
+      "maintainers": [{
+        "name": "ssalaues",
+        "email": "salimsalaues@gmail.com"
+      }],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "redis",
+        "type": "image",
+        "version": "4.0.11-stretch"
+      }],
+      "name": "redis-ha:3.0.0",
+      "description": "Highly available Kubernetes implementation of Redis",
+      "type": "chart",
+      "shortName": "redis-ha",
+      "version": "3.0.0"
+    }
+  ],
+  "name": "cloudserver:1.0.5",
+  "description": "An open-source Node.js implementation of the Amazon S3 protocol on the front-end and backend storage capabilities to multiple clouds, including Azure and Google.",
+  "type": "chart",
+  "shortName": "cloudserver",
+  "version": "1.0.5"
+}

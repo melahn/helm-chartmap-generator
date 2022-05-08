@@ -1,0 +1,29 @@
+Chart Map for prometheus-mysql-exporter:0.6.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: prometheus-mysql-exporter:0.6.0
+	apiVersion: v1
+	appVersion: v0.11.0
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for prometheus mysql exporter with cloudsqlproxy
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: juanchimienti:juan.chimienti@gmail.com,monotek:monotek23@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: prometheus-mysql-exporter
+	sources: https://github.com/prometheus/mysqld_exporter
+	urls: Not specified
+	version: 0.6.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: prom/mysqld-exporter:v0.11.0
+
+Chart Dependencies
+------------------
+prometheus-mysql-exporter:0.6.0 uses prom/mysqld-exporter:v0.11.0
+
+Generated on 2022/05/07 20:29:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,14 @@
+{
+  "keywords": [
+    "logging",
+    "monitoring",
+    "fluent",
+    "fluentd"
+  ],
+  "children": [],
+  "name": "fluent-bit:2.10.3",
+  "description": "DEPRECATED Fast and Lightweight Log/Data Forwarder for Linux, BSD and OSX",
+  "type": "chart",
+  "shortName": "fluent-bit",
+  "version": "2.10.3"
+}

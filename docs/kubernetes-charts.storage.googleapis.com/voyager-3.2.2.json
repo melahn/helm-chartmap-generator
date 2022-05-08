@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "appscode",
+    "email": "support@appscode.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "appscode/voyager",
+    "type": "image",
+    "version": "6.0.0"
+  }],
+  "name": "voyager:3.2.2",
+  "description": "Voyager by AppsCode - Secure Ingress Controller for Kubernetes",
+  "type": "chart",
+  "shortName": "voyager",
+  "version": "3.2.2"
+}

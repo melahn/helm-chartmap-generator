@@ -1,0 +1,29 @@
+Chart Map for horovod:1.0.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: horovod:1.0.2
+	apiVersion: v1
+	appVersion: 0.12.1
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED - A Helm chart for deploying Horovod
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: horovod
+	sources: https://github.com/uber/horovod,https://github.com/uber/horovod/blob/master/docs/docker.md
+	urls: Not specified
+	version: 1.0.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: uber/horovod:0.12.1-tf1.8.0-py3.5
+
+Chart Dependencies
+------------------
+horovod:1.0.2 uses uber/horovod:0.12.1-tf1.8.0-py3.5
+
+Generated on 2022/05/07 20:05:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

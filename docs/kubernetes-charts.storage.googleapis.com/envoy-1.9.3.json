@@ -1,0 +1,28 @@
+{
+  "maintainers": [
+    {
+      "name": "josdotso",
+      "email": "josdotso@cisco.com"
+    },
+    {
+      "name": "mumoshu",
+      "email": "ykuoka@gmail.com"
+    }
+  ],
+  "keywords": [
+    "envoy",
+    "proxy"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "envoyproxy/envoy",
+    "type": "image",
+    "version": "v1.11.1"
+  }],
+  "name": "envoy:1.9.3",
+  "description": "Envoy is an open source edge and service proxy, designed for cloud-native applications.",
+  "type": "chart",
+  "shortName": "envoy",
+  "version": "1.9.3"
+}

@@ -1,0 +1,33 @@
+{
+  "maintainers": [
+    {
+      "name": "nblumhardt",
+      "email": "nblumhardt@nblumhardt.com"
+    },
+    {
+      "name": "KodrAus",
+      "email": "ashleymannix@live.com.au"
+    },
+    {
+      "name": "gertjvr",
+      "email": "gertjvr@gmail.com"
+    }
+  ],
+  "keywords": [
+    "seq",
+    "structured",
+    "logging"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "datalust/seq",
+    "type": "image",
+    "version": "2020"
+  }],
+  "name": "seq:2.3.0",
+  "description": "Seq is the easiest way for development teams to capture, search and visualize structured log events! This page will walk you through the very quick setup process.",
+  "type": "chart",
+  "shortName": "seq",
+  "version": "2.3.0"
+}

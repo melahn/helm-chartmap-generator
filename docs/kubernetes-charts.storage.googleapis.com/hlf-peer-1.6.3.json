@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "blockchain",
+    "hyperledger",
+    "fabric"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "hyperledger/fabric-peer",
+    "type": "image",
+    "version": "1.4.3"
+  }],
+  "name": "hlf-peer:1.6.3",
+  "description": "DEPRECATED - Hyperledger Fabric Peer chart (these charts are created by AID:Tech and are currently not directly associated with the Hyperledger project)",
+  "type": "chart",
+  "shortName": "hlf-peer",
+  "version": "1.6.3"
+}

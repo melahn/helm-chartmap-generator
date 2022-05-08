@@ -1,0 +1,27 @@
+Chart Map for auditbeat:1.1.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: auditbeat:1.1.1
+	apiVersion: v1
+	appVersion: 6.7.0
+	created: Not specified
+	dependencies: None
+	description: A lightweight shipper to audit the activities of users and processes on your systems
+	digest: Not specified
+	icon: https://www.elastic.co/assets/blt27d1fd26b0862613/icon-auditbeat-bb.svg
+	keywords: Not specified
+	maintainers: cpanato:ctadeu@gmail.com,mumoshu:ykuoka@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: auditbeat
+	sources: https://www.elastic.co/guide/en/beats/auditbeat/current/index.html
+	urls: Not specified
+	version: 1.1.1
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2022/05/07 19:47:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

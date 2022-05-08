@@ -1,0 +1,22 @@
+{
+  "maintainers": [{
+    "name": "verwilst",
+    "email": "bart@verwilst.be"
+  }],
+  "keywords": [
+    "nfs",
+    "storage"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "external_storage/nfs-client-provisioner:v3.1.0-k8s1.11",
+    "type": "image",
+    "version": "v3.1.0-k8s1.11"
+  }],
+  "name": "nfs-client-provisioner:1.2.10",
+  "description": "nfs-client is an automatic provisioner that used your *already configured* NFS server, automatically creating Persistent Volumes.",
+  "type": "chart",
+  "shortName": "nfs-client-provisioner",
+  "version": "1.2.10"
+}

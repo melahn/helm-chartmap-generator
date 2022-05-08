@@ -1,4 +1,8 @@
 {
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
   "keywords": [
     "phabricator",
     "http",
@@ -29,7 +33,7 @@
     "children": [{
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/mariadb",
+      "name": "bitnami/mariadb:10.3.22-debian-10-r27",
       "type": "image",
       "version": "10.3.22-debian-10-r27"
     }],
@@ -40,7 +44,7 @@
     "version": "7.3.12"
   }],
   "name": "phabricator:9.0.13",
-  "description": "DEPRECATED Collection of open source web applications that help software companies build better software.",
+  "description": "Collection of open source web applications that help software companies build better software.",
   "type": "chart",
   "shortName": "phabricator",
   "version": "9.0.13"

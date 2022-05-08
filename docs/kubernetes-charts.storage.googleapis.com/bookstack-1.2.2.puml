@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for bookstack:1.2.2
+
+'There are 2 referenced Helm Charts
+artifact "bookstack:1.2.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: verwilst\n====\n\tKeywords: " as bookstack_1_2_2 #Aqua
+artifact "mariadb:4.4.2\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: bitnami-bot\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_4_4_2 #DarkTurquoise
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.1.36-debian-9\n====\n10.1.36-debian-9" as docker_io_bitnami_mariadb_10_1_36_debian_9 #DarkGoldenRod
+usecase "Image\n====\nDocker Hub\n====\nsolidnerd/bookstack\n====\n0.27.5" as solidnerd_bookstack_0_27_5 #Khaki
+
+'Chart Dependencies
+bookstack_1_2_2--[#green]-|>mariadb_4_4_2
+bookstack_1_2_2--[#orange]-|>solidnerd_bookstack_0_27_5
+mariadb_4_4_2--[#orange]-|>docker_io_bitnami_mariadb_10_1_36_debian_9
+
+center footer Generated on 2022/05/07 19:48:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

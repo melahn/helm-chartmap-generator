@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "appscode",
+    "email": "support@appscode.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "appscode/kubed",
+    "type": "image",
+    "version": "0.4.0"
+  }],
+  "name": "kubed:0.3.1",
+  "description": "Kubed by AppsCode - Kubernetes daemon",
+  "type": "chart",
+  "shortName": "kubed",
+  "version": "0.3.1"
+}

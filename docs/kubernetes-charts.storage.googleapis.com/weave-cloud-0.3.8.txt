@@ -1,0 +1,30 @@
+Chart Map for weave-cloud:0.3.8
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: weave-cloud:0.3.8
+	apiVersion: v1
+	appVersion: 1.4.0
+	created: Not specified
+	dependencies: None
+	description: Weave Cloud is a add-on to Kubernetes which provides Continuous Delivery, along with hosted Prometheus Monitoring and a visual dashboard for exploring & debugging microservices
+
+	digest: Not specified
+	icon: https://www.weave.works/assets/images/bltd108e8f850ae9e7c/weave-logo-512.png
+	keywords: Not specified
+	maintainers: errordeveloper:ilya@weave.works,stefanprodan:stefan@weave.works
+	repo url: https://charts.helm.sh/stable
+	name: weave-cloud
+	sources: Not specified
+	urls: Not specified
+	version: 0.3.8
+
+There is one referenced Docker Image
+------------------------------------
+Image: weaveworks/launcher-agent:1.4.0
+
+Chart Dependencies
+------------------
+weave-cloud:0.3.8 uses weaveworks/launcher-agent:1.4.0
+
+Generated on 2022/05/07 20:44:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

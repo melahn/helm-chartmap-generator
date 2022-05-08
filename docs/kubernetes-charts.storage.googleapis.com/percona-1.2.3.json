@@ -1,0 +1,20 @@
+{
+  "keywords": [
+    "mysql",
+    "percona",
+    "database",
+    "sql"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "percona",
+    "type": "image",
+    "version": "5.7.26"
+  }],
+  "name": "percona:1.2.3",
+  "description": "DEPRECATED - free, fully compatible, enhanced, open source drop-in replacement for MySQL",
+  "type": "chart",
+  "shortName": "percona",
+  "version": "1.2.3"
+}

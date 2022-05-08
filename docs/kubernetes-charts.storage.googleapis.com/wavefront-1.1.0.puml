@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for wavefront:1.1.0
+
+'There are 4 referenced Helm Charts
+artifact "common:1.1.2\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_1_2 #DarkSeaGreen
+artifact "common:1.1.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_1_1 #DarkSeaGreen
+artifact "wavefront:1.1.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmetric\n\t\tmonitoring\n\t\tobservability\n\t\talerting" as wavefront_1_1_0 #LavenderBlush
+artifact "kube-state-metrics:1.1.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tprometheus\n\t\tkube-state-metrics\n\t\tmonitoring" as kube_state_metrics_1_1_1 #Gainsboro
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/wavefront-proxy:9.3.0-debian-10-r79\n====\n9.3.0-debian-10-r79" as docker_io_bitnami_wavefront_proxy_9_3_0_debian_10_r79 #Cyan
+usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:1.9.7-debian-10-r143\n====\n1.9.7-debian-10-r143" as docker_io_bitnami_kube_state_metrics_1_9_7_debian_10_r143 #CornflowerBlue
+
+'Chart Dependencies
+wavefront_1_1_0--[#green]-|>kube_state_metrics_1_1_1
+kube_state_metrics_1_1_1--[#green]-|>common_1_1_1
+wavefront_1_1_0--[#green]-|>common_1_1_2
+wavefront_1_1_0--[#orange]-|>docker_io_bitnami_wavefront_proxy_9_3_0_debian_10_r79
+kube_state_metrics_1_1_1--[#orange]-|>docker_io_bitnami_kube_state_metrics_1_9_7_debian_10_r143
+
+center footer Generated on 2022/05/07 20:44:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kapacitor:1.2.0
+
+'There is one referenced Helm Chart
+artifact "kapacitor:1.2.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tjackzampolin\n\t\taisuko\n====\n\tKeywords: \n\t\tkapacitor\n\t\tstream\n\t\tetl\n\t\ttimeseries" as kapacitor_1_2_0 #Cornsilk
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2022/05/07 20:09:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

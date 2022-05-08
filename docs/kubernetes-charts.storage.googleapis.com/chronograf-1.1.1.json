@@ -7,7 +7,7 @@
   "children": [{
     "repoHost": "quay.io",
     "children": [],
-    "name": "influxdb/chronograf",
+    "name": "influxdb/chronograf:1.7.12",
     "type": "image",
     "version": "1.7.12"
   }],

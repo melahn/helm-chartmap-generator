@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for k8s-spot-rescheduler:0.4.5
+
+'There is one referenced Helm Chart
+artifact "k8s-spot-rescheduler:0.4.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: komljen\n====\n\tKeywords: \n\t\tspot\n\t\trescheduler" as k8s_spot_rescheduler_0_4_5 #Bisque
+
+'There is one referenced Docker Image
+usecase "Image\n====\nquay.io\n====\npusher/k8s-spot-rescheduler:v0.3.0\n====\nv0.3.0" as quay_io_pusher_k8s_spot_rescheduler_v0_3_0 #Cyan
+
+'Chart Dependencies
+k8s_spot_rescheduler_0_4_5--[#orange]-|>quay_io_pusher_k8s_spot_rescheduler_v0_3_0
+
+center footer Generated on 2022/05/07 20:08:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

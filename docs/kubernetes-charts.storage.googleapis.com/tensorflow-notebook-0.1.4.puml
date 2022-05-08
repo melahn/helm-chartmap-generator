@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for tensorflow-notebook:0.1.4
+
+'There is one referenced Helm Chart
+artifact "tensorflow-notebook:0.1.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: cheyang\n====\n\tKeywords: " as tensorflow_notebook_0_1_4 #LightCoral
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\ntensorflow/tensorflow\n====\n1.6.0-devel" as tensorflow_tensorflow_1_6_0_devel #LightSalmon
+
+'Chart Dependencies
+tensorflow_notebook_0_1_4--[#orange]-|>tensorflow_tensorflow_1_6_0_devel
+
+center footer Generated on 2022/05/07 20:40:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

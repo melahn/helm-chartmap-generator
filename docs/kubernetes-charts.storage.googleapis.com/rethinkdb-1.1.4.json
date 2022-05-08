@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "rethinkdb",
+    "database",
+    "nosql"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "codylundquist/helm-rethinkdb-cluster",
+    "type": "image",
+    "version": "0.1.0"
+  }],
+  "name": "rethinkdb:1.1.4",
+  "description": "DEPRECATED - The open-source database for the realtime web",
+  "type": "chart",
+  "shortName": "rethinkdb",
+  "version": "1.1.4"
+}

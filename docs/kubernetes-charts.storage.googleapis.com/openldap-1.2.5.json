@@ -1,0 +1,22 @@
+{
+  "maintainers": [{
+    "name": "enis",
+    "email": "enis@apache.org"
+  }],
+  "keywords": [
+    "ldap",
+    "openldap"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "osixia/openldap",
+    "type": "image",
+    "version": "1.2.4"
+  }],
+  "name": "openldap:1.2.5",
+  "description": "Community developed LDAP software",
+  "type": "chart",
+  "shortName": "openldap",
+  "version": "1.2.5"
+}

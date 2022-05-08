@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "zenko/zenko-cosbench",
+    "type": "image",
+    "version": "0.0.6"
+  }],
+  "name": "cosbench:1.0.3",
+  "description": "DEPRECATED A benchmark tool for cloud object storage services",
+  "type": "chart",
+  "shortName": "cosbench",
+  "version": "1.0.3"
+}

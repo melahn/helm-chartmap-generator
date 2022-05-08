@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "aws-iam-authenticator:0.1.5",
+  "description": "DEPRECATED A Helm chart for aws-iam-authenticator",
+  "type": "chart",
+  "shortName": "aws-iam-authenticator",
+  "version": "0.1.5"
+}

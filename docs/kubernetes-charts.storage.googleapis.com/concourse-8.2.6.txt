@@ -1,0 +1,47 @@
+Chart Map for concourse:8.2.6
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: concourse:8.2.6
+	apiVersion: v1
+	appVersion: 5.6.0
+	created: Not specified
+	dependencies: postgresql:5.3.8
+	description: Concourse is a simple and scalable CI system.
+	digest: Not specified
+	icon: https://avatars1.githubusercontent.com/u/7809479
+	keywords: ci,concourse,concourse.ci
+	maintainers: cirocosta:cscosta@pivotal.io,william-tran:will@autonomic.ai,YoussB:byoussef@pivotal.io
+	repo url: https://charts.helm.sh/stable
+	name: concourse
+	sources: https://github.com/concourse/concourse,https://github.com/helm/charts
+	urls: Not specified
+	version: 8.2.6
+Chart: postgresql:5.3.8
+	apiVersion: v1
+	appVersion: 11.3.0
+	created: 2019-06-21T09:06:03.330525937Z
+	dependencies: None
+	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: 4736c933172ebb2c84816d3b7601b590f9831245997ba4a2e2cae145bee3b8fc
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql
+	urls: https://charts.bitnami.com/bitnami/postgresql-5.3.8.tgz
+	version: 5.3.8
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/postgresql:11.3.0-debian-9-r38
+Image: concourse/concourse:5.6.0
+
+Chart Dependencies
+------------------
+concourse:8.2.6 depends on postgresql:5.3.8
+concourse:8.2.6 uses concourse/concourse:5.6.0
+postgresql:5.3.8 uses docker.io/bitnami/postgresql:11.3.0-debian-9-r38
+
+Generated on 2022/05/07 19:51:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

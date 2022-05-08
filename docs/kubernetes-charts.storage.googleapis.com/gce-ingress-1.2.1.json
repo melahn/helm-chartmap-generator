@@ -1,0 +1,31 @@
+{
+  "maintainers": [{
+    "name": "paulczar",
+    "email": "username.taken@gmail.com"
+  }],
+  "keywords": [
+    "ingress",
+    "gce"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "k8s.gcr.io/ingress-gce-glbc-amd64",
+      "type": "image",
+      "version": "v1.4.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "k8s.gcr.io/defaultbackend",
+      "type": "image",
+      "version": "1.4"
+    }
+  ],
+  "name": "gce-ingress:1.2.1",
+  "description": "A GCE Ingress Controller",
+  "type": "chart",
+  "shortName": "gce-ingress",
+  "version": "1.2.1"
+}

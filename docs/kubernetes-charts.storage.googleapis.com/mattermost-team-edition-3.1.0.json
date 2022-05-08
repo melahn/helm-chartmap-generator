@@ -1,0 +1,60 @@
+{
+  "maintainers": [
+    {
+      "name": "cpanato",
+      "email": "carlos@mattermost.com"
+    },
+    {
+      "name": "jwilander",
+      "email": "joram@mattermost.com"
+    }
+  ],
+  "keywords": [
+    "mattermost",
+    "communication",
+    "team collaboration"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "mattermost/mattermost-team-edition",
+      "type": "image",
+      "version": "5.9.0"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "olemarkus",
+          "email": "o.with@sportradar.com"
+        },
+        {
+          "name": "viglesiasce",
+          "email": "viglesias@google.com"
+        }
+      ],
+      "keywords": [
+        "mysql",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "mysql",
+        "type": "image",
+        "version": "5.7.14"
+      }],
+      "name": "mysql:0.10.1",
+      "description": "Fast, reliable, scalable, and easy to use open-source relational database system.",
+      "type": "chart",
+      "shortName": "mysql",
+      "version": "0.10.1"
+    }
+  ],
+  "name": "mattermost-team-edition:3.1.0",
+  "description": "Mattermost Team Edition server.",
+  "type": "chart",
+  "shortName": "mattermost-team-edition",
+  "version": "3.1.0"
+}

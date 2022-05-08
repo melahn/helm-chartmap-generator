@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "pposkrobko/risk-advisor",
+    "type": "image",
+    "version": "v1.0.0"
+  }],
+  "name": "risk-advisor:2.0.6",
+  "description": "DEPRECATED - Risk Advisor add-on module for Kubernetes",
+  "type": "chart",
+  "shortName": "risk-advisor",
+  "version": "2.0.6"
+}

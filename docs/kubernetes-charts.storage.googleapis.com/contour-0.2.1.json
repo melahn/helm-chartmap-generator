@@ -1,0 +1,38 @@
+{
+  "maintainers": [
+    {
+      "name": "cpanato",
+      "email": "ctadeu@gmail.com"
+    },
+    {
+      "name": "scottrigby",
+      "email": "scott@r6by.com"
+    }
+  ],
+  "keywords": [
+    "ingress",
+    "envoy",
+    "contour"
+  ],
+  "children": [
+    {
+      "repoHost": "gcr.io",
+      "children": [],
+      "name": "heptio-images/contour:v0.15.0",
+      "type": "image",
+      "version": "v0.15.0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "envoyproxy/envoy:v1.11.1",
+      "type": "image",
+      "version": "v1.11.1"
+    }
+  ],
+  "name": "contour:0.2.1",
+  "description": "Contour Ingress controller for Kubernetes",
+  "type": "chart",
+  "shortName": "contour",
+  "version": "0.2.1"
+}

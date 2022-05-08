@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for spark:1.0.5
+
+'There is one referenced Helm Chart
+artifact "spark:1.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tapache\n\t\tspark" as spark_1_0_5 #LightSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/spark:2.4.3-debian-9-r79\n====\n2.4.3-debian-9-r79" as docker_io_bitnami_spark_2_4_3_debian_9_r79 #Azure
+
+'Chart Dependencies
+spark_1_0_5--[#orange]-|>docker_io_bitnami_spark_2_4_3_debian_9_r79
+
+center footer Generated on 2022/05/07 20:37:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

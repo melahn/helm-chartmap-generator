@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for rethinkdb:1.1.3
+
+'There is one referenced Helm Chart
+artifact "rethinkdb:1.1.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: meenie\n====\n\tKeywords: \n\t\trethinkdb\n\t\tdatabase\n\t\tnosql" as rethinkdb_1_1_3 #DarkTurquoise
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\ncodylundquist/helm-rethinkdb-cluster\n====\n0.1.0" as codylundquist_helm_rethinkdb_cluster_0_1_0 #Lavender
+
+'Chart Dependencies
+rethinkdb_1_1_3--[#orange]-|>codylundquist_helm_rethinkdb_cluster_0_1_0
+
+center footer Generated on 2022/05/07 20:33:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

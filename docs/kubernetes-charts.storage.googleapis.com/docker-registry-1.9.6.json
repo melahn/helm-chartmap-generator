@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "registry",
+    "type": "image",
+    "version": "2.7.1"
+  }],
+  "name": "docker-registry:1.9.6",
+  "description": "DEPRECATED A Helm chart for Docker Registry",
+  "type": "chart",
+  "shortName": "docker-registry",
+  "version": "1.9.6"
+}

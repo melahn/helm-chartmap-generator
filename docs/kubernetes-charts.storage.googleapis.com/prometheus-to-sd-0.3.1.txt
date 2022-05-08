@@ -1,0 +1,29 @@
+Chart Map for prometheus-to-sd:0.3.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: prometheus-to-sd:0.3.1
+	apiVersion: v1
+	appVersion: 0.5.2
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED Scrape metrics stored in prometheus format and push them to the Stackdriver
+	digest: Not specified
+	icon: Not specified
+	keywords: prometheus,stackdriver
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: prometheus-to-sd
+	sources: Not specified
+	urls: Not specified
+	version: 0.3.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: gcr.io/google-containers/prometheus-to-sd:v0.5.2
+
+Chart Dependencies
+------------------
+prometheus-to-sd:0.3.1 uses gcr.io/google-containers/prometheus-to-sd:v0.5.2
+
+Generated on 2022/05/07 20:31:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

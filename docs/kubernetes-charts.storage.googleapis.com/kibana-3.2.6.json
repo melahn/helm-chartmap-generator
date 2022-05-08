@@ -16,7 +16,7 @@
   "children": [{
     "repoHost": "docker.elastic.co",
     "children": [],
-    "name": "kibana/kibana-oss",
+    "name": "kibana/kibana-oss:6.7.0",
     "type": "image",
     "version": "6.7.0"
   }],

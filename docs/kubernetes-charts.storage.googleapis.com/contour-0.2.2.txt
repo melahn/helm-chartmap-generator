@@ -1,0 +1,31 @@
+Chart Map for contour:0.2.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: contour:0.2.2
+	apiVersion: v1
+	appVersion: v0.15.0
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED Contour Ingress controller for Kubernetes
+	digest: Not specified
+	icon: Not specified
+	keywords: ingress,envoy,contour
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: contour
+	sources: Not specified
+	urls: Not specified
+	version: 0.2.2
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/envoyproxy/envoy:v1.11.1
+Image: gcr.io/heptio-images/contour:v0.15.0
+
+Chart Dependencies
+------------------
+contour:0.2.2 uses gcr.io/heptio-images/contour:v0.15.0
+contour:0.2.2 uses docker.io/envoyproxy/envoy:v1.11.1
+
+Generated on 2022/05/07 19:52:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

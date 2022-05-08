@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for consul:3.9.4
 
 'There is one referenced Helm Chart
-artifact "consul:3.9.4\n====\n\tconsul\n====\n\t3.9.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: lachie83\n====\n\tKeywords: " as consul_3_9_4 #IndianRed
+artifact "consul:3.9.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: lachie83\n====\n\tKeywords: " as consul_3_9_4 #IndianRed
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tconsul\n====\n\t1.5.3" as consul_1_5_3 #IndianRed
+usecase "Image\n====\nDocker Hub\n====\nconsul\n====\n1.5.3" as consul_1_5_3 #IndianRed
 
 'Chart Dependencies
 consul_3_9_4--[#orange]-|>consul_1_5_3
 
-center footer Generated on 2020/04/26 13:43:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:52:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

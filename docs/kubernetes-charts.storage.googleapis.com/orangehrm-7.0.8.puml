@@ -9,17 +9,17 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for orangehrm:7.0.8
 
 'There are 2 referenced Helm Charts
-artifact "mariadb:7.3.11\n====\n\tmariadb\n====\n\t7.3.11\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mariadb\nmysql\ndatabase\nsql\nprometheus" as mariadb_7_3_11 #DarkTurquoise
-artifact "orangehrm:7.0.8\n====\n\torangehrm\n====\n\t7.0.8\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: orangehrm\nhttp\nhttps\nweb\napplication\nphp\nhuman resources" as orangehrm_7_0_8 #Cyan
+artifact "mariadb:7.3.11\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_7_3_11 #DarkTurquoise
+artifact "orangehrm:7.0.8\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\torangehrm\n\t\thttp\n\t\thttps\n\t\tweb\n\t\tapplication\n\t\tphp\n\t\thuman resources" as orangehrm_7_0_8 #Cyan
 
 'There are 2 referenced Docker Images
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/orangehrm:4.3.4-0-debian-10-r26\n====\n\t4.3.4-0-debian-10-r26" as docker_io_bitnami_orangehrm_4_3_4_0_debian_10_r26 #Bisque
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mariadb:10.3.22-debian-10-r27\n====\n\t10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/orangehrm:4.3.4-0-debian-10-r26\n====\n4.3.4-0-debian-10-r26" as docker_io_bitnami_orangehrm_4_3_4_0_debian_10_r26 #Bisque
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.3.22-debian-10-r27\n====\n10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
 
 'Chart Dependencies
 orangehrm_7_0_8--[#green]-|>mariadb_7_3_11
 mariadb_7_3_11--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r27
 orangehrm_7_0_8--[#orange]-|>docker_io_bitnami_orangehrm_4_3_4_0_debian_10_r26
 
-center footer Generated on 2020/03/16 17:25:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:24:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -7,7 +7,7 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/external-dns",
+    "name": "bitnami/external-dns:0.7.0-debian-10-r0",
     "type": "image",
     "version": "0.7.0-debian-10-r0"
   }],

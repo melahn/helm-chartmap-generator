@@ -1,0 +1,27 @@
+{
+  "maintainers": [
+    {
+      "name": "paulczar",
+      "email": "username.taken@gmail.com"
+    },
+    {
+      "name": "monotek",
+      "email": "monotek23@gmail.com"
+    },
+    {
+      "name": "axdotl",
+      "email": "axel.koehler@kiwigrid.com"
+    }
+  ],
+  "keywords": [
+    "mysql",
+    "mysqldump",
+    "backup"
+  ],
+  "children": [],
+  "name": "mysqldump:2.6.1",
+  "description": "A Helm chart to help backup MySQL databases using mysqldump",
+  "type": "chart",
+  "shortName": "mysqldump",
+  "version": "2.6.1"
+}

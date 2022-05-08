@@ -1,0 +1,29 @@
+Chart Map for traefik:1.87.6
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: traefik:1.87.6
+	apiVersion: v1
+	appVersion: 1.7.26
+	created: Not specified
+	dependencies: None
+	description: A Traefik based Kubernetes ingress controller with Let's Encrypt support
+	digest: Not specified
+	icon: https://docs.traefik.io/assets/img/traefik.logo.png
+	keywords: traefik,ingress,acme,letsencrypt
+	maintainers: krancour:kent.rancourt@microsoft.com,emilevauge:emile@vauge.com,dtomcej:daniel.tomcej@gmail.com,ldez:ludovic@containo.us
+	repo url: https://charts.helm.sh/stable
+	name: traefik
+	sources: https://github.com/containous/traefik,https://github.com/helm/charts/tree/master/stable/traefik
+	urls: Not specified
+	version: 1.87.6
+
+There is one referenced Docker Image
+------------------------------------
+Image: traefik:1.7.26
+
+Chart Dependencies
+------------------
+traefik:1.87.6 uses traefik:1.7.26
+
+Generated on 2022/05/07 20:41:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

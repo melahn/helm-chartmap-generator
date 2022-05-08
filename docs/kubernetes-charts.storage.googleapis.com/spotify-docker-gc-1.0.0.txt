@@ -12,7 +12,7 @@ Chart: spotify-docker-gc:1.0.0
 	icon: Not specified
 	keywords: Not specified
 	maintainers: vdice:vadice@microsoft.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: spotify-docker-gc
 	sources: https://github.com/spotify/docker-gc
 	urls: Not specified
@@ -24,4 +24,4 @@ There are 0 referenced Docker Images
 Chart Dependencies
 ------------------
 
-Generated on 2020/04/26 14:00:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:38:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

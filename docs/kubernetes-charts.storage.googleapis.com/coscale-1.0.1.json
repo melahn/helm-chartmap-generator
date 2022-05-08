@@ -1,0 +1,19 @@
+{
+  "maintainers": [{
+    "name": "fryckbos",
+    "email": "frederick.ryckbosch@coscale.com"
+  }],
+  "keywords": [
+    "monitoring",
+    "alerting",
+    "metric",
+    "event",
+    "anomaly detection"
+  ],
+  "children": [],
+  "name": "coscale:1.0.1",
+  "description": "CoScale Agent",
+  "type": "chart",
+  "shortName": "coscale",
+  "version": "1.0.1"
+}

@@ -1,0 +1,33 @@
+Chart Map for hl-composer:1.0.13
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: hl-composer:1.0.13
+	apiVersion: v1
+	appVersion: 0.20.0
+	created: Not specified
+	dependencies: None
+	description: Hyperledger Composer REST Server chart
+	digest: Not specified
+	icon: https://www.hyperledger.org/wp-content/uploads/2018/04/composer-logo.png
+	keywords: blockchain,hyperledger,fabric,composer
+	maintainers: alexvicegrab:sasha@aid.technology,inzamam-iqbal:inzamam@aid.technology,dbandin:diego@aid.technology
+	repo url: https://charts.helm.sh/stable
+	name: hl-composer
+	sources: https://github.com/hyperledger/composer
+	urls: Not specified
+	version: 1.0.13
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: hyperledger/composer-cli:0.20.0
+Image: hyperledger/composer-playground:0.20.0
+Image: hyperledger/composer-rest-server:0.20.0
+
+Chart Dependencies
+------------------
+hl-composer:1.0.13 uses hyperledger/composer-cli:0.20.0
+hl-composer:1.0.13 uses hyperledger/composer-rest-server:0.20.0
+hl-composer:1.0.13 uses hyperledger/composer-playground:0.20.0
+
+Generated on 2022/05/07 20:04:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

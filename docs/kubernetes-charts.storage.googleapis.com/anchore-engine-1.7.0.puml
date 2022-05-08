@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for anchore-engine:1.7.0
+
+'There are 3 referenced Helm Charts
+artifact "postgresql:1.0.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tpostgresql\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_1_0_1 #LightSteelBlue
+artifact "redis:10.5.7\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_10_5_7 #LightSeaGreen
+artifact "anchore-engine:1.7.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tanalysis\n\t\tdocker\n\t\tanchore\n\t\tanchore-engine\n\t\timage\n\t\tsecurity\n\t\tvulnerability\n\t\tscanner" as anchore_engine_1_7_0 #Azure
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n9.6.18" as postgres_9_6_18 #Ivory
+usecase "Image\n====\ndocker.io\n====\nbitnami/redis:5.0.7-debian-10-r32\n====\n5.0.7-debian-10-r32" as docker_io_bitnami_redis_5_0_7_debian_10_r32 #Azure
+usecase "Image\n====\ndocker.io\n====\nanchore/anchore-engine:v0.7.3\n====\nv0.7.3" as docker_io_anchore_anchore_engine_v0_7_3 #Coral
+
+'Chart Dependencies
+anchore_engine_1_7_0--[#green]-|>redis_10_5_7
+anchore_engine_1_7_0--[#green]-|>postgresql_1_0_1
+postgresql_1_0_1--[#orange]-|>postgres_9_6_18
+redis_10_5_7--[#orange]-|>docker_io_bitnami_redis_5_0_7_debian_10_r32
+anchore_engine_1_7_0--[#orange]-|>docker_io_anchore_anchore_engine_v0_7_3
+
+center footer Generated on 2022/05/07 19:46:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

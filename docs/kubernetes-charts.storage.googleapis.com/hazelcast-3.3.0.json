@@ -1,0 +1,44 @@
+{
+  "maintainers": [
+    {
+      "name": "leszko",
+      "email": "rafal@hazelcast.com"
+    },
+    {
+      "name": "hasancelik",
+      "email": "hasan@hazelcast.com"
+    },
+    {
+      "name": "mesutcelik",
+      "email": "mesut@hazelcast.com"
+    }
+  ],
+  "keywords": [
+    "hazelcast",
+    "keyvalue",
+    "in-memory",
+    "database",
+    "caching"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "hazelcast/hazelcast",
+      "type": "image",
+      "version": "4.0.1"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "hazelcast/management-center",
+      "type": "image",
+      "version": "4.0.2"
+    }
+  ],
+  "name": "hazelcast:3.3.0",
+  "description": "Hazelcast IMDG is the most widely used in-memory data grid with hundreds of thousands of installed clusters around the world. It offers caching solutions ensuring that data is in the right place when it\u2019s needed for optimal performance.",
+  "type": "chart",
+  "shortName": "hazelcast",
+  "version": "3.3.0"
+}

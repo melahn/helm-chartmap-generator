@@ -1,0 +1,41 @@
+Chart Map for openebs:1.10.3
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: openebs:1.10.3
+	apiVersion: v1
+	appVersion: 1.10.0
+	created: Not specified
+	dependencies: None
+	description: Containerized Storage for Containers
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/openebs/icon/color/openebs-icon-color.png
+	keywords: cloud-native-storage,block-storage,iSCSI,storage
+	maintainers: kmova:kiran.mova@openebs.io,prateekpandey14:prateek.pandey@openebs.io
+	repo url: https://charts.helm.sh/stable
+	name: openebs
+	sources: https://github.com/openebs/openebs
+	urls: Not specified
+	version: 1.10.3
+
+There are 7 referenced Docker Images
+------------------------------------
+Image: quay.io/openebs/snapshot-provisioner:1.10.0
+Image: quay.io/openebs/openebs-k8s-provisioner:1.10.0
+Image: quay.io/openebs/m-apiserver:1.10.0
+Image: quay.io/openebs/node-disk-operator-amd64:0.5.0
+Image: quay.io/openebs/provisioner-localpv:1.10.0
+Image: quay.io/openebs/snapshot-controller:1.10.0
+Image: quay.io/openebs/admission-server:1.10.0
+
+Chart Dependencies
+------------------
+openebs:1.10.3 uses quay.io/openebs/snapshot-controller:1.10.0
+openebs:1.10.3 uses quay.io/openebs/admission-server:1.10.0
+openebs:1.10.3 uses quay.io/openebs/snapshot-provisioner:1.10.0
+openebs:1.10.3 uses quay.io/openebs/provisioner-localpv:1.10.0
+openebs:1.10.3 uses quay.io/openebs/m-apiserver:1.10.0
+openebs:1.10.3 uses quay.io/openebs/node-disk-operator-amd64:0.5.0
+openebs:1.10.3 uses quay.io/openebs/openebs-k8s-provisioner:1.10.0
+
+Generated on 2022/05/07 20:23:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

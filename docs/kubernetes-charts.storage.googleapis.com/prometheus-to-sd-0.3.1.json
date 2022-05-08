@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "prometheus",
+    "stackdriver"
+  ],
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "google-containers/prometheus-to-sd:v0.5.2",
+    "type": "image",
+    "version": "v0.5.2"
+  }],
+  "name": "prometheus-to-sd:0.3.1",
+  "description": "DEPRECATED Scrape metrics stored in prometheus format and push them to the Stackdriver",
+  "type": "chart",
+  "shortName": "prometheus-to-sd",
+  "version": "0.3.1"
+}

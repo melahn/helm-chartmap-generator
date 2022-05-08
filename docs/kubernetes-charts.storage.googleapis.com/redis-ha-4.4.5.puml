@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for redis-ha:4.4.5
+
+'There is one referenced Helm Chart
+artifact "redis-ha:4.4.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tssalaues\n\t\tdandydeveloper\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_ha_4_4_5 #IndianRed
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nredis\n====\n5.0.6-alpine" as redis_5_0_6_alpine #LightSeaGreen
+
+'Chart Dependencies
+redis_ha_4_4_5--[#orange]-|>redis_5_0_6_alpine
+
+center footer Generated on 2022/05/07 20:32:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

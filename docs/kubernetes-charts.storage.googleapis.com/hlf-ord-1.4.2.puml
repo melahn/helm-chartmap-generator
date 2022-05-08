@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for hlf-ord:1.4.2
+
+'There is one referenced Helm Chart
+artifact "hlf-ord:1.4.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\talexvicegrab\n\t\tinzamam-iqbal\n\t\tdbandin\n====\n\tKeywords: \n\t\tblockchain\n\t\thyperledger\n\t\tfabric" as hlf_ord_1_4_2 #FloralWhite
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nhyperledger/fabric-orderer\n====\n1.4.3" as hyperledger_fabric_orderer_1_4_3 #DarkTurquoise
+
+'Chart Dependencies
+hlf_ord_1_4_2--[#orange]-|>hyperledger_fabric_orderer_1_4_3
+
+center footer Generated on 2022/05/07 20:05:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

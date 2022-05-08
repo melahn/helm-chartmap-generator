@@ -3,19 +3,19 @@ Chart Map for mattermost-team-edition:3.1.1
 There are 2 referenced Helm Charts
 ----------------------------------
 Chart: mysql:0.10.1
-	apiVersion: Not specified
+	apiVersion: v1
 	appVersion: 5.7.14
-	created: 2018-10-23T07:55:17.91945553Z
+	created: 2020-10-15T15:46:20.216759-04:00
 	dependencies: None
 	description: Fast, reliable, scalable, and easy to use open-source relational database system.
 	digest: b0a8fd0c677e324a4fc0582c0239a7fe75f80865ac677eff89bcc10e554cc5ad
 	icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
 	keywords: mysql,database,sql
 	maintainers: olemarkus:o.with@sportradar.com,viglesiasce:viglesias@google.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: mysql
 	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/mysql
-	urls: https://kubernetes-charts.storage.googleapis.com/mysql-0.10.1.tgz
+	urls: https://charts.helm.sh/stable/packages/mysql-0.10.1.tgz
 	version: 0.10.1
 Chart: mattermost-team-edition:3.1.1
 	apiVersion: v1
@@ -27,7 +27,7 @@ Chart: mattermost-team-edition:3.1.1
 	icon: http://www.mattermost.org/wp-content/uploads/2016/04/icon.png
 	keywords: mattermost,communication,team collaboration
 	maintainers: cpanato:carlos@mattermost.com,jwilander:joram@mattermost.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: mattermost-team-edition
 	sources: Not specified
 	urls: Not specified
@@ -44,4 +44,4 @@ mattermost-team-edition:3.1.1 depends on mysql:0.10.1
 mysql:0.10.1 uses mysql:5.7.14
 mattermost-team-edition:3.1.1 uses mattermost/mattermost-team-edition:5.9.0
 
-Generated on 2020/04/26 13:52:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:16:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

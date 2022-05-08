@@ -12,7 +12,7 @@ Chart: heartbeat:1.2.0
 	icon: https://www.elastic.co/jp/assets/blt75e7956191e1bd55/icon-heartbeat-bb.svg
 	keywords: Not specified
 	maintainers: mumoshu:ykuoka@gmail.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: heartbeat
 	sources: https://www.elastic.co/guide/en/beats/heartbeat/current/index.html
 	urls: Not specified
@@ -24,4 +24,4 @@ There are 0 referenced Docker Images
 Chart Dependencies
 ------------------
 
-Generated on 2020/04/26 13:47:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:04:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

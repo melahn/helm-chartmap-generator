@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "metrics",
+    "elasticsearch",
+    "monitoring"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "justwatch/elasticsearch_exporter",
+    "type": "image",
+    "version": "1.1.0"
+  }],
+  "name": "elasticsearch-exporter:3.7.1",
+  "description": "DEPRECATED Elasticsearch stats exporter for Prometheus",
+  "type": "chart",
+  "shortName": "elasticsearch-exporter",
+  "version": "3.7.1"
+}

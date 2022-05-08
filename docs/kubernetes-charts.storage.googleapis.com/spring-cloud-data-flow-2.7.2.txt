@@ -1,0 +1,67 @@
+Chart Map for spring-cloud-data-flow:2.7.2
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: rabbitmq:6.16.6
+	apiVersion: v1
+	appVersion: 3.8.2
+	created: 2020-02-03T13:06:08.724529226Z
+	dependencies: None
+	description: Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)
+	digest: c82e5a2969ee1510d8060c3b194c98dd2b4e1a8ceb470f15cc1788679a75d1ca
+	icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+	keywords: rabbitmq,message queue,AMQP
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: rabbitmq
+	sources: https://github.com/bitnami/bitnami-docker-rabbitmq
+	urls: https://charts.bitnami.com/bitnami/rabbitmq-6.16.6.tgz
+	version: 6.16.6
+Chart: spring-cloud-data-flow:2.7.2
+	apiVersion: v1
+	appVersion: 2.5.3.RELEASE
+	created: Not specified
+	dependencies: rabbitmq:6.16.6, mysql:1.6.2
+	description: Toolkit for building data processing pipelines.
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/spring-io/dataflow.spring.io/master/src/images/dataflow-icon.png
+	keywords: Not specified
+	maintainers: trisberg:trisberg@pivotal.io,chrisjs:cschaefer@vmware.com,sabbyanandan:sanandan@pivotal.io
+	repo url: https://charts.helm.sh/stable
+	name: spring-cloud-data-flow
+	sources: https://github.com/spring-cloud/spring-cloud-dataflow,https://github.com/spring-cloud/spring-cloud-skipper
+	urls: Not specified
+	version: 2.7.2
+Chart: mysql:1.6.2
+	apiVersion: v1
+	appVersion: 5.7.28
+	created: 2020-10-15T15:46:20.25512-04:00
+	dependencies: None
+	description: Fast, reliable, scalable, and easy to use open-source relational database system.
+	digest: c8f510df92c1d556294dfc7812073c1829688b86a9cea2eb6965d8906d481f9d
+	icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+	keywords: mysql,database,sql
+	maintainers: olemarkus:o.with@sportradar.com,viglesiasce:viglesias@google.com
+	repo url: https://charts.helm.sh/stable
+	name: mysql
+	sources: https://github.com/kubernetes/charts,https://github.com/docker-library/mysql
+	urls: https://charts.helm.sh/stable/packages/mysql-1.6.2.tgz
+	version: 1.6.2
+
+There are 4 referenced Docker Images
+------------------------------------
+Image: springcloud/spring-cloud-dataflow-server:2.5.3.RELEASE
+Image: springcloud/spring-cloud-skipper-server:2.4.3.RELEASE
+Image: mysql:5.7.28
+Image: docker.io/bitnami/rabbitmq:3.8.2-debian-10-r0
+
+Chart Dependencies
+------------------
+spring-cloud-data-flow:2.7.2 depends on rabbitmq:6.16.6
+spring-cloud-data-flow:2.7.2 depends on mysql:1.6.2
+rabbitmq:6.16.6 uses docker.io/bitnami/rabbitmq:3.8.2-debian-10-r0
+spring-cloud-data-flow:2.7.2 uses springcloud/spring-cloud-dataflow-server:2.5.3.RELEASE
+spring-cloud-data-flow:2.7.2 uses springcloud/spring-cloud-skipper-server:2.4.3.RELEASE
+mysql:1.6.2 uses mysql:5.7.28
+
+Generated on 2022/05/07 20:38:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,27 @@
+Chart Map for sysdig:1.7.14
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: sysdig:1.7.14
+	apiVersion: v1
+	appVersion: 9.9.1
+	created: Not specified
+	dependencies: None
+	description: Sysdig Monitor and Secure agent
+	digest: Not specified
+	icon: https://478h5m1yrfsa3bbe262u7muv-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Shovel_600px.png
+	keywords: monitoring,security,alerting,metric,troubleshooting,run-time
+	maintainers: lachie83:lachlan@deis.com,bencer:jorge.salamero@sysdig.com,nestorsalceda:nestor.salceda@sysdig.com
+	repo url: https://charts.helm.sh/stable
+	name: sysdig
+	sources: https://app.sysdigcloud.com/#/settings/user,https://github.com/draios/sysdig
+	urls: Not specified
+	version: 1.7.14
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2022/05/07 20:40:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

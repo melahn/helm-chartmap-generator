@@ -9,14 +9,14 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for uchiwa:1.0.0
 
 'There are 3 referenced Helm Charts
-artifact "redis:0.4.5\n====\n\tredis\n====\n\t0.4.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_0_4_5 #LightSeaGreen
-artifact "uchiwa:1.0.0\n====\n\tuchiwa\n====\n\t1.0.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: sstarcher\n====\n\tKeywords: uchiwa\nsensu\nmonitoring" as uchiwa_1_0_0 #HoneyDew
-artifact "sensu:0.1.2\n====\n\tsensu\n====\n\t0.1.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Shane Starcher\n====\n\tKeywords: sensu\nmonitoring" as sensu_0_1_2 #Aqua
+artifact "redis:0.4.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_0_4_5 #LightSeaGreen
+artifact "uchiwa:1.0.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: sstarcher\n====\n\tKeywords: \n\t\tuchiwa\n\t\tsensu\n\t\tmonitoring" as uchiwa_1_0_0 #HoneyDew
+artifact "sensu:0.1.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Shane Starcher\n====\n\tKeywords: \n\t\tsensu\n\t\tmonitoring" as sensu_0_1_2 #Aqua
 
 'There are 3 referenced Docker Images
-usecase "Image\n====\n\tDocker Hub\n====\n\tsstarcher/uchiwa\n====\n\t0.22" as sstarcher_uchiwa_0_22 #LightGreen
-usecase "Image\n====\n\tDocker Hub\n====\n\tbitnami/redis\n====\n\t3.2.6-r2" as bitnami_redis_3_2_6_r2 #Khaki
-usecase "Image\n====\n\tDocker Hub\n====\n\tsstarcher/sensu\n====\n\t0.28" as sstarcher_sensu_0_28 #GreenYellow
+usecase "Image\n====\nDocker Hub\n====\nsstarcher/uchiwa\n====\n0.22" as sstarcher_uchiwa_0_22 #LightGreen
+usecase "Image\n====\nDocker Hub\n====\nbitnami/redis\n====\n3.2.6-r2" as bitnami_redis_3_2_6_r2 #Khaki
+usecase "Image\n====\nDocker Hub\n====\nsstarcher/sensu\n====\n0.28" as sstarcher_sensu_0_28 #GreenYellow
 
 'Chart Dependencies
 uchiwa_1_0_0--[#green]-|>sensu_0_1_2
@@ -25,5 +25,5 @@ redis_0_4_5--[#orange]-|>bitnami_redis_3_2_6_r2
 uchiwa_1_0_0--[#orange]-|>sstarcher_uchiwa_0_22
 sensu_0_1_2--[#orange]-|>sstarcher_sensu_0_28
 
-center footer Generated on 2020/04/26 14:02:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:42:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

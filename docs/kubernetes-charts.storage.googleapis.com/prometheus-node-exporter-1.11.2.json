@@ -1,0 +1,13 @@
+{
+  "keywords": [
+    "node-exporter",
+    "prometheus",
+    "exporter"
+  ],
+  "children": [],
+  "name": "prometheus-node-exporter:1.11.2",
+  "description": "DEPRECATED A Helm chart for prometheus node-exporter",
+  "type": "chart",
+  "shortName": "prometheus-node-exporter",
+  "version": "1.11.2"
+}

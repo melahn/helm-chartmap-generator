@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for prometheus-rabbitmq-exporter:0.5.5
 
 'There is one referenced Helm Chart
-artifact "prometheus-rabbitmq-exporter:0.5.5\n====\n\tprometheus-rabbitmq-exporter\n====\n\t0.5.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: juanchimienti\n====\n\tKeywords: " as prometheus_rabbitmq_exporter_0_5_5 #Khaki
+artifact "prometheus-rabbitmq-exporter:0.5.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: juanchimienti\n====\n\tKeywords: " as prometheus_rabbitmq_exporter_0_5_5 #Khaki
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tkbudde/rabbitmq-exporter\n====\n\tv0.29.0" as kbudde_rabbitmq_exporter_v0_29_0 #Gainsboro
+usecase "Image\n====\nDocker Hub\n====\nkbudde/rabbitmq-exporter\n====\nv0.29.0" as kbudde_rabbitmq_exporter_v0_29_0 #Gainsboro
 
 'Chart Dependencies
 prometheus_rabbitmq_exporter_0_5_5--[#orange]-|>kbudde_rabbitmq_exporter_v0_29_0
 
-center footer Generated on 2020/04/26 13:57:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:30:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

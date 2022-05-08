@@ -1,0 +1,47 @@
+Chart Map for zetcd:0.1.10
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: zetcd:0.1.10
+	apiVersion: v1
+	appVersion: 0.0.3
+	created: Not specified
+	dependencies: etcd-operator:0.4.3
+	description: CoreOS zetcd Helm chart for Kubernetes
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: hunter
+	repo url: https://charts.helm.sh/stable
+	name: zetcd
+	sources: https://github.com/coreos/zetcd
+	urls: Not specified
+	version: 0.1.10
+Chart: etcd-operator:0.4.3
+	apiVersion: v1
+	appVersion: 0.3.3
+	created: 2020-10-15T15:46:16.066436-04:00
+	dependencies: None
+	description: CoreOS etcd-operator Helm chart for Kubernetes
+	digest: 8caedfbc29ef54b2fe93d66c97c3b15089d57306e6c7bf0a0f71d2b82b458999
+	icon: https://raw.githubusercontent.com/coreos/etcd/master/logos/etcd-horizontal-color.png
+	keywords: Not specified
+	maintainers: chancez:chance.zibolski@coreos.com,lachie83:lachlan@deis.com
+	repo url: https://charts.helm.sh/stable
+	name: etcd-operator
+	sources: https://github.com/coreos/etcd-operator
+	urls: https://charts.helm.sh/stable/packages/etcd-operator-0.4.3.tgz
+	version: 0.4.3
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: quay.io/coreos/etcd-operator:v0.3.3
+Image: quay.io/coreos/zetcd:v0.0.3
+
+Chart Dependencies
+------------------
+zetcd:0.1.10 depends on etcd-operator:0.4.3
+zetcd:0.1.10 uses quay.io/coreos/zetcd:v0.0.3
+etcd-operator:0.4.3 uses quay.io/coreos/etcd-operator:v0.3.3
+
+Generated on 2022/05/07 20:45:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

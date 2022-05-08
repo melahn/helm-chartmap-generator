@@ -11,7 +11,7 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/parse",
+      "name": "bitnami/parse:3.10.0-debian-10-r30",
       "type": "image",
       "version": "3.10.0-debian-10-r30"
     },
@@ -31,7 +31,7 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mongodb",
+        "name": "bitnami/mongodb:4.2.3-debian-10-r10",
         "type": "image",
         "version": "4.2.3-debian-10-r10"
       }],

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for chartmuseum:2.14.0
+
+'There is one referenced Helm Chart
+artifact "chartmuseum:2.14.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tcodefresh-io\n\t\tcloudposse\n\t\tchartmuseum\n====\n\tKeywords: \n\t\tchartmuseum\n\t\thelm\n\t\tcharts repo" as chartmuseum_2_14_0 #AntiqueWhite
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nchartmuseum/chartmuseum\n====\nv0.12.0" as chartmuseum_chartmuseum_v0_12_0 #LightSeaGreen
+
+'Chart Dependencies
+chartmuseum_2_14_0--[#orange]-|>chartmuseum_chartmuseum_v0_12_0
+
+center footer Generated on 2022/05/07 19:50:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -6,7 +6,7 @@
   "children": [{
     "repoHost": "gcr.io",
     "children": [],
-    "name": "kubernetes-helm/tiller",
+    "name": "kubernetes-helm/tiller:v2.8.1",
     "type": "image",
     "version": "v2.8.1"
   }],

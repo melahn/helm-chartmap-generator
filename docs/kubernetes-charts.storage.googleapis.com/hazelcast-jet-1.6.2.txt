@@ -1,0 +1,31 @@
+Chart Map for hazelcast-jet:1.6.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: hazelcast-jet:1.6.2
+	apiVersion: v1
+	appVersion: 4.1
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED Hazelcast Jet is an application embeddable, distributed computing engine built on top of Hazelcast In-Memory Data Grid (IMDG). With Hazelcast IMDG providing storage functionality, Hazelcast Jet performs parallel execution to enable data-intensive applications to operate in near real-time.
+	digest: Not specified
+	icon: http://hazelcast.com/images/logos/Hazelcast-Jet-Logo-Orange_Dark_Icon_200px.png
+	keywords: hazelcast,jet,streaming
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: hazelcast-jet
+	sources: https://github.com/hazelcast/hazelcast-jet
+	urls: Not specified
+	version: 1.6.2
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: hazelcast/hazelcast-jet-management-center:4.1
+Image: hazelcast/hazelcast-jet:4.1
+
+Chart Dependencies
+------------------
+hazelcast-jet:1.6.2 uses hazelcast/hazelcast-jet:4.1
+hazelcast-jet:1.6.2 uses hazelcast/hazelcast-jet-management-center:4.1
+
+Generated on 2022/05/07 20:03:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

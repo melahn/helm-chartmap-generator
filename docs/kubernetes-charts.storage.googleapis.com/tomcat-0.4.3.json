@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "tomcat",
+    "type": "image",
+    "version": "7.0"
+  }],
+  "name": "tomcat:0.4.3",
+  "description": "DEPRECATED - Deploy a basic tomcat application server with sidecar as web archive container",
+  "type": "chart",
+  "shortName": "tomcat",
+  "version": "0.4.3"
+}

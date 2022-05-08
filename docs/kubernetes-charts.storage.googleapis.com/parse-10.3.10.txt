@@ -2,32 +2,32 @@ Chart Map for parse:10.3.10
 
 There are 2 referenced Helm Charts
 ----------------------------------
-Chart: mongodb:7.8.5
+Chart: mongodb:7.8.10
 	apiVersion: v1
-	appVersion: 4.2.3
-	created: 2020-02-26T08:28:54.445183219Z
+	appVersion: 4.2.4
+	created: 2020-03-11T19:52:46.056546321Z
 	dependencies: None
 	description: NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
-	digest: dbf7a47d67888973b2b55e793c18356cfbd6be7ade6de39a32d3e1defb524fcb
+	digest: 830154796c9c562df4a6a074729b64e998a90949eb2a0476ab19dd7bd833a6cf
 	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
 	keywords: mongodb,database,nosql,cluster,replicaset,replication
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: mongodb
 	sources: https://github.com/bitnami/bitnami-docker-mongodb
-	urls: https://kubernetes-charts.storage.googleapis.com/mongodb-7.8.5.tgz
-	version: 7.8.5
+	urls: https://charts.bitnami.com/bitnami/mongodb-7.8.10.tgz
+	version: 7.8.10
 Chart: parse:10.3.10
 	apiVersion: v1
 	appVersion: 3.10.0
 	created: Not specified
-	dependencies: mongodb:7.8.5
-	description: DEPRECATED Parse is a platform that enables users to add a scalable and powerful backend to launch a full-featured app for iOS, Android, JavaScript, Windows, Unity, and more.
+	dependencies: mongodb:7.8.10
+	description: Parse is a platform that enables users to add a scalable and powerful backend to launch a full-featured app for iOS, Android, JavaScript, Windows, Unity, and more.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/parse/img/parse-stack-220x234.png
 	keywords: parse,backend,serverless,platform,mbaas,mobile
-	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: parse
 	sources: https://github.com/bitnami/bitnami-docker-parse,https://github.com/bitnami/bitnami-docker-parse-dashboard
 	urls: Not specified
@@ -35,13 +35,13 @@ Chart: parse:10.3.10
 
 There are 2 referenced Docker Images
 ------------------------------------
-Image: docker.io/bitnami/mongodb:4.2.3-debian-10-r10
-Image: docker.io/bitnami/parse:3.10.0-debian-10-r30
+Image: docker.io/bitnami/parse:3.10.0-debian-10-r47
+Image: docker.io/bitnami/mongodb:4.2.4-debian-10-r3
 
 Chart Dependencies
 ------------------
-parse:10.3.10 depends on mongodb:7.8.5
-mongodb:7.8.5 uses docker.io/bitnami/mongodb:4.2.3-debian-10-r10
-parse:10.3.10 uses docker.io/bitnami/parse:3.10.0-debian-10-r30
+parse:10.3.10 depends on mongodb:7.8.10
+mongodb:7.8.10 uses docker.io/bitnami/mongodb:4.2.4-debian-10-r3
+parse:10.3.10 uses docker.io/bitnami/parse:3.10.0-debian-10-r47
 
-Generated on 2020/04/26 13:55:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:25:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

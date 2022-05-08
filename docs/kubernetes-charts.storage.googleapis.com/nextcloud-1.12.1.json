@@ -1,0 +1,21 @@
+{
+  "keywords": [
+    "nextcloud",
+    "storage",
+    "http",
+    "web",
+    "php"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "nextcloud",
+    "type": "image",
+    "version": "17.0.0-apache"
+  }],
+  "name": "nextcloud:1.12.1",
+  "description": "DEPRECATED - A file sharing server that puts the control and security of your own data back into your hands.",
+  "type": "chart",
+  "shortName": "nextcloud",
+  "version": "1.12.1"
+}

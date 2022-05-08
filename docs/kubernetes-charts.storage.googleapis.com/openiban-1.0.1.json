@@ -1,0 +1,22 @@
+{
+  "maintainers": [{
+    "name": "verwilst",
+    "email": "bart@verwilst.be"
+  }],
+  "keywords": [
+    "iban",
+    "golang"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "fourcube/openiban",
+    "type": "image",
+    "version": "1.0.1"
+  }],
+  "name": "openiban:1.0.1",
+  "description": "OpenIBAN is a self-hosted, free and open-source IBAN validation API.",
+  "type": "chart",
+  "shortName": "openiban",
+  "version": "1.0.1"
+}

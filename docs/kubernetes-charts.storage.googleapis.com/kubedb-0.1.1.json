@@ -1,0 +1,27 @@
+{
+  "maintainers": [{
+    "name": "appscode",
+    "email": "kubedb@appscode.com"
+  }],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "kubedb/kubedb-server",
+      "type": "image",
+      "version": "0.1.0-beta.2"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "kubedb/operator",
+      "type": "image",
+      "version": "0.8.0-beta.2"
+    }
+  ],
+  "name": "kubedb:0.1.1",
+  "description": "KubeDB by AppsCode - Making running production-grade databases easy on Kubernetes",
+  "type": "chart",
+  "shortName": "kubedb",
+  "version": "0.1.1"
+}

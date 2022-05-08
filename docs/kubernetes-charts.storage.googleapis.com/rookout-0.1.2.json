@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "rookout:0.1.2",
+  "description": "DEPRECATED - A Helm chart for Rookout agent on Kubernetes",
+  "type": "chart",
+  "shortName": "rookout",
+  "version": "0.1.2"
+}

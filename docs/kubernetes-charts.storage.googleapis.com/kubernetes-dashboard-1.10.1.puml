@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for kubernetes-dashboard:1.10.1
 
 'There is one referenced Helm Chart
-artifact "kubernetes-dashboard:1.10.1\n====\n\tkubernetes-dashboard\n====\n\t1.10.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: kfox1111, desaintmartin\n====\n\tKeywords: kubernetes\ndashboard" as kubernetes_dashboard_1_10_1 #Gainsboro
+artifact "kubernetes-dashboard:1.10.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tkfox1111\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tkubernetes\n\t\tdashboard" as kubernetes_dashboard_1_10_1 #Gainsboro
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tk8s.gcr.io/kubernetes-dashboard-amd64\n====\n\tv1.10.1" as k8s_gcr_io_kubernetes_dashboard_amd64_v1_10_1 #LightSteelBlue
+usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/kubernetes-dashboard-amd64\n====\nv1.10.1" as k8s_gcr_io_kubernetes_dashboard_amd64_v1_10_1 #LightSteelBlue
 
 'Chart Dependencies
 kubernetes_dashboard_1_10_1--[#orange]-|>k8s_gcr_io_kubernetes_dashboard_amd64_v1_10_1
 
-center footer Generated on 2020/04/26 13:51:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:13:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

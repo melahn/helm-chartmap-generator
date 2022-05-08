@@ -30,6 +30,13 @@
     {
       "repoHost": "Docker Hub",
       "children": [],
+      "name": "hyperledger/composer-rest-server",
+      "type": "image",
+      "version": "0.20.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
       "name": "hyperledger/composer-playground",
       "type": "image",
       "version": "0.20.0"

@@ -9,13 +9,15 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for contour:0.2.0
 
 'There is one referenced Helm Chart
-artifact "contour:0.2.0\n====\n\tcontour\n====\n\t0.2.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: pickledrick\n====\n\tKeywords: ingress\nenvoy\ncontour" as contour_0_2_0 #DodgerBlue
+artifact "contour:0.2.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: pickledrick\n====\n\tKeywords: \n\t\tingress\n\t\tenvoy\n\t\tcontour" as contour_0_2_0 #DodgerBlue
 
-'There is one referenced Docker Image
-usecase "Image\n====\n\tgcr.io\n====\n\theptio-images/contour:v0.15.0\n====\n\tv0.15.0" as gcr_io_heptio_images_contour_v0_15_0 #LightCoral
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nenvoyproxy/envoy:v1.11.1\n====\nv1.11.1" as docker_io_envoyproxy_envoy_v1_11_1 #DodgerBlue
+usecase "Image\n====\ngcr.io\n====\nheptio-images/contour:v0.15.0\n====\nv0.15.0" as gcr_io_heptio_images_contour_v0_15_0 #LightCoral
 
 'Chart Dependencies
 contour_0_2_0--[#orange]-|>gcr_io_heptio_images_contour_v0_15_0
+contour_0_2_0--[#orange]-|>docker_io_envoyproxy_envoy_v1_11_1
 
-center footer Generated on 2020/04/26 13:43:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:52:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

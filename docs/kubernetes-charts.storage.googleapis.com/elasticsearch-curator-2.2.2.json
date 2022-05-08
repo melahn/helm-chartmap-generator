@@ -1,0 +1,23 @@
+{
+  "maintainers": [
+    {
+      "name": "gianrubio",
+      "email": "gianrubio@gmail.com"
+    },
+    {
+      "name": "haad",
+      "email": "adam.hamsik@lablabs.io"
+    }
+  ],
+  "keywords": [
+    "curator",
+    "elasticsearch",
+    "elasticsearch-curator"
+  ],
+  "children": [],
+  "name": "elasticsearch-curator:2.2.2",
+  "description": "A Helm chart for Elasticsearch Curator",
+  "type": "chart",
+  "shortName": "elasticsearch-curator",
+  "version": "2.2.2"
+}

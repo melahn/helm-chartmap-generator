@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "docker.elastic.co",
+    "children": [],
+    "name": "beats/metricbeat:6.7.0",
+    "type": "image",
+    "version": "6.7.0"
+  }],
+  "name": "metricbeat:1.7.3",
+  "description": "DEPRECATED - A Helm chart to collect Kubernetes logs with metricbeat",
+  "type": "chart",
+  "shortName": "metricbeat",
+  "version": "1.7.3"
+}

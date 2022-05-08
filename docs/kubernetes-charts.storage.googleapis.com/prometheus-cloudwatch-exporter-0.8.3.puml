@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus-cloudwatch-exporter:0.8.3
+
+'There is one referenced Helm Chart
+artifact "prometheus-cloudwatch-exporter:0.8.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tgianrubio\n\t\ttorstenwalter\n\t\tasherf\n====\n\tKeywords: \n\t\taws\n\t\tcloudwatch\n\t\tprometheus\n\t\texporter" as prometheus_cloudwatch_exporter_0_8_3 #Bisque
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nprom/cloudwatch-exporter\n====\ncloudwatch_exporter-0.8.0" as prom_cloudwatch_exporter_cloudwatch_exporter_0_8_0 #BlanchedAlmond
+
+'Chart Dependencies
+prometheus_cloudwatch_exporter_0_8_3--[#orange]-|>prom_cloudwatch_exporter_cloudwatch_exporter_0_8_0
+
+center footer Generated on 2022/05/07 20:28:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

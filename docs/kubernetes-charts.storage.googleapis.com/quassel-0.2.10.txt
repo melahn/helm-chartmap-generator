@@ -1,0 +1,29 @@
+Chart Map for quassel:0.2.10
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: quassel:0.2.10
+	apiVersion: v1
+	appVersion: 0.13.1
+	created: Not specified
+	dependencies: None
+	description: Quassel IRC is a modern, cross-platform, distributed IRC client.
+	digest: Not specified
+	icon: https://avatars3.githubusercontent.com/u/2965670
+	keywords: irc
+	maintainers: kiall:kiall@macinnes.ie
+	repo url: https://charts.helm.sh/stable
+	name: quassel
+	sources: https://github.com/quassel/quassel,https://github.com/linuxserver/docker-quassel-core
+	urls: Not specified
+	version: 0.2.10
+
+There is one referenced Docker Image
+------------------------------------
+Image: linuxserver/quassel-core:0.13.1-ls33
+
+Chart Dependencies
+------------------
+quassel:0.2.10 uses linuxserver/quassel-core:0.13.1-ls33
+
+Generated on 2022/05/07 20:31:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for distributed-tensorflow:1.2.2
+
+'There is one referenced Helm Chart
+artifact "distributed-tensorflow:1.2.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as distributed_tensorflow_1_2_2 #LightSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\ndysproz/distributed-tf\n====\n1.7.0" as dysproz_distributed_tf_1_7_0 #LavenderBlush
+
+'Chart Dependencies
+distributed_tensorflow_1_2_2--[#orange]-|>dysproz_distributed_tf_1_7_0
+
+center footer Generated on 2022/05/07 19:54:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

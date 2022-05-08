@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for goldpinger:2.0.3
+
+'There is one referenced Helm Chart
+artifact "goldpinger:2.0.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tokgolove\n\t\ts-vkropotko\n====\n\tKeywords: " as goldpinger_2_0_3 #Ivory
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2022/05/07 20:02:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

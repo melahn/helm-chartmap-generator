@@ -9,17 +9,17 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for parse:10.3.10
 
 'There are 2 referenced Helm Charts
-artifact "mongodb:7.8.5\n====\n\tmongodb\n====\n\t7.8.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mongodb\ndatabase\nnosql\ncluster\nreplicaset\nreplication" as mongodb_7_8_5 #GreenYellow
-artifact "parse:10.3.10\n====\n\tparse\n====\n\t10.3.10\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: parse\nbackend\nserverless\nplatform\nmbaas\nmobile" as parse_10_3_10 #LightSeaGreen
+artifact "mongodb:7.8.10\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmongodb\n\t\tdatabase\n\t\tnosql\n\t\tcluster\n\t\treplicaset\n\t\treplication" as mongodb_7_8_10 #GreenYellow
+artifact "parse:10.3.10\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tparse\n\t\tbackend\n\t\tserverless\n\t\tplatform\n\t\tmbaas\n\t\tmobile" as parse_10_3_10 #LightSeaGreen
 
 'There are 2 referenced Docker Images
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mongodb:4.2.3-debian-10-r10\n====\n\t4.2.3-debian-10-r10" as docker_io_bitnami_mongodb_4_2_3_debian_10_r10 #Bisque
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/parse:3.10.0-debian-10-r30\n====\n\t3.10.0-debian-10-r30" as docker_io_bitnami_parse_3_10_0_debian_10_r30 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/parse:3.10.0-debian-10-r47\n====\n3.10.0-debian-10-r47" as docker_io_bitnami_parse_3_10_0_debian_10_r47 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:4.2.4-debian-10-r3\n====\n4.2.4-debian-10-r3" as docker_io_bitnami_mongodb_4_2_4_debian_10_r3 #Bisque
 
 'Chart Dependencies
-parse_10_3_10--[#green]-|>mongodb_7_8_5
-mongodb_7_8_5--[#orange]-|>docker_io_bitnami_mongodb_4_2_3_debian_10_r10
-parse_10_3_10--[#orange]-|>docker_io_bitnami_parse_3_10_0_debian_10_r30
+parse_10_3_10--[#green]-|>mongodb_7_8_10
+mongodb_7_8_10--[#orange]-|>docker_io_bitnami_mongodb_4_2_4_debian_10_r3
+parse_10_3_10--[#orange]-|>docker_io_bitnami_parse_3_10_0_debian_10_r47
 
-center footer Generated on 2020/04/26 13:55:44 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:25:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

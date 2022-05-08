@@ -1,0 +1,29 @@
+Chart Map for selenium:1.2.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: selenium:1.2.2
+	apiVersion: v1
+	appVersion: 3.141.59
+	created: Not specified
+	dependencies: None
+	description: Chart for selenium grid
+	digest: Not specified
+	icon: http://docs.seleniumhq.org/images/big-logo.png
+	keywords: qa
+	maintainers: flah00:techops@adaptly.com,diemol:diemol@gmail.com,ekirmayer:ekirmayer@hotmail.com
+	repo url: https://charts.helm.sh/stable
+	name: selenium
+	sources: https://github.com/SeleniumHQ/docker-selenium
+	urls: Not specified
+	version: 1.2.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: selenium/hub:3.141.59
+
+Chart Dependencies
+------------------
+selenium:1.2.2 uses selenium/hub:3.141.59
+
+Generated on 2022/05/07 20:34:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

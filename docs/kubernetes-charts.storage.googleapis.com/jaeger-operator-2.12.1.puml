@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for jaeger-operator:2.12.1
 
 'There is one referenced Helm Chart
-artifact "jaeger-operator:2.12.1\n====\n\tjaeger-operator\n====\n\t2.12.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: cpanato, batazor\n====\n\tKeywords: " as jaeger_operator_2_12_1 #Azure
+artifact "jaeger-operator:2.12.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tcpanato\n\t\tbatazor\n====\n\tKeywords: " as jaeger_operator_2_12_1 #Azure
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tjaegertracing/jaeger-operator\n====\n\t1.15.1" as jaegertracing_jaeger_operator_1_15_1 #Chartreuse
+usecase "Image\n====\nDocker Hub\n====\njaegertracing/jaeger-operator\n====\n1.15.1" as jaegertracing_jaeger_operator_1_15_1 #Chartreuse
 
 'Chart Dependencies
 jaeger_operator_2_12_1--[#orange]-|>jaegertracing_jaeger_operator_1_15_1
 
-center footer Generated on 2020/04/26 13:49:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:07:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

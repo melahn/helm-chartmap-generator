@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for inbucket:3.1.0
 
 'There is one referenced Helm Chart
-artifact "inbucket:3.1.0\n====\n\tinbucket\n====\n\t3.1.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: cpanato, jhillyerd\n====\n\tKeywords: inbucket\nmail\nsmtp\npop3\nemail\ntesting\ndisposable webmail" as inbucket_3_1_0 #LightSkyBlue
+artifact "inbucket:3.1.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tcpanato\n\t\tjhillyerd\n====\n\tKeywords: \n\t\tinbucket\n\t\tmail\n\t\tsmtp\n\t\tpop3\n\t\temail\n\t\ttesting\n\t\tdisposable webmail" as inbucket_3_1_0 #LightSkyBlue
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tjhillyerd/inbucket\n====\n\trelease-2.0.0" as jhillyerd_inbucket_release_2_0_0 #Chocolate
+usecase "Image\n====\nDocker Hub\n====\njhillyerd/inbucket\n====\nrelease-2.0.0" as jhillyerd_inbucket_release_2_0_0 #Chocolate
 
 'Chart Dependencies
 inbucket_3_1_0--[#orange]-|>jhillyerd_inbucket_release_2_0_0
 
-center footer Generated on 2020/04/26 13:48:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:06:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

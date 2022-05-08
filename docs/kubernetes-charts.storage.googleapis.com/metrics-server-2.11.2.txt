@@ -1,0 +1,29 @@
+Chart Map for metrics-server:2.11.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: metrics-server:2.11.2
+	apiVersion: v1
+	appVersion: 0.3.6
+	created: Not specified
+	dependencies: None
+	description: Metrics Server is a cluster-wide aggregator of resource usage data.
+	digest: Not specified
+	icon: Not specified
+	keywords: metrics-server
+	maintainers: olemarkus:o.with@sportradar.com,kennethaasan:k.aasan@sportradar.com
+	repo url: https://charts.helm.sh/stable
+	name: metrics-server
+	sources: https://github.com/kubernetes-incubator/metrics-server
+	urls: Not specified
+	version: 2.11.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: k8s.gcr.io/metrics-server-amd64:v0.3.6
+
+Chart Dependencies
+------------------
+metrics-server:2.11.2 uses k8s.gcr.io/metrics-server-amd64:v0.3.6
+
+Generated on 2022/05/07 20:17:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

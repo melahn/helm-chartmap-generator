@@ -1,0 +1,29 @@
+{
+  "maintainers": [
+    {
+      "name": "billimek",
+      "email": "jeff@billimek.com"
+    },
+    {
+      "name": "mcronce",
+      "email": "mike@quadra-tec.net"
+    }
+  ],
+  "keywords": [
+    "ubiquiti",
+    "unifi",
+    "mongodb"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "jacobalberty/unifi",
+    "type": "image",
+    "version": "5.12.35"
+  }],
+  "name": "unifi:0.10.1",
+  "description": "Ubiquiti Network's Unifi Controller",
+  "type": "chart",
+  "shortName": "unifi",
+  "version": "0.10.1"
+}

@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "apm-server:2.1.7",
+  "description": "DEPRECATED The server receives data from the Elastic APM agents and stores the data into a datastore like Elasticsearch",
+  "type": "chart",
+  "shortName": "apm-server",
+  "version": "2.1.7"
+}

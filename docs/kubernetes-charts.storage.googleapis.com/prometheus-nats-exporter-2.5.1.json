@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "nats",
+    "prometheus",
+    "exporter"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "synadia/prometheus-nats-exporter",
+    "type": "image",
+    "version": "0.6.2"
+  }],
+  "name": "prometheus-nats-exporter:2.5.1",
+  "description": "DEPRECATED A Helm chart for prometheus-nats-exporter",
+  "type": "chart",
+  "shortName": "prometheus-nats-exporter",
+  "version": "2.5.1"
+}

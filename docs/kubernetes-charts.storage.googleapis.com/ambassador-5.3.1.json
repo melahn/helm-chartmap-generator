@@ -26,7 +26,7 @@
   "children": [{
     "repoHost": "quay.io",
     "children": [],
-    "name": "datawire/ambassador",
+    "name": "datawire/ambassador:0.86.1",
     "type": "image",
     "version": "0.86.1"
   }],

@@ -1,0 +1,15 @@
+{
+  "keywords": [
+    "monitoring",
+    "alerting",
+    "metric",
+    "event",
+    "anomaly detection"
+  ],
+  "children": [],
+  "name": "coscale:1.0.2",
+  "description": "DEPRECATED CoScale Agent",
+  "type": "chart",
+  "shortName": "coscale",
+  "version": "1.0.2"
+}

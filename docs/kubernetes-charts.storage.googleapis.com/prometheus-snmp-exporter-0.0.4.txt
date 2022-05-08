@@ -12,7 +12,7 @@ Chart: prometheus-snmp-exporter:0.0.4
 	icon: Not specified
 	keywords: prometheus,snmp,monitoring
 	maintainers: miouge1:maxime@root314.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: prometheus-snmp-exporter
 	sources: https://github.com/prometheus/snmp_exporter
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-snmp-exporter:0.0.4 uses prom/snmp-exporter:v0.14.0
 
-Generated on 2020/04/26 13:58:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:31:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

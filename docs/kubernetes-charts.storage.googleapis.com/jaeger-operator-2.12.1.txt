@@ -12,7 +12,7 @@ Chart: jaeger-operator:2.12.1
 	icon: https://www.jaegertracing.io/img/jaeger-icon-reverse-color.svg
 	keywords: Not specified
 	maintainers: cpanato:ctadeu@gmail.com,batazor:batazor111@gmail.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: jaeger-operator
 	sources: Not specified
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 jaeger-operator:2.12.1 uses jaegertracing/jaeger-operator:1.15.1
 
-Generated on 2020/04/26 13:49:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:07:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

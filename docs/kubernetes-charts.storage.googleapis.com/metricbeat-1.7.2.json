@@ -1,0 +1,24 @@
+{
+  "maintainers": [
+    {
+      "name": "at-k",
+      "email": "atushi.k@gmail.com"
+    },
+    {
+      "name": "mumoshu",
+      "email": "ykuoka@gmail.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "docker.elastic.co",
+    "children": [],
+    "name": "beats/metricbeat:6.7.0",
+    "type": "image",
+    "version": "6.7.0"
+  }],
+  "name": "metricbeat:1.7.2",
+  "description": "A Helm chart to collect Kubernetes logs with metricbeat",
+  "type": "chart",
+  "shortName": "metricbeat",
+  "version": "1.7.2"
+}

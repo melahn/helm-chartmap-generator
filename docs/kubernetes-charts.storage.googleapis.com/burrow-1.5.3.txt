@@ -1,0 +1,29 @@
+Chart Map for burrow:1.5.3
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: burrow:1.5.3
+	apiVersion: v1
+	appVersion: 0.29.0
+	created: Not specified
+	dependencies: None
+	description: Burrow is a permissionable smart contract machine
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/hyperledger/burrow/develop/docs/assets/images/burrow.png
+	keywords: blockchain,smart contracts,ethereum,hyperledger,evm,web3
+	maintainers: compleatang:casey@monax.io,gregdhill:greg.hill@monax.io
+	repo url: https://charts.helm.sh/stable
+	name: burrow
+	sources: https://github.com/hyperledger/burrow
+	urls: Not specified
+	version: 1.5.3
+
+There is one referenced Docker Image
+------------------------------------
+Image: hyperledger/burrow:0.29.0
+
+Chart Dependencies
+------------------
+burrow:1.5.3 uses hyperledger/burrow:0.29.0
+
+Generated on 2022/05/07 19:49:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

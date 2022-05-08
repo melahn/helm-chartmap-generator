@@ -1,0 +1,29 @@
+Chart Map for influxdb:4.3.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: influxdb:4.3.0
+	apiVersion: v1
+	appVersion: 1.7.9
+	created: Not specified
+	dependencies: None
+	description: Scalable datastore for metrics, events, and real-time analytics.
+	digest: Not specified
+	icon: Not specified
+	keywords: influxdb,database,timeseries
+	maintainers: jackzampolin:jack@influxdb.com,aisuko:urakiny@gmail.com,naseemkullah:naseem@transit.app
+	repo url: https://charts.helm.sh/stable
+	name: influxdb
+	sources: https://github.com/influxdata/influxdb
+	urls: Not specified
+	version: 4.3.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: influxdb:1.7.9-alpine
+
+Chart Dependencies
+------------------
+influxdb:4.3.0 uses influxdb:1.7.9-alpine
+
+Generated on 2022/05/07 20:06:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

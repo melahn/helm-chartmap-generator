@@ -1,0 +1,32 @@
+Chart Map for pachyderm:0.2.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: pachyderm:0.2.2
+	apiVersion: v1
+	appVersion: 1.8.6
+	created: Not specified
+	dependencies: None
+	description: Pachyderm is a large-scale container-based workflow engine that offers complete version control for data and reproducible data processing
+
+	digest: Not specified
+	icon: https://avatars2.githubusercontent.com/u/10432478?s=200
+	keywords: pachyderm,workflows,reproducibility,distributed,processing
+	maintainers: jonandernovella:novella.uu@gmail.com,dwhitena:whitenack.daniel@gmail.com,jdoliner:jdoliner@pachyderm.io
+	repo url: https://charts.helm.sh/stable
+	name: pachyderm
+	sources: https://github.com/pachyderm/pachyderm
+	urls: Not specified
+	version: 0.2.2
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: quay.io/coreos/etcd:v3.3.5
+Image: pachyderm/pachd:1.8.6
+
+Chart Dependencies
+------------------
+pachyderm:0.2.2 uses pachyderm/pachd:1.8.6
+pachyderm:0.2.2 uses quay.io/coreos/etcd:v3.3.5
+
+Generated on 2022/05/07 20:25:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

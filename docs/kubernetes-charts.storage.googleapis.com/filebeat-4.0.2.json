@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "filebeat:4.0.2",
+  "description": "DEPRECATED A Helm chart to collect Kubernetes logs with filebeat",
+  "type": "chart",
+  "shortName": "filebeat",
+  "version": "4.0.2"
+}

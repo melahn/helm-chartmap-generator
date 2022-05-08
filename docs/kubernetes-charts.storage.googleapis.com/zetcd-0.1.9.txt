@@ -5,17 +5,17 @@ There are 2 referenced Helm Charts
 Chart: etcd-operator:0.4.3
 	apiVersion: v1
 	appVersion: 0.3.3
-	created: 2017-09-18T05:49:00.718591398Z
+	created: 2020-10-15T15:46:16.066436-04:00
 	dependencies: None
 	description: CoreOS etcd-operator Helm chart for Kubernetes
 	digest: 8caedfbc29ef54b2fe93d66c97c3b15089d57306e6c7bf0a0f71d2b82b458999
 	icon: https://raw.githubusercontent.com/coreos/etcd/master/logos/etcd-horizontal-color.png
 	keywords: Not specified
 	maintainers: chancez:chance.zibolski@coreos.com,lachie83:lachlan@deis.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: etcd-operator
 	sources: https://github.com/coreos/etcd-operator
-	urls: https://kubernetes-charts.storage.googleapis.com/etcd-operator-0.4.3.tgz
+	urls: https://charts.helm.sh/stable/packages/etcd-operator-0.4.3.tgz
 	version: 0.4.3
 Chart: zetcd:0.1.9
 	apiVersion: v1
@@ -27,7 +27,7 @@ Chart: zetcd:0.1.9
 	icon: Not specified
 	keywords: Not specified
 	maintainers: hunter
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: zetcd
 	sources: https://github.com/coreos/zetcd
 	urls: Not specified
@@ -44,4 +44,4 @@ zetcd:0.1.9 depends on etcd-operator:0.4.3
 etcd-operator:0.4.3 uses quay.io/coreos/etcd-operator:v0.3.3
 zetcd:0.1.9 uses quay.io/coreos/zetcd:v0.0.3
 
-Generated on 2020/04/26 14:03:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:45:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

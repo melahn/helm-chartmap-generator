@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for terracotta:1.1.0
 
 'There is one referenced Helm Chart
-artifact "terracotta:1.1.0\n====\n\tterracotta\n====\n\t1.1.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: anthonydahanne\n====\n\tKeywords: terracotta\njcache\nin-memory\ncaching" as terracotta_1_1_0 #DarkSalmon
+artifact "terracotta:1.1.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: anthonydahanne\n====\n\tKeywords: \n\t\tterracotta\n\t\tjcache\n\t\tin-memory\n\t\tcaching" as terracotta_1_1_0 #DarkSalmon
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tterracotta/terracotta-server-oss\n====\n\t5.6.0" as terracotta_terracotta_server_oss_5_6_0 #Ivory
+usecase "Image\n====\nDocker Hub\n====\nterracotta/terracotta-server-oss\n====\n5.6.0" as terracotta_terracotta_server_oss_5_6_0 #Ivory
 
 'Chart Dependencies
 terracotta_1_1_0--[#orange]-|>terracotta_terracotta_server_oss_5_6_0
 
-center footer Generated on 2020/04/26 14:02:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:41:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

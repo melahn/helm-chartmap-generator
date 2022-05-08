@@ -12,7 +12,7 @@ Chart: hoard:1.0.0
 	icon: https://pbs.twimg.com/profile_images/781959787856687105/76s1CJER_400x400.jpg
 	keywords: s3,aws,gcp,azure,ipfs,envelope encryption,content addressable,distributed file storage
 	maintainers: compleatang:casey@monax.io,gregdhill:greg.hill@monax.io
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: hoard
 	sources: https://github.com/monax/hoard
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 hoard:1.0.0 uses quay.io/monax/hoard:6.0.0
 
-Generated on 2020/04/26 13:48:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:05:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for gcloud-endpoints:0.1.2
 
 'There is one referenced Helm Chart
-artifact "gcloud-endpoints:0.1.2\n====\n\tgcloud-endpoints\n====\n\t0.1.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: google\nendpoints\nnginx\ngcloud\nproxy\nauthentication\nmonitoring\napi\nswagger\nopen api" as gcloud_endpoints_0_1_2 #Chartreuse
+artifact "gcloud-endpoints:0.1.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tgoogle\n\t\tendpoints\n\t\tnginx\n\t\tgcloud\n\t\tproxy\n\t\tauthentication\n\t\tmonitoring\n\t\tapi\n\t\tswagger\n\t\topen api" as gcloud_endpoints_0_1_2 #Chartreuse
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tb.gcr.io\n====\n\tendpoints/endpoints-runtime:1\n====\n\t1" as b_gcr_io_endpoints_endpoints_runtime_1 #DarkSalmon
+usecase "Image\n====\nb.gcr.io\n====\nendpoints/endpoints-runtime:1\n====\n1" as b_gcr_io_endpoints_endpoints_runtime_1 #DarkSalmon
 
 'Chart Dependencies
 gcloud_endpoints_0_1_2--[#orange]-|>b_gcr_io_endpoints_endpoints_runtime_1
 
-center footer Generated on 2020/04/26 13:46:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:00:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

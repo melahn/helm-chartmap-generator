@@ -1,0 +1,23 @@
+{
+  "keywords": [
+    "load-balancer",
+    "balancer",
+    "lb",
+    "bgp",
+    "arp",
+    "vrrp",
+    "vip"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "metallb/controller",
+    "type": "image",
+    "version": "v0.8.1"
+  }],
+  "name": "metallb:0.12.1",
+  "description": "DEPRECATED MetalLB is a load-balancer implementation for bare metal Kubernetes clusters",
+  "type": "chart",
+  "shortName": "metallb",
+  "version": "0.12.1"
+}

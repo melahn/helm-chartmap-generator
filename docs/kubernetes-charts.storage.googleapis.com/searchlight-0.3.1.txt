@@ -1,0 +1,33 @@
+Chart Map for searchlight:0.3.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: searchlight:0.3.1
+	apiVersion: v1
+	appVersion: 5.0.0
+	created: Not specified
+	dependencies: None
+	description: Searchlight by AppsCode - Alerts for Kubernetes
+	digest: Not specified
+	icon: https://cdn.appscode.com/images/icon/searchlight.png
+	keywords: Not specified
+	maintainers: appscode:support@appscode.com
+	repo url: https://charts.helm.sh/stable
+	name: searchlight
+	sources: https://github.com/appscode/searchlight
+	urls: Not specified
+	version: 0.3.1
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: appscode/postgres:9.5-alpine
+Image: appscode/searchlight:5.0.0
+Image: appscode/icinga:5.0.0-k8s
+
+Chart Dependencies
+------------------
+searchlight:0.3.1 uses appscode/postgres:9.5-alpine
+searchlight:0.3.1 uses appscode/icinga:5.0.0-k8s
+searchlight:0.3.1 uses appscode/searchlight:5.0.0
+
+Generated on 2022/05/07 20:34:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

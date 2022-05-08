@@ -1,4 +1,8 @@
 {
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
   "keywords": [
     "redmine",
     "project management",
@@ -13,9 +17,9 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/redmine",
+      "name": "bitnami/redmine:4.1.0-debian-10-r31",
       "type": "image",
-      "version": "4.1.0-debian-10-r25"
+      "version": "4.1.0-debian-10-r31"
     },
     {
       "maintainers": [{
@@ -32,19 +36,19 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mariadb",
+        "name": "bitnami/mariadb:10.3.22-debian-10-r44",
         "type": "image",
-        "version": "10.3.22-debian-10-r17"
+        "version": "10.3.22-debian-10-r44"
       }],
-      "name": "mariadb:7.3.10",
+      "name": "mariadb:7.3.14",
       "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
       "type": "chart",
       "shortName": "mariadb",
-      "version": "7.3.10"
+      "version": "7.3.14"
     }
   ],
   "name": "redmine:14.1.12",
-  "description": "DEPRECATED A flexible project management web application.",
+  "description": "A flexible project management web application.",
   "type": "chart",
   "shortName": "redmine",
   "version": "14.1.12"

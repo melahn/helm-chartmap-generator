@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for unifi:0.10.2
+
+'There is one referenced Helm Chart
+artifact "unifi:0.10.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tubiquiti\n\t\tunifi\n\t\tmongodb" as unifi_0_10_2 #LightSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\njacobalberty/unifi\n====\n5.12.35" as jacobalberty_unifi_5_12_35 #Azure
+
+'Chart Dependencies
+unifi_0_10_2--[#orange]-|>jacobalberty_unifi_5_12_35
+
+center footer Generated on 2022/05/07 20:42:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

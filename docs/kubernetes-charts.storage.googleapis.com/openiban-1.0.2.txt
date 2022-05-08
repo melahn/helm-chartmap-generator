@@ -1,0 +1,29 @@
+Chart Map for openiban:1.0.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: openiban:1.0.2
+	apiVersion: v1
+	appVersion: 1.0.1
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED - OpenIBAN is a self-hosted, free and open-source IBAN validation API.
+	digest: Not specified
+	icon: Not specified
+	keywords: iban,golang
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: openiban
+	sources: https://github.com/fourcube/goiban-service
+	urls: Not specified
+	version: 1.0.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: fourcube/openiban:1.0.1
+
+Chart Dependencies
+------------------
+openiban:1.0.2 uses fourcube/openiban:1.0.1
+
+Generated on 2022/05/07 20:23:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

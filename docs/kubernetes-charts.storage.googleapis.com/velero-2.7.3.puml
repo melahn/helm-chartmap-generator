@@ -9,11 +9,11 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for velero:2.7.3
 
 'There is one referenced Helm Chart
-artifact "velero:2.7.3\n====\n\tvelero\n====\n\t2.7.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: domcar, hectorj2f, nrb, carlisia, ashish-amarnath\n====\n\tKeywords: " as velero_2_7_3 #HotPink
+artifact "velero:2.7.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tdomcar\n\t\thectorj2f\n\t\tnrb\n\t\tcarlisia\n\t\tashish-amarnath\n====\n\tKeywords: " as velero_2_7_3 #HotPink
 
 'There are 0 referenced Docker Images
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/26 14:02:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:43:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

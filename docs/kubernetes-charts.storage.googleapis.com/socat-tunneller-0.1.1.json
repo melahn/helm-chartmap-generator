@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "plumdog",
+    "email": "plummer574@gmail.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "alpine/socat",
+    "type": "image",
+    "version": "1.0.3"
+  }],
+  "name": "socat-tunneller:0.1.1",
+  "description": "A Helm chart for socat-tunneller",
+  "type": "chart",
+  "shortName": "socat-tunneller",
+  "version": "0.1.1"
+}

@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for metallb:0.11.2
 
 'There is one referenced Helm Chart
-artifact "metallb:0.11.2\n====\n\tmetallb\n====\n\t0.11.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: danderson\n====\n\tKeywords: load-balancer\nbalancer\nlb\nbgp\narp\nvrrp\nvip" as metallb_0_11_2 #GoldenRod
+artifact "metallb:0.11.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: danderson\n====\n\tKeywords: \n\t\tload-balancer\n\t\tbalancer\n\t\tlb\n\t\tbgp\n\t\tarp\n\t\tvrrp\n\t\tvip" as metallb_0_11_2 #GoldenRod
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tmetallb/controller\n====\n\tv0.8.1" as metallb_controller_v0_8_1 #Coral
+usecase "Image\n====\nDocker Hub\n====\nmetallb/controller\n====\nv0.8.1" as metallb_controller_v0_8_1 #Coral
 
 'Chart Dependencies
 metallb_0_11_2--[#orange]-|>metallb_controller_v0_8_1
 
-center footer Generated on 2020/04/26 13:52:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:17:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -12,7 +12,7 @@ Chart: concourse:8.2.7
 	icon: https://avatars1.githubusercontent.com/u/7809479
 	keywords: ci,concourse,concourse.ci
 	maintainers: cirocosta:cscosta@pivotal.io,william-tran:will@autonomic.ai,YoussB:byoussef@pivotal.io
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: concourse
 	sources: https://github.com/concourse/concourse,https://github.com/helm/charts
 	urls: Not specified
@@ -20,17 +20,17 @@ Chart: concourse:8.2.7
 Chart: postgresql:5.3.8
 	apiVersion: v1
 	appVersion: 11.3.0
-	created: 2019-06-21T07:56:56.117535678Z
+	created: 2019-06-21T09:06:03.330525937Z
 	dependencies: None
 	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
 	digest: 4736c933172ebb2c84816d3b7601b590f9831245997ba4a2e2cae145bee3b8fc
 	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
 	keywords: postgresql,postgres,database,sql,replication,cluster
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: postgresql
 	sources: https://github.com/bitnami/bitnami-docker-postgresql
-	urls: https://kubernetes-charts.storage.googleapis.com/postgresql-5.3.8.tgz
+	urls: https://charts.bitnami.com/bitnami/postgresql-5.3.8.tgz
 	version: 5.3.8
 
 There are 2 referenced Docker Images
@@ -41,8 +41,7 @@ Image: concourse/concourse:5.6.0
 Chart Dependencies
 ------------------
 concourse:8.2.7 depends on postgresql:5.3.8
-concourse:8.2.7 uses docker.io/bitnami/postgresql:11.3.0-debian-9-r38
 concourse:8.2.7 uses concourse/concourse:5.6.0
 postgresql:5.3.8 uses docker.io/bitnami/postgresql:11.3.0-debian-9-r38
 
-Generated on 2020/04/26 13:43:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 19:51:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

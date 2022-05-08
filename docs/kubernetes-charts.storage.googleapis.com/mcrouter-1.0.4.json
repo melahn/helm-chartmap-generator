@@ -1,0 +1,43 @@
+{
+  "maintainers": [{
+    "name": "jphalip",
+    "email": "jphalip@gmail.com"
+  }],
+  "children": [{
+    "maintainers": [
+      {
+        "name": "gtaylor",
+        "email": "gtaylor@gc-taylor.com"
+      },
+      {
+        "name": "olemarkus",
+        "email": "o.with@sportradar.com"
+      },
+      {
+        "name": "kennethaasan",
+        "email": "k.aasan@sportradar.com"
+      }
+    ],
+    "keywords": [
+      "memcached",
+      "cache"
+    ],
+    "children": [{
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "memcached",
+      "type": "image",
+      "version": "1.5.19-alpine"
+    }],
+    "name": "memcached:3.1.0",
+    "description": "Free & open source, high-performance, distributed memory object caching system.",
+    "type": "chart",
+    "shortName": "memcached",
+    "version": "3.1.0"
+  }],
+  "name": "mcrouter:1.0.4",
+  "description": "Mcrouter is a memcached protocol router for scaling memcached deployments.",
+  "type": "chart",
+  "shortName": "mcrouter",
+  "version": "1.0.4"
+}

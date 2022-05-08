@@ -1,0 +1,24 @@
+{
+  "maintainers": [
+    {
+      "name": "juanchimienti",
+      "email": "juan.chimienti@gmail.com"
+    },
+    {
+      "name": "monotek",
+      "email": "monotek23@gmail.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prom/mysqld-exporter",
+    "type": "image",
+    "version": "v0.11.0"
+  }],
+  "name": "prometheus-mysql-exporter:0.6.0",
+  "description": "A Helm chart for prometheus mysql exporter with cloudsqlproxy",
+  "type": "chart",
+  "shortName": "prometheus-mysql-exporter",
+  "version": "0.6.0"
+}

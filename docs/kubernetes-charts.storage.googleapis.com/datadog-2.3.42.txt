@@ -1,0 +1,45 @@
+Chart Map for datadog:2.3.42
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: kube-state-metrics:2.8.4
+	apiVersion: v1
+	appVersion: 1.9.5
+	created: 2020-10-15T15:46:18.924141-04:00
+	dependencies: None
+	description: Install kube-state-metrics to generate and expose cluster-level metrics
+	digest: c7cdb6699f2186e7a70edb3f4eca47fea25066adca9f3680de78b6d7c0f4db6c
+	icon: Not specified
+	keywords: metric,monitoring,prometheus,kubernetes
+	maintainers: fiunchinho:jose@armesto.net,tariq1890:tariq.ibrahim@mulesoft.com,mrueg:manuel@rueg.eu
+	repo url: https://charts.helm.sh/stable
+	name: kube-state-metrics
+	sources: https://github.com/kubernetes/kube-state-metrics/
+	urls: https://charts.helm.sh/stable/packages/kube-state-metrics-2.8.4.tgz
+	version: 2.8.4
+Chart: datadog:2.3.42
+	apiVersion: v1
+	appVersion: 7
+	created: Not specified
+	dependencies: kube-state-metrics:2.8.4
+	description: DEPRECATED Datadog Agent
+	digest: Not specified
+	icon: https://datadog-live.imgix.net/img/dd_logo_70x75.png
+	keywords: monitoring,alerting,metric
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: datadog
+	sources: https://app.datadoghq.com/account/settings#agent/kubernetes,https://github.com/DataDog/datadog-agent
+	urls: Not specified
+	version: 2.3.42
+
+There is one referenced Docker Image
+------------------------------------
+Image: quay.io/coreos/kube-state-metrics:v1.9.5
+
+Chart Dependencies
+------------------
+datadog:2.3.42 depends on kube-state-metrics:2.8.4
+kube-state-metrics:2.8.4 uses quay.io/coreos/kube-state-metrics:v1.9.5
+
+Generated on 2022/05/07 19:53:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

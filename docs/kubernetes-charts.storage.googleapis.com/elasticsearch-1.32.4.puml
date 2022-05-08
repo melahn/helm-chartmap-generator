@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for elasticsearch:1.32.4
 
 'There is one referenced Helm Chart
-artifact "elasticsearch:1.32.4\n====\n\telasticsearch\n====\n\t1.32.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: simonswine, icereval, rendhalver, desaintmartin, KongZ, hectorj2f\n====\n\tKeywords: " as elasticsearch_1_32_4 #Aquamarine
+artifact "elasticsearch:1.32.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tsimonswine\n\t\ticereval\n\t\trendhalver\n\t\tdesaintmartin\n\t\tKongZ\n\t\thectorj2f\n====\n\tKeywords: " as elasticsearch_1_32_4 #Aquamarine
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tdocker.elastic.co\n====\n\telasticsearch/elasticsearch-oss:6.8.6\n====\n\t6.8.6" as docker_elastic_co_elasticsearch_elasticsearch_oss_6_8_6 #IndianRed
+usecase "Image\n====\ndocker.elastic.co\n====\nelasticsearch/elasticsearch-oss:6.8.6\n====\n6.8.6" as docker_elastic_co_elasticsearch_elasticsearch_oss_6_8_6 #IndianRed
 
 'Chart Dependencies
 elasticsearch_1_32_4--[#orange]-|>docker_elastic_co_elasticsearch_elasticsearch_oss_6_8_6
 
-center footer Generated on 2020/04/26 13:44:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:56:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

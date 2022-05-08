@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for satisfy:1.1.0
+
+'There is one referenced Helm Chart
+artifact "satisfy:1.1.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: anapsix\n====\n\tKeywords: " as satisfy_1_1_0 #Bisque
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nanapsix/satisfy@sha256:fae78e3809e9d08990c7d7d6699a734f7e584c28ce49381a1a699e1694481ab8\n====\nfae78e3809e9d08990c7d7d6699a734f7e584c28ce49381a1a699e1694481ab8" as docker_io_anapsix_satisfy@sha256_fae78e3809e9d08990c7d7d6699a734f7e584c28ce49381a1a699e1694481ab8 #DarkGoldenRod
+
+'Chart Dependencies
+satisfy_1_1_0--[#orange]-|>docker_io_anapsix_satisfy@sha256_fae78e3809e9d08990c7d7d6699a734f7e584c28ce49381a1a699e1694481ab8
+
+center footer Generated on 2022/05/07 20:34:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

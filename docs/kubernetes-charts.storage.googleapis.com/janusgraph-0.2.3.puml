@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for janusgraph:0.2.3
+
+'There is one referenced Helm Chart
+artifact "janusgraph:0.2.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: samizuh\n====\n\tKeywords: " as janusgraph_0_2_3 #LightGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ngcr.io\n====\ncloud-solutions-images/janusgraph:v2\n====\nv2" as gcr_io_cloud_solutions_images_janusgraph_v2 #DeepSkyBlue
+
+'Chart Dependencies
+janusgraph_0_2_3--[#orange]-|>gcr_io_cloud_solutions_images_janusgraph_v2
+
+center footer Generated on 2022/05/07 20:07:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

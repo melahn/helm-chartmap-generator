@@ -1,0 +1,43 @@
+{
+  "maintainers": [{
+    "name": "yuchaoran2011",
+    "email": "yuchaoran2011@gmail.com"
+  }],
+  "keywords": [
+    "spark",
+    "history-server"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "lightbend/spark-history-server",
+      "type": "image",
+      "version": "2.4.0"
+    },
+    {
+      "maintainers": [{
+        "name": "yuchaoran2011",
+        "email": "yuchaoran2011@gmail.com"
+      }],
+      "keywords": ["nfs"],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "k8s.gcr.io/volume-nfs",
+        "type": "image",
+        "version": "0.8"
+      }],
+      "name": "nfs:0.1.0",
+      "description": "A Helm chart for NFS server",
+      "type": "chart",
+      "shortName": "nfs",
+      "version": "0.1.0"
+    }
+  ],
+  "name": "spark-history-server:1.4.2",
+  "description": "A Helm chart for Spark History Server",
+  "type": "chart",
+  "shortName": "spark-history-server",
+  "version": "1.4.2"
+}

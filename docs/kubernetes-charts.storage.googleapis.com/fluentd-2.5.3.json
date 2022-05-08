@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "google-containers/fluentd-elasticsearch:v2.4.0",
+    "type": "image",
+    "version": "v2.4.0"
+  }],
+  "name": "fluentd:2.5.3",
+  "description": "DEPRECATED A Fluentd Elasticsearch Helm chart for Kubernetes.",
+  "type": "chart",
+  "shortName": "fluentd",
+  "version": "2.5.3"
+}

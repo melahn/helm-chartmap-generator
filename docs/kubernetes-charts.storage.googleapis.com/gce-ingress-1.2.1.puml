@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for gce-ingress:1.2.1
+
+'There is one referenced Helm Chart
+artifact "gce-ingress:1.2.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: paulczar\n====\n\tKeywords: \n\t\tingress\n\t\tgce" as gce_ingress_1_2_1 #BurlyWood
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/defaultbackend\n====\n1.4" as k8s_gcr_io_defaultbackend_1_4 #DarkSeaGreen
+usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/ingress-gce-glbc-amd64\n====\nv1.4.0" as k8s_gcr_io_ingress_gce_glbc_amd64_v1_4_0 #LightCoral
+
+'Chart Dependencies
+gce_ingress_1_2_1--[#orange]-|>k8s_gcr_io_ingress_gce_glbc_amd64_v1_4_0
+gce_ingress_1_2_1--[#orange]-|>k8s_gcr_io_defaultbackend_1_4
+
+center footer Generated on 2022/05/07 20:00:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

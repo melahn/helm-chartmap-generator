@@ -9,13 +9,17 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for searchlight:0.3.3
 
 'There is one referenced Helm Chart
-artifact "searchlight:0.3.3\n====\n\tsearchlight\n====\n\t0.3.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: " as searchlight_0_3_3 #Coral
+artifact "searchlight:0.3.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as searchlight_0_3_3 #Coral
 
-'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tappscode/searchlight\n====\n\t5.0.0" as appscode_searchlight_5_0_0 #DeepSkyBlue
+'There are 3 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nappscode/postgres\n====\n9.5-alpine" as appscode_postgres_9_5_alpine #Aquamarine
+usecase "Image\n====\nDocker Hub\n====\nappscode/searchlight\n====\n5.0.0" as appscode_searchlight_5_0_0 #DeepSkyBlue
+usecase "Image\n====\nDocker Hub\n====\nappscode/icinga\n====\n5.0.0-k8s" as appscode_icinga_5_0_0_k8s #AliceBlue
 
 'Chart Dependencies
+searchlight_0_3_3--[#orange]-|>appscode_postgres_9_5_alpine
+searchlight_0_3_3--[#orange]-|>appscode_icinga_5_0_0_k8s
 searchlight_0_3_3--[#orange]-|>appscode_searchlight_5_0_0
 
-center footer Generated on 2020/04/26 13:59:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:34:42 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

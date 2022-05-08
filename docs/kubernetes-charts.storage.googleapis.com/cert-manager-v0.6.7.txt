@@ -1,27 +1,46 @@
 Chart Map for cert-manager:v0.6.7
 
-There is one referenced Helm Chart
+There are 2 referenced Helm Charts
 ----------------------------------
 Chart: cert-manager:v0.6.7
 	apiVersion: Not specified
 	appVersion: v0.6.2
 	created: Not specified
-	dependencies: None
+	dependencies: webhook:v0.6.4
 	description: A Helm chart for cert-manager
 	digest: Not specified
 	icon: Not specified
 	keywords: cert-manager,kube-lego,letsencrypt,tls
 	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: cert-manager
 	sources: https://github.com/jetstack/cert-manager
 	urls: Not specified
 	version: v0.6.7
+Chart: webhook:v0.6.4
+	apiVersion: v1
+	appVersion: v0.6.2
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for deploying the cert-manager webhook component
+	digest: Not specified
+	icon: Not specified
+	keywords: cert-manager,kube-lego,letsencrypt,tls
+	maintainers: munnerz:james@jetstack.io
+	name: webhook
+	sources: https://github.com/jetstack/cert-manager
+	urls: Not specified
+	version: v0.6.4
 
-There are 0 referenced Docker Images
+There are 2 referenced Docker Images
 ------------------------------------
+Image: quay.io/jetstack/cert-manager-webhook:v0.6.2
+Image: quay.io/jetstack/cert-manager-controller:v0.6.2
 
 Chart Dependencies
 ------------------
+cert-manager:v0.6.7 depends on webhook:v0.6.4
+cert-manager:v0.6.7 uses quay.io/jetstack/cert-manager-controller:v0.6.2
+webhook:v0.6.4 uses quay.io/jetstack/cert-manager-webhook:v0.6.2
 
-Generated on 2020/04/26 13:42:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 19:49:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -45,7 +45,7 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/postgresql",
+        "name": "bitnami/postgresql:11.6.0-debian-10-r0",
         "type": "image",
         "version": "11.6.0-debian-10-r0"
       }],

@@ -12,7 +12,7 @@ Chart: prometheus-to-sd:0.3.0
 	icon: Not specified
 	keywords: prometheus,stackdriver
 	maintainers: acondrat:arcadie.condrat@gmail.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: prometheus-to-sd
 	sources: Not specified
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-to-sd:0.3.0 uses gcr.io/google-containers/prometheus-to-sd:v0.5.2
 
-Generated on 2020/04/26 13:58:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:31:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

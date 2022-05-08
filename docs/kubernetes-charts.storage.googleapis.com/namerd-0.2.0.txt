@@ -12,18 +12,20 @@ Chart: namerd:0.2.0
 	icon: https://pbs.twimg.com/profile_images/690258997237014528/KNgQd9GL_400x400.png
 	keywords: Not specified
 	maintainers: Sean Knox:knoxville@gmail.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: namerd
 	sources: https://github.com/linkerd/linkerd
 	urls: Not specified
 	version: 0.2.0
 
-There is one referenced Docker Image
+There are 2 referenced Docker Images
 ------------------------------------
+Image: buoyantio/kubectl:v1.4.0
 Image: buoyantio/namerd:0.9.1
 
 Chart Dependencies
 ------------------
 namerd:0.2.0 uses buoyantio/namerd:0.9.1
+namerd:0.2.0 uses buoyantio/kubectl:v1.4.0
 
-Generated on 2020/04/26 13:53:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:20:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,32 @@
+{
+  "maintainers": [
+    {
+      "name": "max-rocket-internet",
+      "email": "max.williams@deliveryhero.com"
+    },
+    {
+      "name": "Random-Liu",
+      "email": "lantaol@google.com"
+    },
+    {
+      "name": "andyxning",
+      "email": "andy.xning@gmail.com"
+    },
+    {
+      "name": "wangzhen127",
+      "email": "zhenw@google.com"
+    }
+  ],
+  "keywords": [
+    "node",
+    "problem",
+    "detector",
+    "monitoring"
+  ],
+  "children": [],
+  "name": "node-problem-detector:1.8.2",
+  "description": "Installs the node-problem-detector daemonset for monitoring extra attributes on nodes",
+  "type": "chart",
+  "shortName": "node-problem-detector",
+  "version": "1.8.2"
+}

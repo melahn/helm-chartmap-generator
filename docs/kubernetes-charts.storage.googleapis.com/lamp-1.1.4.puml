@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for lamp:1.1.4
+
+'There is one referenced Helm Chart
+artifact "lamp:1.1.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: lead4good\n====\n\tKeywords: " as lamp_1_1_4 #AliceBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nhttpd\n====\n2.4-alpine" as httpd_2_4_alpine #Aqua
+usecase "Image\n====\nDocker Hub\n====\nphp\n====\n7-fpm-alpine" as php_7_fpm_alpine #AliceBlue
+
+'Chart Dependencies
+lamp_1_1_4--[#orange]-|>httpd_2_4_alpine
+lamp_1_1_4--[#orange]-|>php_7_fpm_alpine
+
+center footer Generated on 2022/05/07 20:14:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

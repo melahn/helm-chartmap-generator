@@ -1,0 +1,29 @@
+Chart Map for eventrouter:0.3.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: eventrouter:0.3.2
+	apiVersion: v1
+	appVersion: 0.3
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED A Helm chart for eventruter (https://github.com/heptiolabs/eventrouter)
+	digest: Not specified
+	icon: Not specified
+	keywords: eventrouter
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: eventrouter
+	sources: https://github.com/heptiolabs/eventrouter
+	urls: Not specified
+	version: 0.3.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: gcr.io/heptio-images/eventrouter:v0.3
+
+Chart Dependencies
+------------------
+eventrouter:0.3.2 uses gcr.io/heptio-images/eventrouter:v0.3
+
+Generated on 2022/05/07 19:57:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

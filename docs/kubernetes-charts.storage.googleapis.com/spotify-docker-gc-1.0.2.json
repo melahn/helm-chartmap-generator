@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "spotify-docker-gc:1.0.2",
+  "description": "DEPRECATED - A simple Docker container and image garbage collection script.",
+  "type": "chart",
+  "shortName": "spotify-docker-gc",
+  "version": "1.0.2"
+}

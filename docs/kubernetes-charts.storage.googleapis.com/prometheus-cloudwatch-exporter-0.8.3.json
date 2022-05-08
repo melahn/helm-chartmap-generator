@@ -1,0 +1,34 @@
+{
+  "maintainers": [
+    {
+      "name": "gianrubio",
+      "email": "gianrubio@gmail.com"
+    },
+    {
+      "name": "torstenwalter",
+      "email": "mail@torstenwalter.de"
+    },
+    {
+      "name": "asherf",
+      "email": "asher@asherfoa.com"
+    }
+  ],
+  "keywords": [
+    "aws",
+    "cloudwatch",
+    "prometheus",
+    "exporter"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prom/cloudwatch-exporter",
+    "type": "image",
+    "version": "cloudwatch_exporter-0.8.0"
+  }],
+  "name": "prometheus-cloudwatch-exporter:0.8.3",
+  "description": "A Helm chart for prometheus cloudwatch-exporter",
+  "type": "chart",
+  "shortName": "prometheus-cloudwatch-exporter",
+  "version": "0.8.3"
+}

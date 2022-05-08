@@ -8,16 +8,20 @@ skinparam artifactArrowColor LightSlateGray
 
 title Chart Map for magento:6.0.0
 
-'There are 2 referenced Helm Charts
-artifact "magento:6.0.0\n====\n\tmagento\n====\n\t6.0.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: magento\ne-commerce\nhttp\nweb\nphp" as magento_6_0_0 #HotPink
-artifact "mariadb:7.0.0\n====\n\tmariadb\n====\n\t7.0.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mariadb\nmysql\ndatabase\nsql\nprometheus" as mariadb_7_0_0 #DarkTurquoise
+'There are 3 referenced Helm Charts
+artifact "mariadb:5.11.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_5_11_3 #DarkTurquoise
+artifact "elasticsearch:4.7.2\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: elasticsearch" as elasticsearch_4_7_2 #Aquamarine
+artifact "magento:6.0.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmagento\n\t\te-commerce\n\t\thttp\n\t\tweb\n\t\tphp" as magento_6_0_0 #HotPink
 
-'There is one referenced Docker Image
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mariadb:10.3.18-debian-9-r36\n====\n\t10.3.18-debian-9-r36" as docker_io_bitnami_mariadb_10_3_18_debian_9_r36 #DarkGoldenRod
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/elasticsearch:6.7.1\n====\n6.7.1" as docker_io_bitnami_elasticsearch_6_7_1 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.1.40\n====\n10.1.40" as docker_io_bitnami_mariadb_10_1_40 #DarkGoldenRod
 
 'Chart Dependencies
-magento_6_0_0--[#green]-|>mariadb_7_0_0
-mariadb_7_0_0--[#orange]-|>docker_io_bitnami_mariadb_10_3_18_debian_9_r36
+magento_6_0_0--[#green]-|>elasticsearch_4_7_2
+magento_6_0_0--[#green]-|>mariadb_5_11_3
+mariadb_5_11_3--[#orange]-|>docker_io_bitnami_mariadb_10_1_40
+elasticsearch_4_7_2--[#orange]-|>docker_io_bitnami_elasticsearch_6_7_1
 
-center footer Generated on 2020/04/26 13:51:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:15:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

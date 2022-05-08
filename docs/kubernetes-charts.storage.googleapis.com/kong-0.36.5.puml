@@ -9,13 +9,15 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for kong:0.36.5
 
 'There is one referenced Helm Chart
-artifact "kong:0.36.5\n====\n\tkong\n====\n\t0.36.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: shashiranjan84, hbagdi\n====\n\tKeywords: " as kong_0_36_5 #LightSteelBlue
+artifact "kong:0.36.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tshashiranjan84\n\t\thbagdi\n====\n\tKeywords: " as kong_0_36_5 #LightSteelBlue
 
-'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tkong-docker-kubernetes-ingress-controller.bintray.io/kong-ingress-controller\n====\n\t0.7.0" as kong_docker_kubernetes_ingress_controller_bintray_io_kong_ingress_controller_0_7_0 #IndianRed
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nkong\n====\n1.4" as kong_1_4 #LightSteelBlue
+usecase "Image\n====\nDocker Hub\n====\nkong-docker-kubernetes-ingress-controller.bintray.io/kong-ingress-controller\n====\n0.7.0" as kong_docker_kubernetes_ingress_controller_bintray_io_kong_ingress_controller_0_7_0 #IndianRed
 
 'Chart Dependencies
+kong_0_36_5--[#orange]-|>kong_1_4
 kong_0_36_5--[#orange]-|>kong_docker_kubernetes_ingress_controller_bintray_io_kong_ingress_controller_0_7_0
 
-center footer Generated on 2020/04/26 13:50:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:11:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

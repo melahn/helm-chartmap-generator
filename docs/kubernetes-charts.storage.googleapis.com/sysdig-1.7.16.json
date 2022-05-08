@@ -1,0 +1,16 @@
+{
+  "keywords": [
+    "monitoring",
+    "security",
+    "alerting",
+    "metric",
+    "troubleshooting",
+    "run-time"
+  ],
+  "children": [],
+  "name": "sysdig:1.7.16",
+  "description": "Sysdig Monitor and Secure agent",
+  "type": "chart",
+  "shortName": "sysdig",
+  "version": "1.7.16"
+}

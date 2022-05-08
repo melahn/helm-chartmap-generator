@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "linkerd:0.4.3",
+  "description": "DEPRECATED - Service mesh for cloud native apps",
+  "type": "chart",
+  "shortName": "linkerd",
+  "version": "0.4.3"
+}

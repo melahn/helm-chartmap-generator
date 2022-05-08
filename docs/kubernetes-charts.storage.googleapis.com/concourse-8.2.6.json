@@ -1,0 +1,67 @@
+{
+  "maintainers": [
+    {
+      "name": "cirocosta",
+      "email": "cscosta@pivotal.io"
+    },
+    {
+      "name": "william-tran",
+      "email": "will@autonomic.ai"
+    },
+    {
+      "name": "YoussB",
+      "email": "byoussef@pivotal.io"
+    }
+  ],
+  "keywords": [
+    "ci",
+    "concourse",
+    "concourse.ci"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "concourse/concourse",
+      "type": "image",
+      "version": "5.6.0"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/postgresql:11.3.0-debian-9-r38",
+        "type": "image",
+        "version": "11.3.0-debian-9-r38"
+      }],
+      "name": "postgresql:5.3.8",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "5.3.8"
+    }
+  ],
+  "name": "concourse:8.2.6",
+  "description": "Concourse is a simple and scalable CI system.",
+  "type": "chart",
+  "shortName": "concourse",
+  "version": "8.2.6"
+}

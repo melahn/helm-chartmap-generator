@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "postgresql",
+    "prometheus",
+    "exporter"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "wrouesnel/postgres_exporter",
+    "type": "image",
+    "version": "v0.8.0"
+  }],
+  "name": "prometheus-postgres-exporter:1.3.1",
+  "description": "DEPRECATED A Helm chart for prometheus postgres-exporter",
+  "type": "chart",
+  "shortName": "prometheus-postgres-exporter",
+  "version": "1.3.1"
+}

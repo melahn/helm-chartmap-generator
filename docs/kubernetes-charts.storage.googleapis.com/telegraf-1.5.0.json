@@ -1,0 +1,24 @@
+{
+  "maintainers": [{
+    "name": "naseemkullah",
+    "email": "naseemkullah@gmail.com"
+  }],
+  "keywords": [
+    "telegraf",
+    "collector",
+    "timeseries",
+    "influxdata"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "telegraf",
+    "type": "image",
+    "version": "1.12-alpine"
+  }],
+  "name": "telegraf:1.5.0",
+  "description": "Telegraf is an agent written in Go for collecting, processing, aggregating, and writing metrics.",
+  "type": "chart",
+  "shortName": "telegraf",
+  "version": "1.5.0"
+}

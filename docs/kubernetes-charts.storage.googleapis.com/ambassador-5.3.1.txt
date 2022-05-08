@@ -12,7 +12,7 @@ Chart: ambassador:5.3.1
 	icon: https://www.getambassador.io/images/logo.png
 	keywords: api gateway,ambassador,datawire,envoy
 	maintainers: flydiverny:markus@maga.se,kflynn:flynn@datawire.io,nbkrause:nkrause@datawire.io,lukeshu:lukeshu@datawire.io
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: ambassador
 	sources: https://github.com/datawire/ambassador,https://github.com/prometheus/statsd_exporter
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 ambassador:5.3.1 uses quay.io/datawire/ambassador:0.86.1
 
-Generated on 2020/04/26 13:40:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 19:46:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for phpmyadmin:4.3.5
 
 'There is one referenced Helm Chart
-artifact "phpmyadmin:4.3.5\n====\n\tphpmyadmin\n====\n\t4.3.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: mariadb\nmysql\nphpmyadmin" as phpmyadmin_4_3_5 #LightCyan
+artifact "phpmyadmin:4.3.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tphpmyadmin" as phpmyadmin_4_3_5 #LightCyan
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/phpmyadmin:5.0.1-debian-10-r30\n====\n\t5.0.1-debian-10-r30" as docker_io_bitnami_phpmyadmin_5_0_1_debian_10_r30 #BlanchedAlmond
+usecase "Image\n====\ndocker.io\n====\nbitnami/phpmyadmin:5.0.1-debian-10-r47\n====\n5.0.1-debian-10-r47" as docker_io_bitnami_phpmyadmin_5_0_1_debian_10_r47 #BlanchedAlmond
 
 'Chart Dependencies
-phpmyadmin_4_3_5--[#orange]-|>docker_io_bitnami_phpmyadmin_5_0_1_debian_10_r30
+phpmyadmin_4_3_5--[#orange]-|>docker_io_bitnami_phpmyadmin_5_0_1_debian_10_r47
 
-center footer Generated on 2020/04/26 13:56:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:26:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

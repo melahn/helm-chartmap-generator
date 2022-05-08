@@ -12,7 +12,7 @@ Chart: tomcat:0.4.1
 	icon: http://tomcat.apache.org/res/images/tomcat.png
 	keywords: Not specified
 	maintainers: yahavb:ybiran@ananware.systems
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: tomcat
 	sources: Not specified
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 tomcat:0.4.1 uses tomcat:7.0
 
-Generated on 2020/04/26 14:02:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:41:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

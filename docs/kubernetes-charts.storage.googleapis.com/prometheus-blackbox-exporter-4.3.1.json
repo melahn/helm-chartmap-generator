@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "prometheus",
+    "blackbox",
+    "monitoring"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prom/blackbox-exporter",
+    "type": "image",
+    "version": "v0.16.0"
+  }],
+  "name": "prometheus-blackbox-exporter:4.3.1",
+  "description": "DEPRECATED Prometheus Blackbox Exporter",
+  "type": "chart",
+  "shortName": "prometheus-blackbox-exporter",
+  "version": "4.3.1"
+}

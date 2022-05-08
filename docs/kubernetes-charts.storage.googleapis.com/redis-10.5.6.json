@@ -17,7 +17,7 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/redis",
+    "name": "bitnami/redis:5.0.7-debian-10-r32",
     "type": "image",
     "version": "5.0.7-debian-10-r32"
   }],

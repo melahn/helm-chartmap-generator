@@ -12,7 +12,7 @@ Chart: risk-advisor:2.0.4
 	icon: https://raw.githubusercontent.com/Prytu/risk-advisor/master/logo.svg
 	keywords: Not specified
 	maintainers: pposkrobko:pawel.poskrobko@icloud.com,Prytu:mich.pryt@gmail.com,GraczykowskiMichal:graczykowskimichal@gmail.com,jackmax:jacek.maksymowicz@student.uw.edu.pl
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: risk-advisor
 	sources: https://github.com/Prytu/risk-advisor/
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 risk-advisor:2.0.4 uses pposkrobko/risk-advisor:v1.0.0
 
-Generated on 2020/04/26 13:59:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:33:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,30 @@
+{
+  "maintainers": [
+    {
+      "name": "lachie83",
+      "email": "lachlan@deis.com"
+    },
+    {
+      "name": "bencer",
+      "email": "jorge.salamero@sysdig.com"
+    },
+    {
+      "name": "nestorsalceda",
+      "email": "nestor.salceda@sysdig.com"
+    }
+  ],
+  "keywords": [
+    "monitoring",
+    "security",
+    "alerting",
+    "metric",
+    "troubleshooting",
+    "run-time"
+  ],
+  "children": [],
+  "name": "sysdig:1.7.14",
+  "description": "Sysdig Monitor and Secure agent",
+  "type": "chart",
+  "shortName": "sysdig",
+  "version": "1.7.14"
+}

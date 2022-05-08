@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "k8s.gcr.io/cluster-autoscaler",
+    "type": "image",
+    "version": "v0.6.1"
+  }],
+  "name": "aws-cluster-autoscaler:0.3.4",
+  "description": "DEPRECATED Scales worker nodes within autoscaling groups.",
+  "type": "chart",
+  "shortName": "aws-cluster-autoscaler",
+  "version": "0.3.4"
+}

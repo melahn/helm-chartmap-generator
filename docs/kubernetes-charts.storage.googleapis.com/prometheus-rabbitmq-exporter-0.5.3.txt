@@ -12,7 +12,7 @@ Chart: prometheus-rabbitmq-exporter:0.5.3
 	icon: Not specified
 	keywords: Not specified
 	maintainers: juanchimienti:juan.chimienti@gmail.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: prometheus-rabbitmq-exporter
 	sources: https://github.com/kbudde/rabbitmq_exporter
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-rabbitmq-exporter:0.5.3 uses kbudde/rabbitmq-exporter:v0.29.0
 
-Generated on 2020/04/26 13:57:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:30:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

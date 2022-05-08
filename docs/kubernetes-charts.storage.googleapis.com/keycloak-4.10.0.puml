@@ -9,17 +9,17 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for keycloak:4.10.0
 
 'There are 2 referenced Helm Charts
-artifact "keycloak:4.10.0\n====\n\tkeycloak\n====\n\t4.10.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: unguiculus, thomasdarimont\n====\n\tKeywords: sso\nidm\nopenid connect\nsaml\nkerberos\nldap" as keycloak_4_10_0 #LightBlue
-artifact "postgresql:0.15.0\n====\n\tpostgresql\n====\n\t0.15.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: databus23\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql" as postgresql_0_15_0 #LightSteelBlue
+artifact "keycloak:4.10.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tunguiculus\n\t\tthomasdarimont\n====\n\tKeywords: \n\t\tsso\n\t\tidm\n\t\topenid connect\n\t\tsaml\n\t\tkerberos\n\t\tldap" as keycloak_4_10_0 #LightBlue
+artifact "postgresql:0.15.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: databus23\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql" as postgresql_0_15_0 #LightSteelBlue
 
 'There are 2 referenced Docker Images
-usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t9.6.2" as postgres_9_6_2 #Ivory
-usecase "Image\n====\n\tDocker Hub\n====\n\tjboss/keycloak\n====\n\t5.0.0" as jboss_keycloak_5_0_0 #LemonChiffon
+usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n9.6.2" as postgres_9_6_2 #Ivory
+usecase "Image\n====\nDocker Hub\n====\njboss/keycloak\n====\n5.0.0" as jboss_keycloak_5_0_0 #LemonChiffon
 
 'Chart Dependencies
 keycloak_4_10_0--[#green]-|>postgresql_0_15_0
 keycloak_4_10_0--[#orange]-|>jboss_keycloak_5_0_0
 postgresql_0_15_0--[#orange]-|>postgres_9_6_2
 
-center footer Generated on 2020/04/26 13:50:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:10:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

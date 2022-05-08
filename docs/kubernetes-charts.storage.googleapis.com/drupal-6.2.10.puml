@@ -9,17 +9,17 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for drupal:6.2.10
 
 'There are 2 referenced Helm Charts
-artifact "mariadb:7.3.12\n====\n\tmariadb\n====\n\t7.3.12\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mariadb\nmysql\ndatabase\nsql\nprometheus" as mariadb_7_3_12 #DarkTurquoise
-artifact "drupal:6.2.10\n====\n\tdrupal\n====\n\t6.2.10\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: drupal\ncms\nblog\nhttp\nweb\napplication\nphp" as drupal_6_2_10 #HotPink
+artifact "mariadb:7.3.12\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_7_3_12 #DarkTurquoise
+artifact "drupal:6.2.10\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tdrupal\n\t\tcms\n\t\tblog\n\t\thttp\n\t\tweb\n\t\tapplication\n\t\tphp" as drupal_6_2_10 #HotPink
 
 'There are 2 referenced Docker Images
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mariadb:10.3.22-debian-10-r27\n====\n\t10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/drupal:8.8.3-debian-10-r1\n====\n\t8.8.3-debian-10-r1" as docker_io_bitnami_drupal_8_8_3_debian_10_r1 #Aquamarine
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.3.22-debian-10-r27\n====\n10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/drupal:8.8.3-debian-10-r1\n====\n8.8.3-debian-10-r1" as docker_io_bitnami_drupal_8_8_3_debian_10_r1 #Aquamarine
 
 'Chart Dependencies
 drupal_6_2_10--[#green]-|>mariadb_7_3_12
 mariadb_7_3_12--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r27
 drupal_6_2_10--[#orange]-|>docker_io_bitnami_drupal_8_8_3_debian_10_r1
 
-center footer Generated on 2020/03/16 17:15:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:55:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

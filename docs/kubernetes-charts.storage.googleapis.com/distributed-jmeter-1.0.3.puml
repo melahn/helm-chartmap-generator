@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for distributed-jmeter:1.0.3
+
+'There is one referenced Helm Chart
+artifact "distributed-jmeter:1.0.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as distributed_jmeter_1_0_3 #LightBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\npedrocesarti/jmeter-docker\n====\n3.3" as pedrocesarti_jmeter_docker_3_3 #LightGreen
+
+'Chart Dependencies
+distributed_jmeter_1_0_3--[#orange]-|>pedrocesarti_jmeter_docker_3_3
+
+center footer Generated on 2022/05/07 19:54:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

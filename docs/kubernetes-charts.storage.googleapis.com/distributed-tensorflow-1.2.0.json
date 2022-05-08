@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "Dysproz",
+    "email": "krasuski.szymon.piotr@gmail.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "dysproz/distributed-tf",
+    "type": "image",
+    "version": "1.7.0"
+  }],
+  "name": "distributed-tensorflow:1.2.0",
+  "description": "A Helm chart for running distributed TensorFlow on Kubernetes",
+  "type": "chart",
+  "shortName": "distributed-tensorflow",
+  "version": "1.2.0"
+}

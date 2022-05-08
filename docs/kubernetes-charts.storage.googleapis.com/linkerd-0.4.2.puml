@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for linkerd:0.4.2
+
+'There is one referenced Helm Chart
+artifact "linkerd:0.4.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: viglesiasce\n====\n\tKeywords: " as linkerd_0_4_2 #LightPink
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2022/05/07 20:14:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

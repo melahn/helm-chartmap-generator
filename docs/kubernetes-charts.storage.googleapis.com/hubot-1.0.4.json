@@ -1,0 +1,50 @@
+{
+  "keywords": [
+    "slack",
+    "hubot",
+    "chatbot"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "minddocdev/hubot",
+      "type": "image",
+      "version": "3.3.2"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/redis:5.0.5-debian-9-r169",
+        "type": "image",
+        "version": "5.0.5-debian-9-r169"
+      }],
+      "name": "redis:9.4.3",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "9.4.3"
+    }
+  ],
+  "name": "hubot:1.0.4",
+  "description": "DEPRECATED - Hubot chatbot for Slack",
+  "type": "chart",
+  "shortName": "hubot",
+  "version": "1.0.4"
+}

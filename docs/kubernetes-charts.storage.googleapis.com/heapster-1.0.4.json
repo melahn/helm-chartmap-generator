@@ -1,0 +1,28 @@
+{
+  "keywords": [
+    "metrics",
+    "cadvisor",
+    "monitoring"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "k8s.gcr.io/heapster-amd64",
+      "type": "image",
+      "version": "v1.5.4"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "k8s.gcr.io/addon-resizer",
+      "type": "image",
+      "version": "1.7"
+    }
+  ],
+  "name": "heapster:1.0.4",
+  "description": "DEPRECATED - Heapster enables Container Cluster Monitoring and Performance Analysis.",
+  "type": "chart",
+  "shortName": "heapster",
+  "version": "1.0.4"
+}

@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for magic-namespace:0.6.0
 
 'There is one referenced Helm Chart
-artifact "magic-namespace:0.6.0\n====\n\tmagic-namespace\n====\n\t0.6.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: " as magic_namespace_0_6_0 #Gold
+artifact "magic-namespace:0.6.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as magic_namespace_0_6_0 #Gold
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tgcr.io\n====\n\tkubernetes-helm/tiller:v2.8.1\n====\n\tv2.8.1" as gcr_io_kubernetes_helm_tiller_v2_8_1 #IndianRed
+usecase "Image\n====\ngcr.io\n====\nkubernetes-helm/tiller:v2.8.1\n====\nv2.8.1" as gcr_io_kubernetes_helm_tiller_v2_8_1 #IndianRed
 
 'Chart Dependencies
 magic_namespace_0_6_0--[#orange]-|>gcr_io_kubernetes_helm_tiller_v2_8_1
 
-center footer Generated on 2020/04/26 13:52:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:15:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

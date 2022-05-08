@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "pedrocesarti/jmeter-docker",
+    "type": "image",
+    "version": "3.3"
+  }],
+  "name": "distributed-jmeter:1.0.3",
+  "description": "DEPRECATED A Distributed JMeter Helm chart",
+  "type": "chart",
+  "shortName": "distributed-jmeter",
+  "version": "1.0.3"
+}

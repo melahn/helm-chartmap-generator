@@ -1,0 +1,25 @@
+{
+  "maintainers": [{
+    "name": "cristian04",
+    "email": "cristian04@gmail.com"
+  }],
+  "keywords": [
+    "confluent",
+    "schema-registry-ui",
+    "Kafka",
+    "avro",
+    "schema-registry"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "landoop/schema-registry-ui",
+    "type": "image",
+    "version": "0.9.5"
+  }],
+  "name": "schema-registry-ui:0.4.2",
+  "description": "This is a web tool for the confluentinc/schema-registry in order to create / view / search / evolve / view history & configure Avro schemas of your Kafka cluster.",
+  "type": "chart",
+  "shortName": "schema-registry-ui",
+  "version": "0.4.2"
+}

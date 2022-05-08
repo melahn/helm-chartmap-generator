@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "game",
+    "server"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "games_on_k8s/factorio:0.15.39",
+    "type": "image",
+    "version": "0.15.39"
+  }],
+  "name": "factorio:1.0.2",
+  "description": "DEPRECATED Factorio dedicated server.",
+  "type": "chart",
+  "shortName": "factorio",
+  "version": "1.0.2"
+}

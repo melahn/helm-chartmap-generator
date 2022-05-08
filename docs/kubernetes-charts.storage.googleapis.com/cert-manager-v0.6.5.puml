@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for cert-manager:v0.6.5
+
+'There are 2 referenced Helm Charts
+artifact "cert-manager:v0.6.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: munnerz\n====\n\tKeywords: \n\t\tcert-manager\n\t\tkube-lego\n\t\tletsencrypt\n\t\ttls" as cert_manager_v0_6_5 #Cornsilk
+artifact "webhook:v0.6.3\n====\n\tType: application\n====\n\tRepo: Unknown Repo URL\n====\n\tMaintainers: munnerz\n====\n\tKeywords: \n\t\tcert-manager\n\t\tkube-lego\n\t\tletsencrypt\n\t\ttls" as webhook_v0_6_3 #DeepSkyBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\nquay.io\n====\njetstack/cert-manager-controller:v0.6.1\n====\nv0.6.1" as quay_io_jetstack_cert_manager_controller_v0_6_1 #DarkSeaGreen
+usecase "Image\n====\nquay.io\n====\njetstack/cert-manager-webhook:v0.6.1\n====\nv0.6.1" as quay_io_jetstack_cert_manager_webhook_v0_6_1 #CadetBlue
+
+'Chart Dependencies
+cert_manager_v0_6_5--[#green]-|>webhook_v0_6_3
+cert_manager_v0_6_5--[#orange]-|>quay_io_jetstack_cert_manager_controller_v0_6_1
+webhook_v0_6_3--[#orange]-|>quay_io_jetstack_cert_manager_webhook_v0_6_1
+
+center footer Generated on 2022/05/07 19:49:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

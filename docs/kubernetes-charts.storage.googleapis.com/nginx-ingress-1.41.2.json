@@ -1,0 +1,34 @@
+{
+  "maintainers": [
+    {"name": "ChiefAlexander"},
+    {
+      "name": "taharah",
+      "email": "Trevor.G.Wood@gmail.com"
+    }
+  ],
+  "keywords": [
+    "ingress",
+    "nginx"
+  ],
+  "children": [
+    {
+      "repoHost": "us.gcr.io",
+      "children": [],
+      "name": "k8s-artifacts-prod/ingress-nginx/controller:v0.34.1",
+      "type": "image",
+      "version": "v0.34.1"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "k8s.gcr.io/defaultbackend-amd64",
+      "type": "image",
+      "version": "1.5"
+    }
+  ],
+  "name": "nginx-ingress:1.41.2",
+  "description": "An nginx Ingress controller that uses ConfigMap to store the nginx configuration.",
+  "type": "chart",
+  "shortName": "nginx-ingress",
+  "version": "1.41.2"
+}

@@ -12,7 +12,7 @@ Chart: kube-lego:0.4.1
 	icon: Not specified
 	keywords: kube-lego,letsencrypt
 	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: kube-lego
 	sources: https://github.com/jetstack/kube-lego/tree/master/examples/nginx
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kube-lego:0.4.1 uses jetstack/kube-lego:0.1.5
 
-Generated on 2020/04/26 13:50:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:11:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

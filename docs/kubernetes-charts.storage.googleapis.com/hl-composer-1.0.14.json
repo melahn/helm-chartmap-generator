@@ -1,0 +1,36 @@
+{
+  "keywords": [
+    "blockchain",
+    "hyperledger",
+    "fabric",
+    "composer"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "hyperledger/composer-cli",
+      "type": "image",
+      "version": "0.20.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "hyperledger/composer-rest-server",
+      "type": "image",
+      "version": "0.20.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "hyperledger/composer-playground",
+      "type": "image",
+      "version": "0.20.0"
+    }
+  ],
+  "name": "hl-composer:1.0.14",
+  "description": "DEPRECATED - Hyperledger Composer REST Server chart",
+  "type": "chart",
+  "shortName": "hl-composer",
+  "version": "1.0.14"
+}

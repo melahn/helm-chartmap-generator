@@ -1,0 +1,31 @@
+Chart Map for jenkins:2.5.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: jenkins:2.5.2
+	apiVersion: v1
+	appVersion: lts
+	created: Not specified
+	dependencies: None
+	description: Open source continuous integration server. It supports multiple SCM tools including CVS, Subversion and Git. It can execute Apache Ant and Apache Maven-based projects as well as arbitrary scripts.
+	digest: Not specified
+	icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
+	keywords: Not specified
+	maintainers: lachie83:lachlan.evenson@microsoft.com,viglesiasce:viglesias@google.com,maorfr:maor.friedman@redhat.com,torstenwalter:mail@torstenwalter.de,mogaal:garridomota@gmail.com,wmcdona89:wmcdona89@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: jenkins
+	sources: https://github.com/jenkinsci/jenkins,https://github.com/jenkinsci/docker-jnlp-slave,https://github.com/maorfr/kube-tasks,https://github.com/jenkinsci/configuration-as-code-plugin
+	urls: Not specified
+	version: 2.5.2
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: jenkins/jenkins:lts
+Image: kiwigrid/k8s-sidecar:0.1.144
+
+Chart Dependencies
+------------------
+jenkins:2.5.2 uses jenkins/jenkins:lts
+jenkins:2.5.2 uses kiwigrid/k8s-sidecar:0.1.144
+
+Generated on 2022/05/07 20:08:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

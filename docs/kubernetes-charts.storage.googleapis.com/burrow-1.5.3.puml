@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for burrow:1.5.3
+
+'There is one referenced Helm Chart
+artifact "burrow:1.5.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tcompleatang\n\t\tgregdhill\n====\n\tKeywords: \n\t\tblockchain\n\t\tsmart contracts\n\t\tethereum\n\t\thyperledger\n\t\tevm\n\t\tweb3" as burrow_1_5_3 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nhyperledger/burrow\n====\n0.29.0" as hyperledger_burrow_0_29_0 #LightPink
+
+'Chart Dependencies
+burrow_1_5_3--[#orange]-|>hyperledger_burrow_0_29_0
+
+center footer Generated on 2022/05/07 19:49:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

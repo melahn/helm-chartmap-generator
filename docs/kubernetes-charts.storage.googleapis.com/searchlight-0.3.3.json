@@ -1,11 +1,27 @@
 {
-  "children": [{
-    "repoHost": "Docker Hub",
-    "children": [],
-    "name": "appscode/searchlight",
-    "type": "image",
-    "version": "5.0.0"
-  }],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "appscode/postgres",
+      "type": "image",
+      "version": "9.5-alpine"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "appscode/icinga",
+      "type": "image",
+      "version": "5.0.0-k8s"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "appscode/searchlight",
+      "type": "image",
+      "version": "5.0.0"
+    }
+  ],
   "name": "searchlight:0.3.3",
   "description": "DEPRECATED Searchlight by AppsCode - Alerts for Kubernetes",
   "type": "chart",

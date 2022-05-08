@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for prometheus-couchdb-exporter:0.1.2
+
+'There is one referenced Helm Chart
+artifact "prometheus-couchdb-exporter:0.1.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: couchdb-exporter" as prometheus_couchdb_exporter_0_1_2 #HoneyDew
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\ngesellix/couchdb-prometheus-exporter\n====\n16" as gesellix_couchdb_prometheus_exporter_16 #DarkTurquoise
+
+'Chart Dependencies
+prometheus_couchdb_exporter_0_1_2--[#orange]-|>gesellix_couchdb_prometheus_exporter_16
+
+center footer Generated on 2022/05/07 20:29:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

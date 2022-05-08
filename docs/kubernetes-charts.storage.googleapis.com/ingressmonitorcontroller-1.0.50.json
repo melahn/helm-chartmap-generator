@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "IngressMonitorController",
+    "kubernetes"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "stakater/ingressmonitorcontroller",
+    "type": "image",
+    "version": "1.0.47"
+  }],
+  "name": "ingressmonitorcontroller:1.0.50",
+  "description": "DEPRECATED - IngressMonitorController chart that runs on kubernetes",
+  "type": "chart",
+  "shortName": "ingressmonitorcontroller",
+  "version": "1.0.50"
+}

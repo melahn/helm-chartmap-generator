@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for ambassador:5.3.1
 
 'There is one referenced Helm Chart
-artifact "ambassador:5.3.1\n====\n\tambassador\n====\n\t5.3.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: flydiverny, kflynn, nbkrause, lukeshu\n====\n\tKeywords: api gateway\nambassador\ndatawire\nenvoy" as ambassador_5_3_1 #DeepSkyBlue
+artifact "ambassador:5.3.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tflydiverny\n\t\tkflynn\n\t\tnbkrause\n\t\tlukeshu\n====\n\tKeywords: \n\t\tapi gateway\n\t\tambassador\n\t\tdatawire\n\t\tenvoy" as ambassador_5_3_1 #DeepSkyBlue
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tquay.io\n====\n\tdatawire/ambassador:0.86.1\n====\n\t0.86.1" as quay_io_datawire_ambassador_0_86_1 #Aquamarine
+usecase "Image\n====\nquay.io\n====\ndatawire/ambassador:0.86.1\n====\n0.86.1" as quay_io_datawire_ambassador_0_86_1 #Aquamarine
 
 'Chart Dependencies
 ambassador_5_3_1--[#orange]-|>quay_io_datawire_ambassador_0_86_1
 
-center footer Generated on 2020/04/26 13:40:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:46:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

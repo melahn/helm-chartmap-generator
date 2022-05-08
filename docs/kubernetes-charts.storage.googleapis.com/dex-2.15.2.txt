@@ -1,0 +1,29 @@
+Chart Map for dex:2.15.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: dex:2.15.2
+	apiVersion: v1
+	appVersion: 2.24.0
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED OpenID Connect Identity (OIDC) and OAuth 2.0 Provider with Pluggable Connectors
+	digest: Not specified
+	icon: https://github.com/dexidp/dex/raw/master/Documentation/logos/dex-glyph-color.png
+	keywords: dex,oidc
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: dex
+	sources: Not specified
+	urls: Not specified
+	version: 2.15.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: quay.io/dexidp/dex:v2.24.0
+
+Chart Dependencies
+------------------
+dex:2.15.2 uses quay.io/dexidp/dex:v2.24.0
+
+Generated on 2022/05/07 19:54:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

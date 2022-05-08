@@ -12,7 +12,7 @@ Chart: tensorflow-serving:1.1.0
 	icon: Not specified
 	keywords: Not specified
 	maintainers: cheyang:cheyang@163.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: tensorflow-serving
 	sources: https://github.com/tensorflow/serving
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 tensorflow-serving:1.1.0 uses cheyang/tf-model-server:1.4
 
-Generated on 2020/04/26 14:02:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:41:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

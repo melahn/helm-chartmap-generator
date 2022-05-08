@@ -1,0 +1,22 @@
+{
+  "keywords": [
+    "rabbitmq",
+    "message queue",
+    "AMQP",
+    "AMQPS",
+    "MQTT",
+    "STOMP"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "rabbitmq",
+    "type": "image",
+    "version": "3.8.7-alpine"
+  }],
+  "name": "rabbitmq-ha:1.47.1",
+  "description": "DEPRECATED - Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
+  "type": "chart",
+  "shortName": "rabbitmq-ha",
+  "version": "1.47.1"
+}

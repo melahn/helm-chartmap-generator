@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for cerebro:1.9.4
+
+'There is one referenced Helm Chart
+artifact "cerebro:1.9.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tdesaintmartin\n\t\tdavidkarlsen\n\t\twvidana\n====\n\tKeywords: " as cerebro_1_9_4 #Cyan
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nlmenezes/cerebro\n====\n0.9.2" as lmenezes_cerebro_0_9_2 #DodgerBlue
+
+'Chart Dependencies
+cerebro_1_9_4--[#orange]-|>lmenezes_cerebro_0_9_2
+
+center footer Generated on 2022/05/07 19:49:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

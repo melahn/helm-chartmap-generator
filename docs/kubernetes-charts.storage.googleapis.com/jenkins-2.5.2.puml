@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for jenkins:2.5.2
+
+'There is one referenced Helm Chart
+artifact "jenkins:2.5.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tlachie83\n\t\tviglesiasce\n\t\tmaorfr\n\t\ttorstenwalter\n\t\tmogaal\n\t\twmcdona89\n====\n\tKeywords: " as jenkins_2_5_2 #LightCoral
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\njenkins/jenkins\n====\nlts" as jenkins_jenkins_lts #DarkSalmon
+usecase "Image\n====\nDocker Hub\n====\nkiwigrid/k8s-sidecar\n====\n0.1.144" as kiwigrid_k8s_sidecar_0_1_144 #Cornsilk
+
+'Chart Dependencies
+jenkins_2_5_2--[#orange]-|>jenkins_jenkins_lts
+jenkins_2_5_2--[#orange]-|>kiwigrid_k8s_sidecar_0_1_144
+
+center footer Generated on 2022/05/07 20:08:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "dex",
+    "oidc"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "dexidp/dex:v2.24.0",
+    "type": "image",
+    "version": "v2.24.0"
+  }],
+  "name": "dex:2.15.2",
+  "description": "DEPRECATED OpenID Connect Identity (OIDC) and OAuth 2.0 Provider with Pluggable Connectors",
+  "type": "chart",
+  "shortName": "dex",
+  "version": "2.15.2"
+}

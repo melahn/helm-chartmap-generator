@@ -1,0 +1,44 @@
+{
+  "maintainers": [
+    {
+      "name": "jonandernovella",
+      "email": "novella.uu@gmail.com"
+    },
+    {
+      "name": "dwhitena",
+      "email": "whitenack.daniel@gmail.com"
+    },
+    {
+      "name": "jdoliner",
+      "email": "jdoliner@pachyderm.io"
+    }
+  ],
+  "keywords": [
+    "pachyderm",
+    "workflows",
+    "reproducibility",
+    "distributed",
+    "processing"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "pachyderm/pachd",
+      "type": "image",
+      "version": "1.8.6"
+    },
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "coreos/etcd:v3.3.5",
+      "type": "image",
+      "version": "v3.3.5"
+    }
+  ],
+  "name": "pachyderm:0.2.2",
+  "description": "Pachyderm is a large-scale container-based workflow engine that offers complete version control for data and reproducible data processing\n",
+  "type": "chart",
+  "shortName": "pachyderm",
+  "version": "0.2.2"
+}

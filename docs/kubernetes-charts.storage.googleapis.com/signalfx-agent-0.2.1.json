@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "keitwb",
+    "email": "bkeith@signalfx.com"
+  }],
+  "keywords": [
+    "monitoring",
+    "alerting",
+    "metrics",
+    "stats"
+  ],
+  "children": [],
+  "name": "signalfx-agent:0.2.1",
+  "description": "The SignalFx Kubernetes agent",
+  "type": "chart",
+  "shortName": "signalfx-agent",
+  "version": "0.2.1"
+}

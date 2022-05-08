@@ -12,7 +12,7 @@ Chart: factorio:1.0.0
 	icon: https://us1.factorio.com/assets/img/factorio-logo.png
 	keywords: game,server
 	maintainers: gtaylor:gtaylor@gc-taylor.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: factorio
 	sources: https://github.com/games-on-k8s/docker-factorio
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 factorio:1.0.0 uses quay.io/games_on_k8s/factorio:0.15.39
 
-Generated on 2020/04/26 13:45:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 19:58:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

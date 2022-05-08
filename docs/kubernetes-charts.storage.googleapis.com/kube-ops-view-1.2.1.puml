@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kube-ops-view:1.2.1
+
+'There is one referenced Helm Chart
+artifact "kube-ops-view:1.2.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: hjacobs\n====\n\tKeywords: \n\t\tkubernetes\n\t\tdashboard\n\t\toperations" as kube_ops_view_1_2_1 #LightBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nhjacobs/kube-ops-view\n====\n20.4.0" as hjacobs_kube_ops_view_20_4_0 #Fuchsia
+
+'Chart Dependencies
+kube_ops_view_1_2_1--[#orange]-|>hjacobs_kube_ops_view_20_4_0
+
+center footer Generated on 2022/05/07 20:11:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

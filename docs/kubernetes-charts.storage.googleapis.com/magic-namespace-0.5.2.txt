@@ -12,7 +12,7 @@ Chart: magic-namespace:0.5.2
 	icon: Not specified
 	keywords: Not specified
 	maintainers: krancour:kent.rancourt@microsoft.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: magic-namespace
 	sources: Not specified
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 magic-namespace:0.5.2 uses gcr.io/kubernetes-helm/tiller:v2.8.1
 
-Generated on 2020/04/26 13:52:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:15:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

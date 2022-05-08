@@ -9,15 +9,15 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for sugarcrm:1.0.7
 
 'There are 2 referenced Helm Charts
-artifact "mariadb:0.7.0\n====\n\tmariadb\n====\n\t0.7.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mariadb\nmysql\ndatabase\nsql" as mariadb_0_7_0 #DarkTurquoise
-artifact "sugarcrm:1.0.7\n====\n\tsugarcrm\n====\n\t1.0.7\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: sugarcrm\nCRM" as sugarcrm_1_0_7 #LightGrey
+artifact "mariadb:0.7.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql" as mariadb_0_7_0 #DarkTurquoise
+artifact "sugarcrm:1.0.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tsugarcrm\n\t\tCRM" as sugarcrm_1_0_7 #LightGrey
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tbitnami/mariadb\n====\n\t10.1.23-r2" as bitnami_mariadb_10_1_23_r2 #LightGray
+usecase "Image\n====\nDocker Hub\n====\nbitnami/mariadb\n====\n10.1.23-r2" as bitnami_mariadb_10_1_23_r2 #LightGray
 
 'Chart Dependencies
 sugarcrm_1_0_7--[#green]-|>mariadb_0_7_0
 mariadb_0_7_0--[#orange]-|>bitnami_mariadb_10_1_23_r2
 
-center footer Generated on 2020/04/26 14:01:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:39:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,114 @@
+{
+  "keywords": [
+    "xray",
+    "jfrog"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.bintray.io",
+      "children": [],
+      "name": "jfrog/xray-indexer:2.3.0",
+      "type": "image",
+      "version": "2.3.0"
+    },
+    {
+      "repoHost": "docker.bintray.io",
+      "children": [],
+      "name": "jfrog/xray-server:2.3.0",
+      "type": "image",
+      "version": "2.3.0"
+    },
+    {
+      "repoHost": "docker.bintray.io",
+      "children": [],
+      "name": "jfrog/xray-analysis:2.3.0",
+      "type": "image",
+      "version": "2.3.0"
+    },
+    {
+      "repoHost": "docker.bintray.io",
+      "children": [],
+      "name": "jfrog/xray-persist:2.3.0",
+      "type": "image",
+      "version": "2.3.0"
+    },
+    {
+      "maintainers": [
+        {"name": "swordbeta"},
+        {"name": "databus23"}
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6.2"
+      }],
+      "name": "postgresql:0.8.7",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.8.7"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mongodb",
+        "database",
+        "nosql"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/mongodb:3.6.3",
+        "type": "image",
+        "version": "3.6.3"
+      }],
+      "name": "mongodb:2.0.5",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "type": "chart",
+      "shortName": "mongodb",
+      "version": "2.0.5"
+    },
+    {
+      "maintainers": [{
+        "name": "etiennetremel",
+        "email": "etienne.tremel@container-solutions.com"
+      }],
+      "keywords": [
+        "rabbitmq",
+        "message queue",
+        "AMQP",
+        "AMQPS",
+        "MQTT",
+        "STOMP"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "rabbitmq",
+        "type": "image",
+        "version": "3.7-alpine"
+      }],
+      "name": "rabbitmq-ha:1.5.2",
+      "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
+      "type": "chart",
+      "shortName": "rabbitmq-ha",
+      "version": "1.5.2"
+    }
+  ],
+  "name": "xray:0.4.3",
+  "description": "DEPRECATED Universal component scan for security and license inventory and impact analysis",
+  "type": "chart",
+  "shortName": "xray",
+  "version": "0.4.3"
+}

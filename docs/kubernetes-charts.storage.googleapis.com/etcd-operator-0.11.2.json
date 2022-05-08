@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "coreos/etcd-operator:v0.9.4",
+    "type": "image",
+    "version": "v0.9.4"
+  }],
+  "name": "etcd-operator:0.11.2",
+  "description": "DEPRECATED CoreOS etcd-operator Helm chart for Kubernetes",
+  "type": "chart",
+  "shortName": "etcd-operator",
+  "version": "0.11.2"
+}

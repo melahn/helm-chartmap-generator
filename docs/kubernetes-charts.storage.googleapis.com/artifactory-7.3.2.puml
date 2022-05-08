@@ -1,0 +1,27 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for artifactory:7.3.2
+
+'There are 2 referenced Helm Charts
+artifact "artifactory:7.3.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tartifactory\n\t\tjfrog" as artifactory_7_3_2 #GhostWhite
+artifact "postgresql:0.8.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tswordbeta\n\t\tdatabus23\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql" as postgresql_0_8_7 #LightSteelBlue
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/nginx-artifactory-pro:6.1.0\n====\n6.1.0" as docker_bintray_io_jfrog_nginx_artifactory_pro_6_1_0 #GoldenRod
+usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n9.6.2" as postgres_9_6_2 #Ivory
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/artifactory-pro:6.1.0\n====\n6.1.0" as docker_bintray_io_jfrog_artifactory_pro_6_1_0 #LightGoldenRodYellow
+
+'Chart Dependencies
+artifactory_7_3_2--[#green]-|>postgresql_0_8_7
+artifactory_7_3_2--[#orange]-|>docker_bintray_io_jfrog_nginx_artifactory_pro_6_1_0
+artifactory_7_3_2--[#orange]-|>docker_bintray_io_jfrog_artifactory_pro_6_1_0
+postgresql_0_8_7--[#orange]-|>postgres_9_6_2
+
+center footer Generated on 2022/05/07 19:47:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

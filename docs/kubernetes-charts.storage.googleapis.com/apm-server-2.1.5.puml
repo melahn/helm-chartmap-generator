@@ -9,11 +9,11 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for apm-server:2.1.5
 
 'There is one referenced Helm Chart
-artifact "apm-server:2.1.5\n====\n\tapm-server\n====\n\t2.1.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: mumoshu, at-k\n====\n\tKeywords: " as apm_server_2_1_5 #Gainsboro
+artifact "apm-server:2.1.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tmumoshu\n\t\tat-k\n====\n\tKeywords: " as apm_server_2_1_5 #Gainsboro
 
 'There are 0 referenced Docker Images
 
 'Chart Dependencies
 
-center footer Generated on 2020/04/26 13:41:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:46:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

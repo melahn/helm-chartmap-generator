@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for rabbitmq-ha:1.47.0
+
+'There is one referenced Helm Chart
+artifact "rabbitmq-ha:1.47.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: steven-sheehy\n====\n\tKeywords: \n\t\trabbitmq\n\t\tmessage queue\n\t\tAMQP\n\t\tAMQPS\n\t\tMQTT\n\t\tSTOMP" as rabbitmq_ha_1_47_0 #Chocolate
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nrabbitmq\n====\n3.8.7-alpine" as rabbitmq_3_8_7_alpine #Aqua
+
+'Chart Dependencies
+rabbitmq_ha_1_47_0--[#orange]-|>rabbitmq_3_8_7_alpine
+
+center footer Generated on 2022/05/07 20:32:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

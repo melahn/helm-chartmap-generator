@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "docker.elastic.co",
+    "children": [],
+    "name": "elasticsearch/elasticsearch-oss:6.8.6",
+    "type": "image",
+    "version": "6.8.6"
+  }],
+  "name": "elasticsearch:1.32.5",
+  "description": "DEPRECATED Flexible and powerful open source, distributed real-time search and analytics engine.",
+  "type": "chart",
+  "shortName": "elasticsearch",
+  "version": "1.32.5"
+}

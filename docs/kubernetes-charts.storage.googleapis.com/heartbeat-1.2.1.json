@@ -1,0 +1,12 @@
+{
+  "maintainers": [{
+    "name": "mumoshu",
+    "email": "ykuoka@gmail.com"
+  }],
+  "children": [],
+  "name": "heartbeat:1.2.1",
+  "description": "A Helm chart to periodically check the status of your services with heartbeat",
+  "type": "chart",
+  "shortName": "heartbeat",
+  "version": "1.2.1"
+}

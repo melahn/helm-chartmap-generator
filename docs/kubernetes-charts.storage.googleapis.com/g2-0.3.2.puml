@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for g2:0.3.2
 
 'There is one referenced Helm Chart
-artifact "g2:0.3.2\n====\n\tg2\n====\n\t0.3.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: appscode\n====\n\tKeywords: " as g2_0_3_2 #LightSteelBlue
+artifact "g2:0.3.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: appscode\n====\n\tKeywords: " as g2_0_3_2 #LightSteelBlue
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tappscode/gearmand\n====\n\t0.5.0" as appscode_gearmand_0_5_0 #Darkorange
+usecase "Image\n====\nDocker Hub\n====\nappscode/gearmand\n====\n0.5.0" as appscode_gearmand_0_5_0 #Darkorange
 
 'Chart Dependencies
 g2_0_3_2--[#orange]-|>appscode_gearmand_0_5_0
 
-center footer Generated on 2020/04/26 13:46:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:00:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

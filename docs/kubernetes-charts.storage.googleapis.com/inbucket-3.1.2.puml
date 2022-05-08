@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for inbucket:3.1.2
+
+'There is one referenced Helm Chart
+artifact "inbucket:3.1.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tinbucket\n\t\tmail\n\t\tsmtp\n\t\tpop3\n\t\temail\n\t\ttesting\n\t\tdisposable webmail" as inbucket_3_1_2 #LightSkyBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\njhillyerd/inbucket\n====\nrelease-2.0.0" as jhillyerd_inbucket_release_2_0_0 #Chocolate
+
+'Chart Dependencies
+inbucket_3_1_2--[#orange]-|>jhillyerd_inbucket_release_2_0_0
+
+center footer Generated on 2022/05/07 20:06:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

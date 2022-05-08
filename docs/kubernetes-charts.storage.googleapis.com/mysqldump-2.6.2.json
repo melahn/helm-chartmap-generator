@@ -1,0 +1,13 @@
+{
+  "keywords": [
+    "mysql",
+    "mysqldump",
+    "backup"
+  ],
+  "children": [],
+  "name": "mysqldump:2.6.2",
+  "description": "DEPRECATED! - A Helm chart to help backup MySQL databases using mysqldump",
+  "type": "chart",
+  "shortName": "mysqldump",
+  "version": "2.6.2"
+}

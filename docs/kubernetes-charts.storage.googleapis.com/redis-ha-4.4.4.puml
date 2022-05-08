@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for redis-ha:4.4.4
 
 'There is one referenced Helm Chart
-artifact "redis-ha:4.4.4\n====\n\tredis-ha\n====\n\t4.4.4\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: ssalaues, dandydeveloper\n====\n\tKeywords: redis\nkeyvalue\ndatabase" as redis_ha_4_4_4 #IndianRed
+artifact "redis-ha:4.4.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tssalaues\n\t\tdandydeveloper\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_ha_4_4_4 #IndianRed
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tredis\n====\n\t5.0.6-alpine" as redis_5_0_6_alpine #LightSeaGreen
+usecase "Image\n====\nDocker Hub\n====\nredis\n====\n5.0.6-alpine" as redis_5_0_6_alpine #LightSeaGreen
 
 'Chart Dependencies
 redis_ha_4_4_4--[#orange]-|>redis_5_0_6_alpine
 
-center footer Generated on 2020/04/26 13:58:42 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:32:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

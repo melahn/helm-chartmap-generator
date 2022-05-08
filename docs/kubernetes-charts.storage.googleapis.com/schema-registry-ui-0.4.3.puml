@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for schema-registry-ui:0.4.3
+
+'There is one referenced Helm Chart
+artifact "schema-registry-ui:0.4.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: cristian04\n====\n\tKeywords: \n\t\tconfluent\n\t\tschema-registry-ui\n\t\tKafka\n\t\tavro\n\t\tschema-registry" as schema_registry_ui_0_4_3 #AntiqueWhite
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nlandoop/schema-registry-ui\n====\n0.9.5" as landoop_schema_registry_ui_0_9_5 #AliceBlue
+
+'Chart Dependencies
+schema_registry_ui_0_4_3--[#orange]-|>landoop_schema_registry_ui_0_9_5
+
+center footer Generated on 2022/05/07 20:34:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

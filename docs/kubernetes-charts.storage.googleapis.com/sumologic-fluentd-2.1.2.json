@@ -1,0 +1,12 @@
+{
+  "keywords": [
+    "monitoring",
+    "logging"
+  ],
+  "children": [],
+  "name": "sumologic-fluentd:2.1.2",
+  "description": "DEPRECATED - Sumologic Log Collector",
+  "type": "chart",
+  "shortName": "sumologic-fluentd",
+  "version": "2.1.2"
+}

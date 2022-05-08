@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for artifactory-ha:0.4.0
 
 'There are 2 referenced Helm Charts
-artifact "artifactory-ha:0.4.0\n====\n\tartifactory-ha\n====\n\t0.4.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: jainishshah17, eldada, rimusz\n====\n\tKeywords: artifactory\njfrog" as artifactory_ha_0_4_0 #FloralWhite
-artifact "postgresql:0.8.7\n====\n\tpostgresql\n====\n\t0.8.7\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: swordbeta, databus23\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql" as postgresql_0_8_7 #LightSteelBlue
+artifact "artifactory-ha:0.4.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tjainishshah17\n\t\teldada\n\t\trimusz\n====\n\tKeywords: \n\t\tartifactory\n\t\tjfrog" as artifactory_ha_0_4_0 #FloralWhite
+artifact "postgresql:0.8.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tswordbeta\n\t\tdatabus23\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql" as postgresql_0_8_7 #LightSteelBlue
 
 'There are 3 referenced Docker Images
-usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t9.6.2" as postgres_9_6_2 #Ivory
-usecase "Image\n====\n\tdocker.bintray.io\n====\n\tjfrog/nginx-artifactory-pro:6.2.0\n====\n\t6.2.0" as docker_bintray_io_jfrog_nginx_artifactory_pro_6_2_0 #GoldenRod
-usecase "Image\n====\n\tdocker.bintray.io\n====\n\tjfrog/artifactory-pro:6.2.0\n====\n\t6.2.0" as docker_bintray_io_jfrog_artifactory_pro_6_2_0 #LightGoldenRodYellow
+usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n9.6.2" as postgres_9_6_2 #Ivory
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/nginx-artifactory-pro:6.2.0\n====\n6.2.0" as docker_bintray_io_jfrog_nginx_artifactory_pro_6_2_0 #GoldenRod
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/artifactory-pro:6.2.0\n====\n6.2.0" as docker_bintray_io_jfrog_artifactory_pro_6_2_0 #LightGoldenRodYellow
 
 'Chart Dependencies
 artifactory_ha_0_4_0--[#green]-|>postgresql_0_8_7
@@ -23,5 +23,5 @@ artifactory_ha_0_4_0--[#orange]-|>docker_bintray_io_jfrog_artifactory_pro_6_2_0
 artifactory_ha_0_4_0--[#orange]-|>docker_bintray_io_jfrog_nginx_artifactory_pro_6_2_0
 postgresql_0_8_7--[#orange]-|>postgres_9_6_2
 
-center footer Generated on 2020/04/26 13:41:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:47:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for mongodb-replicaset:3.17.1
+
+'There is one referenced Helm Chart
+artifact "mongodb-replicaset:3.17.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tunguiculus\n\t\tsteven-sheehy\n====\n\tKeywords: " as mongodb_replicaset_3_17_1 #Fuchsia
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nmongo\n====\n3.6" as mongo_3_6 #Aqua
+
+'Chart Dependencies
+mongodb_replicaset_3_17_1--[#orange]-|>mongo_3_6
+
+center footer Generated on 2022/05/07 20:18:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "heptio-images/gangway:v3.2.0",
+    "type": "image",
+    "version": "v3.2.0"
+  }],
+  "name": "gangway:0.4.5",
+  "description": "DEPRECATED An application that can be used to easily enable authentication flows via OIDC for a kubernetes cluster.",
+  "type": "chart",
+  "shortName": "gangway",
+  "version": "0.4.5"
+}

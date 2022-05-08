@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "home-assistant",
+    "hass",
+    "homeassistant"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "homeassistant/home-assistant",
+    "type": "image",
+    "version": "0.108.7"
+  }],
+  "name": "home-assistant:0.13.4",
+  "description": "Home Assistant",
+  "type": "chart",
+  "shortName": "home-assistant",
+  "version": "0.13.4"
+}

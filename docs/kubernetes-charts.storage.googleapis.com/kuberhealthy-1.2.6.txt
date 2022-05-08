@@ -12,7 +12,7 @@ Chart: kuberhealthy:1.2.6
 	icon: https://raw.githubusercontent.com/Comcast/kuberhealthy/helm/deploy/helm/kuberhealthy/kh-logo.png
 	keywords: kuberhealthy,kubernetes,monitoring,synthetic,comcast,health,cluster,prometheus
 	maintainers: integrii:eric.greer@comcast.com,lolimjake:jacob.martin@comcast.com,ihoegen:ianhoegen@gmail.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: kuberhealthy
 	sources: https://github.com/Comcast/kuberhealthy,https://github.com/helm/charts/tree/master/stable/kuberhealthy
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kuberhealthy:1.2.6 uses quay.io/comcast/kuberhealthy:v1.0.2
 
-Generated on 2020/04/26 13:51:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:12:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

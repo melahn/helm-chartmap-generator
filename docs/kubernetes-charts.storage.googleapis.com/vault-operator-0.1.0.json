@@ -6,7 +6,7 @@
   "children": [{
     "repoHost": "quay.io",
     "children": [],
-    "name": "coreos/vault-operator",
+    "name": "coreos/vault-operator:0.1.9",
     "type": "image",
     "version": "0.1.9"
   }],

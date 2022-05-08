@@ -1,0 +1,24 @@
+{
+  "maintainers": [{
+    "name": "CaptTofu",
+    "email": "patg@patg.net"
+  }],
+  "keywords": [
+    "mysql",
+    "percona",
+    "database",
+    "sql"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "percona",
+    "type": "image",
+    "version": "5.7.26"
+  }],
+  "name": "percona:1.2.2",
+  "description": "free, fully compatible, enhanced, open source drop-in replacement for MySQL",
+  "type": "chart",
+  "shortName": "percona",
+  "version": "1.2.2"
+}

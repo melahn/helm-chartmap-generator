@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "mysql",
+    "database",
+    "sql"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "mysql",
+    "type": "image",
+    "version": "5.7.30"
+  }],
+  "name": "mysql:1.6.9",
+  "description": "DEPRECATED - Fast, reliable, scalable, and easy to use open-source relational database system.",
+  "type": "chart",
+  "shortName": "mysql",
+  "version": "1.6.9"
+}

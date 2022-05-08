@@ -1,0 +1,31 @@
+Chart Map for gce-ingress:1.2.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: gce-ingress:1.2.1
+	apiVersion: v1
+	appVersion: 1.4.0
+	created: Not specified
+	dependencies: None
+	description: A GCE Ingress Controller
+	digest: Not specified
+	icon: Not specified
+	keywords: ingress,gce
+	maintainers: paulczar:username.taken@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: gce-ingress
+	sources: https://github.com/kubernetes/ingress-gce
+	urls: Not specified
+	version: 1.2.1
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: k8s.gcr.io/defaultbackend:1.4
+Image: k8s.gcr.io/ingress-gce-glbc-amd64:v1.4.0
+
+Chart Dependencies
+------------------
+gce-ingress:1.2.1 uses k8s.gcr.io/ingress-gce-glbc-amd64:v1.4.0
+gce-ingress:1.2.1 uses k8s.gcr.io/defaultbackend:1.4
+
+Generated on 2022/05/07 20:00:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

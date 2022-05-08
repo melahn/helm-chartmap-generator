@@ -1,0 +1,27 @@
+Chart Map for fluentd-elasticsearch:2.0.5
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: fluentd-elasticsearch:2.0.5
+	apiVersion: Not specified
+	appVersion: 2.3.2
+	created: Not specified
+	dependencies: None
+	description: A Fluentd Helm chart for Kubernetes with Elasticsearch output
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/fluent/fluentd-docs/master/public/logo/Fluentd_square.png
+	keywords: fluentd,elasticsearch,multiline,detect-exceptions,logging
+	maintainers: monotek:monotek23@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: fluentd-elasticsearch
+	sources: https://github.com/kubernetes/charts/stable/fluentd-elasticsearch,https://github.com/fluent/fluentd-kubernetes-daemonset,https://github.com/GoogleCloudPlatform/fluent-plugin-detect-exceptions,https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/fluentd-elasticsearch/fluentd-es-image
+	urls: Not specified
+	version: 2.0.5
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2022/05/07 19:59:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

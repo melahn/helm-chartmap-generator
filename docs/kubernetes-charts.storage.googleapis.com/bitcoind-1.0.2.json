@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "bitcoind",
+    "cryptocurrency",
+    "blockchain"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "arilot/docker-bitcoind",
+    "type": "image",
+    "version": "0.17.1"
+  }],
+  "name": "bitcoind:1.0.2",
+  "description": "DEPRECATED Bitcoin is an innovative payment network and a new kind of money.",
+  "type": "chart",
+  "shortName": "bitcoind",
+  "version": "1.0.2"
+}

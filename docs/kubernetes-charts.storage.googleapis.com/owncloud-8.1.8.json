@@ -1,4 +1,8 @@
 {
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
   "keywords": [
     "owncloud",
     "storage",
@@ -21,7 +25,7 @@
     "children": [{
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/mariadb",
+      "name": "bitnami/mariadb:10.3.22-debian-10-r27",
       "type": "image",
       "version": "10.3.22-debian-10-r27"
     }],
@@ -32,7 +36,7 @@
     "version": "7.3.12"
   }],
   "name": "owncloud:8.1.8",
-  "description": "DEPRECATED A file sharing server that puts the control and security of your own data back into your hands.",
+  "description": "A file sharing server that puts the control and security of your own data back into your hands.",
   "type": "chart",
   "shortName": "owncloud",
   "version": "8.1.8"

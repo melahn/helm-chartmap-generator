@@ -12,7 +12,7 @@ Chart: phpmyadmin:4.3.4
 	icon: https://bitnami.com/assets/stacks/phpmyadmin/img/phpmyadmin-stack-220x234.png
 	keywords: mariadb,mysql,phpmyadmin
 	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: phpmyadmin
 	sources: https://github.com/bitnami/bitnami-docker-phpmyadmin
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 phpmyadmin:4.3.4 uses docker.io/bitnami/phpmyadmin:5.0.1-debian-10-r30
 
-Generated on 2020/04/26 13:56:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:26:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

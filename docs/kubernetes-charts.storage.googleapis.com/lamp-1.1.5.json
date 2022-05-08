@@ -1,0 +1,24 @@
+{
+  "maintainers": [{"name": "lead4good"}],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "httpd",
+      "type": "image",
+      "version": "2.4-alpine"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "php",
+      "type": "image",
+      "version": "7-fpm-alpine"
+    }
+  ],
+  "name": "lamp:1.1.5",
+  "description": "Modular and transparent LAMP stack chart supporting PHP-FPM, Release Cloning, LoadBalancer, Ingress, SSL and lots more!",
+  "type": "chart",
+  "shortName": "lamp",
+  "version": "1.1.5"
+}

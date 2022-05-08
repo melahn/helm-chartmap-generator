@@ -12,7 +12,7 @@ Chart: prometheus-consul-exporter:0.1.4
 	icon: Not specified
 	keywords: metrics,consul,monitoring
 	maintainers: timm088:8890118+timm088@users.noreply.github.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: prometheus-consul-exporter
 	sources: Not specified
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-consul-exporter:0.1.4 uses prom/consul-exporter:v0.4.0
 
-Generated on 2020/04/26 13:57:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:28:53 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

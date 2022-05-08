@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "instana-agent:1.0.35",
+  "description": "DEPRECATED - Instana Agent for Kubernetes",
+  "type": "chart",
+  "shortName": "instana-agent",
+  "version": "1.0.35"
+}

@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for sapho:0.2.4
+
+'There are 2 referenced Helm Charts
+artifact "mysql:1.6.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tolemarkus\n\t\tviglesiasce\n====\n\tKeywords: \n\t\tmysql\n\t\tdatabase\n\t\tsql" as mysql_1_6_7 #Aqua
+artifact "sapho:0.2.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as sapho_0_2_4 #LightSeaGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nsapho/ops-docker-tomcat\n====\n8-jre8" as sapho_ops_docker_tomcat_8_jre8 #Beige
+usecase "Image\n====\nDocker Hub\n====\nmysql\n====\n5.7.30" as mysql_5_7_30 #Aqua
+
+'Chart Dependencies
+sapho_0_2_4--[#green]-|>mysql_1_6_7
+mysql_1_6_7--[#orange]-|>mysql_5_7_30
+sapho_0_2_4--[#orange]-|>sapho_ops_docker_tomcat_8_jre8
+
+center footer Generated on 2022/05/07 20:33:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

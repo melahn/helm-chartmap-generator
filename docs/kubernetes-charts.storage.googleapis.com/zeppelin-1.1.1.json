@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "danisla",
+    "email": "disla@google.com"
+  }],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "dylanmei/zeppelin",
+    "type": "image",
+    "version": "0.7.2"
+  }],
+  "name": "zeppelin:1.1.1",
+  "description": "Web-based notebook that enables data-driven, interactive data analytics and collaborative documents with SQL, Scala and more.",
+  "type": "chart",
+  "shortName": "zeppelin",
+  "version": "1.1.1"
+}

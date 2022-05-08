@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for seq:2.3.2
+
+'There is one referenced Helm Chart
+artifact "seq:2.3.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tseq\n\t\tstructured\n\t\tlogging" as seq_2_3_2 #LightSteelBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\ndatalust/seq\n====\n2020" as datalust_seq_2020 #BurlyWood
+
+'Chart Dependencies
+seq_2_3_2--[#orange]-|>datalust_seq_2020
+
+center footer Generated on 2022/05/07 20:35:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,27 @@
+Chart Map for mysqldump:2.6.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: mysqldump:2.6.2
+	apiVersion: v1
+	appVersion: 2.4.1
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED! - A Helm chart to help backup MySQL databases using mysqldump
+	digest: Not specified
+	icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+	keywords: mysql,mysqldump,backup
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: mysqldump
+	sources: https://github.com/kubernetes/charts,https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html
+	urls: Not specified
+	version: 2.6.2
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2022/05/07 20:19:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

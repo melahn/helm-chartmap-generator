@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "kubernetes",
+    "dashboard"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "k8s.gcr.io/kubernetes-dashboard-amd64",
+    "type": "image",
+    "version": "v1.10.1"
+  }],
+  "name": "kubernetes-dashboard:1.11.1",
+  "description": "DEPRECATED! - General-purpose web UI for Kubernetes clusters",
+  "type": "chart",
+  "shortName": "kubernetes-dashboard",
+  "version": "1.11.1"
+}

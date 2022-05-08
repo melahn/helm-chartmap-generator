@@ -9,13 +9,15 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for stash:0.5.3
 
 'There is one referenced Helm Chart
-artifact "stash:0.5.3\n====\n\tstash\n====\n\t0.5.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: " as stash_0_5_3 #LightSeaGreen
+artifact "stash:0.5.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as stash_0_5_3 #LightSeaGreen
 
-'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tappscode/stash\n====\n\t0.7.0-rc.1" as appscode_stash_0_7_0_rc_1 #FloralWhite
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nappscode/stash\n====\n0.7.0-rc.1" as appscode_stash_0_7_0_rc_1 #FloralWhite
+usecase "Image\n====\nDocker Hub\n====\nprom/pushgateway\n====\nv0.4.0" as prom_pushgateway_v0_4_0 #Lavender
 
 'Chart Dependencies
+stash_0_5_3--[#orange]-|>prom_pushgateway_v0_4_0
 stash_0_5_3--[#orange]-|>appscode_stash_0_7_0_rc_1
 
-center footer Generated on 2020/04/26 14:01:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:38:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

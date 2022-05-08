@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for logstash:2.4.2
+
+'There is one referenced Helm Chart
+artifact "logstash:2.4.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\trendhalver\n\t\tjar361\n\t\tchristian-roggia\n====\n\tKeywords: " as logstash_2_4_2 #Aqua
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.elastic.co\n====\nlogstash/logstash-oss:7.1.1\n====\n7.1.1" as docker_elastic_co_logstash_logstash_oss_7_1_1 #BlanchedAlmond
+
+'Chart Dependencies
+logstash_2_4_2--[#orange]-|>docker_elastic_co_logstash_logstash_oss_7_1_1
+
+center footer Generated on 2022/05/07 20:14:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

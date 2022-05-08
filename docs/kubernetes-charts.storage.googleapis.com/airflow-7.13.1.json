@@ -1,0 +1,89 @@
+{
+  "maintainers": [
+    {
+      "name": "gsemet",
+      "email": "gaetan@xeberon.net"
+    },
+    {"name": "thesuperzapper"}
+  ],
+  "keywords": [
+    "workflow",
+    "dag",
+    "airflow"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "apache/airflow",
+      "type": "image",
+      "version": "1.10.12-python3.6"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/redis:5.0.7-debian-10-r32",
+        "type": "image",
+        "version": "5.0.7-debian-10-r32"
+      }],
+      "name": "redis:10.5.7",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "10.5.7"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/postgresql:11.7.0-debian-10-r9",
+        "type": "image",
+        "version": "11.7.0-debian-10-r9"
+      }],
+      "name": "postgresql:8.6.4",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "8.6.4"
+    }
+  ],
+  "name": "airflow:7.13.1",
+  "description": "Airflow is a platform to programmatically author, schedule and monitor workflows",
+  "type": "chart",
+  "shortName": "airflow",
+  "version": "7.13.1"
+}

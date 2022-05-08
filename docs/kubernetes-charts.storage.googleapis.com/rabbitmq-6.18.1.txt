@@ -12,7 +12,7 @@ Chart: rabbitmq:6.18.1
 	icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
 	keywords: rabbitmq,message queue,AMQP
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: rabbitmq
 	sources: https://github.com/bitnami/bitnami-docker-rabbitmq
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 rabbitmq:6.18.1 uses docker.io/bitnami/rabbitmq:3.8.2-debian-10-r30
 
-Generated on 2020/04/26 13:58:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:31:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

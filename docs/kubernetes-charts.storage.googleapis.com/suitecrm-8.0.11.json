@@ -1,4 +1,8 @@
 {
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
   "keywords": [
     "suitecrm",
     "CRM"
@@ -18,7 +22,7 @@
     "children": [{
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/mariadb",
+      "name": "bitnami/mariadb:10.3.22-debian-10-r27",
       "type": "image",
       "version": "10.3.22-debian-10-r27"
     }],
@@ -29,7 +33,7 @@
     "version": "7.3.12"
   }],
   "name": "suitecrm:8.0.11",
-  "description": "DEPRECATED SuiteCRM is a completely open source enterprise-grade Customer Relationship Management (CRM) application. SuiteCRM is a software fork of the popular customer relationship management (CRM) system SugarCRM.",
+  "description": "SuiteCRM is a completely open source enterprise-grade Customer Relationship Management (CRM) application. SuiteCRM is a software fork of the popular customer relationship management (CRM) system SugarCRM.",
   "type": "chart",
   "shortName": "suitecrm",
   "version": "8.0.11"

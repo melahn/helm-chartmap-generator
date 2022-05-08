@@ -9,18 +9,17 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for concourse:8.3.7
 
 'There are 2 referenced Helm Charts
-artifact "concourse:8.3.7\n====\n\tconcourse\n====\n\t8.3.7\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: ci\nconcourse\nconcourse.ci" as concourse_8_3_7 #GreenYellow
-artifact "postgresql:5.3.8\n====\n\tpostgresql\n====\n\t5.3.8\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami, desaintmartin\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql\nreplication\ncluster" as postgresql_5_3_8 #LightSteelBlue
+artifact "concourse:8.3.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tci\n\t\tconcourse\n\t\tconcourse.ci" as concourse_8_3_7 #GreenYellow
+artifact "postgresql:5.3.8\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_5_3_8 #LightSteelBlue
 
 'There are 2 referenced Docker Images
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/postgresql:11.3.0-debian-9-r38\n====\n\t11.3.0-debian-9-r38" as docker_io_bitnami_postgresql_11_3_0_debian_9_r38 #DarkSalmon
-usecase "Image\n====\n\tDocker Hub\n====\n\tconcourse/concourse\n====\n\t5.6.0" as concourse_concourse_5_6_0 #LightCyan
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:11.3.0-debian-9-r38\n====\n11.3.0-debian-9-r38" as docker_io_bitnami_postgresql_11_3_0_debian_9_r38 #DarkSalmon
+usecase "Image\n====\nDocker Hub\n====\nconcourse/concourse\n====\n5.6.0" as concourse_concourse_5_6_0 #LightCyan
 
 'Chart Dependencies
 concourse_8_3_7--[#green]-|>postgresql_5_3_8
-concourse_8_3_7--[#orange]-|>docker_io_bitnami_postgresql_11_3_0_debian_9_r38
 concourse_8_3_7--[#orange]-|>concourse_concourse_5_6_0
 postgresql_5_3_8--[#orange]-|>docker_io_bitnami_postgresql_11_3_0_debian_9_r38
 
-center footer Generated on 2020/04/26 13:43:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:51:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

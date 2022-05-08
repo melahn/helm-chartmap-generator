@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for prometheus-couchdb-exporter:0.1.1
 
 'There is one referenced Helm Chart
-artifact "prometheus-couchdb-exporter:0.1.1\n====\n\tprometheus-couchdb-exporter\n====\n\t0.1.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: gkarthiks\n====\n\tKeywords: couchdb-exporter" as prometheus_couchdb_exporter_0_1_1 #HoneyDew
+artifact "prometheus-couchdb-exporter:0.1.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: gkarthiks\n====\n\tKeywords: couchdb-exporter" as prometheus_couchdb_exporter_0_1_1 #HoneyDew
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tgesellix/couchdb-prometheus-exporter\n====\n\t16" as gesellix_couchdb_prometheus_exporter_16 #DarkTurquoise
+usecase "Image\n====\nDocker Hub\n====\ngesellix/couchdb-prometheus-exporter\n====\n16" as gesellix_couchdb_prometheus_exporter_16 #DarkTurquoise
 
 'Chart Dependencies
 prometheus_couchdb_exporter_0_1_1--[#orange]-|>gesellix_couchdb_prometheus_exporter_16
 
-center footer Generated on 2020/04/26 13:57:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:29:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

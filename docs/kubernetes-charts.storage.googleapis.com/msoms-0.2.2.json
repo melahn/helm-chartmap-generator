@@ -1,0 +1,15 @@
+{
+  "keywords": [
+    "monitoring",
+    "alerting",
+    "metric",
+    "event",
+    "logging"
+  ],
+  "children": [],
+  "name": "msoms:0.2.2",
+  "description": "DEPRECATED - A chart for deploying omsagent as a daemonset Kubernetes",
+  "type": "chart",
+  "shortName": "msoms",
+  "version": "0.2.2"
+}

@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for keel:0.6.1
 
 'There is one referenced Helm Chart
-artifact "keel:0.6.1\n====\n\tkeel\n====\n\t0.6.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: kubernetes deployment\nhelm release\ncontinuous deployment" as keel_0_6_1 #LightSteelBlue
+artifact "keel:0.6.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tkubernetes deployment\n\t\thelm release\n\t\tcontinuous deployment" as keel_0_6_1 #LightSteelBlue
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tkeelhq/keel\n====\n\t0.9.5" as keelhq_keel_0_9_5 #DarkTurquoise
+usecase "Image\n====\nDocker Hub\n====\nkeelhq/keel\n====\n0.9.5" as keelhq_keel_0_9_5 #DarkTurquoise
 
 'Chart Dependencies
 keel_0_6_1--[#orange]-|>keelhq_keel_0_9_5
 
-center footer Generated on 2020/04/26 13:50:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:10:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

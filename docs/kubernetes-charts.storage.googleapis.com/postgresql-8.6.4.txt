@@ -7,12 +7,12 @@ Chart: postgresql:8.6.4
 	appVersion: 11.7.0
 	created: Not specified
 	dependencies: None
-	description: DEPRECATED Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
 	keywords: postgresql,postgres,database,sql,replication,cluster
-	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
 	name: postgresql
 	sources: https://github.com/bitnami/bitnami-docker-postgresql
 	urls: Not specified
@@ -20,10 +20,10 @@ Chart: postgresql:8.6.4
 
 There is one referenced Docker Image
 ------------------------------------
-Image: docker.io/bitnami/postgresql:11.7.0-debian-10-r9
+Image: docker.io/bitnami/postgresql:11.7.0-debian-10-r26
 
 Chart Dependencies
 ------------------
-postgresql:8.6.4 uses docker.io/bitnami/postgresql:11.7.0-debian-10-r9
+postgresql:8.6.4 uses docker.io/bitnami/postgresql:11.7.0-debian-10-r26
 
-Generated on 2020/04/26 13:56:27 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:27:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

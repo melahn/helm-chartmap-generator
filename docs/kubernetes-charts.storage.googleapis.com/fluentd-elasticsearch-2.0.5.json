@@ -1,0 +1,19 @@
+{
+  "maintainers": [{
+    "name": "monotek",
+    "email": "monotek23@gmail.com"
+  }],
+  "keywords": [
+    "fluentd",
+    "elasticsearch",
+    "multiline",
+    "detect-exceptions",
+    "logging"
+  ],
+  "children": [],
+  "name": "fluentd-elasticsearch:2.0.5",
+  "description": "A Fluentd Helm chart for Kubernetes with Elasticsearch output",
+  "type": "chart",
+  "shortName": "fluentd-elasticsearch",
+  "version": "2.0.5"
+}

@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for collabora-code:1.0.6
 
 'There is one referenced Helm Chart
-artifact "collabora-code:1.0.6\n====\n\tcollabora-code\n====\n\t1.0.6\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Christian\n====\n\tKeywords: " as collabora_code_1_0_6 #Chartreuse
+artifact "collabora-code:1.0.6\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Christian\n====\n\tKeywords: " as collabora_code_1_0_6 #Chartreuse
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tcollabora/code\n====\n\t4.0.3.1" as collabora_code_4_0_3_1 #Chartreuse
+usecase "Image\n====\nDocker Hub\n====\ncollabora/code\n====\n4.0.3.1" as collabora_code_4_0_3_1 #Chartreuse
 
 'Chart Dependencies
 collabora_code_1_0_6--[#orange]-|>collabora_code_4_0_3_1
 
-center footer Generated on 2020/04/26 13:42:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:51:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

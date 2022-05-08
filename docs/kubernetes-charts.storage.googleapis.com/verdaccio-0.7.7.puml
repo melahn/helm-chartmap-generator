@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for verdaccio:0.7.7
+
+'There is one referenced Helm Chart
+artifact "verdaccio:0.7.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: etiennetremel\n====\n\tKeywords: \n\t\tnpm\n\t\tnodejs" as verdaccio_0_7_7 #LightGray
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nverdaccio/verdaccio\n====\n3.11.6" as verdaccio_verdaccio_3_11_6 #Lavender
+
+'Chart Dependencies
+verdaccio_0_7_7--[#orange]-|>verdaccio_verdaccio_3_11_6
+
+center footer Generated on 2022/05/07 20:43:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

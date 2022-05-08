@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "alpine/socat",
+    "type": "image",
+    "version": "1.0.3"
+  }],
+  "name": "socat-tunneller:0.1.2",
+  "description": "DEPRECATED - A Helm chart for socat-tunneller",
+  "type": "chart",
+  "shortName": "socat-tunneller",
+  "version": "0.1.2"
+}

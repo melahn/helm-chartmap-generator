@@ -1,0 +1,29 @@
+Chart Map for etcd-operator:0.11.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: etcd-operator:0.11.2
+	apiVersion: v1
+	appVersion: 0.9.4
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED CoreOS etcd-operator Helm chart for Kubernetes
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/coreos/etcd/master/logos/etcd-horizontal-color.png
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: etcd-operator
+	sources: https://github.com/coreos/etcd-operator
+	urls: Not specified
+	version: 0.11.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: quay.io/coreos/etcd-operator:v0.9.4
+
+Chart Dependencies
+------------------
+etcd-operator:0.11.2 uses quay.io/coreos/etcd-operator:v0.9.4
+
+Generated on 2022/05/07 19:57:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

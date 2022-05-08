@@ -1,0 +1,27 @@
+{
+  "maintainers": [
+    {"name": "jasongwartz"},
+    {"name": "dippynark"}
+  ],
+  "keywords": [
+    "openvpn",
+    "vpn",
+    "tunnel",
+    "network",
+    "service",
+    "connectivity",
+    "encryption"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "jfelten/openvpn-docker",
+    "type": "image",
+    "version": "1.1.0"
+  }],
+  "name": "openvpn:4.2.3",
+  "description": "A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate generation is also part of the deployment, and this chart will generate client keys as needed.",
+  "type": "chart",
+  "shortName": "openvpn",
+  "version": "4.2.3"
+}

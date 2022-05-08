@@ -9,15 +9,15 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for phabricator:9.0.12
 
 'There are 2 referenced Helm Charts
-artifact "phabricator:9.0.12\n====\n\tphabricator\n====\n\t9.0.12\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: \n====\n\tKeywords: phabricator\nhttp\nhttps\nweb\napplication\ncollaboration\nproject management\nbug tracking\ncode review\nwiki\ngit\nmercurial\nsubversion" as phabricator_9_0_12 #Chartreuse
-artifact "mariadb:7.3.12\n====\n\tmariadb\n====\n\t7.3.12\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mariadb\nmysql\ndatabase\nsql\nprometheus" as mariadb_7_3_12 #DarkTurquoise
+artifact "phabricator:9.0.12\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tphabricator\n\t\thttp\n\t\thttps\n\t\tweb\n\t\tapplication\n\t\tcollaboration\n\t\tproject management\n\t\tbug tracking\n\t\tcode review\n\t\twiki\n\t\tgit\n\t\tmercurial\n\t\tsubversion" as phabricator_9_0_12 #Chartreuse
+artifact "mariadb:7.3.12\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_7_3_12 #DarkTurquoise
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mariadb:10.3.22-debian-10-r27\n====\n\t10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.3.22-debian-10-r27\n====\n10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
 
 'Chart Dependencies
 phabricator_9_0_12--[#green]-|>mariadb_7_3_12
 mariadb_7_3_12--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r27
 
-center footer Generated on 2020/04/26 13:56:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:26:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

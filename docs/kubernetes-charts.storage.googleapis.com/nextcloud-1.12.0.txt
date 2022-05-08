@@ -1,0 +1,29 @@
+Chart Map for nextcloud:1.12.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: nextcloud:1.12.0
+	apiVersion: v1
+	appVersion: 17.0.0
+	created: Not specified
+	dependencies: None
+	description: A file sharing server that puts the control and security of your own data back into your hands.
+	digest: Not specified
+	icon: https://cdn.rawgit.com/docker-library/docs/defa5ffc7123177acd60ddef6e16bddf694cc35f/nextcloud/logo.svg
+	keywords: nextcloud,storage,http,web,php
+	maintainers: chrisingenhaag:christian.ingenhaag@googlemail.com,billimek:jeff@billimek.com
+	repo url: https://charts.helm.sh/stable
+	name: nextcloud
+	sources: https://github.com/nextcloud/docker
+	urls: Not specified
+	version: 1.12.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: nextcloud:17.0.0-apache
+
+Chart Dependencies
+------------------
+nextcloud:1.12.0 uses nextcloud:17.0.0-apache
+
+Generated on 2022/05/07 20:20:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

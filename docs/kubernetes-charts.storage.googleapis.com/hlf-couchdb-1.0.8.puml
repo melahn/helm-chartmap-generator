@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for hlf-couchdb:1.0.8
+
+'There is one referenced Helm Chart
+artifact "hlf-couchdb:1.0.8\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\talexvicegrab\n\t\tinzamam-iqbal\n\t\tdbandin\n====\n\tKeywords: \n\t\tblockchain\n\t\thyperledger\n\t\tfabric\n\t\tcouchdb" as hlf_couchdb_1_0_8 #LightCoral
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nhyperledger/fabric-couchdb\n====\n0.4.10" as hyperledger_fabric_couchdb_0_4_10 #DarkTurquoise
+
+'Chart Dependencies
+hlf_couchdb_1_0_8--[#orange]-|>hyperledger_fabric_couchdb_0_4_10
+
+center footer Generated on 2022/05/07 20:04:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

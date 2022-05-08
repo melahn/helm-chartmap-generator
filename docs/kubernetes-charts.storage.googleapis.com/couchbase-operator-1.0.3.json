@@ -1,0 +1,35 @@
+{
+  "maintainers": [{
+    "name": "tahmmee",
+    "email": "tahmmee@gmail.com"
+  }],
+  "keywords": [
+    "couchbase",
+    "operator",
+    "database",
+    "nosql",
+    "cluster",
+    "replication"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "couchbase/operator",
+      "type": "image",
+      "version": "1.2.2"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "couchbase/admission-controller",
+      "type": "image",
+      "version": "1.2.2"
+    }
+  ],
+  "name": "couchbase-operator:1.0.3",
+  "description": "A Helm chart to deploy the Couchbase Autonomous Operator for easily deploying, managing, and maintaining Couchbase Clusters.",
+  "type": "chart",
+  "shortName": "couchbase-operator",
+  "version": "1.0.3"
+}

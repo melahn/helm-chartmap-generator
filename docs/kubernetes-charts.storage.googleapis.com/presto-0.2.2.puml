@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for presto:0.2.2
+
+'There is one referenced Helm Chart
+artifact "presto:0.2.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: bivas\n====\n\tKeywords: " as presto_0_2_2 #Gold
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nprestosql/presto\n====\n329" as prestosql_presto_329 #AliceBlue
+
+'Chart Dependencies
+presto_0_2_2--[#orange]-|>prestosql_presto_329
+
+center footer Generated on 2022/05/07 20:27:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

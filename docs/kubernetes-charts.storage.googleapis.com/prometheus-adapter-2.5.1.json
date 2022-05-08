@@ -1,0 +1,20 @@
+{
+  "keywords": [
+    "hpa",
+    "metrics",
+    "prometheus",
+    "adapter"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "directxman12/k8s-prometheus-adapter-amd64",
+    "type": "image",
+    "version": "v0.7.0"
+  }],
+  "name": "prometheus-adapter:2.5.1",
+  "description": "DEPRECATED A Helm chart for k8s prometheus adapter",
+  "type": "chart",
+  "shortName": "prometheus-adapter",
+  "version": "2.5.1"
+}

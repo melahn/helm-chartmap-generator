@@ -21,14 +21,14 @@
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/artifactory-pro",
+      "name": "jfrog/artifactory-pro:6.2.0",
       "type": "image",
       "version": "6.2.0"
     },
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/nginx-artifactory-pro",
+      "name": "jfrog/nginx-artifactory-pro:6.2.0",
       "type": "image",
       "version": "6.2.0"
     },

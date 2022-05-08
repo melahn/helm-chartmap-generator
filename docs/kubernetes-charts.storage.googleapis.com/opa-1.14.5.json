@@ -1,0 +1,32 @@
+{
+  "maintainers": [{
+    "name": "tsandall",
+    "email": "torinsandall@gmail.com"
+  }],
+  "keywords": [
+    "opa",
+    "admission control",
+    "policy"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "openpolicyagent/opa",
+      "type": "image",
+      "version": "0.15.1"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "openpolicyagent/kube-mgmt",
+      "type": "image",
+      "version": "0.10"
+    }
+  ],
+  "name": "opa:1.14.5",
+  "description": "Open source, general-purpose policy engine. Enforce fine-grained invariants over arbitrary Kubernetes resources.",
+  "type": "chart",
+  "shortName": "opa",
+  "version": "1.14.5"
+}

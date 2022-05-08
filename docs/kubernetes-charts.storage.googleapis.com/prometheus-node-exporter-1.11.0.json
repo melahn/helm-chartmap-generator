@@ -1,0 +1,20 @@
+{
+  "maintainers": [
+    {
+      "name": "gianrubio",
+      "email": "gianrubio@gmail.com"
+    },
+    {"name": "vsliouniaev"}
+  ],
+  "keywords": [
+    "node-exporter",
+    "prometheus",
+    "exporter"
+  ],
+  "children": [],
+  "name": "prometheus-node-exporter:1.11.0",
+  "description": "A Helm chart for prometheus node-exporter",
+  "type": "chart",
+  "shortName": "prometheus-node-exporter",
+  "version": "1.11.0"
+}

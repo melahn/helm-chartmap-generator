@@ -1,0 +1,29 @@
+Chart Map for aerospike:0.3.3
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: aerospike:0.3.3
+	apiVersion: v1
+	appVersion: v4.5.0.5
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for Aerospike in Kubernetes
+	digest: Not specified
+	icon: https://s3-us-west-1.amazonaws.com/aerospike-fd/wp-content/uploads/2016/06/Aerospike_square_logo.png
+	keywords: aerospike,big-data
+	maintainers: kavehmz:kavehmz@gmail.com,okgolove:okgolove@markeloff.net
+	repo url: https://charts.helm.sh/stable
+	name: aerospike
+	sources: https://github.com/aerospike/aerospike-server
+	urls: Not specified
+	version: 0.3.3
+
+There is one referenced Docker Image
+------------------------------------
+Image: aerospike/aerospike-server:4.5.0.5
+
+Chart Dependencies
+------------------
+aerospike:0.3.3 uses aerospike/aerospike-server:4.5.0.5
+
+Generated on 2022/05/07 19:45:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

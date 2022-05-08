@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for hlf-couchdb:1.0.7
 
 'There is one referenced Helm Chart
-artifact "hlf-couchdb:1.0.7\n====\n\thlf-couchdb\n====\n\t1.0.7\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: alexvicegrab, inzamam-iqbal, dbandin\n====\n\tKeywords: blockchain\nhyperledger\nfabric\ncouchdb" as hlf_couchdb_1_0_7 #LightCoral
+artifact "hlf-couchdb:1.0.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\talexvicegrab\n\t\tinzamam-iqbal\n\t\tdbandin\n====\n\tKeywords: \n\t\tblockchain\n\t\thyperledger\n\t\tfabric\n\t\tcouchdb" as hlf_couchdb_1_0_7 #LightCoral
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\thyperledger/fabric-couchdb\n====\n\t0.4.10" as hyperledger_fabric_couchdb_0_4_10 #DarkTurquoise
+usecase "Image\n====\nDocker Hub\n====\nhyperledger/fabric-couchdb\n====\n0.4.10" as hyperledger_fabric_couchdb_0_4_10 #DarkTurquoise
 
 'Chart Dependencies
 hlf_couchdb_1_0_7--[#orange]-|>hyperledger_fabric_couchdb_0_4_10
 
-center footer Generated on 2020/04/26 13:48:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:04:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

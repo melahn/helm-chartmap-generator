@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for kuberhealthy:1.2.6
 
 'There is one referenced Helm Chart
-artifact "kuberhealthy:1.2.6\n====\n\tkuberhealthy\n====\n\t1.2.6\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: integrii, lolimjake, ihoegen\n====\n\tKeywords: kuberhealthy\nkubernetes\nmonitoring\nsynthetic\ncomcast\nhealth\ncluster\nprometheus" as kuberhealthy_1_2_6 #GoldenRod
+artifact "kuberhealthy:1.2.6\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tintegrii\n\t\tlolimjake\n\t\tihoegen\n====\n\tKeywords: \n\t\tkuberhealthy\n\t\tkubernetes\n\t\tmonitoring\n\t\tsynthetic\n\t\tcomcast\n\t\thealth\n\t\tcluster\n\t\tprometheus" as kuberhealthy_1_2_6 #GoldenRod
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tquay.io\n====\n\tcomcast/kuberhealthy:v1.0.2\n====\n\tv1.0.2" as quay_io_comcast_kuberhealthy_v1_0_2 #LavenderBlush
+usecase "Image\n====\nquay.io\n====\ncomcast/kuberhealthy:v1.0.2\n====\nv1.0.2" as quay_io_comcast_kuberhealthy_v1_0_2 #LavenderBlush
 
 'Chart Dependencies
 kuberhealthy_1_2_6--[#orange]-|>quay_io_comcast_kuberhealthy_v1_0_2
 
-center footer Generated on 2020/04/26 13:51:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:12:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

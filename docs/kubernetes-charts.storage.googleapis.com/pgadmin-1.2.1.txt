@@ -1,0 +1,29 @@
+Chart Map for pgadmin:1.2.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: pgadmin:1.2.1
+	apiVersion: v1
+	appVersion: 4.18.0
+	created: Not specified
+	dependencies: None
+	description: pgAdmin is a web based administration tool for PostgreSQL database
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: rowanruseler:rowanruseler@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: pgadmin
+	sources: Not specified
+	urls: Not specified
+	version: 1.2.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: dpage/pgadmin4:4.18
+
+Chart Dependencies
+------------------
+pgadmin:1.2.1 uses dpage/pgadmin4:4.18
+
+Generated on 2022/05/07 20:25:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

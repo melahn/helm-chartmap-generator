@@ -1,0 +1,31 @@
+Chart Map for dask:3.0.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: dask:3.0.0
+	apiVersion: v1
+	appVersion: 1.1.5
+	created: Not specified
+	dependencies: None
+	description: Distributed computation in Python with task scheduling
+	digest: Not specified
+	icon: https://avatars3.githubusercontent.com/u/17131925?v=3&s=200
+	keywords: Not specified
+	maintainers: danielfrg:df.rodriguez143@gmail.com,mrocklin:mrocklin@gmail.com,beberg:beberg@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: dask
+	sources: https://github.com/dask/dask
+	urls: Not specified
+	version: 3.0.0
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: daskdev/dask-notebook:1.1.5
+Image: daskdev/dask:1.1.5
+
+Chart Dependencies
+------------------
+dask:3.0.0 uses daskdev/dask:1.1.5
+dask:3.0.0 uses daskdev/dask-notebook:1.1.5
+
+Generated on 2022/05/07 19:53:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for pomerium:4.2.6
+
+'There is one referenced Helm Chart
+artifact "pomerium:4.2.6\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tproxy\n\t\taccess-proxy\n\t\treverse-proxy\n\t\tsso\n\t\topenid connect\n\t\toauth2\n\t\tauthorization\n\t\tauthentication\n\t\tgoogle\n\t\tokta\n\t\tazure" as pomerium_4_2_6 #CornflowerBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\npomerium/pomerium\n====\nv0.5.2" as pomerium_pomerium_v0_5_2 #Gainsboro
+
+'Chart Dependencies
+pomerium_4_2_6--[#orange]-|>pomerium_pomerium_v0_5_2
+
+center footer Generated on 2022/05/07 20:26:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

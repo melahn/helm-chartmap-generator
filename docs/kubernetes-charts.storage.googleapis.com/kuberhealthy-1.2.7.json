@@ -1,0 +1,24 @@
+{
+  "keywords": [
+    "kuberhealthy",
+    "kubernetes",
+    "monitoring",
+    "synthetic",
+    "comcast",
+    "health",
+    "cluster",
+    "prometheus"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "comcast/kuberhealthy:v1.0.2",
+    "type": "image",
+    "version": "v1.0.2"
+  }],
+  "name": "kuberhealthy:1.2.7",
+  "description": "DEPRECATED. Please use https://comcast.github.io/kuberhealthy/ instead.",
+  "type": "chart",
+  "shortName": "kuberhealthy",
+  "version": "1.2.7"
+}

@@ -7,12 +7,12 @@ Chart: external-dns:2.20.4
 	appVersion: 0.7.0
 	created: Not specified
 	dependencies: None
-	description: DEPRECATED ExternalDNS is a Kubernetes addon that configures public DNS servers with information about exposed Kubernetes services to make them discoverable.
+	description: ExternalDNS is a Kubernetes addon that configures public DNS servers with information about exposed Kubernetes services to make them discoverable.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/external-dns/img/external-dns-stack-110x117.png
 	keywords: external-dns,network,dns
-	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: external-dns
 	sources: https://github.com/kubernetes-sigs/external-dns,https://github.com/bitnami/bitnami-docker-external-dns
 	urls: Not specified
@@ -20,10 +20,10 @@ Chart: external-dns:2.20.4
 
 There is one referenced Docker Image
 ------------------------------------
-Image: docker.io/bitnami/external-dns:0.7.0-debian-10-r0
+Image: docker.io/bitnami/external-dns:0.7.0-debian-10-r1
 
 Chart Dependencies
 ------------------
-external-dns:2.20.4 uses docker.io/bitnami/external-dns:0.7.0-debian-10-r0
+external-dns:2.20.4 uses docker.io/bitnami/external-dns:0.7.0-debian-10-r1
 
-Generated on 2020/04/26 13:45:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 19:58:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

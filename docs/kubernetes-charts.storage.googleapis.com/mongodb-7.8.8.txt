@@ -12,7 +12,7 @@ Chart: mongodb:7.8.8
 	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
 	keywords: mongodb,database,nosql,cluster,replicaset,replication
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.bitnami.com/bitnami
 	name: mongodb
 	sources: https://github.com/bitnami/bitnami-docker-mongodb
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 mongodb:7.8.8 uses docker.io/bitnami/mongodb:4.2.4-debian-10-r0
 
-Generated on 2020/03/16 17:23:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:18:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

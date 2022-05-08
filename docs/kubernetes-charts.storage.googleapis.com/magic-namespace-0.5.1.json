@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "krancour",
+    "email": "kent.rancourt@microsoft.com"
+  }],
+  "children": [{
+    "repoHost": "gcr.io",
+    "children": [],
+    "name": "kubernetes-helm/tiller:v2.8.1",
+    "type": "image",
+    "version": "v2.8.1"
+  }],
+  "name": "magic-namespace:0.5.1",
+  "description": "Elegantly enables a Tiller per namespace in RBAC-enabled clusters",
+  "type": "chart",
+  "shortName": "magic-namespace",
+  "version": "0.5.1"
+}

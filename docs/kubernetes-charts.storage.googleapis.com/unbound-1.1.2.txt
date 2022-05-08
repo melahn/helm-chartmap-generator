@@ -12,18 +12,20 @@ Chart: unbound:1.1.2
 	icon: Not specified
 	keywords: Not specified
 	maintainers: Markbnj:betz.mark@gmail.com,n0rad:alemaire@norad.fr
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: unbound
 	sources: http://unbound.nlnetlabs.nl/svn/,https://github.com/Markbnj/unbound-docker,https://github.com/kubernetes/contrib/tree/master/exec-healthz
 	urls: Not specified
 	version: 1.1.2
 
-There is one referenced Docker Image
+There are 2 referenced Docker Images
 ------------------------------------
 Image: markbnj/unbound-docker:0.1.0
+Image: gcr.io/google-containers/exechealthz:1.2
 
 Chart Dependencies
 ------------------
+unbound:1.1.2 uses gcr.io/google-containers/exechealthz:1.2
 unbound:1.1.2 uses markbnj/unbound-docker:0.1.0
 
-Generated on 2020/04/26 14:02:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:42:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

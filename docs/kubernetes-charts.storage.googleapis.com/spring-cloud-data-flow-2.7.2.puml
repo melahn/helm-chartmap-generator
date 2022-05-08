@@ -1,0 +1,31 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for spring-cloud-data-flow:2.7.2
+
+'There are 3 referenced Helm Charts
+artifact "rabbitmq:6.16.6\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\trabbitmq\n\t\tmessage queue\n\t\tAMQP" as rabbitmq_6_16_6 #Aqua
+artifact "spring-cloud-data-flow:2.7.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\ttrisberg\n\t\tchrisjs\n\t\tsabbyanandan\n====\n\tKeywords: " as spring_cloud_data_flow_2_7_2 #LightSteelBlue
+artifact "mysql:1.6.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tolemarkus\n\t\tviglesiasce\n====\n\tKeywords: \n\t\tmysql\n\t\tdatabase\n\t\tsql" as mysql_1_6_2 #Aqua
+
+'There are 4 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nspringcloud/spring-cloud-dataflow-server\n====\n2.5.3.RELEASE" as springcloud_spring_cloud_dataflow_server_2_5_3_RELEASE #Beige
+usecase "Image\n====\nDocker Hub\n====\nspringcloud/spring-cloud-skipper-server\n====\n2.4.3.RELEASE" as springcloud_spring_cloud_skipper_server_2_4_3_RELEASE #Azure
+usecase "Image\n====\nDocker Hub\n====\nmysql\n====\n5.7.28" as mysql_5_7_28 #Aqua
+usecase "Image\n====\ndocker.io\n====\nbitnami/rabbitmq:3.8.2-debian-10-r0\n====\n3.8.2-debian-10-r0" as docker_io_bitnami_rabbitmq_3_8_2_debian_10_r0 #Beige
+
+'Chart Dependencies
+spring_cloud_data_flow_2_7_2--[#green]-|>rabbitmq_6_16_6
+spring_cloud_data_flow_2_7_2--[#green]-|>mysql_1_6_2
+rabbitmq_6_16_6--[#orange]-|>docker_io_bitnami_rabbitmq_3_8_2_debian_10_r0
+spring_cloud_data_flow_2_7_2--[#orange]-|>springcloud_spring_cloud_dataflow_server_2_5_3_RELEASE
+spring_cloud_data_flow_2_7_2--[#orange]-|>springcloud_spring_cloud_skipper_server_2_4_3_RELEASE
+mysql_1_6_2--[#orange]-|>mysql_5_7_28
+
+center footer Generated on 2022/05/07 20:38:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

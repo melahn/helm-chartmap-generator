@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "cluster-autoscaler:8.0.0",
+  "description": "Scales worker nodes within autoscaling groups.",
+  "type": "chart",
+  "shortName": "cluster-autoscaler",
+  "version": "8.0.0"
+}

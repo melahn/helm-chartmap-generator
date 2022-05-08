@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "mongo",
+    "type": "image",
+    "version": "3.6"
+  }],
+  "name": "mongodb-replicaset:3.17.2",
+  "description": "DEPRECATED - NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+  "type": "chart",
+  "shortName": "mongodb-replicaset",
+  "version": "3.17.2"
+}

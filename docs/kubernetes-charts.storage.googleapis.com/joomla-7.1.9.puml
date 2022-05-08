@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for joomla:7.1.9
 
 'There are 2 referenced Helm Charts
-artifact "joomla:7.1.9\n====\n\tjoomla\n====\n\t7.1.9\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: joomla\ncms\nblog\nhttp\nphp" as joomla_7_1_9 #Gold
-artifact "mariadb:7.3.11\n====\n\tmariadb\n====\n\t7.3.11\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mariadb\nmysql\ndatabase\nsql\nprometheus" as mariadb_7_3_11 #DarkTurquoise
+artifact "joomla:7.1.9\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tjoomla\n\t\tcms\n\t\tblog\n\t\thttp\n\t\tphp" as joomla_7_1_9 #Gold
+artifact "mariadb:7.3.11\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_7_3_11 #DarkTurquoise
 
 'There are 3 referenced Docker Images
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/joomla:3.9.15-debian-10-r10\n====\n\t3.9.15-debian-10-r10" as docker_io_bitnami_joomla_3_9_15_debian_10_r10 #BlanchedAlmond
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mariadb:10.3.22-debian-10-r27\n====\n\t10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mariadb:10.1.44-debian-10-r25\n====\n\t10.1.44-debian-10-r25" as docker_io_bitnami_mariadb_10_1_44_debian_10_r25 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/joomla:3.9.15-debian-10-r10\n====\n3.9.15-debian-10-r10" as docker_io_bitnami_joomla_3_9_15_debian_10_r10 #BlanchedAlmond
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.3.22-debian-10-r27\n====\n10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.1.44-debian-10-r25\n====\n10.1.44-debian-10-r25" as docker_io_bitnami_mariadb_10_1_44_debian_10_r25 #DarkGoldenRod
 
 'Chart Dependencies
 joomla_7_1_9--[#green]-|>mariadb_7_3_11
@@ -23,5 +23,5 @@ joomla_7_1_9--[#orange]-|>docker_io_bitnami_joomla_3_9_15_debian_10_r10
 mariadb_7_3_11--[#orange]-|>docker_io_bitnami_mariadb_10_1_44_debian_10_r25
 mariadb_7_3_11--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r27
 
-center footer Generated on 2020/03/16 17:20:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:08:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

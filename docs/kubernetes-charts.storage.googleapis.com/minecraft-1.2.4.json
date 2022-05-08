@@ -1,0 +1,26 @@
+{
+  "maintainers": [
+    {
+      "name": "gtaylor",
+      "email": "gtaylor@gc-taylor.com"
+    },
+    {
+      "name": "billimek",
+      "email": "jeff@billimek.com"
+    },
+    {
+      "name": "itzg",
+      "email": "itzgeoff@gmail.com"
+    }
+  ],
+  "keywords": [
+    "game",
+    "server"
+  ],
+  "children": [],
+  "name": "minecraft:1.2.4",
+  "description": "Minecraft server",
+  "type": "chart",
+  "shortName": "minecraft",
+  "version": "1.2.4"
+}

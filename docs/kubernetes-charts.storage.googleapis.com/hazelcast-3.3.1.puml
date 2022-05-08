@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for hazelcast:3.3.1
+
+'There is one referenced Helm Chart
+artifact "hazelcast:3.3.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\thazelcast\n\t\tkeyvalue\n\t\tin-memory\n\t\tdatabase\n\t\tcaching" as hazelcast_3_3_1 #AliceBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nhazelcast/hazelcast\n====\n4.0.1" as hazelcast_hazelcast_4_0_1 #CornflowerBlue
+usecase "Image\n====\nDocker Hub\n====\nhazelcast/management-center\n====\n4.0.2" as hazelcast_management_center_4_0_2 #Coral
+
+'Chart Dependencies
+hazelcast_3_3_1--[#orange]-|>hazelcast_hazelcast_4_0_1
+hazelcast_3_3_1--[#orange]-|>hazelcast_management_center_4_0_2
+
+center footer Generated on 2022/05/07 20:03:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

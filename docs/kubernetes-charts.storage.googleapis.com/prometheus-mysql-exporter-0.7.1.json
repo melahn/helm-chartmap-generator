@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prom/mysqld-exporter",
+    "type": "image",
+    "version": "v0.11.0"
+  }],
+  "name": "prometheus-mysql-exporter:0.7.1",
+  "description": "DEPRECATED A Helm chart for prometheus mysql exporter with cloudsqlproxy",
+  "type": "chart",
+  "shortName": "prometheus-mysql-exporter",
+  "version": "0.7.1"
+}

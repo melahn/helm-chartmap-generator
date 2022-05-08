@@ -22,7 +22,7 @@
   "children": [{
     "repoHost": "quay.io",
     "children": [],
-    "name": "monax/hoard",
+    "name": "monax/hoard:6.0.0",
     "type": "image",
     "version": "6.0.0"
   }],

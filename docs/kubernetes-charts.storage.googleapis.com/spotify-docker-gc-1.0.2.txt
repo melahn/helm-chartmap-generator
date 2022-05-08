@@ -1,0 +1,27 @@
+Chart Map for spotify-docker-gc:1.0.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: spotify-docker-gc:1.0.2
+	apiVersion: v1
+	appVersion: latest
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED - A simple Docker container and image garbage collection script.
+	digest: Not specified
+	icon: Not specified
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: spotify-docker-gc
+	sources: https://github.com/spotify/docker-gc
+	urls: Not specified
+	version: 1.0.2
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+
+Generated on 2022/05/07 20:37:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

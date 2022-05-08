@@ -10,7 +10,7 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/mongodb",
+    "name": "bitnami/mongodb:4.2.4-debian-10-r0",
     "type": "image",
     "version": "4.2.4-debian-10-r0"
   }],

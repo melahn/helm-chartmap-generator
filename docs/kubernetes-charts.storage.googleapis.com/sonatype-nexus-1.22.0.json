@@ -1,0 +1,41 @@
+{
+  "maintainers": [
+    {
+      "name": "rjkernick",
+      "email": "rjkernick@gmail.com"
+    },
+    {
+      "name": "tsiddique",
+      "email": "tsiddique@live.com"
+    }
+  ],
+  "keywords": [
+    "artifacts",
+    "dependency",
+    "management",
+    "sonatype",
+    "nexus",
+    "repository"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "sonatype/nexus3",
+      "type": "image",
+      "version": "3.20.1"
+    },
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "travelaudience/docker-nexus-proxy:2.5.0",
+      "type": "image",
+      "version": "2.5.0"
+    }
+  ],
+  "name": "sonatype-nexus:1.22.0",
+  "description": "Sonatype Nexus is an open source repository manager",
+  "type": "chart",
+  "shortName": "sonatype-nexus",
+  "version": "1.22.0"
+}

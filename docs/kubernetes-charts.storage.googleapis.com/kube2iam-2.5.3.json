@@ -1,0 +1,14 @@
+{
+  "keywords": [
+    "kube2iam",
+    "aws",
+    "iam",
+    "security"
+  ],
+  "children": [],
+  "name": "kube2iam:2.5.3",
+  "description": "DEPRECATED - Provide IAM credentials to pods based on annotations.",
+  "type": "chart",
+  "shortName": "kube2iam",
+  "version": "2.5.3"
+}

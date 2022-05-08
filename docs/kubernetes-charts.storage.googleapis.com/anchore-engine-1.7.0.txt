@@ -1,0 +1,65 @@
+Chart Map for anchore-engine:1.7.0
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: postgresql:1.0.1
+	apiVersion: v1
+	appVersion: 10.4.0
+	created: 2018-06-06T10:50:59.370941084Z
+	dependencies: None
+	description: Chart for PostgreSQL
+	digest: 945b63f5fa2b4a3cf6cd1ec6c048c7a677d3c3a0e2d2e4e8ab082791c887d023
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+	keywords: postgresql,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql
+	urls: https://charts.bitnami.com/bitnami/postgresql-1.0.1.tgz
+	version: 1.0.1
+Chart: redis:10.5.7
+	apiVersion: v1
+	appVersion: 5.0.8
+	created: 2020-04-07T10:40:02.202453352Z
+	dependencies: None
+	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: 34f81e25cb8fecf2f8c05bf65099f70ee598140f0168cb426fc1013b2e5d9d86
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://charts.bitnami.com/bitnami/redis-10.5.7.tgz
+	version: 10.5.7
+Chart: anchore-engine:1.7.0
+	apiVersion: v1
+	appVersion: 0.7.3
+	created: Not specified
+	dependencies: postgresql:1.0.1, redis:10.5.7
+	description: Anchore container analysis and policy evaluation engine service
+	digest: Not specified
+	icon: https://anchore.com/wp-content/uploads/2016/08/anchore.png
+	keywords: analysis,docker,anchore,anchore-engine,image,security,vulnerability,scanner
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: anchore-engine
+	sources: https://github.com/anchore/anchore-engine
+	urls: Not specified
+	version: 1.7.0
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: postgres:9.6.18
+Image: docker.io/bitnami/redis:5.0.7-debian-10-r32
+Image: docker.io/anchore/anchore-engine:v0.7.3
+
+Chart Dependencies
+------------------
+anchore-engine:1.7.0 depends on postgresql:1.0.1
+anchore-engine:1.7.0 depends on redis:10.5.7
+postgresql:1.0.1 uses postgres:9.6.18
+redis:10.5.7 uses docker.io/bitnami/redis:5.0.7-debian-10-r32
+anchore-engine:1.7.0 uses docker.io/anchore/anchore-engine:v0.7.3
+
+Generated on 2022/05/07 19:46:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

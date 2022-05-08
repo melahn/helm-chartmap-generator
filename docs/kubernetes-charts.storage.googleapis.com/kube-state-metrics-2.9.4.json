@@ -1,0 +1,20 @@
+{
+  "keywords": [
+    "metric",
+    "monitoring",
+    "prometheus",
+    "kubernetes"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "coreos/kube-state-metrics:v1.9.7",
+    "type": "image",
+    "version": "v1.9.7"
+  }],
+  "name": "kube-state-metrics:2.9.4",
+  "description": "DEPRECATED - Install kube-state-metrics to generate and expose cluster-level metrics",
+  "type": "chart",
+  "shortName": "kube-state-metrics",
+  "version": "2.9.4"
+}

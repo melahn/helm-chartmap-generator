@@ -1,0 +1,29 @@
+Chart Map for kube-ops-view:1.2.1
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: kube-ops-view:1.2.1
+	apiVersion: v1
+	appVersion: 20.4.0
+	created: Not specified
+	dependencies: None
+	description: Kubernetes Operational View - read-only system dashboard for multiple K8s clusters
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/hjacobs/kube-ops-view/master/kube-ops-view-logo.png
+	keywords: kubernetes,dashboard,operations
+	maintainers: hjacobs:henning@jacobs1.de
+	repo url: https://charts.helm.sh/stable
+	name: kube-ops-view
+	sources: https://github.com/hjacobs/kube-ops-view
+	urls: Not specified
+	version: 1.2.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: hjacobs/kube-ops-view:20.4.0
+
+Chart Dependencies
+------------------
+kube-ops-view:1.2.1 uses hjacobs/kube-ops-view:20.4.0
+
+Generated on 2022/05/07 20:11:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

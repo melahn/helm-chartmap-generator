@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "nodered",
+    "node-red"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "nodered/node-red",
+    "type": "image",
+    "version": "1.0.4-12-minimal"
+  }],
+  "name": "node-red:1.4.3",
+  "description": "Node-RED is low-code programming for event-driven applications",
+  "type": "chart",
+  "shortName": "node-red",
+  "version": "1.4.3"
+}

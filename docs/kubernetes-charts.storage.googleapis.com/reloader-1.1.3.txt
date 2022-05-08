@@ -12,7 +12,7 @@ Chart: reloader:1.1.3
 	icon: https://raw.githubusercontent.com/stakater/Reloader/master/assets/web/reloader-round-100px.png
 	keywords: Reloader,kubernetes
 	maintainers: rasheedamir:rasheed@aurorasolutions.io,waseem-h:waseemhassan@stakater.com,faizanahmad055:faizan.ahmad55@outlook.com,kahootali:ali.kahoot@aurorasolutions.io,ahmadiq:ahmad@aurorasolutions.io,ahsan-storm:ahsanmuhammad1@outlook.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: reloader
 	sources: https://github.com/stakater/Reloader
 	urls: Not specified
@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 reloader:1.1.3 uses stakater/reloader:v0.0.29
 
-Generated on 2020/04/26 13:58:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:33:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

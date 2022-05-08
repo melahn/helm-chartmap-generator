@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for couchbase-operator:1.0.3
+
+'There is one referenced Helm Chart
+artifact "couchbase-operator:1.0.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: tahmmee\n====\n\tKeywords: \n\t\tcouchbase\n\t\toperator\n\t\tdatabase\n\t\tnosql\n\t\tcluster\n\t\treplication" as couchbase_operator_1_0_3 #Aqua
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\ncouchbase/admission-controller\n====\n1.2.2" as couchbase_admission_controller_1_2_2 #DodgerBlue
+usecase "Image\n====\nDocker Hub\n====\ncouchbase/operator\n====\n1.2.2" as couchbase_operator_1_2_2 #DarkSeaGreen
+
+'Chart Dependencies
+couchbase_operator_1_0_3--[#orange]-|>couchbase_operator_1_2_2
+couchbase_operator_1_0_3--[#orange]-|>couchbase_admission_controller_1_2_2
+
+center footer Generated on 2022/05/07 19:53:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -12,7 +12,7 @@ Chart: sumologic-fluentd:2.1.0
 	icon: https://www.sumologic.com/wp-content/uploads/logo_light-theme.png
 	keywords: monitoring,logging
 	maintainers: flah00:techops@adaptly.com,frankreno:freno@sumologic.com,darend:darend@gmail.com,bendrucker:ben@takescoop.com
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: sumologic-fluentd
 	sources: https://github.com/SumoLogic/fluentd-kubernetes-sumologic
 	urls: Not specified
@@ -24,4 +24,4 @@ There are 0 referenced Docker Images
 Chart Dependencies
 ------------------
 
-Generated on 2020/04/26 14:01:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 20:39:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

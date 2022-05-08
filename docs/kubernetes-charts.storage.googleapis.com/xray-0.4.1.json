@@ -21,56 +21,30 @@
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-server",
+      "name": "jfrog/xray-indexer:2.3.0",
       "type": "image",
       "version": "2.3.0"
     },
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-indexer",
+      "name": "jfrog/xray-server:2.3.0",
       "type": "image",
       "version": "2.3.0"
     },
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-analysis",
+      "name": "jfrog/xray-analysis:2.3.0",
       "type": "image",
       "version": "2.3.0"
     },
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-persist",
+      "name": "jfrog/xray-persist:2.3.0",
       "type": "image",
       "version": "2.3.0"
-    },
-    {
-      "maintainers": [{
-        "name": "etiennetremel",
-        "email": "etienne.tremel@container-solutions.com"
-      }],
-      "keywords": [
-        "rabbitmq",
-        "message queue",
-        "AMQP",
-        "AMQPS",
-        "MQTT",
-        "STOMP"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "rabbitmq",
-        "type": "image",
-        "version": "3.7-alpine"
-      }],
-      "name": "rabbitmq-ha:1.5.2",
-      "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
-      "type": "chart",
-      "shortName": "rabbitmq-ha",
-      "version": "1.5.2"
     },
     {
       "maintainers": [{
@@ -85,7 +59,7 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mongodb",
+        "name": "bitnami/mongodb:3.6.3",
         "type": "image",
         "version": "3.6.3"
       }],
@@ -118,6 +92,32 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "0.8.7"
+    },
+    {
+      "maintainers": [{
+        "name": "etiennetremel",
+        "email": "etienne.tremel@container-solutions.com"
+      }],
+      "keywords": [
+        "rabbitmq",
+        "message queue",
+        "AMQP",
+        "AMQPS",
+        "MQTT",
+        "STOMP"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "rabbitmq",
+        "type": "image",
+        "version": "3.7-alpine"
+      }],
+      "name": "rabbitmq-ha:1.5.2",
+      "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
+      "type": "chart",
+      "shortName": "rabbitmq-ha",
+      "version": "1.5.2"
     }
   ],
   "name": "xray:0.4.1",

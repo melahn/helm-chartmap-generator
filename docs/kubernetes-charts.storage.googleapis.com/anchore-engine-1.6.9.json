@@ -1,0 +1,90 @@
+{
+  "maintainers": [
+    {
+      "name": "zhill",
+      "email": "zach@anchore.com"
+    },
+    {
+      "name": "btodhunter",
+      "email": "bradyt@anchore.com"
+    }
+  ],
+  "keywords": [
+    "analysis",
+    "docker",
+    "anchore",
+    "anchore-engine",
+    "image",
+    "security",
+    "vulnerability",
+    "scanner"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "anchore/anchore-engine:v0.7.2",
+      "type": "image",
+      "version": "v0.7.2"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "postgresql",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6.2"
+      }],
+      "name": "postgresql:1.0.0",
+      "description": "Chart for PostgreSQL",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "1.0.0"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/redis:4.0.14",
+        "type": "image",
+        "version": "4.0.14"
+      }],
+      "name": "redis:6.4.5",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "6.4.5"
+    }
+  ],
+  "name": "anchore-engine:1.6.9",
+  "description": "Anchore container analysis and policy evaluation engine service",
+  "type": "chart",
+  "shortName": "anchore-engine",
+  "version": "1.6.9"
+}

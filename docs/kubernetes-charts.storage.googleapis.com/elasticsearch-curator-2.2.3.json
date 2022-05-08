@@ -1,0 +1,13 @@
+{
+  "keywords": [
+    "curator",
+    "elasticsearch",
+    "elasticsearch-curator"
+  ],
+  "children": [],
+  "name": "elasticsearch-curator:2.2.3",
+  "description": "DEPRECATED A Helm chart for Elasticsearch Curator",
+  "type": "chart",
+  "shortName": "elasticsearch-curator",
+  "version": "2.2.3"
+}

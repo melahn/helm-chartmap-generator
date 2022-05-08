@@ -1,0 +1,37 @@
+{
+  "maintainers": [
+    {
+      "name": "Acaleph",
+      "email": "hello@acale.ph"
+    },
+    {
+      "name": "shashidharatd",
+      "email": "shashidhara.huawei@gmail.com"
+    },
+    {
+      "name": "andor44",
+      "email": "andor44@gmail.com"
+    },
+    {
+      "name": "mrueg",
+      "email": "manuel@rueg.eu"
+    }
+  ],
+  "keywords": [
+    "coredns",
+    "dns",
+    "kubedns"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "coredns/coredns",
+    "type": "image",
+    "version": "1.7.1"
+  }],
+  "name": "coredns:1.13.6",
+  "description": "CoreDNS is a DNS server that chains plugins and provides Kubernetes DNS Services",
+  "type": "chart",
+  "shortName": "coredns",
+  "version": "1.13.6"
+}

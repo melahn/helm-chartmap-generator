@@ -1,0 +1,29 @@
+Chart Map for prisma:1.2.4
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: prisma:1.2.4
+	apiVersion: v1
+	appVersion: 1.29.1
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED Prisma turns your database into a realtime GraphQL API
+	digest: Not specified
+	icon: https://i.imgur.com/wD4rVt4.png
+	keywords: Not specified
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: prisma
+	sources: https://github.com/prismagraphql/prisma
+	urls: Not specified
+	version: 1.2.4
+
+There is one referenced Docker Image
+------------------------------------
+Image: prismagraphql/prisma:1.29.1-heroku
+
+Chart Dependencies
+------------------
+prisma:1.2.4 uses prismagraphql/prisma:1.29.1-heroku
+
+Generated on 2022/05/07 20:27:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

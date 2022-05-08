@@ -1,0 +1,23 @@
+{
+  "maintainers": [{
+    "name": "apenney",
+    "email": "apenney@gmail.com"
+  }],
+  "keywords": [
+    "metrics",
+    "stackdriver",
+    "monitoring"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "frodenas/stackdriver-exporter",
+    "type": "image",
+    "version": "v0.6.0"
+  }],
+  "name": "stackdriver-exporter:1.3.0",
+  "description": "Stackdriver exporter for Prometheus",
+  "type": "chart",
+  "shortName": "stackdriver-exporter",
+  "version": "1.3.0"
+}

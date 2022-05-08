@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for bitcoind:1.0.0
 
 'There is one referenced Helm Chart
-artifact "bitcoind:1.0.0\n====\n\tbitcoind\n====\n\t1.0.0\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: daniel-yavorovich, govale\n====\n\tKeywords: bitcoind\ncryptocurrency\nblockchain" as bitcoind_1_0_0 #GhostWhite
+artifact "bitcoind:1.0.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tdaniel-yavorovich\n\t\tgovale\n====\n\tKeywords: \n\t\tbitcoind\n\t\tcryptocurrency\n\t\tblockchain" as bitcoind_1_0_0 #GhostWhite
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\tarilot/docker-bitcoind\n====\n\t0.17.1" as arilot_docker_bitcoind_0_17_1 #LightBlue
+usecase "Image\n====\nDocker Hub\n====\narilot/docker-bitcoind\n====\n0.17.1" as arilot_docker_bitcoind_0_17_1 #LightBlue
 
 'Chart Dependencies
 bitcoind_1_0_0--[#orange]-|>arilot_docker_bitcoind_0_17_1
 
-center footer Generated on 2020/04/26 13:41:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 19:48:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

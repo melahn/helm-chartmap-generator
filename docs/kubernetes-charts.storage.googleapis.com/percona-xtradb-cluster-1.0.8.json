@@ -1,0 +1,32 @@
+{
+  "keywords": [
+    "mysql",
+    "percona",
+    "database",
+    "sql",
+    "xtradb",
+    "galera",
+    "wsrep"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "busybox",
+      "type": "image",
+      "version": "1.25.0"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "percona/percona-xtradb-cluster",
+      "type": "image",
+      "version": "5.7.19"
+    }
+  ],
+  "name": "percona-xtradb-cluster:1.0.8",
+  "description": "DEPRECATED - free, fully compatible, enhanced, open source drop-in replacement for MySQL with Galera Replication (xtradb)",
+  "type": "chart",
+  "shortName": "percona-xtradb-cluster",
+  "version": "1.0.8"
+}

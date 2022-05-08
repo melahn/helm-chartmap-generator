@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for elasticsearch-exporter:3.7.1
+
+'There is one referenced Helm Chart
+artifact "elasticsearch-exporter:3.7.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tmetrics\n\t\telasticsearch\n\t\tmonitoring" as elasticsearch_exporter_3_7_1 #Cornsilk
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\njustwatch/elasticsearch_exporter\n====\n1.1.0" as justwatch_elasticsearch_exporter_1_1_0 #HotPink
+
+'Chart Dependencies
+elasticsearch_exporter_3_7_1--[#orange]-|>justwatch_elasticsearch_exporter_1_1_0
+
+center footer Generated on 2022/05/07 19:57:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

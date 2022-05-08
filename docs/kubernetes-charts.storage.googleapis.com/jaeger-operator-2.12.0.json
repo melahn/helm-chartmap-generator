@@ -1,0 +1,24 @@
+{
+  "maintainers": [
+    {
+      "name": "cpanato",
+      "email": "ctadeu@gmail.com"
+    },
+    {
+      "name": "batazor",
+      "email": "batazor111@gmail.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "jaegertracing/jaeger-operator",
+    "type": "image",
+    "version": "1.15.1"
+  }],
+  "name": "jaeger-operator:2.12.0",
+  "description": "jaeger-operator Helm chart for Kubernetes",
+  "type": "chart",
+  "shortName": "jaeger-operator",
+  "version": "2.12.0"
+}

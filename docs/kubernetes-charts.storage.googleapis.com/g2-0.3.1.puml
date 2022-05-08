@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for g2:0.3.1
+
+'There is one referenced Helm Chart
+artifact "g2:0.3.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: appscode\n====\n\tKeywords: " as g2_0_3_1 #LightSteelBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nappscode/gearmand\n====\n0.5.0" as appscode_gearmand_0_5_0 #Darkorange
+
+'Chart Dependencies
+g2_0_3_1--[#orange]-|>appscode_gearmand_0_5_0
+
+center footer Generated on 2022/05/07 20:00:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

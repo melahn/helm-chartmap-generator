@@ -1,0 +1,33 @@
+{
+  "maintainers": [
+    {
+      "name": "jackzampolin",
+      "email": "jack@influxdb.com"
+    },
+    {
+      "name": "aisuko",
+      "email": "urakiny@gmail.com"
+    },
+    {
+      "name": "naseemkullah",
+      "email": "naseem@transit.app"
+    }
+  ],
+  "keywords": [
+    "influxdb",
+    "database",
+    "timeseries"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "influxdb",
+    "type": "image",
+    "version": "1.7.9-alpine"
+  }],
+  "name": "influxdb:4.3.0",
+  "description": "Scalable datastore for metrics, events, and real-time analytics.",
+  "type": "chart",
+  "shortName": "influxdb",
+  "version": "4.3.0"
+}

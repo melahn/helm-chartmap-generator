@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kubedb:0.1.1
+
+'There is one referenced Helm Chart
+artifact "kubedb:0.1.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: appscode\n====\n\tKeywords: " as kubedb_0_1_1 #Fuchsia
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nkubedb/operator\n====\n0.8.0-beta.2" as kubedb_operator_0_8_0_beta_2 #CadetBlue
+usecase "Image\n====\nDocker Hub\n====\nkubedb/kubedb-server\n====\n0.1.0-beta.2" as kubedb_kubedb_server_0_1_0_beta_2 #GoldenRod
+
+'Chart Dependencies
+kubedb_0_1_1--[#orange]-|>kubedb_kubedb_server_0_1_0_beta_2
+kubedb_0_1_1--[#orange]-|>kubedb_operator_0_8_0_beta_2
+
+center footer Generated on 2022/05/07 20:12:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

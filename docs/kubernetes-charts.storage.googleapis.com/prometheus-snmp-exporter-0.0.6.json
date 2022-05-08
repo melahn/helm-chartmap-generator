@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "prometheus",
+    "snmp",
+    "monitoring"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "prom/snmp-exporter",
+    "type": "image",
+    "version": "v0.14.0"
+  }],
+  "name": "prometheus-snmp-exporter:0.0.6",
+  "description": "DEPRECATED Prometheus SNMP Exporter",
+  "type": "chart",
+  "shortName": "prometheus-snmp-exporter",
+  "version": "0.0.6"
+}

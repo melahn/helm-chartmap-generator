@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "coreos/vault-operator:0.1.9",
+    "type": "image",
+    "version": "0.1.9"
+  }],
+  "name": "vault-operator:0.1.4",
+  "description": "DEPRECATED - CoreOS vault-operator Helm chart for Kubernetes",
+  "type": "chart",
+  "shortName": "vault-operator",
+  "version": "0.1.4"
+}

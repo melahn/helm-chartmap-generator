@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "elastalert:1.5.1",
+  "description": "DEPRECATED ElastAlert is a simple framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch.",
+  "type": "chart",
+  "shortName": "elastalert",
+  "version": "1.5.1"
+}

@@ -1,0 +1,29 @@
+Chart Map for terracotta:1.1.2
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: terracotta:1.1.2
+	apiVersion: v1
+	appVersion: 5.6.0
+	created: Not specified
+	dependencies: None
+	description: DEPRECATED - Terracotta Ehcache is an improved version of Java's de facto caching API, Ehcache. It has a powerful, streamlined, modernized caching API taking advantage of newer Java features as well as the capability to be used via the JSR-107 "JCache" API.
+	digest: Not specified
+	icon: http://www.terracotta.org/wp-content/themes/terracotta/library/images/logo.png
+	keywords: terracotta,jcache,in-memory,caching
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
+	name: terracotta
+	sources: https://github.com/Terracotta-OSS
+	urls: Not specified
+	version: 1.1.2
+
+There is one referenced Docker Image
+------------------------------------
+Image: terracotta/terracotta-server-oss:5.6.0
+
+Chart Dependencies
+------------------
+terracotta:1.1.2 uses terracotta/terracotta-server-oss:5.6.0
+
+Generated on 2022/05/07 20:41:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

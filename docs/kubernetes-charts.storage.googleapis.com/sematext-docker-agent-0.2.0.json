@@ -1,0 +1,18 @@
+{
+  "maintainers": [{
+    "name": "komljen",
+    "email": "alen.komljen@live.com"
+  }],
+  "keywords": [
+    "alerts",
+    "metrics",
+    "events",
+    "logs"
+  ],
+  "children": [],
+  "name": "sematext-docker-agent:0.2.0",
+  "description": "Sematext Docker Agent",
+  "type": "chart",
+  "shortName": "sematext-docker-agent",
+  "version": "0.2.0"
+}

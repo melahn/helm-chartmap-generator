@@ -9,17 +9,17 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for zetcd:0.1.9
 
 'There are 2 referenced Helm Charts
-artifact "etcd-operator:0.4.3\n====\n\tetcd-operator\n====\n\t0.4.3\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: chancez, lachie83\n====\n\tKeywords: " as etcd_operator_0_4_3 #Aquamarine
-artifact "zetcd:0.1.9\n====\n\tzetcd\n====\n\t0.1.9\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: hunter\n====\n\tKeywords: " as zetcd_0_1_9 #Aqua
+artifact "etcd-operator:0.4.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tchancez\n\t\tlachie83\n====\n\tKeywords: " as etcd_operator_0_4_3 #Aquamarine
+artifact "zetcd:0.1.9\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: hunter\n====\n\tKeywords: " as zetcd_0_1_9 #Aqua
 
 'There are 2 referenced Docker Images
-usecase "Image\n====\n\tquay.io\n====\n\tcoreos/etcd-operator:v0.3.3\n====\n\tv0.3.3" as quay_io_coreos_etcd_operator_v0_3_3 #IndianRed
-usecase "Image\n====\n\tquay.io\n====\n\tcoreos/zetcd:v0.0.3\n====\n\tv0.0.3" as quay_io_coreos_zetcd_v0_0_3 #LightGoldenRodYellow
+usecase "Image\n====\nquay.io\n====\ncoreos/etcd-operator:v0.3.3\n====\nv0.3.3" as quay_io_coreos_etcd_operator_v0_3_3 #IndianRed
+usecase "Image\n====\nquay.io\n====\ncoreos/zetcd:v0.0.3\n====\nv0.0.3" as quay_io_coreos_zetcd_v0_0_3 #LightGoldenRodYellow
 
 'Chart Dependencies
 zetcd_0_1_9--[#green]-|>etcd_operator_0_4_3
 etcd_operator_0_4_3--[#orange]-|>quay_io_coreos_etcd_operator_v0_3_3
 zetcd_0_1_9--[#orange]-|>quay_io_coreos_zetcd_v0_0_3
 
-center footer Generated on 2020/04/26 14:03:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:45:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

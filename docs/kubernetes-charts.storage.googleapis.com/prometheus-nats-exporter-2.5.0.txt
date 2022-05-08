@@ -1,0 +1,29 @@
+Chart Map for prometheus-nats-exporter:2.5.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: prometheus-nats-exporter:2.5.0
+	apiVersion: v1
+	appVersion: 0.6.2
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for prometheus-nats-exporter
+	digest: Not specified
+	icon: Not specified
+	keywords: nats,prometheus,exporter
+	maintainers: okgolove:okgolove@markeloff.net,caarlos0:carlos@carlosbecker.com
+	repo url: https://charts.helm.sh/stable
+	name: prometheus-nats-exporter
+	sources: https://github.com/nats-io/prometheus-nats-exporter
+	urls: Not specified
+	version: 2.5.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: synadia/prometheus-nats-exporter:0.6.2
+
+Chart Dependencies
+------------------
+prometheus-nats-exporter:2.5.0 uses synadia/prometheus-nats-exporter:0.6.2
+
+Generated on 2022/05/07 20:29:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

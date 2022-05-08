@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "neo4j",
+    "type": "image",
+    "version": "4.0.3-enterprise"
+  }],
+  "name": "neo4j:3.0.1",
+  "description": "DEPRECATED Neo4j is the world's leading graph database",
+  "type": "chart",
+  "shortName": "neo4j",
+  "version": "3.0.1"
+}

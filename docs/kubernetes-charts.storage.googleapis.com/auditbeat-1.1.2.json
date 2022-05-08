@@ -1,0 +1,8 @@
+{
+  "children": [],
+  "name": "auditbeat:1.1.2",
+  "description": "DEPRECATED A lightweight shipper to audit the activities of users and processes on your systems",
+  "type": "chart",
+  "shortName": "auditbeat",
+  "version": "1.1.2"
+}

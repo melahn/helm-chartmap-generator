@@ -1,0 +1,18 @@
+{
+  "keywords": [
+    "Reloader",
+    "kubernetes"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "stakater/reloader",
+    "type": "image",
+    "version": "v0.0.41"
+  }],
+  "name": "reloader:1.3.0",
+  "description": "DEPRECATED - Reloader chart that runs on kubernetes",
+  "type": "chart",
+  "shortName": "reloader",
+  "version": "1.3.0"
+}

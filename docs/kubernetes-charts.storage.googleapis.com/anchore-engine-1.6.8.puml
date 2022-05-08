@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for anchore-engine:1.6.8
+
+'There are 3 referenced Helm Charts
+artifact "redis:6.4.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_6_4_5 #LightSeaGreen
+artifact "postgresql:1.0.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tpostgresql\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_1_0_0 #LightSteelBlue
+artifact "anchore-engine:1.6.8\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tzhill\n\t\tbtodhunter\n====\n\tKeywords: \n\t\tanalysis\n\t\tdocker\n\t\tanchore\n\t\tanchore-engine\n\t\timage\n\t\tsecurity\n\t\tvulnerability\n\t\tscanner" as anchore_engine_1_6_8 #Azure
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n9.6.2" as postgres_9_6_2 #Ivory
+usecase "Image\n====\ndocker.io\n====\nanchore/anchore-engine:v0.7.2\n====\nv0.7.2" as docker_io_anchore_anchore_engine_v0_7_2 #Coral
+usecase "Image\n====\ndocker.io\n====\nbitnami/redis:4.0.14\n====\n4.0.14" as docker_io_bitnami_redis_4_0_14 #Azure
+
+'Chart Dependencies
+anchore_engine_1_6_8--[#green]-|>redis_6_4_5
+anchore_engine_1_6_8--[#green]-|>postgresql_1_0_0
+redis_6_4_5--[#orange]-|>docker_io_bitnami_redis_4_0_14
+postgresql_1_0_0--[#orange]-|>postgres_9_6_2
+anchore_engine_1_6_8--[#orange]-|>docker_io_anchore_anchore_engine_v0_7_2
+
+center footer Generated on 2022/05/07 19:46:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for mysql:1.6.9
+
+'There is one referenced Helm Chart
+artifact "mysql:1.6.9\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tmysql\n\t\tdatabase\n\t\tsql" as mysql_1_6_9 #Aqua
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nmysql\n====\n5.7.30" as mysql_5_7_30 #Aqua
+
+'Chart Dependencies
+mysql_1_6_9--[#orange]-|>mysql_5_7_30
+
+center footer Generated on 2022/05/07 20:19:42 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

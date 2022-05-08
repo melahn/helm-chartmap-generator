@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for home-assistant:0.13.2
 
 'There is one referenced Helm Chart
-artifact "home-assistant:0.13.2\n====\n\thome-assistant\n====\n\t0.13.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: billimek, runningman84\n====\n\tKeywords: home-assistant\nhass\nhomeassistant" as home_assistant_0_13_2 #LightSalmon
+artifact "home-assistant:0.13.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tbillimek\n\t\trunningman84\n====\n\tKeywords: \n\t\thome-assistant\n\t\thass\n\t\thomeassistant" as home_assistant_0_13_2 #LightSalmon
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tDocker Hub\n====\n\thomeassistant/home-assistant\n====\n\t0.108.7" as homeassistant_home_assistant_0_108_7 #LightCoral
+usecase "Image\n====\nDocker Hub\n====\nhomeassistant/home-assistant\n====\n0.108.7" as homeassistant_home_assistant_0_108_7 #LightCoral
 
 'Chart Dependencies
 home_assistant_0_13_2--[#orange]-|>homeassistant_home_assistant_0_108_7
 
-center footer Generated on 2020/04/26 13:48:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:05:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

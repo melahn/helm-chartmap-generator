@@ -6,13 +6,6 @@
   ],
   "children": [
     {
-      "repoHost": "docker.io",
-      "children": [],
-      "name": "bitnami/postgresql",
-      "type": "image",
-      "version": "11.3.0-debian-9-r38"
-    },
-    {
       "repoHost": "Docker Hub",
       "children": [],
       "name": "concourse/concourse",
@@ -41,7 +34,7 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/postgresql",
+        "name": "bitnami/postgresql:11.3.0-debian-9-r38",
         "type": "image",
         "version": "11.3.0-debian-9-r38"
       }],

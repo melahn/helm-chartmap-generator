@@ -10,7 +10,7 @@
   "children": [{
     "repoHost": "quay.io",
     "children": [],
-    "name": "games_on_k8s/factorio",
+    "name": "games_on_k8s/factorio:0.15.39",
     "type": "image",
     "version": "0.15.39"
   }],

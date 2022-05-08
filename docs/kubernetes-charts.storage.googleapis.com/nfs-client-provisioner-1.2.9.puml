@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for nfs-client-provisioner:1.2.9
+
+'There is one referenced Helm Chart
+artifact "nfs-client-provisioner:1.2.9\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: verwilst\n====\n\tKeywords: \n\t\tnfs\n\t\tstorage" as nfs_client_provisioner_1_2_9 #Chartreuse
+
+'There is one referenced Docker Image
+usecase "Image\n====\nquay.io\n====\nexternal_storage/nfs-client-provisioner:v3.1.0-k8s1.11\n====\nv3.1.0-k8s1.11" as quay_io_external_storage_nfs_client_provisioner_v3_1_0_k8s1_11 #HotPink
+
+'Chart Dependencies
+nfs_client_provisioner_1_2_9--[#orange]-|>quay_io_external_storage_nfs_client_provisioner_v3_1_0_k8s1_11
+
+center footer Generated on 2022/05/07 20:21:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

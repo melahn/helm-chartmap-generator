@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for gcloud-sqlproxy:0.5.0
+
+'There is one referenced Helm Chart
+artifact "gcloud-sqlproxy:0.5.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: rimusz\n====\n\tKeywords: \n\t\tgoogle\n\t\tcloud\n\t\tpostgresql\n\t\tmysql\n\t\tsql\n\t\tsqlproxy" as gcloud_sqlproxy_0_5_0 #Gainsboro
+
+'There are 0 referenced Docker Images
+
+'Chart Dependencies
+
+center footer Generated on 2022/05/07 20:00:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

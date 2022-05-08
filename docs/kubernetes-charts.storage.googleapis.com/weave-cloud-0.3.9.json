@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "weaveworks/launcher-agent",
+    "type": "image",
+    "version": "1.4.0"
+  }],
+  "name": "weave-cloud:0.3.9",
+  "description": "DEPRECATED - Weave Cloud is a add-on to Kubernetes which provides Continuous Delivery, along with hosted Prometheus Monitoring and a visual dashboard for exploring & debugging microservices\n",
+  "type": "chart",
+  "shortName": "weave-cloud",
+  "version": "0.3.9"
+}

@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for weave-cloud:0.3.8
+
+'There is one referenced Helm Chart
+artifact "weave-cloud:0.3.8\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\terrordeveloper\n\t\tstefanprodan\n====\n\tKeywords: " as weave_cloud_0_3_8 #Cyan
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nweaveworks/launcher-agent\n====\n1.4.0" as weaveworks_launcher_agent_1_4_0 #Chartreuse
+
+'Chart Dependencies
+weave_cloud_0_3_8--[#orange]-|>weaveworks_launcher_agent_1_4_0
+
+center footer Generated on 2022/05/07 20:44:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

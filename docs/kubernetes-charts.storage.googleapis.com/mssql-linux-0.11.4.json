@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "microsoft/mssql-server-linux",
+    "type": "image",
+    "version": "2017-CU5"
+  }],
+  "name": "mssql-linux:0.11.4",
+  "description": "DEPRECATED - SQL Server 2017 Linux Helm Chart",
+  "type": "chart",
+  "shortName": "mssql-linux",
+  "version": "0.11.4"
+}

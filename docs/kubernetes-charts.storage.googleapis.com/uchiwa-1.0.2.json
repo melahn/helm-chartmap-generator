@@ -1,0 +1,68 @@
+{
+  "keywords": [
+    "uchiwa",
+    "sensu",
+    "monitoring"
+  ],
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "sstarcher/uchiwa",
+      "type": "image",
+      "version": "0.22"
+    },
+    {
+      "maintainers": [{
+        "name": "Shane Starcher",
+        "email": "shane.starcher@gmail.com"
+      }],
+      "keywords": [
+        "sensu",
+        "monitoring"
+      ],
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "sstarcher/sensu",
+          "type": "image",
+          "version": "0.28"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "redis",
+            "keyvalue",
+            "database"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "bitnami/redis",
+            "type": "image",
+            "version": "3.2.6-r2"
+          }],
+          "name": "redis:0.4.5",
+          "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+          "type": "chart",
+          "shortName": "redis",
+          "version": "0.4.5"
+        }
+      ],
+      "name": "sensu:0.1.2",
+      "description": "Sensu monitoring framework backed by the Redis transport",
+      "type": "chart",
+      "shortName": "sensu",
+      "version": "0.1.2"
+    }
+  ],
+  "name": "uchiwa:1.0.2",
+  "description": "DEPRECATED Dashboard for the Sensu monitoring framework",
+  "type": "chart",
+  "shortName": "uchiwa",
+  "version": "1.0.2"
+}

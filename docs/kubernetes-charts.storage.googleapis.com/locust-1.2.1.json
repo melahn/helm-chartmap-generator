@@ -1,0 +1,24 @@
+{
+  "maintainers": [
+    {
+      "name": "haugene",
+      "email": "kristian.haugene@greenbird.com"
+    },
+    {
+      "name": "sekka1",
+      "email": "sekka1@managedkube.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "greenbirdit/locust",
+    "type": "image",
+    "version": "0.9.0"
+  }],
+  "name": "locust:1.2.1",
+  "description": "A modern load testing framework",
+  "type": "chart",
+  "shortName": "locust",
+  "version": "1.2.1"
+}

@@ -9,13 +9,13 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for vault-operator:0.1.1
 
 'There is one referenced Helm Chart
-artifact "vault-operator:0.1.1\n====\n\tvault-operator\n====\n\t0.1.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: mlaccetti\n====\n\tKeywords: " as vault_operator_0_1_1 #Azure
+artifact "vault-operator:0.1.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: mlaccetti\n====\n\tKeywords: " as vault_operator_0_1_1 #Azure
 
 'There is one referenced Docker Image
-usecase "Image\n====\n\tquay.io\n====\n\tcoreos/vault-operator:0.1.9\n====\n\t0.1.9" as quay_io_coreos_vault_operator_0_1_9 #LightGray
+usecase "Image\n====\nquay.io\n====\ncoreos/vault-operator:0.1.9\n====\n0.1.9" as quay_io_coreos_vault_operator_0_1_9 #LightGray
 
 'Chart Dependencies
 vault_operator_0_1_1--[#orange]-|>quay_io_coreos_vault_operator_0_1_9
 
-center footer Generated on 2020/04/26 14:02:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:42:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

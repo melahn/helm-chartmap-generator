@@ -9,31 +9,31 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for xray:0.4.1
 
 'There are 4 referenced Helm Charts
-artifact "mongodb:2.0.5\n====\n\tmongodb\n====\n\t2.0.5\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: mongodb\ndatabase\nnosql" as mongodb_2_0_5 #GreenYellow
-artifact "rabbitmq-ha:1.5.2\n====\n\trabbitmq-ha\n====\n\t1.5.2\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: etiennetremel\n====\n\tKeywords: rabbitmq\nmessage queue\nAMQP\nAMQPS\nMQTT\nSTOMP" as rabbitmq_ha_1_5_2 #Chocolate
-artifact "xray:0.4.1\n====\n\txray\n====\n\t0.4.1\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: eldada, jainishshah17, rimusz\n====\n\tKeywords: xray\njfrog" as xray_0_4_1 #AliceBlue
-artifact "postgresql:0.8.7\n====\n\tpostgresql\n====\n\t0.8.7\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: swordbeta, databus23\n====\n\tKeywords: postgresql\npostgres\ndatabase\nsql" as postgresql_0_8_7 #LightSteelBlue
+artifact "mongodb:2.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmongodb\n\t\tdatabase\n\t\tnosql" as mongodb_2_0_5 #GreenYellow
+artifact "rabbitmq-ha:1.5.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: etiennetremel\n====\n\tKeywords: \n\t\trabbitmq\n\t\tmessage queue\n\t\tAMQP\n\t\tAMQPS\n\t\tMQTT\n\t\tSTOMP" as rabbitmq_ha_1_5_2 #Chocolate
+artifact "xray:0.4.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\teldada\n\t\tjainishshah17\n\t\trimusz\n====\n\tKeywords: \n\t\txray\n\t\tjfrog" as xray_0_4_1 #AliceBlue
+artifact "postgresql:0.8.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tswordbeta\n\t\tdatabus23\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql" as postgresql_0_8_7 #LightSteelBlue
 
 'There are 7 referenced Docker Images
-usecase "Image\n====\n\tDocker Hub\n====\n\trabbitmq\n====\n\t3.7-alpine" as rabbitmq_3_7_alpine #Aqua
-usecase "Image\n====\n\tdocker.io\n====\n\tbitnami/mongodb:3.6.3\n====\n\t3.6.3" as docker_io_bitnami_mongodb_3_6_3 #Bisque
-usecase "Image\n====\n\tdocker.bintray.io\n====\n\tjfrog/xray-analysis:2.3.0\n====\n\t2.3.0" as docker_bintray_io_jfrog_xray_analysis_2_3_0 #LightBlue
-usecase "Image\n====\n\tDocker Hub\n====\n\tpostgres\n====\n\t9.6.2" as postgres_9_6_2 #Ivory
-usecase "Image\n====\n\tdocker.bintray.io\n====\n\tjfrog/xray-indexer:2.3.0\n====\n\t2.3.0" as docker_bintray_io_jfrog_xray_indexer_2_3_0 #DodgerBlue
-usecase "Image\n====\n\tdocker.bintray.io\n====\n\tjfrog/xray-persist:2.3.0\n====\n\t2.3.0" as docker_bintray_io_jfrog_xray_persist_2_3_0 #Ivory
-usecase "Image\n====\n\tdocker.bintray.io\n====\n\tjfrog/xray-server:2.3.0\n====\n\t2.3.0" as docker_bintray_io_jfrog_xray_server_2_3_0 #Coral
+usecase "Image\n====\nDocker Hub\n====\nrabbitmq\n====\n3.7-alpine" as rabbitmq_3_7_alpine #Aqua
+usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:3.6.3\n====\n3.6.3" as docker_io_bitnami_mongodb_3_6_3 #Bisque
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/xray-analysis:2.3.0\n====\n2.3.0" as docker_bintray_io_jfrog_xray_analysis_2_3_0 #LightBlue
+usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n9.6.2" as postgres_9_6_2 #Ivory
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/xray-indexer:2.3.0\n====\n2.3.0" as docker_bintray_io_jfrog_xray_indexer_2_3_0 #DodgerBlue
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/xray-persist:2.3.0\n====\n2.3.0" as docker_bintray_io_jfrog_xray_persist_2_3_0 #Ivory
+usecase "Image\n====\ndocker.bintray.io\n====\njfrog/xray-server:2.3.0\n====\n2.3.0" as docker_bintray_io_jfrog_xray_server_2_3_0 #Coral
 
 'Chart Dependencies
-xray_0_4_1--[#green]-|>postgresql_0_8_7
-xray_0_4_1--[#green]-|>mongodb_2_0_5
 xray_0_4_1--[#green]-|>rabbitmq_ha_1_5_2
+xray_0_4_1--[#green]-|>mongodb_2_0_5
+xray_0_4_1--[#green]-|>postgresql_0_8_7
 mongodb_2_0_5--[#orange]-|>docker_io_bitnami_mongodb_3_6_3
 rabbitmq_ha_1_5_2--[#orange]-|>rabbitmq_3_7_alpine
-xray_0_4_1--[#orange]-|>docker_bintray_io_jfrog_xray_server_2_3_0
 xray_0_4_1--[#orange]-|>docker_bintray_io_jfrog_xray_indexer_2_3_0
+xray_0_4_1--[#orange]-|>docker_bintray_io_jfrog_xray_server_2_3_0
 xray_0_4_1--[#orange]-|>docker_bintray_io_jfrog_xray_analysis_2_3_0
 xray_0_4_1--[#orange]-|>docker_bintray_io_jfrog_xray_persist_2_3_0
 postgresql_0_8_7--[#orange]-|>postgres_9_6_2
 
-center footer Generated on 2020/04/26 14:03:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/07 20:44:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

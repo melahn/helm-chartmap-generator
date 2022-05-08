@@ -1,0 +1,34 @@
+{
+  "maintainers": [
+    {
+      "name": "compleatang",
+      "email": "casey@monax.io"
+    },
+    {
+      "name": "gregdhill",
+      "email": "greg.hill@monax.io"
+    }
+  ],
+  "keywords": [
+    "s3",
+    "aws",
+    "gcp",
+    "azure",
+    "ipfs",
+    "envelope encryption",
+    "content addressable",
+    "distributed file storage"
+  ],
+  "children": [{
+    "repoHost": "quay.io",
+    "children": [],
+    "name": "monax/hoard:6.0.0",
+    "type": "image",
+    "version": "6.0.0"
+  }],
+  "name": "hoard:1.0.1",
+  "description": "Hoard is a stateless, deterministically encrypted, content-addressed object store",
+  "type": "chart",
+  "shortName": "hoard",
+  "version": "1.0.1"
+}

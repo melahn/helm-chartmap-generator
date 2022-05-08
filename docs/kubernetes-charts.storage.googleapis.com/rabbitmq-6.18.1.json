@@ -17,7 +17,7 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/rabbitmq",
+    "name": "bitnami/rabbitmq:3.8.2-debian-10-r30",
     "type": "image",
     "version": "3.8.2-debian-10-r30"
   }],

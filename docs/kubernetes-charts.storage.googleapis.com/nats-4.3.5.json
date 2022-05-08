@@ -12,7 +12,7 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/nats",
+    "name": "bitnami/nats:2.1.4-debian-10-r24",
     "type": "image",
     "version": "2.1.4-debian-10-r24"
   }],

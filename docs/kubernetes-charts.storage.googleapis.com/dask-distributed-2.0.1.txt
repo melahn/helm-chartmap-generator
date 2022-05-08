@@ -12,7 +12,7 @@ Chart: dask-distributed:2.0.1
 	icon: https://avatars3.githubusercontent.com/u/17131925?v=3&s=200
 	keywords: Not specified
 	maintainers: Not specified
-	repo url: https://kubernetes-charts.storage.googleapis.com
+	repo url: https://charts.helm.sh/stable
 	name: dask-distributed
 	sources: https://github.com/dask/distributed
 	urls: Not specified
@@ -28,4 +28,4 @@ Chart Dependencies
 dask-distributed:2.0.1 uses daskdev/dask:latest
 dask-distributed:2.0.1 uses jupyter/base-notebook:11be019e4079
 
-Generated on 2020/04/26 13:43:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/07 19:53:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

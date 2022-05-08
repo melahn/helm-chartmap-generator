@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for luigi:2.7.6
+
+'There are 2 referenced Helm Charts
+artifact "mysql:0.3.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Vic Iglesias\n====\n\tKeywords: \n\t\tmysql\n\t\tdatabase\n\t\tsql" as mysql_0_3_4 #Aqua
+artifact "luigi:2.7.6\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: sammerry\n====\n\tKeywords: \n\t\tluigi\n\t\tscheduler\n\t\tdependency graph\n\t\tweb\n\t\ttask management\n\t\thadoop\n\t\tspark\n\t\tkubernetes job manager" as luigi_2_7_6 #Aqua
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\naxiom/docker-luigi\n====\n2.7.2-alpine" as axiom_docker_luigi_2_7_2_alpine #LightCoral
+usecase "Image\n====\nDocker Hub\n====\nmysql\n====\n5.7.14" as mysql_5_7_14 #Aqua
+
+'Chart Dependencies
+luigi_2_7_6--[#green]-|>mysql_0_3_4
+mysql_0_3_4--[#orange]-|>mysql_5_7_14
+luigi_2_7_6--[#orange]-|>axiom_docker_luigi_2_7_2_alpine
+
+center footer Generated on 2022/05/07 20:15:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

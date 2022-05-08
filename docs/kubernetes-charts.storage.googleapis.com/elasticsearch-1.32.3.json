@@ -28,7 +28,7 @@
   "children": [{
     "repoHost": "docker.elastic.co",
     "children": [],
-    "name": "elasticsearch/elasticsearch-oss",
+    "name": "elasticsearch/elasticsearch-oss:6.8.6",
     "type": "image",
     "version": "6.8.6"
   }],

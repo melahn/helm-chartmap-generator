@@ -1,0 +1,14 @@
+{
+  "keywords": [
+    "node",
+    "problem",
+    "detector",
+    "monitoring"
+  ],
+  "children": [],
+  "name": "node-problem-detector:1.8.3",
+  "description": "DEPRECATED - Installs the node-problem-detector daemonset for monitoring extra attributes on nodes",
+  "type": "chart",
+  "shortName": "node-problem-detector",
+  "version": "1.8.3"
+}

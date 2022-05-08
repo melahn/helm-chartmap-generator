@@ -13,14 +13,14 @@
     {
       "repoHost": "gcr.io",
       "children": [],
-      "name": "google_containers/defaultbackend",
+      "name": "google_containers/defaultbackend:1.0",
       "type": "image",
       "version": "1.0"
     },
     {
       "repoHost": "gcr.io",
       "children": [],
-      "name": "google_containers/nginx-ingress-controller",
+      "name": "google_containers/nginx-ingress-controller:0.8.3",
       "type": "image",
       "version": "0.8.3"
     }
