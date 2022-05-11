@@ -223,7 +223,7 @@ class ChartMapGeneratorTest {
         ChartMapGenerator scmg1 = spy(cmg1);
         doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString());
         scmg1.generate();
-        assertTrue(fileContains(Paths.get(testDirectoryName, INDEX_FILENAME), "Here is a list of the charts with errors (consult the output log to see the specific error messages)"));
+        assertTrue(fileContains(Paths.get(testDirectoryName, INDEX_FILENAME), "Here is a list of the charts with errors"));
         System.out.println("A list of charts with errors is found, as expected");
         // test getDetails without a simulated bad chart
         testDirectoryName = createTestDir(m, getTestVariation());

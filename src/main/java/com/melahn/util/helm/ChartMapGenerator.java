@@ -28,13 +28,12 @@ import org.apache.commons.cli.ParseException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 public class ChartMapGenerator {
 
     private int chartCount = 0;
     private int chartCountBad = 0;
     private int chartCountGood = 0;
-    private String chartMapGeneratorVerbose = "CHARTMAP_GENERATOR_VERBOSE";
+    private String chartMapGeneratorVerbose = "VERBOSE";
     private ArrayList<String> chartsWithErrors = new ArrayList<>();
     private String envFilename = null;
     private HashSet<String> extensions = new HashSet<>();
@@ -45,14 +44,17 @@ public class ChartMapGenerator {
     private String localRepoName = null;
     private Level logLevelVerbose;
     private Logger logger;
-    private int maxVersions = 0;
+
+    private int maxVersions = 1;
     private String outputDirName = System.getProperty("user.dir");
     private boolean verbose = false;
     private String writeBuffer = "";
 
+    protected static final String CHARTMAP_LOG_FILE_NAME = "helm-chartmap.log";
     protected static final String INTERRUPTED_EXCEPTION = "InterruptedException {} running command %s : %s";
     protected static final int PROCESS_TIMEOUT = 100000;
        
+    private static final String CHARTMAP_GENERATOR_LOGGER_NAME = "helm-chartmap-generator-logger";
     private static final boolean CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE = true;
     private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH_FALSE = false;
     private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH_TRUE = true;
@@ -124,14 +126,18 @@ public class ChartMapGenerator {
      /**
      * Default constructor.
      * 
-     * Just sets the helm environment and logger.
+     * Sets the helm environment and logger.
+     * 
+     * The logger that is used is different from the one used by ChartMap because by default
+     * I want to log all the messages from ChartMap to a file so they can be viewed, if needed,
+     * by the user from a link in the generated web page, whereas the ChartMapGenerator messages
+     * are written, by default, to the console only. This is all configurable of course using 
+     * the log4j2 configuration.
      * 
      * @throws ChartMapGeneratorException should an error occurs setting the helm environment.
      */
     private ChartMapGenerator() throws ChartMapGeneratorException {
-        String t = String.valueOf(System.currentTimeMillis());
-        chartMapGeneratorVerbose = chartMapGeneratorVerbose.concat(t);
-        logger = LogManager.getLogger(t);
+        logger = LogManager.getLogger(CHARTMAP_GENERATOR_LOGGER_NAME);
         setHelmEnvironment();
     }
 
@@ -182,6 +188,7 @@ public class ChartMapGenerator {
             logger.log(logLevelVerbose, "Local helm chart repo \"{}\"", localRepoName);
             logger.log(logLevelVerbose, "Format string \"{}\"", formatString);
             logger.log(logLevelVerbose, "Files will be written to directory \"{}\".", outputDirName);
+            logger.log(logLevelVerbose, "Errors reporred from ChartMap will be logged in the file \"{}\".", CHARTMAP_LOG_FILE_NAME);
             if (maxVersions == 1) {
                 logger.log(logLevelVerbose, "Only one version of each chart will be printed.");
             }
@@ -313,6 +320,7 @@ public class ChartMapGenerator {
                 cm.print();
                 logger.info("Chart {} printed successfully with the refresh option", h.getNameFull());
             } catch (ChartMapException e2) {
+                logger.info("Chart {} failed to print even with the refresh option", h.getNameFull());
                 throw new ChartMapGeneratorException(e2.getMessage());
             }
         }
@@ -456,7 +464,7 @@ public class ChartMapGenerator {
                     .concat(String.format("<p>Total charts processed: %s</p>%n%n", chartCount));
             if (chartCountBad > 0) {
                 s = s.concat(
-                        "<p>Here is a list of the charts with errors (consult the output log to see the specific error messages)</p>\n\t<ul>\n");
+                        "<p>Here is a list of the charts with errors. Consult the <a href=\"./helm-chartmap.log\">output log</a> to see the error messages logged by ChartMap.</p>\n\t<ul>\n");
                 for (String c : chartsWithErrors) {
                     s = s.concat("\t\t<li class=\"charterror\">");
                     s = s.concat(c).concat(LI_END);
@@ -666,6 +674,8 @@ public class ChartMapGenerator {
      * in different tests.
      */
     protected void setVerboseLogLevel() {
+        String t = String.valueOf(System.currentTimeMillis());
+        chartMapGeneratorVerbose = chartMapGeneratorVerbose.concat(t);
         if (isVerbose()) {
             logLevelVerbose = Level.forName(chartMapGeneratorVerbose, 350); // higher priority than INFO
         } else {

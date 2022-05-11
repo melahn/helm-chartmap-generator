@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration name="chartmap-generator">
+<Configuration name=" com.melahn.util.helm">
   <Appenders>
     <!-- 'follow' is set to allow System.setOut to capture output for junit test cases -->
     <Console name="Console" target="SYSTEM_OUT" follow="true">
         <PatternLayout pattern="%msg%n"/>
     </Console>
+    <File name="File" fileName="helm-chartmap.log">
+      <PatternLayout>
+          <pattern>%d{DATE} %-7p %m%n</pattern>
+      </PatternLayout>
+    </File>
   </Appenders>
-  <Loggers> 
-    <Root level="info">
-        <AppenderRef ref="Console"/>
-      </Root>
+  <Loggers>
+    <logger name="helm-chartmap-generator-logger" level="INFO" additivity="false">
+      <appender-ref ref="Console" />
+    </logger>
+    <root level="INFO">
+        <appender-ref ref="File" />
+    </root>
   </Loggers>
 </Configuration>
