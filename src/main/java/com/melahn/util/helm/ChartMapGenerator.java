@@ -350,7 +350,7 @@ public class ChartMapGenerator {
      */
     protected void createIndex() throws ChartMapGeneratorException {
         indexFilename = outputDirName.concat("/index.html");
-        String h = "<!DOCTYPE HTML>\n<html>\n";
+        String h = "<!DOCTYPE HTML>\n<html lang=\"en\">\n";
         try {
             Files.write(Paths.get(indexFilename),
                     h.getBytes(),
