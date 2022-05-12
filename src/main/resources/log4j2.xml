@@ -5,7 +5,7 @@
     <Console name="Console" target="SYSTEM_OUT" follow="true">
         <PatternLayout pattern="%msg%n"/>
     </Console>
-    <File name="File" fileName="helm-chartmap.log">
+    <File name="File" fileName="${sys:chartmap-generator-log-filename:-helm-chartmap.log}">
       <PatternLayout>
           <pattern>%d{DATE} %-7p %m%n</pattern>
       </PatternLayout>

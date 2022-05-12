@@ -42,19 +42,20 @@ public class ChartMapGenerator {
     private String helmRepositoryCachePath;
     private String indexFilename = null;
     private String localRepoName = null;
+    private String logFileName = CHARTMAP_LOG_NAME;
     private Level logLevelVerbose;
-    private Logger logger;
+    private Logger logger = null;
 
     private int maxVersions = 1;
     private String outputDirName = System.getProperty("user.dir");
     private boolean verbose = false;
     private String writeBuffer = "";
 
-    protected static final String CHARTMAP_LOG_FILE_NAME = "helm-chartmap.log";
     protected static final String INTERRUPTED_EXCEPTION = "InterruptedException {} running command %s : %s";
     protected static final int PROCESS_TIMEOUT = 100000;
        
     private static final String CHARTMAP_GENERATOR_LOGGER_NAME = "helm-chartmap-generator-logger";
+    private static final String CHARTMAP_LOG_NAME = "helm-chartmap.log";
     private static final boolean CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE = true;
     private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH_FALSE = false;
     private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH_TRUE = true;
@@ -71,10 +72,13 @@ public class ChartMapGenerator {
     public static void main(String[] arg) throws ChartMapGeneratorException {
         ChartMapGenerator generator = new ChartMapGenerator();
         try {
-            if (generator.parseArgs(arg)) {
+            if (generator.prepare(arg)) {
                 generator.generate();
             }
         } catch (ChartMapGeneratorException e) {
+            if (generator.logger == null) {
+                generator.prepareLogger();
+            }
             generator.logger.info("ChartMapGeneratorException: {} ", e.getMessage());
         }
     }
@@ -120,34 +124,25 @@ public class ChartMapGenerator {
         if (verbose) {
             args.add("-v");
         }        
-        parseArgs(args.toArray(new String[args.size()]));
+        prepare(args.toArray(new String[args.size()]));
     }
 
      /**
      * Default constructor.
      * 
-     * Sets the helm environment and logger.
-     * 
-     * The logger that is used is different from the one used by ChartMap because by default
-     * I want to log all the messages from ChartMap to a file so they can be viewed, if needed,
-     * by the user from a link in the generated web page, whereas the ChartMapGenerator messages
-     * are written, by default, to the console only. This is all configurable of course using 
-     * the log4j2 configuration.
-     * 
-     * @throws ChartMapGeneratorException should an error occurs setting the helm environment.
      */
-    private ChartMapGenerator() throws ChartMapGeneratorException {
-        logger = LogManager.getLogger(CHARTMAP_GENERATOR_LOGGER_NAME);
-        setHelmEnvironment();
+    private ChartMapGenerator() {
+        // do nothing
     }
 
     /**
-     * Parses the command line
+     * Parses the command line, prepares the logger, sets the log level, sets
+     * the helm environment and prints some introductory details.
      *
      * @param a The command line args
-     * @return false if a parse error occurs or help is reqquested, true otherwise
+     * @return false if a parse error occurs or help is requested, true otherwise
      */
-    private boolean parseArgs(String[] a) throws ChartMapGeneratorException {
+    private boolean prepare(String[] a) throws ChartMapGeneratorException {
         Options options = new Options();
         options.addOption("h", false, "Help");
         options.addOption("o", true, "The Output Directory name");
@@ -177,30 +172,61 @@ public class ChartMapGenerator {
             if (cmd.hasOption("e")) {
                 envFilename = cmd.getOptionValue("e");
             } 
+            parseFormatString();
+            prepareLogger();
             if (a.length == 0
-                    || cmd.hasOption("h")
-                    || localRepoName == null) {
+            || cmd.hasOption("h")
+            || localRepoName == null) {
                 logger.info(ChartMapGenerator.getHelp());
                 return false;
             }
-            parseFormatString();
             setVerboseLogLevel();
-            logger.log(logLevelVerbose, "Local helm chart repo \"{}\"", localRepoName);
-            logger.log(logLevelVerbose, "Format string \"{}\"", formatString);
-            logger.log(logLevelVerbose, "Files will be written to directory \"{}\".", outputDirName);
-            logger.log(logLevelVerbose, "Errors reporred from ChartMap will be logged in the file \"{}\".", CHARTMAP_LOG_FILE_NAME);
-            if (maxVersions == 1) {
-                logger.log(logLevelVerbose, "Only one version of each chart will be printed.");
-            }
-            else {
-                logger.log(logLevelVerbose, "A maximum of {} versions of each chart will be printed.", maxVersions);
-            }
-            if (envFilename != null) {
-                logger.log(logLevelVerbose, "Environment file \"{}\"", envFilename);
-            }
+            setHelmEnvironment();
+            printIntroduction();
             return true;
         } catch (ParseException e) {
             throw (new ChartMapGeneratorException(e.getMessage()));
+        }
+    }
+
+    /**
+     * Prepares the logger by setting the output log filename.
+     * 
+     * The logger that is used is different from the one used by ChartMap because by default
+     * I want to log all the messages from ChartMap to a file so they can be viewed, if needed,
+     * by the user from a link in the generated web page, whereas the ChartMapGenerator messages
+     * are written, by default, to the console only. This is all configurable of course using 
+     * the log4j2 configuration.
+     * 
+     */
+
+     private void prepareLogger() {
+        String u = System.getProperty("user.dir");
+        logFileName = CHARTMAP_LOG_NAME;
+        if (!outputDirName.equals(u)) {
+            logFileName = outputDirName.concat("/").concat(CHARTMAP_LOG_NAME);
+        }
+        System.setProperty("chartmap-generator-log-filename", logFileName);
+        logger = LogManager.getLogger(CHARTMAP_GENERATOR_LOGGER_NAME);
+     }
+
+    /**
+     * Prints some details about the helm charts that will be printed.
+     * 
+     */
+    private void printIntroduction () {
+        logger.log(logLevelVerbose, "Local helm chart repo \"{}\"", localRepoName);
+        logger.log(logLevelVerbose, "Format string \"{}\"", formatString);
+        logger.log(logLevelVerbose, "Files will be written to directory \"{}\".", outputDirName);
+        logger.log(logLevelVerbose, "Errors reported from ChartMap will be logged in the file \"{}\".", logFileName);
+        if (maxVersions == 1) {
+            logger.log(logLevelVerbose, "Only one version of each chart will be printed.");
+        }
+        else {
+            logger.log(logLevelVerbose, "A maximum of {} versions of each chart will be printed.", maxVersions);
+        }
+        if (envFilename != null) {
+            logger.log(logLevelVerbose, "Environment file \"{}\"", envFilename);
         }
     }
 
@@ -309,7 +335,7 @@ public class ChartMapGenerator {
             cm.print();
         } catch (ChartMapException e1) {
             try {
-                logger.info("Chart {} failed to print. Retrying with the refresh option", h.getNameFull());
+                logger.info("Chart {} failed to print the {} format. Retrying with the refresh option", e, h.getNameFull());
                 cm = getChartMap(
                         ChartOption.CHARTNAME,
                         h.getNameFull(),
@@ -318,7 +344,7 @@ public class ChartMapGenerator {
                         new boolean[] { CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE, CHARTMAP_REFRESH_REPOS_SWITCH_TRUE,
                                 CHARTMAP_VERBOSE_SWITCH_FALSE });
                 cm.print();
-                logger.info("Chart {} printed successfully with the refresh option", h.getNameFull());
+                logger.info("Chart {} printed the {} format successfully with the refresh option", e, h.getNameFull());
             } catch (ChartMapException e2) {
                 logger.info("Chart {} failed to print even with the refresh option", h.getNameFull());
                 throw new ChartMapGeneratorException(e2.getMessage());
