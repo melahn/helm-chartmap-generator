@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-api-gateway:0.1.0 uses alfresco/alfresco-api-gateway:latest
 
-Generated on 2022/05/07 09:46:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/12 16:24:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

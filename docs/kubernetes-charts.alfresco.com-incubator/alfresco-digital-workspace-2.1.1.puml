@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\nalfresco/alfresco-digital-workspace:1.3.0-b
 'Chart Dependencies
 alfresco_digital_workspace_2_1_1--[#orange]-|>quay_io_alfresco_alfresco_digital_workspace_1_3_0_beta
 
-center footer Generated on 2022/05/07 09:51:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/12 16:30:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

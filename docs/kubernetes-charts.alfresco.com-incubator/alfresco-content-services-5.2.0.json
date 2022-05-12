@@ -35,13 +35,6 @@
       "version": "2.5.7"
     },
     {
-      "repoHost": "quay.io",
-      "children": [],
-      "name": "alfresco/alfresco-shared-file-store:0.16.1",
-      "type": "image",
-      "version": "0.16.1"
-    },
-    {
       "repoHost": "Docker Hub",
       "children": [],
       "name": "alfresco/alfresco-libreoffice",
@@ -58,9 +51,9 @@
     {
       "repoHost": "quay.io",
       "children": [],
-      "name": "alfresco/alfresco-transform-router:1.5.2",
+      "name": "alfresco/alfresco-shared-file-store:0.16.1",
       "type": "image",
-      "version": "1.5.2"
+      "version": "0.16.1"
     },
     {
       "repoHost": "Docker Hub",
@@ -70,23 +63,11 @@
       "version": "2.5.7"
     },
     {
-      "keywords": [
-        "syncservice",
-        "alfresco",
-        "application"
-      ],
-      "children": [{
-        "repoHost": "quay.io",
-        "children": [],
-        "name": "alfresco/service-sync:3.6.0",
-        "type": "image",
-        "version": "3.6.0"
-      }],
-      "name": "alfresco-sync-service:3.0.9",
-      "description": "Alfresco Sync Service",
-      "type": "chart",
-      "shortName": "alfresco-sync-service",
-      "version": "3.0.9"
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "alfresco/alfresco-transform-router:1.5.2",
+      "type": "image",
+      "version": "1.5.2"
     },
     {
       "maintainers": [
@@ -142,14 +123,6 @@
       "version": "10.16.2"
     },
     {
-      "children": [],
-      "name": "common:7.2.0",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.2.0"
-    },
-    {
       "keywords": [
         "activemq",
         "message broker"
@@ -166,6 +139,33 @@
       "type": "chart",
       "shortName": "activemq",
       "version": "2.1.0"
+    },
+    {
+      "children": [],
+      "name": "common:7.2.0",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.2.0"
+    },
+    {
+      "keywords": [
+        "syncservice",
+        "alfresco",
+        "application"
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "alfresco/service-sync:3.6.0",
+        "type": "image",
+        "version": "3.6.0"
+      }],
+      "name": "alfresco-sync-service:3.0.9",
+      "description": "Alfresco Sync Service",
+      "type": "chart",
+      "shortName": "alfresco-sync-service",
+      "version": "3.0.9"
     },
     {
       "keywords": [

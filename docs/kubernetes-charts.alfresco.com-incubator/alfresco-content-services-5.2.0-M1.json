@@ -35,13 +35,6 @@
       "version": "2.5.3"
     },
     {
-      "repoHost": "Docker Hub",
-      "children": [],
-      "name": "alfresco/alfresco-imagemagick",
-      "type": "image",
-      "version": "2.5.3"
-    },
-    {
       "repoHost": "quay.io",
       "children": [],
       "name": "alfresco/alfresco-shared-file-store:0.16.0",
@@ -51,14 +44,14 @@
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-libreoffice",
+      "name": "alfresco/alfresco-imagemagick",
       "type": "image",
       "version": "2.5.3"
     },
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-pdf-renderer",
+      "name": "alfresco/alfresco-libreoffice",
       "type": "image",
       "version": "2.5.3"
     },
@@ -70,30 +63,31 @@
       "version": "7.2.0-M1"
     },
     {
-      "keywords": [
-        "activemq",
-        "message broker"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "alfresco/alfresco-activemq",
-        "type": "image",
-        "version": "5.16.1"
-      }],
-      "name": "activemq:2.0.0",
-      "description": "A Helm chart Providing Apache ActiveMQ.",
-      "type": "chart",
-      "shortName": "activemq",
-      "version": "2.0.0"
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-pdf-renderer",
+      "type": "image",
+      "version": "2.5.3"
     },
     {
-      "children": [],
-      "name": "common:7.1.0-M16",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
+      "keywords": [
+        "syncservice",
+        "alfresco",
+        "application"
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "alfresco/service-sync:3.5.0-M1",
+        "type": "image",
+        "version": "3.5.0-M1"
+      }],
+      "name": "alfresco-sync-service:3.0.9",
+      "description": "Alfresco Sync Service",
       "type": "chart",
-      "shortName": "common",
-      "version": "7.1.0-M16"
+      "shortName": "alfresco-sync-service",
+      "version": "3.0.9"
     },
     {
       "keywords": [
@@ -140,24 +134,30 @@
       "version": "1.0.4"
     },
     {
-      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
       "keywords": [
-        "syncservice",
-        "alfresco",
-        "application"
+        "activemq",
+        "message broker"
       ],
       "children": [{
-        "repoHost": "quay.io",
+        "repoHost": "Docker Hub",
         "children": [],
-        "name": "alfresco/service-sync:3.5.0-M1",
+        "name": "alfresco/alfresco-activemq",
         "type": "image",
-        "version": "3.5.0-M1"
+        "version": "5.16.1"
       }],
-      "name": "alfresco-sync-service:3.0.9",
-      "description": "Alfresco Sync Service",
+      "name": "activemq:2.0.0",
+      "description": "A Helm chart Providing Apache ActiveMQ.",
       "type": "chart",
-      "shortName": "alfresco-sync-service",
-      "version": "3.0.9"
+      "shortName": "activemq",
+      "version": "2.0.0"
+    },
+    {
+      "children": [],
+      "name": "common:7.1.0-M16",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.1.0-M16"
     },
     {
       "maintainers": [

@@ -80,22 +80,38 @@
       "version": "2.0.1"
     },
     {
+      "maintainers": [{"name": "Alfresco"}],
       "keywords": [
-        "activemq",
-        "message broker"
+        "alfresco",
+        "events",
+        "gateway"
       ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "alfresco/alfresco-activemq",
-        "type": "image",
-        "version": "5.15.8-java-8-oracle-centos-7-87b15e37ce8b"
-      }],
-      "name": "activemq:1.1.1",
-      "description": "A Helm chart Providing Apache ActiveMQ.",
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "alfresco/alfresco-event-gateway",
+          "type": "image",
+          "version": "0.3-SNAPSHOT"
+        },
+        {
+          "keywords": [
+            "activemq",
+            "message broker"
+          ],
+          "children": [],
+          "name": "activemq:1.1.1",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "1.1.1"
+        }
+      ],
+      "name": "alfresco-event-gateway:0.1.2",
+      "description": "Alfresco Event Gateway",
       "type": "chart",
-      "shortName": "activemq",
-      "version": "1.1.1"
+      "shortName": "alfresco-event-gateway",
+      "version": "0.1.2"
     },
     {
       "maintainers": [
@@ -139,38 +155,22 @@
       "version": "0.14.0"
     },
     {
-      "maintainers": [{"name": "Alfresco"}],
       "keywords": [
-        "alfresco",
-        "events",
-        "gateway"
+        "activemq",
+        "message broker"
       ],
-      "children": [
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "alfresco/alfresco-event-gateway",
-          "type": "image",
-          "version": "0.3-SNAPSHOT"
-        },
-        {
-          "keywords": [
-            "activemq",
-            "message broker"
-          ],
-          "children": [],
-          "name": "activemq:1.1.1",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
-          "version": "1.1.1"
-        }
-      ],
-      "name": "alfresco-event-gateway:0.1.2",
-      "description": "Alfresco Event Gateway",
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "alfresco/alfresco-activemq",
+        "type": "image",
+        "version": "5.15.8-java-8-oracle-centos-7-87b15e37ce8b"
+      }],
+      "name": "activemq:1.1.1",
+      "description": "A Helm chart Providing Apache ActiveMQ.",
       "type": "chart",
-      "shortName": "alfresco-event-gateway",
-      "version": "0.1.2"
+      "shortName": "activemq",
+      "version": "1.1.1"
     }
   ],
   "name": "alfresco-infrastructure:5.2.1",

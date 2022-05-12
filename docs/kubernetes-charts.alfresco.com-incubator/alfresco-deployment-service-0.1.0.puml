@@ -23,5 +23,5 @@ postgresql_0_11_0--[#orange]-|>postgres_11_4
 alfresco_deployment_service_0_1_0--[#orange]-|>docker_18_06_1_dind
 alfresco_deployment_service_0_1_0--[#orange]-|>quay_io_alfresco_alfresco_deployment_service_latest
 
-center footer Generated on 2022/05/07 09:51:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/12 16:30:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

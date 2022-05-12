@@ -42,4 +42,4 @@ Chart Dependencies
 alfresco-adf-app:7.1.0-M11 depends on common:7.1.0-M10
 alfresco-adf-app:7.1.0-M11 uses quay.io/alfresco/alfresco-adf-app:latest
 
-Generated on 2022/05/07 09:46:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/12 16:24:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
