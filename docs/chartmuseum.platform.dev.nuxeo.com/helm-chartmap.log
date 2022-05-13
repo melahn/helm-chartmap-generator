@@ -1,214 +1,49 @@
-12 May 2022 06:33:32,310 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.11510513616508425558/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:33:32,437 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.txt generated
-12 May 2022 06:33:34,082 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.6190858782076048899/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:33:34,212 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.txt generated
-12 May 2022 06:35:17,519 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.12577257782797900518/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:35:17,647 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.txt generated
-12 May 2022 06:35:19,254 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.14943099337509080979/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:35:19,325 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.txt generated
-12 May 2022 06:35:20,765 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.15586292869314223906/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:35:20,826 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.txt generated
-12 May 2022 06:35:22,190 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.2593222700760139482/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:35:22,302 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.txt generated
-12 May 2022 06:35:23,819 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.14700517753697992771/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:35:23,952 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.txt generated
-12 May 2022 06:35:25,369 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.5624107573576591791/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:35:25,489 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.txt generated
-12 May 2022 06:35:26,829 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.5988265606603666574/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:35:26,879 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.txt generated
-12 May 2022 06:36:13,529 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.5085146056973358326/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:13,655 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.txt generated
-12 May 2022 06:36:15,350 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.13436779934258686843/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:15,426 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.json generated
-12 May 2022 06:36:16,908 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.9607883630848596064/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:16,972 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.puml generated
-12 May 2022 06:36:18,735 INFO    Image file nuxeo-4.0-PR-45-3.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.puml
-12 May 2022 06:36:20,147 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.11175505853685996456/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:20,206 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.txt generated
-12 May 2022 06:36:21,614 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.8755219057020805365/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:21,673 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.json generated
-12 May 2022 06:36:23,031 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.11861017579939380476/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:23,085 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.puml generated
-12 May 2022 06:36:23,189 INFO    Image file nuxeo-3.0.9.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.puml
-12 May 2022 06:36:24,561 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.4901394833774665962/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:24,616 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.txt generated
-12 May 2022 06:36:26,025 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.8417804737351707879/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:26,079 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.json generated
-12 May 2022 06:36:27,553 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.15526713320199889300/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:27,609 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.puml generated
-12 May 2022 06:36:27,688 INFO    Image file nuxeo-3.0.8.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.puml
-12 May 2022 06:36:29,119 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.12130614958990662970/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:29,225 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.txt generated
-12 May 2022 06:36:30,715 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.4844270133202569612/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:30,822 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.json generated
-12 May 2022 06:36:32,231 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.6809668805857623731/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:32,331 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.puml generated
-12 May 2022 06:36:32,407 INFO    Image file nuxeo-mongodb-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.puml
-12 May 2022 06:36:33,852 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.7548352966153499830/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:33,968 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.txt generated
-12 May 2022 06:36:35,426 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.12204367097285295314/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:35,534 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.json generated
-12 May 2022 06:36:37,008 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.9279140381125109540/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:37,116 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.puml generated
-12 May 2022 06:36:37,183 INFO    Image file nuxeo-postgresql-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.puml
-12 May 2022 06:36:38,650 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.17096796139788979194/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:38,769 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.txt generated
-12 May 2022 06:36:40,226 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.10759814269320845409/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:40,349 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.json generated
-12 May 2022 06:36:41,855 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.6568814059478563949/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:41,968 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.puml generated
-12 May 2022 06:36:42,043 INFO    Image file nuxeo-redis-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.puml
-12 May 2022 06:36:43,443 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.5259946571788591798/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:43,491 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.txt generated
-12 May 2022 06:36:44,892 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.17619154667308506948/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:44,963 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.json generated
-12 May 2022 06:36:46,389 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.11284011404450255518/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:36:46,442 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.puml generated
-12 May 2022 06:36:46,520 INFO    Image file nuxeo-web-ui-0.0.1.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.puml
-12 May 2022 06:42:32,205 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.15012417055560588167/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:32,317 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.txt generated
-12 May 2022 06:42:33,957 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.8106752897779515404/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:34,026 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.json generated
-12 May 2022 06:42:35,448 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.9807019745490315214/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:35,508 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.puml generated
-12 May 2022 06:42:36,495 INFO    Image file nuxeo-4.0-PR-45-3.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.puml
-12 May 2022 06:42:37,863 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.12387892104777077393/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:37,931 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.txt generated
-12 May 2022 06:42:39,379 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.4478327962037293619/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:39,435 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.json generated
-12 May 2022 06:42:40,777 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.13389096702965097505/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:40,832 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.puml generated
-12 May 2022 06:42:40,920 INFO    Image file nuxeo-3.0.9.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.puml
-12 May 2022 06:42:42,257 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.2679846980467311777/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:42,316 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.txt generated
-12 May 2022 06:42:43,673 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.3420467365976691547/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:43,727 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.json generated
-12 May 2022 06:42:45,090 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.4785944354035146936/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:45,144 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.puml generated
-12 May 2022 06:42:45,221 INFO    Image file nuxeo-3.0.8.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.puml
-12 May 2022 06:42:46,624 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.12316239266678510380/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:46,739 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.txt generated
-12 May 2022 06:42:48,112 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.10938762526702455586/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:48,215 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.json generated
-12 May 2022 06:42:49,613 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.2473290559783269499/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:49,726 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.puml generated
-12 May 2022 06:42:49,814 INFO    Image file nuxeo-mongodb-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.puml
-12 May 2022 06:42:51,199 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.10761328423288069700/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:51,312 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.txt generated
-12 May 2022 06:42:52,666 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.9943121440111965689/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:52,781 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.json generated
-12 May 2022 06:42:54,128 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.7536074893511287706/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:54,245 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.puml generated
-12 May 2022 06:42:54,321 INFO    Image file nuxeo-postgresql-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.puml
-12 May 2022 06:42:55,694 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.2668451597576764048/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:55,826 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.txt generated
-12 May 2022 06:42:57,156 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.17521827412790227976/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:57,288 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.json generated
-12 May 2022 06:42:58,653 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.11407225692464320178/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:42:58,764 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.puml generated
-12 May 2022 06:42:58,838 INFO    Image file nuxeo-redis-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.puml
-12 May 2022 06:43:00,157 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.4552230868498269810/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:43:00,207 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.txt generated
-12 May 2022 06:43:01,541 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.14574425222720380654/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:43:01,588 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.json generated
-12 May 2022 06:43:02,842 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.15534048430381035362/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:43:02,892 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.puml generated
-12 May 2022 06:43:02,952 INFO    Image file nuxeo-web-ui-0.0.1.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.puml
-12 May 2022 06:52:26,803 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.16001295171190190846/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:26,923 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.txt generated
-12 May 2022 06:52:28,521 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.1853954810374104082/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:28,593 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.json generated
-12 May 2022 06:52:30,026 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.13999928295959851133/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:30,093 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.puml generated
-12 May 2022 06:52:31,120 INFO    Image file nuxeo-4.0-PR-45-3.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.puml
-12 May 2022 06:52:32,532 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.11758570589031681714/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:32,594 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.txt generated
-12 May 2022 06:52:34,054 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.12674714560321170770/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:34,115 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.json generated
-12 May 2022 06:52:35,477 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.14153455795746162436/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:35,531 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.puml generated
-12 May 2022 06:52:35,625 INFO    Image file nuxeo-3.0.9.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.puml
-12 May 2022 06:52:36,997 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.3104829664858936231/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:37,060 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.txt generated
-12 May 2022 06:52:38,458 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.7280627137649203566/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:38,512 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.json generated
-12 May 2022 06:52:39,848 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.18285762907964463543/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:39,901 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.puml generated
-12 May 2022 06:52:39,981 INFO    Image file nuxeo-3.0.8.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.puml
-12 May 2022 06:52:41,427 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.6246741523740868108/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:41,531 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.txt generated
-12 May 2022 06:52:42,939 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.6538075311905952125/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:43,075 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.json generated
-12 May 2022 06:52:44,431 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.17427065307045255046/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:44,534 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.puml generated
-12 May 2022 06:52:44,617 INFO    Image file nuxeo-mongodb-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.puml
-12 May 2022 06:52:46,017 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.13376127321847074418/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:46,134 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.txt generated
-12 May 2022 06:52:47,478 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.1780124242306017414/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:47,593 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.json generated
-12 May 2022 06:52:48,985 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.8173879226951738257/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:49,093 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.puml generated
-12 May 2022 06:52:49,168 INFO    Image file nuxeo-postgresql-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.puml
-12 May 2022 06:52:50,535 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.15828518839141018478/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:50,646 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.txt generated
-12 May 2022 06:52:52,063 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.4709939249409918510/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:52,178 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.json generated
-12 May 2022 06:52:53,580 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.11983035209011122391/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:53,697 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.puml generated
-12 May 2022 06:52:53,769 INFO    Image file nuxeo-redis-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.puml
-12 May 2022 06:52:55,067 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.7962859630615577972/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:55,117 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.txt generated
-12 May 2022 06:52:56,430 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.18343892613851125185/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:56,479 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.json generated
-12 May 2022 06:52:57,788 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.1434644056683206330/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:52:57,834 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.puml generated
-12 May 2022 06:52:57,892 INFO    Image file nuxeo-web-ui-0.0.1.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.puml
-12 May 2022 06:56:40,727 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.9918286885050583178/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:40,847 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.txt generated
-12 May 2022 06:56:42,601 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.16008881951218905046/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:42,672 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.json generated
-12 May 2022 06:56:44,276 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.5904692270160741215/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:44,342 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.puml generated
-12 May 2022 06:56:45,475 INFO    Image file nuxeo-4.0-PR-45-3.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.puml
-12 May 2022 06:56:46,990 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.1638143843937371444/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:47,052 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.txt generated
-12 May 2022 06:56:48,516 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.12650061462503870615/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:48,576 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.json generated
-12 May 2022 06:56:50,022 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.1908323214279860613/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:50,078 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.puml generated
-12 May 2022 06:56:50,180 INFO    Image file nuxeo-3.0.9.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.puml
-12 May 2022 06:56:51,677 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.17169327047631475271/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:51,730 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.txt generated
-12 May 2022 06:56:53,220 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.3058163156651387194/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:53,272 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.json generated
-12 May 2022 06:56:54,747 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.4657989831846138169/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:54,807 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.puml generated
-12 May 2022 06:56:54,885 INFO    Image file nuxeo-3.0.8.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.puml
-12 May 2022 06:56:56,379 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.694266584332026179/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:56,486 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.txt generated
-12 May 2022 06:56:58,011 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.17475416422938101065/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:58,133 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.json generated
-12 May 2022 06:56:59,561 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.16462230454988307787/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:56:59,667 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.puml generated
-12 May 2022 06:56:59,755 INFO    Image file nuxeo-mongodb-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.puml
-12 May 2022 06:57:01,205 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.5771401171317463395/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:57:01,329 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.txt generated
-12 May 2022 06:57:02,712 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.11114084656651806703/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:57:02,825 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.json generated
-12 May 2022 06:57:04,260 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.3905726147852810278/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:57:04,366 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.puml generated
-12 May 2022 06:57:04,444 INFO    Image file nuxeo-postgresql-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.puml
-12 May 2022 06:57:05,940 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.14523401076341058890/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:57:06,060 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.txt generated
-12 May 2022 06:57:07,494 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.16826795707984693188/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:57:07,604 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.json generated
-12 May 2022 06:57:08,999 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.2089573478128366959/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:57:09,110 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.puml generated
-12 May 2022 06:57:09,197 INFO    Image file nuxeo-redis-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.puml
-12 May 2022 06:57:10,578 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.12091345573665922902/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:57:10,625 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.txt generated
-12 May 2022 06:57:11,962 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.5531498687659059374/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:57:12,011 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.json generated
-12 May 2022 06:57:13,344 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.9544544375192201571/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
-12 May 2022 06:57:13,390 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.puml generated
-12 May 2022 06:57:13,450 INFO    Image file nuxeo-web-ui-0.0.1.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.puml
+12 May 2022 16:14:48,514 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.14815228141676887046/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:14:48,639 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.txt generated
+12 May 2022 16:14:50,276 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.12778725426636948259/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:14:50,347 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.json generated
+12 May 2022 16:14:51,805 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.11189752440455305093/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:14:51,871 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.puml generated
+12 May 2022 16:14:53,291 INFO    Image file nuxeo-4.0-PR-45-3.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-4.0-PR-45-3.puml
+12 May 2022 16:14:54,735 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.15627675986361939073/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:14:54,796 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.txt generated
+12 May 2022 16:14:56,234 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.6618070228773131939/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:14:56,292 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.json generated
+12 May 2022 16:14:57,709 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.11132623180736137694/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:14:57,764 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.puml generated
+12 May 2022 16:14:57,844 INFO    Image file nuxeo-3.0.9.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.9.puml
+12 May 2022 16:14:59,253 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.6136055467907761434/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:14:59,310 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.txt generated
+12 May 2022 16:15:00,723 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.8773573815737047545/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:00,776 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.json generated
+12 May 2022 16:15:02,172 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.2811828713755385801/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:02,231 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.puml generated
+12 May 2022 16:15:02,299 INFO    Image file nuxeo-3.0.8.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-3.0.8.puml
+12 May 2022 16:15:03,767 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.15079033226115115910/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:03,903 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.txt generated
+12 May 2022 16:15:05,346 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.1156982891229104549/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:05,456 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.json generated
+12 May 2022 16:15:06,937 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.8306856593602043465/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:07,046 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.puml generated
+12 May 2022 16:15:07,115 INFO    Image file nuxeo-mongodb-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-mongodb-0.1.0.puml
+12 May 2022 16:15:08,523 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.16338009561595979308/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:08,646 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.txt generated
+12 May 2022 16:15:10,052 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.10438334673925217788/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:10,164 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.json generated
+12 May 2022 16:15:11,546 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.11816711564202911692/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:11,660 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.puml generated
+12 May 2022 16:15:11,721 INFO    Image file nuxeo-postgresql-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-postgresql-0.1.0.puml
+12 May 2022 16:15:13,138 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.12018183784466403791/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:13,248 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.txt generated
+12 May 2022 16:15:14,657 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.1035527678848174263/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:14,767 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.json generated
+12 May 2022 16:15:16,177 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.5491063152387768663/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:16,301 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.puml generated
+12 May 2022 16:15:16,356 INFO    Image file nuxeo-redis-0.1.0.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-redis-0.1.0.puml
+12 May 2022 16:15:17,683 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.13800058656849199885/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:17,731 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.txt generated
+12 May 2022 16:15:19,092 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.17415529089868371053/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:19,141 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.json generated
+12 May 2022 16:15:20,451 INFO    Archive File /var/folders/kw/tt3g68js2rl5jx1dwwvzc56c0000gn/T/com.melahn.util.helm.ChartMap.Temporary.733028022620222500/com.melahn.util.helm.ChartMap_chart.tgz successfully extracted
+12 May 2022 16:15:20,499 INFO    File /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.puml generated
+12 May 2022 16:15:20,548 INFO    Image file nuxeo-web-ui-0.0.1.png generated from /Users/melahn/development/visualstudio/helm-chartmap-generator/docs/chartmuseum.platform.dev.nuxeo.com/nuxeo-web-ui-0.0.1.puml
