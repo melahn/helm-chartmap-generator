@@ -24,5 +24,5 @@ solr_4_0_8--[#green]-|>common_1_13_0
 solr_4_0_8--[#orange]-|>docker_io_bitnami_solr_8_11_1_debian_10_r121
 zookeeper_9_0_6--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r34
 
-center footer Generated on 2022/05/07 15:45:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:43:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

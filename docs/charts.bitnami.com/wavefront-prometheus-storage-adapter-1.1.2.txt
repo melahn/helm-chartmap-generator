@@ -21,7 +21,7 @@ Chart: wavefront:3.4.0
 	apiVersion: v2
 	appVersion: 1.10.0
 	created: 2022-04-12T14:38:28.645217846Z
-	dependencies: kube-state-metrics:2.2.17, common:1.13.0
+	dependencies: common:1.13.0, kube-state-metrics:2.2.17
 	description: Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.
 	digest: sha256:1bcdfea5aeeb5e58875a6847e45c853912d034daba9f334cb3e2ca041d37fd63
 	icon: https://bitnami.com/assets/stacks/wavefront-collector/img/wavefront-collector-stack-220x234.png
@@ -73,11 +73,11 @@ Chart Dependencies
 ------------------
 wavefront-prometheus-storage-adapter:1.1.2 depends on common:1.13.0
 wavefront-prometheus-storage-adapter:1.1.2 depends on wavefront:3.4.0
+wavefront:3.4.0 depends on common:1.13.0
 wavefront:3.4.0 depends on kube-state-metrics:2.2.17
 kube-state-metrics:2.2.17 depends on common:1.13.0
-wavefront:3.4.0 depends on common:1.13.0
 kube-state-metrics:2.2.17 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r28
 wavefront:3.4.0 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r17
 wavefront-prometheus-storage-adapter:1.1.2 uses docker.io/bitnami/wavefront-prometheus-storage-adapter:1.0.5-debian-10-r149
 
-Generated on 2022/05/07 15:48:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:46:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

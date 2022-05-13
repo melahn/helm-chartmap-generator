@@ -1,0 +1,47 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "mariadb",
+    "mysql",
+    "database",
+    "sql",
+    "prometheus",
+    "galera"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/mariadb-galera:10.6.7-debian-10-r56",
+      "type": "image",
+      "version": "10.6.7-debian-10-r56"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.0"
+    }
+  ],
+  "name": "mariadb-galera:7.2.0",
+  "description": "MariaDB Galera is a multi-primary database cluster solution for synchronous replication and high availability.",
+  "type": "chart",
+  "shortName": "mariadb-galera",
+  "version": "7.2.0"
+}

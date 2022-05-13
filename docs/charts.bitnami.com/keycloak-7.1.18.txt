@@ -61,4 +61,4 @@ postgresql:11.1.22 depends on common:1.13.0
 keycloak:7.1.18 uses docker.io/bitnami/keycloak:16.1.1-debian-10-r85
 postgresql:11.1.22 uses docker.io/bitnami/postgresql:14.2.0-debian-10-r70
 
-Generated on 2022/05/07 15:31:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:29:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -21,5 +21,5 @@ postgresql_ha_9_0_4--[#green]-|>common_1_13_0
 postgresql_ha_9_0_4--[#orange]-|>docker_io_bitnami_pgpool_4_3_1_debian_10_r62
 postgresql_ha_9_0_4--[#orange]-|>docker_io_bitnami_postgresql_repmgr_14_2_0_debian_10_r70
 
-center footer Generated on 2022/05/07 15:42:50 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:40:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

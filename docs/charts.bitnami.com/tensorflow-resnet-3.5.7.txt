@@ -42,4 +42,4 @@ Chart Dependencies
 tensorflow-resnet:3.5.7 depends on common:1.13.0
 tensorflow-resnet:3.5.7 uses docker.io/bitnami/tensorflow-serving:2.8.0-debian-10-r62
 
-Generated on 2022/05/07 15:47:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:44:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

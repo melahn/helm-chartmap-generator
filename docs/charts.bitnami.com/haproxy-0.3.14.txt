@@ -42,4 +42,4 @@ Chart Dependencies
 haproxy:0.3.14 depends on common:1.13.0
 haproxy:0.3.14 uses docker.io/bitnami/haproxy:2.5.5-debian-10-r35
 
-Generated on 2022/05/07 15:28:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:27:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

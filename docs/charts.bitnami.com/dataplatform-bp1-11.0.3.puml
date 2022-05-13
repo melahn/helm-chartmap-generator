@@ -31,22 +31,22 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/spark:3.2.1-debian-10-r78\n====\n
 usecase "Image\n====\ndocker.io\n====\nbitnami/dataplatform-exporter:1.0.1-scratch-r27\n====\n1.0.1-scratch-r27" as docker_io_bitnami_dataplatform_exporter_1_0_1_scratch_r27 #Fuchsia
 
 'Chart Dependencies
+dataplatform_bp1_11_0_3--[#green]-|>common_1_13_0
 dataplatform_bp1_11_0_3--[#green]-|>wavefront_3_4_0
+wavefront_3_4_0--[#green]-|>common_1_13_0
 wavefront_3_4_0--[#green]-|>kube_state_metrics_2_2_17
 kube_state_metrics_2_2_17--[#green]-|>common_1_13_0
-wavefront_3_4_0--[#green]-|>common_1_13_0
 dataplatform_bp1_11_0_3--[#green]-|>spark_5_9_11
 spark_5_9_11--[#green]-|>common_1_13_0
-dataplatform_bp1_11_0_3--[#green]-|>zookeeper_9_0_6
-zookeeper_9_0_6--[#green]-|>common_1_13_0
-dataplatform_bp1_11_0_3--[#green]-|>common_1_13_0
 dataplatform_bp1_11_0_3--[#green]-|>kafka_16_2_6
-kafka_16_2_6--[#green]-|>zookeeper_9_0_6
 kafka_16_2_6--[#green]-|>common_1_13_0
+kafka_16_2_6--[#green]-|>zookeeper_9_0_6
+zookeeper_9_0_6--[#green]-|>common_1_13_0
 dataplatform_bp1_11_0_3--[#green]-|>solr_4_0_7
+solr_4_0_7--[#green]-|>common_1_13_0
 solr_4_0_7--[#green]-|>zookeeper_9_0_5
 zookeeper_9_0_5--[#green]-|>common_1_13_0
-solr_4_0_7--[#green]-|>common_1_13_0
+dataplatform_bp1_11_0_3--[#green]-|>zookeeper_9_0_6
 kube_state_metrics_2_2_17--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r28
 wavefront_3_4_0--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_0_0_debian_10_r17
 spark_5_9_11--[#orange]-|>docker_io_bitnami_spark_3_2_1_debian_10_r78
@@ -57,5 +57,5 @@ kafka_16_2_6--[#orange]-|>docker_io_bitnami_kafka_3_1_0_debian_10_r84
 zookeeper_9_0_6--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r34
 solr_4_0_7--[#orange]-|>docker_io_bitnami_solr_8_11_1_debian_10_r119
 
-center footer Generated on 2022/05/07 15:23:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:22:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

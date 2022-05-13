@@ -36,7 +36,7 @@ Chart: harbor:12.3.5
 	apiVersion: v2
 	appVersion: 2.5.0
 	created: Not specified
-	dependencies: redis:16.8.7, common:1.13.0, postgresql:11.1.22
+	dependencies: postgresql:11.1.22, common:1.13.0, redis:16.8.7
 	description: Harbor is an open source trusted cloud-native registry to store, sign, and scan content. It adds functionalities like security, identity, and management to the open source Docker distribution.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/harbor-core/img/harbor-core-stack-220x234.png
@@ -80,15 +80,15 @@ Image: docker.io/bitnami/chartmuseum:0.14.0-debian-10-r77
 
 Chart Dependencies
 ------------------
-harbor:12.3.5 depends on redis:16.8.7
-redis:16.8.7 depends on common:1.13.0
-harbor:12.3.5 depends on common:1.13.0
 harbor:12.3.5 depends on postgresql:11.1.22
 postgresql:11.1.22 depends on common:1.13.0
+harbor:12.3.5 depends on common:1.13.0
+harbor:12.3.5 depends on redis:16.8.7
+redis:16.8.7 depends on common:1.13.0
 postgresql:11.1.22 uses docker.io/bitnami/postgresql:11.15.0-debian-10-r71
 harbor:12.3.5 uses docker.io/bitnami/harbor-registry:2.5.0-debian-10-r10
-harbor:12.3.5 uses docker.io/bitnami/harbor-notary-signer:2.5.0-debian-10-r10
 harbor:12.3.5 uses docker.io/bitnami/harbor-registryctl:2.5.0-debian-10-r11
+harbor:12.3.5 uses docker.io/bitnami/harbor-notary-signer:2.5.0-debian-10-r10
 harbor:12.3.5 uses docker.io/bitnami/harbor-jobservice:2.5.0-debian-10-r2
 harbor:12.3.5 uses docker.io/bitnami/harbor-portal:2.5.0-debian-10-r12
 harbor:12.3.5 uses docker.io/bitnami/harbor-core:2.5.0-debian-10-r11
@@ -98,4 +98,4 @@ harbor:12.3.5 uses docker.io/bitnami/harbor-notary-server:2.5.0-debian-10-r11
 harbor:12.3.5 uses docker.io/bitnami/nginx:1.21.6-debian-10-r83
 redis:16.8.7 uses docker.io/bitnami/redis:6.2.6-debian-10-r192
 
-Generated on 2022/05/07 15:29:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:27:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

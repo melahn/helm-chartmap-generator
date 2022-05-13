@@ -22,12 +22,12 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:2.4.2-debian-1
 'Chart Dependencies
 wavefront_prometheus_storage_adapter_1_1_3--[#green]-|>common_1_13_0
 wavefront_prometheus_storage_adapter_1_1_3--[#green]-|>wavefront_3_4_1
+wavefront_3_4_1--[#green]-|>common_1_13_0
 wavefront_3_4_1--[#green]-|>kube_state_metrics_2_2_19
 kube_state_metrics_2_2_19--[#green]-|>common_1_13_0
-wavefront_3_4_1--[#green]-|>common_1_13_0
 kube_state_metrics_2_2_19--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r42
 wavefront_3_4_1--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_0_0_debian_10_r26
 wavefront_prometheus_storage_adapter_1_1_3--[#orange]-|>docker_io_bitnami_wavefront_prometheus_storage_adapter_1_0_5_debian_10_r156
 
-center footer Generated on 2022/05/07 15:48:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:46:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -18,11 +18,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.6.7-debian-10-r62\n===
 usecase "Image\n====\ndocker.io\n====\nbitnami/phpmyadmin:5.1.3-debian-10-r63\n====\n5.1.3-debian-10-r63" as docker_io_bitnami_phpmyadmin_5_1_3_debian_10_r63 #BlanchedAlmond
 
 'Chart Dependencies
+phpmyadmin_10_0_0--[#green]-|>common_1_13_0
 phpmyadmin_10_0_0--[#green]-|>mariadb_11_0_0
 mariadb_11_0_0--[#green]-|>common_1_13_0
-phpmyadmin_10_0_0--[#green]-|>common_1_13_0
 mariadb_11_0_0--[#orange]-|>docker_io_bitnami_mariadb_10_6_7_debian_10_r62
 phpmyadmin_10_0_0--[#orange]-|>docker_io_bitnami_phpmyadmin_5_1_3_debian_10_r63
 
-center footer Generated on 2022/05/07 15:42:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:40:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

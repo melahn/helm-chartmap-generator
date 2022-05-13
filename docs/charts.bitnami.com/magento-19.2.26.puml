@@ -32,5 +32,5 @@ mariadb_9_8_1--[#green]-|>common_1_10_1
 mariadb_9_8_1--[#orange]-|>docker_io_bitnami_mariadb_10_4_24_debian_10_r79
 elasticsearch_17_9_29--[#orange]-|>docker_io_bitnami_elasticsearch_7_17_3_debian_10_r0
 
-center footer Generated on 2022/05/07 15:34:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:32:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

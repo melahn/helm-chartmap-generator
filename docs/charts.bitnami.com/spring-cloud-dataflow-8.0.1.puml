@@ -25,15 +25,15 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/spring-cloud-dataflow:2.9.4-debia
 usecase "Image\n====\ndocker.io\n====\nbitnami/spring-cloud-skipper:2.8.4-debian-10-r16\n====\n2.8.4-debian-10-r16" as docker_io_bitnami_spring_cloud_skipper_2_8_4_debian_10_r16 #GhostWhite
 
 'Chart Dependencies
+spring_cloud_dataflow_8_0_1--[#green]-|>common_1_13_0
 spring_cloud_dataflow_8_0_1--[#green]-|>rabbitmq_8_32_0
 rabbitmq_8_32_0--[#green]-|>common_1_13_0
 spring_cloud_dataflow_8_0_1--[#green]-|>mariadb_11_0_0
 mariadb_11_0_0--[#green]-|>common_1_13_0
 spring_cloud_dataflow_8_0_1--[#green]-|>kafka_16_2_7
+kafka_16_2_7--[#green]-|>common_1_13_0
 kafka_16_2_7--[#green]-|>zookeeper_9_0_6
 zookeeper_9_0_6--[#green]-|>common_1_13_0
-kafka_16_2_7--[#green]-|>common_1_13_0
-spring_cloud_dataflow_8_0_1--[#green]-|>common_1_13_0
 spring_cloud_dataflow_8_0_1--[#orange]-|>docker_io_bitnami_spring_cloud_skipper_2_8_4_debian_10_r16
 spring_cloud_dataflow_8_0_1--[#orange]-|>docker_io_bitnami_spring_cloud_dataflow_2_9_4_debian_10_r14
 mariadb_11_0_0--[#orange]-|>docker_io_bitnami_mariadb_10_6_7_debian_10_r62
@@ -41,5 +41,5 @@ rabbitmq_8_32_0--[#orange]-|>docker_io_bitnami_rabbitmq_3_9_15_debian_10_r6
 kafka_16_2_7--[#orange]-|>docker_io_bitnami_kafka_3_1_0_debian_10_r85
 zookeeper_9_0_6--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r34
 
-center footer Generated on 2022/05/07 15:46:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:43:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

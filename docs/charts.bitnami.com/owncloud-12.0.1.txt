@@ -36,7 +36,7 @@ Chart: owncloud:12.0.1
 	apiVersion: v2
 	appVersion: 10.9.1
 	created: Not specified
-	dependencies: common:1.13.0, mariadb:11.0.0
+	dependencies: mariadb:11.0.0, common:1.13.0
 	description: ownCloud is an open source content collaboration platform used to store and share files from any device. It grants data privacy, synchronization between devices, and file access control.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/owncloud/img/owncloud-stack-220x234.png
@@ -54,9 +54,9 @@ Image: docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
 Chart Dependencies
 ------------------
-owncloud:12.0.1 depends on common:1.13.0
 owncloud:12.0.1 depends on mariadb:11.0.0
 mariadb:11.0.0 depends on common:1.13.0
+owncloud:12.0.1 depends on common:1.13.0
 mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
-Generated on 2022/05/07 15:41:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:38:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

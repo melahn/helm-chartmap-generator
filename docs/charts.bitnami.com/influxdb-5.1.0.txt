@@ -1,0 +1,45 @@
+Chart Map for influxdb:5.1.0
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.13.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-04-25T15:57:31.777233Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: e614e4799be726f265faeb19af43ece886d6312a5d28fe180c3c9c9db4e208ee
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.1.tgz
+	version: 1.13.1
+Chart: influxdb:5.1.0
+	apiVersion: v2
+	appVersion: 2.2.0
+	created: Not specified
+	dependencies: common:1.13.1
+	description: InfluxDB(TM) is an open source time-series database. It is a core component of the TICK (Telegraf, InfluxDB(TM), Chronograf, Kapacitor) stack.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/influxdb/img/influxdb-stack-220x234.png
+	keywords: influxdb,tick,database,timeseries
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: influxdb
+	sources: https://github.com/bitnami/bitnami-docker-influxdb,https://www.influxdata.com/products/influxdb-overview/
+	urls: Not specified
+	version: 5.1.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/influxdb:2.2.0-debian-10-r30
+
+Chart Dependencies
+------------------
+influxdb:5.1.0 depends on common:1.13.1
+influxdb:5.1.0 uses docker.io/bitnami/influxdb:2.2.0-debian-10-r30
+
+Generated on 2022/05/13 06:28:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

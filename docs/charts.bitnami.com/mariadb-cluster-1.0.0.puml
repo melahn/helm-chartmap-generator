@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.2.14\n====\n10.2.14" a
 'Chart Dependencies
 mariadb_cluster_1_0_0--[#orange]-|>docker_io_bitnami_mariadb_10_2_14
 
-center footer Generated on 2022/05/07 15:35:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:33:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

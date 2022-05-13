@@ -1,0 +1,44 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "rabbitmq",
+    "message queue",
+    "AMQP"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/rabbitmq:3.9.17-debian-10-r0",
+      "type": "image",
+      "version": "3.9.17-debian-10-r0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.1"
+    }
+  ],
+  "name": "rabbitmq:9.0.6",
+  "description": "RabbitMQ is an open source general-purpose message broker that is designed for consistent, highly-available messaging scenarios (both synchronous and asynchronous).",
+  "type": "chart",
+  "shortName": "rabbitmq",
+  "version": "9.0.6"
+}

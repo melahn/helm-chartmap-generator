@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/fluentd:1.14.6-debian-10-r26\n===
 fluentd_5_0_18--[#green]-|>common_1_13_1
 fluentd_5_0_18--[#orange]-|>docker_io_bitnami_fluentd_1_14_6_debian_10_r26
 
-center footer Generated on 2022/05/07 15:27:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:25:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

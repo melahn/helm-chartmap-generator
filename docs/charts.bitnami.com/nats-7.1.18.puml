@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/nats:2.8.1-debian-10-r0\n====\n2.
 nats_7_1_18--[#green]-|>common_1_13_0
 nats_7_1_18--[#orange]-|>docker_io_bitnami_nats_2_8_1_debian_10_r0
 
-center footer Generated on 2022/05/07 15:38:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:36:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

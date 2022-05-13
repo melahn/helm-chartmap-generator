@@ -18,11 +18,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/zookeeper:3.8.0-debian-10-r37\n==
 usecase "Image\n====\ndocker.io\n====\nbitnami/solr:8.11.1-debian-10-r125\n====\n8.11.1-debian-10-r125" as docker_io_bitnami_solr_8_11_1_debian_10_r125 #Cornsilk
 
 'Chart Dependencies
+solr_4_0_9--[#green]-|>common_1_13_0
 solr_4_0_9--[#green]-|>zookeeper_9_1_0
 zookeeper_9_1_0--[#green]-|>common_1_13_0
-solr_4_0_9--[#green]-|>common_1_13_0
 solr_4_0_9--[#orange]-|>docker_io_bitnami_solr_8_11_1_debian_10_r125
 zookeeper_9_1_0--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r37
 
-center footer Generated on 2022/05/07 15:45:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:42:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

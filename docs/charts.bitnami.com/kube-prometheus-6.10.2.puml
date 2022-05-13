@@ -23,12 +23,12 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/blackbox-exporter:0.20.0-debian-1
 'Chart Dependencies
 kube_prometheus_6_10_2--[#green]-|>node_exporter_2_4_11
 node_exporter_2_4_11--[#green]-|>common_1_13_0
-kube_prometheus_6_10_2--[#green]-|>common_1_13_1
 kube_prometheus_6_10_2--[#green]-|>kube_state_metrics_2_2_19
 kube_state_metrics_2_2_19--[#green]-|>common_1_13_0
+kube_prometheus_6_10_2--[#green]-|>common_1_13_1
 kube_prometheus_6_10_2--[#orange]-|>docker_io_bitnami_prometheus_operator_0_56_1_debian_10_r0
 kube_prometheus_6_10_2--[#orange]-|>docker_io_bitnami_blackbox_exporter_0_20_0_debian_10_r47
 kube_state_metrics_2_2_19--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r42
 
-center footer Generated on 2022/05/07 15:32:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:31:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -21,7 +21,7 @@ Chart: ejbca:5.1.13
 	apiVersion: v2
 	appVersion: 7.4.3-2
 	created: Not specified
-	dependencies: common:1.13.0, mariadb:10.5.1
+	dependencies: mariadb:10.5.1, common:1.13.0
 	description: EJBCA is an enterprise class PKI Certificate Authority software, built using Java (JEE) technology.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/ejbca/img/ejbca-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/ejbca:7.4.3-2-debian-10-r144
 
 Chart Dependencies
 ------------------
-ejbca:5.1.13 depends on common:1.13.0
 ejbca:5.1.13 depends on mariadb:10.5.1
 mariadb:10.5.1 depends on common:1.13.0
+ejbca:5.1.13 depends on common:1.13.0
 ejbca:5.1.13 uses docker.io/bitnami/ejbca:7.4.3-2-debian-10-r144
 mariadb:10.5.1 uses docker.io/bitnami/mariadb:10.5.15-debian-10-r62
 
-Generated on 2022/05/07 15:25:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:23:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

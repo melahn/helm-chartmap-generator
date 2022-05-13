@@ -24,23 +24,6 @@
       }],
       "keywords": [
         "prometheus",
-        "node-exporter",
-        "monitoring"
-      ],
-      "children": [],
-      "name": "node-exporter:1.0.3",
-      "description": "Prometheus exporter for hardware and OS metrics exposed by UNIX kernels, with pluggable metric collectors.",
-      "type": "chart",
-      "shortName": "node-exporter",
-      "version": "1.0.3"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "prometheus",
         "kube-state-metrics",
         "monitoring"
       ],
@@ -56,6 +39,23 @@
       "type": "chart",
       "shortName": "kube-state-metrics",
       "version": "0.4.3"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "prometheus",
+        "node-exporter",
+        "monitoring"
+      ],
+      "children": [],
+      "name": "node-exporter:1.0.3",
+      "description": "Prometheus exporter for hardware and OS metrics exposed by UNIX kernels, with pluggable metric collectors.",
+      "type": "chart",
+      "shortName": "node-exporter",
+      "version": "1.0.3"
     }
   ],
   "name": "prometheus-operator:0.30.0",

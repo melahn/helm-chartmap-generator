@@ -42,4 +42,4 @@ Chart Dependencies
 metallb:2.6.14 depends on common:1.13.0
 metallb:2.6.14 uses docker.io/bitnami/metallb-controller:0.12.1-debian-10-r59
 
-Generated on 2022/05/07 15:36:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:34:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -36,7 +36,7 @@ Chart: wavefront:3.4.1
 	apiVersion: v2
 	appVersion: 1.10.0
 	created: 2022-04-22T09:43:37.018005625Z
-	dependencies: common:1.13.0, kube-state-metrics:2.2.19
+	dependencies: kube-state-metrics:2.2.19, common:1.13.0
 	description: Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.
 	digest: sha256:8db6f73f3c19b2b31adc8bbe827125b2de3103859186d0fe7dd03cf6fd1afaee
 	icon: https://bitnami.com/assets/stacks/wavefront-collector/img/wavefront-collector-stack-220x234.png
@@ -51,7 +51,7 @@ Chart: wavefront-adapter-for-istio:1.1.2
 	apiVersion: v2
 	appVersion: 0.1.5
 	created: Not specified
-	dependencies: common:1.13.0, wavefront:3.4.1
+	dependencies: wavefront:3.4.1, common:1.13.0
 	description: Wavefront Adapter for Istio is an adapter for Istio to expose Istio metrics to Wavefront. It is a lightweight tool written in Go. It supports Istio v1.4+ and Kubernetes v1.15+.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/wavefront-adapter-for-istio/img/wavefront-adapter-for-istio-stack-220x234.png
@@ -71,13 +71,13 @@ Image: docker.io/bitnami/wavefront-adapter-for-istio:0.1.5-debian-10-r371
 
 Chart Dependencies
 ------------------
-wavefront-adapter-for-istio:1.1.2 depends on common:1.13.0
 wavefront-adapter-for-istio:1.1.2 depends on wavefront:3.4.1
-wavefront:3.4.1 depends on common:1.13.0
 wavefront:3.4.1 depends on kube-state-metrics:2.2.19
 kube-state-metrics:2.2.19 depends on common:1.13.0
+wavefront:3.4.1 depends on common:1.13.0
+wavefront-adapter-for-istio:1.1.2 depends on common:1.13.0
 kube-state-metrics:2.2.19 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r42
 wavefront:3.4.1 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r26
 wavefront-adapter-for-istio:1.1.2 uses docker.io/bitnami/wavefront-adapter-for-istio:0.1.5-debian-10-r371
 
-Generated on 2022/05/07 15:48:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:45:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

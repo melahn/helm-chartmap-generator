@@ -1,0 +1,46 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "nginx",
+    "http",
+    "web",
+    "www",
+    "reverse proxy"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/nginx-intel:0.4.7-debian-10-r93",
+      "type": "image",
+      "version": "0.4.7-debian-10-r93"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.1"
+    }
+  ],
+  "name": "nginx-intel:1.1.0",
+  "description": "NGINX Open Source for Intel is a lightweight server, combined with cryptography acceleration for 3rd gen Xeon Scalable Processors (Ice Lake) to get a breakthrough performance improvement.",
+  "type": "chart",
+  "shortName": "nginx-intel",
+  "version": "1.1.0"
+}

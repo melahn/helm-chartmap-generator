@@ -36,7 +36,7 @@ Chart: phpmyadmin:10.0.0
 	apiVersion: v2
 	appVersion: 5.1.3
 	created: Not specified
-	dependencies: common:1.13.0, mariadb:11.0.0
+	dependencies: mariadb:11.0.0, common:1.13.0
 	description: phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/phpmyadmin/img/phpmyadmin-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/phpmyadmin:5.1.3-debian-10-r63
 
 Chart Dependencies
 ------------------
-phpmyadmin:10.0.0 depends on common:1.13.0
 phpmyadmin:10.0.0 depends on mariadb:11.0.0
 mariadb:11.0.0 depends on common:1.13.0
+phpmyadmin:10.0.0 depends on common:1.13.0
 mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 phpmyadmin:10.0.0 uses docker.io/bitnami/phpmyadmin:5.1.3-debian-10-r63
 
-Generated on 2022/05/07 15:42:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:40:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

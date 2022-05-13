@@ -42,4 +42,4 @@ Chart Dependencies
 logstash:4.0.5 depends on common:1.13.1
 logstash:4.0.5 uses docker.io/bitnami/logstash:8.2.0-debian-10-r0
 
-Generated on 2022/05/07 15:34:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:32:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

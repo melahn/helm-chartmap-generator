@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:2.4.2-debian-1
 kube_state_metrics_2_2_18--[#green]-|>common_1_13_0
 kube_state_metrics_2_2_18--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r37
 
-center footer Generated on 2022/05/07 15:33:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:31:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/minio:2022.5.4-debian-10-r0\n====
 minio_11_3_2--[#green]-|>common_1_13_1
 minio_11_3_2--[#orange]-|>docker_io_bitnami_minio_2022_5_4_debian_10_r0
 
-center footer Generated on 2022/05/07 15:36:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:34:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

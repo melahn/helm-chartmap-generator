@@ -1,0 +1,30 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for jupyterhub:1.1.13
+
+'There are 3 referenced Helm Charts
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "postgresql:11.1.22\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_1_22 #LightSteelBlue
+artifact "jupyterhub:1.1.13\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tpython\n\t\tscientific" as jupyterhub_1_1_13 #DarkGoldenRod
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/jupyterhub:1.5.0-debian-10-r149\n====\n1.5.0-debian-10-r149" as docker_io_bitnami_jupyterhub_1_5_0_debian_10_r149 #DarkSalmon
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.2.0-debian-10-r70\n====\n14.2.0-debian-10-r70" as docker_io_bitnami_postgresql_14_2_0_debian_10_r70 #DarkSalmon
+usecase "Image\n====\ndocker.io\n====\nbitnami/configurable-http-proxy:4.5.1-debian-10-r58\n====\n4.5.1-debian-10-r58" as docker_io_bitnami_configurable_http_proxy_4_5_1_debian_10_r58 #LightSteelBlue
+
+'Chart Dependencies
+jupyterhub_1_1_13--[#green]-|>common_1_13_0
+jupyterhub_1_1_13--[#green]-|>postgresql_11_1_22
+postgresql_11_1_22--[#green]-|>common_1_13_0
+postgresql_11_1_22--[#orange]-|>docker_io_bitnami_postgresql_14_2_0_debian_10_r70
+jupyterhub_1_1_13--[#orange]-|>docker_io_bitnami_jupyterhub_1_5_0_debian_10_r149
+jupyterhub_1_1_13--[#orange]-|>docker_io_bitnami_configurable_http_proxy_4_5_1_debian_10_r58
+
+center footer Generated on 2022/05/13 06:29:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

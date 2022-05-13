@@ -42,4 +42,4 @@ Chart Dependencies
 minio:11.3.2 depends on common:1.13.1
 minio:11.3.2 uses docker.io/bitnami/minio:2022.5.4-debian-10-r0
 
-Generated on 2022/05/07 15:36:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:34:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

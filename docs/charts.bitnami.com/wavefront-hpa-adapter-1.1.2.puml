@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/wavefront-hpa-adapter:0.9.8-scrat
 wavefront_hpa_adapter_1_1_2--[#green]-|>common_1_13_0
 wavefront_hpa_adapter_1_1_2--[#orange]-|>docker_io_bitnami_wavefront_hpa_adapter_0_9_8_scratch_r20
 
-center footer Generated on 2022/05/07 15:48:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:46:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

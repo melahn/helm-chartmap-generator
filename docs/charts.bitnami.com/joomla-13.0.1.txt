@@ -61,4 +61,4 @@ joomla:13.0.1 depends on common:1.13.0
 joomla:13.0.1 uses docker.io/bitnami/joomla:4.1.2-debian-10-r22
 mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
-Generated on 2022/05/07 15:30:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:28:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

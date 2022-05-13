@@ -42,4 +42,4 @@ Chart Dependencies
 dokuwiki:12.2.14 depends on common:1.13.0
 dokuwiki:12.2.14 uses docker.io/bitnami/dokuwiki:20200729.0.0-debian-10-r566
 
-Generated on 2022/05/07 15:25:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:23:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

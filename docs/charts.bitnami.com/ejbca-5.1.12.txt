@@ -61,4 +61,4 @@ ejbca:5.1.12 depends on common:1.13.0
 mariadb:10.5.0 uses docker.io/bitnami/mariadb:10.5.15-debian-10-r52
 ejbca:5.1.12 uses docker.io/bitnami/ejbca:7.4.3-2-debian-10-r142
 
-Generated on 2022/05/07 15:25:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:24:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

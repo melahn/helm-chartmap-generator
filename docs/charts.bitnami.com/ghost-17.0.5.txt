@@ -59,4 +59,4 @@ ghost:17.0.5 depends on mariadb:11.0.2
 mariadb:11.0.2 depends on common:1.13.1
 mariadb:11.0.2 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r70
 
-Generated on 2022/05/07 15:27:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:26:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

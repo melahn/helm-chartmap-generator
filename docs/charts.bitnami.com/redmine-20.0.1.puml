@@ -29,5 +29,5 @@ mariadb_11_0_0--[#orange]-|>docker_io_bitnami_mariadb_10_6_7_debian_10_r62
 postgresql_11_1_22--[#orange]-|>docker_io_bitnami_postgresql_14_2_0_debian_10_r70
 redmine_20_0_1--[#orange]-|>docker_io_bitnami_redmine_5_0_0_debian_10_r4
 
-center footer Generated on 2022/05/07 15:44:50 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:42:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

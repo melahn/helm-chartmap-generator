@@ -18,6 +18,25 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
         "kibana",
         "analytics",
         "monitoring",
@@ -48,25 +67,6 @@
       "type": "chart",
       "shortName": "kibana",
       "version": "9.3.17"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "common",
-        "helper",
-        "template",
-        "function",
-        "bitnami"
-      ],
-      "children": [],
-      "name": "common:1.13.0",
-      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-      "type": "chart",
-      "shortName": "common",
-      "version": "1.13.0"
     }
   ],
   "name": "elasticsearch:17.9.29",

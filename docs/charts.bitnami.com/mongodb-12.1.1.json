@@ -1,0 +1,47 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "mongodb",
+    "database",
+    "nosql",
+    "cluster",
+    "replicaset",
+    "replication"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/mongodb:5.0.8-debian-10-r10",
+      "type": "image",
+      "version": "5.0.8-debian-10-r10"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.1"
+    }
+  ],
+  "name": "mongodb:12.1.1",
+  "description": "MongoDB(R) is a relational open source NoSQL database. Easy to use, it stores data in JSON-like documents. Automated scalability and high-performance. Ideal for developing cloud native applications.",
+  "type": "chart",
+  "shortName": "mongodb",
+  "version": "12.1.1"
+}

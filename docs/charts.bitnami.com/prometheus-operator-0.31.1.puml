@@ -18,10 +18,10 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:1.9.7-debian-1
 usecase "Image\n====\ndocker.io\n====\nbitnami/prometheus-operator:0.41.0-debian-10-r5\n====\n0.41.0-debian-10-r5" as docker_io_bitnami_prometheus_operator_0_41_0_debian_10_r5 #IndianRed
 
 'Chart Dependencies
-prometheus_operator_0_31_1--[#green]-|>node_exporter_1_1_0
 prometheus_operator_0_31_1--[#green]-|>kube_state_metrics_0_5_0
+prometheus_operator_0_31_1--[#green]-|>node_exporter_1_1_0
 prometheus_operator_0_31_1--[#orange]-|>docker_io_bitnami_prometheus_operator_0_41_0_debian_10_r5
 kube_state_metrics_0_5_0--[#orange]-|>docker_io_bitnami_kube_state_metrics_1_9_7_debian_10_r51
 
-center footer Generated on 2022/05/07 15:43:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:40:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

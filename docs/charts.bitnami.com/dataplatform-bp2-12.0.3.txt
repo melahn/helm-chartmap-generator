@@ -66,7 +66,7 @@ Chart: elasticsearch:17.9.28
 	apiVersion: v2
 	appVersion: 7.17.2
 	created: 2022-04-21T13:11:09.924015447Z
-	dependencies: kibana:9.3.17, common:1.13.0
+	dependencies: common:1.13.0, kibana:9.3.17
 	description: Elasticsearch is a distributed search and analytics engine. It is used for web search, log monitoring, and real-time analytics. Ideal for Big Data applications.
 	digest: sha256:3ba1ddd902f4e4fbab9d639ea4ee7ead4c3eaf57f6166ed45a56ff41bd40f3cd
 	icon: https://bitnami.com/assets/stacks/elasticsearch/img/elasticsearch-stack-220x234.png
@@ -81,7 +81,7 @@ Chart: kafka:16.2.6
 	apiVersion: v2
 	appVersion: 3.1.0
 	created: 2022-04-20T19:38:27.725209366Z
-	dependencies: common:1.13.0, zookeeper:9.0.6
+	dependencies: zookeeper:9.0.6, common:1.13.0
 	description: Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.
 	digest: sha256:cbe417057b1387af35280bb264b3f7c2eddb7b8a256c4b87596cbc9962a4ef0e
 	icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
@@ -111,7 +111,7 @@ Chart: dataplatform-bp2:12.0.3
 	apiVersion: v2
 	appVersion: 1.0.1
 	created: Not specified
-	dependencies: spark:5.9.11, kafka:16.2.6, common:1.13.0, elasticsearch:17.9.28, logstash:3.8.8, wavefront:3.4.0
+	dependencies: spark:5.9.11, logstash:3.8.8, common:1.13.0, wavefront:3.4.0, elasticsearch:17.9.28, kafka:16.2.6
 	description: This Helm chart can be used for the automated deployment of a data platform blueprint containing Kafka, Apache Spark and Elasticsearch. It covers optimized pod sizing and placement diversity rules.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/dataplatform-bp1/img/dataplatform-bp1-stack-220x234.png
@@ -169,21 +169,21 @@ Chart Dependencies
 ------------------
 dataplatform-bp2:12.0.3 depends on spark:5.9.11
 spark:5.9.11 depends on common:1.13.0
-dataplatform-bp2:12.0.3 depends on kafka:16.2.6
-kafka:16.2.6 depends on common:1.13.0
-kafka:16.2.6 depends on zookeeper:9.0.6
-zookeeper:9.0.6 depends on common:1.13.0
-dataplatform-bp2:12.0.3 depends on common:1.13.0
-dataplatform-bp2:12.0.3 depends on elasticsearch:17.9.28
-elasticsearch:17.9.28 depends on kibana:9.3.17
-kibana:9.3.17 depends on common:1.13.0
-elasticsearch:17.9.28 depends on common:1.13.0
 dataplatform-bp2:12.0.3 depends on logstash:3.8.8
 logstash:3.8.8 depends on common:1.13.0
+dataplatform-bp2:12.0.3 depends on common:1.13.0
 dataplatform-bp2:12.0.3 depends on wavefront:3.4.0
 wavefront:3.4.0 depends on common:1.13.0
 wavefront:3.4.0 depends on kube-state-metrics:2.2.17
 kube-state-metrics:2.2.17 depends on common:1.13.0
+dataplatform-bp2:12.0.3 depends on elasticsearch:17.9.28
+elasticsearch:17.9.28 depends on common:1.13.0
+elasticsearch:17.9.28 depends on kibana:9.3.17
+kibana:9.3.17 depends on common:1.13.0
+dataplatform-bp2:12.0.3 depends on kafka:16.2.6
+kafka:16.2.6 depends on zookeeper:9.0.6
+zookeeper:9.0.6 depends on common:1.13.0
+kafka:16.2.6 depends on common:1.13.0
 kube-state-metrics:2.2.17 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r28
 wavefront:3.4.0 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r17
 spark:5.9.11 uses docker.io/bitnami/spark:3.2.1-debian-10-r78
@@ -194,4 +194,4 @@ dataplatform-bp2:12.0.3 uses docker.io/bitnami/dataplatform-emitter:1.0.1-scratc
 dataplatform-bp2:12.0.3 uses docker.io/bitnami/dataplatform-exporter:1.0.1-scratch-r26
 zookeeper:9.0.6 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r34
 
-Generated on 2022/05/07 15:24:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:22:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

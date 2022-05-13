@@ -1,0 +1,45 @@
+Chart Map for redis:16.9.3
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.13.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-04-25T15:57:31.777233Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: e614e4799be726f265faeb19af43ece886d6312a5d28fe180c3c9c9db4e208ee
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.1.tgz
+	version: 1.13.1
+Chart: redis:16.9.3
+	apiVersion: v2
+	appVersion: 6.2.7
+	created: Not specified
+	dependencies: common:1.13.1
+	description: Redis(TM) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: Not specified
+	version: 16.9.3
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/redis:6.2.7-debian-10-r0
+
+Chart Dependencies
+------------------
+redis:16.9.3 depends on common:1.13.1
+redis:16.9.3 uses docker.io/bitnami/redis:6.2.7-debian-10-r0
+
+Generated on 2022/05/13 06:41:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -14,16 +14,16 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/rmq-messaging-topology-operator:1.5.0-scratch-r0",
+      "name": "bitnami/rabbitmq-cluster-operator:1.12.1-scratch-r2",
       "type": "image",
-      "version": "1.5.0-scratch-r0"
+      "version": "1.12.1-scratch-r2"
     },
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/rabbitmq-cluster-operator:1.12.1-scratch-r2",
+      "name": "bitnami/rmq-messaging-topology-operator:1.5.0-scratch-r0",
       "type": "image",
-      "version": "1.12.1-scratch-r2"
+      "version": "1.5.0-scratch-r0"
     },
     {
       "maintainers": [{

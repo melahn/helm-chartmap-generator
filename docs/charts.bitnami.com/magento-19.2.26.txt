@@ -51,7 +51,7 @@ Chart: elasticsearch:17.9.29
 	apiVersion: v2
 	appVersion: 7.17.3
 	created: 2022-04-22T11:33:12.51611251Z
-	dependencies: kibana:9.3.17, common:1.13.0
+	dependencies: common:1.13.0, kibana:9.3.17
 	description: Elasticsearch is a distributed search and analytics engine. It is used for web search, log monitoring, and real-time analytics. Ideal for Big Data applications.
 	digest: sha256:e6f2c6d41e79bbbb84d86705827e1ec2942688062f7755b2d780c682b815235a
 	icon: https://bitnami.com/assets/stacks/elasticsearch/img/elasticsearch-stack-220x234.png
@@ -96,7 +96,7 @@ Chart: magento:19.2.26
 	apiVersion: v2
 	appVersion: 2.4.4
 	created: Not specified
-	dependencies: common:1.13.1, mariadb:9.8.1, elasticsearch:17.9.29
+	dependencies: mariadb:9.8.1, elasticsearch:17.9.29, common:1.13.1
 	description: Magento is a powerful open source e-commerce platform. With easy customizations and rich features, it allows retailers to grow their online businesses in a cost-effective way.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/magento/img/magento-stack-220x234.png
@@ -115,14 +115,14 @@ Image: docker.io/bitnami/elasticsearch:7.17.3-debian-10-r0
 
 Chart Dependencies
 ------------------
-magento:19.2.26 depends on common:1.13.1
 magento:19.2.26 depends on mariadb:9.8.1
 mariadb:9.8.1 depends on common:1.10.1
 magento:19.2.26 depends on elasticsearch:17.9.29
+elasticsearch:17.9.29 depends on common:1.13.0
 elasticsearch:17.9.29 depends on kibana:9.3.17
 kibana:9.3.17 depends on common:1.13.0
-elasticsearch:17.9.29 depends on common:1.13.0
+magento:19.2.26 depends on common:1.13.1
 mariadb:9.8.1 uses docker.io/bitnami/mariadb:10.4.24-debian-10-r79
 elasticsearch:17.9.29 uses docker.io/bitnami/elasticsearch:7.17.3-debian-10-r0
 
-Generated on 2022/05/07 15:34:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:32:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

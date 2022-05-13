@@ -1,0 +1,47 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "jenkins",
+    "ci",
+    "cd",
+    "http",
+    "web",
+    "application"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/jenkins:2.332.2-debian-10-r26",
+      "type": "image",
+      "version": "2.332.2-debian-10-r26"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.1"
+    }
+  ],
+  "name": "jenkins:10.0.8",
+  "description": "Jenkins is an open source Continuous Integration and Continuous Delivery (CI/CD) server designed to automate the building, testing, and deploying of any software project.",
+  "type": "chart",
+  "shortName": "jenkins",
+  "version": "10.0.8"
+}

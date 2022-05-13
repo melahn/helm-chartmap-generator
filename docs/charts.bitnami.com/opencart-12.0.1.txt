@@ -36,7 +36,7 @@ Chart: opencart:12.0.1
 	apiVersion: v2
 	appVersion: 3.0.3-8
 	created: Not specified
-	dependencies: mariadb:11.0.0, common:1.13.0
+	dependencies: common:1.13.0, mariadb:11.0.0
 	description: OpenCart is free open source ecommerce platform for online merchants. OpenCart provides a professional and reliable foundation from which to build a successful online store.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/opencart/img/opencart-stack-220x234.png
@@ -54,9 +54,9 @@ Image: docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
 Chart Dependencies
 ------------------
+opencart:12.0.1 depends on common:1.13.0
 opencart:12.0.1 depends on mariadb:11.0.0
 mariadb:11.0.0 depends on common:1.13.0
-opencart:12.0.1 depends on common:1.13.0
 mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
-Generated on 2022/05/07 15:40:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:38:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

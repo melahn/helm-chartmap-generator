@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/external-dns:0.11.1-debian-10-r1\
 external_dns_6_3_0--[#green]-|>common_1_13_1
 external_dns_6_3_0--[#orange]-|>docker_io_bitnami_external_dns_0_11_1_debian_10_r1
 
-center footer Generated on 2022/05/07 15:27:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:25:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

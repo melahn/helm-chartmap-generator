@@ -16,71 +16,6 @@
         "name": "Bitnami",
         "email": "containers@bitnami.com"
       }],
-      "keywords": [
-        "mariadb",
-        "mysql",
-        "database",
-        "sql",
-        "prometheus"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/mariadb:10.4.24-debian-10-r79",
-          "type": "image",
-          "version": "10.4.24-debian-10-r79"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.10.1",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.10.1"
-        }
-      ],
-      "name": "mariadb:9.8.1",
-      "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
-      "type": "chart",
-      "shortName": "mariadb",
-      "version": "9.8.1"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "common",
-        "helper",
-        "template",
-        "function",
-        "bitnami"
-      ],
-      "children": [],
-      "name": "common:1.13.1",
-      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-      "type": "chart",
-      "shortName": "common",
-      "version": "1.13.1"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
       "keywords": ["elasticsearch"],
       "children": [
         {
@@ -152,6 +87,71 @@
       "type": "chart",
       "shortName": "elasticsearch",
       "version": "17.9.29"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mariadb",
+        "mysql",
+        "database",
+        "sql",
+        "prometheus"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/mariadb:10.4.24-debian-10-r79",
+          "type": "image",
+          "version": "10.4.24-debian-10-r79"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.10.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.10.1"
+        }
+      ],
+      "name": "mariadb:9.8.1",
+      "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
+      "type": "chart",
+      "shortName": "mariadb",
+      "version": "9.8.1"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.1"
     }
   ],
   "name": "magento:19.2.26",

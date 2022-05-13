@@ -42,4 +42,4 @@ Chart Dependencies
 postgresql:11.1.28 depends on common:1.13.1
 postgresql:11.1.28 uses docker.io/bitnami/postgresql:14.2.0-debian-10-r88
 
-Generated on 2022/05/07 15:42:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:40:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

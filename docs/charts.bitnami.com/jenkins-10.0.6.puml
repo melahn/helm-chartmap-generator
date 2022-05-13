@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/jenkins:2.332.2-debian-10-r7\n===
 jenkins_10_0_6--[#green]-|>common_1_13_0
 jenkins_10_0_6--[#orange]-|>docker_io_bitnami_jenkins_2_332_2_debian_10_r7
 
-center footer Generated on 2022/05/07 15:30:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:28:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

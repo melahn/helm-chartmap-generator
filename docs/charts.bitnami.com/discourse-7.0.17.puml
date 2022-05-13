@@ -1,0 +1,33 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for discourse:7.0.17
+
+'There are 4 referenced Helm Charts
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "postgresql:11.1.22\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_1_22 #LightSteelBlue
+artifact "discourse:7.0.17\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tpaulczar\n\t\tlucaprete\n====\n\tKeywords: \n\t\tcommunity\n\t\tforum" as discourse_7_0_17 #LightSeaGreen
+artifact "redis:16.8.7\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_16_8_7 #LightSeaGreen
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.6-debian-10-r192\n====\n6.2.6-debian-10-r192" as docker_io_bitnami_redis_6_2_6_debian_10_r192 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/discourse:2.8.3-debian-10-r7\n====\n2.8.3-debian-10-r7" as docker_io_bitnami_discourse_2_8_3_debian_10_r7 #LightGrey
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.2.0-debian-10-r70\n====\n14.2.0-debian-10-r70" as docker_io_bitnami_postgresql_14_2_0_debian_10_r70 #DarkSalmon
+
+'Chart Dependencies
+discourse_7_0_17--[#green]-|>common_1_13_0
+discourse_7_0_17--[#green]-|>redis_16_8_7
+redis_16_8_7--[#green]-|>common_1_13_0
+discourse_7_0_17--[#green]-|>postgresql_11_1_22
+postgresql_11_1_22--[#green]-|>common_1_13_0
+postgresql_11_1_22--[#orange]-|>docker_io_bitnami_postgresql_14_2_0_debian_10_r70
+discourse_7_0_17--[#orange]-|>docker_io_bitnami_discourse_2_8_3_debian_10_r7
+redis_16_8_7--[#orange]-|>docker_io_bitnami_redis_6_2_6_debian_10_r192
+
+center footer Generated on 2022/05/13 06:23:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

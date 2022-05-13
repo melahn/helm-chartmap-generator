@@ -42,4 +42,4 @@ Chart Dependencies
 redis-cluster:7.5.0 depends on common:1.13.0
 redis-cluster:7.5.0 uses docker.io/bitnami/redis-cluster:6.2.6-debian-10-r193
 
-Generated on 2022/05/07 15:44:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:42:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

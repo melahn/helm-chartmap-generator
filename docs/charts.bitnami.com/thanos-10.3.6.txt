@@ -61,4 +61,4 @@ thanos:10.3.6 depends on common:1.13.0
 minio:11.2.13 uses docker.io/bitnami/minio:2022.4.16-debian-10-r3
 thanos:10.3.6 uses docker.io/bitnami/thanos:0.25.2-scratch-r5
 
-Generated on 2022/05/07 15:47:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:45:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

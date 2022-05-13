@@ -36,7 +36,7 @@ Chart: concourse:1.0.18
 	apiVersion: v2
 	appVersion: 7.7.1
 	created: Not specified
-	dependencies: common:1.13.0, postgresql:11.1.22
+	dependencies: postgresql:11.1.22, common:1.13.0
 	description: Concourse is an automation system written in Go. It is most commonly used for CI/CD, and is built to scale to any kind of automation pipeline, from simple to complex.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/concourse/img/concourse-stack-220x234.png
@@ -54,9 +54,9 @@ Image: docker.io/bitnami/postgresql:14.2.0-debian-10-r70
 
 Chart Dependencies
 ------------------
-concourse:1.0.18 depends on common:1.13.0
 concourse:1.0.18 depends on postgresql:11.1.22
 postgresql:11.1.22 depends on common:1.13.0
+concourse:1.0.18 depends on common:1.13.0
 postgresql:11.1.22 uses docker.io/bitnami/postgresql:14.2.0-debian-10-r70
 
-Generated on 2022/05/07 15:22:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:20:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -36,7 +36,7 @@ Chart: redmine:20.0.0
 	apiVersion: v2
 	appVersion: 5.0.0
 	created: Not specified
-	dependencies: postgresql:11.1.22, common:1.13.0, mariadb:11.0.0
+	dependencies: postgresql:11.1.22, mariadb:11.0.0, common:1.13.0
 	description: Redmine is an open source management application. It includes a tracking issue system, Gantt charts for a visual view of projects and deadlines, and supports SCM integration for version control.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/redmine/img/redmine-stack-220x234.png
@@ -73,11 +73,11 @@ Chart Dependencies
 ------------------
 redmine:20.0.0 depends on postgresql:11.1.22
 postgresql:11.1.22 depends on common:1.13.0
-redmine:20.0.0 depends on common:1.13.0
 redmine:20.0.0 depends on mariadb:11.0.0
 mariadb:11.0.0 depends on common:1.13.0
+redmine:20.0.0 depends on common:1.13.0
 mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 redmine:20.0.0 uses docker.io/bitnami/redmine:5.0.0-debian-10-r1
 postgresql:11.1.22 uses docker.io/bitnami/postgresql:14.2.0-debian-10-r70
 
-Generated on 2022/05/07 15:44:53 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:42:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

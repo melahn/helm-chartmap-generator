@@ -19,11 +19,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/zookeeper:3.8.0-debian-10-r37\n==
 usecase "Image\n====\ndocker.io\n====\nbitnami/kafka:3.1.0-debian-10-r89\n====\n3.1.0-debian-10-r89" as docker_io_bitnami_kafka_3_1_0_debian_10_r89 #LightPink
 
 'Chart Dependencies
-kafka_16_2_9--[#green]-|>common_1_13_1
 kafka_16_2_9--[#green]-|>zookeeper_9_1_1
 zookeeper_9_1_1--[#green]-|>common_1_13_0
+kafka_16_2_9--[#green]-|>common_1_13_1
 kafka_16_2_9--[#orange]-|>docker_io_bitnami_kafka_3_1_0_debian_10_r89
 zookeeper_9_1_1--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r37
 
-center footer Generated on 2022/05/07 15:31:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:29:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -46,25 +46,6 @@
       "version": "2.4.5-scratch-r0"
     },
     {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "common",
-        "helper",
-        "template",
-        "function",
-        "bitnami"
-      ],
-      "children": [],
-      "name": "common:1.13.1",
-      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-      "type": "chart",
-      "shortName": "common",
-      "version": "1.13.1"
-    },
-    {
       "maintainers": [
         {
           "name": "Bitnami",
@@ -166,6 +147,25 @@
       "type": "chart",
       "shortName": "redis",
       "version": "16.8.9"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.1"
     }
   ],
   "name": "kubeapps:8.0.15",

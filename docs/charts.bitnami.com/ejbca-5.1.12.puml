@@ -18,11 +18,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.5.15-debian-10-r52\n==
 usecase "Image\n====\ndocker.io\n====\nbitnami/ejbca:7.4.3-2-debian-10-r142\n====\n7.4.3-2-debian-10-r142" as docker_io_bitnami_ejbca_7_4_3_2_debian_10_r142 #Azure
 
 'Chart Dependencies
-ejbca_5_1_12--[#green]-|>common_1_13_0
 ejbca_5_1_12--[#green]-|>mariadb_10_5_0
 mariadb_10_5_0--[#green]-|>common_1_13_0
+ejbca_5_1_12--[#green]-|>common_1_13_0
 mariadb_10_5_0--[#orange]-|>docker_io_bitnami_mariadb_10_5_15_debian_10_r52
 ejbca_5_1_12--[#orange]-|>docker_io_bitnami_ejbca_7_4_3_2_debian_10_r142
 
-center footer Generated on 2022/05/07 15:26:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:24:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

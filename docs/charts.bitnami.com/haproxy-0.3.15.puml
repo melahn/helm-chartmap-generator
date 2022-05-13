@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/haproxy:2.5.6-debian-10-r0\n====\
 haproxy_0_3_15--[#green]-|>common_1_13_1
 haproxy_0_3_15--[#orange]-|>docker_io_bitnami_haproxy_2_5_6_debian_10_r0
 
-center footer Generated on 2022/05/07 15:28:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:27:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

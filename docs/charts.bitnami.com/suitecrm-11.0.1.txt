@@ -36,7 +36,7 @@ Chart: suitecrm:11.0.1
 	apiVersion: v2
 	appVersion: 7.12.5
 	created: Not specified
-	dependencies: common:1.13.0, mariadb:11.0.0
+	dependencies: mariadb:11.0.0, common:1.13.0
 	description: SuiteCRM is a completely open source, enterprise-grade Customer Relationship Management (CRM) application. SuiteCRM is a fork of the popular SugarCRM application.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/suitecrm/img/suitecrm-stack-220x234.png
@@ -54,9 +54,9 @@ Image: docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
 Chart Dependencies
 ------------------
-suitecrm:11.0.1 depends on common:1.13.0
 suitecrm:11.0.1 depends on mariadb:11.0.0
 mariadb:11.0.0 depends on common:1.13.0
+suitecrm:11.0.1 depends on common:1.13.0
 mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
-Generated on 2022/05/07 15:46:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:44:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

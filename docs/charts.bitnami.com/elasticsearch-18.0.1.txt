@@ -59,4 +59,4 @@ elasticsearch:18.0.1 depends on kibana:10.0.5
 kibana:10.0.5 depends on common:1.13.1
 elasticsearch:18.0.1 uses docker.io/bitnami/elasticsearch:8.2.0-debian-10-r1
 
-Generated on 2022/05/07 15:26:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:24:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

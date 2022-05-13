@@ -26,25 +26,6 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
-        "common",
-        "helper",
-        "template",
-        "function",
-        "bitnami"
-      ],
-      "children": [],
-      "name": "common:1.10.3",
-      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-      "type": "chart",
-      "shortName": "common",
-      "version": "1.10.3"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
         "mariadb",
         "mysql",
         "database",
@@ -84,6 +65,25 @@
       "type": "chart",
       "shortName": "mariadb",
       "version": "10.3.0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.10.3",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.10.3"
     }
   ],
   "name": "orangehrm:11.0.2",

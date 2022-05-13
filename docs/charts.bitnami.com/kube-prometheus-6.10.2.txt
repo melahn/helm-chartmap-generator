@@ -21,7 +21,7 @@ Chart: kube-prometheus:6.10.2
 	apiVersion: v2
 	appVersion: 0.56.1
 	created: Not specified
-	dependencies: node-exporter:2.4.11, common:1.13.1, kube-state-metrics:2.2.19
+	dependencies: common:1.13.1, node-exporter:2.4.11, kube-state-metrics:2.2.19
 	description: Prometheus Operator provides easy monitoring definitions for Kubernetes services and deployment and management of Prometheus instances.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/prometheus-operator/img/prometheus-operator-stack-220x234.png
@@ -86,13 +86,13 @@ Image: docker.io/bitnami/blackbox-exporter:0.20.0-debian-10-r47
 
 Chart Dependencies
 ------------------
+kube-prometheus:6.10.2 depends on common:1.13.1
 kube-prometheus:6.10.2 depends on node-exporter:2.4.11
 node-exporter:2.4.11 depends on common:1.13.0
-kube-prometheus:6.10.2 depends on common:1.13.1
 kube-prometheus:6.10.2 depends on kube-state-metrics:2.2.19
 kube-state-metrics:2.2.19 depends on common:1.13.0
 kube-prometheus:6.10.2 uses docker.io/bitnami/prometheus-operator:0.56.1-debian-10-r0
 kube-prometheus:6.10.2 uses docker.io/bitnami/blackbox-exporter:0.20.0-debian-10-r47
 kube-state-metrics:2.2.19 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r42
 
-Generated on 2022/05/07 15:32:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:31:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

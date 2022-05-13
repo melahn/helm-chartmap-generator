@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/influxdb:2.2.0-debian-10-r26\n===
 influxdb_5_0_0--[#green]-|>common_1_13_1
 influxdb_5_0_0--[#orange]-|>docker_io_bitnami_influxdb_2_2_0_debian_10_r26
 
-center footer Generated on 2022/05/07 15:29:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 06:28:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

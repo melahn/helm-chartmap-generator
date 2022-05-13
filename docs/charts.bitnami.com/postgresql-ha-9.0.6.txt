@@ -44,4 +44,4 @@ postgresql-ha:9.0.6 depends on common:1.13.1
 postgresql-ha:9.0.6 uses docker.io/bitnami/pgpool:4.3.1-debian-10-r72
 postgresql-ha:9.0.6 uses docker.io/bitnami/postgresql-repmgr:14.2.0-debian-10-r81
 
-Generated on 2022/05/07 15:42:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:40:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

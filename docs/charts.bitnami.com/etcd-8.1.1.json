@@ -1,0 +1,46 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "etcd",
+    "cluster",
+    "database",
+    "cache",
+    "key-value"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/etcd:3.5.4-debian-10-r0",
+      "type": "image",
+      "version": "3.5.4-debian-10-r0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.0"
+    }
+  ],
+  "name": "etcd:8.1.1",
+  "description": "etcd is a distributed key-value store designed to securely store data across a cluster. etcd is widely used in production on account of its reliability, fault-tolerance and ease of use.",
+  "type": "chart",
+  "shortName": "etcd",
+  "version": "8.1.1"
+}

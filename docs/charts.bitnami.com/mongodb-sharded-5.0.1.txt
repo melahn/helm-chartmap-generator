@@ -42,4 +42,4 @@ Chart Dependencies
 mongodb-sharded:5.0.1 depends on common:1.13.1
 mongodb-sharded:5.0.1 uses docker.io/bitnami/mongodb-sharded:5.0.8-debian-10-r5
 
-Generated on 2022/05/07 15:37:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:35:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -34,13 +34,6 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/harbor-notary-signer:2.5.0-debian-10-r19",
-      "type": "image",
-      "version": "2.5.0-debian-10-r19"
-    },
-    {
-      "repoHost": "docker.io",
-      "children": [],
       "name": "bitnami/chartmuseum:0.14.0-debian-10-r86",
       "type": "image",
       "version": "0.14.0-debian-10-r86"
@@ -48,7 +41,7 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/harbor-registryctl:2.5.0-debian-10-r19",
+      "name": "bitnami/harbor-notary-signer:2.5.0-debian-10-r19",
       "type": "image",
       "version": "2.5.0-debian-10-r19"
     },
@@ -58,6 +51,13 @@
       "name": "bitnami/nginx:1.21.6-debian-10-r93",
       "type": "image",
       "version": "1.21.6-debian-10-r93"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/harbor-registryctl:2.5.0-debian-10-r19",
+      "type": "image",
+      "version": "2.5.0-debian-10-r19"
     },
     {
       "repoHost": "docker.io",
@@ -79,25 +79,6 @@
       "name": "bitnami/harbor-adapter-trivy:2.5.0-debian-10-r20",
       "type": "image",
       "version": "2.5.0-debian-10-r20"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "common",
-        "helper",
-        "template",
-        "function",
-        "bitnami"
-      ],
-      "children": [],
-      "name": "common:1.13.1",
-      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-      "type": "chart",
-      "shortName": "common",
-      "version": "1.13.1"
     },
     {
       "maintainers": [
@@ -151,6 +132,25 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "11.1.25"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.1"
     },
     {
       "maintainers": [

@@ -42,4 +42,4 @@ Chart Dependencies
 aspnet-core:3.1.18 depends on common:1.13.0
 aspnet-core:3.1.18 uses docker.io/bitnami/aspnet-core:6.0.4-debian-10-r7
 
-Generated on 2022/05/07 15:21:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 06:19:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
