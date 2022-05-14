@@ -15,7 +15,7 @@
     <logger name="helm-chartmap-generator-logger" level="INFO" additivity="false">
       <appender-ref ref="Console" />
     </logger>
-    <root level="INFO">
+    <root level="ERROR">
         <appender-ref ref="File" />
     </root>
   </Loggers>

@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyByte;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
@@ -188,7 +189,7 @@ class ChartMapGeneratorTest {
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         ChartMapGenerator scmg1 = spy(cmg1);
-        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString());
+        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString(), any());
         scmg1.generate();
         assertEquals(3, scmg1.getChartCountBad());
         assertEquals(0, scmg1.getChartCountGood());
@@ -221,14 +222,14 @@ class ChartMapGeneratorTest {
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_TRUE);
         ChartMapGenerator scmg1 = spy(cmg1);
-        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString());
+        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString(), any());
         scmg1.generate();
         assertTrue(fileContains(Paths.get(testDirectoryName, INDEX_FILENAME), "Here is a list of the charts with errors"));
         System.out.println("A list of charts with errors is found, as expected");
         // test getDetails without a simulated bad chart
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_TRUE);
-        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString());
+        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString(), any());
         cmg2.generate();
         assertFalse(fileContains(Paths.get(testDirectoryName, INDEX_FILENAME), "Here is a list of the charts with errors (consult the output log to see the specific error messages)"));
         System.out.println("A list of charts with errors was not found");

@@ -57,8 +57,6 @@ public class ChartMapGenerator {
     private static final String CHARTMAP_GENERATOR_LOGGER_NAME = "helm-chartmap-generator-logger";
     private static final String CHARTMAP_LOG_NAME = "helm-chartmap.log";
     private static final boolean CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE = true;
-    private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH_FALSE = false;
-    private static final boolean CHARTMAP_REFRESH_REPOS_SWITCH_TRUE = true;
     private static final boolean CHARTMAP_VERBOSE_SWITCH_FALSE = false;
     private static final String LI_END = "</li>\n";
 
@@ -283,28 +281,36 @@ public class ChartMapGenerator {
     }
 
     /**
-     * Prints a stanza that shows a chart name and links to all the ChartMaps produced from the chart using ChartMap.
+     * Prints a stanza that shows a chart name and links to all the ChartMaps produced from the chart using the ChartMap class.
      *
+     * Note that the printChart(h, e, r) method will first attempt to print the chart with refresh set to false.  If
+     * that fails, it tries again with the refresh fhag set to true. If that fails no further attempts are made to print
+     * that chart. But also note that if the refresh option was set to true and the print succeeded then all the rest of the
+     * attempts for that chart for the other extensions will be attempted with the refresh flag set to true. This avoids us 
+     * needing to rediscover for each extension that refresh was needed.
+     * 
      * @param h helm chart
      * 
      */
     protected void printChart(HelmChart h) {
         try {
-            logger.info("Printing chart: {}", h.getNameFull());
             startStanzaInIndex(h.getNameFull());
+            boolean r = false;
             for (String e : extensions) {
-                printChart(h, e);
+                r = printChart(h, e, r);
             }
             closeStanzaInIndex();
             Files.write(Paths.get(indexFilename),
                writeBuffer.getBytes(),
                StandardOpenOption.APPEND);
             chartCountGood++;
-            logger.info("Printed chart: {}", h.getNameFull());
+            String s = r?" with the refresh option":"";
+            logger.info("Printed chart: {} {}", h.getNameFull(), s);
         }
         catch (ChartMapGeneratorException | IOException e) {
             chartCountBad++;
             chartsWithErrors.add(h.getNameFull());
+            logger.info("{} could not be printed. See helm-chartmap.log for details", h.getNameFull());
         }
         writeBuffer = "";
         chartCount++;
@@ -317,41 +323,50 @@ public class ChartMapGenerator {
      * 
      * If that fails, then an attempt is made to print the chart with the 
      * refresh flag set.  
-     *
+     * 
      * @param h helm chart
      * @param e the file extension to use
+     * @param r refresh option 
+     * @return the refresh option used to print the chart
      * @throws ChartMapGeneratorException if ChartMap throws a ChartMapException generating the chart
      */
-    protected void printChart(HelmChart h, String e) throws ChartMapGeneratorException {
+    protected Boolean printChart(HelmChart h, String e, Boolean r) throws ChartMapGeneratorException {
         String filename = h.getName().concat("-").concat(h.getVersion()).concat(e);
-        ChartMap cm = null;
+        boolean refresh = r;
         try {
-            cm = getChartMap(
-                    ChartOption.CHARTNAME,
-                    h.getNameFull(),
-                    outputDirName.concat(File.separator).concat(filename),
-                    envFilename,
-                    new boolean[] { CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE, CHARTMAP_REFRESH_REPOS_SWITCH_FALSE,
-                            CHARTMAP_VERBOSE_SWITCH_FALSE });
-            cm.print();
+            printChartMap(h.getNameFull(), filename, refresh);
         } catch (ChartMapException e1) {
             try {
-                logger.info("Chart {} failed to print the {} format. Retrying with the refresh option", e, h.getNameFull());
-                cm = getChartMap(
-                        ChartOption.CHARTNAME,
-                        h.getNameFull(),
-                        outputDirName.concat(File.separator).concat(filename),
-                        envFilename,
-                        new boolean[] { CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE, CHARTMAP_REFRESH_REPOS_SWITCH_TRUE,
-                                CHARTMAP_VERBOSE_SWITCH_FALSE });
-                cm.print();
-                logger.info("Chart {} printed the {} format successfully with the refresh option", e, h.getNameFull());
-            } catch (ChartMapException e2) {
-                logger.info("Chart {} failed to print even with the refresh option", h.getNameFull());
-                throw new ChartMapGeneratorException(e2.getMessage());
+                if (!refresh) {
+                    refresh = true;
+                    printChartMap(h.getNameFull(), filename, refresh);
+                }
+            } catch (ChartMapException x) {
+                LogManager.getLogger().error("Chart {} failed to print even with the refresh option", h.getNameFull());
+                throw new ChartMapGeneratorException(x.getMessage());
             }
         }
         addChartToIndex(filename);
+        return refresh;
+    }
+
+    /**
+     * Prints a Chart Map.
+     * 
+     * @param c the name of the chart from which the Chart Map will be created
+     * @param f the file name to whichh the Chart Map should be printed
+     * @param r the refresh option to use
+     * @throws ChartMapException if the Chart Map could not be printed
+     */
+    void printChartMap(String c, String f, boolean r) throws ChartMapException {
+        ChartMap cm = getChartMap(
+                ChartOption.CHARTNAME,
+                c,
+                outputDirName.concat(File.separator).concat(f),
+                envFilename,
+                new boolean[] { CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE, r,
+                        CHARTMAP_VERBOSE_SWITCH_FALSE });
+        cm.print();
     }
 
     /**
