@@ -76,4 +76,4 @@ kube-state-metrics:1.1.1 depends on common:1.1.1
 wavefront:1.1.0 uses docker.io/bitnami/wavefront-proxy:9.3.0-debian-10-r79
 kube-state-metrics:1.1.1 uses docker.io/bitnami/kube-state-metrics:1.9.7-debian-10-r143
 
-Generated on 2022/05/07 20:43:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 17:12:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

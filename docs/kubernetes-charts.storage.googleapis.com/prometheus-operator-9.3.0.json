@@ -29,6 +29,43 @@
     {
       "maintainers": [
         {
+          "name": "zanhsieh",
+          "email": "zanhsieh@gmail.com"
+        },
+        {
+          "name": "rtluckie",
+          "email": "rluckie@cisco.com"
+        },
+        {
+          "name": "maorfr",
+          "email": "maor.friedman@redhat.com"
+        }
+      ],
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "kiwigrid/k8s-sidecar",
+          "type": "image",
+          "version": "0.1.151"
+        },
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "grafana/grafana",
+          "type": "image",
+          "version": "7.0.3"
+        }
+      ],
+      "name": "grafana:5.3.0",
+      "description": "The leading tool for querying and visualizing time series and metrics.",
+      "type": "chart",
+      "shortName": "grafana",
+      "version": "5.3.0"
+    },
+    {
+      "maintainers": [
+        {
           "name": "gianrubio",
           "email": "gianrubio@gmail.com"
         },
@@ -79,43 +116,6 @@
       "type": "chart",
       "shortName": "kube-state-metrics",
       "version": "2.8.10"
-    },
-    {
-      "maintainers": [
-        {
-          "name": "zanhsieh",
-          "email": "zanhsieh@gmail.com"
-        },
-        {
-          "name": "rtluckie",
-          "email": "rluckie@cisco.com"
-        },
-        {
-          "name": "maorfr",
-          "email": "maor.friedman@redhat.com"
-        }
-      ],
-      "children": [
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "kiwigrid/k8s-sidecar",
-          "type": "image",
-          "version": "0.1.151"
-        },
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "grafana/grafana",
-          "type": "image",
-          "version": "7.0.3"
-        }
-      ],
-      "name": "grafana:5.3.0",
-      "description": "The leading tool for querying and visualizing time series and metrics.",
-      "type": "chart",
-      "shortName": "grafana",
-      "version": "5.3.0"
     }
   ],
   "name": "prometheus-operator:9.3.0",

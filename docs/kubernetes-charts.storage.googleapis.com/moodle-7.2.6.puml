@@ -21,5 +21,5 @@ moodle_7_2_6--[#green]-|>mariadb_7_3_12
 mariadb_7_3_12--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r27
 moodle_7_2_6--[#orange]-|>docker_io_bitnami_moodle_3_8_2_debian_10_r0
 
-center footer Generated on 2022/05/07 20:19:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:46:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 hoard:1.0.0 uses quay.io/monax/hoard:6.0.0
 
-Generated on 2022/05/07 20:05:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:32:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

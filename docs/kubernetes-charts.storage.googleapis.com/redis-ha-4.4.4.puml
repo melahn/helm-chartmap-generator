@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nredis\n====\n5.0.6-alpine" as redis_5_0_
 'Chart Dependencies
 redis_ha_4_4_4--[#orange]-|>redis_5_0_6_alpine
 
-center footer Generated on 2022/05/07 20:32:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 17:00:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

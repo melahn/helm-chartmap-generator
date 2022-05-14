@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 rabbitmq-ha:1.47.1 uses rabbitmq:3.8.7-alpine
 
-Generated on 2022/05/07 20:31:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:59:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

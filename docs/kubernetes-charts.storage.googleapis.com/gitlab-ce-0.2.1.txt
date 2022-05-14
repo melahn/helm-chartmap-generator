@@ -21,7 +21,7 @@ Chart: gitlab-ce:0.2.1
 	apiVersion: Not specified
 	appVersion: Not specified
 	created: Not specified
-	dependencies: redis:0.9.0, postgresql:0.8.1
+	dependencies: postgresql:0.8.1, redis:0.9.0
 	description: GitLab Community Edition
 	digest: Not specified
 	icon: https://gitlab.com/uploads/group/avatar/6543/gitlab-logo-square.png
@@ -55,9 +55,9 @@ Image: postgres:9.6
 
 Chart Dependencies
 ------------------
-gitlab-ce:0.2.1 depends on redis:0.9.0
 gitlab-ce:0.2.1 depends on postgresql:0.8.1
+gitlab-ce:0.2.1 depends on redis:0.9.0
 redis:0.9.0 uses bitnami/redis:3.2.9-r2
 postgresql:0.8.1 uses postgres:9.6
 
-Generated on 2022/05/07 20:01:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:28:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

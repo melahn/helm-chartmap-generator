@@ -44,4 +44,4 @@ odoo:13.0.5 depends on postgresql:8.6.2
 postgresql:8.6.2 uses docker.io/bitnami/postgresql:11.7.0-debian-10-r9
 odoo:13.0.5 uses docker.io/bitnami/odoo:12.0.20200215-debian-10-r17
 
-Generated on 2022/05/07 20:22:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:50:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

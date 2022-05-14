@@ -44,4 +44,4 @@ moodle:7.2.8 depends on mariadb:7.3.14
 mariadb:7.3.14 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r44
 moodle:7.2.8 uses docker.io/bitnami/moodle:3.8.2-debian-10-r3
 
-Generated on 2022/05/07 20:19:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:46:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

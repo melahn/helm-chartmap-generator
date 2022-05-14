@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\ncomcast/kuberhealthy:v1.0.2\n====\nv1.0.2" 
 'Chart Dependencies
 kuberhealthy_1_2_7--[#orange]-|>quay_io_comcast_kuberhealthy_v1_0_2
 
-center footer Generated on 2022/05/07 20:12:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:40:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

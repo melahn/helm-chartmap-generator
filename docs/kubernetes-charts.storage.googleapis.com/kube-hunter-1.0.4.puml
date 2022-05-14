@@ -15,5 +15,5 @@ artifact "kube-hunter:1.0.4\n====\n\tType: application\n====\n\tRepo: https://ch
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/07 20:11:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:38:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

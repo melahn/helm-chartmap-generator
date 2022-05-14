@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 elasticsearch-exporter:3.7.1 uses justwatch/elasticsearch_exporter:1.1.0
 
-Generated on 2022/05/07 19:57:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:24:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

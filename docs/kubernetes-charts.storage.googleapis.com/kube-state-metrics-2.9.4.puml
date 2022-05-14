@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\ncoreos/kube-state-metrics:v1.9.7\n====\nv1.
 'Chart Dependencies
 kube_state_metrics_2_9_4--[#orange]-|>quay_io_coreos_kube_state_metrics_v1_9_7
 
-center footer Generated on 2022/05/07 20:12:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:39:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

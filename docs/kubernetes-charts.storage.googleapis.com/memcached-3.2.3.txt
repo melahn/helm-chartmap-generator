@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 memcached:3.2.3 uses memcached:1.5.20
 
-Generated on 2022/05/07 20:16:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:44:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -7,14 +7,14 @@
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-indexer:2.3.0",
+      "name": "jfrog/xray-server:2.3.0",
       "type": "image",
       "version": "2.3.0"
     },
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-server:2.3.0",
+      "name": "jfrog/xray-indexer:2.3.0",
       "type": "image",
       "version": "2.3.0"
     },
@@ -58,29 +58,6 @@
     },
     {
       "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "mongodb",
-        "database",
-        "nosql"
-      ],
-      "children": [{
-        "repoHost": "docker.io",
-        "children": [],
-        "name": "bitnami/mongodb:3.6.3",
-        "type": "image",
-        "version": "3.6.3"
-      }],
-      "name": "mongodb:2.0.5",
-      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
-      "type": "chart",
-      "shortName": "mongodb",
-      "version": "2.0.5"
-    },
-    {
-      "maintainers": [{
         "name": "etiennetremel",
         "email": "etienne.tremel@container-solutions.com"
       }],
@@ -104,6 +81,29 @@
       "type": "chart",
       "shortName": "rabbitmq-ha",
       "version": "1.5.2"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mongodb",
+        "database",
+        "nosql"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/mongodb:3.6.3",
+        "type": "image",
+        "version": "3.6.3"
+      }],
+      "name": "mongodb:2.0.5",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "type": "chart",
+      "shortName": "mongodb",
+      "version": "2.0.5"
     }
   ],
   "name": "xray:0.4.3",

@@ -28,4 +28,4 @@ Chart Dependencies
 nginx-lego:0.3.1 uses k8s.gcr.io/defaultbackend:1.0
 nginx-lego:0.3.1 uses k8s.gcr.io/nginx-ingress-controller:0.8.3
 
-Generated on 2022/05/07 20:21:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:49:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

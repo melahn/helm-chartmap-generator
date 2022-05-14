@@ -19,5 +19,5 @@ usecase "Image\n====\ngcr.io\n====\ngoogle_containers/defaultbackend:1.0\n====\n
 nginx_lego_0_2_2--[#orange]-|>gcr_io_google_containers_defaultbackend_1_0
 nginx_lego_0_2_2--[#orange]-|>gcr_io_google_containers_nginx_ingress_controller_0_8_3
 
-center footer Generated on 2022/05/07 20:22:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:49:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

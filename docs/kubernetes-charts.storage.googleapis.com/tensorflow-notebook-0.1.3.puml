@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ntensorflow/tensorflow\n====\n1.6.0-devel
 'Chart Dependencies
 tensorflow_notebook_0_1_3--[#orange]-|>tensorflow_tensorflow_1_6_0_devel
 
-center footer Generated on 2022/05/07 20:41:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 17:09:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

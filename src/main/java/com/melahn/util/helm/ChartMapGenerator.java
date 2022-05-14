@@ -300,6 +300,7 @@ public class ChartMapGenerator {
                writeBuffer.getBytes(),
                StandardOpenOption.APPEND);
             chartCountGood++;
+            logger.info("Printed chart: {}", h.getNameFull());
         }
         catch (ChartMapGeneratorException | IOException e) {
             chartCountBad++;

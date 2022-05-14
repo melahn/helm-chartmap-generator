@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 clamav:1.0.5 uses mailu/clamav:1.6
 
-Generated on 2022/05/07 19:50:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:17:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

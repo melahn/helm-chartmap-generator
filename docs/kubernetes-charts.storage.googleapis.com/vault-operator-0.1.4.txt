@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 vault-operator:0.1.4 uses quay.io/coreos/vault-operator:0.1.9
 
-Generated on 2022/05/07 20:42:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 17:10:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

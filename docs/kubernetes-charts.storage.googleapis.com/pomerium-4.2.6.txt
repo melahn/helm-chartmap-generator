@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 pomerium:4.2.6 uses pomerium/pomerium:v0.5.2
 
-Generated on 2022/05/07 20:26:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:54:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

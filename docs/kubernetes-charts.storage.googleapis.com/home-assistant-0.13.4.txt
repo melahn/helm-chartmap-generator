@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 home-assistant:0.13.4 uses homeassistant/home-assistant:0.108.7
 
-Generated on 2022/05/07 20:05:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:32:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

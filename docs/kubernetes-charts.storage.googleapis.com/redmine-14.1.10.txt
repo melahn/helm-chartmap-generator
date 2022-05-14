@@ -44,4 +44,4 @@ redmine:14.1.10 depends on mariadb:7.3.10
 mariadb:7.3.10 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r17
 redmine:14.1.10 uses docker.io/bitnami/redmine:4.1.0-debian-10-r25
 
-Generated on 2022/05/07 20:32:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 17:00:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

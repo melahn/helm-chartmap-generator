@@ -21,7 +21,7 @@ Chart: spring-cloud-data-flow:2.7.2
 	apiVersion: v1
 	appVersion: 2.5.3.RELEASE
 	created: Not specified
-	dependencies: rabbitmq:6.16.6, mysql:1.6.2
+	dependencies: mysql:1.6.2, rabbitmq:6.16.6
 	description: Toolkit for building data processing pipelines.
 	digest: Not specified
 	icon: https://raw.githubusercontent.com/spring-io/dataflow.spring.io/master/src/images/dataflow-icon.png
@@ -57,11 +57,11 @@ Image: docker.io/bitnami/rabbitmq:3.8.2-debian-10-r0
 
 Chart Dependencies
 ------------------
-spring-cloud-data-flow:2.7.2 depends on rabbitmq:6.16.6
 spring-cloud-data-flow:2.7.2 depends on mysql:1.6.2
+spring-cloud-data-flow:2.7.2 depends on rabbitmq:6.16.6
 rabbitmq:6.16.6 uses docker.io/bitnami/rabbitmq:3.8.2-debian-10-r0
 spring-cloud-data-flow:2.7.2 uses springcloud/spring-cloud-dataflow-server:2.5.3.RELEASE
 spring-cloud-data-flow:2.7.2 uses springcloud/spring-cloud-skipper-server:2.4.3.RELEASE
 mysql:1.6.2 uses mysql:5.7.28
 
-Generated on 2022/05/07 20:38:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 17:06:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

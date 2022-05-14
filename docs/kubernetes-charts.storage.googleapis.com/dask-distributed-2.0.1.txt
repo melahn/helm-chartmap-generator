@@ -28,4 +28,4 @@ Chart Dependencies
 dask-distributed:2.0.1 uses daskdev/dask:latest
 dask-distributed:2.0.1 uses jupyter/base-notebook:11be019e4079
 
-Generated on 2022/05/07 19:53:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:20:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

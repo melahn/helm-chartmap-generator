@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ncockroachdb/cockroach\n====\nv19.2.4" as
 'Chart Dependencies
 cockroachdb_3_0_6--[#orange]-|>cockroachdb_cockroach_v19_2_4
 
-center footer Generated on 2022/05/07 19:51:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:18:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

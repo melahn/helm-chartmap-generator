@@ -6,7 +6,7 @@ Chart: graylog:1.6.12
 	apiVersion: v1
 	appVersion: 3.1
 	created: Not specified
-	dependencies: elasticsearch:1.32.2, mongodb-replicaset:3.11.2
+	dependencies: mongodb-replicaset:3.11.2, elasticsearch:1.32.2
 	description: DEPRECATED - Graylog is the centralized log management solution built to open standards for capturing, storing, and enabling real-time analysis of terabytes of machine data.
 	digest: Not specified
 	icon: https://global-uploads.webflow.com/5a218ef7897bf400019e2f16/5a218ef7897bf400019e2f60_logo-graylog.png
@@ -56,10 +56,10 @@ Image: mongo:3.6
 
 Chart Dependencies
 ------------------
-graylog:1.6.12 depends on elasticsearch:1.32.2
 graylog:1.6.12 depends on mongodb-replicaset:3.11.2
+graylog:1.6.12 depends on elasticsearch:1.32.2
 graylog:1.6.12 uses graylog/graylog:3.1
 mongodb-replicaset:3.11.2 uses mongo:3.6
 elasticsearch:1.32.2 uses docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4
 
-Generated on 2022/05/07 20:02:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:29:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\npachyderm/pachd\n====\n1.8.6" as pachyde
 pachyderm_0_2_2--[#orange]-|>pachyderm_pachd_1_8_6
 pachyderm_0_2_2--[#orange]-|>quay_io_coreos_etcd_v3_3_5
 
-center footer Generated on 2022/05/07 20:25:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:52:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

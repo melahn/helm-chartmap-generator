@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 karma:1.7.2 uses lmierzwa/karma:v0.72
 
-Generated on 2022/05/07 20:09:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:37:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

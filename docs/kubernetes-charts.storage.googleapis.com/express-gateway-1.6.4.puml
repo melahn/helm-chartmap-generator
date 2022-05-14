@@ -21,5 +21,5 @@ express_gateway_1_6_4--[#green]-|>redis_3_0_6
 express_gateway_1_6_4--[#orange]-|>expressgateway_express_gateway_v1_16_9
 redis_3_0_6--[#orange]-|>docker_io_bitnami_redis_4_0_9
 
-center footer Generated on 2022/05/07 19:58:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:25:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

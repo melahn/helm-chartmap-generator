@@ -44,4 +44,4 @@ hubot:1.0.2 depends on redis:9.4.3
 redis:9.4.3 uses docker.io/bitnami/redis:5.0.5-debian-9-r169
 hubot:1.0.2 uses minddocdev/hubot:3.3.2
 
-Generated on 2022/05/07 20:06:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:33:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

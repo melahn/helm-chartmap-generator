@@ -82,4 +82,4 @@ kube-state-metrics:2.8.10 uses quay.io/coreos/kube-state-metrics:v1.9.7
 prometheus-operator:9.3.1 uses squareup/ghostunnel:v1.5.2
 prometheus-operator:9.3.1 uses quay.io/coreos/prometheus-operator:v0.38.1
 
-Generated on 2022/05/07 20:30:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:57:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

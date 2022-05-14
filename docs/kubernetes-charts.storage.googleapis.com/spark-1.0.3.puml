@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/spark:2.4.3-debian-9-r27\n====\n2
 'Chart Dependencies
 spark_1_0_3--[#orange]-|>docker_io_bitnami_spark_2_4_3_debian_9_r27
 
-center footer Generated on 2022/05/07 20:37:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 17:05:19 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

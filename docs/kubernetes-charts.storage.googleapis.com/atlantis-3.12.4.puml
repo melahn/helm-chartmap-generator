@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nrunatlantis/atlantis\n====\nv0.14.0" as 
 'Chart Dependencies
 atlantis_3_12_4--[#orange]-|>runatlantis_atlantis_v0_14_0
 
-center footer Generated on 2022/05/07 19:47:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 13:21:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

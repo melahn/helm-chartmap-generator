@@ -44,4 +44,4 @@ parse:10.3.9 depends on mongodb:7.8.5
 parse:10.3.9 uses docker.io/bitnami/parse:3.10.0-debian-10-r30
 mongodb:7.8.5 uses docker.io/bitnami/mongodb:4.2.3-debian-10-r10
 
-Generated on 2022/05/07 20:25:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:53:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

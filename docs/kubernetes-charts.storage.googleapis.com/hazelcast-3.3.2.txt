@@ -28,4 +28,4 @@ Chart Dependencies
 hazelcast:3.3.2 uses hazelcast/hazelcast:4.0.1
 hazelcast:3.3.2 uses hazelcast/management-center:4.0.2
 
-Generated on 2022/05/07 20:03:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:30:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

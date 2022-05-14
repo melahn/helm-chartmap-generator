@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 gangway:0.4.5 uses gcr.io/heptio-images/gangway:v3.2.0
 
-Generated on 2022/05/07 20:00:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:27:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

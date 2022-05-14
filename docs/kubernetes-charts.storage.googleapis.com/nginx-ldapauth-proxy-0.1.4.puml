@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ndweomer/nginx-auth-ldap\n====\n1.13.5-on
 'Chart Dependencies
 nginx_ldapauth_proxy_0_1_4--[#orange]-|>dweomer_nginx_auth_ldap_1_13_5_on_alpine_3_5
 
-center footer Generated on 2022/05/07 20:21:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:49:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

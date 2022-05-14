@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\narilot/docker-bitcoind\n====\n0.17.1" as
 'Chart Dependencies
 bitcoind_1_0_0--[#orange]-|>arilot_docker_bitcoind_0_17_1
 
-center footer Generated on 2022/05/07 19:48:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:15:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

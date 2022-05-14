@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.elastic.co\n====\nelasticsearch/elasticsearch-oss:6
 'Chart Dependencies
 elasticsearch_1_32_4--[#orange]-|>docker_elastic_co_elasticsearch_elasticsearch_oss_6_8_6
 
-center footer Generated on 2022/05/07 19:56:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:23:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

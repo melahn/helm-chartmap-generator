@@ -44,4 +44,4 @@ sensu:0.2.5 depends on redis:0.9.0
 sensu:0.2.5 uses sstarcher/sensu:0.28
 redis:0.9.0 uses bitnami/redis:3.2.9-r2
 
-Generated on 2022/05/07 20:35:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 17:03:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

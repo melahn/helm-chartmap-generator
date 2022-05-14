@@ -29,4 +29,4 @@ Chart Dependencies
 pachyderm:0.2.3 uses pachyderm/pachd:1.8.6
 pachyderm:0.2.3 uses quay.io/coreos/etcd:v3.3.5
 
-Generated on 2022/05/07 20:25:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:52:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

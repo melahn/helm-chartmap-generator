@@ -44,4 +44,4 @@ hackmd:2.0.2 depends on postgresql:8.1.4
 postgresql:8.1.4 uses docker.io/bitnami/postgresql:9.6
 hackmd:2.0.2 uses hackmdio/hackmd:1.3.0-alpine
 
-Generated on 2022/05/07 20:02:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:30:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

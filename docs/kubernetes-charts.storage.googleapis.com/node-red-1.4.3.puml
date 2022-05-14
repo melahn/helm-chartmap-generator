@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nnodered/node-red\n====\n1.0.4-12-minimal
 'Chart Dependencies
 node_red_1_4_3--[#orange]-|>nodered_node_red_1_0_4_12_minimal
 
-center footer Generated on 2022/05/07 20:22:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:50:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -15,5 +15,5 @@ artifact "cluster-autoscaler:7.3.3\n====\n\tType: application\n====\n\tRepo: htt
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/07 19:51:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:18:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

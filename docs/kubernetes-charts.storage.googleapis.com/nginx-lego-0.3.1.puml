@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/defaultbackend\n====\n1.0" as
 nginx_lego_0_3_1--[#orange]-|>k8s_gcr_io_defaultbackend_1_0
 nginx_lego_0_3_1--[#orange]-|>k8s_gcr_io_nginx_ingress_controller_0_8_3
 
-center footer Generated on 2022/05/07 20:21:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:49:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

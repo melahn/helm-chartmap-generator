@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 factorio:1.0.1 uses quay.io/games_on_k8s/factorio:0.15.39
 
-Generated on 2022/05/07 19:58:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/13 16:25:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

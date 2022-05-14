@@ -23,5 +23,5 @@ gitlab_ce_0_2_3--[#green]-|>redis_0_9_0
 redis_0_9_0--[#orange]-|>bitnami_redis_3_2_9_r2
 postgresql_0_8_1--[#orange]-|>postgres_9_6
 
-center footer Generated on 2022/05/07 20:01:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 16:28:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

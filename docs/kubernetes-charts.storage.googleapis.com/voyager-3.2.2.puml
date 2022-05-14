@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nappscode/voyager\n====\n6.0.0" as appsco
 'Chart Dependencies
 voyager_3_2_2--[#orange]-|>appscode_voyager_6_0_0
 
-center footer Generated on 2022/05/07 20:43:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 17:11:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -15,5 +15,5 @@ artifact "ark:4.2.0\n====\n\tType: application\n====\n\tRepo: https://charts.hel
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/07 19:47:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/13 11:04:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
