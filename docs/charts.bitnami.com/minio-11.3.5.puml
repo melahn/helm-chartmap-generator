@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for minio:11.3.5
+
+'There are 2 referenced Helm Charts
+artifact "common:1.13.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_1 #DarkSeaGreen
+artifact "minio:11.3.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tminio\n\t\tstorage\n\t\tobject-storage\n\t\ts3\n\t\tcluster" as minio_11_3_5 #Aqua
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/minio:2022.5.8-debian-10-r0\n====\n2022.5.8-debian-10-r0" as docker_io_bitnami_minio_2022_5_8_debian_10_r0 #LightPink
+
+'Chart Dependencies
+minio_11_3_5--[#green]-|>common_1_13_1
+minio_11_3_5--[#orange]-|>docker_io_bitnami_minio_2022_5_8_debian_10_r0
+
+center footer Generated on 2022/05/15 12:36:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

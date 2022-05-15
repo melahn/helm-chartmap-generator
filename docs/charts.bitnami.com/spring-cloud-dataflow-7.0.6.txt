@@ -6,7 +6,7 @@ Chart: kafka:16.2.4
 	apiVersion: v2
 	appVersion: 3.1.0
 	created: 2022-04-18T14:01:51.200503501Z
-	dependencies: zookeeper:9.0.4, common:1.13.0
+	dependencies: common:1.13.0, zookeeper:9.0.4
 	description: Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.
 	digest: sha256:7113970c982e5ac6ad13cf845d85f94c004cf89393c1fb4b19209b1207b4b0b2
 	icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
@@ -36,7 +36,7 @@ Chart: spring-cloud-dataflow:7.0.6
 	apiVersion: v2
 	appVersion: 2.9.4
 	created: Not specified
-	dependencies: common:1.13.0, mariadb:10.5.0, rabbitmq:8.31.5, kafka:16.2.4
+	dependencies: common:1.13.0, kafka:16.2.4, mariadb:10.5.0, rabbitmq:8.31.5
 	description: Spring Cloud Data Flow is a microservices-based toolkit for building streaming and batch data processing pipelines in Cloud Foundry and Kubernetes.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/spring-cloud-dataflow/img/spring-cloud-dataflow-stack-220x234.png
@@ -105,14 +105,14 @@ Image: docker.io/bitnami/kafka:3.1.0-debian-10-r81
 Chart Dependencies
 ------------------
 spring-cloud-dataflow:7.0.6 depends on common:1.13.0
+spring-cloud-dataflow:7.0.6 depends on kafka:16.2.4
+kafka:16.2.4 depends on common:1.13.0
+kafka:16.2.4 depends on zookeeper:9.0.4
+zookeeper:9.0.4 depends on common:1.13.0
 spring-cloud-dataflow:7.0.6 depends on mariadb:10.5.0
 mariadb:10.5.0 depends on common:1.13.0
 spring-cloud-dataflow:7.0.6 depends on rabbitmq:8.31.5
 rabbitmq:8.31.5 depends on common:1.13.0
-spring-cloud-dataflow:7.0.6 depends on kafka:16.2.4
-kafka:16.2.4 depends on zookeeper:9.0.4
-zookeeper:9.0.4 depends on common:1.13.0
-kafka:16.2.4 depends on common:1.13.0
 kafka:16.2.4 uses docker.io/bitnami/kafka:3.1.0-debian-10-r81
 spring-cloud-dataflow:7.0.6 uses docker.io/bitnami/spring-cloud-skipper:2.8.4-debian-10-r12
 spring-cloud-dataflow:7.0.6 uses docker.io/bitnami/spring-cloud-dataflow:2.9.4-debian-10-r13
@@ -120,4 +120,4 @@ mariadb:10.5.0 uses docker.io/bitnami/mariadb:10.5.15-debian-10-r52
 rabbitmq:8.31.5 uses docker.io/bitnami/rabbitmq:3.9.15-debian-10-r0
 zookeeper:9.0.4 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r20
 
-Generated on 2022/05/13 06:43:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:46:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

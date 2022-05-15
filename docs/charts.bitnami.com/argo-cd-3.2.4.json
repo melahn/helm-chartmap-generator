@@ -1,0 +1,102 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "Continuous delivery",
+    "Continuous deployment",
+    "Devops",
+    "Kubernetes"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/argo-cd:2.3.3-debian-10-r32",
+      "type": "image",
+      "version": "2.3.3-debian-10-r32"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.1"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/redis:6.2.7-debian-10-r0",
+          "type": "image",
+          "version": "6.2.7-debian-10-r0"
+        },
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/redis:6.2.7-debian-10-r15",
+          "type": "image",
+          "version": "6.2.7-debian-10-r15"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.13.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.13.1"
+        }
+      ],
+      "name": "redis:16.9.3",
+      "description": "Redis(TM) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "16.9.3"
+    }
+  ],
+  "name": "argo-cd:3.2.4",
+  "description": "Argo CD is a continuous delivery tool for Kubernetes based on GitOps.",
+  "type": "chart",
+  "shortName": "argo-cd",
+  "version": "3.2.4"
+}

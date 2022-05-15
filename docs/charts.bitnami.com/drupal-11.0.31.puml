@@ -18,11 +18,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.5.15-debian-10-r52\n==
 usecase "Image\n====\ndocker.io\n====\nbitnami/drupal:9.3.11-debian-10-r4\n====\n9.3.11-debian-10-r4" as docker_io_bitnami_drupal_9_3_11_debian_10_r4 #Aquamarine
 
 'Chart Dependencies
+drupal_11_0_31--[#green]-|>common_1_13_0
 drupal_11_0_31--[#green]-|>mariadb_10_5_0
 mariadb_10_5_0--[#green]-|>common_1_13_0
-drupal_11_0_31--[#green]-|>common_1_13_0
 drupal_11_0_31--[#orange]-|>docker_io_bitnami_drupal_9_3_11_debian_10_r4
 mariadb_10_5_0--[#orange]-|>docker_io_bitnami_mariadb_10_5_15_debian_10_r52
 
-center footer Generated on 2022/05/13 06:23:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:25:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

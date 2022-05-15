@@ -1,0 +1,77 @@
+Chart Map for suitecrm:11.0.3
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: common:1.13.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-04-25T15:57:31.777233Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: e614e4799be726f265faeb19af43ece886d6312a5d28fe180c3c9c9db4e208ee
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.1.tgz
+	version: 1.13.1
+Chart: suitecrm:11.0.3
+	apiVersion: v2
+	appVersion: 7.12.5
+	created: Not specified
+	dependencies: common:1.14.0, mariadb:11.0.3
+	description: SuiteCRM is a completely open source, enterprise-grade Customer Relationship Management (CRM) application. SuiteCRM is a fork of the popular SugarCRM application.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/suitecrm/img/suitecrm-stack-220x234.png
+	keywords: suitecrm,crm,http,web,php
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: suitecrm
+	sources: https://github.com/bitnami/bitnami-docker-suitecrm,https://www.suitecrm.com/
+	urls: Not specified
+	version: 11.0.3
+Chart: mariadb:11.0.3
+	apiVersion: v2
+	appVersion: 10.6.7
+	created: 2022-05-11T15:41:13.947921462Z
+	dependencies: common:1.13.1
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: sha256:4c6a2ac799cd66a69df2f54b9e547783630e9105617a966c27542e9b8b73fdcc
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.0.3.tgz
+	version: 11.0.3
+Chart: common:1.14.0
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-13T12:53:12.091619027Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:4648f7ab42b17a0368549351a991b9bf22c3848c72b0eff4e8273236bc57e25b
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.0.tgz
+	version: 1.14.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.6.7-debian-10-r70
+
+Chart Dependencies
+------------------
+suitecrm:11.0.3 depends on common:1.14.0
+suitecrm:11.0.3 depends on mariadb:11.0.3
+mariadb:11.0.3 depends on common:1.13.1
+mariadb:11.0.3 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r70
+
+Generated on 2022/05/15 12:47:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

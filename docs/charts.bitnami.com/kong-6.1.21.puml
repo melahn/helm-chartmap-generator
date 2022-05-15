@@ -22,15 +22,15 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kong-ingress-controller:2.3.1-deb
 usecase "Image\n====\ndocker.io\n====\nbitnami/kong:2.8.1-debian-10-r28\n====\n2.8.1-debian-10-r28" as docker_io_bitnami_kong_2_8_1_debian_10_r28 #LavenderBlush
 
 'Chart Dependencies
+kong_6_1_21--[#green]-|>postgresql_11_1_26
+postgresql_11_1_26--[#green]-|>common_1_13_1
 kong_6_1_21--[#green]-|>cassandra_9_1_18
 cassandra_9_1_18--[#green]-|>common_1_13_0
 kong_6_1_21--[#green]-|>common_1_13_1
-kong_6_1_21--[#green]-|>postgresql_11_1_26
-postgresql_11_1_26--[#green]-|>common_1_13_1
 kong_6_1_21--[#orange]-|>docker_io_bitnami_kong_ingress_controller_2_3_1_debian_10_r25
 kong_6_1_21--[#orange]-|>docker_io_bitnami_kong_2_8_1_debian_10_r28
 cassandra_9_1_18--[#orange]-|>docker_io_bitnami_cassandra_4_0_3_debian_10_r59
 postgresql_11_1_26--[#orange]-|>docker_io_bitnami_postgresql_11_15_0_debian_10_r84
 
-center footer Generated on 2022/05/13 06:30:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:32:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

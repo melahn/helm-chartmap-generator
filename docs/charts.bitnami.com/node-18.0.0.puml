@@ -18,11 +18,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:5.0.8-debian-10-r9\n====\
 usecase "Image\n====\ndocker.io\n====\nbitnami/node:16.15.0-debian-10-r7\n====\n16.15.0-debian-10-r7" as docker_io_bitnami_node_16_15_0_debian_10_r7 #Cornsilk
 
 'Chart Dependencies
+node_18_0_0--[#green]-|>common_1_13_1
 node_18_0_0--[#green]-|>mongodb_12_0_0
 mongodb_12_0_0--[#green]-|>common_1_13_1
-node_18_0_0--[#green]-|>common_1_13_1
 mongodb_12_0_0--[#orange]-|>docker_io_bitnami_mongodb_5_0_8_debian_10_r9
 node_18_0_0--[#orange]-|>docker_io_bitnami_node_16_15_0_debian_10_r7
 
-center footer Generated on 2022/05/13 06:37:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:39:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -36,7 +36,7 @@ Chart: jasperreports:14.0.1
 	apiVersion: v2
 	appVersion: 8.0.0
 	created: Not specified
-	dependencies: common:1.13.0, mariadb:11.0.0
+	dependencies: mariadb:11.0.0, common:1.13.0
 	description: JasperReports Server is a stand-alone and embeddable reporting server. It is a central information hub, with reporting and analytics that can be embedded into web and mobile applications.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/jasperserver/img/jasperserver-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
 Chart Dependencies
 ------------------
-jasperreports:14.0.1 depends on common:1.13.0
 jasperreports:14.0.1 depends on mariadb:11.0.0
 mariadb:11.0.0 depends on common:1.13.0
+jasperreports:14.0.1 depends on common:1.13.0
 mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 jasperreports:14.0.1 uses docker.io/bitnami/jasperreports:8.0.0-debian-10-r33
 
-Generated on 2022/05/13 06:28:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:29:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

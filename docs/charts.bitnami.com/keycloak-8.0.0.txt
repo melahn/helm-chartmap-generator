@@ -44,4 +44,4 @@ keycloak:8.0.0 depends on postgresql:8.9.5
 keycloak:8.0.0 uses docker.io/jboss/keycloak:10.0.0
 postgresql:8.9.5 uses docker.io/bitnami/postgresql:11.7.0-debian-10-r98
 
-Generated on 2022/05/13 06:29:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:31:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

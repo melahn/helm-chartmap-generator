@@ -42,4 +42,4 @@ Chart Dependencies
 kube-state-metrics:2.2.18 depends on common:1.13.0
 kube-state-metrics:2.2.18 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r37
 
-Generated on 2022/05/13 06:31:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:33:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

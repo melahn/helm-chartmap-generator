@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kubewatch:0.1.0-debian-10-r571\n=
 kubewatch_3_3_4--[#green]-|>common_1_12_0
 kubewatch_3_3_4--[#orange]-|>docker_io_bitnami_kubewatch_0_1_0_debian_10_r571
 
-center footer Generated on 2022/05/13 06:32:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:33:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

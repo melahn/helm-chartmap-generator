@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mxnet:1.9.0-debian-10-r119\n====\
 mxnet_3_0_0--[#green]-|>common_1_13_1
 mxnet_3_0_0--[#orange]-|>docker_io_bitnami_mxnet_1_9_0_debian_10_r119
 
-center footer Generated on 2022/05/13 06:35:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:38:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -44,4 +44,4 @@ nginx-ingress-controller:9.2.0 depends on common:1.13.1
 nginx-ingress-controller:9.2.0 uses docker.io/bitnami/nginx:1.21.6-debian-10-r104
 nginx-ingress-controller:9.2.0 uses docker.io/bitnami/nginx-ingress-controller:1.2.0-debian-10-r6
 
-Generated on 2022/05/13 06:36:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:38:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

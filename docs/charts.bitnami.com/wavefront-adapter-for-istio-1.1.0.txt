@@ -51,7 +51,7 @@ Chart: wavefront:3.3.4
 	apiVersion: v2
 	appVersion: 1.10.0
 	created: 2022-04-06T19:18:26.989061305Z
-	dependencies: common:1.13.0, kube-state-metrics:2.2.16
+	dependencies: kube-state-metrics:2.2.16, common:1.13.0
 	description: Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.
 	digest: a8ba7b5332f853bfcb632dc1b11a8450e7cc6f22a96a815abec4a98a8cbb504e
 	icon: https://bitnami.com/assets/stacks/wavefront-collector/img/wavefront-collector-stack-220x234.png
@@ -73,11 +73,11 @@ Chart Dependencies
 ------------------
 wavefront-adapter-for-istio:1.1.0 depends on common:1.13.0
 wavefront-adapter-for-istio:1.1.0 depends on wavefront:3.3.4
-wavefront:3.3.4 depends on common:1.13.0
 wavefront:3.3.4 depends on kube-state-metrics:2.2.16
 kube-state-metrics:2.2.16 depends on common:1.13.0
+wavefront:3.3.4 depends on common:1.13.0
 wavefront-adapter-for-istio:1.1.0 uses docker.io/bitnami/wavefront-adapter-for-istio:0.1.5-debian-10-r353
 kube-state-metrics:2.2.16 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r28
 wavefront:3.3.4 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r11
 
-Generated on 2022/05/13 06:46:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:49:12 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

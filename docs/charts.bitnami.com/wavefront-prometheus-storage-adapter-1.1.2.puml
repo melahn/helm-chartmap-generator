@@ -20,14 +20,14 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/wavefront-proxy:11.0.0-debian-10-
 usecase "Image\n====\ndocker.io\n====\nbitnami/wavefront-prometheus-storage-adapter:1.0.5-debian-10-r149\n====\n1.0.5-debian-10-r149" as docker_io_bitnami_wavefront_prometheus_storage_adapter_1_0_5_debian_10_r149 #LemonChiffon
 
 'Chart Dependencies
-wavefront_prometheus_storage_adapter_1_1_2--[#green]-|>common_1_13_0
 wavefront_prometheus_storage_adapter_1_1_2--[#green]-|>wavefront_3_4_0
-wavefront_3_4_0--[#green]-|>common_1_13_0
 wavefront_3_4_0--[#green]-|>kube_state_metrics_2_2_17
 kube_state_metrics_2_2_17--[#green]-|>common_1_13_0
+wavefront_3_4_0--[#green]-|>common_1_13_0
+wavefront_prometheus_storage_adapter_1_1_2--[#green]-|>common_1_13_0
 kube_state_metrics_2_2_17--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r28
 wavefront_3_4_0--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_0_0_debian_10_r17
 wavefront_prometheus_storage_adapter_1_1_2--[#orange]-|>docker_io_bitnami_wavefront_prometheus_storage_adapter_1_0_5_debian_10_r149
 
-center footer Generated on 2022/05/13 06:46:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:49:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

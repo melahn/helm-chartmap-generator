@@ -1,0 +1,47 @@
+Chart Map for postgresql-ha:9.0.8
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.14.0
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-13T12:53:12.091619027Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:4648f7ab42b17a0368549351a991b9bf22c3848c72b0eff4e8273236bc57e25b
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.0.tgz
+	version: 1.14.0
+Chart: postgresql-ha:9.0.8
+	apiVersion: v2
+	appVersion: 14.3.0
+	created: Not specified
+	dependencies: common:1.14.0
+	description: This PostgreSQL cluster solution includes the PostgreSQL replication manager, an open-source tool for managing replication and failover on PostgreSQL clusters.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+	keywords: postgresql,repmgr,pgpool,postgres,database,sql,replication,cluster,high availability
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql-ha
+	sources: https://github.com/bitnami/bitnami-docker-postgresql,https://www.postgresql.org/
+	urls: Not specified
+	version: 9.0.8
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/pgpool:4.3.1-debian-10-r81
+Image: docker.io/bitnami/postgresql-repmgr:14.3.0-debian-10-r1
+
+Chart Dependencies
+------------------
+postgresql-ha:9.0.8 depends on common:1.14.0
+postgresql-ha:9.0.8 uses docker.io/bitnami/pgpool:4.3.1-debian-10-r81
+postgresql-ha:9.0.8 uses docker.io/bitnami/postgresql-repmgr:14.3.0-debian-10-r1
+
+Generated on 2022/05/15 12:42:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,45 @@
+Chart Map for contour:7.8.2
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: contour:7.8.2
+	apiVersion: v2
+	appVersion: 1.20.1
+	created: Not specified
+	dependencies: common:1.14.0
+	description: Contour is an open source Kubernetes ingress controller that works by deploying the Envoy proxy as a reverse proxy and load balancer.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/contour/img/contour-stack-220x234.png
+	keywords: ingress,envoy,contour
+	maintainers: cellebyte,Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: contour
+	sources: https://github.com/projectcontour/contour,https://github.com/envoyproxy/envoy,https://github.com/bitnami/bitnami-docker-contour,https://projectcontour.io
+	urls: Not specified
+	version: 7.8.2
+Chart: common:1.14.0
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-13T12:53:12.091619027Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:4648f7ab42b17a0368549351a991b9bf22c3848c72b0eff4e8273236bc57e25b
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.0.tgz
+	version: 1.14.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/contour:1.20.1-debian-10-r53
+
+Chart Dependencies
+------------------
+contour:7.8.2 depends on common:1.14.0
+contour:7.8.2 uses docker.io/bitnami/contour:1.20.1-debian-10-r53
+
+Generated on 2022/05/15 12:22:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

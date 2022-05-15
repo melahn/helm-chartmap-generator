@@ -61,4 +61,4 @@ phpbb:12.1.0 depends on common:1.13.0
 mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 phpbb:12.1.0 uses docker.io/bitnami/phpbb:3.3.7-debian-10-r35
 
-Generated on 2022/05/13 06:39:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:42:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

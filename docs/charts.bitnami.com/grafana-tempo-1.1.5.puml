@@ -29,5 +29,5 @@ grafana_tempo_1_1_5--[#orange]-|>docker_io_bitnami_grafana_tempo_vulture_1_4_0_d
 grafana_tempo_1_1_5--[#orange]-|>docker_io_bitnami_grafana_tempo_query_1_4_0_debian_10_r6
 grafana_tempo_1_1_5--[#orange]-|>docker_io_bitnami_grafana_tempo_1_4_1_debian_10_r0
 
-center footer Generated on 2022/05/13 06:26:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:28:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

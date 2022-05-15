@@ -24,5 +24,5 @@ odoo_21_2_10--[#green]-|>common_1_13_1
 odoo_21_2_10--[#orange]-|>docker_io_bitnami_odoo_15_0_20220510_debian_10_r0
 postgresql_11_1_28--[#orange]-|>docker_io_bitnami_postgresql_14_2_0_debian_10_r88
 
-center footer Generated on 2022/05/13 06:37:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:40:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

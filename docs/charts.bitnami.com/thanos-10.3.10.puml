@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for thanos:10.3.10
+
+'There are 4 referenced Helm Charts
+artifact "common:1.13.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_1 #DarkSeaGreen
+artifact "thanos:10.3.10\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tanalytics\n\t\tmonitoring\n\t\tprometheus\n\t\tthanos" as thanos_10_3_10 #HoneyDew
+artifact "minio:11.3.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tminio\n\t\tstorage\n\t\tobject-storage\n\t\ts3\n\t\tcluster" as minio_11_3_5 #Aqua
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/minio:2022.5.8-debian-10-r0\n====\n2022.5.8-debian-10-r0" as docker_io_bitnami_minio_2022_5_8_debian_10_r0 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/thanos:0.26.0-scratch-r0\n====\n0.26.0-scratch-r0" as docker_io_bitnami_thanos_0_26_0_scratch_r0 #LavenderBlush
+
+'Chart Dependencies
+thanos_10_3_10--[#green]-|>common_1_14_0
+thanos_10_3_10--[#green]-|>minio_11_3_5
+minio_11_3_5--[#green]-|>common_1_13_1
+thanos_10_3_10--[#orange]-|>docker_io_bitnami_thanos_0_26_0_scratch_r0
+minio_11_3_5--[#orange]-|>docker_io_bitnami_minio_2022_5_8_debian_10_r0
+
+center footer Generated on 2022/05/15 12:48:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

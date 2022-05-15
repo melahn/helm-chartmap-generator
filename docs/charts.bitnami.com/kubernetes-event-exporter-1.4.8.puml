@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kubernetes-event-exporter:0.11.0-
 kubernetes_event_exporter_1_4_8--[#green]-|>common_1_13_0
 kubernetes_event_exporter_1_4_8--[#orange]-|>docker_io_bitnami_kubernetes_event_exporter_0_11_0_debian_10_r145
 
-center footer Generated on 2022/05/13 06:31:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:33:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

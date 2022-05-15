@@ -17,5 +17,5 @@ artifact "kibana:10.0.6\n====\n\tType: application\n====\n\tRepo: https://charts
 'Chart Dependencies
 kibana_10_0_6--[#green]-|>common_1_13_1
 
-center footer Generated on 2022/05/13 06:30:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:32:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

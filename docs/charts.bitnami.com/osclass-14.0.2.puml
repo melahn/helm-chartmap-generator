@@ -24,5 +24,5 @@ mariadb_11_0_0--[#green]-|>common_1_13_0
 mariadb_11_0_0--[#orange]-|>docker_io_bitnami_mariadb_10_6_7_debian_10_r62
 osclass_14_0_2--[#orange]-|>docker_io_bitnami_osclass_8_0_1_debian_10_r103
 
-center footer Generated on 2022/05/13 06:38:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:41:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

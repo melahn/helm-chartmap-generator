@@ -42,4 +42,4 @@ Chart Dependencies
 contour:7.8.0 depends on common:1.13.0
 contour:7.8.0 uses docker.io/bitnami/contour:1.20.1-debian-10-r53
 
-Generated on 2022/05/13 06:21:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:22:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

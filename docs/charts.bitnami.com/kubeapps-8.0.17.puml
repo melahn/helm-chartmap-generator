@@ -25,11 +25,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.7-debian-10-r0\n====\n6
 usecase "Image\n====\ndocker.io\n====\nbitnami/nginx:1.21.6-debian-10-r93\n====\n1.21.6-debian-10-r93" as docker_io_bitnami_nginx_1_21_6_debian_10_r93 #LightPink
 
 'Chart Dependencies
-kubeapps_8_0_17--[#green]-|>redis_16_8_9
-redis_16_8_9--[#green]-|>common_1_13_1
 kubeapps_8_0_17--[#green]-|>common_1_13_1
 kubeapps_8_0_17--[#green]-|>postgresql_11_1_25
 postgresql_11_1_25--[#green]-|>common_1_13_0
+kubeapps_8_0_17--[#green]-|>redis_16_8_9
+redis_16_8_9--[#green]-|>common_1_13_1
 postgresql_11_1_25--[#orange]-|>docker_io_bitnami_postgresql_14_2_0_debian_10_r77
 kubeapps_8_0_17--[#orange]-|>docker_io_bitnami_kubeapps_dashboard_2_4_5_debian_10_r3
 kubeapps_8_0_17--[#orange]-|>docker_io_bitnami_nginx_1_21_6_debian_10_r93
@@ -38,5 +38,5 @@ kubeapps_8_0_17--[#orange]-|>docker_io_bitnami_kubeapps_apis_2_4_5_debian_10_r2
 kubeapps_8_0_17--[#orange]-|>docker_io_bitnami_kubeapps_kubeops_2_4_5_scratch_r0
 redis_16_8_9--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r0
 
-center footer Generated on 2022/05/13 06:31:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:33:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

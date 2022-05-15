@@ -27,10 +27,10 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/spring-cloud-skipper:2.8.4-debian
 
 'Chart Dependencies
 spring_cloud_dataflow_9_0_0--[#green]-|>common_1_13_1
-spring_cloud_dataflow_9_0_0--[#green]-|>rabbitmq_9_0_0
-rabbitmq_9_0_0--[#green]-|>common_1_13_1
 spring_cloud_dataflow_9_0_0--[#green]-|>mariadb_11_0_2
 mariadb_11_0_2--[#green]-|>common_1_13_1
+spring_cloud_dataflow_9_0_0--[#green]-|>rabbitmq_9_0_0
+rabbitmq_9_0_0--[#green]-|>common_1_13_1
 spring_cloud_dataflow_9_0_0--[#green]-|>kafka_16_2_9
 kafka_16_2_9--[#green]-|>common_1_13_1
 kafka_16_2_9--[#green]-|>zookeeper_9_1_1
@@ -42,5 +42,5 @@ zookeeper_9_1_1--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r37
 spring_cloud_dataflow_9_0_0--[#orange]-|>docker_io_bitnami_spring_cloud_skipper_2_8_4_debian_10_r16
 spring_cloud_dataflow_9_0_0--[#orange]-|>docker_io_bitnami_spring_cloud_dataflow_2_9_4_debian_10_r14
 
-center footer Generated on 2022/05/13 06:43:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:46:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

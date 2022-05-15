@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/nginx:1.21.6-debian-10-r105\n====
 nginx_11_0_0--[#green]-|>common_1_13_1
 nginx_11_0_0--[#orange]-|>docker_io_bitnami_nginx_1_21_6_debian_10_r105
 
-center footer Generated on 2022/05/13 06:36:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:38:44 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

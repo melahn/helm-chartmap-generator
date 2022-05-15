@@ -6,7 +6,7 @@ Chart: joomla:13.0.1
 	apiVersion: v2
 	appVersion: 4.1.2
 	created: Not specified
-	dependencies: mariadb:11.0.0, common:1.13.0
+	dependencies: common:1.13.0, mariadb:11.0.0
 	description: Joomla! is an award winning open source CMS platform for building websites and applications. It includes page caching, page compression and Let's Encrypt auto-configuration support.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/joomla/img/joomla-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/joomla:4.1.2-debian-10-r22
 
 Chart Dependencies
 ------------------
+joomla:13.0.1 depends on common:1.13.0
 joomla:13.0.1 depends on mariadb:11.0.0
 mariadb:11.0.0 depends on common:1.13.0
-joomla:13.0.1 depends on common:1.13.0
 joomla:13.0.1 uses docker.io/bitnami/joomla:4.1.2-debian-10-r22
 mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
-Generated on 2022/05/13 06:28:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/14 14:06:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

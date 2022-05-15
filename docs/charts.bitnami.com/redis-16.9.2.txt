@@ -42,4 +42,4 @@ Chart Dependencies
 redis:16.9.2 depends on common:1.13.1
 redis:16.9.2 uses docker.io/bitnami/redis:6.2.7-debian-10-r0
 
-Generated on 2022/05/13 06:42:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:44:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

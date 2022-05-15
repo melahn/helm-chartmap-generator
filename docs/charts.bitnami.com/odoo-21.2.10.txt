@@ -21,7 +21,7 @@ Chart: odoo:21.2.10
 	apiVersion: v2
 	appVersion: 15.0.20220510
 	created: Not specified
-	dependencies: common:1.13.1, postgresql:11.1.28
+	dependencies: postgresql:11.1.28, common:1.13.1
 	description: Odoo is an open source ERP and CRM platform, formerly known as OpenERP, that can connect a wide variety of business operations such as sales, supply chain, finance, and project management.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/odoo/img/odoo-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/odoo:15.0.20220510-debian-10-r0
 
 Chart Dependencies
 ------------------
-odoo:21.2.10 depends on common:1.13.1
 odoo:21.2.10 depends on postgresql:11.1.28
 postgresql:11.1.28 depends on common:1.13.1
+odoo:21.2.10 depends on common:1.13.1
 odoo:21.2.10 uses docker.io/bitnami/odoo:15.0.20220510-debian-10-r0
 postgresql:11.1.28 uses docker.io/bitnami/postgresql:14.2.0-debian-10-r88
 
-Generated on 2022/05/13 06:37:53 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:40:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

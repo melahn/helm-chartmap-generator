@@ -1,0 +1,34 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kube-prometheus:6.10.5
+
+'There are 5 referenced Helm Charts
+artifact "common:1.13.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_1 #DarkSeaGreen
+artifact "node-exporter:2.4.11\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tprometheus\n\t\tnode-exporter\n\t\tmonitoring" as node_exporter_2_4_11 #Aqua
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "kube-state-metrics:2.2.19\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tprometheus\n\t\tkube-state-metrics\n\t\tmonitoring" as kube_state_metrics_2_2_19 #Gainsboro
+artifact "kube-prometheus:6.10.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tprometheus\n\t\talertmanager\n\t\toperator\n\t\tmonitoring" as kube_prometheus_6_10_5 #LightSalmon
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/blackbox-exporter:0.20.0-debian-10-r52\n====\n0.20.0-debian-10-r52" as docker_io_bitnami_blackbox_exporter_0_20_0_debian_10_r52 #DarkSeaGreen
+usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:2.4.2-debian-10-r42\n====\n2.4.2-debian-10-r42" as docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r42 #CornflowerBlue
+usecase "Image\n====\ndocker.io\n====\nbitnami/prometheus-operator:0.56.2-debian-10-r0\n====\n0.56.2-debian-10-r0" as docker_io_bitnami_prometheus_operator_0_56_2_debian_10_r0 #IndianRed
+
+'Chart Dependencies
+kube_prometheus_6_10_5--[#green]-|>kube_state_metrics_2_2_19
+kube_state_metrics_2_2_19--[#green]-|>common_1_13_0
+kube_prometheus_6_10_5--[#green]-|>common_1_13_1
+kube_prometheus_6_10_5--[#green]-|>node_exporter_2_4_11
+node_exporter_2_4_11--[#green]-|>common_1_13_0
+kube_state_metrics_2_2_19--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r42
+kube_prometheus_6_10_5--[#orange]-|>docker_io_bitnami_prometheus_operator_0_56_2_debian_10_r0
+kube_prometheus_6_10_5--[#orange]-|>docker_io_bitnami_blackbox_exporter_0_20_0_debian_10_r52
+
+center footer Generated on 2022/05/15 12:32:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

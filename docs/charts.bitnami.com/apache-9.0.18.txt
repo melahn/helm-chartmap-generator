@@ -42,4 +42,4 @@ Chart Dependencies
 apache:9.0.18 depends on common:1.13.0
 apache:9.0.18 uses docker.io/bitnami/apache:2.4.53-debian-10-r36
 
-Generated on 2022/05/13 06:18:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:19:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

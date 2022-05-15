@@ -61,4 +61,4 @@ solr:4.0.10 depends on common:1.13.0
 zookeeper:9.1.0 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r37
 solr:4.0.10 uses docker.io/bitnami/solr:8.11.1-debian-10-r125
 
-Generated on 2022/05/13 06:42:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:45:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

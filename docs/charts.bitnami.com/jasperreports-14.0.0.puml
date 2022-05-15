@@ -18,11 +18,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.6.7-debian-10-r62\n===
 usecase "Image\n====\ndocker.io\n====\nbitnami/jasperreports:8.0.0-debian-10-r30\n====\n8.0.0-debian-10-r30" as docker_io_bitnami_jasperreports_8_0_0_debian_10_r30 #LawnGreen
 
 'Chart Dependencies
+jasperreports_14_0_0--[#green]-|>common_1_13_0
 jasperreports_14_0_0--[#green]-|>mariadb_11_0_0
 mariadb_11_0_0--[#green]-|>common_1_13_0
-jasperreports_14_0_0--[#green]-|>common_1_13_0
 mariadb_11_0_0--[#orange]-|>docker_io_bitnami_mariadb_10_6_7_debian_10_r62
 jasperreports_14_0_0--[#orange]-|>docker_io_bitnami_jasperreports_8_0_0_debian_10_r30
 
-center footer Generated on 2022/05/13 06:28:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:30:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

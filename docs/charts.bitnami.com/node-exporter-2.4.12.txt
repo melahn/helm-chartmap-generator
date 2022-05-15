@@ -40,4 +40,4 @@ Chart Dependencies
 ------------------
 node-exporter:2.4.12 depends on common:1.13.0
 
-Generated on 2022/05/13 06:37:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:39:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

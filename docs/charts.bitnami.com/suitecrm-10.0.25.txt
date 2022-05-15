@@ -59,4 +59,4 @@ suitecrm:10.0.25 depends on mariadb:10.5.1
 mariadb:10.5.1 depends on common:1.13.0
 mariadb:10.5.1 uses docker.io/bitnami/mariadb:10.5.15-debian-10-r62
 
-Generated on 2022/05/13 06:44:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/14 14:21:53 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

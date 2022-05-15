@@ -18,11 +18,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.6.7-debian-10-r70\n===
 usecase "Image\n====\ndocker.io\n====\nbitnami/moodle:3.11.7-debian-10-r0\n====\n3.11.7-debian-10-r0" as docker_io_bitnami_moodle_3_11_7_debian_10_r0 #CadetBlue
 
 'Chart Dependencies
-moodle_13_0_3--[#green]-|>common_1_13_1
 moodle_13_0_3--[#green]-|>mariadb_11_0_2
 mariadb_11_0_2--[#green]-|>common_1_13_1
+moodle_13_0_3--[#green]-|>common_1_13_1
 moodle_13_0_3--[#orange]-|>docker_io_bitnami_moodle_3_11_7_debian_10_r0
 mariadb_11_0_2--[#orange]-|>docker_io_bitnami_mariadb_10_6_7_debian_10_r70
 
-center footer Generated on 2022/05/13 06:35:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:37:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

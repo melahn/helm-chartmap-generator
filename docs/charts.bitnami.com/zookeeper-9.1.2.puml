@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for zookeeper:9.1.2
+
+'There are 2 referenced Helm Charts
+artifact "common:1.13.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_0 #DarkSeaGreen
+artifact "zookeeper:9.1.2\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: zookeeper" as zookeeper_9_1_2 #LemonChiffon
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/zookeeper:3.8.0-debian-10-r37\n====\n3.8.0-debian-10-r37" as docker_io_bitnami_zookeeper_3_8_0_debian_10_r37 #LightPink
+
+'Chart Dependencies
+zookeeper_9_1_2--[#green]-|>common_1_13_0
+zookeeper_9_1_2--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r37
+
+center footer Generated on 2022/05/15 12:50:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

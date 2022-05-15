@@ -19,12 +19,12 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.7-debian-10-r2\n====\n6
 usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.7-debian-10-r0\n====\n6.2.7-debian-10-r0" as docker_io_bitnami_redis_6_2_7_debian_10_r0 #Azure
 
 'Chart Dependencies
-argo_cd_3_2_0--[#green]-|>common_1_13_1
 argo_cd_3_2_0--[#green]-|>redis_16_8_9
 redis_16_8_9--[#green]-|>common_1_13_1
+argo_cd_3_2_0--[#green]-|>common_1_13_1
 argo_cd_3_2_0--[#orange]-|>docker_io_bitnami_argo_cd_2_3_3_debian_10_r25
 redis_16_8_9--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r0
 redis_16_8_9--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r2
 
-center footer Generated on 2022/05/13 06:18:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:20:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

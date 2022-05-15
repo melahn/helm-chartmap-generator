@@ -21,5 +21,5 @@ keycloak_8_0_0--[#green]-|>postgresql_8_9_5
 keycloak_8_0_0--[#orange]-|>docker_io_jboss_keycloak_10_0_0
 postgresql_8_9_5--[#orange]-|>docker_io_bitnami_postgresql_11_7_0_debian_10_r98
 
-center footer Generated on 2022/05/13 06:29:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:31:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

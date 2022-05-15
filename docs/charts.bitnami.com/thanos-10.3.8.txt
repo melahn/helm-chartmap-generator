@@ -36,7 +36,7 @@ Chart: thanos:10.3.8
 	apiVersion: v2
 	appVersion: 0.26.0
 	created: Not specified
-	dependencies: common:1.13.1, minio:11.3.2
+	dependencies: minio:11.3.2, common:1.13.1
 	description: Thanos is a highly available metrics system that can be added on top of existing Prometheus deployments, providing a global query view across all Prometheus installations.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/thanos/img/thanos-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/thanos:0.26.0-scratch-r0
 
 Chart Dependencies
 ------------------
-thanos:10.3.8 depends on common:1.13.1
 thanos:10.3.8 depends on minio:11.3.2
 minio:11.3.2 depends on common:1.13.1
+thanos:10.3.8 depends on common:1.13.1
 minio:11.3.2 uses docker.io/bitnami/minio:2022.5.4-debian-10-r0
 thanos:10.3.8 uses docker.io/bitnami/thanos:0.26.0-scratch-r0
 
-Generated on 2022/05/13 06:45:12 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:48:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

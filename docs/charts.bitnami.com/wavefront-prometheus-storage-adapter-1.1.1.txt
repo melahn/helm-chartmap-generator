@@ -36,7 +36,7 @@ Chart: wavefront:3.3.4
 	apiVersion: v2
 	appVersion: 1.10.0
 	created: 2022-04-06T19:18:26.989061305Z
-	dependencies: kube-state-metrics:2.2.16, common:1.13.0
+	dependencies: common:1.13.0, kube-state-metrics:2.2.16
 	description: Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.
 	digest: a8ba7b5332f853bfcb632dc1b11a8450e7cc6f22a96a815abec4a98a8cbb504e
 	icon: https://bitnami.com/assets/stacks/wavefront-collector/img/wavefront-collector-stack-220x234.png
@@ -51,7 +51,7 @@ Chart: wavefront-prometheus-storage-adapter:1.1.1
 	apiVersion: v2
 	appVersion: 1.0.5
 	created: Not specified
-	dependencies: wavefront:3.3.4, common:1.13.0
+	dependencies: common:1.13.0, wavefront:3.3.4
 	description: Wavefront Storage Adapter is a Prometheus integration to transfer metrics from Prometheus to Wavefront. It lets you save Prometheus data in Wavefront without changing your existing Prometheus setup.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/wavefront-prometheus-storage-adapter/img/wavefront-prometheus-storage-adapter-stack-220x234.png
@@ -71,13 +71,13 @@ Image: docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r11
 
 Chart Dependencies
 ------------------
+wavefront-prometheus-storage-adapter:1.1.1 depends on common:1.13.0
 wavefront-prometheus-storage-adapter:1.1.1 depends on wavefront:3.3.4
+wavefront:3.3.4 depends on common:1.13.0
 wavefront:3.3.4 depends on kube-state-metrics:2.2.16
 kube-state-metrics:2.2.16 depends on common:1.13.0
-wavefront:3.3.4 depends on common:1.13.0
-wavefront-prometheus-storage-adapter:1.1.1 depends on common:1.13.0
 kube-state-metrics:2.2.16 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r28
 wavefront:3.3.4 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r11
 wavefront-prometheus-storage-adapter:1.1.1 uses docker.io/bitnami/wavefront-prometheus-storage-adapter:1.0.5-debian-10-r138
 
-Generated on 2022/05/13 06:46:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:49:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

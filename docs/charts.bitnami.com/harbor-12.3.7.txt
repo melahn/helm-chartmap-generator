@@ -105,12 +105,12 @@ harbor:12.3.7 uses docker.io/bitnami/harbor-notary-server:2.5.0-debian-10-r19
 harbor:12.3.7 uses docker.io/bitnami/harbor-registry:2.5.0-debian-10-r19
 harbor:12.3.7 uses docker.io/bitnami/chartmuseum:0.14.0-debian-10-r86
 harbor:12.3.7 uses docker.io/bitnami/harbor-notary-signer:2.5.0-debian-10-r19
-harbor:12.3.7 uses docker.io/bitnami/harbor-registryctl:2.5.0-debian-10-r19
 harbor:12.3.7 uses docker.io/bitnami/nginx:1.21.6-debian-10-r93
+harbor:12.3.7 uses docker.io/bitnami/harbor-registryctl:2.5.0-debian-10-r19
 harbor:12.3.7 uses docker.io/bitnami/harbor-portal:2.5.0-debian-10-r21
 harbor:12.3.7 uses docker.io/bitnami/harbor-core:2.5.0-debian-10-r19
 harbor:12.3.7 uses docker.io/bitnami/harbor-adapter-trivy:2.5.0-debian-10-r20
 postgresql:11.1.25 uses docker.io/bitnami/postgresql:11.15.0-debian-10-r80
 redis:16.8.9 uses docker.io/bitnami/redis:6.2.7-debian-10-r0
 
-Generated on 2022/05/13 06:27:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:29:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/pytorch:1.11.0-debian-10-r27\n===
 pytorch_2_4_1--[#green]-|>common_1_13_0
 pytorch_2_4_1--[#orange]-|>docker_io_bitnami_pytorch_1_11_0_debian_10_r27
 
-center footer Generated on 2022/05/13 06:41:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:43:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -36,7 +36,7 @@ Chart: prestashop:15.1.0
 	apiVersion: v2
 	appVersion: 1.7.8-5
 	created: Not specified
-	dependencies: mariadb:11.0.0, common:1.13.0
+	dependencies: common:1.13.0, mariadb:11.0.0
 	description: PrestaShop is a powerful open source eCommerce platform used by over 250,000 online storefronts worldwide. It is easily customizable, responsive, and includes powerful tools to drive online sales.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/prestashop/img/prestashop-stack-220x234.png
@@ -54,9 +54,9 @@ Image: docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
 Chart Dependencies
 ------------------
+prestashop:15.1.0 depends on common:1.13.0
 prestashop:15.1.0 depends on mariadb:11.0.0
 mariadb:11.0.0 depends on common:1.13.0
-prestashop:15.1.0 depends on common:1.13.0
 mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
-Generated on 2022/05/13 06:40:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:43:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

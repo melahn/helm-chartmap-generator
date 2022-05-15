@@ -21,15 +21,15 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mysql:8.0.29-debian-10-r2\n====\n
 usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.2.0-debian-10-r85\n====\n14.2.0-debian-10-r85" as docker_io_bitnami_postgresql_14_2_0_debian_10_r85 #DarkSalmon
 
 'Chart Dependencies
-argo_workflows_1_1_14--[#green]-|>postgresql_11_1_26
-postgresql_11_1_26--[#green]-|>common_1_13_1
-argo_workflows_1_1_14--[#green]-|>common_1_13_1
 argo_workflows_1_1_14--[#green]-|>mysql_8_9_6
 mysql_8_9_6--[#green]-|>common_1_13_1
+argo_workflows_1_1_14--[#green]-|>common_1_13_1
+argo_workflows_1_1_14--[#green]-|>postgresql_11_1_26
+postgresql_11_1_26--[#green]-|>common_1_13_1
 argo_workflows_1_1_14--[#orange]-|>docker_io_bitnami_argo_workflow_cli_3_3_5_scratch_r0
 argo_workflows_1_1_14--[#orange]-|>docker_io_bitnami_argo_workflow_controller_3_3_5_scratch_r0
 mysql_8_9_6--[#orange]-|>docker_io_bitnami_mysql_8_0_29_debian_10_r2
 postgresql_11_1_26--[#orange]-|>docker_io_bitnami_postgresql_14_2_0_debian_10_r85
 
-center footer Generated on 2022/05/13 06:19:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:20:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,113 @@
+Chart Map for wordpress-intel:1.0.9
+
+There are 6 referenced Helm Charts
+----------------------------------
+Chart: common:1.13.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-04-25T15:57:31.777233Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: e614e4799be726f265faeb19af43ece886d6312a5d28fe180c3c9c9db4e208ee
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.1.tgz
+	version: 1.13.1
+Chart: mariadb:11.0.3
+	apiVersion: v2
+	appVersion: 10.6.7
+	created: 2022-05-11T15:41:13.947921462Z
+	dependencies: common:1.13.1
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: sha256:4c6a2ac799cd66a69df2f54b9e547783630e9105617a966c27542e9b8b73fdcc
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.0.3.tgz
+	version: 11.0.3
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: common:1.14.0
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-13T12:53:12.091619027Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:4648f7ab42b17a0368549351a991b9bf22c3848c72b0eff4e8273236bc57e25b
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.0.tgz
+	version: 1.14.0
+Chart: wordpress-intel:1.0.9
+	apiVersion: v2
+	appVersion: 5.9.3
+	created: Not specified
+	dependencies: mariadb:11.0.3, memcached:6.0.17, common:1.14.0
+	description: WordPress for Intel is the most popular blogging application combined with cryptography acceleration for 3rd gen Xeon Scalable Processors (Ice Lake) to get a breakthrough performance improvement.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+	keywords: application,blog,cms,http,php,web,wordpress
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: wordpress-intel
+	sources: https://github.com/bitnami/bitnami-docker-wordpress-intel,https://wordpress.org/
+	urls: Not specified
+	version: 1.0.9
+Chart: memcached:6.0.17
+	apiVersion: v2
+	appVersion: 1.6.15
+	created: 2022-04-29T12:38:28.652484763Z
+	dependencies: common:1.13.0
+	description: Memcached is an high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
+	digest: sha256:e5f1c64d619d4fe1def4707ac8255fa72d2b12e15773b83510357e2384e33439
+	icon: https://bitnami.com/assets/stacks/memcached/img/memcached-stack-220x234.png
+	keywords: memcached,cache
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: memcached
+	sources: https://github.com/bitnami/bitnami-docker-memcached,http://memcached.org/
+	urls: https://charts.bitnami.com/bitnami/memcached-6.0.17.tgz
+	version: 6.0.17
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/wordpress-intel:5.9.3-debian-10-r43
+Image: docker.io/bitnami/mariadb:10.6.7-debian-10-r70
+Image: docker.io/bitnami/memcached:1.6.15-debian-10-r20
+
+Chart Dependencies
+------------------
+wordpress-intel:1.0.9 depends on mariadb:11.0.3
+mariadb:11.0.3 depends on common:1.13.1
+wordpress-intel:1.0.9 depends on memcached:6.0.17
+memcached:6.0.17 depends on common:1.13.0
+wordpress-intel:1.0.9 depends on common:1.14.0
+mariadb:11.0.3 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r70
+wordpress-intel:1.0.9 uses docker.io/bitnami/wordpress-intel:5.9.3-debian-10-r43
+memcached:6.0.17 uses docker.io/bitnami/memcached:1.6.15-debian-10-r20
+
+Generated on 2022/05/15 12:50:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

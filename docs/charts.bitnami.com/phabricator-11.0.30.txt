@@ -21,7 +21,7 @@ Chart: phabricator:11.0.30
 	apiVersion: v2
 	appVersion: 2021.26.0
 	created: Not specified
-	dependencies: mariadb:9.6.0, common:1.9.1
+	dependencies: common:1.9.1, mariadb:9.6.0
 	description: DEPRECATED Collection of open source web applications that help software companies build better software.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/phabricator/img/phabricator-stack-220x234.png
@@ -69,9 +69,9 @@ Image: docker.io/bitnami/mariadb:10.5.12-debian-10-r32
 
 Chart Dependencies
 ------------------
+phabricator:11.0.30 depends on common:1.9.1
 phabricator:11.0.30 depends on mariadb:9.6.0
 mariadb:9.6.0 depends on common:1.8.0
-phabricator:11.0.30 depends on common:1.9.1
 mariadb:9.6.0 uses docker.io/bitnami/mariadb:10.5.12-debian-10-r32
 
-Generated on 2022/05/13 06:39:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:41:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

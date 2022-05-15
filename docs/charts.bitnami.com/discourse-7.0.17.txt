@@ -80,4 +80,4 @@ postgresql:11.1.22 uses docker.io/bitnami/postgresql:14.2.0-debian-10-r70
 discourse:7.0.17 uses docker.io/bitnami/discourse:2.8.3-debian-10-r7
 redis:16.8.7 uses docker.io/bitnami/redis:6.2.6-debian-10-r192
 
-Generated on 2022/05/13 06:23:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:24:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

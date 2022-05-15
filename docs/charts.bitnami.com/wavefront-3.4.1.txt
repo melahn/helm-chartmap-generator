@@ -36,7 +36,7 @@ Chart: wavefront:3.4.1
 	apiVersion: v2
 	appVersion: 1.10.0
 	created: Not specified
-	dependencies: kube-state-metrics:2.2.19, common:1.13.0
+	dependencies: common:1.13.0, kube-state-metrics:2.2.19
 	description: Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/wavefront-collector/img/wavefront-collector-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r42
 
 Chart Dependencies
 ------------------
+wavefront:3.4.1 depends on common:1.13.0
 wavefront:3.4.1 depends on kube-state-metrics:2.2.19
 kube-state-metrics:2.2.19 depends on common:1.13.0
-wavefront:3.4.1 depends on common:1.13.0
 kube-state-metrics:2.2.19 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r42
 wavefront:3.4.1 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r26
 
-Generated on 2022/05/13 06:45:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:48:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

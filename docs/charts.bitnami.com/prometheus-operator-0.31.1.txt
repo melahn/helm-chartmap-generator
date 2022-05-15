@@ -6,7 +6,7 @@ Chart: prometheus-operator:0.31.1
 	apiVersion: v1
 	appVersion: 0.41.0
 	created: Not specified
-	dependencies: node-exporter:1.1.0, kube-state-metrics:0.5.0
+	dependencies: kube-state-metrics:0.5.0, node-exporter:1.1.0
 	description: DEPRECATED The Prometheus Operator for Kubernetes provides easy monitoring definitions for Kubernetes services and deployment and management of Prometheus instances.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/prometheus-operator/img/prometheus-operator-stack-220x234.png
@@ -55,9 +55,9 @@ Image: docker.io/bitnami/prometheus-operator:0.41.0-debian-10-r5
 
 Chart Dependencies
 ------------------
-prometheus-operator:0.31.1 depends on node-exporter:1.1.0
 prometheus-operator:0.31.1 depends on kube-state-metrics:0.5.0
+prometheus-operator:0.31.1 depends on node-exporter:1.1.0
 prometheus-operator:0.31.1 uses docker.io/bitnami/prometheus-operator:0.41.0-debian-10-r5
 kube-state-metrics:0.5.0 uses docker.io/bitnami/kube-state-metrics:1.9.7-debian-10-r51
 
-Generated on 2022/05/13 06:40:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:43:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

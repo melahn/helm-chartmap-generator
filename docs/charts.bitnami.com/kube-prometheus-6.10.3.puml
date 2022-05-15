@@ -21,14 +21,14 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:2.4.2-debian-1
 usecase "Image\n====\ndocker.io\n====\nbitnami/prometheus-operator:0.56.2-debian-10-r0\n====\n0.56.2-debian-10-r0" as docker_io_bitnami_prometheus_operator_0_56_2_debian_10_r0 #IndianRed
 
 'Chart Dependencies
-kube_prometheus_6_10_3--[#green]-|>common_1_13_1
 kube_prometheus_6_10_3--[#green]-|>kube_state_metrics_2_2_19
 kube_state_metrics_2_2_19--[#green]-|>common_1_13_0
+kube_prometheus_6_10_3--[#green]-|>common_1_13_1
 kube_prometheus_6_10_3--[#green]-|>node_exporter_2_4_11
 node_exporter_2_4_11--[#green]-|>common_1_13_0
 kube_state_metrics_2_2_19--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r42
 kube_prometheus_6_10_3--[#orange]-|>docker_io_bitnami_prometheus_operator_0_56_2_debian_10_r0
 kube_prometheus_6_10_3--[#orange]-|>docker_io_bitnami_blackbox_exporter_0_20_0_debian_10_r52
 
-center footer Generated on 2022/05/13 06:31:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:32:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

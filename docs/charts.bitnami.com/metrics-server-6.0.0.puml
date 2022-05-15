@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/metrics-server:0.6.1-debian-10-r7
 metrics_server_6_0_0--[#green]-|>common_1_13_0
 metrics_server_6_0_0--[#orange]-|>docker_io_bitnami_metrics_server_0_6_1_debian_10_r70
 
-center footer Generated on 2022/05/13 06:34:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:36:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

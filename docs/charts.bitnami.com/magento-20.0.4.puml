@@ -1,0 +1,35 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for magento:20.0.4
+
+'There are 6 referenced Helm Charts
+artifact "common:1.13.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_1 #DarkSeaGreen
+artifact "mariadb:11.0.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_11_0_3 #DarkTurquoise
+artifact "kibana:10.0.7\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkibana\n\t\tanalytics\n\t\tmonitoring\n\t\tmetrics\n\t\tlogs" as kibana_10_0_7 #GhostWhite
+artifact "elasticsearch:18.0.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: elasticsearch" as elasticsearch_18_0_4 #Aquamarine
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+artifact "magento:20.0.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmagento\n\t\te-commerce\n\t\thttp\n\t\tweb\n\t\tphp" as magento_20_0_4 #HotPink
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/elasticsearch:7.17.3-debian-10-r20\n====\n7.17.3-debian-10-r20" as docker_io_bitnami_elasticsearch_7_17_3_debian_10_r20 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.4.24-debian-10-r87\n====\n10.4.24-debian-10-r87" as docker_io_bitnami_mariadb_10_4_24_debian_10_r87 #DarkGoldenRod
+
+'Chart Dependencies
+magento_20_0_4--[#green]-|>common_1_14_0
+magento_20_0_4--[#green]-|>elasticsearch_18_0_4
+elasticsearch_18_0_4--[#green]-|>kibana_10_0_7
+kibana_10_0_7--[#green]-|>common_1_13_1
+elasticsearch_18_0_4--[#green]-|>common_1_14_0
+magento_20_0_4--[#green]-|>mariadb_11_0_3
+mariadb_11_0_3--[#green]-|>common_1_13_1
+mariadb_11_0_3--[#orange]-|>docker_io_bitnami_mariadb_10_4_24_debian_10_r87
+elasticsearch_18_0_4--[#orange]-|>docker_io_bitnami_elasticsearch_7_17_3_debian_10_r20
+
+center footer Generated on 2022/05/15 12:34:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

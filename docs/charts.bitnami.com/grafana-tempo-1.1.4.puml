@@ -21,13 +21,13 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/grafana-tempo:1.4.0-debian-10-r0\
 usecase "Image\n====\ndocker.io\n====\nbitnami/grafana-tempo-query:1.4.0-debian-10-r3\n====\n1.4.0-debian-10-r3" as docker_io_bitnami_grafana_tempo_query_1_4_0_debian_10_r3 #LightGrey
 
 'Chart Dependencies
+grafana_tempo_1_1_4--[#green]-|>common_1_13_1
 grafana_tempo_1_1_4--[#green]-|>memcached_6_0_17
 memcached_6_0_17--[#green]-|>common_1_13_0
-grafana_tempo_1_1_4--[#green]-|>common_1_13_1
 memcached_6_0_17--[#orange]-|>docker_io_bitnami_memcached_1_6_15_debian_10_r20
 grafana_tempo_1_1_4--[#orange]-|>docker_io_bitnami_grafana_tempo_1_4_0_debian_10_r0
 grafana_tempo_1_1_4--[#orange]-|>docker_io_bitnami_grafana_tempo_query_1_4_0_debian_10_r3
 grafana_tempo_1_1_4--[#orange]-|>docker_io_bitnami_grafana_tempo_vulture_1_4_0_debian_10_r3
 
-center footer Generated on 2022/05/13 06:26:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:28:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

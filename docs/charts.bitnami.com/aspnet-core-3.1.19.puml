@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/aspnet-core:6.0.5-debian-10-r0\n=
 aspnet_core_3_1_19--[#green]-|>common_1_13_1
 aspnet_core_3_1_19--[#orange]-|>docker_io_bitnami_aspnet_core_6_0_5_debian_10_r0
 
-center footer Generated on 2022/05/13 06:19:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:20:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/apache:2.4.53-debian-10-r36\n====
 apache_9_0_17--[#green]-|>common_1_13_0
 apache_9_0_17--[#orange]-|>docker_io_bitnami_apache_2_4_53_debian_10_r36
 
-center footer Generated on 2022/05/13 06:18:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:19:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

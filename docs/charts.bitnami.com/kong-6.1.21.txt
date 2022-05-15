@@ -36,7 +36,7 @@ Chart: kong:6.1.21
 	apiVersion: v2
 	appVersion: 2.8.1
 	created: Not specified
-	dependencies: postgresql:11.1.26, common:1.13.1, cassandra:9.1.18
+	dependencies: cassandra:9.1.18, common:1.13.1, postgresql:11.1.26
 	description: Kong is an open source Microservice API gateway and platform designed for managing microservices requests of high-availability, fault-tolerance, and distributed systems.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/kong/img/kong-stack-220x234.png
@@ -87,14 +87,14 @@ Image: docker.io/bitnami/kong:2.8.1-debian-10-r28
 
 Chart Dependencies
 ------------------
-kong:6.1.21 depends on postgresql:11.1.26
-postgresql:11.1.26 depends on common:1.13.1
-kong:6.1.21 depends on common:1.13.1
 kong:6.1.21 depends on cassandra:9.1.18
 cassandra:9.1.18 depends on common:1.13.0
+kong:6.1.21 depends on common:1.13.1
+kong:6.1.21 depends on postgresql:11.1.26
+postgresql:11.1.26 depends on common:1.13.1
 kong:6.1.21 uses docker.io/bitnami/kong-ingress-controller:2.3.1-debian-10-r25
 kong:6.1.21 uses docker.io/bitnami/kong:2.8.1-debian-10-r28
 cassandra:9.1.18 uses docker.io/bitnami/cassandra:4.0.3-debian-10-r59
 postgresql:11.1.26 uses docker.io/bitnami/postgresql:11.15.0-debian-10-r84
 
-Generated on 2022/05/13 06:30:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:32:27 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

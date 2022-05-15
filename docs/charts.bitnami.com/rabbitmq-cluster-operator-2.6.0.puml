@@ -21,5 +21,5 @@ rabbitmq_cluster_operator_2_6_0--[#green]-|>common_1_13_0
 rabbitmq_cluster_operator_2_6_0--[#orange]-|>docker_io_bitnami_rabbitmq_cluster_operator_1_12_1_scratch_r7
 rabbitmq_cluster_operator_2_6_0--[#orange]-|>docker_io_bitnami_rmq_messaging_topology_operator_1_5_0_scratch_r2
 
-center footer Generated on 2022/05/13 06:41:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:44:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

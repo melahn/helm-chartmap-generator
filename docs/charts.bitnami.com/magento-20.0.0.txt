@@ -95,4 +95,4 @@ elasticsearch:18.0.1 depends on common:1.13.1
 mariadb:11.0.2 uses docker.io/bitnami/mariadb:10.4.24-debian-10-r82
 elasticsearch:18.0.1 uses docker.io/bitnami/elasticsearch:7.17.3-debian-10-r16
 
-Generated on 2022/05/13 06:32:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/14 14:09:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

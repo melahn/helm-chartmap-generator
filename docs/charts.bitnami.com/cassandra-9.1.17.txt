@@ -42,4 +42,4 @@ Chart Dependencies
 cassandra:9.1.17 depends on common:1.13.0
 cassandra:9.1.17 uses docker.io/bitnami/cassandra:4.0.3-debian-10-r58
 
-Generated on 2022/05/13 06:20:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:21:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

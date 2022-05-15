@@ -36,7 +36,7 @@ Chart: harbor:12.3.6
 	apiVersion: v2
 	appVersion: 2.5.0
 	created: Not specified
-	dependencies: common:1.13.1, postgresql:11.1.25, redis:16.8.9
+	dependencies: postgresql:11.1.25, redis:16.8.9, common:1.13.1
 	description: Harbor is an open source trusted cloud-native registry to store, sign, and scan content. It adds functionalities like security, identity, and management to the open source Docker distribution.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/harbor-core/img/harbor-core-stack-220x234.png
@@ -95,22 +95,22 @@ Image: docker.io/bitnami/harbor-notary-server:2.5.0-debian-10-r19
 
 Chart Dependencies
 ------------------
-harbor:12.3.6 depends on common:1.13.1
 harbor:12.3.6 depends on postgresql:11.1.25
 postgresql:11.1.25 depends on common:1.13.0
 harbor:12.3.6 depends on redis:16.8.9
 redis:16.8.9 depends on common:1.13.1
+harbor:12.3.6 depends on common:1.13.1
 harbor:12.3.6 uses docker.io/bitnami/harbor-jobservice:2.5.0-debian-10-r11
 harbor:12.3.6 uses docker.io/bitnami/harbor-notary-server:2.5.0-debian-10-r19
 harbor:12.3.6 uses docker.io/bitnami/harbor-registry:2.5.0-debian-10-r19
-harbor:12.3.6 uses docker.io/bitnami/harbor-notary-signer:2.5.0-debian-10-r19
 harbor:12.3.6 uses docker.io/bitnami/chartmuseum:0.14.0-debian-10-r86
-harbor:12.3.6 uses docker.io/bitnami/harbor-registryctl:2.5.0-debian-10-r19
+harbor:12.3.6 uses docker.io/bitnami/harbor-notary-signer:2.5.0-debian-10-r19
 harbor:12.3.6 uses docker.io/bitnami/nginx:1.21.6-debian-10-r93
+harbor:12.3.6 uses docker.io/bitnami/harbor-registryctl:2.5.0-debian-10-r19
 harbor:12.3.6 uses docker.io/bitnami/harbor-portal:2.5.0-debian-10-r21
 harbor:12.3.6 uses docker.io/bitnami/harbor-core:2.5.0-debian-10-r19
 harbor:12.3.6 uses docker.io/bitnami/harbor-adapter-trivy:2.5.0-debian-10-r20
 postgresql:11.1.25 uses docker.io/bitnami/postgresql:11.15.0-debian-10-r80
 redis:16.8.9 uses docker.io/bitnami/redis:6.2.7-debian-10-r0
 
-Generated on 2022/05/13 06:27:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:29:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

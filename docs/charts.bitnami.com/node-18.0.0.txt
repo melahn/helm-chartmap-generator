@@ -36,7 +36,7 @@ Chart: node:18.0.0
 	apiVersion: v2
 	appVersion: 16.15.0
 	created: Not specified
-	dependencies: common:1.13.1, mongodb:12.0.0
+	dependencies: mongodb:12.0.0, common:1.13.1
 	description: Node.js is a runtime environment built on V8 JavaScript engine. Its event-driven, non-blocking I/O model enables the development of fast, scalable, and data-intensive server applications.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/nodejs/img/nodejs-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/node:16.15.0-debian-10-r7
 
 Chart Dependencies
 ------------------
-node:18.0.0 depends on common:1.13.1
 node:18.0.0 depends on mongodb:12.0.0
 mongodb:12.0.0 depends on common:1.13.1
+node:18.0.0 depends on common:1.13.1
 mongodb:12.0.0 uses docker.io/bitnami/mongodb:5.0.8-debian-10-r9
 node:18.0.0 uses docker.io/bitnami/node:16.15.0-debian-10-r7
 
-Generated on 2022/05/13 06:37:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:39:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

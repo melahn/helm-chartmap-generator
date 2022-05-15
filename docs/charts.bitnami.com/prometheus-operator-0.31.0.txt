@@ -60,4 +60,4 @@ prometheus-operator:0.31.0 depends on node-exporter:1.1.0
 kube-state-metrics:0.5.0 uses docker.io/bitnami/kube-state-metrics:1.9.7-debian-10-r51
 prometheus-operator:0.31.0 uses docker.io/bitnami/prometheus-operator:0.41.0-debian-10-r5
 
-Generated on 2022/05/13 06:41:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 12:43:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

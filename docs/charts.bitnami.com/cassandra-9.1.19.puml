@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/cassandra:4.0.3-debian-10-r59\n==
 cassandra_9_1_19--[#green]-|>common_1_13_0
 cassandra_9_1_19--[#orange]-|>docker_io_bitnami_cassandra_4_0_3_debian_10_r59
 
-center footer Generated on 2022/05/13 06:19:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:21:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

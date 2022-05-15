@@ -18,11 +18,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.2.0-debian-10-r88\n
 usecase "Image\n====\ndocker.io\n====\nbitnami/odoo:15.0.20220510-debian-10-r0\n====\n15.0.20220510-debian-10-r0" as docker_io_bitnami_odoo_15_0_20220510_debian_10_r0 #LavenderBlush
 
 'Chart Dependencies
+odoo_21_2_11--[#green]-|>common_1_13_1
 odoo_21_2_11--[#green]-|>postgresql_11_1_28
 postgresql_11_1_28--[#green]-|>common_1_13_1
-odoo_21_2_11--[#green]-|>common_1_13_1
 odoo_21_2_11--[#orange]-|>docker_io_bitnami_odoo_15_0_20220510_debian_10_r0
 postgresql_11_1_28--[#orange]-|>docker_io_bitnami_postgresql_14_2_0_debian_10_r88
 
-center footer Generated on 2022/05/13 06:37:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 12:40:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
