@@ -35,13 +35,6 @@
       "version": "2.5.3"
     },
     {
-      "repoHost": "quay.io",
-      "children": [],
-      "name": "alfresco/alfresco-shared-file-store:0.16.0",
-      "type": "image",
-      "version": "0.16.0"
-    },
-    {
       "repoHost": "Docker Hub",
       "children": [],
       "name": "alfresco/alfresco-imagemagick",
@@ -49,11 +42,11 @@
       "version": "2.5.3"
     },
     {
-      "repoHost": "Docker Hub",
+      "repoHost": "quay.io",
       "children": [],
-      "name": "alfresco/alfresco-libreoffice",
+      "name": "alfresco/alfresco-shared-file-store:0.16.0",
       "type": "image",
-      "version": "2.5.3"
+      "version": "0.16.0"
     },
     {
       "repoHost": "quay.io",
@@ -66,6 +59,13 @@
       "repoHost": "Docker Hub",
       "children": [],
       "name": "alfresco/alfresco-pdf-renderer",
+      "type": "image",
+      "version": "2.5.3"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-libreoffice",
       "type": "image",
       "version": "2.5.3"
     },
@@ -91,50 +91,6 @@
     },
     {
       "keywords": [
-        "search",
-        "search services",
-        "alfresco search services",
-        "insight",
-        "insight engine",
-        "alfresco insight engine"
-      ],
-      "children": [
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "alfresco/alfresco-search-services",
-          "type": "image",
-          "version": "2.0.2"
-        },
-        {
-          "keywords": [
-            "zeppelin",
-            "insight zeppelin",
-            "alfresco zeppelin",
-            "alfresco insight zeppelin"
-          ],
-          "children": [{
-            "repoHost": "quay.io",
-            "children": [],
-            "name": "alfresco/insight-zeppelin:1.4.0",
-            "type": "image",
-            "version": "1.4.0"
-          }],
-          "name": "alfresco-insight-zeppelin:1.0.3",
-          "description": "A Helm chart for deploying Alfresco Insight Zeppelin",
-          "type": "chart",
-          "shortName": "alfresco-insight-zeppelin",
-          "version": "1.0.3"
-        }
-      ],
-      "name": "alfresco-search:1.0.4",
-      "description": "A Helm chart for deploying Alfresco Search",
-      "type": "chart",
-      "shortName": "alfresco-search",
-      "version": "1.0.4"
-    },
-    {
-      "keywords": [
         "activemq",
         "message broker"
       ],
@@ -150,14 +106,6 @@
       "type": "chart",
       "shortName": "activemq",
       "version": "2.0.0"
-    },
-    {
-      "children": [],
-      "name": "common:7.1.0-M16",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.1.0-M16"
     },
     {
       "maintainers": [
@@ -211,6 +159,58 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "10.13.9"
+    },
+    {
+      "keywords": [
+        "search",
+        "search services",
+        "alfresco search services",
+        "insight",
+        "insight engine",
+        "alfresco insight engine"
+      ],
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "alfresco/alfresco-search-services",
+          "type": "image",
+          "version": "2.0.2"
+        },
+        {
+          "keywords": [
+            "zeppelin",
+            "insight zeppelin",
+            "alfresco zeppelin",
+            "alfresco insight zeppelin"
+          ],
+          "children": [{
+            "repoHost": "quay.io",
+            "children": [],
+            "name": "alfresco/insight-zeppelin:1.4.0",
+            "type": "image",
+            "version": "1.4.0"
+          }],
+          "name": "alfresco-insight-zeppelin:1.0.3",
+          "description": "A Helm chart for deploying Alfresco Insight Zeppelin",
+          "type": "chart",
+          "shortName": "alfresco-insight-zeppelin",
+          "version": "1.0.3"
+        }
+      ],
+      "name": "alfresco-search:1.0.4",
+      "description": "A Helm chart for deploying Alfresco Search",
+      "type": "chart",
+      "shortName": "alfresco-search",
+      "version": "1.0.4"
+    },
+    {
+      "children": [],
+      "name": "common:7.1.0-M16",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.1.0-M16"
     }
   ],
   "name": "alfresco-content-services:5.2.0-M1",

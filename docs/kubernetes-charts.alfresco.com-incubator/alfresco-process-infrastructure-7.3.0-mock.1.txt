@@ -36,7 +36,7 @@ Chart: alfresco-process-infrastructure:7.3.0-mock.1
 	apiVersion: v2
 	appVersion: 7.3.0-mock.1
 	created: Not specified
-	dependencies: rabbitmq:8.20.5, common:7.3.0-mock.1, postgresql:10.3.13, alfresco-identity-service:6.0.0
+	dependencies: common:7.3.0-mock.1, rabbitmq:8.20.5, postgresql:10.3.13, alfresco-identity-service:6.0.0
 	description: A Helm chart for Alfresco Activiti Enterprise infrastructure
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -146,9 +146,9 @@ Image: docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 
 Chart Dependencies
 ------------------
+alfresco-process-infrastructure:7.3.0-mock.1 depends on common:7.3.0-mock.1
 alfresco-process-infrastructure:7.3.0-mock.1 depends on rabbitmq:8.20.5
 rabbitmq:8.20.5 depends on common:1.8.0
-alfresco-process-infrastructure:7.3.0-mock.1 depends on common:7.3.0-mock.1
 alfresco-process-infrastructure:7.3.0-mock.1 depends on postgresql:10.3.13
 postgresql:10.3.13 depends on common:1.4.1
 alfresco-process-infrastructure:7.3.0-mock.1 depends on alfresco-identity-service:6.0.0
@@ -159,4 +159,4 @@ keycloak:16.1.0 uses quay.io/alfresco/alfresco-identity-service:1.7.0
 postgresql:10.3.13 uses docker.io/bitnami/postgresql:13.3.0
 rabbitmq:8.20.5 uses docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 
-Generated on 2022/05/12 16:35:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 11:43:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

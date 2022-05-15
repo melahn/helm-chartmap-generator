@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-content-app\n====\ndev
 'Chart Dependencies
 alfresco_content_application_0_0_1--[#orange]-|>alfresco_alfresco_content_app_development_latest
 
-center footer Generated on 2022/05/12 16:24:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 11:33:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\nalfresco/acs-events-consolidator:0.3-SNAPSH
 'Chart Dependencies
 acs_events_consolidator_0_2--[#orange]-|>quay_io_alfresco_acs_events_consolidator_0_3_SNAPSHOT
 
-center footer Generated on 2022/05/12 16:23:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 11:32:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

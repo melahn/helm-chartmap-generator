@@ -2,13 +2,6 @@
   "maintainers": [{"name": "Alfresco"}],
   "children": [
     {
-      "repoHost": "Docker Hub",
-      "children": [],
-      "name": "docker",
-      "type": "image",
-      "version": "18.06.1-dind"
-    },
-    {
       "repoHost": "quay.io",
       "children": [],
       "name": "alfresco/alfresco-deployment-service:latest",
@@ -28,7 +21,7 @@
         "children": [],
         "name": "postgres",
         "type": "image",
-        "version": "11.4"
+        "version": "9.6.2"
       }],
       "name": "postgresql:0.11.0",
       "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",

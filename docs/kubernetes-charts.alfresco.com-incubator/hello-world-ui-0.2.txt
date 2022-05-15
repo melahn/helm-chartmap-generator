@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 hello-world-ui:0.2 uses quay.io/alfresco/anaxes-hello-world-ui:0.1-SNAPSHOT
 
-Generated on 2022/05/12 16:37:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/15 11:46:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
