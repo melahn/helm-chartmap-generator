@@ -1,6 +1,7 @@
 # helm-chartmap-generator
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/melahn/helm-chartmap-generator)](https://github.com/melahn/helm-chartmap-generator/commit/master)
+[![GitHub Build Status](https://github.com/melahn/helm-chartmap-generator/actions/workflows/build.yml/badge.svg)](https://github.com/melahn/helm-chartmap-generator/actions/workflows/build.yml)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/melahn/helm-chartmap-generator)](https://github.com/melahn/helm-chartmap-generator/releases/tag/v1.1.0)
 [![GitHub Release Date](https://img.shields.io/github/release-date/melahn/helm-chartmap-generator)](https://github.com/melahn/helm-chartmap-generator/releases/tag/v1.1.0)
 [![Maven Central](https://img.shields.io/maven-central/v/com.melahn/helm-chartmap-generator)](https://search.maven.org/artifact/com.melahn/helm-chartmap-generator/1.1.0/jar)
