@@ -304,7 +304,7 @@ public class ChartMapGenerator {
                writeBuffer.getBytes(),
                StandardOpenOption.APPEND);
             chartCountGood++;
-            String s = r?" with the refresh option":"";
+            String s = r?"with the refresh option":"";
             logger.info("Printed chart: {} {}", h.getNameFull(), s);
         }
         catch (ChartMapGeneratorException | IOException e) {

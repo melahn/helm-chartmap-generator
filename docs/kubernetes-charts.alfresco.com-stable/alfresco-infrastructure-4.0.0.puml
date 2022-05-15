@@ -24,8 +24,8 @@ usecase "Image\n====\nquay.io\n====\nkubernetes-ingress-controller/nginx-ingress
 usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-activemq\n====\n5.15.6-java-8-oracle-centos-7-ac5b98b35cd4" as alfresco_alfresco_activemq_5_15_6_java_8_oracle_centos_7_ac5b98b35cd4 #Khaki
 
 'Chart Dependencies
-alfresco_infrastructure_4_0_0--[#green]-|>activemq_1_0_0
 alfresco_infrastructure_4_0_0--[#green]-|>nginx_ingress_0_14_0
+alfresco_infrastructure_4_0_0--[#green]-|>activemq_1_0_0
 alfresco_infrastructure_4_0_0--[#green]-|>alfresco_identity_service_1_1_0
 alfresco_identity_service_1_1_0--[#green]-|>keycloak_4_3_0
 keycloak_4_3_0--[#green]-|>postgresql_0_15_0
@@ -35,5 +35,5 @@ keycloak_4_3_0--[#orange]-|>jboss_keycloak_4_8_3_Final
 nginx_ingress_0_14_0--[#orange]-|>k8s_gcr_io_defaultbackend_1_3
 nginx_ingress_0_14_0--[#orange]-|>quay_io_kubernetes_ingress_controller_nginx_ingress_controller_0_12_0
 
-center footer Generated on 2022/05/07 09:15:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 11:21:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

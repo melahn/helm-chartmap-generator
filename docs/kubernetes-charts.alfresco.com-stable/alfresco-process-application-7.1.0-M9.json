@@ -11,6 +11,101 @@
         {
           "repoHost": "quay.io",
           "children": [],
+          "name": "alfresco/alfresco-process-query-service:develop",
+          "type": "image",
+          "version": "develop"
+        },
+        {
+          "children": [],
+          "name": "common:7.1.0-M9",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "7.1.0-M9"
+        }
+      ],
+      "name": "activiti-cloud-query:7.1.0-M9",
+      "description": "A Helm chart for Kubernetes",
+      "type": "chart",
+      "shortName": "activiti-cloud-query",
+      "version": "7.1.0-M9"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/postgresql:11.5.0-debian-9-r34",
+        "type": "image",
+        "version": "11.5.0-debian-9-r34"
+      }],
+      "name": "postgresql:6.3.9",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "6.3.9"
+    },
+    {
+      "maintainers": [{"name": "Alfresco"}],
+      "keywords": [
+        "alfresco",
+        "adf",
+        "alfresco development framework",
+        "content",
+        "content services",
+        "alfresco content services",
+        "process",
+        "process services",
+        "alfresco process services",
+        "activiti",
+        "activiti enterprise",
+        "alfresco activiti enterprise"
+      ],
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-adf-app:latest",
+          "type": "image",
+          "version": "latest"
+        },
+        {
+          "children": [],
+          "name": "common:7.1.0-M9",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "7.1.0-M9"
+        }
+      ],
+      "name": "alfresco-adf-app:2.2.2",
+      "description": "A Helm chart for a generic Alfresco ADF frontend application",
+      "type": "chart",
+      "shortName": "alfresco-adf-app",
+      "version": "2.2.2"
+    },
+    {
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
           "name": "alfresco/alfresco-process-runtime-bundle-service:develop",
           "type": "image",
           "version": "develop"
@@ -75,101 +170,6 @@
       "description": "A Helm chart for Kubernetes",
       "type": "chart",
       "shortName": "activiti-cloud-connector",
-      "version": "7.1.0-M9"
-    },
-    {
-      "maintainers": [{"name": "Alfresco"}],
-      "keywords": [
-        "alfresco",
-        "adf",
-        "alfresco development framework",
-        "content",
-        "content services",
-        "alfresco content services",
-        "process",
-        "process services",
-        "alfresco process services",
-        "activiti",
-        "activiti enterprise",
-        "alfresco activiti enterprise"
-      ],
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-adf-app:latest",
-          "type": "image",
-          "version": "latest"
-        },
-        {
-          "children": [],
-          "name": "common:7.1.0-M9",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "7.1.0-M9"
-        }
-      ],
-      "name": "alfresco-adf-app:2.2.2",
-      "description": "A Helm chart for a generic Alfresco ADF frontend application",
-      "type": "chart",
-      "shortName": "alfresco-adf-app",
-      "version": "2.2.2"
-    },
-    {
-      "maintainers": [
-        {
-          "name": "Bitnami",
-          "email": "containers@bitnami.com"
-        },
-        {
-          "name": "desaintmartin",
-          "email": "cedric@desaintmartin.fr"
-        }
-      ],
-      "keywords": [
-        "postgresql",
-        "postgres",
-        "database",
-        "sql",
-        "replication",
-        "cluster"
-      ],
-      "children": [{
-        "repoHost": "docker.io",
-        "children": [],
-        "name": "bitnami/postgresql:11.5.0-debian-9-r34",
-        "type": "image",
-        "version": "11.5.0-debian-9-r34"
-      }],
-      "name": "postgresql:6.3.9",
-      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-      "type": "chart",
-      "shortName": "postgresql",
-      "version": "6.3.9"
-    },
-    {
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-query-service:develop",
-          "type": "image",
-          "version": "develop"
-        },
-        {
-          "children": [],
-          "name": "common:7.1.0-M9",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "7.1.0-M9"
-        }
-      ],
-      "name": "activiti-cloud-query:7.1.0-M9",
-      "description": "A Helm chart for Kubernetes",
-      "type": "chart",
-      "shortName": "activiti-cloud-query",
       "version": "7.1.0-M9"
     }
   ],

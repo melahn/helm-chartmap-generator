@@ -27,16 +27,16 @@ usecase "Image\n====\nquay.io\n====\nalfresco/alfresco-process-query-service:dev
 usecase "Image\n====\nDocker Hub\n====\nrabbitmq\n====\n3.8.0-alpine" as rabbitmq_3_8_0_alpine #Aqua
 
 'Chart Dependencies
+alfresco_process_application_7_1_0_M9--[#green]-|>activiti_cloud_connector_7_1_0_M9
+activiti_cloud_connector_7_1_0_M9--[#green]-|>common_7_1_0_M9
+alfresco_process_application_7_1_0_M9--[#green]-|>rabbitmq_ha_1_38_1
 alfresco_process_application_7_1_0_M9--[#green]-|>runtime_bundle_7_1_0_M9
 runtime_bundle_7_1_0_M9--[#green]-|>common_7_1_0_M9
 alfresco_process_application_7_1_0_M9--[#green]-|>postgresql_6_3_9
-alfresco_process_application_7_1_0_M9--[#green]-|>activiti_cloud_connector_7_1_0_M9
-activiti_cloud_connector_7_1_0_M9--[#green]-|>common_7_1_0_M9
 alfresco_process_application_7_1_0_M9--[#green]-|>activiti_cloud_query_7_1_0_M9
 activiti_cloud_query_7_1_0_M9--[#green]-|>common_7_1_0_M9
 alfresco_process_application_7_1_0_M9--[#green]-|>alfresco_adf_app_2_2_2
 alfresco_adf_app_2_2_2--[#green]-|>common_7_1_0_M9
-alfresco_process_application_7_1_0_M9--[#green]-|>rabbitmq_ha_1_38_1
 runtime_bundle_7_1_0_M9--[#orange]-|>quay_io_alfresco_alfresco_process_runtime_bundle_service_develop
 alfresco_adf_app_2_2_2--[#orange]-|>quay_io_alfresco_alfresco_adf_app_latest
 rabbitmq_ha_1_38_1--[#orange]-|>rabbitmq_3_8_0_alpine
@@ -44,5 +44,5 @@ activiti_cloud_query_7_1_0_M9--[#orange]-|>quay_io_alfresco_alfresco_process_que
 postgresql_6_3_9--[#orange]-|>docker_io_bitnami_postgresql_11_5_0_debian_9_r34
 activiti_cloud_connector_7_1_0_M9--[#orange]-|>activiti_example_cloud_connector_7_1_0_M9
 
-center footer Generated on 2022/05/07 09:16:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/15 11:22:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

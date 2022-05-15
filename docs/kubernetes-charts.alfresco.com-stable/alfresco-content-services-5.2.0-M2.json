@@ -49,13 +49,6 @@
       "version": "2.5.6"
     },
     {
-      "repoHost": "quay.io",
-      "children": [],
-      "name": "alfresco/alfresco-transform-router:1.5.1",
-      "type": "image",
-      "version": "1.5.1"
-    },
-    {
       "repoHost": "Docker Hub",
       "children": [],
       "name": "alfresco/alfresco-transform-misc",
@@ -65,29 +58,78 @@
     {
       "repoHost": "quay.io",
       "children": [],
+      "name": "alfresco/alfresco-transform-router:1.5.1",
+      "type": "image",
+      "version": "1.5.1"
+    },
+    {
+      "repoHost": "quay.io",
+      "children": [],
       "name": "alfresco/alfresco-share:7.2.0-M2",
       "type": "image",
       "version": "7.2.0-M2"
     },
     {
-      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
       "keywords": [
-        "syncservice",
-        "alfresco",
-        "application"
+        "activemq",
+        "message broker"
       ],
       "children": [{
-        "repoHost": "quay.io",
+        "repoHost": "Docker Hub",
         "children": [],
-        "name": "alfresco/service-sync:3.5.0",
+        "name": "alfresco/alfresco-activemq",
         "type": "image",
-        "version": "3.5.0"
+        "version": "5.16.1"
       }],
-      "name": "alfresco-sync-service:3.0.9",
-      "description": "Alfresco Sync Service",
+      "name": "activemq:2.0.0",
+      "description": "A Helm chart Providing Apache ActiveMQ.",
       "type": "chart",
-      "shortName": "alfresco-sync-service",
-      "version": "3.0.9"
+      "shortName": "activemq",
+      "version": "2.0.0"
+    },
+    {
+      "keywords": [
+        "search",
+        "search services",
+        "alfresco search services",
+        "insight",
+        "insight engine",
+        "alfresco insight engine"
+      ],
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "alfresco/alfresco-search-services",
+          "type": "image",
+          "version": "2.0.2"
+        },
+        {
+          "keywords": [
+            "zeppelin",
+            "insight zeppelin",
+            "alfresco zeppelin",
+            "alfresco insight zeppelin"
+          ],
+          "children": [{
+            "repoHost": "quay.io",
+            "children": [],
+            "name": "alfresco/insight-zeppelin:1.4.0",
+            "type": "image",
+            "version": "1.4.0"
+          }],
+          "name": "alfresco-insight-zeppelin:1.0.3",
+          "description": "A Helm chart for deploying Alfresco Insight Zeppelin",
+          "type": "chart",
+          "shortName": "alfresco-insight-zeppelin",
+          "version": "1.0.3"
+        }
+      ],
+      "name": "alfresco-search:1.0.4",
+      "description": "A Helm chart for deploying Alfresco Search",
+      "type": "chart",
+      "shortName": "alfresco-search",
+      "version": "1.0.4"
     },
     {
       "children": [],
@@ -151,66 +193,24 @@
       "version": "10.13.9"
     },
     {
+      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
       "keywords": [
-        "search",
-        "search services",
-        "alfresco search services",
-        "insight",
-        "insight engine",
-        "alfresco insight engine"
-      ],
-      "children": [
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "alfresco/alfresco-search-services",
-          "type": "image",
-          "version": "2.0.2"
-        },
-        {
-          "keywords": [
-            "zeppelin",
-            "insight zeppelin",
-            "alfresco zeppelin",
-            "alfresco insight zeppelin"
-          ],
-          "children": [{
-            "repoHost": "quay.io",
-            "children": [],
-            "name": "alfresco/insight-zeppelin:1.4.0",
-            "type": "image",
-            "version": "1.4.0"
-          }],
-          "name": "alfresco-insight-zeppelin:1.0.3",
-          "description": "A Helm chart for deploying Alfresco Insight Zeppelin",
-          "type": "chart",
-          "shortName": "alfresco-insight-zeppelin",
-          "version": "1.0.3"
-        }
-      ],
-      "name": "alfresco-search:1.0.4",
-      "description": "A Helm chart for deploying Alfresco Search",
-      "type": "chart",
-      "shortName": "alfresco-search",
-      "version": "1.0.4"
-    },
-    {
-      "keywords": [
-        "activemq",
-        "message broker"
+        "syncservice",
+        "alfresco",
+        "application"
       ],
       "children": [{
-        "repoHost": "Docker Hub",
+        "repoHost": "quay.io",
         "children": [],
-        "name": "alfresco/alfresco-activemq",
+        "name": "alfresco/service-sync:3.5.0",
         "type": "image",
-        "version": "5.16.1"
+        "version": "3.5.0"
       }],
-      "name": "activemq:2.0.0",
-      "description": "A Helm chart Providing Apache ActiveMQ.",
+      "name": "alfresco-sync-service:3.0.9",
+      "description": "Alfresco Sync Service",
       "type": "chart",
-      "shortName": "activemq",
-      "version": "2.0.0"
+      "shortName": "alfresco-sync-service",
+      "version": "3.0.9"
     }
   ],
   "name": "alfresco-content-services:5.2.0-M2",
