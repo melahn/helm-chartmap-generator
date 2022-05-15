@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyByte;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
@@ -191,20 +190,20 @@ class ChartMapGeneratorTest {
         ChartMapGenerator scmg1 = spy(cmg1);
         doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString(), any());
         scmg1.generate();
-        assertEquals(3, scmg1.getChartCountBad());
+        assertEquals(4, scmg1.getChartCountBad());
         assertEquals(0, scmg1.getChartCountGood());
-        assertEquals(3, scmg1.getChartCount());
-        System.out.println("Bad chart count = 3 as expected when printChart(HelmChart, String) throws an exception");
+        assertEquals(4, scmg1.getChartCount());
+        System.out.println("Bad chart count = 4 as expected when printChart(HelmChart, String) throws an exception");
         // test printChart(HelmChart, String) ChartMapGeneratorException
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         ChartMapGenerator scmg2 = spy(cmg2);
         doThrow(ChartMapException.class).when(scmg2).getChartMap(any(), any(), any(), any(), any());
         scmg2.generate();
-        assertEquals(3, scmg2.getChartCountBad());
+        assertEquals(4, scmg2.getChartCountBad());
         assertEquals(0, scmg2.getChartCountGood());
-        assertEquals(3, scmg2.getChartCount());
-        System.out.println("Bad chart count = 3 as expected when getChartMap() throws an exception");
+        assertEquals(4, scmg2.getChartCount());
+        System.out.println("Bad chart count = 4 as expected when getChartMap() throws an exception");
         System.out.println(m.concat(" completed"));
     }
 
@@ -235,6 +234,27 @@ class ChartMapGeneratorTest {
         System.out.println("A list of charts with errors was not found");
         assertEquals(0, cmg2.getChartCountBad());
         System.out.println("The bad chart count is 0, as expected");
+        System.out.println(m.concat(" completed"));
+    }
+
+    /**
+     * Test the ability of the generator to automatically retry using the refresh option.
+     * 
+     * @throws ChartMapGeneratorException
+     * @throws IOException
+     */
+    @Test
+    void refreshRetryTest() throws ChartMapGeneratorException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        testDirectoryName = createTestDir(m, getTestVariation());
+        ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
+        try (ByteArrayOutputStream o = new ByteArrayOutputStream()) {
+            System.setOut(new PrintStream(o));
+            cmg.generate();
+            assertTrue(streamContains(o, "Printed chart: test-app-d:0.1.0 with the refresh option"));
+            System.setOut(initialOut);
+            System.out.println("The ability for ChartMapGenerstor to retry using the refresh option was successfully tested");
+        }
         System.out.println(m.concat(" completed"));
     }
 
