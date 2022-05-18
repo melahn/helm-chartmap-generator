@@ -33,6 +33,7 @@ class ChartMapGeneratorTest {
     private static final String CSS_FILENAME = "style.css";
     private static final String BAD_CHART_COUNT_STRING = "Bad chart count = %d as expected when getChartMap() throws an exception";
     private static final String DIVIDER = "-------------------------------------";
+    private static final String FORMAT_ALL = "jpt";
     private static final String FORMAT_JSON = "j";
     private static final String FORMAT_PUML = "p";
     private static final String FORMAT_TEXT = "t";
@@ -248,7 +249,7 @@ class ChartMapGeneratorTest {
     void refreshRetryTest() throws ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
         testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
+        ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_ALL, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
         try (ByteArrayOutputStream o = new ByteArrayOutputStream()) {
             System.setOut(new PrintStream(o));
             cmg.generate();
@@ -376,7 +377,7 @@ class ChartMapGeneratorTest {
         System.out.println("empty file format mask was handled correctly");
         // mixed case format specifier
         testDirectoryName = createTestDir(m, getTestVariation());
-        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, "tJp", 1, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_ALL, 1, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg.generate();
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.json")));
