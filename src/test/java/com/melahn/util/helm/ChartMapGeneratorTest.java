@@ -31,11 +31,14 @@ import com.melahn.util.helm.model.HelmChart;
 class ChartMapGeneratorTest {
 
     private static final String CSS_FILENAME = "style.css";
+    private static final String BAD_CHART_COUNT_STRING = "Bad chart count = %d as expected when getChartMap() throws an exception";
     private static final String DIVIDER = "-------------------------------------";
     private static final String FORMAT_JSON = "j";
     private static final String FORMAT_PUML = "p";
     private static final String FORMAT_TEXT = "t";
     private static final String INDEX_FILENAME = "index.html";
+    private static final int NUM_BAD_CHARTS = 1;
+    private static final int NUM_CHARTS = 5;
     private static final int PRINT_ONE_VERSION = 1;
     private static final int PRINT_ALL_VERSIONS = 99;
     private static final String TARGET_TEST_DIR_NAME = "target/test";
@@ -44,9 +47,6 @@ class ChartMapGeneratorTest {
     private static final String TEST_ENV_SPEC_NOT_EXIST = "./resource/example/no-spec-here.yaml";
     private static final boolean VERBOSE_FALSE = false;
     private static final boolean VERBOSE_TRUE = true;
-
-    private static String targetTest = "target/test";
-    private static String targetTestDirectory = Paths.get(targetTest).toString();
 
     private final PrintStream initialOut = System.out;
 
@@ -112,7 +112,7 @@ class ChartMapGeneratorTest {
         // A bogus repo name was provided.
         testDirectoryName = createTestDir(m, getTestVariation());
         String bogus = String.valueOf(System.currentTimeMillis());
-        ChartMapGenerator cmg = createTestMapGenerator(bogus, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
+        ChartMapGenerator cmg = createTestMapGenerator(bogus, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         assertThrows(ChartMapGeneratorException.class, () -> cmg.generate());
         System.out.println(String.format("A ChartMapGeneratorException was thrown as expected since a bogus repo name \'%s\' was provided", bogus));
         System.out.println(m.concat(" completed"));
@@ -131,7 +131,7 @@ class ChartMapGeneratorTest {
         testDirectoryName = createTestDir(m, getTestVariation());
         // An environment spec that does exist, print one version of each chart
         testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
+        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg2.generate();
         // validate that one and only one (the most recent) version of each of the charts is printed in text format
         assertTrue(Files.exists(Paths.get(testDirectoryName, "test-app-a-0.1.0.txt")));
@@ -168,6 +168,7 @@ class ChartMapGeneratorTest {
         Files.deleteIfExists(Paths.get(".", "test-app-a-0.1.0.txt"));
         Files.deleteIfExists(Paths.get(".", "test-app-b-0.2.0.txt"));
         Files.deleteIfExists(Paths.get(".", "test-app-c-0.3.0.txt"));
+        Files.deleteIfExists(Paths.get(".", "test-app-d-0.1.0.txt"));
         Files.deleteIfExists(Paths.get(".", CSS_FILENAME));
         Files.deleteIfExists(Paths.get(".", INDEX_FILENAME));
         System.out.println("No output directory was provided so the pwd was used");
@@ -186,24 +187,24 @@ class ChartMapGeneratorTest {
         testVariation = 0;
         // test printChart(HelmChart) ChartMapGeneratorException
         testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
+        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         ChartMapGenerator scmg1 = spy(cmg1);
         doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString(), any());
         scmg1.generate();
-        assertEquals(4, scmg1.getChartCountBad());
+        assertEquals(NUM_CHARTS, scmg1.getChartCountBad());
         assertEquals(0, scmg1.getChartCountGood());
-        assertEquals(4, scmg1.getChartCount());
-        System.out.println("Bad chart count = 4 as expected when printChart(HelmChart, String) throws an exception");
+        assertEquals(NUM_CHARTS, scmg1.getChartCount());
+        System.out.println(String.format(BAD_CHART_COUNT_STRING, NUM_CHARTS));
         // test printChart(HelmChart, String) ChartMapGeneratorException
         testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
+        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         ChartMapGenerator scmg2 = spy(cmg2);
         doThrow(ChartMapException.class).when(scmg2).getChartMap(any(), any(), any(), any(), any());
         scmg2.generate();
-        assertEquals(4, scmg2.getChartCountBad());
+        assertEquals(NUM_CHARTS, scmg2.getChartCountBad());
         assertEquals(0, scmg2.getChartCountGood());
-        assertEquals(4, scmg2.getChartCount());
-        System.out.println("Bad chart count = 4 as expected when getChartMap() throws an exception");
+        assertEquals(NUM_CHARTS, scmg2.getChartCount());
+        System.out.println(String.format(BAD_CHART_COUNT_STRING, NUM_CHARTS));
         System.out.println(m.concat(" completed"));
     }
 
@@ -219,7 +220,7 @@ class ChartMapGeneratorTest {
         testVariation = 0;
         // test getDetails with a simulated bad chart
         testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_TRUE);
+        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_TRUE);
         ChartMapGenerator scmg1 = spy(cmg1);
         doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString(), any());
         scmg1.generate();
@@ -227,13 +228,13 @@ class ChartMapGeneratorTest {
         System.out.println("A list of charts with errors is found, as expected");
         // test getDetails without a simulated bad chart
         testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_TRUE);
+        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_TRUE);
         doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString(), any());
         cmg2.generate();
         assertFalse(fileContains(Paths.get(testDirectoryName, INDEX_FILENAME), "Here is a list of the charts with errors (consult the output log to see the specific error messages)"));
         System.out.println("A list of charts with errors was not found");
-        assertEquals(0, cmg2.getChartCountBad());
-        System.out.println("The bad chart count is 0, as expected");
+        assertEquals(NUM_BAD_CHARTS, cmg2.getChartCountBad());
+        System.out.println(String.format("The bad chart count is %d, as expected", NUM_BAD_CHARTS));
         System.out.println(m.concat(" completed"));
     }
 
@@ -247,13 +248,13 @@ class ChartMapGeneratorTest {
     void refreshRetryTest() throws ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
         testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
+        ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
         try (ByteArrayOutputStream o = new ByteArrayOutputStream()) {
             System.setOut(new PrintStream(o));
             cmg.generate();
             assertTrue(streamContains(o, "Printed chart: test-app-d:0.1.0 with the refresh option"));
             System.setOut(initialOut);
-            System.out.println("The ability for ChartMapGenerstor to retry using the refresh option was successfully tested");
+            System.out.println("The ability for ChartMapGenerator to retry using the refresh option was successfully tested");
         }
         System.out.println(m.concat(" completed"));
     }
@@ -270,7 +271,7 @@ class ChartMapGeneratorTest {
         // all versions of each of the charts are printed in text format
         testVariation = 0;
         testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
+        ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg.generate();
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.1.0.txt"))); 
@@ -281,7 +282,7 @@ class ChartMapGeneratorTest {
         System.out.println("All versions of each chart were successfully printed in text format");
         //one and only one (the most recent) version of each of the charts is printed in text format
         testDirectoryName = createTestDir(m, getTestVariation());
-        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg .generate();
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.txt")));
@@ -307,7 +308,7 @@ class ChartMapGeneratorTest {
         testDirectoryName = createTestDir(m, getTestVariation());
         try (ByteArrayOutputStream o = new ByteArrayOutputStream()) {
             System.setOut(new PrintStream(o));
-            ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_TRUE);
+            ChartMapGenerator cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_TRUE);
             cmg.generate();
             assertTrue(streamContains(o, "Number of charts found in local helm repo"));
             System.setOut(initialOut);
@@ -341,7 +342,7 @@ class ChartMapGeneratorTest {
         System.out.println("All versions of each chart were successfully printed in text format");
         // all versions of each of the charts are printed in json format 
         testDirectoryName = createTestDir(m, getTestVariation());
-        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_JSON, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_JSON, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg.generate();
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.json")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.1.0.json"))); 
@@ -352,7 +353,7 @@ class ChartMapGeneratorTest {
         System.out.println("All versions of each chart were successfully printed in json format");
         // one version of each of the charts are printed in puml format with an accompanying image file
         testDirectoryName = createTestDir(m, getTestVariation());
-        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), FORMAT_PUML, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_PUML, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg.generate();
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.puml")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.puml"))); 
@@ -363,19 +364,19 @@ class ChartMapGeneratorTest {
         System.out.println("One version of each chart were successfully printed in puml and png format");
         // null format specifier
         testDirectoryName = createTestDir(m, getTestVariation());
-        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), null, 1, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, null, 1, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg.generate();
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
         System.out.println("null file format mask was handled correctly");
         // empty string format specifier
         testDirectoryName = createTestDir(m, getTestVariation());
-        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), null, 1, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, null, 1, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg.generate();
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
         System.out.println("empty file format mask was handled correctly");
         // mixed case format specifier
         testDirectoryName = createTestDir(m, getTestVariation());
-        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName.toString(), "tJp", 1, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, "tJp", 1, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg.generate();
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.json")));
@@ -393,8 +394,11 @@ class ChartMapGeneratorTest {
      */
     @Test
     void checkHelmVersionTest() throws ChartMapGeneratorException, InterruptedException, IOException {
+        String m = new Throwable().getStackTrace()[0].getMethodName();
+        testVariation = 0;
+        testDirectoryName = createTestDir(m, getTestVariation());
         // Test a bad helm command
-        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, targetTestDirectory, FORMAT_TEXT, 1, null, true);
+        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, true);
         ChartMapGenerator scmg1 = spy(cmg1);
         // Use a command that is the same across all the OS's so it will run
         Process p1 = Runtime.getRuntime().exec(new String[] { "echo", "I am the foo process" });
@@ -406,7 +410,7 @@ class ChartMapGeneratorTest {
         assertThrows(ChartMapGeneratorException.class, () -> scmg1.checkHelmVersion());
         System.out.println("ChartMapGeneratorException thrown as expected");
         // Test not helm version 3
-        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, targetTestDirectory, FORMAT_TEXT, 1, null, true);
+        ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, true);
         ChartMapGenerator scmg2 = spy(cmg2);
         // Use a command that is the same across all the OS's to mimic a helm not v3
         Process p2 = Runtime.getRuntime().exec(new String[] { "echo", "I am not helm version 3" });
@@ -415,7 +419,7 @@ class ChartMapGeneratorTest {
         System.out.println("ChartMapGeneratorException thrown as expected");
         // Use a command that will cause the process' BufferedReader to return null and
         // force the ChartMapGeneratorException.
-        ChartMapGenerator cmg3 = createTestMapGenerator(TEST_REPO_NAME, targetTestDirectory, FORMAT_TEXT, 1, null, true);
+        ChartMapGenerator cmg3 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, true);
         ChartMapGenerator scmg3 = spy(cmg3);
         String nullCommand = isWindows() ? "type" : "cat";
         String nullArgument = isWindows() ? "NUL" : "/dev/null";
@@ -425,14 +429,14 @@ class ChartMapGeneratorTest {
         System.out.println("ChartMapGeneratorException thrown as expected");
         // Use a command that will cause the process' BufferedReader to just one
         // character and force the ChartMapGeneratorException
-        ChartMapGenerator cmg4 = createTestMapGenerator(TEST_REPO_NAME, targetTestDirectory, FORMAT_TEXT, 1, null, true);
+        ChartMapGenerator cmg4 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, true);
         ChartMapGenerator scmg4 = spy(cmg4);
         Process p4 = Runtime.getRuntime().exec(new String[] { "echo", "1" });
         doReturn(p4).when(scmg4).getProcess(any());
         assertThrows(ChartMapGeneratorException.class, () -> scmg4.checkHelmVersion());
         System.out.println("ChartMapGeneratorException thrown as expected");
         // Cause an IOException -> ChartMapGeneratorException on getProcess()
-        ChartMapGenerator cmg5 = createTestMapGenerator(TEST_REPO_NAME, targetTestDirectory, FORMAT_TEXT, 1, null, true);
+        ChartMapGenerator cmg5 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, true);
         ChartMapGenerator scmg5 = spy(cmg5);
         doThrow(IOException.class).when(scmg5).getProcess(any());
         assertThrows(ChartMapGeneratorException.class, () -> scmg5.checkHelmVersion());
@@ -440,7 +444,7 @@ class ChartMapGeneratorTest {
         // Cause an InterruptedException -> ChartMapGeneratorException on waitFor()
         // Be careful to put InterruptedException case last in the test case since the
         // thread is not usable after that
-        ChartMapGenerator cmg6 = createTestMapGenerator(TEST_REPO_NAME, targetTestDirectory, FORMAT_TEXT, 1, null, true);
+        ChartMapGenerator cmg6 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, true);
         ChartMapGenerator scmg6 = spy(cmg6);
         Process p6 = Runtime.getRuntime()
                 .exec(new String[] { "echo", "I am going to throw an InterruptedException!!" });
@@ -505,7 +509,7 @@ class ChartMapGeneratorTest {
         ChartMapGenerator scmg4 = spy(cmg4);
         ProcessBuilder pb4 = new ProcessBuilder("foo", "bar");
         ProcessBuilder spb4 = spy(pb4);
-        Process p4 = Runtime.getRuntime().exec(new String[] { "echo", "I am going to return a bad exitValue ... just watch me!!" });
+        Process p4 = Runtime.getRuntime().exec(new String[] { "echo", "I am going to return a bad exit value ... just watch me!!" });
         Process sp4 = spy(p4);
         doReturn(1).when(sp4).exitValue();
         doReturn(sp4).when(spb4).start();
