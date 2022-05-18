@@ -332,14 +332,13 @@ public class ChartMapGenerator {
      */
     protected Boolean printChart(HelmChart h, String e, Boolean r) throws ChartMapGeneratorException {
         String filename = h.getName().concat("-").concat(h.getVersion()).concat(e);
-        boolean refresh = r;
         try {
-            printChartMap(h.getNameFull(), filename, refresh);
+            printChartMap(h.getNameFull(), filename, r);
         } catch (ChartMapException e1) {
             try {
-                if (!refresh) {
-                    refresh = true;
-                    printChartMap(h.getNameFull(), filename, refresh);
+                if (Boolean.FALSE.equals(r)) {
+                    r = true;
+                    printChartMap(h.getNameFull(), filename, r);
                 }
             } catch (ChartMapException x) {
                 LogManager.getLogger().error("Chart {} failed to print even with the refresh option", h.getNameFull());
@@ -347,7 +346,7 @@ public class ChartMapGenerator {
             }
         }
         addChartToIndex(filename);
-        return refresh;
+        return r;
     }
 
     /**
