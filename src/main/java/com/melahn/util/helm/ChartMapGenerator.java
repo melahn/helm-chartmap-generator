@@ -246,12 +246,9 @@ public class ChartMapGenerator {
             logger.log(logLevelVerbose,"Number of charts found in local helm repo {}: {}", localRepoName, entries.size());
             createIndex();
             for (Map.Entry<String, HelmChart[]> entry : entries.entrySet()) {
-                int i = 1;
-                for (HelmChart h : entry.getValue()) {
-                    printChart(h);
-                    if (++i > maxVersions) {
-                        break;
-                    }
+                HelmChart[] a = entry.getValue();
+                for (int i=0; i<a.length && i<maxVersions; i++) {
+                    printChart(a[i]);
                 }
             }
             endIndex();
@@ -295,7 +292,7 @@ public class ChartMapGenerator {
     protected void printChart(HelmChart h) {
         try {
             startStanzaInIndex(h.getNameFull());
-            boolean r = false;
+            Boolean r = false;
             for (String e : extensions) {
                 r = printChart(h, e, r);
             }
@@ -304,7 +301,7 @@ public class ChartMapGenerator {
                writeBuffer.getBytes(),
                StandardOpenOption.APPEND);
             chartCountGood++;
-            String s = r?"with the refresh option":"";
+            String s = Boolean.TRUE.equals(r)?"with the refresh option":"";
             logger.info("Printed chart: {} {}", h.getNameFull(), s);
         }
         catch (ChartMapGeneratorException | IOException e) {
@@ -339,6 +336,9 @@ public class ChartMapGenerator {
                 if (Boolean.FALSE.equals(r)) {
                     r = true;
                     printChartMap(h.getNameFull(), filename, r);
+                }
+                else {
+                    LogManager.getLogger().error("Skipped retry for '{}'' format of Chart {} since attempt with a different format already failed", e, h.getNameFull());
                 }
             } catch (ChartMapException x) {
                 LogManager.getLogger().error("Chart {} failed to print even with the refresh option", h.getNameFull());
@@ -500,15 +500,15 @@ public class ChartMapGenerator {
     protected String getDetails() {
         String s = "";
         if (verbose) {
-            s = s.concat(String.format("<hr><p>Charts successfully processed: %s</p>%n", chartCountGood))
-                    .concat(String.format("<p>Charts with errors: %s</p>%n", chartCountBad))
-                    .concat(String.format("<p>Total charts processed: %s</p>%n%n", chartCount));
-            if (chartCountBad > 0) {
+            s = s.concat(String.format("<hr><p>Chart versions successfully processed: %s</p>%n", chartCountGood))
+                    .concat(String.format("<p>Chart versions with errors: %s</p>%n", chartCountBad))
+                    .concat(String.format("<p>Total chart verssions processed: %s</p>%n%n", chartCount));
+            if (getChartCountBad() > 0) {
                 s = s.concat(
-                        "<p>Here is a list of the charts with errors. Consult the <a href=\"./helm-chartmap.log\">output log</a> to see the error messages logged by ChartMap.</p>\n\t<ul>\n");
-                for (String c : chartsWithErrors) {
+                        "<p>Here is a list of the chart versions with errors. Consult the <a href=\"./helm-chartmap.log\">output log</a> to see the error messages logged by ChartMap.</p>\n\t<ul>\n");
+                for (int i=0; i < chartsWithErrors.size(); i++) {
                     s = s.concat("\t\t<li class=\"charterror\">");
-                    s = s.concat(c).concat(LI_END);
+                    s = s.concat(chartsWithErrors.get(i).concat(LI_END));
                 }
                 s = s.concat("\t</ul>\n");
             }

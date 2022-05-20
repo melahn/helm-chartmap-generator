@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.spy;
@@ -25,21 +24,19 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
-
-import com.melahn.util.helm.model.HelmChart;
-
 class ChartMapGeneratorTest {
 
     private static final String CSS_FILENAME = "style.css";
-    private static final String BAD_CHART_COUNT_STRING = "Bad chart count = %d as expected when getChartMap() throws an exception";
+    private static final String BAD_CHART_COUNT_STRING = "Bad chart count = %d as expected";
     private static final String DIVIDER = "-------------------------------------";
     private static final String FORMAT_ALL = "jpt";
     private static final String FORMAT_JSON = "j";
     private static final String FORMAT_PUML = "p";
     private static final String FORMAT_TEXT = "t";
     private static final String INDEX_FILENAME = "index.html";
-    private static final int NUM_BAD_CHARTS = 1;
-    private static final int NUM_CHARTS = 5;
+    private static final int NUM_BAD_CHART_VERSIONS = 1;
+    private static final int NUM_GOOD_CHART_VERSIONS = 8;
+    private static final int NUM_ALL_CHART_VERSIONS = 9;
     private static final int PRINT_ONE_VERSION = 1;
     private static final int PRINT_ALL_VERSIONS = 99;
     private static final String TARGET_TEST_DIR_NAME = "target/test";
@@ -131,16 +128,18 @@ class ChartMapGeneratorTest {
         testVariation = 0;
         testDirectoryName = createTestDir(m, getTestVariation());
         // An environment spec that does exist, print one version of each chart
-        testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
         cmg2.generate();
         // validate that one and only one (the most recent) version of each of the charts is printed in text format
         assertTrue(Files.exists(Paths.get(testDirectoryName, "test-app-a-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName, "test-app-b-0.2.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName, "test-app-c-0.3.0.txt")));
+        assertTrue(Files.exists(Paths.get(testDirectoryName, "test-app-d-0.2.0.txt")));
         assertFalse(Files.exists(Paths.get(testDirectoryName, "test-app-b-0.1.0.txt"))); 
-        assertFalse(Files.exists(Paths.get(testDirectoryName, "test-app-c-0.1.0.txt"))); 
         assertFalse(Files.exists(Paths.get(testDirectoryName, "test-app-c-0.2.0.txt"))); 
+        assertFalse(Files.exists(Paths.get(testDirectoryName, "test-app-c-0.1.0.txt"))); 
+        assertFalse(Files.exists(Paths.get(testDirectoryName, "test-app-d-0.1.0.txt"))); 
+        assertFalse(Files.exists(Paths.get(testDirectoryName, "test-app-g-0.1.0.txt"))); 
         System.out.println("One version of each chart was successfully printed in text format");
         System.out.println(m.concat(" completed"));
     }
@@ -159,17 +158,18 @@ class ChartMapGeneratorTest {
         Files.deleteIfExists(Paths.get(".", CSS_FILENAME));
         Files.deleteIfExists(Paths.get(".", INDEX_FILENAME));
         cmg.generate();
-        // these are generated in the project root
+        // these are generated in the project root since an output dir was not specified
         assertTrue(Files.exists(Paths.get(".", "test-app-a-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(".", "test-app-b-0.2.0.txt")));
         assertTrue(Files.exists(Paths.get(".", "test-app-c-0.3.0.txt")));
+        assertTrue(Files.exists(Paths.get(".", "test-app-d-0.2.0.txt")));
         assertTrue(Files.exists(Paths.get(".", CSS_FILENAME)));
         assertTrue(Files.exists(Paths.get(".", INDEX_FILENAME)));
         // don't clutter up the project root
         Files.deleteIfExists(Paths.get(".", "test-app-a-0.1.0.txt"));
         Files.deleteIfExists(Paths.get(".", "test-app-b-0.2.0.txt"));
         Files.deleteIfExists(Paths.get(".", "test-app-c-0.3.0.txt"));
-        Files.deleteIfExists(Paths.get(".", "test-app-d-0.1.0.txt"));
+        Files.deleteIfExists(Paths.get(".", "test-app-d-0.2.0.txt"));
         Files.deleteIfExists(Paths.get(".", CSS_FILENAME));
         Files.deleteIfExists(Paths.get(".", INDEX_FILENAME));
         System.out.println("No output directory was provided so the pwd was used");
@@ -188,24 +188,20 @@ class ChartMapGeneratorTest {
         testVariation = 0;
         // test printChart(HelmChart) ChartMapGeneratorException
         testDirectoryName = createTestDir(m, getTestVariation());
-        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
-        ChartMapGenerator scmg1 = spy(cmg1);
-        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString(), any());
-        scmg1.generate();
-        assertEquals(NUM_CHARTS, scmg1.getChartCountBad());
-        assertEquals(0, scmg1.getChartCountGood());
-        assertEquals(NUM_CHARTS, scmg1.getChartCount());
-        System.out.println(String.format(BAD_CHART_COUNT_STRING, NUM_CHARTS));
+        ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ALL_VERSIONS, TEST_ENV_SPEC, VERBOSE_FALSE);
+        cmg1.generate();
+        assertEquals(NUM_BAD_CHART_VERSIONS, cmg1.getChartCountBad());
+        assertEquals(NUM_GOOD_CHART_VERSIONS, cmg1.getChartCountGood());
+        assertEquals(NUM_ALL_CHART_VERSIONS, cmg1.getChartCount());
+        System.out.println(String.format(BAD_CHART_COUNT_STRING, NUM_BAD_CHART_VERSIONS));
         // test printChart(HelmChart, String) ChartMapGeneratorException
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
-        ChartMapGenerator scmg2 = spy(cmg2);
-        doThrow(ChartMapException.class).when(scmg2).getChartMap(any(), any(), any(), any(), any());
-        scmg2.generate();
-        assertEquals(NUM_CHARTS, scmg2.getChartCountBad());
-        assertEquals(0, scmg2.getChartCountGood());
-        assertEquals(NUM_CHARTS, scmg2.getChartCount());
-        System.out.println(String.format(BAD_CHART_COUNT_STRING, NUM_CHARTS));
+        cmg2.generate();
+        assertEquals(1, cmg2.getChartCountBad());
+        assertEquals(4, cmg2.getChartCountGood());
+        assertEquals(5, cmg2.getChartCount());
+        System.out.println(String.format(BAD_CHART_COUNT_STRING, 1));
         System.out.println(m.concat(" completed"));
     }
 
@@ -216,26 +212,22 @@ class ChartMapGeneratorTest {
      * @throws IOException
      */
     @Test
-    void getDetails() throws ChartMapGeneratorException, IOException {
+    void getDetailsTest() throws ChartMapGeneratorException, IOException {
         String m = new Throwable().getStackTrace()[0].getMethodName();
         testVariation = 0;
-        // test getDetails with a simulated bad chart
+        // test getDetails with a bad chart
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg1 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_TRUE);
-        ChartMapGenerator scmg1 = spy(cmg1);
-        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString(), any());
-        scmg1.generate();
-        assertTrue(fileContains(Paths.get(testDirectoryName, INDEX_FILENAME), "Here is a list of the charts with errors"));
-        System.out.println("A list of charts with errors is found, as expected");
-        // test getDetails without a simulated bad chart
+        cmg1.generate();
+        assertTrue(fileContains(Paths.get(testDirectoryName, INDEX_FILENAME), "Here is a list of the chart versions with errors"));
+        System.out.println("A list of chart versions with errors is found, as expected");
+        // test getDetails without a bad chart
         testDirectoryName = createTestDir(m, getTestVariation());
         ChartMapGenerator cmg2 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_TRUE);
-        doThrow(ChartMapGeneratorException.class).when(scmg1).printChart(any(HelmChart.class), anyString(), any());
-        cmg2.generate();
-        assertFalse(fileContains(Paths.get(testDirectoryName, INDEX_FILENAME), "Here is a list of the charts with errors (consult the output log to see the specific error messages)"));
-        System.out.println("A list of charts with errors was not found");
-        assertEquals(NUM_BAD_CHARTS, cmg2.getChartCountBad());
-        System.out.println(String.format("The bad chart count is %d, as expected", NUM_BAD_CHARTS));
+        ChartMapGenerator scmg2 = spy(cmg2);
+        doReturn(0).when(scmg2).getChartCountBad();
+        scmg2.generate();
+        assertFalse(fileContains(Paths.get(testDirectoryName, INDEX_FILENAME), "Here is a list of the chart versions with errors"));
         System.out.println(m.concat(" completed"));
     }
 
@@ -254,6 +246,7 @@ class ChartMapGeneratorTest {
             System.setOut(new PrintStream(o));
             cmg.generate();
             assertTrue(streamContains(o, "Printed chart: test-app-d:0.1.0 with the refresh option"));
+            assertTrue(streamContains(o, "Printed chart: test-app-d:0.2.0 with the refresh option"));
             System.setOut(initialOut);
             System.out.println("The ability for ChartMapGenerator to retry using the refresh option was successfully tested");
         }
@@ -280,7 +273,8 @@ class ChartMapGeneratorTest {
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.2.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.3.0.txt")));
-        System.out.println("All versions of each chart were successfully printed in text format");
+        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-d-0.1.0.txt")));
+        System.out.println("All versions of each good chart were successfully printed in text format");
         //one and only one (the most recent) version of each of the charts is printed in text format
         testDirectoryName = createTestDir(m, getTestVariation());
         cmg = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, PRINT_ONE_VERSION, TEST_ENV_SPEC, VERBOSE_FALSE);
@@ -288,10 +282,13 @@ class ChartMapGeneratorTest {
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-a-0.1.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.2.0.txt")));
         assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.3.0.txt")));
+        assertTrue(Files.exists(Paths.get(testDirectoryName,"test-app-d-0.2.0.txt")));
         assertFalse(Files.exists(Paths.get(testDirectoryName,"test-app-b-0.1.0.txt"))); 
         assertFalse(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.1.0.txt"))); 
-        assertFalse(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.2.0.txt"))); 
-        System.out.println("One version of each chart was successfully printed in text format");
+        assertFalse(Files.exists(Paths.get(testDirectoryName,"test-app-c-0.2.0.txt")));
+        assertFalse(Files.exists(Paths.get(testDirectoryName,"test-app-d-0.1.0.txt")));
+        assertFalse(Files.exists(Paths.get(testDirectoryName,"test-app-g-0.1.0.txt"))); 
+        System.out.println("One version of each good chart was successfully printed in text format");
         System.out.println(m.concat(" completed"));
     }
 
