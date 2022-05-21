@@ -44,13 +44,17 @@ jobs:
       # Install Graphviz so images can be generated from the generated PlantUML files
       - name: Install graphviz
         run: sudo apt-get install graphviz
-      # Setup Java 11
+      # Setup Java 11 with a settings.xml file setup for signatures
+      # Note: maven caching is done here
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
           distribution: 'zulu'
           java-version: 11
           cache: 'maven'
+          server-id: github
+          gpg-private-key: ${{ secrets.GPG_JAR_KEY }} 
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE
       # Generate the helm-chartman-generator jar file
       - name: Generate helm-chartmap-generator-jar
         run: mvn install -DskipTests=true
