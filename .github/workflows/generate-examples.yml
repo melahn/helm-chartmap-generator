@@ -76,7 +76,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate alfresco-stable charts and commit them to git
         run: | 
-          cd ./docs/https://kubernetes-charts.alfresco.com/stable
+          cd ./docs/kubernetes-charts.alfresco.com-stable
           rm helm-chartmap.log
           rm index.html
           java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r alfresco-stable
