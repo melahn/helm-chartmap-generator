@@ -27,5 +27,5 @@ postgresql_0_11_0--[#orange]-|>postgres_10_1
 hello_world_service_0_2_1--[#orange]-|>quay_io_alfresco_anaxes_hello_world_service_0_1_SNAPSHOT
 hello_world_ui_0_2--[#orange]-|>quay_io_alfresco_anaxes_hello_world_ui_0_1_SNAPSHOT
 
-center footer Generated on 2022/05/21 21:39:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/21 23:33:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

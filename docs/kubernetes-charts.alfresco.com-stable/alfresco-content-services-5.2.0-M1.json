@@ -56,6 +56,13 @@
       "version": "2.5.3"
     },
     {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-libreoffice",
+      "type": "image",
+      "version": "2.5.3"
+    },
+    {
       "repoHost": "quay.io",
       "children": [],
       "name": "alfresco/alfresco-share:7.2.0-M1",
@@ -63,11 +70,65 @@
       "version": "7.2.0-M1"
     },
     {
-      "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-libreoffice",
-      "type": "image",
-      "version": "2.5.3"
+      "name": "common:7.1.0-M16",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.1.0-M16"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/postgresql:13.3.0",
+          "type": "image",
+          "version": "13.3.0"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.10.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.10.1"
+        }
+      ],
+      "name": "postgresql:10.13.9",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "10.13.9"
     },
     {
       "keywords": [
@@ -86,14 +147,6 @@
       "type": "chart",
       "shortName": "activemq",
       "version": "2.0.0"
-    },
-    {
-      "children": [],
-      "name": "common:7.1.0-M16",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.1.0-M16"
     },
     {
       "keywords": [
@@ -158,59 +211,6 @@
       "type": "chart",
       "shortName": "alfresco-sync-service",
       "version": "3.0.9"
-    },
-    {
-      "maintainers": [
-        {
-          "name": "Bitnami",
-          "email": "containers@bitnami.com"
-        },
-        {
-          "name": "desaintmartin",
-          "email": "cedric@desaintmartin.fr"
-        }
-      ],
-      "keywords": [
-        "postgresql",
-        "postgres",
-        "database",
-        "sql",
-        "replication",
-        "cluster"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/postgresql:13.3.0",
-          "type": "image",
-          "version": "13.3.0"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.10.1",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.10.1"
-        }
-      ],
-      "name": "postgresql:10.13.9",
-      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-      "type": "chart",
-      "shortName": "postgresql",
-      "version": "10.13.9"
     }
   ],
   "name": "alfresco-content-services:5.2.0-M1",

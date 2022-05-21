@@ -42,8 +42,8 @@ alfresco_content_services_community_3_0_1--[#green]-|>alfresco_infrastructure_4_
 alfresco_infrastructure_4_1_1--[#green]-|>alfresco_identity_service_1_1_0
 alfresco_identity_service_1_1_0--[#green]-|>keycloak_4_3_0
 keycloak_4_3_0--[#green]-|>postgresql_0_15_0
-alfresco_infrastructure_4_1_1--[#green]-|>nginx_ingress_0_14_0
 alfresco_infrastructure_4_1_1--[#green]-|>activemq_1_1_1
+alfresco_infrastructure_4_1_1--[#green]-|>nginx_ingress_0_14_0
 postgresql_0_9_3--[#orange]-|>postgres_11_4
 postgresql_0_15_0--[#orange]-|>postgres_10_1
 alfresco_search_1_0_1--[#orange]-|>alfresco_alfresco_search_services_1_4_0
@@ -59,5 +59,5 @@ nginx_ingress_0_14_0--[#orange]-|>quay_io_kubernetes_ingress_controller_nginx_in
 keycloak_4_3_0--[#orange]-|>jboss_keycloak_4_8_3_Final
 activemq_1_1_1--[#orange]-|>alfresco_alfresco_activemq_5_15_8_java_8_oracle_centos_7_87b15e37ce8b
 
-center footer Generated on 2022/05/21 21:30:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/21 23:26:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

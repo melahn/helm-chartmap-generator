@@ -35,7 +35,7 @@ Chart: kafka:12.20.0
 	apiVersion: v2
 	appVersion: 2.8.0
 	created: 2021-06-08T22:52:15.619022461Z
-	dependencies: common:1.5.2, zookeeper:6.7.4
+	dependencies: zookeeper:6.7.4, common:1.5.2
 	description: Apache Kafka is a distributed streaming platform.
 	digest: da1c9e21afa84c3089f4bb97c3b6ce42f3a7ab7c07a9fe767cec083f768d9d21
 	icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
@@ -50,7 +50,7 @@ Chart: alfresco-process-application:7.2.0
 	apiVersion: v1
 	appVersion: 7.2.0
 	created: Not specified
-	dependencies: rabbitmq:8.20.5, kafka:12.20.0, postgresql:9.1.1, common:7.2.0
+	dependencies: kafka:12.20.0, common:7.2.0, rabbitmq:8.20.5, postgresql:9.1.1
 	description: A Helm chart for an Alfresco Activiti Enterprise application
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -146,18 +146,18 @@ Image: docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 
 Chart Dependencies
 ------------------
-alfresco-process-application:7.2.0 depends on rabbitmq:8.20.5
-rabbitmq:8.20.5 depends on common:1.8.0
 alfresco-process-application:7.2.0 depends on kafka:12.20.0
-kafka:12.20.0 depends on common:1.5.2
 kafka:12.20.0 depends on zookeeper:6.7.4
 zookeeper:6.7.4 depends on common:1.5.2
+kafka:12.20.0 depends on common:1.5.2
+alfresco-process-application:7.2.0 depends on common:7.2.0
+alfresco-process-application:7.2.0 depends on rabbitmq:8.20.5
+rabbitmq:8.20.5 depends on common:1.8.0
 alfresco-process-application:7.2.0 depends on postgresql:9.1.1
 postgresql:9.1.1 depends on common:0.3.1
-alfresco-process-application:7.2.0 depends on common:7.2.0
 postgresql:9.1.1 uses docker.io/postgres:11.7
 kafka:12.20.0 uses docker.io/bitnami/kafka:2.8.0-debian-10-r30
 rabbitmq:8.20.5 uses docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 zookeeper:6.7.4 uses docker.io/bitnami/zookeeper:3.7.0-debian-10-r56
 
-Generated on 2022/05/21 21:33:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/21 23:29:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

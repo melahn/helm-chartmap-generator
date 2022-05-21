@@ -65,7 +65,7 @@ Chart: alfresco-identity-service:6.0.0
 	apiVersion: v2
 	appVersion: 1.7.0
 	created: 2022-05-09T12:29:47.98006316Z
-	dependencies: common:1.11.3, keycloak:16.1.0
+	dependencies: keycloak:16.1.0, common:1.11.3
 	description: The Alfresco Identity Service will become the central component responsible for identity-related capabilities needed by other Alfresco software, such as managing users, groups, roles, profiles, and authentication. Currently it deals just with authentication.
 	digest: 1a9d8ad64e0a25aa66269c8676f8afedc3183f1a9bde389ea8df97a56d9eee85
 	icon: Not specified
@@ -95,7 +95,7 @@ Chart: alfresco-process-infrastructure:7.3.0
 	apiVersion: v2
 	appVersion: 7.3.0
 	created: Not specified
-	dependencies: common:7.2.0, alfresco-identity-service:6.0.0, rabbitmq:8.20.5, postgresql:10.3.13
+	dependencies: common:7.2.0, rabbitmq:8.20.5, postgresql:10.3.13, alfresco-identity-service:6.0.0
 	description: A Helm chart for Alfresco Activiti Enterprise infrastructure
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -146,16 +146,16 @@ Image: docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 Chart Dependencies
 ------------------
 alfresco-process-infrastructure:7.3.0 depends on common:7.2.0
-alfresco-process-infrastructure:7.3.0 depends on alfresco-identity-service:6.0.0
-alfresco-identity-service:6.0.0 depends on common:1.11.3
-alfresco-identity-service:6.0.0 depends on keycloak:16.1.0
-keycloak:16.1.0 depends on postgresql:10.3.13
-postgresql:10.3.13 depends on common:1.4.1
 alfresco-process-infrastructure:7.3.0 depends on rabbitmq:8.20.5
 rabbitmq:8.20.5 depends on common:1.8.0
 alfresco-process-infrastructure:7.3.0 depends on postgresql:10.3.13
+postgresql:10.3.13 depends on common:1.4.1
+alfresco-process-infrastructure:7.3.0 depends on alfresco-identity-service:6.0.0
+alfresco-identity-service:6.0.0 depends on keycloak:16.1.0
+keycloak:16.1.0 depends on postgresql:10.3.13
+alfresco-identity-service:6.0.0 depends on common:1.11.3
 keycloak:16.1.0 uses quay.io/alfresco/alfresco-identity-service:1.7.0
 postgresql:10.3.13 uses docker.io/bitnami/postgresql:13.3.0
 rabbitmq:8.20.5 uses docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 
-Generated on 2022/05/21 21:34:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/21 23:29:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

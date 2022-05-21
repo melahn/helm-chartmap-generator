@@ -49,14 +49,29 @@
           "children": [{
             "repoHost": "Docker Hub",
             "children": [],
-            "name": "alfresco/alfresco-keycloak",
+            "name": "activiti/activiti-cloud-registry",
             "type": "image",
             "version": "latest"
           }],
-          "name": "alfresco-keycloak:0.1.0",
-          "description": "A Helm chart for Alfresco and Activiti SSO identity-service",
+          "name": "alfresco-activiti-cloud-registry:0.1.0",
+          "description": "A Helm chart for Alfresco Activiti Cloud Registry",
           "type": "chart",
-          "shortName": "alfresco-keycloak",
+          "shortName": "alfresco-activiti-cloud-registry",
+          "version": "0.1.0"
+        },
+        {
+          "maintainers": [{"name": "Alfresco"}],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "alfresco/alfresco-api-gateway",
+            "type": "image",
+            "version": "latest"
+          }],
+          "name": "alfresco-api-gateway:0.1.0",
+          "description": "A Helm chart for Alfresco API Gateway",
+          "type": "chart",
+          "shortName": "alfresco-api-gateway",
           "version": "0.1.0"
         },
         {
@@ -87,29 +102,14 @@
           "children": [{
             "repoHost": "Docker Hub",
             "children": [],
-            "name": "activiti/activiti-cloud-registry",
+            "name": "alfresco/alfresco-keycloak",
             "type": "image",
             "version": "latest"
           }],
-          "name": "alfresco-activiti-cloud-registry:0.1.0",
-          "description": "A Helm chart for Alfresco Activiti Cloud Registry",
+          "name": "alfresco-keycloak:0.1.0",
+          "description": "A Helm chart for Alfresco and Activiti SSO identity-service",
           "type": "chart",
-          "shortName": "alfresco-activiti-cloud-registry",
-          "version": "0.1.0"
-        },
-        {
-          "maintainers": [{"name": "Alfresco"}],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "alfresco/alfresco-api-gateway",
-            "type": "image",
-            "version": "latest"
-          }],
-          "name": "alfresco-api-gateway:0.1.0",
-          "description": "A Helm chart for Alfresco API Gateway",
-          "type": "chart",
-          "shortName": "alfresco-api-gateway",
+          "shortName": "alfresco-keycloak",
           "version": "0.1.0"
         }
       ],
