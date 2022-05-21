@@ -55,9 +55,12 @@ jobs:
           server-id: github
           gpg-private-key: ${{ secrets.GPG_JAR_KEY }} 
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
-      # Generate the helm-chartman-generator jar file
-      - name: Generate helm-chartmap-generator-jar
-        run: mvn install -DskipTests=true
+      # Generate the helm-chartmap-generator jar file
+      - name: Build helm-chartmap-generator 
+        run: mvn -B -Dgpg.passphrase=${{ secrets.GPG_JAR_PASSWORD }} install 
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_JAR_PASSWORD }}
       # Generate the chartmap examples starting with the simplest one to fail fast
       - name: Generate nuxeo charts and commit them to git
         run: | 
@@ -75,5 +78,7 @@ jobs:
           else
               echo no git changes found
           fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
               
