@@ -31,36 +31,28 @@
       "version": "7.1.0-M9"
     },
     {
-      "maintainers": [
+      "children": [
         {
-          "name": "Bitnami",
-          "email": "containers@bitnami.com"
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "activiti/example-cloud-connector",
+          "type": "image",
+          "version": "7.1.0-M9"
         },
         {
-          "name": "desaintmartin",
-          "email": "cedric@desaintmartin.fr"
+          "children": [],
+          "name": "common:7.1.0-M9",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "7.1.0-M9"
         }
       ],
-      "keywords": [
-        "postgresql",
-        "postgres",
-        "database",
-        "sql",
-        "replication",
-        "cluster"
-      ],
-      "children": [{
-        "repoHost": "docker.io",
-        "children": [],
-        "name": "bitnami/postgresql:11.5.0-debian-9-r34",
-        "type": "image",
-        "version": "11.5.0-debian-9-r34"
-      }],
-      "name": "postgresql:6.3.9",
-      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "name": "activiti-cloud-connector:7.1.0-M9",
+      "description": "A Helm chart for Kubernetes",
       "type": "chart",
-      "shortName": "postgresql",
-      "version": "6.3.9"
+      "shortName": "activiti-cloud-connector",
+      "version": "7.1.0-M9"
     },
     {
       "maintainers": [{"name": "Alfresco"}],
@@ -102,30 +94,6 @@
       "version": "2.2.2"
     },
     {
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-runtime-bundle-service:develop",
-          "type": "image",
-          "version": "develop"
-        },
-        {
-          "children": [],
-          "name": "common:7.1.0-M9",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "7.1.0-M9"
-        }
-      ],
-      "name": "runtime-bundle:7.1.0-M9",
-      "description": "A Helm chart for Activiti Cloud Runtime Bundle Example",
-      "type": "chart",
-      "shortName": "runtime-bundle",
-      "version": "7.1.0-M9"
-    },
-    {
       "maintainers": [{"name": "steven-sheehy"}],
       "keywords": [
         "rabbitmq",
@@ -149,13 +117,45 @@
       "version": "1.38.1"
     },
     {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/postgresql:11.5.0-debian-9-r34",
+        "type": "image",
+        "version": "11.5.0-debian-9-r34"
+      }],
+      "name": "postgresql:6.3.9",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "6.3.9"
+    },
+    {
       "children": [
         {
-          "repoHost": "Docker Hub",
+          "repoHost": "quay.io",
           "children": [],
-          "name": "activiti/example-cloud-connector",
+          "name": "alfresco/alfresco-process-runtime-bundle-service:develop",
           "type": "image",
-          "version": "7.1.0-M9"
+          "version": "develop"
         },
         {
           "children": [],
@@ -166,10 +166,10 @@
           "version": "7.1.0-M9"
         }
       ],
-      "name": "activiti-cloud-connector:7.1.0-M9",
-      "description": "A Helm chart for Kubernetes",
+      "name": "runtime-bundle:7.1.0-M9",
+      "description": "A Helm chart for Activiti Cloud Runtime Bundle Example",
       "type": "chart",
-      "shortName": "activiti-cloud-connector",
+      "shortName": "runtime-bundle",
       "version": "7.1.0-M9"
     }
   ],

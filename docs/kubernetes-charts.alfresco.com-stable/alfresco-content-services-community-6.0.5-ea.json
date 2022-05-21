@@ -31,6 +31,20 @@
     {
       "children": [
         {
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "webcenter/activemq",
+            "type": "image",
+            "version": "latest"
+          }],
+          "name": "activemq:0.1.0",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "0.1.0"
+        },
+        {
           "maintainers": [{"name": "Alfresco"}],
           "children": [{
             "repoHost": "Docker Hub",
@@ -44,6 +58,29 @@
           "type": "chart",
           "shortName": "alfresco-keycloak",
           "version": "0.1.0"
+        },
+        {
+          "maintainers": [{
+            "name": "etiennetremel",
+            "email": "etienne.tremel@container-solutions.com"
+          }],
+          "keywords": [
+            "rabbitmq",
+            "message queue",
+            "AMQP"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "rabbitmq",
+            "type": "image",
+            "version": "3.7-alpine"
+          }],
+          "name": "rabbitmq-ha:0.1.1",
+          "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
+          "type": "chart",
+          "shortName": "rabbitmq-ha",
+          "version": "0.1.1"
         },
         {
           "maintainers": [{"name": "Alfresco"}],
@@ -73,43 +110,6 @@
           "description": "A Helm chart for Alfresco API Gateway",
           "type": "chart",
           "shortName": "alfresco-api-gateway",
-          "version": "0.1.0"
-        },
-        {
-          "maintainers": [{
-            "name": "etiennetremel",
-            "email": "etienne.tremel@container-solutions.com"
-          }],
-          "keywords": [
-            "rabbitmq",
-            "message queue",
-            "AMQP"
-          ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "rabbitmq",
-            "type": "image",
-            "version": "3.7-alpine"
-          }],
-          "name": "rabbitmq-ha:0.1.1",
-          "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
-          "type": "chart",
-          "shortName": "rabbitmq-ha",
-          "version": "0.1.1"
-        },
-        {
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "webcenter/activemq",
-            "type": "image",
-            "version": "latest"
-          }],
-          "name": "activemq:0.1.0",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
           "version": "0.1.0"
         }
       ],

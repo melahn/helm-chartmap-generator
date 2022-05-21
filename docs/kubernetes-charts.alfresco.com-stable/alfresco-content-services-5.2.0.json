@@ -9,14 +9,14 @@
     {
       "repoHost": "quay.io",
       "children": [],
-      "name": "alfresco/alfresco-share:7.2.0",
+      "name": "alfresco/alfresco-content-repository:7.2.0",
       "type": "image",
       "version": "7.2.0"
     },
     {
       "repoHost": "quay.io",
       "children": [],
-      "name": "alfresco/alfresco-content-repository:7.2.0",
+      "name": "alfresco/alfresco-share:7.2.0",
       "type": "image",
       "version": "7.2.0"
     },
@@ -44,14 +44,14 @@
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-libreoffice",
+      "name": "alfresco/alfresco-pdf-renderer",
       "type": "image",
       "version": "2.5.7"
     },
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-pdf-renderer",
+      "name": "alfresco/alfresco-libreoffice",
       "type": "image",
       "version": "2.5.7"
     },
@@ -133,6 +133,24 @@
       "version": "3.0.9"
     },
     {
+      "keywords": [
+        "activemq",
+        "message broker"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "alfresco/alfresco-activemq",
+        "type": "image",
+        "version": "5.16.4-jre11-centos7"
+      }],
+      "name": "activemq:2.1.0",
+      "description": "A Helm chart Providing Apache ActiveMQ.",
+      "type": "chart",
+      "shortName": "activemq",
+      "version": "2.1.0"
+    },
+    {
       "children": [],
       "name": "common:7.2.0",
       "description": "A Helm chart for Activiti Cloud Common Templates",
@@ -192,24 +210,6 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "10.16.2"
-    },
-    {
-      "keywords": [
-        "activemq",
-        "message broker"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "alfresco/alfresco-activemq",
-        "type": "image",
-        "version": "5.16.4-jre11-centos7"
-      }],
-      "name": "activemq:2.1.0",
-      "description": "A Helm chart Providing Apache ActiveMQ.",
-      "type": "chart",
-      "shortName": "activemq",
-      "version": "2.1.0"
     }
   ],
   "name": "alfresco-content-services:5.2.0",

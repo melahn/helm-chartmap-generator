@@ -12,103 +12,6 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
-        "rabbitmq",
-        "message queue",
-        "AMQP"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/rabbitmq:3.8.22-debian-10-r0",
-          "type": "image",
-          "version": "3.8.22-debian-10-r0"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.8.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.8.0"
-        }
-      ],
-      "name": "rabbitmq:8.20.5",
-      "description": "Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
-      "type": "chart",
-      "shortName": "rabbitmq",
-      "version": "8.20.5"
-    },
-    {
-      "maintainers": [
-        {
-          "name": "Bitnami",
-          "email": "containers@bitnami.com"
-        },
-        {
-          "name": "desaintmartin",
-          "email": "cedric@desaintmartin.fr"
-        }
-      ],
-      "keywords": [
-        "postgresql",
-        "postgres",
-        "database",
-        "sql",
-        "replication",
-        "cluster"
-      ],
-      "children": [
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "docker.io/postgres",
-          "type": "image",
-          "version": "11.7"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:0.3.1",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "0.3.1"
-        }
-      ],
-      "name": "postgresql:9.1.1",
-      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-      "type": "chart",
-      "shortName": "postgresql",
-      "version": "9.1.1"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
         "kafka",
         "zookeeper",
         "streaming",
@@ -190,12 +93,109 @@
       "version": "12.20.0"
     },
     {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "rabbitmq",
+        "message queue",
+        "AMQP"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/rabbitmq:3.8.22-debian-10-r0",
+          "type": "image",
+          "version": "3.8.22-debian-10-r0"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.8.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.8.0"
+        }
+      ],
+      "name": "rabbitmq:8.20.5",
+      "description": "Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
+      "type": "chart",
+      "shortName": "rabbitmq",
+      "version": "8.20.5"
+    },
+    {
       "children": [],
       "name": "common:7.2.0",
       "description": "A Helm chart for Activiti Cloud Common Templates",
       "type": "chart",
       "shortName": "common",
       "version": "7.2.0"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "docker.io/postgres",
+          "type": "image",
+          "version": "11.7"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:0.3.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "0.3.1"
+        }
+      ],
+      "name": "postgresql:9.1.1",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "9.1.1"
     }
   ],
   "name": "alfresco-process-application:7.2.0",

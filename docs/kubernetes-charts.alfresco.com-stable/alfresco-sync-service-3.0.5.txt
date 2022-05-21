@@ -44,4 +44,4 @@ alfresco-sync-service:3.0.5 depends on postgresql:0.9.3
 alfresco-sync-service:3.0.5 uses quay.io/alfresco/service-sync:3.3.3
 postgresql:0.9.3 uses postgres:10.1
 
-Generated on 2022/05/15 11:26:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/21 21:38:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

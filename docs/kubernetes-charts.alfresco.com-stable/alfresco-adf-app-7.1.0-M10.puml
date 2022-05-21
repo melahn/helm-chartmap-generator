@@ -9,7 +9,7 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for alfresco-adf-app:7.1.0-M10
 
 'There are 2 referenced Helm Charts
-artifact "common:7.1.0-A1\n====\n\tType: application\n====\n\tRepo: https://activiti.github.io/activiti-cloud-helm-charts\n====\n\tMaintainers: \n====\n\tKeywords: " as common_7_1_0_A1 #DarkSeaGreen
+artifact "common:7.1.0-A1\n====\n\tType: application\n====\n\tRepo: Unknown Repo URL\n====\n\tMaintainers: \n====\n\tKeywords: " as common_7_1_0_A1 #DarkSeaGreen
 artifact "alfresco-adf-app:7.1.0-M10\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: \n\t\talfresco\n\t\tadf\n\t\talfresco development framework\n\t\tcontent\n\t\tcontent services\n\t\talfresco content services\n\t\tprocess\n\t\tprocess services\n\t\talfresco process services\n\t\tactiviti\n\t\tactiviti enterprise\n\t\talfresco activiti enterprise" as alfresco_adf_app_7_1_0_M10 #Fuchsia
 
 'There is one referenced Docker Image
@@ -19,5 +19,5 @@ usecase "Image\n====\nquay.io\n====\nalfresco/alfresco-adf-app:latest\n====\nlat
 alfresco_adf_app_7_1_0_M10--[#green]-|>common_7_1_0_A1
 alfresco_adf_app_7_1_0_M10--[#orange]-|>quay_io_alfresco_alfresco_adf_app_latest
 
-center footer Generated on 2022/05/15 11:15:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/21 21:26:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
