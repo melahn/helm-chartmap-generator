@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\nalfresco/alfresco-dbp-connector-service:0.5
 'Chart Dependencies
 alfresco_dbp_connector_service_0_1_0--[#orange]-|>quay_io_alfresco_alfresco_dbp_connector_service_0_5_0_SNAPSHOT
 
-center footer Generated on 2022/05/15 11:38:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/21 23:39:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

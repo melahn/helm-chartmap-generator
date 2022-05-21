@@ -3,24 +3,6 @@
     {
       "children": [
         {
-          "keywords": [
-            "activemq",
-            "message broker"
-          ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "alfresco/alfresco-activemq",
-            "type": "image",
-            "version": "5.15.6-java-8-oracle-centos-7-ac5b98b35cd4"
-          }],
-          "name": "activemq:1.0.0",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
-          "version": "1.0.0"
-        },
-        {
           "maintainers": [{"name": "Alfresco"}],
           "keywords": [
             "alfresco",
@@ -76,6 +58,24 @@
           "description": "The Alfresco Identity Service will become the central component responsible for identity-related capabilities needed by other Alfresco software, such as managing users, groups, roles, profiles, and authentication. Currently it deals just with authentication.",
           "type": "chart",
           "shortName": "alfresco-identity-service",
+          "version": "1.0.0"
+        },
+        {
+          "keywords": [
+            "activemq",
+            "message broker"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "alfresco/alfresco-activemq",
+            "type": "image",
+            "version": "5.15.6-java-8-oracle-centos-7-ac5b98b35cd4"
+          }],
+          "name": "activemq:1.0.0",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
           "version": "1.0.0"
         },
         {
@@ -221,20 +221,6 @@
           "version": "1.0.0"
         },
         {
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "webcenter/activemq",
-            "type": "image",
-            "version": "latest"
-          }],
-          "name": "activemq:0.1.0",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
-          "version": "0.1.0"
-        },
-        {
           "maintainers": [{"name": "databus23"}],
           "keywords": [
             "postgresql",
@@ -254,6 +240,20 @@
           "type": "chart",
           "shortName": "postgresql",
           "version": "0.9.3"
+        },
+        {
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "webcenter/activemq",
+            "type": "image",
+            "version": "latest"
+          }],
+          "name": "activemq:0.1.0",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "0.1.0"
         }
       ],
       "name": "alfresco-content-services:1.1.4",

@@ -35,13 +35,6 @@
       "version": "2.5.3"
     },
     {
-      "repoHost": "Docker Hub",
-      "children": [],
-      "name": "alfresco/alfresco-imagemagick",
-      "type": "image",
-      "version": "2.5.3"
-    },
-    {
       "repoHost": "quay.io",
       "children": [],
       "name": "alfresco/alfresco-shared-file-store:0.16.0",
@@ -49,11 +42,11 @@
       "version": "0.16.0"
     },
     {
-      "repoHost": "quay.io",
+      "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-share:7.2.0-M1",
+      "name": "alfresco/alfresco-imagemagick",
       "type": "image",
-      "version": "7.2.0-M1"
+      "version": "2.5.3"
     },
     {
       "repoHost": "Docker Hub",
@@ -70,24 +63,11 @@
       "version": "2.5.3"
     },
     {
-      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
-      "keywords": [
-        "syncservice",
-        "alfresco",
-        "application"
-      ],
-      "children": [{
-        "repoHost": "quay.io",
-        "children": [],
-        "name": "alfresco/service-sync:3.5.0-M1",
-        "type": "image",
-        "version": "3.5.0-M1"
-      }],
-      "name": "alfresco-sync-service:3.0.9",
-      "description": "Alfresco Sync Service",
-      "type": "chart",
-      "shortName": "alfresco-sync-service",
-      "version": "3.0.9"
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "alfresco/alfresco-share:7.2.0-M1",
+      "type": "image",
+      "version": "7.2.0-M1"
     },
     {
       "keywords": [
@@ -161,6 +141,34 @@
       "version": "10.13.9"
     },
     {
+      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
+      "keywords": [
+        "syncservice",
+        "alfresco",
+        "application"
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "alfresco/service-sync:3.5.0-M1",
+        "type": "image",
+        "version": "3.5.0-M1"
+      }],
+      "name": "alfresco-sync-service:3.0.9",
+      "description": "Alfresco Sync Service",
+      "type": "chart",
+      "shortName": "alfresco-sync-service",
+      "version": "3.0.9"
+    },
+    {
+      "children": [],
+      "name": "common:7.1.0-M16",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.1.0-M16"
+    },
+    {
       "keywords": [
         "search",
         "search services",
@@ -203,14 +211,6 @@
       "type": "chart",
       "shortName": "alfresco-search",
       "version": "1.0.4"
-    },
-    {
-      "children": [],
-      "name": "common:7.1.0-M16",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.1.0-M16"
     }
   ],
   "name": "alfresco-content-services:5.2.0-M1",

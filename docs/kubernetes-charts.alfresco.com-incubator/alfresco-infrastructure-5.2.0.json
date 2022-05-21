@@ -20,13 +20,7 @@
             "activemq",
             "message broker"
           ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "alfresco/alfresco-activemq",
-            "type": "image",
-            "version": "5.15.8-java-8-oracle-centos-7-87b15e37ce8b"
-          }],
+          "children": [],
           "name": "activemq:1.1.1",
           "description": "A Helm chart Providing Apache ActiveMQ.",
           "type": "chart",
@@ -124,7 +118,13 @@
         "activemq",
         "message broker"
       ],
-      "children": [],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "alfresco/alfresco-activemq",
+        "type": "image",
+        "version": "5.15.8-java-8-oracle-centos-7-87b15e37ce8b"
+      }],
       "name": "activemq:1.1.1",
       "description": "A Helm chart Providing Apache ActiveMQ.",
       "type": "chart",

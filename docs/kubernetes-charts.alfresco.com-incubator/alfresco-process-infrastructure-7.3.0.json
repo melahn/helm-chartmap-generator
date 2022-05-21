@@ -7,6 +7,14 @@
   ],
   "children": [
     {
+      "children": [],
+      "name": "common:7.2.0",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.2.0"
+    },
+    {
       "maintainers": [
         {
           "name": "Bitnami",
@@ -25,34 +33,25 @@
         "replication",
         "cluster"
       ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/postgresql:13.3.0",
-          "type": "image",
-          "version": "13.3.0"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.4.1",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.4.1"
-        }
-      ],
+      "children": [{
+        "maintainers": [{
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        }],
+        "keywords": [
+          "common",
+          "helper",
+          "template",
+          "function",
+          "bitnami"
+        ],
+        "children": [],
+        "name": "common:1.4.1",
+        "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+        "type": "chart",
+        "shortName": "common",
+        "version": "1.4.1"
+      }],
       "name": "postgresql:10.3.13",
       "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
       "type": "chart",
@@ -112,25 +111,6 @@
       ],
       "children": [
         {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.11.3",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.11.3"
-        },
-        {
           "maintainers": [
             {
               "name": "unguiculus",
@@ -176,25 +156,34 @@
                 "replication",
                 "cluster"
               ],
-              "children": [{
-                "maintainers": [{
-                  "name": "Bitnami",
-                  "email": "containers@bitnami.com"
-                }],
-                "keywords": [
-                  "common",
-                  "helper",
-                  "template",
-                  "function",
-                  "bitnami"
-                ],
-                "children": [],
-                "name": "common:1.4.1",
-                "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-                "type": "chart",
-                "shortName": "common",
-                "version": "1.4.1"
-              }],
+              "children": [
+                {
+                  "repoHost": "docker.io",
+                  "children": [],
+                  "name": "bitnami/postgresql:13.3.0",
+                  "type": "image",
+                  "version": "13.3.0"
+                },
+                {
+                  "maintainers": [{
+                    "name": "Bitnami",
+                    "email": "containers@bitnami.com"
+                  }],
+                  "keywords": [
+                    "common",
+                    "helper",
+                    "template",
+                    "function",
+                    "bitnami"
+                  ],
+                  "children": [],
+                  "name": "common:1.4.1",
+                  "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+                  "type": "chart",
+                  "shortName": "common",
+                  "version": "1.4.1"
+                }
+              ],
               "name": "postgresql:10.3.13",
               "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
               "type": "chart",
@@ -207,6 +196,25 @@
           "type": "chart",
           "shortName": "keycloak",
           "version": "16.1.0"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.11.3",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.11.3"
         }
       ],
       "name": "alfresco-identity-service:6.0.0",
@@ -214,14 +222,6 @@
       "type": "chart",
       "shortName": "alfresco-identity-service",
       "version": "6.0.0"
-    },
-    {
-      "children": [],
-      "name": "common:7.2.0",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.2.0"
     }
   ],
   "name": "alfresco-process-infrastructure:7.3.0",

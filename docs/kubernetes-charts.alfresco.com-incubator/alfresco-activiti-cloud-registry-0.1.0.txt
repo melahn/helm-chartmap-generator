@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-activiti-cloud-registry:0.1.0 uses activiti/activiti-cloud-registry:latest
 
-Generated on 2022/05/15 11:32:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/21 23:34:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
