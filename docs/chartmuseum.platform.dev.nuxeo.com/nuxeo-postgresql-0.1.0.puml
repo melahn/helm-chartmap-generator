@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:9.6.11\n====\n9.6.11" 
 nuxeo_postgresql_0_1_0--[#green]-|>postgresql_3_1_0
 postgresql_3_1_0--[#orange]-|>docker_io_bitnami_postgresql_9_6_11
 
-center footer Generated on 2022/05/21 21:07:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/21 21:18:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
