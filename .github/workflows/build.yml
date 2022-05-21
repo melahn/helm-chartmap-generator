@@ -6,11 +6,11 @@
 # and also as a GitHub Package, use its sibling, deploy.yml.
 name: Build
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    types: [opened, synchronize, reopened]
+  # push:
+  #  branches:
+  #    - master
+  # pull_request:
+  #  types: [opened, synchronize, reopened]
   workflow_dispatch:
     inputs:
       tags:
