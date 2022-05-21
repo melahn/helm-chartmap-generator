@@ -54,7 +54,7 @@ jobs:
           cache: 'maven'
       # Generate the helm-chartmap-generator jar file
       - name: Build helm-chartmap-generator 
-        run: mvn -B package 
+        run: mvn -B package -DskipTests=true
       # Generate the chartmap examples starting with the simplest one to fail fast
       - name: Generate nuxeo charts and commit them to git
         run: | 
