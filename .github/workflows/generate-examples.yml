@@ -57,19 +57,19 @@ jobs:
       # Generate the chartmap examples starting with the simplest one to fail fast
       - name: Generate nuxeo charts and commit them to git
         run: | 
-        cd docs/chartmuseum.platform.dev.nuxeo.com
-        rm helm-chartmap.log
-        rm index.html
-        java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -f tjp -e ../../resource/example/example-env-spec.yaml -r nuxeo
-        if [[ `git status --porcelain` ]]; then
-            git config --global user.email "melahn@github"
-            git config --global user.name "GitHub Action (generate-examples.yml)"
-            git add .
-            git commit -m "Update Nuxeo Example Chart Maps"
-            git pull origin master
-            git push origin master
-        else
-            echo no git changes found
-        fi
+          cd ./docs/chartmuseum.platform.dev.nuxeo.com
+          rm helm-chartmap.log
+          rm index.html
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -f tjp -e ../../resource/example/example-env-spec.yaml -r nuxeo
+          if [[ `git status --porcelain` ]]; then
+              git config --global user.email "melahn@github"
+              git config --global user.name "GitHub Action (generate-examples.yml)"
+              git add .
+              git commit -m "Update Nuxeo Example Chart Maps"
+              git pull origin master
+              git push origin master
+          else
+              echo no git changes found
+          fi
         
               
