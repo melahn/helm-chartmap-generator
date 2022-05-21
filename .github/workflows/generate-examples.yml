@@ -92,5 +92,23 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate alfresco-incubator charts and commit them to git
+        run: | 
+          cd ./docs/kubernetes-charts.alfresco.com-incubator
+          rm helm-chartmap.log
+          rm index.html
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r alfresco-incubator
+          if [[ `git status --porcelain` ]]; then
+              git config --global user.email "melahn@github"
+              git config --global user.name "GitHub Action (generate-examples.yml)"
+              git add .
+              git commit -m "Update Alfresco Incubator Example Chart Maps"
+              git pull origin master
+              git push origin master
+          else
+              echo no git changes found
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
               
