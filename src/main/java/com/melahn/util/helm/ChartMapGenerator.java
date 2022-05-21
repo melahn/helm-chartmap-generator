@@ -316,16 +316,17 @@ public class ChartMapGenerator {
     /**
      * Prints a chart of a specific format using the ChartMap API.
      * 
-     * First, an attempt is made to print the chart without the refresh flag. 
+     * First, an attempt is made to print the chart without the refresh flag.
      * 
-     * If that fails, then an attempt is made to print the chart with the 
-     * refresh flag set.  
+     * If that fails, then an attempt is made to print the chart with the
+     * refresh flag set.
      * 
      * @param h helm chart
      * @param e the file extension to use
-     * @param r refresh option 
+     * @param r refresh option
      * @return the refresh option used to print the chart
-     * @throws ChartMapGeneratorException if ChartMap throws a ChartMapException generating the chart
+     * @throws ChartMapGeneratorException if ChartMap throws a ChartMapException
+     *                                    generating the chart
      */
     protected Boolean printChart(HelmChart h, String e, Boolean r) throws ChartMapGeneratorException {
         String filename = h.getName().concat("-").concat(h.getVersion()).concat(e);
@@ -333,13 +334,20 @@ public class ChartMapGenerator {
             printChartMap(h.getNameFull(), filename, r);
         } catch (ChartMapException e1) {
             try {
-                if (Boolean.FALSE.equals(r)) {
-                    r = true;
-                    printChartMap(h.getNameFull(), filename, r);
-                }
-                else {
-                    LogManager.getLogger().error("Skipped retry for '{}'' format of Chart {} since attempt with a different format already failed", e, h.getNameFull());
-                }
+                /*
+                 * A second attempt is made to print the helm chart this time with the refresh
+                 * option set to true because there are some charts that require a helm
+                 * dependency update to be done for them to succeed. An example of such a
+                 * chart is test-app-d in the helm-repo-test chart repo. Importantly, note that
+                 * the value of the refresh flag is returned back to the caller because that way
+                 * the attempt with the next file extension (assuming helm-chart-generator was
+                 * invoked with a format flag set to more than one format, eg. '-f jpt') will be
+                 * tried with the refresh flag set to true since there is no reason to
+                 * rediscover what we already know which is that the attempt with the refresh
+                 * flag with a value false will not work.
+                 */
+                r = true;
+                printChartMap(h.getNameFull(), filename, r);
             } catch (ChartMapException x) {
                 LogManager.getLogger().error("Chart {} failed to print even with the refresh option", h.getNameFull());
                 throw new ChartMapGeneratorException(x.getMessage());
