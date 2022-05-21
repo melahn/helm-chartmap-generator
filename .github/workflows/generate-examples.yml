@@ -12,7 +12,7 @@ on:
       tags:
         description: 'Generate Example Chart Maps'
 jobs:
-  build:
+  generate-examples:
     name: Generate Examples
     runs-on: ubuntu-latest
     # Permissions are needed to write updated artifacts and write the package
