@@ -61,7 +61,7 @@ jobs:
           cd ./docs/chartmuseum.platform.dev.nuxeo.com
           rm helm-chartmap.log
           rm index.html
-          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -f tjp -e ../../resource/example/example-env-spec.yaml -r nuxeo
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r nuxeo
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
               git config --global user.name "GitHub Action (generate-examples.yml)"
