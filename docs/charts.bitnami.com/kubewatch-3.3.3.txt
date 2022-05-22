@@ -42,4 +42,4 @@ Chart Dependencies
 kubewatch:3.3.3 depends on common:1.12.0
 kubewatch:3.3.3 uses docker.io/bitnami/kubewatch:0.1.0-debian-10-r571
 
-Generated on 2022/05/15 12:33:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:35:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

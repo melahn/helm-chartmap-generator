@@ -1,0 +1,43 @@
+Chart Map for kiam:1.0.9
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+Chart: kiam:1.0.9
+	apiVersion: v2
+	appVersion: 4.2.0
+	created: Not specified
+	dependencies: common:1.14.1
+	description: kiam is a proxy that captures AWS Metadata API requests. It allows AWS IAM roles to be set for Kubernetes workloads.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/kiam/img/kiam-stack-220x234.png
+	keywords: aws,iam,security
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: kiam
+	sources: https://github.com/bitnami/bitnami-docker-kiam,https://github.com/uswitch/kiam
+	urls: Not specified
+	version: 1.0.9
+
+There are 0 referenced Docker Images
+------------------------------------
+
+Chart Dependencies
+------------------
+kiam:1.0.9 depends on common:1.14.1
+
+Generated on 2022/05/22 15:33:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

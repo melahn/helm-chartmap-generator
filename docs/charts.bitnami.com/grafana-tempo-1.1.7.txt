@@ -1,0 +1,83 @@
+Chart Map for grafana-tempo:1.1.7
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: grafana-tempo:1.1.7
+	apiVersion: v2
+	appVersion: 1.4.1
+	created: Not specified
+	dependencies: memcached:6.0.17, common:1.14.0
+	description: Grafana Tempo is a distributed tracing system that has out-of-the-box integration with Grafana. It is highly scalable and works with many popular tracing protocols.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/grafana-tempo/img/grafana-tempo-stack-220x234.png
+	keywords: grafana,tracing,metrics,infrastructure
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: grafana-tempo
+	sources: https://github.com/bitnami/bitnami-docker-grafana-tempo,https://github.com/grafana/tempo/
+	urls: Not specified
+	version: 1.1.7
+Chart: common:1.13.0
+	apiVersion: v2
+	appVersion: 1.13.0
+	created: 2022-03-24T20:21:21.283900785Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 360f82fc64d68a0c7a5ab2905b036fdb47168d4bc1e0d994478bceac7cfcbeb4
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.13.0.tgz
+	version: 1.13.0
+Chart: common:1.14.0
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-13T12:53:12.091619027Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:4648f7ab42b17a0368549351a991b9bf22c3848c72b0eff4e8273236bc57e25b
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.0.tgz
+	version: 1.14.0
+Chart: memcached:6.0.17
+	apiVersion: v2
+	appVersion: 1.6.15
+	created: 2022-04-29T12:38:28.652484763Z
+	dependencies: common:1.13.0
+	description: Memcached is an high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
+	digest: sha256:e5f1c64d619d4fe1def4707ac8255fa72d2b12e15773b83510357e2384e33439
+	icon: https://bitnami.com/assets/stacks/memcached/img/memcached-stack-220x234.png
+	keywords: memcached,cache
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: memcached
+	sources: https://github.com/bitnami/bitnami-docker-memcached,http://memcached.org/
+	urls: https://charts.bitnami.com/bitnami/memcached-6.0.17.tgz
+	version: 6.0.17
+
+There are 4 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/grafana-tempo-query:1.4.1-debian-10-r12
+Image: docker.io/bitnami/memcached:1.6.15-debian-10-r20
+Image: docker.io/bitnami/grafana-tempo:1.4.1-debian-10-r11
+Image: docker.io/bitnami/grafana-tempo-vulture:1.4.1-debian-10-r12
+
+Chart Dependencies
+------------------
+grafana-tempo:1.1.7 depends on memcached:6.0.17
+memcached:6.0.17 depends on common:1.13.0
+grafana-tempo:1.1.7 depends on common:1.14.0
+grafana-tempo:1.1.7 uses docker.io/bitnami/grafana-tempo-vulture:1.4.1-debian-10-r12
+grafana-tempo:1.1.7 uses docker.io/bitnami/grafana-tempo-query:1.4.1-debian-10-r12
+grafana-tempo:1.1.7 uses docker.io/bitnami/grafana-tempo:1.4.1-debian-10-r11
+memcached:6.0.17 uses docker.io/bitnami/memcached:1.6.15-debian-10-r20
+
+Generated on 2022/05/22 15:30:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,45 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "contour",
+    "operator",
+    "ingress",
+    "envoy"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/contour-operator:1.20.1-scratch-r5",
+      "type": "image",
+      "version": "1.20.1-scratch-r5"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.0"
+    }
+  ],
+  "name": "contour-operator:1.1.6",
+  "description": "The Contour Operator extends the Kubernetes API to create, configure and manage instances of Contour on behalf of users.",
+  "type": "chart",
+  "shortName": "contour-operator",
+  "version": "1.1.6"
+}

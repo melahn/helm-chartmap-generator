@@ -34,46 +34,6 @@
         "name": "Bitnami",
         "email": "containers@bitnami.com"
       }],
-      "keywords": ["zookeeper"],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/zookeeper:3.8.0-debian-10-r37",
-          "type": "image",
-          "version": "3.8.0-debian-10-r37"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.13.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.13.0"
-        }
-      ],
-      "name": "zookeeper:9.1.1",
-      "description": "Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.",
-      "type": "chart",
-      "shortName": "zookeeper",
-      "version": "9.1.1"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
       "keywords": [
         "solr",
         "zookeeper",
@@ -86,25 +46,6 @@
           "name": "bitnami/solr:8.11.1-debian-10-r125",
           "type": "image",
           "version": "8.11.1-debian-10-r125"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.13.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.13.0"
         },
         {
           "maintainers": [{
@@ -145,6 +86,25 @@
           "type": "chart",
           "shortName": "zookeeper",
           "version": "9.1.0"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.13.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.13.0"
         }
       ],
       "name": "solr:4.0.9",
@@ -159,69 +119,16 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
-        "common",
-        "helper",
-        "template",
-        "function",
-        "bitnami"
-      ],
-      "children": [],
-      "name": "common:1.13.1",
-      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-      "type": "chart",
-      "shortName": "common",
-      "version": "1.13.1"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "kafka",
-        "zookeeper",
-        "streaming",
-        "producer",
-        "consumer"
+        "apache",
+        "spark"
       ],
       "children": [
         {
           "repoHost": "docker.io",
           "children": [],
-          "name": "bitnami/kafka:3.1.0-debian-10-r89",
+          "name": "bitnami/spark:3.2.1-debian-10-r85",
           "type": "image",
-          "version": "3.1.0-debian-10-r89"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": ["zookeeper"],
-          "children": [{
-            "maintainers": [{
-              "name": "Bitnami",
-              "email": "containers@bitnami.com"
-            }],
-            "keywords": [
-              "common",
-              "helper",
-              "template",
-              "function",
-              "bitnami"
-            ],
-            "children": [],
-            "name": "common:1.13.0",
-            "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-            "type": "chart",
-            "shortName": "common",
-            "version": "1.13.0"
-          }],
-          "name": "zookeeper:9.1.1",
-          "description": "Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.",
-          "type": "chart",
-          "shortName": "zookeeper",
-          "version": "9.1.1"
+          "version": "3.2.1-debian-10-r85"
         },
         {
           "maintainers": [{
@@ -243,11 +150,11 @@
           "version": "1.13.1"
         }
       ],
-      "name": "kafka:16.2.10",
-      "description": "Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.",
+      "name": "spark:6.0.0",
+      "description": "Apache Spark is a high-performance engine for large-scale computing tasks, such as data processing, machine learning and real-time data streaming. It includes APIs for Java, Python, Scala and R.",
       "type": "chart",
-      "shortName": "kafka",
-      "version": "16.2.10"
+      "shortName": "spark",
+      "version": "6.0.0"
     },
     {
       "maintainers": [{
@@ -344,16 +251,19 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
-        "apache",
-        "spark"
+        "kafka",
+        "zookeeper",
+        "streaming",
+        "producer",
+        "consumer"
       ],
       "children": [
         {
           "repoHost": "docker.io",
           "children": [],
-          "name": "bitnami/spark:3.2.1-debian-10-r85",
+          "name": "bitnami/kafka:3.1.0-debian-10-r89",
           "type": "image",
-          "version": "3.2.1-debian-10-r85"
+          "version": "3.1.0-debian-10-r89"
         },
         {
           "maintainers": [{
@@ -373,13 +283,103 @@
           "type": "chart",
           "shortName": "common",
           "version": "1.13.1"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": ["zookeeper"],
+          "children": [
+            {
+              "repoHost": "docker.io",
+              "children": [],
+              "name": "bitnami/zookeeper:3.8.0-debian-10-r37",
+              "type": "image",
+              "version": "3.8.0-debian-10-r37"
+            },
+            {
+              "maintainers": [{
+                "name": "Bitnami",
+                "email": "containers@bitnami.com"
+              }],
+              "keywords": [
+                "common",
+                "helper",
+                "template",
+                "function",
+                "bitnami"
+              ],
+              "children": [],
+              "name": "common:1.13.0",
+              "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+              "type": "chart",
+              "shortName": "common",
+              "version": "1.13.0"
+            }
+          ],
+          "name": "zookeeper:9.1.1",
+          "description": "Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.",
+          "type": "chart",
+          "shortName": "zookeeper",
+          "version": "9.1.1"
         }
       ],
-      "name": "spark:6.0.0",
-      "description": "Apache Spark is a high-performance engine for large-scale computing tasks, such as data processing, machine learning and real-time data streaming. It includes APIs for Java, Python, Scala and R.",
+      "name": "kafka:16.2.10",
+      "description": "Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.",
       "type": "chart",
-      "shortName": "spark",
-      "version": "6.0.0"
+      "shortName": "kafka",
+      "version": "16.2.10"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.13.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.13.1"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": ["zookeeper"],
+      "children": [{
+        "maintainers": [{
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        }],
+        "keywords": [
+          "common",
+          "helper",
+          "template",
+          "function",
+          "bitnami"
+        ],
+        "children": [],
+        "name": "common:1.13.0",
+        "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+        "type": "chart",
+        "shortName": "common",
+        "version": "1.13.0"
+      }],
+      "name": "zookeeper:9.1.1",
+      "description": "Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.",
+      "type": "chart",
+      "shortName": "zookeeper",
+      "version": "9.1.1"
     }
   ],
   "name": "dataplatform-bp1:12.0.1",

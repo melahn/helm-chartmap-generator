@@ -36,7 +36,7 @@ Chart: argo-cd:3.2.4
 	apiVersion: v2
 	appVersion: 2.3.3
 	created: Not specified
-	dependencies: common:1.13.1, redis:16.9.3
+	dependencies: redis:16.9.3, common:1.13.1
 	description: Argo CD is a continuous delivery tool for Kubernetes based on GitOps.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/argo-cd/img/argo-cd-stack-220x234.png
@@ -56,11 +56,11 @@ Image: docker.io/bitnami/argo-cd:2.3.3-debian-10-r32
 
 Chart Dependencies
 ------------------
-argo-cd:3.2.4 depends on common:1.13.1
 argo-cd:3.2.4 depends on redis:16.9.3
 redis:16.9.3 depends on common:1.13.1
+argo-cd:3.2.4 depends on common:1.13.1
 redis:16.9.3 uses docker.io/bitnami/redis:6.2.7-debian-10-r0
 redis:16.9.3 uses docker.io/bitnami/redis:6.2.7-debian-10-r15
 argo-cd:3.2.4 uses docker.io/bitnami/argo-cd:2.3.3-debian-10-r32
 
-Generated on 2022/05/15 12:19:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:22:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

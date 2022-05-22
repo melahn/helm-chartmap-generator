@@ -1,0 +1,62 @@
+Chart Map for ghost:17.1.3
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: common:1.14.0
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-13T12:53:12.091619027Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:4648f7ab42b17a0368549351a991b9bf22c3848c72b0eff4e8273236bc57e25b
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.0.tgz
+	version: 1.14.0
+Chart: mariadb:11.0.4
+	apiVersion: v2
+	appVersion: 10.6.7
+	created: 2022-05-18T21:33:19.446290842Z
+	dependencies: common:1.14.0
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: sha256:8009b92a287e690532fe24835504d9d6b7546e98560f1b71161405a071f7ca87
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.0.4.tgz
+	version: 11.0.4
+Chart: ghost:17.1.3
+	apiVersion: v2
+	appVersion: 4.47.4
+	created: Not specified
+	dependencies: common:1.14.0, mariadb:11.0.4
+	description: Ghost is an open source publishing platform designed to create blogs, magazines, and news sites. It includes a simple markdown editor with preview, theming, and SEO built-in to simplify editing.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/ghost/img/ghost-stack-220x234.png
+	keywords: ghost,blog,http,web,application,nodejs,javascript
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: ghost
+	sources: https://github.com/bitnami/bitnami-docker-ghost,https://www.ghost.org/
+	urls: Not specified
+	version: 17.1.3
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.6.7-debian-10-r89
+
+Chart Dependencies
+------------------
+ghost:17.1.3 depends on common:1.14.0
+ghost:17.1.3 depends on mariadb:11.0.4
+mariadb:11.0.4 depends on common:1.14.0
+mariadb:11.0.4 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r89
+
+Generated on 2022/05/22 15:29:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

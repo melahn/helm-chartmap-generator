@@ -35,92 +35,6 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
-        "kafka",
-        "zookeeper",
-        "streaming",
-        "producer",
-        "consumer"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/kafka:3.1.0-debian-10-r84",
-          "type": "image",
-          "version": "3.1.0-debian-10-r84"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.13.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.13.0"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": ["zookeeper"],
-          "children": [
-            {
-              "repoHost": "docker.io",
-              "children": [],
-              "name": "bitnami/zookeeper:3.8.0-debian-10-r34",
-              "type": "image",
-              "version": "3.8.0-debian-10-r34"
-            },
-            {
-              "maintainers": [{
-                "name": "Bitnami",
-                "email": "containers@bitnami.com"
-              }],
-              "keywords": [
-                "common",
-                "helper",
-                "template",
-                "function",
-                "bitnami"
-              ],
-              "children": [],
-              "name": "common:1.13.0",
-              "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-              "type": "chart",
-              "shortName": "common",
-              "version": "1.13.0"
-            }
-          ],
-          "name": "zookeeper:9.0.6",
-          "description": "Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.",
-          "type": "chart",
-          "shortName": "zookeeper",
-          "version": "9.0.6"
-        }
-      ],
-      "name": "kafka:16.2.6",
-      "description": "Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.",
-      "type": "chart",
-      "shortName": "kafka",
-      "version": "16.2.6"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
         "common",
         "helper",
         "template",
@@ -223,37 +137,6 @@
         "name": "Bitnami",
         "email": "containers@bitnami.com"
       }],
-      "keywords": ["zookeeper"],
-      "children": [{
-        "maintainers": [{
-          "name": "Bitnami",
-          "email": "containers@bitnami.com"
-        }],
-        "keywords": [
-          "common",
-          "helper",
-          "template",
-          "function",
-          "bitnami"
-        ],
-        "children": [],
-        "name": "common:1.13.0",
-        "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-        "type": "chart",
-        "shortName": "common",
-        "version": "1.13.0"
-      }],
-      "name": "zookeeper:9.0.6",
-      "description": "Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.",
-      "type": "chart",
-      "shortName": "zookeeper",
-      "version": "9.0.6"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
       "keywords": [
         "apache",
         "spark"
@@ -298,18 +181,19 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
-        "metric",
-        "monitoring",
-        "observability",
-        "alerting"
+        "kafka",
+        "zookeeper",
+        "streaming",
+        "producer",
+        "consumer"
       ],
       "children": [
         {
           "repoHost": "docker.io",
           "children": [],
-          "name": "bitnami/wavefront-proxy:11.0.0-debian-10-r17",
+          "name": "bitnami/kafka:3.1.0-debian-10-r84",
           "type": "image",
-          "version": "11.0.0-debian-10-r17"
+          "version": "3.1.0-debian-10-r84"
         },
         {
           "maintainers": [{
@@ -329,6 +213,103 @@
           "type": "chart",
           "shortName": "common",
           "version": "1.13.0"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": ["zookeeper"],
+          "children": [
+            {
+              "repoHost": "docker.io",
+              "children": [],
+              "name": "bitnami/zookeeper:3.8.0-debian-10-r34",
+              "type": "image",
+              "version": "3.8.0-debian-10-r34"
+            },
+            {
+              "maintainers": [{
+                "name": "Bitnami",
+                "email": "containers@bitnami.com"
+              }],
+              "keywords": [
+                "common",
+                "helper",
+                "template",
+                "function",
+                "bitnami"
+              ],
+              "children": [],
+              "name": "common:1.13.0",
+              "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+              "type": "chart",
+              "shortName": "common",
+              "version": "1.13.0"
+            }
+          ],
+          "name": "zookeeper:9.0.6",
+          "description": "Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.",
+          "type": "chart",
+          "shortName": "zookeeper",
+          "version": "9.0.6"
+        }
+      ],
+      "name": "kafka:16.2.6",
+      "description": "Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.",
+      "type": "chart",
+      "shortName": "kafka",
+      "version": "16.2.6"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": ["zookeeper"],
+      "children": [{
+        "maintainers": [{
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        }],
+        "keywords": [
+          "common",
+          "helper",
+          "template",
+          "function",
+          "bitnami"
+        ],
+        "children": [],
+        "name": "common:1.13.0",
+        "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+        "type": "chart",
+        "shortName": "common",
+        "version": "1.13.0"
+      }],
+      "name": "zookeeper:9.0.6",
+      "description": "Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.",
+      "type": "chart",
+      "shortName": "zookeeper",
+      "version": "9.0.6"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "metric",
+        "monitoring",
+        "observability",
+        "alerting"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/wavefront-proxy:11.0.0-debian-10-r17",
+          "type": "image",
+          "version": "11.0.0-debian-10-r17"
         },
         {
           "maintainers": [{
@@ -373,6 +354,25 @@
           "type": "chart",
           "shortName": "kube-state-metrics",
           "version": "2.2.17"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.13.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.13.0"
         }
       ],
       "name": "wavefront:3.4.0",

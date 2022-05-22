@@ -9,8 +9,8 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for dataplatform-bp1:12.0.0
 
 'There are 10 referenced Helm Charts
-artifact "common:1.13.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_1 #DarkSeaGreen
 artifact "solr:4.0.9\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tsolr\n\t\tzookeeper\n\t\tapache" as solr_4_0_9 #AliceBlue
+artifact "common:1.13.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_1 #DarkSeaGreen
 artifact "dataplatform-bp1:12.0.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tdataplatform\n\t\tkafka\n\t\tspark\n\t\tsolr\n\t\tzookeeper\n\t\twavefront\n\t\tobservability\n\t\tapache\n\t\ttanzuobservability" as dataplatform_bp1_12_0_0 #LightGoldenRodYellow
 artifact "spark:6.0.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tapache\n\t\tspark" as spark_6_0_0 #LightSeaGreen
 artifact "kafka:16.2.10\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkafka\n\t\tzookeeper\n\t\tstreaming\n\t\tproducer\n\t\tconsumer" as kafka_16_2_10 #Aqua
@@ -31,22 +31,22 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:2.4.2-debian-1
 usecase "Image\n====\ndocker.io\n====\nbitnami/dataplatform-exporter:1.0.1-scratch-r28\n====\n1.0.1-scratch-r28" as docker_io_bitnami_dataplatform_exporter_1_0_1_scratch_r28 #Fuchsia
 
 'Chart Dependencies
-dataplatform_bp1_12_0_0--[#green]-|>spark_6_0_0
-spark_6_0_0--[#green]-|>common_1_13_1
+dataplatform_bp1_12_0_0--[#green]-|>kafka_16_2_10
+kafka_16_2_10--[#green]-|>common_1_13_1
+kafka_16_2_10--[#green]-|>zookeeper_9_1_1
+zookeeper_9_1_1--[#green]-|>common_1_13_0
 dataplatform_bp1_12_0_0--[#green]-|>wavefront_3_4_2
 wavefront_3_4_2--[#green]-|>kube_state_metrics_2_2_19
 kube_state_metrics_2_2_19--[#green]-|>common_1_13_0
 wavefront_3_4_2--[#green]-|>common_1_13_1
-dataplatform_bp1_12_0_0--[#green]-|>zookeeper_9_1_1
-zookeeper_9_1_1--[#green]-|>common_1_13_0
-dataplatform_bp1_12_0_0--[#green]-|>kafka_16_2_10
-kafka_16_2_10--[#green]-|>zookeeper_9_1_1
-kafka_16_2_10--[#green]-|>common_1_13_1
-dataplatform_bp1_12_0_0--[#green]-|>common_1_13_1
 dataplatform_bp1_12_0_0--[#green]-|>solr_4_0_9
+solr_4_0_9--[#green]-|>common_1_13_0
 solr_4_0_9--[#green]-|>zookeeper_9_1_0
 zookeeper_9_1_0--[#green]-|>common_1_13_0
-solr_4_0_9--[#green]-|>common_1_13_0
+dataplatform_bp1_12_0_0--[#green]-|>common_1_13_1
+dataplatform_bp1_12_0_0--[#green]-|>spark_6_0_0
+spark_6_0_0--[#green]-|>common_1_13_1
+dataplatform_bp1_12_0_0--[#green]-|>zookeeper_9_1_1
 solr_4_0_9--[#orange]-|>docker_io_bitnami_solr_8_11_1_debian_10_r125
 dataplatform_bp1_12_0_0--[#orange]-|>docker_io_bitnami_dataplatform_emitter_1_0_1_scratch_r32
 dataplatform_bp1_12_0_0--[#orange]-|>docker_io_bitnami_dataplatform_exporter_1_0_1_scratch_r28
@@ -57,5 +57,5 @@ zookeeper_9_1_0--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r37
 wavefront_3_4_2--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_0_0_debian_10_r39
 zookeeper_9_1_1--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r37
 
-center footer Generated on 2022/05/15 12:23:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 15:25:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

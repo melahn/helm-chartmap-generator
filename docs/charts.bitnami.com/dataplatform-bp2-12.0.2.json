@@ -36,6 +36,49 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
+        "apache",
+        "spark"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/spark:3.2.1-debian-10-r64",
+          "type": "image",
+          "version": "3.2.1-debian-10-r64"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.13.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.13.0"
+        }
+      ],
+      "name": "spark:5.9.8",
+      "description": "Apache Spark is a high-performance engine for large-scale computing tasks, such as data processing, machine learning and real-time data streaming. It includes APIs for Java, Python, Scala and R.",
+      "type": "chart",
+      "shortName": "spark",
+      "version": "5.9.8"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
         "common",
         "helper",
         "template",
@@ -48,216 +91,6 @@
       "type": "chart",
       "shortName": "common",
       "version": "1.13.0"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": ["elasticsearch"],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/elasticsearch:7.17.2-debian-10-r3",
-          "type": "image",
-          "version": "7.17.2-debian-10-r3"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "kibana",
-            "analytics",
-            "monitoring",
-            "metrics",
-            "logs"
-          ],
-          "children": [{
-            "maintainers": [{
-              "name": "Bitnami",
-              "email": "containers@bitnami.com"
-            }],
-            "keywords": [
-              "common",
-              "helper",
-              "template",
-              "function",
-              "bitnami"
-            ],
-            "children": [],
-            "name": "common:1.13.0",
-            "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-            "type": "chart",
-            "shortName": "common",
-            "version": "1.13.0"
-          }],
-          "name": "kibana:9.3.15",
-          "description": "Kibana is an open source, browser based analytics and search dashboard for Elasticsearch. Kibana strives to be easy to get started with, while also being flexible and powerful.",
-          "type": "chart",
-          "shortName": "kibana",
-          "version": "9.3.15"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.13.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.13.0"
-        }
-      ],
-      "name": "elasticsearch:17.9.24",
-      "description": "Elasticsearch is a distributed search and analytics engine. It is used for web search, log monitoring, and real-time analytics. Ideal for Big Data applications.",
-      "type": "chart",
-      "shortName": "elasticsearch",
-      "version": "17.9.24"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "logstash",
-        "logging",
-        "elk"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/logstash:7.17.2-debian-10-r5",
-          "type": "image",
-          "version": "7.17.2-debian-10-r5"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.13.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.13.0"
-        }
-      ],
-      "name": "logstash:3.8.8",
-      "description": "Logstash is an open source data processing engine. It ingests data from multiple sources, processes it, and sends the output to final destination in real-time. It is a core component of the ELK stack.",
-      "type": "chart",
-      "shortName": "logstash",
-      "version": "3.8.8"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "metric",
-        "monitoring",
-        "observability",
-        "alerting"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/wavefront-proxy:11.0.0-debian-10-r4",
-          "type": "image",
-          "version": "11.0.0-debian-10-r4"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.13.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.13.0"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "prometheus",
-            "kube-state-metrics",
-            "monitoring"
-          ],
-          "children": [
-            {
-              "repoHost": "docker.io",
-              "children": [],
-              "name": "bitnami/kube-state-metrics:2.4.2-debian-10-r18",
-              "type": "image",
-              "version": "2.4.2-debian-10-r18"
-            },
-            {
-              "maintainers": [{
-                "name": "Bitnami",
-                "email": "containers@bitnami.com"
-              }],
-              "keywords": [
-                "common",
-                "helper",
-                "template",
-                "function",
-                "bitnami"
-              ],
-              "children": [],
-              "name": "common:1.13.0",
-              "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-              "type": "chart",
-              "shortName": "common",
-              "version": "1.13.0"
-            }
-          ],
-          "name": "kube-state-metrics:2.2.14",
-          "description": "kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.",
-          "type": "chart",
-          "shortName": "kube-state-metrics",
-          "version": "2.2.14"
-        }
-      ],
-      "name": "wavefront:3.3.2",
-      "description": "Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.",
-      "type": "chart",
-      "shortName": "wavefront",
-      "version": "3.3.2"
     },
     {
       "maintainers": [{
@@ -350,17 +183,95 @@
         "name": "Bitnami",
         "email": "containers@bitnami.com"
       }],
+      "keywords": ["elasticsearch"],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/elasticsearch:7.17.2-debian-10-r3",
+          "type": "image",
+          "version": "7.17.2-debian-10-r3"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.13.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.13.0"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "kibana",
+            "analytics",
+            "monitoring",
+            "metrics",
+            "logs"
+          ],
+          "children": [{
+            "maintainers": [{
+              "name": "Bitnami",
+              "email": "containers@bitnami.com"
+            }],
+            "keywords": [
+              "common",
+              "helper",
+              "template",
+              "function",
+              "bitnami"
+            ],
+            "children": [],
+            "name": "common:1.13.0",
+            "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+            "type": "chart",
+            "shortName": "common",
+            "version": "1.13.0"
+          }],
+          "name": "kibana:9.3.15",
+          "description": "Kibana is an open source, browser based analytics and search dashboard for Elasticsearch. Kibana strives to be easy to get started with, while also being flexible and powerful.",
+          "type": "chart",
+          "shortName": "kibana",
+          "version": "9.3.15"
+        }
+      ],
+      "name": "elasticsearch:17.9.24",
+      "description": "Elasticsearch is a distributed search and analytics engine. It is used for web search, log monitoring, and real-time analytics. Ideal for Big Data applications.",
+      "type": "chart",
+      "shortName": "elasticsearch",
+      "version": "17.9.24"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
       "keywords": [
-        "apache",
-        "spark"
+        "logstash",
+        "logging",
+        "elk"
       ],
       "children": [
         {
           "repoHost": "docker.io",
           "children": [],
-          "name": "bitnami/spark:3.2.1-debian-10-r64",
+          "name": "bitnami/logstash:7.17.2-debian-10-r5",
           "type": "image",
-          "version": "3.2.1-debian-10-r64"
+          "version": "7.17.2-debian-10-r5"
         },
         {
           "maintainers": [{
@@ -382,11 +293,100 @@
           "version": "1.13.0"
         }
       ],
-      "name": "spark:5.9.8",
-      "description": "Apache Spark is a high-performance engine for large-scale computing tasks, such as data processing, machine learning and real-time data streaming. It includes APIs for Java, Python, Scala and R.",
+      "name": "logstash:3.8.8",
+      "description": "Logstash is an open source data processing engine. It ingests data from multiple sources, processes it, and sends the output to final destination in real-time. It is a core component of the ELK stack.",
       "type": "chart",
-      "shortName": "spark",
-      "version": "5.9.8"
+      "shortName": "logstash",
+      "version": "3.8.8"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "metric",
+        "monitoring",
+        "observability",
+        "alerting"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/wavefront-proxy:11.0.0-debian-10-r4",
+          "type": "image",
+          "version": "11.0.0-debian-10-r4"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "prometheus",
+            "kube-state-metrics",
+            "monitoring"
+          ],
+          "children": [
+            {
+              "repoHost": "docker.io",
+              "children": [],
+              "name": "bitnami/kube-state-metrics:2.4.2-debian-10-r18",
+              "type": "image",
+              "version": "2.4.2-debian-10-r18"
+            },
+            {
+              "maintainers": [{
+                "name": "Bitnami",
+                "email": "containers@bitnami.com"
+              }],
+              "keywords": [
+                "common",
+                "helper",
+                "template",
+                "function",
+                "bitnami"
+              ],
+              "children": [],
+              "name": "common:1.13.0",
+              "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+              "type": "chart",
+              "shortName": "common",
+              "version": "1.13.0"
+            }
+          ],
+          "name": "kube-state-metrics:2.2.14",
+          "description": "kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.",
+          "type": "chart",
+          "shortName": "kube-state-metrics",
+          "version": "2.2.14"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.13.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.13.0"
+        }
+      ],
+      "name": "wavefront:3.3.2",
+      "description": "Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.",
+      "type": "chart",
+      "shortName": "wavefront",
+      "version": "3.3.2"
     }
   ],
   "name": "dataplatform-bp2:12.0.2",

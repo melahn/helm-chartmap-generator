@@ -1,0 +1,45 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "mxnet",
+    "python",
+    "machine",
+    "learning"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/mxnet:1.9.1-debian-10-r1",
+      "type": "image",
+      "version": "1.9.1-debian-10-r1"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.14.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.14.0"
+    }
+  ],
+  "name": "mxnet:3.0.5",
+  "description": "Apache MXNet (Incubating) is a flexible and efficient library for deep learning designed to work as a neural network. Bitnami image ships OpenBLAS as math library.",
+  "type": "chart",
+  "shortName": "mxnet",
+  "version": "3.0.5"
+}

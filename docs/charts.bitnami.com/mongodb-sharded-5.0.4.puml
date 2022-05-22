@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for mongodb-sharded:5.0.4
+
+'There are 2 referenced Helm Charts
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+artifact "mongodb-sharded:5.0.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmongodb\n\t\tdatabase\n\t\tnosql\n\t\tcluster\n\t\treplicaset\n\t\treplication" as mongodb_sharded_5_0_4 #GhostWhite
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb-sharded:5.0.8-debian-10-r17\n====\n5.0.8-debian-10-r17" as docker_io_bitnami_mongodb_sharded_5_0_8_debian_10_r17 #Beige
+
+'Chart Dependencies
+mongodb_sharded_5_0_4--[#green]-|>common_1_14_0
+mongodb_sharded_5_0_4--[#orange]-|>docker_io_bitnami_mongodb_sharded_5_0_8_debian_10_r17
+
+center footer Generated on 2022/05/22 15:38:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

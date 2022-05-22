@@ -1,0 +1,32 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for grafana-tempo:1.1.8
+
+'There are 3 referenced Helm Charts
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+artifact "memcached:6.0.18\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmemcached\n\t\tcache" as memcached_6_0_18 #DarkSeaGreen
+artifact "grafana-tempo:1.1.8\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tgrafana\n\t\ttracing\n\t\tmetrics\n\t\tinfrastructure" as grafana_tempo_1_1_8 #Ivory
+
+'There are 4 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/grafana-tempo:1.4.1-debian-10-r12\n====\n1.4.1-debian-10-r12" as docker_io_bitnami_grafana_tempo_1_4_1_debian_10_r12 #Gainsboro
+usecase "Image\n====\ndocker.io\n====\nbitnami/grafana-tempo-query:1.4.1-debian-10-r13\n====\n1.4.1-debian-10-r13" as docker_io_bitnami_grafana_tempo_query_1_4_1_debian_10_r13 #LightGrey
+usecase "Image\n====\ndocker.io\n====\nbitnami/memcached:1.6.15-debian-10-r47\n====\n1.6.15-debian-10-r47" as docker_io_bitnami_memcached_1_6_15_debian_10_r47 #CadetBlue
+usecase "Image\n====\ndocker.io\n====\nbitnami/grafana-tempo-vulture:1.4.1-debian-10-r13\n====\n1.4.1-debian-10-r13" as docker_io_bitnami_grafana_tempo_vulture_1_4_1_debian_10_r13 #Beige
+
+'Chart Dependencies
+grafana_tempo_1_1_8--[#green]-|>common_1_14_0
+grafana_tempo_1_1_8--[#green]-|>memcached_6_0_18
+memcached_6_0_18--[#green]-|>common_1_14_0
+memcached_6_0_18--[#orange]-|>docker_io_bitnami_memcached_1_6_15_debian_10_r47
+grafana_tempo_1_1_8--[#orange]-|>docker_io_bitnami_grafana_tempo_vulture_1_4_1_debian_10_r13
+grafana_tempo_1_1_8--[#orange]-|>docker_io_bitnami_grafana_tempo_query_1_4_1_debian_10_r13
+grafana_tempo_1_1_8--[#orange]-|>docker_io_bitnami_grafana_tempo_1_4_1_debian_10_r12
+
+center footer Generated on 2022/05/22 15:30:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

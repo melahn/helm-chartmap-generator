@@ -1,0 +1,44 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "metrics-server",
+    "cluster",
+    "metrics"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/metrics-server:0.6.1-debian-10-r96",
+      "type": "image",
+      "version": "0.6.1-debian-10-r96"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.14.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.14.0"
+    }
+  ],
+  "name": "metrics-server:6.0.2",
+  "description": "Metrics Server aggregates resource usage data, such as container CPU and memory usage, in a Kubernetes cluster and makes it available via the Metrics API.",
+  "type": "chart",
+  "shortName": "metrics-server",
+  "version": "6.0.2"
+}

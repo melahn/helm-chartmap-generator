@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for nats:7.2.2
+
+'There are 2 referenced Helm Charts
+artifact "nats:7.2.2\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tnats\n\t\tmessaging\n\t\taddressing\n\t\tdiscovery" as nats_7_2_2 #AliceBlue
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/nats:2.8.2-debian-10-r14\n====\n2.8.2-debian-10-r14" as docker_io_bitnami_nats_2_8_2_debian_10_r14 #Cornsilk
+
+'Chart Dependencies
+nats_7_2_2--[#green]-|>common_1_14_0
+nats_7_2_2--[#orange]-|>docker_io_bitnami_nats_2_8_2_debian_10_r14
+
+center footer Generated on 2022/05/22 15:39:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

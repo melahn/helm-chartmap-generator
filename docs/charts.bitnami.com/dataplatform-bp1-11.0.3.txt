@@ -21,7 +21,7 @@ Chart: wavefront:3.4.0
 	apiVersion: v2
 	appVersion: 1.10.0
 	created: 2022-04-12T14:38:28.645217846Z
-	dependencies: common:1.13.0, kube-state-metrics:2.2.17
+	dependencies: kube-state-metrics:2.2.17, common:1.13.0
 	description: Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.
 	digest: sha256:1bcdfea5aeeb5e58875a6847e45c853912d034daba9f334cb3e2ca041d37fd63
 	icon: https://bitnami.com/assets/stacks/wavefront-collector/img/wavefront-collector-stack-220x234.png
@@ -66,7 +66,7 @@ Chart: dataplatform-bp1:11.0.3
 	apiVersion: v2
 	appVersion: 1.0.1
 	created: Not specified
-	dependencies: zookeeper:9.0.6, common:1.13.0, kafka:16.2.6, wavefront:3.4.0, solr:4.0.7, spark:5.9.11
+	dependencies: spark:5.9.11, zookeeper:9.0.6, wavefront:3.4.0, common:1.13.0, kafka:16.2.6, solr:4.0.7
 	description: This Helm chart can be used for the automated deployment of a data platform blueprint containing Kafka, Apache Spark, and Solr. It covers optimized pod sizing and placement diversity rules.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/dataplatform-bp1/img/dataplatform-bp1-stack-220x234.png
@@ -126,7 +126,7 @@ Chart: solr:4.0.7
 	apiVersion: v2
 	appVersion: 8.11.1
 	created: 2022-04-20T22:00:11.289285952Z
-	dependencies: common:1.13.0, zookeeper:9.0.5
+	dependencies: zookeeper:9.0.5, common:1.13.0
 	description: Apache Solr is an extremely powerful, open source enterprise search platform built on Apache Lucene. It is highly reliable and flexible, scalable, and designed to add value very quickly after launch.
 	digest: sha256:b9627ec68e681776994ab2aa452216c793ac2674fd7e46f442071f65d2a2b9e1
 	icon: https://bitnami.com/assets/stacks/solr/img/solr-stack-110x117.png
@@ -152,22 +152,22 @@ Image: docker.io/bitnami/dataplatform-exporter:1.0.1-scratch-r27
 
 Chart Dependencies
 ------------------
+dataplatform-bp1:11.0.3 depends on spark:5.9.11
+spark:5.9.11 depends on common:1.13.0
 dataplatform-bp1:11.0.3 depends on zookeeper:9.0.6
 zookeeper:9.0.6 depends on common:1.13.0
+dataplatform-bp1:11.0.3 depends on wavefront:3.4.0
+wavefront:3.4.0 depends on kube-state-metrics:2.2.17
+kube-state-metrics:2.2.17 depends on common:1.13.0
+wavefront:3.4.0 depends on common:1.13.0
 dataplatform-bp1:11.0.3 depends on common:1.13.0
 dataplatform-bp1:11.0.3 depends on kafka:16.2.6
 kafka:16.2.6 depends on zookeeper:9.0.6
 kafka:16.2.6 depends on common:1.13.0
-dataplatform-bp1:11.0.3 depends on wavefront:3.4.0
-wavefront:3.4.0 depends on common:1.13.0
-wavefront:3.4.0 depends on kube-state-metrics:2.2.17
-kube-state-metrics:2.2.17 depends on common:1.13.0
 dataplatform-bp1:11.0.3 depends on solr:4.0.7
-solr:4.0.7 depends on common:1.13.0
 solr:4.0.7 depends on zookeeper:9.0.5
 zookeeper:9.0.5 depends on common:1.13.0
-dataplatform-bp1:11.0.3 depends on spark:5.9.11
-spark:5.9.11 depends on common:1.13.0
+solr:4.0.7 depends on common:1.13.0
 kube-state-metrics:2.2.17 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r28
 wavefront:3.4.0 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r17
 spark:5.9.11 uses docker.io/bitnami/spark:3.2.1-debian-10-r78
@@ -178,4 +178,4 @@ kafka:16.2.6 uses docker.io/bitnami/kafka:3.1.0-debian-10-r84
 zookeeper:9.0.6 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r34
 solr:4.0.7 uses docker.io/bitnami/solr:8.11.1-debian-10-r119
 
-Generated on 2022/05/15 12:23:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:25:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

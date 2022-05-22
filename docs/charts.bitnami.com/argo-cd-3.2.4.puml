@@ -26,5 +26,5 @@ redis_16_9_3--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r0
 redis_16_9_3--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r15
 argo_cd_3_2_4--[#orange]-|>docker_io_bitnami_argo_cd_2_3_3_debian_10_r32
 
-center footer Generated on 2022/05/15 12:19:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 15:22:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

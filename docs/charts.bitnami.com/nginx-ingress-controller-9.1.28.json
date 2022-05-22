@@ -15,16 +15,16 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/nginx-ingress-controller:1.2.0-debian-10-r0",
+      "name": "bitnami/nginx:1.21.6-debian-10-r98",
       "type": "image",
-      "version": "1.2.0-debian-10-r0"
+      "version": "1.21.6-debian-10-r98"
     },
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/nginx:1.21.6-debian-10-r98",
+      "name": "bitnami/nginx-ingress-controller:1.2.0-debian-10-r0",
       "type": "image",
-      "version": "1.21.6-debian-10-r98"
+      "version": "1.2.0-debian-10-r0"
     },
     {
       "maintainers": [{

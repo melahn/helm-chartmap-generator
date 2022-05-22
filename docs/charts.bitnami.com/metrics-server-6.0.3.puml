@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for metrics-server:6.0.3
+
+'There are 2 referenced Helm Charts
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+artifact "metrics-server:6.0.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmetrics-server\n\t\tcluster\n\t\tmetrics" as metrics_server_6_0_3 #Cyan
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/metrics-server:0.6.1-debian-10-r97\n====\n0.6.1-debian-10-r97" as docker_io_bitnami_metrics_server_0_6_1_debian_10_r97 #LightGrey
+
+'Chart Dependencies
+metrics_server_6_0_3--[#green]-|>common_1_14_0
+metrics_server_6_0_3--[#orange]-|>docker_io_bitnami_metrics_server_0_6_1_debian_10_r97
+
+center footer Generated on 2022/05/22 15:38:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

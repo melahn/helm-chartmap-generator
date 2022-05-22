@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for jasperreports:14.1.3
+
+'There are 3 referenced Helm Charts
+artifact "mariadb:11.0.7\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_11_0_7 #DarkTurquoise
+artifact "common:1.14.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_1 #DarkSeaGreen
+artifact "jasperreports:14.1.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tbusiness intelligence\n\t\tjava\n\t\tjasper\n\t\treporting\n\t\tanalytic\n\t\tvisualization" as jasperreports_14_1_3 #LightGrey
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.6.8-debian-10-r0\n====\n10.6.8-debian-10-r0" as docker_io_bitnami_mariadb_10_6_8_debian_10_r0 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/jasperreports:8.0.0-debian-10-r52\n====\n8.0.0-debian-10-r52" as docker_io_bitnami_jasperreports_8_0_0_debian_10_r52 #LawnGreen
+
+'Chart Dependencies
+jasperreports_14_1_3--[#green]-|>common_1_14_1
+jasperreports_14_1_3--[#green]-|>mariadb_11_0_7
+mariadb_11_0_7--[#green]-|>common_1_14_1
+mariadb_11_0_7--[#orange]-|>docker_io_bitnami_mariadb_10_6_8_debian_10_r0
+jasperreports_14_1_3--[#orange]-|>docker_io_bitnami_jasperreports_8_0_0_debian_10_r52
+
+center footer Generated on 2022/05/22 15:32:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

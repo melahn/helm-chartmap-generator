@@ -61,4 +61,4 @@ kube-state-metrics:2.2.19 depends on common:1.13.0
 kube-state-metrics:2.2.19 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r42
 wavefront:3.4.1 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r26
 
-Generated on 2022/05/15 12:48:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:49:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

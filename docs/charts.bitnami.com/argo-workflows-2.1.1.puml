@@ -1,0 +1,36 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for argo-workflows:2.1.1
+
+'There are 5 referenced Helm Charts
+artifact "common:1.13.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_13_1 #DarkSeaGreen
+artifact "mysql:9.0.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tcluster\n\t\thigh availability" as mysql_9_0_0 #Aqua
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+artifact "postgresql:11.2.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_2_3 #LightSteelBlue
+artifact "argo-workflows:2.1.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tDevops\n\t\tKubernetes\n\t\tJobs\n\t\tContinuous delivery\n\t\tContinous deployment" as argo_workflows_2_1_1 #LavenderBlush
+
+'There are 4 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/mysql:8.0.29-debian-10-r15\n====\n8.0.29-debian-10-r15" as docker_io_bitnami_mysql_8_0_29_debian_10_r15 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/argo-workflow-controller:3.3.5-scratch-r0\n====\n3.3.5-scratch-r0" as docker_io_bitnami_argo_workflow_controller_3_3_5_scratch_r0 #Chocolate
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.3.0-debian-10-r4\n====\n14.3.0-debian-10-r4" as docker_io_bitnami_postgresql_14_3_0_debian_10_r4 #DarkSalmon
+usecase "Image\n====\ndocker.io\n====\nbitnami/argo-workflow-cli:3.3.5-scratch-r1\n====\n3.3.5-scratch-r1" as docker_io_bitnami_argo_workflow_cli_3_3_5_scratch_r1 #DarkSeaGreen
+
+'Chart Dependencies
+argo_workflows_2_1_1--[#green]-|>common_1_14_0
+argo_workflows_2_1_1--[#green]-|>mysql_9_0_0
+mysql_9_0_0--[#green]-|>common_1_13_1
+argo_workflows_2_1_1--[#green]-|>postgresql_11_2_3
+postgresql_11_2_3--[#green]-|>common_1_14_0
+mysql_9_0_0--[#orange]-|>docker_io_bitnami_mysql_8_0_29_debian_10_r15
+postgresql_11_2_3--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_10_r4
+argo_workflows_2_1_1--[#orange]-|>docker_io_bitnami_argo_workflow_cli_3_3_5_scratch_r1
+argo_workflows_2_1_1--[#orange]-|>docker_io_bitnami_argo_workflow_controller_3_3_5_scratch_r0
+
+center footer Generated on 2022/05/22 15:22:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

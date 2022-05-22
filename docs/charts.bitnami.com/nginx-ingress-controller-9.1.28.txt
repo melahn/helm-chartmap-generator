@@ -41,7 +41,7 @@ Image: docker.io/bitnami/nginx-ingress-controller:1.2.0-debian-10-r0
 Chart Dependencies
 ------------------
 nginx-ingress-controller:9.1.28 depends on common:1.13.1
-nginx-ingress-controller:9.1.28 uses docker.io/bitnami/nginx-ingress-controller:1.2.0-debian-10-r0
 nginx-ingress-controller:9.1.28 uses docker.io/bitnami/nginx:1.21.6-debian-10-r98
+nginx-ingress-controller:9.1.28 uses docker.io/bitnami/nginx-ingress-controller:1.2.0-debian-10-r0
 
-Generated on 2022/05/15 12:38:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:40:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

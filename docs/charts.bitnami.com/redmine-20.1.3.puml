@@ -1,0 +1,33 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for redmine:20.1.3
+
+'There are 4 referenced Helm Charts
+artifact "postgresql:11.2.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_2_4 #LightSteelBlue
+artifact "mariadb:11.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_11_0_5 #DarkTurquoise
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+artifact "redmine:20.1.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tredmine\n\t\tproject management\n\t\twww\n\t\thttp\n\t\tweb\n\t\tapplication\n\t\truby\n\t\trails" as redmine_20_1_3 #Gainsboro
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.6.7-debian-10-r90\n====\n10.6.7-debian-10-r90" as docker_io_bitnami_mariadb_10_6_7_debian_10_r90 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/redmine:5.0.1-debian-10-r2\n====\n5.0.1-debian-10-r2" as docker_io_bitnami_redmine_5_0_1_debian_10_r2 #Chartreuse
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.3.0-debian-10-r6\n====\n14.3.0-debian-10-r6" as docker_io_bitnami_postgresql_14_3_0_debian_10_r6 #DarkSalmon
+
+'Chart Dependencies
+redmine_20_1_3--[#green]-|>postgresql_11_2_4
+postgresql_11_2_4--[#green]-|>common_1_14_0
+redmine_20_1_3--[#green]-|>common_1_14_0
+redmine_20_1_3--[#green]-|>mariadb_11_0_5
+mariadb_11_0_5--[#green]-|>common_1_14_0
+postgresql_11_2_4--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_10_r6
+mariadb_11_0_5--[#orange]-|>docker_io_bitnami_mariadb_10_6_7_debian_10_r90
+redmine_20_1_3--[#orange]-|>docker_io_bitnami_redmine_5_0_1_debian_10_r2
+
+center footer Generated on 2022/05/22 15:46:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

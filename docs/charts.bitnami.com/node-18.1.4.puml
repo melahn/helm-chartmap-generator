@@ -1,0 +1,29 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for node:18.1.4
+
+'There are 4 referenced Helm Charts
+artifact "node:18.1.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tnode\n\t\tjavascript\n\t\tnodejs\n\t\tgit" as node_18_1_4 #AliceBlue
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+artifact "mongodb:12.1.9\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmongodb\n\t\tdatabase\n\t\tnosql\n\t\tcluster\n\t\treplicaset\n\t\treplication" as mongodb_12_1_9 #GreenYellow
+artifact "common:1.14.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_1 #DarkSeaGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:5.0.8-debian-10-r23\n====\n5.0.8-debian-10-r23" as docker_io_bitnami_mongodb_5_0_8_debian_10_r23 #Bisque
+usecase "Image\n====\ndocker.io\n====\nbitnami/node:16.15.0-debian-10-r23\n====\n16.15.0-debian-10-r23" as docker_io_bitnami_node_16_15_0_debian_10_r23 #Cornsilk
+
+'Chart Dependencies
+node_18_1_4--[#green]-|>mongodb_12_1_9
+mongodb_12_1_9--[#green]-|>common_1_14_0
+node_18_1_4--[#green]-|>common_1_14_1
+node_18_1_4--[#orange]-|>docker_io_bitnami_node_16_15_0_debian_10_r23
+mongodb_12_1_9--[#orange]-|>docker_io_bitnami_mongodb_5_0_8_debian_10_r23
+
+center footer Generated on 2022/05/22 15:40:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

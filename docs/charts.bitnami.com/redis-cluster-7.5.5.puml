@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for redis-cluster:7.5.5
+
+'There are 2 referenced Helm Charts
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+artifact "redis-cluster:7.5.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_cluster_7_5_5 #Ivory
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/redis-cluster:6.2.7-debian-10-r20\n====\n6.2.7-debian-10-r20" as docker_io_bitnami_redis_cluster_6_2_7_debian_10_r20 #LightCyan
+
+'Chart Dependencies
+redis_cluster_7_5_5--[#green]-|>common_1_14_0
+redis_cluster_7_5_5--[#orange]-|>docker_io_bitnami_redis_cluster_6_2_7_debian_10_r20
+
+center footer Generated on 2022/05/22 15:45:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

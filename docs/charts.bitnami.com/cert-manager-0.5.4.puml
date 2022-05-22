@@ -1,0 +1,27 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for cert-manager:0.5.4
+
+'There are 2 referenced Helm Charts
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+artifact "cert-manager:0.5.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tgo\n\t\tsecurity\n\t\ttls\n\t\tcertificate" as cert_manager_0_5_4 #Cornsilk
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/cert-manager-webhook:1.8.0-debian-10-r41\n====\n1.8.0-debian-10-r41" as docker_io_bitnami_cert_manager_webhook_1_8_0_debian_10_r41 #AntiqueWhite
+usecase "Image\n====\ndocker.io\n====\nbitnami/cainjector:1.8.0-debian-10-r42\n====\n1.8.0-debian-10-r42" as docker_io_bitnami_cainjector_1_8_0_debian_10_r42 #LemonChiffon
+usecase "Image\n====\ndocker.io\n====\nbitnami/cert-manager:1.8.0-debian-10-r41\n====\n1.8.0-debian-10-r41" as docker_io_bitnami_cert_manager_1_8_0_debian_10_r41 #Gold
+
+'Chart Dependencies
+cert_manager_0_5_4--[#green]-|>common_1_14_0
+cert_manager_0_5_4--[#orange]-|>docker_io_bitnami_cert_manager_webhook_1_8_0_debian_10_r41
+cert_manager_0_5_4--[#orange]-|>docker_io_bitnami_cert_manager_1_8_0_debian_10_r41
+cert_manager_0_5_4--[#orange]-|>docker_io_bitnami_cainjector_1_8_0_debian_10_r42
+
+center footer Generated on 2022/05/22 15:23:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

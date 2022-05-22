@@ -6,7 +6,7 @@ Chart: drupal:12.0.1
 	apiVersion: v2
 	appVersion: 9.3.12
 	created: Not specified
-	dependencies: mariadb:11.0.0, common:1.13.0
+	dependencies: common:1.13.0, mariadb:11.0.0
 	description: Drupal is one of the most versatile open source content management systems in the world. It is pre-configured with the Ctools and Views modules, Drush and Let's Encrypt auto-configuration support.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/drupal/img/drupal-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/drupal:9.3.12-debian-10-r1
 
 Chart Dependencies
 ------------------
+drupal:12.0.1 depends on common:1.13.0
 drupal:12.0.1 depends on mariadb:11.0.0
 mariadb:11.0.0 depends on common:1.13.0
-drupal:12.0.1 depends on common:1.13.0
 drupal:12.0.1 uses docker.io/bitnami/drupal:9.3.12-debian-10-r1
 mariadb:11.0.0 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r62
 
-Generated on 2022/05/15 12:25:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:27:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,45 @@
+Chart Map for metallb:3.0.4
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: metallb:3.0.4
+	apiVersion: v2
+	appVersion: 0.12.1
+	created: Not specified
+	dependencies: common:1.14.0
+	description: MetalLB is a load-balancer implementation for bare metal Kubernetes clusters, using standard routing protocols.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/metallb-speaker/img/metallb-speaker-stack-220x234.png
+	keywords: load-balancer,balancer,lb,bgp,arp,vrrp,vip
+	maintainers: cellebyte:cellebyte@gmail.com,Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: metallb
+	sources: https://github.com/metallb/metallb,https://github.com/bitnami/bitnami-docker-metallb,https://metallb.universe.tf
+	urls: Not specified
+	version: 3.0.4
+Chart: common:1.14.0
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-13T12:53:12.091619027Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:4648f7ab42b17a0368549351a991b9bf22c3848c72b0eff4e8273236bc57e25b
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.0.tgz
+	version: 1.14.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/metallb-controller:0.12.1-debian-10-r87
+
+Chart Dependencies
+------------------
+metallb:3.0.4 depends on common:1.14.0
+metallb:3.0.4 uses docker.io/bitnami/metallb-controller:0.12.1-debian-10-r87
+
+Generated on 2022/05/22 15:38:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

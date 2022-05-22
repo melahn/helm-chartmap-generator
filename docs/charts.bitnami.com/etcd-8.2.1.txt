@@ -1,0 +1,45 @@
+Chart Map for etcd:8.2.1
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.14.0
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-13T12:53:12.091619027Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:4648f7ab42b17a0368549351a991b9bf22c3848c72b0eff4e8273236bc57e25b
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.0.tgz
+	version: 1.14.0
+Chart: etcd:8.2.1
+	apiVersion: v2
+	appVersion: 3.5.4
+	created: Not specified
+	dependencies: common:1.14.0
+	description: etcd is a distributed key-value store designed to securely store data across a cluster. etcd is widely used in production on account of its reliability, fault-tolerance and ease of use.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/etcd/img/etcd-stack-220x234.png
+	keywords: etcd,cluster,database,cache,key-value
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: etcd
+	sources: https://github.com/bitnami/bitnami-docker-etcd,https://coreos.com/etcd/
+	urls: Not specified
+	version: 8.2.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/etcd:3.5.4-debian-10-r24
+
+Chart Dependencies
+------------------
+etcd:8.2.1 depends on common:1.14.0
+etcd:8.2.1 uses docker.io/bitnami/etcd:3.5.4-debian-10-r24
+
+Generated on 2022/05/22 15:28:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

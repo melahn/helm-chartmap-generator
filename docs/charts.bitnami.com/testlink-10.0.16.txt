@@ -6,7 +6,7 @@ Chart: testlink:10.0.16
 	apiVersion: v2
 	appVersion: 1.9.20
 	created: Not specified
-	dependencies: common:1.12.0, mariadb:10.4.2
+	dependencies: mariadb:10.4.2, common:1.12.0
 	description: DEPRECATED TestLink is test management software that facilitates software quality assurance. It suppors test cases, test suites, test plans, test projects and user management, and stats reporting.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/testlink/img/testlink-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/testlink:1.9.20-debian-10-r676
 
 Chart Dependencies
 ------------------
-testlink:10.0.16 depends on common:1.12.0
 testlink:10.0.16 depends on mariadb:10.4.2
 mariadb:10.4.2 depends on common:1.12.0
+testlink:10.0.16 depends on common:1.12.0
 testlink:10.0.16 uses docker.io/bitnami/testlink:1.9.20-debian-10-r676
 mariadb:10.4.2 uses docker.io/bitnami/mariadb:10.5.15-debian-10-r30
 
-Generated on 2022/05/15 12:47:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:48:12 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

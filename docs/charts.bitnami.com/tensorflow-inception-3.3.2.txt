@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 tensorflow-inception:3.3.2 uses docker.io/bitnami/tensorflow-serving:1.13.0
 
-Generated on 2022/05/15 12:47:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:47:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

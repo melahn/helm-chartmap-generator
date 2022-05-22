@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for grafana-operator:2.5.6
+
+'There are 2 referenced Helm Charts
+artifact "grafana-operator:2.5.6\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tcellebyte\n\t\tBitnami\n====\n\tKeywords: \n\t\tgrafana\n\t\toperator\n\t\tmonitoring" as grafana_operator_2_5_6 #GreenYellow
+artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_0 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/grafana-operator:4.4.1-debian-10-r8\n====\n4.4.1-debian-10-r8" as docker_io_bitnami_grafana_operator_4_4_1_debian_10_r8 #HotPink
+
+'Chart Dependencies
+grafana_operator_2_5_6--[#green]-|>common_1_14_0
+grafana_operator_2_5_6--[#orange]-|>docker_io_bitnami_grafana_operator_4_4_1_debian_10_r8
+
+center footer Generated on 2022/05/22 15:30:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml
