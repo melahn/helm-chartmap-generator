@@ -60,7 +60,7 @@ jobs:
           cd ./docs/chartmuseum.platform.dev.nuxeo.com
           rm -f helm-chartmap.log
           rm -f index.html
-          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r nuxeo
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -v -r nuxeo
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
               git config --global user.name "GitHub Action (generate-examples.yml)"
@@ -78,7 +78,7 @@ jobs:
           cd ./docs/kubernetes-charts.alfresco.com-stable
           rm -f helm-chartmap.log
           rm -f index.html
-          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r alfresco-stable
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -v -r alfresco-stable
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
               git config --global user.name "GitHub Action (generate-examples.yml)"
@@ -96,7 +96,7 @@ jobs:
           cd ./docs/kubernetes-charts.alfresco.com-incubator
           rm -f helm-chartmap.log
           rm -f index.html
-          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r alfresco-incubator
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -v -r alfresco-incubator
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
               git config --global user.name "GitHub Action (generate-examples.yml)"
@@ -114,7 +114,7 @@ jobs:
           cd ./docs/codecentric.github.io
           rm -f helm-chartmap.log
           rm -f index.html
-          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r codecentric
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -v -r codecentric
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
               git config --global user.name "GitHub Action (generate-examples.yml)"
@@ -132,7 +132,7 @@ jobs:
           cd ./docs/charts.bitnami.com
           rm -f helm-chartmap.log
           rm -f index.html
-          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r bitnami
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -v -r bitnami
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
               git config --global user.name "GitHub Action (generate-examples.yml)"
@@ -150,7 +150,7 @@ jobs:
           cd ./docs/kubernetes-charts.storage.googleapis.com
           rm -f helm-chartmap.log
           rm -f index.html
-          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r stable
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -v -r stable
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
               git config --global user.name "GitHub Action (generate-examples.yml)"
