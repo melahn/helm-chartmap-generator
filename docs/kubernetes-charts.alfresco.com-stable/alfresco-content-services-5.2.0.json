@@ -35,18 +35,18 @@
       "version": "2.5.7"
     },
     {
-      "repoHost": "quay.io",
-      "children": [],
-      "name": "alfresco/alfresco-shared-file-store:0.16.1",
-      "type": "image",
-      "version": "0.16.1"
-    },
-    {
       "repoHost": "Docker Hub",
       "children": [],
       "name": "alfresco/alfresco-libreoffice",
       "type": "image",
       "version": "2.5.7"
+    },
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "alfresco/alfresco-shared-file-store:0.16.1",
+      "type": "image",
+      "version": "0.16.1"
     },
     {
       "repoHost": "Docker Hub",
@@ -112,6 +112,14 @@
       "type": "chart",
       "shortName": "alfresco-search",
       "version": "1.0.4"
+    },
+    {
+      "children": [],
+      "name": "common:7.2.0",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.2.0"
     },
     {
       "maintainers": [
@@ -184,14 +192,6 @@
       "type": "chart",
       "shortName": "alfresco-sync-service",
       "version": "3.0.9"
-    },
-    {
-      "children": [],
-      "name": "common:7.2.0",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.2.0"
     },
     {
       "keywords": [
