@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 jenkins:1.6.1 uses jenkins/jenkins:2.190.1-alpine
 
-Generated on 2022/05/07 15:11:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:20:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
