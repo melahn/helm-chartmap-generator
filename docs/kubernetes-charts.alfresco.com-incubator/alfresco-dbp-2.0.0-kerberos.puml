@@ -105,5 +105,5 @@ alfresco_content_services_2_1_3_kerberosFix--[#orange]-|>quay_io_alfresco_alfres
 alfresco_content_services_2_1_3_kerberosFix--[#orange]-|>quay_io_alfresco_alfresco_libreoffice_2_0_17
 alfresco_content_services_2_1_3_kerberosFix--[#orange]-|>quay_io_alfresco_alfresco_imagemagick_2_0_17
 
-center footer Generated on 2022/05/22 13:07:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 15:12:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

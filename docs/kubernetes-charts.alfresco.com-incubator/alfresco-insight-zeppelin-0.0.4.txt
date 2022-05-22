@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-insight-zeppelin:0.0.4 uses quay.io/alfresco/insight-zeppelin:1.1.0.1
 
-Generated on 2022/05/22 13:10:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:14:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

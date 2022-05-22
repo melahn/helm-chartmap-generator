@@ -41,4 +41,4 @@ Chart Dependencies
 alfresco-process-springboot-service:7.1.0-M12 depends on common:1.1.36
 alfresco-process-springboot-service:7.1.0-M12 uses activiti/example-runtime-bundle:
 
-Generated on 2022/05/22 13:15:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:19:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

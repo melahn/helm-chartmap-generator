@@ -44,4 +44,4 @@ alfresco-event-gateway:0.1.1 depends on activemq:1.0.0
 activemq:1.0.0 uses alfresco/alfresco-activemq:5.15.6-java-8-oracle-centos-7-ac5b98b35cd4
 alfresco-event-gateway:0.1.1 uses alfresco/alfresco-event-gateway:0.1-SNAPSHOT
 
-Generated on 2022/05/22 13:09:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:13:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

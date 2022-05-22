@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-search:0.0.9-tls uses alfresco/alfresco-search-services:1.3.0-RC2
 
-Generated on 2022/05/22 13:16:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:19:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

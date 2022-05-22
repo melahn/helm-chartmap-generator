@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-search-services:0.0.1 uses quay.io/alfresco/insight-engine:1.2.0-SNAPSHOT
 
-Generated on 2022/05/22 13:16:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:19:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

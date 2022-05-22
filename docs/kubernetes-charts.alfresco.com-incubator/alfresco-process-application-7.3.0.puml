@@ -40,5 +40,5 @@ postgresql_10_3_13--[#orange]-|>docker_io_bitnami_postgresql_13_3_0
 rabbitmq_8_20_5--[#orange]-|>docker_io_bitnami_rabbitmq_3_8_22_debian_10_r0
 zookeeper_6_7_4--[#orange]-|>docker_io_bitnami_zookeeper_3_7_0_debian_10_r56
 
-center footer Generated on 2022/05/22 13:11:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 15:15:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

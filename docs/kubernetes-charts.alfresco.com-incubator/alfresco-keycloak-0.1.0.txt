@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-keycloak:0.1.0 uses alfresco/alfresco-keycloak:latest
 
-Generated on 2022/05/22 13:10:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:14:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

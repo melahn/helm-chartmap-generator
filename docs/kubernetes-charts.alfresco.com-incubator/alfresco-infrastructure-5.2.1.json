@@ -19,81 +19,6 @@
       "version": "1.1.1"
     },
     {
-      "maintainers": [
-        {
-          "name": "jackzampolin",
-          "email": "jack.zampolin@gmail.com"
-        },
-        {
-          "name": "mgoodness",
-          "email": "mgoodness@gmail.com"
-        },
-        {
-          "name": "chancez",
-          "email": "chance.zibolski@coreos.com"
-        }
-      ],
-      "keywords": [
-        "ingress",
-        "nginx"
-      ],
-      "children": [
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "k8s.gcr.io/defaultbackend",
-          "type": "image",
-          "version": "1.3"
-        },
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "kubernetes-ingress-controller/nginx-ingress-controller:0.12.0",
-          "type": "image",
-          "version": "0.12.0"
-        }
-      ],
-      "name": "nginx-ingress:0.14.0",
-      "description": "An nginx Ingress controller that uses ConfigMap to store the nginx configuration.",
-      "type": "chart",
-      "shortName": "nginx-ingress",
-      "version": "0.14.0"
-    },
-    {
-      "maintainers": [{"name": "Alfresco"}],
-      "keywords": [
-        "alfresco",
-        "events",
-        "gateway"
-      ],
-      "children": [
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "alfresco/alfresco-event-gateway",
-          "type": "image",
-          "version": "0.3-SNAPSHOT"
-        },
-        {
-          "keywords": [
-            "activemq",
-            "message broker"
-          ],
-          "children": [],
-          "name": "activemq:1.1.1",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
-          "version": "1.1.1"
-        }
-      ],
-      "name": "alfresco-event-gateway:0.1.2",
-      "description": "Alfresco Event Gateway",
-      "type": "chart",
-      "shortName": "alfresco-event-gateway",
-      "version": "0.1.2"
-    },
-    {
       "maintainers": [{"name": "Alfresco"}],
       "keywords": [
         "alfresco",
@@ -171,6 +96,81 @@
       "type": "chart",
       "shortName": "alfresco-identity-service",
       "version": "2.0.1"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "jackzampolin",
+          "email": "jack.zampolin@gmail.com"
+        },
+        {
+          "name": "mgoodness",
+          "email": "mgoodness@gmail.com"
+        },
+        {
+          "name": "chancez",
+          "email": "chance.zibolski@coreos.com"
+        }
+      ],
+      "keywords": [
+        "ingress",
+        "nginx"
+      ],
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "k8s.gcr.io/defaultbackend",
+          "type": "image",
+          "version": "1.3"
+        },
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "kubernetes-ingress-controller/nginx-ingress-controller:0.12.0",
+          "type": "image",
+          "version": "0.12.0"
+        }
+      ],
+      "name": "nginx-ingress:0.14.0",
+      "description": "An nginx Ingress controller that uses ConfigMap to store the nginx configuration.",
+      "type": "chart",
+      "shortName": "nginx-ingress",
+      "version": "0.14.0"
+    },
+    {
+      "maintainers": [{"name": "Alfresco"}],
+      "keywords": [
+        "alfresco",
+        "events",
+        "gateway"
+      ],
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "alfresco/alfresco-event-gateway",
+          "type": "image",
+          "version": "0.3-SNAPSHOT"
+        },
+        {
+          "keywords": [
+            "activemq",
+            "message broker"
+          ],
+          "children": [],
+          "name": "activemq:1.1.1",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "1.1.1"
+        }
+      ],
+      "name": "alfresco-event-gateway:0.1.2",
+      "description": "Alfresco Event Gateway",
+      "type": "chart",
+      "shortName": "alfresco-event-gateway",
+      "version": "0.1.2"
     }
   ],
   "name": "alfresco-infrastructure:5.2.1",

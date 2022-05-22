@@ -160,4 +160,4 @@ postgresql:10.13.9 uses docker.io/bitnami/postgresql:13.3.0
 activemq:2.0.0 uses alfresco/alfresco-activemq:5.16.1
 alfresco-sync-service:3.0.9 uses quay.io/alfresco/service-sync:3.5.0
 
-Generated on 2022/05/22 13:06:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:11:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
