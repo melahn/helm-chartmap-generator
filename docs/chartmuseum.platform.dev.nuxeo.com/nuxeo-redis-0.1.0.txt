@@ -42,4 +42,4 @@ Chart Dependencies
 nuxeo-redis:0.1.0 depends on redis:5.2.0
 redis:5.2.0 uses docker.io/bitnami/redis:4.0.12
 
-Generated on 2022/05/22 12:50:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 14:56:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

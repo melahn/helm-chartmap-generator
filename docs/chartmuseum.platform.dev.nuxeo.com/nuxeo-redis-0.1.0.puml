@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/redis:4.0.12\n====\n4.0.12" as do
 nuxeo_redis_0_1_0--[#green]-|>redis_5_2_0
 redis_5_2_0--[#orange]-|>docker_io_bitnami_redis_4_0_12
 
-center footer Generated on 2022/05/22 12:50:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 14:56:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
