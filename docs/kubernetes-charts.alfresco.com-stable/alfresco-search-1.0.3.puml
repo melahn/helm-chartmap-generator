@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-search-services\n====\
 'Chart Dependencies
 alfresco_search_1_0_3--[#orange]-|>alfresco_alfresco_search_services_1_4_0
 
-center footer Generated on 2022/05/22 13:01:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 15:06:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

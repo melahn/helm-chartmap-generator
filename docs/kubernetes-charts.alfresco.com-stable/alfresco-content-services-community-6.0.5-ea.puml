@@ -30,13 +30,13 @@ usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-api-gateway\n====\nlat
 usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-search-services\n====\n1.1.1" as alfresco_alfresco_search_services_1_1_1 #Coral
 
 'Chart Dependencies
+alfresco_content_services_community_6_0_5_ea--[#green]-|>postgresql_0_9_3
 alfresco_content_services_community_6_0_5_ea--[#green]-|>alfresco_infrastructure_0_1_0
+alfresco_infrastructure_0_1_0--[#green]-|>rabbitmq_ha_0_1_1
+alfresco_infrastructure_0_1_0--[#green]-|>activemq_0_1_0
 alfresco_infrastructure_0_1_0--[#green]-|>alfresco_activiti_cloud_registry_0_1_0
 alfresco_infrastructure_0_1_0--[#green]-|>alfresco_api_gateway_0_1_0
 alfresco_infrastructure_0_1_0--[#green]-|>alfresco_keycloak_0_1_0
-alfresco_infrastructure_0_1_0--[#green]-|>rabbitmq_ha_0_1_1
-alfresco_infrastructure_0_1_0--[#green]-|>activemq_0_1_0
-alfresco_content_services_community_6_0_5_ea--[#green]-|>postgresql_0_9_3
 postgresql_0_9_3--[#orange]-|>postgres_10_1
 alfresco_api_gateway_0_1_0--[#orange]-|>alfresco_alfresco_api_gateway_latest
 alfresco_activiti_cloud_registry_0_1_0--[#orange]-|>activiti_activiti_cloud_registry_latest
@@ -47,5 +47,5 @@ alfresco_content_services_community_6_0_5_ea--[#orange]-|>alfresco_alfresco_shar
 activemq_0_1_0--[#orange]-|>webcenter_activemq_latest
 rabbitmq_ha_0_1_1--[#orange]-|>rabbitmq_3_7_alpine
 
-center footer Generated on 2022/05/22 12:54:42 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 15:00:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
