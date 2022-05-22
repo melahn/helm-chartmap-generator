@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.packages.nuxeo.com\n====\nnuxeo/nuxeo-web-ui:3.0.0-
 'Chart Dependencies
 nuxeo_web_ui_0_0_1--[#orange]-|>docker_packages_nuxeo_com_nuxeo_nuxeo_web_ui_3_0_0_SNAPSHOT
 
-center footer Generated on 2022/05/21 23:23:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 12:50:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
