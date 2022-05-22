@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nstakater/ingressmonitorcontroller\n====\
 'Chart Dependencies
 ingressmonitorcontroller_1_0_48--[#orange]-|>stakater_ingressmonitorcontroller_1_0_47
 
-center footer Generated on 2022/05/13 16:34:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:14:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

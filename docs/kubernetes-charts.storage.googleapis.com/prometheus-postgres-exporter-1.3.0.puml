@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nwrouesnel/postgres_exporter\n====\nv0.8.
 'Chart Dependencies
 prometheus_postgres_exporter_1_3_0--[#orange]-|>wrouesnel_postgres_exporter_v0_8_0
 
-center footer Generated on 2022/05/13 16:58:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:40:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

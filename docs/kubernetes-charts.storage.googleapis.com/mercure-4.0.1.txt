@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 mercure:4.0.1 uses dunglas/mercure:v0.10
 
-Generated on 2022/05/13 16:44:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:25:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

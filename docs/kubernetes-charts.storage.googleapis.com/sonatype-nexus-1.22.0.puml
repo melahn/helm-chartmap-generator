@@ -19,5 +19,5 @@ usecase "Image\n====\nquay.io\n====\ntravelaudience/docker-nexus-proxy:2.5.0\n==
 sonatype_nexus_1_22_0--[#orange]-|>sonatype_nexus3_3_20_1
 sonatype_nexus_1_22_0--[#orange]-|>quay_io_travelaudience_docker_nexus_proxy_2_5_0
 
-center footer Generated on 2022/05/13 17:05:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:47:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

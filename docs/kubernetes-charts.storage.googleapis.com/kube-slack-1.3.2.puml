@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nwillwill/kube-slack\n====\nv4.2.0" as wi
 'Chart Dependencies
 kube_slack_1_3_2--[#orange]-|>willwill_kube_slack_v4_2_0
 
-center footer Generated on 2022/05/13 16:39:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:20:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

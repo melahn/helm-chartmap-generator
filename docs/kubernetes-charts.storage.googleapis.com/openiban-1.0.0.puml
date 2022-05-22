@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nfourcube/openiban\n====\n1.0.1" as fourc
 'Chart Dependencies
 openiban_1_0_0--[#orange]-|>fourcube_openiban_1_0_1
 
-center footer Generated on 2022/05/13 16:51:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:33:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

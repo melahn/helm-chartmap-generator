@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 satisfy:1.1.2 uses docker.io/anapsix/satisfy@sha256:fae78e3809e9d08990c7d7d6699a734f7e584c28ce49381a1a699e1694481ab8
 
-Generated on 2022/05/13 17:02:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:44:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

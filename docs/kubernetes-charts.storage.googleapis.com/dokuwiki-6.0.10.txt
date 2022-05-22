@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 dokuwiki:6.0.10 uses docker.io/bitnami/dokuwiki:0.20180422.201901061035-debian-10-r28
 
-Generated on 2022/05/13 16:22:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:01:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

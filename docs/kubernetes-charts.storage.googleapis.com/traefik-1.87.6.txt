@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 traefik:1.87.6 uses traefik:1.7.26
 
-Generated on 2022/05/13 17:09:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:52:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 spartakus:1.1.7 uses k8s.gcr.io/spartakus-amd64:v1.0.0
 
-Generated on 2022/05/13 17:05:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:47:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

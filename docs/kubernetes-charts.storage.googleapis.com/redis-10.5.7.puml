@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/redis:5.0.8-debian-10-r33\n====\n
 'Chart Dependencies
 redis_10_5_7--[#orange]-|>docker_io_bitnami_redis_5_0_8_debian_10_r33
 
-center footer Generated on 2022/05/13 17:00:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:42:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

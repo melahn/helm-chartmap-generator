@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\njustwatch/elasticsearch_exporter\n====\n
 'Chart Dependencies
 elasticsearch_exporter_3_7_0--[#orange]-|>justwatch_elasticsearch_exporter_1_1_0
 
-center footer Generated on 2022/05/13 16:24:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:03:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

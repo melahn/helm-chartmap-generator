@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nlandoop/schema-registry-ui\n====\n0.9.5"
 'Chart Dependencies
 schema_registry_ui_0_4_3--[#orange]-|>landoop_schema_registry_ui_0_9_5
 
-center footer Generated on 2022/05/13 17:02:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:44:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

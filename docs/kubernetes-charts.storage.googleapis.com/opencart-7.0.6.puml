@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.3.22-debian-10-r17\n==
 opencart_7_0_6--[#green]-|>mariadb_7_3_10
 mariadb_7_3_10--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r17
 
-center footer Generated on 2022/05/13 16:51:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:32:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

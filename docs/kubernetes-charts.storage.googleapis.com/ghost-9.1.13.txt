@@ -42,4 +42,4 @@ Chart Dependencies
 ghost:9.1.13 depends on mariadb:7.3.14
 mariadb:7.3.14 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r44
 
-Generated on 2022/05/13 16:28:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:08:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

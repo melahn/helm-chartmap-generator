@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ntomcat\n====\n7.0" as tomcat_7_0 #Darkor
 'Chart Dependencies
 tomcat_0_4_1--[#orange]-|>tomcat_7_0
 
-center footer Generated on 2022/05/13 17:09:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:52:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

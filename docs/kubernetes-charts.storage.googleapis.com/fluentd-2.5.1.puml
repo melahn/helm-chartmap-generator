@@ -17,5 +17,5 @@ usecase "Image\n====\ngcr.io\n====\ngoogle-containers/fluentd-elasticsearch:v2.4
 'Chart Dependencies
 fluentd_2_5_1--[#orange]-|>gcr_io_google_containers_fluentd_elasticsearch_v2_4_0
 
-center footer Generated on 2022/05/13 16:26:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:06:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

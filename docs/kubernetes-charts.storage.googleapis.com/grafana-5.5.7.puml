@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ngrafana/grafana\n====\n7.1.1" as grafana
 'Chart Dependencies
 grafana_5_5_7--[#orange]-|>grafana_grafana_7_1_1
 
-center footer Generated on 2022/05/13 16:29:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:09:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

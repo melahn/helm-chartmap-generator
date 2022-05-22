@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nprom/pushgateway\n====\nv0.4.0" as prom_
 stash_0_5_3--[#orange]-|>prom_pushgateway_v0_4_0
 stash_0_5_3--[#orange]-|>appscode_stash_0_7_0_rc_1
 
-center footer Generated on 2022/05/13 17:06:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:49:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

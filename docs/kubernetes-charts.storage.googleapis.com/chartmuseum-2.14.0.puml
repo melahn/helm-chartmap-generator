@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nchartmuseum/chartmuseum\n====\nv0.12.0" 
 'Chart Dependencies
 chartmuseum_2_14_0--[#orange]-|>chartmuseum_chartmuseum_v0_12_0
 
-center footer Generated on 2022/05/13 16:17:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 15:56:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

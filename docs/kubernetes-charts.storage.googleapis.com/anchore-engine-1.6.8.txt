@@ -36,7 +36,7 @@ Chart: anchore-engine:1.6.8
 	apiVersion: v1
 	appVersion: 0.7.2
 	created: Not specified
-	dependencies: redis:6.4.5, postgresql:1.0.0
+	dependencies: postgresql:1.0.0, redis:6.4.5
 	description: Anchore container analysis and policy evaluation engine service
 	digest: Not specified
 	icon: https://anchore.com/wp-content/uploads/2016/08/anchore.png
@@ -56,10 +56,10 @@ Image: docker.io/bitnami/redis:4.0.14
 
 Chart Dependencies
 ------------------
-anchore-engine:1.6.8 depends on redis:6.4.5
 anchore-engine:1.6.8 depends on postgresql:1.0.0
+anchore-engine:1.6.8 depends on redis:6.4.5
 redis:6.4.5 uses docker.io/bitnami/redis:4.0.14
 postgresql:1.0.0 uses postgres:9.6.2
 anchore-engine:1.6.8 uses docker.io/anchore/anchore-engine:v0.7.2
 
-Generated on 2022/05/13 07:02:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:52:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

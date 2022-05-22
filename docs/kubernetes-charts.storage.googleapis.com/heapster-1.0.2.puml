@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/addon-resizer\n====\n1.7" as 
 heapster_1_0_2--[#orange]-|>k8s_gcr_io_heapster_amd64_v1_5_4
 heapster_1_0_2--[#orange]-|>k8s_gcr_io_addon_resizer_1_7
 
-center footer Generated on 2022/05/13 16:31:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:11:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

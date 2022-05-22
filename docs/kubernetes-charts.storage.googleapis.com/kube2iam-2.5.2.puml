@@ -15,5 +15,5 @@ artifact "kube2iam:2.5.2\n====\n\tType: application\n====\n\tRepo: https://chart
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/13 16:39:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:20:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

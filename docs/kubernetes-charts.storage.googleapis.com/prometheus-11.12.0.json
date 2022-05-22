@@ -24,16 +24,16 @@
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "prom/alertmanager",
+      "name": "prom/pushgateway",
       "type": "image",
-      "version": "v0.21.0"
+      "version": "v1.2.0"
     },
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "prom/pushgateway",
+      "name": "prom/alertmanager",
       "type": "image",
-      "version": "v1.2.0"
+      "version": "v0.21.0"
     },
     {
       "repoHost": "Docker Hub",

@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ninfluxdb\n====\n1.7.9-alpine" as influxd
 'Chart Dependencies
 influxdb_4_3_2--[#orange]-|>influxdb_1_7_9_alpine
 
-center footer Generated on 2022/05/13 16:33:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:14:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

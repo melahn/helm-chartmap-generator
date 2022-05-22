@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 influxdb:4.3.0 uses influxdb:1.7.9-alpine
 
-Generated on 2022/05/13 16:34:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:14:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

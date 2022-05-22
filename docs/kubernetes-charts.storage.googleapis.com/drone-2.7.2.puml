@@ -15,5 +15,5 @@ artifact "drone:2.7.2\n====\n\tType: application\n====\n\tRepo: https://charts.h
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/13 16:22:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:01:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

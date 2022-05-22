@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 metabase:0.13.2 uses metabase/metabase:v0.36.3
 
-Generated on 2022/05/13 16:44:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:25:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

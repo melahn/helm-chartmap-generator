@@ -80,10 +80,10 @@ xray:0.4.1 depends on rabbitmq-ha:1.5.2
 xray:0.4.1 depends on mongodb:2.0.5
 mongodb:2.0.5 uses docker.io/bitnami/mongodb:3.6.3
 rabbitmq-ha:1.5.2 uses rabbitmq:3.7-alpine
-xray:0.4.1 uses docker.bintray.io/jfrog/xray-server:2.3.0
 xray:0.4.1 uses docker.bintray.io/jfrog/xray-indexer:2.3.0
+xray:0.4.1 uses docker.bintray.io/jfrog/xray-server:2.3.0
 xray:0.4.1 uses docker.bintray.io/jfrog/xray-analysis:2.3.0
 xray:0.4.1 uses docker.bintray.io/jfrog/xray-persist:2.3.0
 postgresql:0.8.7 uses postgres:9.6.2
 
-Generated on 2022/05/13 17:12:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:55:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

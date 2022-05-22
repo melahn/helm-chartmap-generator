@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nkubedb/kubedb-server\n====\n0.1.0-beta.2
 kubedb_0_1_2--[#orange]-|>kubedb_kubedb_server_0_1_0_beta_2
 kubedb_0_1_2--[#orange]-|>kubedb_operator_0_8_0_beta_2
 
-center footer Generated on 2022/05/13 16:40:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:20:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

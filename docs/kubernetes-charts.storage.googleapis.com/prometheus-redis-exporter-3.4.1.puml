@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\noliver006/redis_exporter\n====\nv1.3.4" 
 'Chart Dependencies
 prometheus_redis_exporter_3_4_1--[#orange]-|>oliver006_redis_exporter_v1_3_4
 
-center footer Generated on 2022/05/13 16:59:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:40:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

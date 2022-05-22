@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nphp\n====\n7-fpm-alpine" as php_7_fpm_al
 lamp_1_1_4--[#orange]-|>httpd_2_4_alpine
 lamp_1_1_4--[#orange]-|>php_7_fpm_alpine
 
-center footer Generated on 2022/05/13 16:41:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:22:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nconsul\n====\n1.5.3" as consul_1_5_3 #In
 'Chart Dependencies
 consul_3_9_4--[#orange]-|>consul_1_5_3
 
-center footer Generated on 2022/05/13 16:19:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 15:58:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

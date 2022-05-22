@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-cloudwatch-exporter:0.8.4 uses prom/cloudwatch-exporter:cloudwatch_exporter-0.8.0
 
-Generated on 2022/05/13 16:56:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:38:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -15,5 +15,5 @@ artifact "newrelic-infrastructure:0.13.34\n====\n\tType: application\n====\n\tRe
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/13 16:48:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:29:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

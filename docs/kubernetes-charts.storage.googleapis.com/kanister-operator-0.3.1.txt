@@ -41,4 +41,4 @@ Chart Dependencies
 kanister-operator:0.3.1 depends on profile:0.9.0
 kanister-operator:0.3.1 uses kanisterio/controller:0.10.0
 
-Generated on 2022/05/13 16:36:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:17:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

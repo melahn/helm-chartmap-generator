@@ -15,5 +15,5 @@ artifact "auditbeat:1.1.2\n====\n\tType: application\n====\n\tRepo: https://char
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/07 19:47:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 15:53:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

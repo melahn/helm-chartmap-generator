@@ -78,4 +78,4 @@ logstash:2.4.1 uses docker.elastic.co/logstash/logstash-oss:7.1.1
 kibana:3.2.8 uses docker.elastic.co/kibana/kibana-oss:6.7.0
 elasticsearch:1.32.5 uses docker.elastic.co/elasticsearch/elasticsearch-oss:6.8.6
 
-Generated on 2022/05/13 16:23:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:03:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

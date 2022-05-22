@@ -28,6 +28,31 @@
       "version": "v0.7.2"
     },
     {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "postgresql",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6.2"
+      }],
+      "name": "postgresql:1.0.0",
+      "description": "Chart for PostgreSQL",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "1.0.0"
+    },
+    {
       "maintainers": [
         {
           "name": "Bitnami",
@@ -55,31 +80,6 @@
       "type": "chart",
       "shortName": "redis",
       "version": "6.4.5"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "postgresql",
-        "database",
-        "sql",
-        "replication",
-        "cluster"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "postgres",
-        "type": "image",
-        "version": "9.6.2"
-      }],
-      "name": "postgresql:1.0.0",
-      "description": "Chart for PostgreSQL",
-      "type": "chart",
-      "shortName": "postgresql",
-      "version": "1.0.0"
     }
   ],
   "name": "anchore-engine:1.6.9",

@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nminio/minio\n====\nRELEASE.2020-06-14T18
 'Chart Dependencies
 minio_5_0_32--[#orange]-|>minio_minio_RELEASE_2020_06_14T18_32_17Z
 
-center footer Generated on 2022/05/13 16:45:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:27:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

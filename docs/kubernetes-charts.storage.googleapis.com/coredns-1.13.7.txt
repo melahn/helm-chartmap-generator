@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 coredns:1.13.7 uses coredns/coredns:1.7.1
 
-Generated on 2022/05/13 16:19:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 15:58:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

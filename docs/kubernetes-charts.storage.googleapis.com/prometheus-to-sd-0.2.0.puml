@@ -17,5 +17,5 @@ usecase "Image\n====\ngcr.io\n====\ngoogle-containers/prometheus-to-sd:v0.5.2\n=
 'Chart Dependencies
 prometheus_to_sd_0_2_0--[#orange]-|>gcr_io_google_containers_prometheus_to_sd_v0_5_2
 
-center footer Generated on 2022/05/13 16:59:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:41:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

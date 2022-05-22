@@ -15,5 +15,5 @@ artifact "sysdig:1.7.16\n====\n\tType: application\n====\n\tRepo: https://charts
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/13 17:08:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:50:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

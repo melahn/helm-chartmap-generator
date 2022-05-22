@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ngraphiteapp/graphite-statsd\n====\n1.1.5
 'Chart Dependencies
 graphite_0_2_2--[#orange]-|>graphiteapp_graphite_statsd_1_1_5_3
 
-center footer Generated on 2022/05/13 16:29:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:09:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

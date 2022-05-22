@@ -9,11 +9,11 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for fluentd-elasticsearch:2.0.7
 
 'There is one referenced Helm Chart
-artifact "fluentd-elasticsearch:2.0.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/incubator\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tfluentd\n\t\telasticsearch\n\t\tmultiline\n\t\tdetect-exceptions\n\t\tlogging" as fluentd_elasticsearch_2_0_7 #LightSteelBlue
+artifact "fluentd-elasticsearch:2.0.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tfluentd\n\t\telasticsearch\n\t\tmultiline\n\t\tdetect-exceptions\n\t\tlogging" as fluentd_elasticsearch_2_0_7 #LightSteelBlue
 
 'There are 0 referenced Docker Images
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/13 16:26:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:06:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

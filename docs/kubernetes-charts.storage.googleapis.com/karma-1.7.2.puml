@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nlmierzwa/karma\n====\nv0.72" as lmierzwa
 'Chart Dependencies
 karma_1_7_2--[#orange]-|>lmierzwa_karma_v0_72
 
-center footer Generated on 2022/05/13 16:37:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:17:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

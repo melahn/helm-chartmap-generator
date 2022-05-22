@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-snmp-exporter:0.0.6 uses prom/snmp-exporter:v0.14.0
 
-Generated on 2022/05/13 16:59:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:40:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

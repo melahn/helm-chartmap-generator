@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 graphite:0.2.0 uses graphiteapp/graphite-statsd:1.1.5-3
 
-Generated on 2022/05/13 16:29:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:09:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

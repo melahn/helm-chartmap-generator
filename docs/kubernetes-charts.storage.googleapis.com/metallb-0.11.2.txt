@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 metallb:0.11.2 uses metallb/controller:v0.8.1
 
-Generated on 2022/05/13 16:45:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:26:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

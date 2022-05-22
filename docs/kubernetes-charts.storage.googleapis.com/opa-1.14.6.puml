@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nopenpolicyagent/opa\n====\n0.15.1" as op
 opa_1_14_6--[#orange]-|>openpolicyagent_opa_0_15_1
 opa_1_14_6--[#orange]-|>openpolicyagent_kube_mgmt_0_10
 
-center footer Generated on 2022/05/13 16:50:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 16:32:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

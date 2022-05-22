@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 helm-exporter:0.3.2 uses sstarcher/helm-exporter:0.4.2
 
-Generated on 2022/05/13 16:31:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/22 16:11:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
