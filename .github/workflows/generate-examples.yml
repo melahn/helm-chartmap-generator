@@ -58,8 +58,8 @@ jobs:
       - name: Generate nuxeo charts and commit them to git
         run: | 
           cd ./docs/chartmuseum.platform.dev.nuxeo.com
-          rm helm-chartmap.log
-          rm index.html
+          rm -f helm-chartmap.log
+          rm -f index.html
           java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r nuxeo
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
@@ -76,8 +76,8 @@ jobs:
       - name: Generate alfresco-stable charts and commit them to git
         run: | 
           cd ./docs/kubernetes-charts.alfresco.com-stable
-          rm helm-chartmap.log
-          rm index.html
+          rm -f helm-chartmap.log
+          rm -f index.html
           java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r alfresco-stable
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
@@ -94,8 +94,8 @@ jobs:
       - name: Generate alfresco-incubator charts and commit them to git
         run: | 
           cd ./docs/kubernetes-charts.alfresco.com-incubator
-          rm helm-chartmap.log
-          rm index.html
+          rm -f helm-chartmap.log
+          rm -f index.html
           java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r alfresco-incubator
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
@@ -112,8 +112,8 @@ jobs:
       - name: Generate codecentric charts and commit them to git
         run: | 
           cd ./docs/codecentric.github.io
-          rm helm-chartmap.log
-          rm index.html
+          rm -f helm-chartmap.log
+          rm -f index.html
           java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r codecentric
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
@@ -130,8 +130,8 @@ jobs:
       - name: Generate bitnami charts and commit them to git
         run: | 
           cd ./docs/charts.bitnami.com
-          rm helm-chartmap.log
-          rm index.html
+          rm -f helm-chartmap.log
+          rm -f index.html
           java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r bitnami
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
@@ -148,8 +148,8 @@ jobs:
       - name: Generate google stable charts and commit them to git
         run: | 
           cd ./docs/kubernetes-charts.storage.googleapis.com
-          rm helm-chartmap.log
-          rm index.html
+          rm -f helm-chartmap.log
+          rm -f index.html
           java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r stable
           if [[ `git status --porcelain` ]]; then
               git config --global user.email "melahn@github"
