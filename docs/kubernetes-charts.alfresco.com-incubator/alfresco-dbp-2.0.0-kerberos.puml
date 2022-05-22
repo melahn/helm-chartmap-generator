@@ -56,29 +56,29 @@ usecase "Image\n====\nquay.io\n====\nalfresco/alfresco-libreoffice:2.0.17\n====\
 usecase "Image\n====\nquay.io\n====\nalfresco/alfresco-identity-service:1.2\n====\n1.2" as quay_io_alfresco_alfresco_identity_service_1_2 #Azure
 
 'Chart Dependencies
-alfresco_dbp_2_0_0_kerberos--[#green]-|>alfresco_content_services_2_1_3_kerberosFix
-alfresco_content_services_2_1_3_kerberosFix--[#green]-|>alfresco_digital_workspace_2_0_0
-alfresco_content_services_2_1_3_kerberosFix--[#green]-|>alfresco_search_1_0_1
-alfresco_content_services_2_1_3_kerberosFix--[#green]-|>postgresql_0_9_3
-alfresco_content_services_2_1_3_kerberosFix--[#green]-|>alfresco_infrastructure_4_1_1
-alfresco_infrastructure_4_1_1--[#green]-|>nginx_ingress_0_14_0
-alfresco_infrastructure_4_1_1--[#green]-|>activemq_1_1_1
-alfresco_infrastructure_4_1_1--[#green]-|>alfresco_identity_service_1_1_0
-alfresco_identity_service_1_1_0--[#green]-|>keycloak_4_3_0
-keycloak_4_3_0--[#green]-|>postgresql_0_15_0
-alfresco_content_services_2_1_3_kerberosFix--[#green]-|>alfresco_sync_service_1_1_1
-alfresco_sync_service_1_1_1--[#green]-|>postgresql_0_9_3
 alfresco_dbp_2_0_0_kerberos--[#green]-|>alfresco_infrastructure_5_2_0
-alfresco_infrastructure_5_2_0--[#green]-|>nginx_ingress_0_14_0
+alfresco_infrastructure_5_2_0--[#green]-|>activemq_1_1_1
 alfresco_infrastructure_5_2_0--[#green]-|>alfresco_event_gateway_0_1_2
 alfresco_event_gateway_0_1_2--[#green]-|>activemq_1_1_1
 alfresco_infrastructure_5_2_0--[#green]-|>alfresco_identity_service_2_0_0
 alfresco_identity_service_2_0_0--[#green]-|>keycloak_6_0_0
 keycloak_6_0_0--[#green]-|>postgresql_6_3_13
-alfresco_infrastructure_5_2_0--[#green]-|>activemq_1_1_1
+alfresco_infrastructure_5_2_0--[#green]-|>nginx_ingress_0_14_0
 alfresco_dbp_2_0_0_kerberos--[#green]-|>alfresco_process_services_0_2_0
 alfresco_process_services_0_2_0--[#green]-|>postgresql_1_0_0
 alfresco_process_services_0_2_0--[#green]-|>alfresco_infrastructure_4_1_1
+alfresco_infrastructure_4_1_1--[#green]-|>activemq_1_1_1
+alfresco_infrastructure_4_1_1--[#green]-|>alfresco_identity_service_1_1_0
+alfresco_identity_service_1_1_0--[#green]-|>keycloak_4_3_0
+keycloak_4_3_0--[#green]-|>postgresql_0_15_0
+alfresco_infrastructure_4_1_1--[#green]-|>nginx_ingress_0_14_0
+alfresco_dbp_2_0_0_kerberos--[#green]-|>alfresco_content_services_2_1_3_kerberosFix
+alfresco_content_services_2_1_3_kerberosFix--[#green]-|>postgresql_0_9_3
+alfresco_content_services_2_1_3_kerberosFix--[#green]-|>alfresco_sync_service_1_1_1
+alfresco_sync_service_1_1_1--[#green]-|>postgresql_0_9_3
+alfresco_content_services_2_1_3_kerberosFix--[#green]-|>alfresco_digital_workspace_2_0_0
+alfresco_content_services_2_1_3_kerberosFix--[#green]-|>alfresco_search_1_0_1
+alfresco_content_services_2_1_3_kerberosFix--[#green]-|>alfresco_infrastructure_4_1_1
 postgresql_0_9_3--[#orange]-|>postgres_11_4
 postgresql_0_9_3--[#orange]-|>postgres_10_1
 alfresco_process_services_0_2_0--[#orange]-|>quay_io_alfresco_alfresco_process_services_admin_1_10_0
@@ -105,5 +105,5 @@ alfresco_content_services_2_1_3_kerberosFix--[#orange]-|>quay_io_alfresco_alfres
 alfresco_content_services_2_1_3_kerberosFix--[#orange]-|>quay_io_alfresco_alfresco_libreoffice_2_0_17
 alfresco_content_services_2_1_3_kerberosFix--[#orange]-|>quay_io_alfresco_alfresco_imagemagick_2_0_17
 
-center footer Generated on 2022/05/21 23:38:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/22 13:07:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

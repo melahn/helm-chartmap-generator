@@ -70,6 +70,70 @@
       "version": "7.2.0-M2"
     },
     {
+      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
+      "keywords": [
+        "syncservice",
+        "alfresco",
+        "application"
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "alfresco/service-sync:3.5.0",
+        "type": "image",
+        "version": "3.5.0"
+      }],
+      "name": "alfresco-sync-service:3.0.9",
+      "description": "Alfresco Sync Service",
+      "type": "chart",
+      "shortName": "alfresco-sync-service",
+      "version": "3.0.9"
+    },
+    {
+      "keywords": [
+        "search",
+        "search services",
+        "alfresco search services",
+        "insight",
+        "insight engine",
+        "alfresco insight engine"
+      ],
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "alfresco/alfresco-search-services",
+          "type": "image",
+          "version": "2.0.2"
+        },
+        {
+          "keywords": [
+            "zeppelin",
+            "insight zeppelin",
+            "alfresco zeppelin",
+            "alfresco insight zeppelin"
+          ],
+          "children": [{
+            "repoHost": "quay.io",
+            "children": [],
+            "name": "alfresco/insight-zeppelin:1.4.0",
+            "type": "image",
+            "version": "1.4.0"
+          }],
+          "name": "alfresco-insight-zeppelin:1.0.3",
+          "description": "A Helm chart for deploying Alfresco Insight Zeppelin",
+          "type": "chart",
+          "shortName": "alfresco-insight-zeppelin",
+          "version": "1.0.3"
+        }
+      ],
+      "name": "alfresco-search:1.0.4",
+      "description": "A Helm chart for deploying Alfresco Search",
+      "type": "chart",
+      "shortName": "alfresco-search",
+      "version": "1.0.4"
+    },
+    {
       "maintainers": [
         {
           "name": "Bitnami",
@@ -147,70 +211,6 @@
       "type": "chart",
       "shortName": "common",
       "version": "7.1.0-M16"
-    },
-    {
-      "keywords": [
-        "search",
-        "search services",
-        "alfresco search services",
-        "insight",
-        "insight engine",
-        "alfresco insight engine"
-      ],
-      "children": [
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "alfresco/alfresco-search-services",
-          "type": "image",
-          "version": "2.0.2"
-        },
-        {
-          "keywords": [
-            "zeppelin",
-            "insight zeppelin",
-            "alfresco zeppelin",
-            "alfresco insight zeppelin"
-          ],
-          "children": [{
-            "repoHost": "quay.io",
-            "children": [],
-            "name": "alfresco/insight-zeppelin:1.4.0",
-            "type": "image",
-            "version": "1.4.0"
-          }],
-          "name": "alfresco-insight-zeppelin:1.0.3",
-          "description": "A Helm chart for deploying Alfresco Insight Zeppelin",
-          "type": "chart",
-          "shortName": "alfresco-insight-zeppelin",
-          "version": "1.0.3"
-        }
-      ],
-      "name": "alfresco-search:1.0.4",
-      "description": "A Helm chart for deploying Alfresco Search",
-      "type": "chart",
-      "shortName": "alfresco-search",
-      "version": "1.0.4"
-    },
-    {
-      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
-      "keywords": [
-        "syncservice",
-        "alfresco",
-        "application"
-      ],
-      "children": [{
-        "repoHost": "quay.io",
-        "children": [],
-        "name": "alfresco/service-sync:3.5.0",
-        "type": "image",
-        "version": "3.5.0"
-      }],
-      "name": "alfresco-sync-service:3.0.9",
-      "description": "Alfresco Sync Service",
-      "type": "chart",
-      "shortName": "alfresco-sync-service",
-      "version": "3.0.9"
     }
   ],
   "name": "alfresco-content-services:5.2.0-M2",

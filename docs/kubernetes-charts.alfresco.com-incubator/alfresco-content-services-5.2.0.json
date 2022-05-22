@@ -35,20 +35,6 @@
       "version": "2.5.7"
     },
     {
-      "repoHost": "Docker Hub",
-      "children": [],
-      "name": "alfresco/alfresco-pdf-renderer",
-      "type": "image",
-      "version": "2.5.7"
-    },
-    {
-      "repoHost": "Docker Hub",
-      "children": [],
-      "name": "alfresco/alfresco-libreoffice",
-      "type": "image",
-      "version": "2.5.7"
-    },
-    {
       "repoHost": "quay.io",
       "children": [],
       "name": "alfresco/alfresco-shared-file-store:0.16.1",
@@ -58,7 +44,14 @@
     {
       "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-transform-misc",
+      "name": "alfresco/alfresco-libreoffice",
+      "type": "image",
+      "version": "2.5.7"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-pdf-renderer",
       "type": "image",
       "version": "2.5.7"
     },
@@ -68,6 +61,57 @@
       "name": "alfresco/alfresco-transform-router:1.5.2",
       "type": "image",
       "version": "1.5.2"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "alfresco/alfresco-transform-misc",
+      "type": "image",
+      "version": "2.5.7"
+    },
+    {
+      "keywords": [
+        "search",
+        "search services",
+        "alfresco search services",
+        "insight",
+        "insight engine",
+        "alfresco insight engine"
+      ],
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/search-services:2.0.3",
+          "type": "image",
+          "version": "2.0.3"
+        },
+        {
+          "keywords": [
+            "zeppelin",
+            "insight zeppelin",
+            "alfresco zeppelin",
+            "alfresco insight zeppelin"
+          ],
+          "children": [{
+            "repoHost": "quay.io",
+            "children": [],
+            "name": "alfresco/insight-zeppelin:1.4.0",
+            "type": "image",
+            "version": "1.4.0"
+          }],
+          "name": "alfresco-insight-zeppelin:1.0.3",
+          "description": "A Helm chart for deploying Alfresco Insight Zeppelin",
+          "type": "chart",
+          "shortName": "alfresco-insight-zeppelin",
+          "version": "1.0.3"
+        }
+      ],
+      "name": "alfresco-search:1.0.4",
+      "description": "A Helm chart for deploying Alfresco Search",
+      "type": "chart",
+      "shortName": "alfresco-search",
+      "version": "1.0.4"
     },
     {
       "keywords": [
@@ -158,50 +202,6 @@
       "type": "chart",
       "shortName": "activemq",
       "version": "2.1.0"
-    },
-    {
-      "keywords": [
-        "search",
-        "search services",
-        "alfresco search services",
-        "insight",
-        "insight engine",
-        "alfresco insight engine"
-      ],
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/search-services:2.0.3",
-          "type": "image",
-          "version": "2.0.3"
-        },
-        {
-          "keywords": [
-            "zeppelin",
-            "insight zeppelin",
-            "alfresco zeppelin",
-            "alfresco insight zeppelin"
-          ],
-          "children": [{
-            "repoHost": "quay.io",
-            "children": [],
-            "name": "alfresco/insight-zeppelin:1.4.0",
-            "type": "image",
-            "version": "1.4.0"
-          }],
-          "name": "alfresco-insight-zeppelin:1.0.3",
-          "description": "A Helm chart for deploying Alfresco Insight Zeppelin",
-          "type": "chart",
-          "shortName": "alfresco-insight-zeppelin",
-          "version": "1.0.3"
-        }
-      ],
-      "name": "alfresco-search:1.0.4",
-      "description": "A Helm chart for deploying Alfresco Search",
-      "type": "chart",
-      "shortName": "alfresco-search",
-      "version": "1.0.4"
     },
     {
       "children": [],

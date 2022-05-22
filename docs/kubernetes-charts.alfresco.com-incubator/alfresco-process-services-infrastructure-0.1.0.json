@@ -61,24 +61,6 @@
           "version": "1.0.0"
         },
         {
-          "keywords": [
-            "activemq",
-            "message broker"
-          ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "alfresco/alfresco-activemq",
-            "type": "image",
-            "version": "5.15.6-java-8-oracle-centos-7-ac5b98b35cd4"
-          }],
-          "name": "activemq:1.0.0",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
-          "version": "1.0.0"
-        },
-        {
           "maintainers": [
             {
               "name": "jackzampolin",
@@ -118,6 +100,24 @@
           "type": "chart",
           "shortName": "nginx-ingress",
           "version": "0.14.0"
+        },
+        {
+          "keywords": [
+            "activemq",
+            "message broker"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "alfresco/alfresco-activemq",
+            "type": "image",
+            "version": "5.15.6-java-8-oracle-centos-7-ac5b98b35cd4"
+          }],
+          "name": "activemq:1.0.0",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "1.0.0"
         }
       ],
       "name": "alfresco-infrastructure:3.0.0",
@@ -163,18 +163,18 @@
           "version": "2.0.4-EA"
         },
         {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-libreoffice:2.0.4-EA",
-          "type": "image",
-          "version": "2.0.4-EA"
-        },
-        {
           "repoHost": "Docker Hub",
           "children": [],
           "name": "alfresco/alfresco-shared-file-store",
           "type": "image",
           "version": "0.3"
+        },
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-libreoffice:2.0.4-EA",
+          "type": "image",
+          "version": "2.0.4-EA"
         },
         {
           "repoHost": "Docker Hub",
@@ -189,6 +189,35 @@
           "name": "alfresco/alfresco-transform-router:0.2.1-EA",
           "type": "image",
           "version": "0.2.1-EA"
+        },
+        {
+          "maintainers": [{"name": "databus23"}],
+          "keywords": [
+            "postgresql",
+            "postgres",
+            "database",
+            "sql"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "postgres",
+            "type": "image",
+            "version": "10.1"
+          }],
+          "name": "postgresql:0.9.3",
+          "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+          "type": "chart",
+          "shortName": "postgresql",
+          "version": "0.9.3"
+        },
+        {
+          "children": [],
+          "name": "alfresco-infrastructure:1.0.0",
+          "description": "A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform.",
+          "type": "chart",
+          "shortName": "alfresco-infrastructure",
+          "version": "1.0.0"
         },
         {
           "keywords": [
@@ -211,35 +240,6 @@
           "type": "chart",
           "shortName": "alfresco-search",
           "version": "0.0.4"
-        },
-        {
-          "children": [],
-          "name": "alfresco-infrastructure:1.0.0",
-          "description": "A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform.",
-          "type": "chart",
-          "shortName": "alfresco-infrastructure",
-          "version": "1.0.0"
-        },
-        {
-          "maintainers": [{"name": "databus23"}],
-          "keywords": [
-            "postgresql",
-            "postgres",
-            "database",
-            "sql"
-          ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "postgres",
-            "type": "image",
-            "version": "10.1"
-          }],
-          "name": "postgresql:0.9.3",
-          "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-          "type": "chart",
-          "shortName": "postgresql",
-          "version": "0.9.3"
         },
         {
           "children": [{
