@@ -33,8 +33,7 @@ jobs:
           helm version
           helm repo add alfresco-incubator	https://kubernetes-charts.alfresco.com/incubator
           helm repo add alfresco-stable   	https://kubernetes-charts.alfresco.com/stable
-          helm repo add stable            	https://charts.helm.sh/stable                   
-          helm repo add incubator         	https://charts.helm.sh/incubator                
+          helm repo add stable            	https://charts.helm.sh/stable                
           helm repo add bitnami           	https://charts.bitnami.com/bitnami              
           helm repo add codecentric       	https://codecentric.github.io/helm-charts       
           helm repo add nuxeo             	https://chartmuseum.platform.dev.nuxeo.com/
@@ -103,6 +102,60 @@ jobs:
               git config --global user.name "GitHub Action (generate-examples.yml)"
               git add .
               git commit -m "Update Alfresco Incubator Example Chart Maps"
+              git pull origin master
+              git push origin master
+          else
+              echo no git changes found
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate codecentric charts and commit them to git
+        run: | 
+          cd ./docs/codecentric.github.io
+          rm helm-chartmap.log
+          rm index.html
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r codecentric
+          if [[ `git status --porcelain` ]]; then
+              git config --global user.email "melahn@github"
+              git config --global user.name "GitHub Action (generate-examples.yml)"
+              git add .
+              git commit -m "Update Codecentric Example Chart Maps"
+              git pull origin master
+              git push origin master
+          else
+              echo no git changes found
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate bitnami charts and commit them to git
+        run: | 
+          cd ./docs/charts.bitnami.com
+          rm helm-chartmap.log
+          rm index.html
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r bitnami
+          if [[ `git status --porcelain` ]]; then
+              git config --global user.email "melahn@github"
+              git config --global user.name "GitHub Action (generate-examples.yml)"
+              git add .
+              git commit -m "Update Bitnami Example Chart Maps"
+              git pull origin master
+              git push origin master
+          else
+              echo no git changes found
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate google stable charts and commit them to git
+        run: | 
+          cd ./docs/kubernetes-charts.storage.googleapis.com
+          rm helm-chartmap.log
+          rm index.html
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -r stable
+          if [[ `git status --porcelain` ]]; then
+              git config --global user.email "melahn@github"
+              git config --global user.name "GitHub Action (generate-examples.yml)"
+              git add .
+              git commit -m "Update Google Example Chart Maps"
               git pull origin master
               git push origin master
           else
