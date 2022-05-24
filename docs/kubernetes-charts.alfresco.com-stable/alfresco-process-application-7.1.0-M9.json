@@ -32,6 +32,56 @@
     },
     {
       "children": [
+<<<<<<< HEAD
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "activiti/example-cloud-connector",
+          "type": "image",
+          "version": "7.1.0-M9"
+        },
+        {
+          "children": [],
+          "name": "common:7.1.0-M9",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "7.1.0-M9"
+        }
+      ],
+      "name": "activiti-cloud-connector:7.1.0-M9",
+      "description": "A Helm chart for Kubernetes",
+      "type": "chart",
+      "shortName": "activiti-cloud-connector",
+      "version": "7.1.0-M9"
+    },
+    {
+      "maintainers": [{"name": "steven-sheehy"}],
+      "keywords": [
+        "rabbitmq",
+        "message queue",
+        "AMQP",
+        "AMQPS",
+        "MQTT",
+        "STOMP"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "rabbitmq",
+        "type": "image",
+        "version": "3.8.0-alpine"
+      }],
+      "name": "rabbitmq-ha:1.38.1",
+      "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
+      "type": "chart",
+      "shortName": "rabbitmq-ha",
+      "version": "1.38.1"
+    },
+    {
+      "maintainers": [
+=======
+>>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
         {
           "repoHost": "Docker Hub",
           "children": [],
@@ -94,6 +144,8 @@
       "version": "2.2.2"
     },
     {
+<<<<<<< HEAD
+=======
       "maintainers": [{"name": "steven-sheehy"}],
       "keywords": [
         "rabbitmq",
@@ -117,6 +169,7 @@
       "version": "1.38.1"
     },
     {
+>>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
       "children": [
         {
           "repoHost": "quay.io",
@@ -139,6 +192,8 @@
       "type": "chart",
       "shortName": "runtime-bundle",
       "version": "7.1.0-M9"
+<<<<<<< HEAD
+=======
     },
     {
       "maintainers": [
@@ -171,6 +226,7 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "6.3.9"
+>>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
     }
   ],
   "name": "alfresco-process-application:7.1.0-M9",

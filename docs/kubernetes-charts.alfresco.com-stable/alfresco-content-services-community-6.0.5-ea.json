@@ -29,7 +29,43 @@
       "version": "6.0.a"
     },
     {
+      "maintainers": [{"name": "databus23"}],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "10.1"
+      }],
+      "name": "postgresql:0.9.3",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.9.3"
+    },
+    {
       "children": [
+        {
+          "maintainers": [{"name": "Alfresco"}],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "activiti/activiti-cloud-registry",
+            "type": "image",
+            "version": "latest"
+          }],
+          "name": "alfresco-activiti-cloud-registry:0.1.0",
+          "description": "A Helm chart for Alfresco Activiti Cloud Registry",
+          "type": "chart",
+          "shortName": "alfresco-activiti-cloud-registry",
+          "version": "0.1.0"
+        },
         {
           "maintainers": [{"name": "Alfresco"}],
           "children": [{
@@ -46,18 +82,17 @@
           "version": "0.1.0"
         },
         {
-          "maintainers": [{"name": "Alfresco"}],
           "children": [{
             "repoHost": "Docker Hub",
             "children": [],
-            "name": "activiti/activiti-cloud-registry",
+            "name": "webcenter/activemq",
             "type": "image",
             "version": "latest"
           }],
-          "name": "alfresco-activiti-cloud-registry:0.1.0",
-          "description": "A Helm chart for Alfresco Activiti Cloud Registry",
+          "name": "activemq:0.1.0",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
           "type": "chart",
-          "shortName": "alfresco-activiti-cloud-registry",
+          "shortName": "activemq",
           "version": "0.1.0"
         },
         {
@@ -118,27 +153,6 @@
       "type": "chart",
       "shortName": "alfresco-infrastructure",
       "version": "0.1.0"
-    },
-    {
-      "maintainers": [{"name": "databus23"}],
-      "keywords": [
-        "postgresql",
-        "postgres",
-        "database",
-        "sql"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "postgres",
-        "type": "image",
-        "version": "10.1"
-      }],
-      "name": "postgresql:0.9.3",
-      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-      "type": "chart",
-      "shortName": "postgresql",
-      "version": "0.9.3"
     }
   ],
   "name": "alfresco-content-services-community:6.0.5-ea",

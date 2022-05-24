@@ -21,5 +21,9 @@ alfresco_sync_service_3_0_4--[#green]-|>postgresql_0_9_3
 postgresql_0_9_3--[#orange]-|>postgres_10_1
 alfresco_sync_service_3_0_4--[#orange]-|>quay_io_alfresco_service_sync_3_3_1
 
+<<<<<<< HEAD
+center footer Generated on 2022/05/24 16:23:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+=======
 center footer Generated on 2022/05/22 15:07:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+>>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
 @enduml

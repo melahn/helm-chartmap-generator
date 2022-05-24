@@ -51,6 +51,14 @@
       "version": "8.20.5"
     },
     {
+      "children": [],
+      "name": "common:7.2.0",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.2.0"
+    },
+    {
       "maintainers": [{"name": "Alfresco"}],
       "keywords": [
         "alfresco",
@@ -172,6 +180,8 @@
       "version": "6.0.0"
     },
     {
+<<<<<<< HEAD
+=======
       "children": [],
       "name": "common:7.2.0",
       "description": "A Helm chart for Activiti Cloud Common Templates",
@@ -180,6 +190,7 @@
       "version": "7.2.0"
     },
     {
+>>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
       "maintainers": [
         {
           "name": "Bitnami",

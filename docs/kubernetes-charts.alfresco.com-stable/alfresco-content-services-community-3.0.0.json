@@ -80,6 +80,28 @@
       "version": "1.0.0"
     },
     {
+      "keywords": [
+        "search",
+        "search services",
+        "alfresco search services",
+        "insight",
+        "insight engine",
+        "alfresco insight engine"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "alfresco/alfresco-search-services",
+        "type": "image",
+        "version": "1.4.0"
+      }],
+      "name": "alfresco-search:1.0.0",
+      "description": "A Helm chart for deploying Alfresco Search",
+      "type": "chart",
+      "shortName": "alfresco-search",
+      "version": "1.0.0"
+    },
+    {
       "children": [
         {
           "maintainers": [{"name": "Alfresco"}],
@@ -204,6 +226,8 @@
       "type": "chart",
       "shortName": "alfresco-infrastructure",
       "version": "4.1.1"
+<<<<<<< HEAD
+=======
     },
     {
       "maintainers": [{"name": "databus23"}],
@@ -225,6 +249,7 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "0.9.3"
+>>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
     }
   ],
   "name": "alfresco-content-services-community:3.0.0",

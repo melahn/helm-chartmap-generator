@@ -19,5 +19,9 @@ usecase "Image\n====\nquay.io\n====\nalfresco/alfresco-adf-app:latest\n====\nlat
 alfresco_adf_app_7_1_0_M10--[#green]-|>common_7_1_0_A1
 alfresco_adf_app_7_1_0_M10--[#orange]-|>quay_io_alfresco_alfresco_adf_app_latest
 
+<<<<<<< HEAD
+center footer Generated on 2022/05/24 16:11:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+=======
 center footer Generated on 2022/05/22 14:57:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+>>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
 @enduml

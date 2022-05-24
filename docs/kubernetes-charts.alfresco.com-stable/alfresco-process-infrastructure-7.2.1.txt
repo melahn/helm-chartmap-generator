@@ -50,7 +50,11 @@ Chart: alfresco-process-infrastructure:7.2.1
 	apiVersion: v2
 	appVersion: 7.2.1
 	created: Not specified
+<<<<<<< HEAD
+	dependencies: common:7.2.0, postgresql:10.3.13, rabbitmq:8.20.5, alfresco-identity-service:6.0.0
+=======
 	dependencies: postgresql:10.3.13, rabbitmq:8.20.5, common:7.2.0, alfresco-identity-service:6.0.0
+>>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
 	description: A Helm chart for Alfresco Activiti Enterprise infrastructure
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -145,6 +149,7 @@ Image: docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 
 Chart Dependencies
 ------------------
+alfresco-process-infrastructure:7.2.1 depends on common:7.2.0
 alfresco-process-infrastructure:7.2.1 depends on postgresql:10.3.13
 postgresql:10.3.13 depends on common:1.4.1
 alfresco-process-infrastructure:7.2.1 depends on rabbitmq:8.20.5
@@ -158,4 +163,8 @@ keycloak:16.1.0 uses quay.io/alfresco/alfresco-identity-service:1.7.0
 postgresql:10.3.13 uses docker.io/bitnami/postgresql:13.3.0
 rabbitmq:8.20.5 uses docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 
+<<<<<<< HEAD
+Generated on 2022/05/24 16:20:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+=======
 Generated on 2022/05/22 15:04:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+>>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631

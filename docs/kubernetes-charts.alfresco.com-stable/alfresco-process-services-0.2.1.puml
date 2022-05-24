@@ -33,6 +33,7 @@ usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n11.6" as postgres_11_6 #
 alfresco_process_services_0_2_1--[#green]-|>alfresco_infrastructure_4_1_1
 alfresco_infrastructure_4_1_1--[#green]-|>nginx_ingress_0_14_0
 alfresco_infrastructure_4_1_1--[#green]-|>activemq_1_1_1
+alfresco_infrastructure_4_1_1--[#green]-|>nginx_ingress_0_14_0
 alfresco_infrastructure_4_1_1--[#green]-|>alfresco_identity_service_1_1_0
 alfresco_identity_service_1_1_0--[#green]-|>keycloak_4_3_0
 keycloak_4_3_0--[#green]-|>postgresql_0_15_0
@@ -47,5 +48,9 @@ nginx_ingress_0_14_0--[#orange]-|>quay_io_kubernetes_ingress_controller_nginx_in
 keycloak_4_3_0--[#orange]-|>jboss_keycloak_4_8_3_Final
 activemq_1_1_1--[#orange]-|>alfresco_alfresco_activemq_5_15_8_java_8_oracle_centos_7_87b15e37ce8b
 
+<<<<<<< HEAD
+center footer Generated on 2022/05/24 16:22:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+=======
 center footer Generated on 2022/05/22 15:06:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+>>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
 @enduml
