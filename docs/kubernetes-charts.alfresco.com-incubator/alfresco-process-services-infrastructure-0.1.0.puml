@@ -41,13 +41,13 @@ usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-share\n====\n6.0" as a
 
 'Chart Dependencies
 alfresco_process_services_infrastructure_0_1_0--[#green]-|>alfresco_content_services_1_1_4
-alfresco_content_services_1_1_4--[#green]-|>postgresql_0_9_3
-alfresco_content_services_1_1_4--[#green]-|>alfresco_infrastructure_1_0_0
 alfresco_content_services_1_1_4--[#green]-|>alfresco_search_0_0_4
+alfresco_content_services_1_1_4--[#green]-|>postgresql_0_9_3
 alfresco_content_services_1_1_4--[#green]-|>activemq_0_1_0
+alfresco_content_services_1_1_4--[#green]-|>alfresco_infrastructure_1_0_0
 alfresco_process_services_infrastructure_0_1_0--[#green]-|>alfresco_infrastructure_3_0_0
-alfresco_infrastructure_3_0_0--[#green]-|>nginx_ingress_0_14_0
 alfresco_infrastructure_3_0_0--[#green]-|>activemq_1_0_0
+alfresco_infrastructure_3_0_0--[#green]-|>nginx_ingress_0_14_0
 alfresco_infrastructure_3_0_0--[#green]-|>alfresco_identity_service_1_0_0
 alfresco_identity_service_1_0_0--[#green]-|>keycloak_4_0_3
 keycloak_4_0_3--[#green]-|>postgresql_0_15_0
@@ -63,10 +63,10 @@ alfresco_content_services_1_1_4--[#orange]-|>quay_io_alfresco_alfresco_tika_2_0_
 alfresco_content_services_1_1_4--[#orange]-|>quay_io_alfresco_alfresco_imagemagick_2_0_4_EA
 alfresco_content_services_1_1_4--[#orange]-|>alfresco_alfresco_share_6_0
 alfresco_content_services_1_1_4--[#orange]-|>quay_io_alfresco_alfresco_pdf_renderer_2_0_4_EA
-alfresco_content_services_1_1_4--[#orange]-|>alfresco_alfresco_shared_file_store_0_3
 alfresco_content_services_1_1_4--[#orange]-|>quay_io_alfresco_alfresco_libreoffice_2_0_4_EA
+alfresco_content_services_1_1_4--[#orange]-|>alfresco_alfresco_shared_file_store_0_3
 alfresco_content_services_1_1_4--[#orange]-|>alfresco_alfresco_content_repository_6_1_0_EA2
 alfresco_content_services_1_1_4--[#orange]-|>quay_io_alfresco_alfresco_transform_router_0_2_1_EA
 
-center footer Generated on 2022/05/22 15:19:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/24 17:09:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

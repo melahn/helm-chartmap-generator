@@ -49,6 +49,13 @@
       "version": "2.5.6"
     },
     {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "alfresco/alfresco-transform-router:1.5.1",
+      "type": "image",
+      "version": "1.5.1"
+    },
+    {
       "repoHost": "Docker Hub",
       "children": [],
       "name": "alfresco/alfresco-transform-misc",
@@ -58,36 +65,9 @@
     {
       "repoHost": "quay.io",
       "children": [],
-      "name": "alfresco/alfresco-transform-router:1.5.1",
-      "type": "image",
-      "version": "1.5.1"
-    },
-    {
-      "repoHost": "quay.io",
-      "children": [],
       "name": "alfresco/alfresco-share:7.2.0-M2",
       "type": "image",
       "version": "7.2.0-M2"
-    },
-    {
-      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
-      "keywords": [
-        "syncservice",
-        "alfresco",
-        "application"
-      ],
-      "children": [{
-        "repoHost": "quay.io",
-        "children": [],
-        "name": "alfresco/service-sync:3.5.0",
-        "type": "image",
-        "version": "3.5.0"
-      }],
-      "name": "alfresco-sync-service:3.0.9",
-      "description": "Alfresco Sync Service",
-      "type": "chart",
-      "shortName": "alfresco-sync-service",
-      "version": "3.0.9"
     },
     {
       "keywords": [
@@ -132,6 +112,52 @@
       "type": "chart",
       "shortName": "alfresco-search",
       "version": "1.0.4"
+    },
+    {
+      "keywords": [
+        "activemq",
+        "message broker"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "alfresco/alfresco-activemq",
+        "type": "image",
+        "version": "5.16.1"
+      }],
+      "name": "activemq:2.0.0",
+      "description": "A Helm chart Providing Apache ActiveMQ.",
+      "type": "chart",
+      "shortName": "activemq",
+      "version": "2.0.0"
+    },
+    {
+      "maintainers": [{"name": "Alfresco Apps Repo Team"}],
+      "keywords": [
+        "syncservice",
+        "alfresco",
+        "application"
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "alfresco/service-sync:3.5.0",
+        "type": "image",
+        "version": "3.5.0"
+      }],
+      "name": "alfresco-sync-service:3.0.9",
+      "description": "Alfresco Sync Service",
+      "type": "chart",
+      "shortName": "alfresco-sync-service",
+      "version": "3.0.9"
+    },
+    {
+      "children": [],
+      "name": "common:7.1.0-M16",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.1.0-M16"
     },
     {
       "maintainers": [
@@ -185,32 +211,6 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "10.13.9"
-    },
-    {
-      "keywords": [
-        "activemq",
-        "message broker"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "alfresco/alfresco-activemq",
-        "type": "image",
-        "version": "5.16.1"
-      }],
-      "name": "activemq:2.0.0",
-      "description": "A Helm chart Providing Apache ActiveMQ.",
-      "type": "chart",
-      "shortName": "activemq",
-      "version": "2.0.0"
-    },
-    {
-      "children": [],
-      "name": "common:7.1.0-M16",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.1.0-M16"
     }
   ],
   "name": "alfresco-content-services:5.2.0-M2",

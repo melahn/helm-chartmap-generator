@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\nalfresco/alfresco-form-service:latest\n====
 'Chart Dependencies
 alfresco_form_service_0_1_0--[#orange]-|>quay_io_alfresco_alfresco_form_service_latest
 
-center footer Generated on 2022/05/22 15:13:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/24 17:04:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

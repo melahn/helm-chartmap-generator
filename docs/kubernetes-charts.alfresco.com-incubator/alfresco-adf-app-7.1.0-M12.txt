@@ -5,16 +5,17 @@ There are 2 referenced Helm Charts
 Chart: common:7.1.0-M11
 	apiVersion: v1
 	appVersion: Not specified
-	created: Not specified
+	created: 2021-07-16T16:09:55.089614+02:00
 	dependencies: None
 	description: A Helm chart for Activiti Cloud Common Templates
-	digest: Not specified
+	digest: cd09030862e6ab9d57c557f1dfb6c968de898e23148410f0e3e5b1a8b1401293
 	icon: https://salaboy.files.wordpress.com/2018/01/acitiviti_icon_fullcolor_github_400x400.png
 	keywords: Not specified
 	maintainers: Not specified
+	repo url: https://activiti.github.io/activiti-cloud-helm-charts
 	name: common
 	sources: Not specified
-	urls: Not specified
+	urls: https://activiti.github.io/activiti-cloud-helm-charts/common-7.1.0-M11.tgz
 	version: 7.1.0-M11
 Chart: alfresco-adf-app:7.1.0-M12
 	apiVersion: v1
@@ -41,4 +42,4 @@ Chart Dependencies
 alfresco-adf-app:7.1.0-M12 depends on common:7.1.0-M11
 alfresco-adf-app:7.1.0-M12 uses quay.io/alfresco/alfresco-adf-app:latest
 
-Generated on 2022/05/22 15:08:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/24 16:56:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
