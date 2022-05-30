@@ -21,7 +21,7 @@ import com.melahn.util.helm.ChartMapGeneratorException;
 
 public class ChartMapGeneratorTestUtil {
 
-    private static final int WAIT_TIME = 240; // wait for a long time because a fair number of charts need to be generated
+    private static final int WAIT_TIME = 600; // wait for a long time because a fair number of charts need to be generated
 
     /**
      * Answers true if the log contains a particular entry.

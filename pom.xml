@@ -54,7 +54,7 @@
     <dependency>
       <groupId>com.melahn</groupId>
       <artifactId>helm-chartmap</artifactId>
-      <version>1.1.1</version>
+      <version>1.1.2</version>
     </dependency>
     <dependency>
       <groupId>commons-logging</groupId>
@@ -93,29 +93,6 @@
       </resource>
     </resources>
     <plugins>
-      <!-- Is this still needed given the -g parm -->
-      <plugin>
-        <groupId>com.github.jeluard</groupId>
-        <artifactId>plantuml-maven-plugin</artifactId>
-        <version>1.2</version>
-        <configuration>
-          <outputDirectory>${basedir}</outputDirectory>
-          <config>${basedir}/config/plantuml.config</config>
-          <sourceFiles>
-            <directory>${basedir}</directory>
-            <includes>
-              <include>**/*.puml</include>
-            </includes>
-          </sourceFiles>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>net.sourceforge.plantuml</groupId>
-            <artifactId>plantuml</artifactId>
-            <version>1.2017.14 </version>
-          </dependency>
-        </dependencies>
-      </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
@@ -146,8 +123,7 @@
                     <limit>
                       <counter>COMPLEXITY</counter>
                       <value>COVEREDRATIO</value>
-                      <!-- Change to 1.00 once all the sonar stats are in -->
-                      <minimum>0.00</minimum>
+                      <minimum>1.00</minimum>
                     </limit>
                   </limits>
                 </rule>
@@ -231,7 +207,7 @@
       </plugin>
       <!-- 
           Including the maven-jar-plugin explictly (even though I am also usimg
-          the apache-shade-plugin) is to prevent the deplicating class issue when
+          the apache-shade-plugin) is to prevent the duplicating class issue when
           not building clean. See https://issues.apache.org/jira/browse/MSHADE-126
       -->
       <plugin>
@@ -300,7 +276,7 @@
                   </excludes>
                 </filter>
                 <!--
-                    filter out any redundant resources comingh in from
+                    filter out any redundant resources coming in from
                     helm-chartmap
                 -->
                 <filter>

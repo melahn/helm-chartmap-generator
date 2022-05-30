@@ -348,8 +348,11 @@ public class ChartMapGenerator {
                  */
                 r = true;
                 printChartMap(h.getNameFull(), filename, r);
+                LogManager.getLogger().error(
+                        "Chart {} printed successfully with the refresh option. See the prior errors that occured without the refresh option to understand why refresh was needed.",
+                        h.getNameFull());
             } catch (ChartMapException x) {
-                LogManager.getLogger().error("Chart {} failed to print even with the refresh option", h.getNameFull());
+                LogManager.getLogger().error("Chart {} failed to print even with the refresh option.", h.getNameFull());
                 throw new ChartMapGeneratorException(x.getMessage());
             }
         }
