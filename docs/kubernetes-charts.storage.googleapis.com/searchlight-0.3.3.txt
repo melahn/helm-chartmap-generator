@@ -30,4 +30,4 @@ searchlight:0.3.3 uses appscode/postgres:9.5-alpine
 searchlight:0.3.3 uses appscode/icinga:5.0.0-k8s
 searchlight:0.3.3 uses appscode/searchlight:5.0.0
 
-Generated on 2022/05/22 16:44:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:27:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

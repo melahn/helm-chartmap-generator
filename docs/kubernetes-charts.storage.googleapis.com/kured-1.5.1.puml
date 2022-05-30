@@ -15,5 +15,5 @@ artifact "kured:1.5.1\n====\n\tType: application\n====\n\tRepo: https://charts.h
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/22 16:22:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:03:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

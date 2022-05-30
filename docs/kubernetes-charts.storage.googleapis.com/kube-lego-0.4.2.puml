@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\njetstack/kube-lego\n====\n0.1.6" as jets
 'Chart Dependencies
 kube_lego_0_4_2--[#orange]-|>jetstack_kube_lego_0_1_6
 
-center footer Generated on 2022/05/22 16:19:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:00:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

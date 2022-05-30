@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 grafana:5.5.5 uses grafana/grafana:7.1.1
 
-Generated on 2022/05/22 16:09:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:50:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

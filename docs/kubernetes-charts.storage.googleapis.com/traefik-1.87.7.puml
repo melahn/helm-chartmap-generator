@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ntraefik\n====\n1.7.26" as traefik_1_7_26
 'Chart Dependencies
 traefik_1_87_7--[#orange]-|>traefik_1_7_26
 
-center footer Generated on 2022/05/22 16:52:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:35:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

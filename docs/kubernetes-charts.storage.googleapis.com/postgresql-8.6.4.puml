@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:11.7.0-debian-10-r26\n
 'Chart Dependencies
 postgresql_8_6_4--[#orange]-|>docker_io_bitnami_postgresql_11_7_0_debian_10_r26
 
-center footer Generated on 2022/05/22 16:36:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:18:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

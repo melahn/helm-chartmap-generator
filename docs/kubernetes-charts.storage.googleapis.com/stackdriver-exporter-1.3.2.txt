@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 stackdriver-exporter:1.3.2 uses frodenas/stackdriver-exporter:v0.6.0
 
-Generated on 2022/05/22 16:48:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:31:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -42,4 +42,4 @@ Chart Dependencies
 datadog:2.3.41 depends on kube-state-metrics:2.8.4
 kube-state-metrics:2.8.4 uses quay.io/coreos/kube-state-metrics:v1.9.5
 
-Generated on 2022/05/22 16:00:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:40:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

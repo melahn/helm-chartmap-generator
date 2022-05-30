@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 mongodb:7.8.8 uses docker.io/bitnami/mongodb:4.2.4-debian-10-r0
 
-Generated on 2022/05/22 16:27:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:09:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

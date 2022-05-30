@@ -15,5 +15,5 @@ artifact "coscale:1.0.1\n====\n\tType: application\n====\n\tRepo: https://charts
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/22 15:59:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:39:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

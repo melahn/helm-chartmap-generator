@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/ingress-gce-glbc-amd64\n====\
 gce_ingress_1_2_1--[#orange]-|>k8s_gcr_io_ingress_gce_glbc_amd64_v1_4_0
 gce_ingress_1_2_1--[#orange]-|>k8s_gcr_io_defaultbackend_1_4
 
-center footer Generated on 2022/05/22 16:07:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:48:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

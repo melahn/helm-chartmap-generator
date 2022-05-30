@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\nmonax/hoard:6.0.0\n====\n6.0.0" as quay_io_
 'Chart Dependencies
 hoard_1_0_2--[#orange]-|>quay_io_monax_hoard_6_0_0
 
-center footer Generated on 2022/05/22 16:12:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:54:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

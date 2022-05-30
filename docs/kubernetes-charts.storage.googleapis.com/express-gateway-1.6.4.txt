@@ -44,4 +44,4 @@ express-gateway:1.6.4 depends on redis:3.0.6
 express-gateway:1.6.4 uses expressgateway/express-gateway:v1.16.9
 redis:3.0.6 uses docker.io/bitnami/redis:4.0.9
 
-Generated on 2022/05/22 16:05:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:46:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

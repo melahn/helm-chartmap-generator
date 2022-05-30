@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/metrics-server-amd64\n====\nv
 'Chart Dependencies
 metrics_server_2_11_3--[#orange]-|>k8s_gcr_io_metrics_server_amd64_v0_3_6
 
-center footer Generated on 2022/05/22 16:26:44 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:08:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

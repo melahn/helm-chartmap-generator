@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 nginx-ldapauth-proxy:0.1.6 uses dweomer/nginx-auth-ldap:1.13.5-on-alpine-3.5
 
-Generated on 2022/05/22 16:30:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:12:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

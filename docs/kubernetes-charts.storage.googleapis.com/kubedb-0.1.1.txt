@@ -28,4 +28,4 @@ Chart Dependencies
 kubedb:0.1.1 uses kubedb/kubedb-server:0.1.0-beta.2
 kubedb:0.1.1 uses kubedb/operator:0.8.0-beta.2
 
-Generated on 2022/05/22 16:21:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:02:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

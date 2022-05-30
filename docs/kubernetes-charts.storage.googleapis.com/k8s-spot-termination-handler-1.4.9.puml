@@ -15,5 +15,5 @@ artifact "k8s-spot-termination-handler:1.4.9\n====\n\tType: application\n====\n\
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/22 16:16:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:58:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

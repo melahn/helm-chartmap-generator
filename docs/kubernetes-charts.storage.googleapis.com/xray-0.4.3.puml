@@ -24,16 +24,16 @@ usecase "Image\n====\ndocker.bintray.io\n====\njfrog/xray-persist:2.3.0\n====\n2
 usecase "Image\n====\ndocker.bintray.io\n====\njfrog/xray-server:2.3.0\n====\n2.3.0" as docker_bintray_io_jfrog_xray_server_2_3_0 #Coral
 
 'Chart Dependencies
-xray_0_4_3--[#green]-|>mongodb_2_0_5
-xray_0_4_3--[#green]-|>rabbitmq_ha_1_5_2
 xray_0_4_3--[#green]-|>postgresql_0_8_7
+xray_0_4_3--[#green]-|>rabbitmq_ha_1_5_2
+xray_0_4_3--[#green]-|>mongodb_2_0_5
 mongodb_2_0_5--[#orange]-|>docker_io_bitnami_mongodb_3_6_3
 rabbitmq_ha_1_5_2--[#orange]-|>rabbitmq_3_7_alpine
 postgresql_0_8_7--[#orange]-|>postgres_9_6_2
-xray_0_4_3--[#orange]-|>docker_bintray_io_jfrog_xray_server_2_3_0
 xray_0_4_3--[#orange]-|>docker_bintray_io_jfrog_xray_indexer_2_3_0
+xray_0_4_3--[#orange]-|>docker_bintray_io_jfrog_xray_server_2_3_0
 xray_0_4_3--[#orange]-|>docker_bintray_io_jfrog_xray_analysis_2_3_0
 xray_0_4_3--[#orange]-|>docker_bintray_io_jfrog_xray_persist_2_3_0
 
-center footer Generated on 2022/05/22 16:55:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:38:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

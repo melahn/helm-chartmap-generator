@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-nats-exporter:2.5.1 uses synadia/prometheus-nats-exporter:0.6.2
 
-Generated on 2022/05/22 16:39:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:21:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

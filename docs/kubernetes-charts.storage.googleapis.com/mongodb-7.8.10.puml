@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:4.2.4-debian-10-r3\n====\
 'Chart Dependencies
 mongodb_7_8_10--[#orange]-|>docker_io_bitnami_mongodb_4_2_4_debian_10_r3
 
-center footer Generated on 2022/05/22 16:27:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:09:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 distributed-tensorflow:1.2.2 uses dysproz/distributed-tf:1.7.0
 
-Generated on 2022/05/22 16:00:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:41:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

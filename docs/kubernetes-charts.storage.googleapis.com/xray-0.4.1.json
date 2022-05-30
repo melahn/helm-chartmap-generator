@@ -48,29 +48,26 @@
     },
     {
       "maintainers": [{
-        "name": "etiennetremel",
-        "email": "etienne.tremel@container-solutions.com"
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
       }],
       "keywords": [
-        "rabbitmq",
-        "message queue",
-        "AMQP",
-        "AMQPS",
-        "MQTT",
-        "STOMP"
+        "mongodb",
+        "database",
+        "nosql"
       ],
       "children": [{
-        "repoHost": "Docker Hub",
+        "repoHost": "docker.io",
         "children": [],
-        "name": "rabbitmq",
+        "name": "bitnami/mongodb:3.6.3",
         "type": "image",
-        "version": "3.7-alpine"
+        "version": "3.6.3"
       }],
-      "name": "rabbitmq-ha:1.5.2",
-      "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
+      "name": "mongodb:2.0.5",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
       "type": "chart",
-      "shortName": "rabbitmq-ha",
-      "version": "1.5.2"
+      "shortName": "mongodb",
+      "version": "2.0.5"
     },
     {
       "maintainers": [
@@ -98,26 +95,29 @@
     },
     {
       "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
+        "name": "etiennetremel",
+        "email": "etienne.tremel@container-solutions.com"
       }],
       "keywords": [
-        "mongodb",
-        "database",
-        "nosql"
+        "rabbitmq",
+        "message queue",
+        "AMQP",
+        "AMQPS",
+        "MQTT",
+        "STOMP"
       ],
       "children": [{
-        "repoHost": "docker.io",
+        "repoHost": "Docker Hub",
         "children": [],
-        "name": "bitnami/mongodb:3.6.3",
+        "name": "rabbitmq",
         "type": "image",
-        "version": "3.6.3"
+        "version": "3.7-alpine"
       }],
-      "name": "mongodb:2.0.5",
-      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "name": "rabbitmq-ha:1.5.2",
+      "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
       "type": "chart",
-      "shortName": "mongodb",
-      "version": "2.0.5"
+      "shortName": "rabbitmq-ha",
+      "version": "1.5.2"
     }
   ],
   "name": "xray:0.4.1",

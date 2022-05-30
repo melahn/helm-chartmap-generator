@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 postgresql:8.6.4 uses docker.io/bitnami/postgresql:11.7.0-debian-10-r26
 
-Generated on 2022/05/22 16:36:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:18:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

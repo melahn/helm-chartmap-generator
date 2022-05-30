@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 external-dns:2.20.2 uses docker.io/bitnami/external-dns:0.7.0-debian-10-r0
 
-Generated on 2022/05/22 16:05:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:46:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

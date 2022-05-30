@@ -47,7 +47,7 @@ prometheus:11.11.1 depends on kube-state-metrics:2.8.14
 kube-state-metrics:2.8.14 uses quay.io/coreos/kube-state-metrics:v1.9.7
 prometheus:11.11.1 uses prom/prometheus:v2.19.2
 prometheus:11.11.1 uses jimmidyson/configmap-reload:v0.3.0
-prometheus:11.11.1 uses prom/alertmanager:v0.21.0
 prometheus:11.11.1 uses prom/pushgateway:v1.2.0
+prometheus:11.11.1 uses prom/alertmanager:v0.21.0
 
-Generated on 2022/05/22 16:37:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:19:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

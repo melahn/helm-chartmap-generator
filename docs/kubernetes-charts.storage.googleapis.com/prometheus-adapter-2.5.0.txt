@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-adapter:2.5.0 uses directxman12/k8s-prometheus-adapter-amd64:v0.7.0
 
-Generated on 2022/05/22 16:37:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:19:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

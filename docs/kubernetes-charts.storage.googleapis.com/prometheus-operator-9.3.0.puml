@@ -31,5 +31,5 @@ kube_state_metrics_2_8_10--[#orange]-|>quay_io_coreos_kube_state_metrics_v1_9_7
 prometheus_operator_9_3_0--[#orange]-|>squareup_ghostunnel_v1_5_2
 prometheus_operator_9_3_0--[#orange]-|>quay_io_coreos_prometheus_operator_v0_38_1
 
-center footer Generated on 2022/05/22 16:39:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:21:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

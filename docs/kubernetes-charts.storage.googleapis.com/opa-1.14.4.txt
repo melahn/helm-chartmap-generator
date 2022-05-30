@@ -28,4 +28,4 @@ Chart Dependencies
 opa:1.14.4 uses openpolicyagent/opa:0.15.1
 opa:1.14.4 uses openpolicyagent/kube-mgmt:0.10
 
-Generated on 2022/05/22 16:32:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:14:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

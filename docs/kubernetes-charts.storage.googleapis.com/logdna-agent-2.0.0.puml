@@ -15,5 +15,5 @@ artifact "logdna-agent:2.0.0\n====\n\tType: application\n====\n\tRepo: https://c
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/22 16:23:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:04:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

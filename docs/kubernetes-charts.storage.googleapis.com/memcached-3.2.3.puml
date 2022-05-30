@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nmemcached\n====\n1.5.20" as memcached_1_
 'Chart Dependencies
 memcached_3_2_3--[#orange]-|>memcached_1_5_20
 
-center footer Generated on 2022/05/22 16:25:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:07:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -27,4 +27,4 @@ Chart Dependencies
 ------------------
 weave-cloud:0.3.8 uses weaveworks/launcher-agent:1.4.0
 
-Generated on 2022/05/22 16:54:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:37:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

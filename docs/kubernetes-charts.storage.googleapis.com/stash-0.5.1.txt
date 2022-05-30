@@ -28,4 +28,4 @@ Chart Dependencies
 stash:0.5.1 uses prom/pushgateway:v0.4.0
 stash:0.5.1 uses appscode/stash:0.7.0-rc.1
 
-Generated on 2022/05/22 16:49:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:31:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

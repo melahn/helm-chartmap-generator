@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.elastic.co\n====\nlogstash/logstash-oss:7.1.1\n====
 'Chart Dependencies
 logstash_2_4_3--[#orange]-|>docker_elastic_co_logstash_logstash_oss_7_1_1
 
-center footer Generated on 2022/05/22 16:23:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:04:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

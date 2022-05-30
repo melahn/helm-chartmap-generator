@@ -30,4 +30,4 @@ hl-composer:1.0.14 uses hyperledger/composer-cli:0.20.0
 hl-composer:1.0.14 uses hyperledger/composer-rest-server:0.20.0
 hl-composer:1.0.14 uses hyperledger/composer-playground:0.20.0
 
-Generated on 2022/05/22 16:11:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:52:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

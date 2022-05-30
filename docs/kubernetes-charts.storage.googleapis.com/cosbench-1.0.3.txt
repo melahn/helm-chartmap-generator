@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 cosbench:1.0.3 uses zenko/zenko-cosbench:0.0.6
 
-Generated on 2022/05/22 15:58:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:39:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

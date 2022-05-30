@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 cerebro:1.9.5 uses lmenezes/cerebro:0.9.2
 
-Generated on 2022/05/22 15:55:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:35:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nrabbitmq\n====\n3.8.7-alpine" as rabbitm
 'Chart Dependencies
 rabbitmq_ha_1_47_0--[#orange]-|>rabbitmq_3_8_7_alpine
 
-center footer Generated on 2022/05/22 16:41:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:23:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

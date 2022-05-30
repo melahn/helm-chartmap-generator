@@ -62,4 +62,4 @@ postgresql:6.5.0 uses docker.io/bitnami/postgresql:11.5.0-debian-9-r60
 sentry:4.3.1 uses sentry:9.1.2
 redis:9.3.2 uses docker.io/bitnami/redis:5.0.5-debian-9-r141
 
-Generated on 2022/05/22 16:45:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:28:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

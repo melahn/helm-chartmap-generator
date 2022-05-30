@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nzenko/kafka-manager\n====\n1.3.3.22" as 
 'Chart Dependencies
 kafka_manager_2_3_2--[#orange]-|>zenko_kafka_manager_1_3_3_22
 
-center footer Generated on 2022/05/22 16:17:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:58:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

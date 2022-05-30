@@ -19,5 +19,5 @@ usecase "Image\n====\nquay.io\n====\ncoreos/kube-state-metrics:v1.9.5\n====\nv1.
 datadog_2_3_40--[#green]-|>kube_state_metrics_2_8_4
 kube_state_metrics_2_8_4--[#orange]-|>quay_io_coreos_kube_state_metrics_v1_9_5
 
-center footer Generated on 2022/05/22 16:00:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:41:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

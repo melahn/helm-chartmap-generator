@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.elastic.co\n====\nkibana/kibana-oss:6.7.0\n====\n6.
 'Chart Dependencies
 kibana_3_2_6--[#orange]-|>docker_elastic_co_kibana_kibana_oss_6_7_0
 
-center footer Generated on 2022/05/22 16:18:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 23:00:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 inbucket:3.1.1 uses jhillyerd/inbucket:release-2.0.0
 
-Generated on 2022/05/22 16:14:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:55:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -19,11 +19,11 @@ usecase "Image\n====\nDocker Hub\n====\ngraylog/graylog\n====\n3.1" as graylog_g
 usecase "Image\n====\nDocker Hub\n====\nmongo\n====\n3.6" as mongo_3_6 #Aqua
 
 'Chart Dependencies
-graylog_1_6_9--[#green]-|>mongodb_replicaset_3_11_2
 graylog_1_6_9--[#green]-|>elasticsearch_1_32_2
+graylog_1_6_9--[#green]-|>mongodb_replicaset_3_11_2
 mongodb_replicaset_3_11_2--[#orange]-|>mongo_3_6
 elasticsearch_1_32_2--[#orange]-|>docker_elastic_co_elasticsearch_elasticsearch_oss_6_5_4
 graylog_1_6_9--[#orange]-|>graylog_graylog_3_1
 
-center footer Generated on 2022/05/22 16:10:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:51:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -15,5 +15,5 @@ artifact "apm-server:2.1.6\n====\n\tType: application\n====\n\tRepo: https://cha
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/22 15:52:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:32:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

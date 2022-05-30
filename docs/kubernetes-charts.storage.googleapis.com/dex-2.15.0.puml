@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\ndexidp/dex:v2.24.0\n====\nv2.24.0" as quay_
 'Chart Dependencies
 dex_2_15_0--[#orange]-|>quay_io_dexidp_dex_v2_24_0
 
-center footer Generated on 2022/05/22 16:00:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:41:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

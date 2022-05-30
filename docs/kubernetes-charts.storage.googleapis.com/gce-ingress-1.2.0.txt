@@ -28,4 +28,4 @@ Chart Dependencies
 gce-ingress:1.2.0 uses k8s.gcr.io/ingress-gce-glbc-amd64:v1.4.0
 gce-ingress:1.2.0 uses k8s.gcr.io/defaultbackend:1.4
 
-Generated on 2022/05/22 16:07:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:48:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

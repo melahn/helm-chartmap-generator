@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 envoy:1.9.2 uses envoyproxy/envoy:v1.11.1
 
-Generated on 2022/05/22 16:04:12 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:45:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

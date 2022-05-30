@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 elasticsearch:1.32.3 uses docker.elastic.co/elasticsearch/elasticsearch-oss:6.8.6
 
-Generated on 2022/05/22 16:03:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:44:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 nats:4.3.6 uses docker.io/bitnami/nats:2.1.4-debian-10-r24
 
-Generated on 2022/05/22 16:29:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 23:10:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
