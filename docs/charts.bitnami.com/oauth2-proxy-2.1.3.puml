@@ -19,11 +19,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.7-debian-10-r20\n====\n
 usecase "Image\n====\ndocker.io\n====\nbitnami/oauth2-proxy:7.2.1-debian-10-r146\n====\n7.2.1-debian-10-r146" as docker_io_bitnami_oauth2_proxy_7_2_1_debian_10_r146 #LightGreen
 
 'Chart Dependencies
-oauth2_proxy_2_1_3--[#green]-|>common_1_14_1
 oauth2_proxy_2_1_3--[#green]-|>redis_16_9_7
 redis_16_9_7--[#green]-|>common_1_14_0
+oauth2_proxy_2_1_3--[#green]-|>common_1_14_1
 redis_16_9_7--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r20
 oauth2_proxy_2_1_3--[#orange]-|>docker_io_bitnami_oauth2_proxy_7_2_1_debian_10_r146
 
-center footer Generated on 2022/05/22 15:41:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:20:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

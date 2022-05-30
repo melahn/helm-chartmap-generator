@@ -1,0 +1,45 @@
+Chart Map for external-dns:6.5.1
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: external-dns:6.5.1
+	apiVersion: v2
+	appVersion: 0.12.0
+	created: Not specified
+	dependencies: common:1.14.1
+	description: ExternalDNS is a Kubernetes addon that configures public DNS servers with information about exposed Kubernetes services to make them discoverable.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/external-dns/img/external-dns-stack-220x234.png
+	keywords: external-dns,network,dns
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: external-dns
+	sources: https://github.com/kubernetes-sigs/external-dns,https://github.com/bitnami/bitnami-docker-external-dns,https://github.com/kubernetes-sigs/external-dns
+	urls: Not specified
+	version: 6.5.1
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/external-dns:0.12.0-debian-10-r2
+
+Chart Dependencies
+------------------
+external-dns:6.5.1 depends on common:1.14.1
+external-dns:6.5.1 uses docker.io/bitnami/external-dns:0.12.0-debian-10-r2
+
+Generated on 2022/05/30 22:06:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,44 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "discovering",
+    "configuring",
+    "services"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/consul:1.12.1-debian-10-r0",
+      "type": "image",
+      "version": "1.12.1-debian-10-r0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.14.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.14.1"
+    }
+  ],
+  "name": "consul:10.5.5",
+  "description": "HashiCorp Consul is a tool for discovering and configuring services in your infrastructure.",
+  "type": "chart",
+  "shortName": "consul",
+  "version": "10.5.5"
+}

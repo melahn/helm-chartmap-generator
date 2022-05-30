@@ -42,4 +42,4 @@ Chart Dependencies
 memcached:6.0.21 depends on common:1.14.1
 memcached:6.0.21 uses docker.io/bitnami/memcached:1.6.15-debian-10-r50
 
-Generated on 2022/05/22 15:37:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:16:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -42,4 +42,4 @@ Chart Dependencies
 influxdb:5.2.4 depends on common:1.14.1
 influxdb:5.2.4 uses docker.io/bitnami/influxdb:2.2.0-debian-10-r41
 
-Generated on 2022/05/22 15:31:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:10:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

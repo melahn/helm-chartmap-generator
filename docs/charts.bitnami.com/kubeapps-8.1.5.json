@@ -34,16 +34,16 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/kubeapps-kubeops:2.4.5-scratch-r0",
+      "name": "bitnami/kubeapps-apis:2.4.5-debian-10-r22",
       "type": "image",
-      "version": "2.4.5-scratch-r0"
+      "version": "2.4.5-debian-10-r22"
     },
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/kubeapps-apis:2.4.5-debian-10-r22",
+      "name": "bitnami/kubeapps-kubeops:2.4.5-scratch-r0",
       "type": "image",
-      "version": "2.4.5-debian-10-r22"
+      "version": "2.4.5-scratch-r0"
     },
     {
       "maintainers": [

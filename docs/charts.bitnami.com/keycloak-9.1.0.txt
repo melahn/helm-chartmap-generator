@@ -1,0 +1,63 @@
+Chart Map for keycloak:9.1.0
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: postgresql:9.1.1
+	apiVersion: v1
+	appVersion: 11.8.0
+	created: 2020-07-15T01:13:34.411089622Z
+	dependencies: common:0.3.1
+	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+	digest: ff2a79314bc60c6cd94bfb4b792fb523cee9fbbe5ef1956aa7c6b9135159ca1e
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql
+	urls: https://charts.bitnami.com/bitnami/postgresql-9.1.1.tgz
+	version: 9.1.1
+Chart: keycloak:9.1.0
+	apiVersion: v1
+	appVersion: 11.0.2
+	created: Not specified
+	dependencies: postgresql:9.1.1
+	description: Open Source Identity and Access Management For Modern Applications and Services
+	digest: Not specified
+	icon: https://www.keycloak.org/resources/images/keycloak_logo_480x108.png
+	keywords: sso,idm,openid connect,saml,kerberos,ldap
+	maintainers: unguiculus:unguiculus@gmail.com,thomasdarimont:thomas.darimont+github@gmail.com
+	repo url: https://codecentric.github.io/helm-charts
+	name: keycloak
+	sources: https://github.com/codecentric/helm-charts,https://github.com/jboss-dockerfiles/keycloak,https://github.com/bitnami/charts/tree/master/bitnami/postgresql
+	urls: Not specified
+	version: 9.1.0
+Chart: common:0.3.1
+	apiVersion: v1
+	appVersion: 0.3.1
+	created: 2020-06-06T02:15:40.491713531Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: 1a4532a2b4d32277152ff52c568cf1d1fb7ac5cbf481115e7dfae84d4bc85906
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts
+	urls: https://charts.bitnami.com/bitnami/common-0.3.1.tgz
+	version: 0.3.1
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/postgresql:11.8.0-debian-10-r61
+Image: docker.io/jboss/keycloak:11.0.2
+
+Chart Dependencies
+------------------
+keycloak:9.1.0 depends on postgresql:9.1.1
+postgresql:9.1.1 depends on common:0.3.1
+postgresql:9.1.1 uses docker.io/bitnami/postgresql:11.8.0-debian-10-r61
+keycloak:9.1.0 uses docker.io/jboss/keycloak:11.0.2
+
+Generated on 2022/05/30 22:12:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

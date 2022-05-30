@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for postgresql:11.4.0
+
+'There are 2 referenced Helm Charts
+artifact "postgresql:11.4.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_4_0 #LightSteelBlue
+artifact "common:1.14.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_1 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.3.0-debian-10-r13\n====\n14.3.0-debian-10-r13" as docker_io_bitnami_postgresql_14_3_0_debian_10_r13 #DarkSalmon
+
+'Chart Dependencies
+postgresql_11_4_0--[#green]-|>common_1_14_1
+postgresql_11_4_0--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_10_r13
+
+center footer Generated on 2022/05/30 22:23:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

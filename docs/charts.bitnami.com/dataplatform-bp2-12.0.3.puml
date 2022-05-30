@@ -32,23 +32,23 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/elasticsearch:7.17.2-debian-10-r2
 usecase "Image\n====\ndocker.io\n====\nbitnami/dataplatform-exporter:1.0.1-scratch-r26\n====\n1.0.1-scratch-r26" as docker_io_bitnami_dataplatform_exporter_1_0_1_scratch_r26 #Fuchsia
 
 'Chart Dependencies
-dataplatform_bp2_12_0_3--[#green]-|>wavefront_3_4_0
-wavefront_3_4_0--[#green]-|>common_1_13_0
-wavefront_3_4_0--[#green]-|>kube_state_metrics_2_2_17
-kube_state_metrics_2_2_17--[#green]-|>common_1_13_0
 dataplatform_bp2_12_0_3--[#green]-|>logstash_3_8_8
 logstash_3_8_8--[#green]-|>common_1_13_0
-dataplatform_bp2_12_0_3--[#green]-|>common_1_13_0
-dataplatform_bp2_12_0_3--[#green]-|>kafka_16_2_6
-kafka_16_2_6--[#green]-|>common_1_13_0
-kafka_16_2_6--[#green]-|>zookeeper_9_0_6
-zookeeper_9_0_6--[#green]-|>common_1_13_0
 dataplatform_bp2_12_0_3--[#green]-|>spark_5_9_11
 spark_5_9_11--[#green]-|>common_1_13_0
+dataplatform_bp2_12_0_3--[#green]-|>kafka_16_2_6
+kafka_16_2_6--[#green]-|>zookeeper_9_0_6
+zookeeper_9_0_6--[#green]-|>common_1_13_0
+kafka_16_2_6--[#green]-|>common_1_13_0
 dataplatform_bp2_12_0_3--[#green]-|>elasticsearch_17_9_28
 elasticsearch_17_9_28--[#green]-|>kibana_9_3_17
 kibana_9_3_17--[#green]-|>common_1_13_0
 elasticsearch_17_9_28--[#green]-|>common_1_13_0
+dataplatform_bp2_12_0_3--[#green]-|>wavefront_3_4_0
+wavefront_3_4_0--[#green]-|>kube_state_metrics_2_2_17
+kube_state_metrics_2_2_17--[#green]-|>common_1_13_0
+wavefront_3_4_0--[#green]-|>common_1_13_0
+dataplatform_bp2_12_0_3--[#green]-|>common_1_13_0
 kube_state_metrics_2_2_17--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r28
 wavefront_3_4_0--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_0_0_debian_10_r17
 spark_5_9_11--[#orange]-|>docker_io_bitnami_spark_3_2_1_debian_10_r78
@@ -59,5 +59,5 @@ dataplatform_bp2_12_0_3--[#orange]-|>docker_io_bitnami_dataplatform_emitter_1_0_
 dataplatform_bp2_12_0_3--[#orange]-|>docker_io_bitnami_dataplatform_exporter_1_0_1_scratch_r26
 zookeeper_9_0_6--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r34
 
-center footer Generated on 2022/05/22 15:26:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:04:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

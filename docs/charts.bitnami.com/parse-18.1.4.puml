@@ -19,11 +19,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:5.0.8-debian-10-r23\n====
 usecase "Image\n====\ndocker.io\n====\nbitnami/parse:5.2.1-debian-10-r19\n====\n5.2.1-debian-10-r19" as docker_io_bitnami_parse_5_2_1_debian_10_r19 #Azure
 
 'Chart Dependencies
-parse_18_1_4--[#green]-|>common_1_14_1
 parse_18_1_4--[#green]-|>mongodb_12_1_9
 mongodb_12_1_9--[#green]-|>common_1_14_0
+parse_18_1_4--[#green]-|>common_1_14_1
 parse_18_1_4--[#orange]-|>docker_io_bitnami_parse_5_2_1_debian_10_r19
 mongodb_12_1_9--[#orange]-|>docker_io_bitnami_mongodb_5_0_8_debian_10_r23
 
-center footer Generated on 2022/05/22 15:42:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:22:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

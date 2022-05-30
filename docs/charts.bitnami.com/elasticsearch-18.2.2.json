@@ -1,0 +1,77 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": ["elasticsearch"],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/elasticsearch:8.2.0-debian-10-r17",
+      "type": "image",
+      "version": "8.2.0-debian-10-r17"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "kibana",
+        "analytics",
+        "monitoring",
+        "metrics",
+        "logs"
+      ],
+      "children": [{
+        "maintainers": [{
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        }],
+        "keywords": [
+          "common",
+          "helper",
+          "template",
+          "function",
+          "bitnami"
+        ],
+        "children": [],
+        "name": "common:1.14.1",
+        "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+        "type": "chart",
+        "shortName": "common",
+        "version": "1.14.1"
+      }],
+      "name": "kibana:10.1.6",
+      "description": "Kibana is an open source, browser based analytics and search dashboard for Elasticsearch. Kibana strives to be easy to get started with, while also being flexible and powerful.",
+      "type": "chart",
+      "shortName": "kibana",
+      "version": "10.1.6"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.14.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.14.1"
+    }
+  ],
+  "name": "elasticsearch:18.2.2",
+  "description": "Elasticsearch is a distributed search and analytics engine. It is used for web search, log monitoring, and real-time analytics. Ideal for Big Data applications.",
+  "type": "chart",
+  "shortName": "elasticsearch",
+  "version": "18.2.2"
+}

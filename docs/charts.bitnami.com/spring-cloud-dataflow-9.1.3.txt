@@ -1,0 +1,138 @@
+Chart Map for spring-cloud-dataflow:9.1.3
+
+There are 7 referenced Helm Charts
+----------------------------------
+Chart: mariadb:11.0.7
+	apiVersion: v2
+	appVersion: 10.6.8
+	created: 2022-05-22T00:53:53.902934717Z
+	dependencies: common:1.14.1
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: sha256:1f978d2398fa99ba8a73405f61103cb3cd143f9084c2e307ec041d3b375b4862
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.0.7.tgz
+	version: 11.0.7
+Chart: zookeeper:9.1.5
+	apiVersion: v2
+	appVersion: 3.8.0
+	created: 2022-05-20T18:26:43.114786829Z
+	dependencies: common:1.14.0
+	description: Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.
+	digest: sha256:ca3f0a95bf2d7bd1dd232f68703f71f3c00203d5e812d55fefa2be6ae9190501
+	icon: https://bitnami.com/assets/stacks/zookeeper/img/zookeeper-stack-220x234.png
+	keywords: zookeeper
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: zookeeper
+	sources: https://github.com/bitnami/bitnami-docker-zookeeper,https://zookeeper.apache.org/
+	urls: https://charts.bitnami.com/bitnami/zookeeper-9.1.5.tgz
+	version: 9.1.5
+Chart: common:1.14.0
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-13T12:53:12.091619027Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:4648f7ab42b17a0368549351a991b9bf22c3848c72b0eff4e8273236bc57e25b
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.0.tgz
+	version: 1.14.0
+Chart: rabbitmq:9.1.4
+	apiVersion: v2
+	appVersion: 3.9.18
+	created: 2022-05-22T00:47:03.931704858Z
+	dependencies: common:1.14.1
+	description: RabbitMQ is an open source general-purpose message broker that is designed for consistent, highly-available messaging scenarios (both synchronous and asynchronous).
+	digest: sha256:1fe6d8bdf4b525207f28dff401217343bd794302475563219304cbe75f6e9275
+	icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+	keywords: rabbitmq,message queue,AMQP
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: rabbitmq
+	sources: https://github.com/bitnami/bitnami-docker-rabbitmq,https://www.rabbitmq.com
+	urls: https://charts.bitnami.com/bitnami/rabbitmq-9.1.4.tgz
+	version: 9.1.4
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+Chart: kafka:16.3.2
+	apiVersion: v2
+	appVersion: 3.1.1
+	created: 2022-05-21T20:58:27.4155723Z
+	dependencies: common:1.14.1, zookeeper:9.1.5
+	description: Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.
+	digest: sha256:3b966647ec4c78fd447e1f40d298b2e797867aa7e1a4dcfe58eda9563f7352ea
+	icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
+	keywords: kafka,zookeeper,streaming,producer,consumer
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: kafka
+	sources: https://github.com/bitnami/bitnami-docker-kafka,https://kafka.apache.org/
+	urls: https://charts.bitnami.com/bitnami/kafka-16.3.2.tgz
+	version: 16.3.2
+Chart: spring-cloud-dataflow:9.1.3
+	apiVersion: v2
+	appVersion: 2.9.4
+	created: Not specified
+	dependencies: kafka:16.3.2, common:1.14.1, rabbitmq:9.1.4, mariadb:11.0.7
+	description: Spring Cloud Data Flow is a microservices-based toolkit for building streaming and batch data processing pipelines in Cloud Foundry and Kubernetes.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/spring-cloud-dataflow/img/spring-cloud-dataflow-stack-220x234.png
+	keywords: spring-cloud,dataflow,skipper,spring
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: spring-cloud-dataflow
+	sources: https://github.com/bitnami/bitnami-docker-spring-cloud-dataflow,https://github.com/bitnami/bitnami-docker-spring-cloud-skipper,https://dataflow.spring.io/
+	urls: Not specified
+	version: 9.1.3
+
+There are 6 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/spring-cloud-skipper:2.8.4-debian-10-r44
+Image: docker.io/bitnami/mariadb:10.6.8-debian-10-r0
+Image: docker.io/bitnami/zookeeper:3.8.0-debian-10-r63
+Image: docker.io/bitnami/rabbitmq:3.9.18-debian-10-r0
+Image: docker.io/bitnami/kafka:3.1.1-debian-10-r6
+Image: docker.io/bitnami/spring-cloud-dataflow:2.9.4-debian-10-r33
+
+Chart Dependencies
+------------------
+spring-cloud-dataflow:9.1.3 depends on kafka:16.3.2
+kafka:16.3.2 depends on common:1.14.1
+kafka:16.3.2 depends on zookeeper:9.1.5
+zookeeper:9.1.5 depends on common:1.14.0
+spring-cloud-dataflow:9.1.3 depends on common:1.14.1
+spring-cloud-dataflow:9.1.3 depends on rabbitmq:9.1.4
+rabbitmq:9.1.4 depends on common:1.14.1
+spring-cloud-dataflow:9.1.3 depends on mariadb:11.0.7
+mariadb:11.0.7 depends on common:1.14.1
+mariadb:11.0.7 uses docker.io/bitnami/mariadb:10.6.8-debian-10-r0
+zookeeper:9.1.5 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r63
+rabbitmq:9.1.4 uses docker.io/bitnami/rabbitmq:3.9.18-debian-10-r0
+kafka:16.3.2 uses docker.io/bitnami/kafka:3.1.1-debian-10-r6
+spring-cloud-dataflow:9.1.3 uses docker.io/bitnami/spring-cloud-dataflow:2.9.4-debian-10-r33
+spring-cloud-dataflow:9.1.3 uses docker.io/bitnami/spring-cloud-skipper:2.8.4-debian-10-r44
+
+Generated on 2022/05/30 22:27:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

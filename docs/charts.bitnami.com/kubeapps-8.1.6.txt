@@ -1,0 +1,91 @@
+Chart Map for kubeapps:8.1.6
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: kubeapps:8.1.6
+	apiVersion: v2
+	appVersion: 2.4.5
+	created: Not specified
+	dependencies: redis:16.9.11, common:1.14.1, postgresql:11.2.6
+	description: Kubeapps is a web-based UI for launching and managing applications on Kubernetes. It allows users to deploy trusted applications and operators to control users access to the cluster.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/kubeapps/img/kubeapps-stack-220x234.png
+	keywords: helm,dashboard,service catalog,deployment
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: kubeapps
+	sources: https://github.com/vmware-tanzu/kubeapps
+	urls: Not specified
+	version: 8.1.6
+Chart: postgresql:11.2.6
+	apiVersion: v2
+	appVersion: 14.3.0
+	created: 2022-05-22T00:26:54.578043565Z
+	dependencies: common:1.14.1
+	description: PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+	digest: sha256:68c1575bd4954f7eb6216ee5b017dc58f2b4ec94b8d19174c5004e3c47c0ec6d
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql,https://www.postgresql.org/
+	urls: https://charts.bitnami.com/bitnami/postgresql-11.2.6.tgz
+	version: 11.2.6
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+Chart: redis:16.9.11
+	apiVersion: v2
+	appVersion: 6.2.7
+	created: 2022-05-23T17:34:33.617731001Z
+	dependencies: common:1.14.1
+	description: Redis(TM) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: sha256:060f42d9e2e434bc9c652dc7fee0f80613dd3fc30afc935622e035d08076c67a
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://charts.bitnami.com/bitnami/redis-16.9.11.tgz
+	version: 16.9.11
+
+There are 7 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/kubeapps-kubeops:2.4.5-scratch-r0
+Image: docker.io/bitnami/kubeapps-apprepository-controller:2.4.5-scratch-r0
+Image: docker.io/bitnami/redis:6.2.7-debian-10-r23
+Image: docker.io/bitnami/kubeapps-apis:2.4.5-debian-10-r25
+Image: docker.io/bitnami/nginx:1.21.6-debian-10-r117
+Image: docker.io/bitnami/kubeapps-dashboard:2.4.5-debian-10-r26
+Image: docker.io/bitnami/postgresql:14.3.0-debian-10-r8
+
+Chart Dependencies
+------------------
+kubeapps:8.1.6 depends on redis:16.9.11
+redis:16.9.11 depends on common:1.14.1
+kubeapps:8.1.6 depends on common:1.14.1
+kubeapps:8.1.6 depends on postgresql:11.2.6
+postgresql:11.2.6 depends on common:1.14.1
+kubeapps:8.1.6 uses docker.io/bitnami/nginx:1.21.6-debian-10-r117
+kubeapps:8.1.6 uses docker.io/bitnami/kubeapps-apis:2.4.5-debian-10-r25
+kubeapps:8.1.6 uses docker.io/bitnami/kubeapps-dashboard:2.4.5-debian-10-r26
+kubeapps:8.1.6 uses docker.io/bitnami/kubeapps-apprepository-controller:2.4.5-scratch-r0
+kubeapps:8.1.6 uses docker.io/bitnami/kubeapps-kubeops:2.4.5-scratch-r0
+postgresql:11.2.6 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r8
+redis:16.9.11 uses docker.io/bitnami/redis:6.2.7-debian-10-r23
+
+Generated on 2022/05/30 22:14:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -74,4 +74,4 @@ owncloud:12.1.3 depends on mariadb:11.0.5
 mariadb:11.0.5 depends on common:1.14.0
 mariadb:11.0.5 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r90
 
-Generated on 2022/05/22 15:42:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:22:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -42,4 +42,4 @@ Chart Dependencies
 kubernetes-event-exporter:1.4.11 depends on common:1.14.0
 kubernetes-event-exporter:1.4.11 uses docker.io/bitnami/kubernetes-event-exporter:0.11.0-debian-10-r175
 
-Generated on 2022/05/22 15:35:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:14:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

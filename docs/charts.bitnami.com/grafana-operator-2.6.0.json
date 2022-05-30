@@ -1,0 +1,47 @@
+{
+  "maintainers": [
+    {"name": "cellebyte"},
+    {
+      "name": "Bitnami",
+      "email": "containers@bitnami.com"
+    }
+  ],
+  "keywords": [
+    "grafana",
+    "operator",
+    "monitoring"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/grafana-operator:4.4.1-debian-10-r10",
+      "type": "image",
+      "version": "4.4.1-debian-10-r10"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.14.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.14.1"
+    }
+  ],
+  "name": "grafana-operator:2.6.0",
+  "description": "Grafana Operator is a Kubernetes operator that enables the installation and management of Grafana instances, dashboards and plugins.",
+  "type": "chart",
+  "shortName": "grafana-operator",
+  "version": "2.6.0"
+}

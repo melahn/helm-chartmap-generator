@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for solr:5.0.3
+
+'There are 3 referenced Helm Charts
+artifact "zookeeper:9.1.6\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: zookeeper" as zookeeper_9_1_6 #LemonChiffon
+artifact "common:1.14.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_1 #DarkSeaGreen
+artifact "solr:5.0.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tsolr\n\t\tzookeeper\n\t\tapache" as solr_5_0_3 #AliceBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/zookeeper:3.8.0-debian-10-r64\n====\n3.8.0-debian-10-r64" as docker_io_bitnami_zookeeper_3_8_0_debian_10_r64 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/solr:9.0.0-debian-10-r4\n====\n9.0.0-debian-10-r4" as docker_io_bitnami_solr_9_0_0_debian_10_r4 #Cornsilk
+
+'Chart Dependencies
+solr_5_0_3--[#green]-|>zookeeper_9_1_6
+zookeeper_9_1_6--[#green]-|>common_1_14_1
+solr_5_0_3--[#green]-|>common_1_14_1
+zookeeper_9_1_6--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r64
+solr_5_0_3--[#orange]-|>docker_io_bitnami_solr_9_0_0_debian_10_r4
+
+center footer Generated on 2022/05/30 22:26:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

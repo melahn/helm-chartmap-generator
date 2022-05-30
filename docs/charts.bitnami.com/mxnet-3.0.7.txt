@@ -42,4 +42,4 @@ Chart Dependencies
 mxnet:3.0.7 depends on common:1.14.1
 mxnet:3.0.7 uses docker.io/bitnami/mxnet:1.9.1-debian-10-r3
 
-Generated on 2022/05/22 15:39:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:18:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

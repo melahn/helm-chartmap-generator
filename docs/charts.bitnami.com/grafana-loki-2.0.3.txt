@@ -1,0 +1,66 @@
+Chart Map for grafana-loki:2.0.3
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: grafana-loki:2.0.3
+	apiVersion: v2
+	appVersion: 2.5.0
+	created: Not specified
+	dependencies: memcached:6.0.22, common:1.14.1
+	description: Grafana Loki is a horizontally scalable, highly available, and multi-tenant log aggregation system. It provides real-time long tailing and full persistence to object storage.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/grafana-loki/img/grafana-loki-stack-220x234.png
+	keywords: grafana,tracing,metrics,infrastructure
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: grafana-loki
+	sources: https://github.com/bitnami/bitnami-docker-grafana-loki,https://github.com/grafana/loki/
+	urls: Not specified
+	version: 2.0.3
+Chart: memcached:6.0.22
+	apiVersion: v2
+	appVersion: 1.6.15
+	created: 2022-05-24T09:16:02.019691277Z
+	dependencies: common:1.14.1
+	description: Memcached is an high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
+	digest: sha256:b02da33a54626b67ac990330351ce6f3d34dddd132e6ec7e2dee19ed3f4f4885
+	icon: https://bitnami.com/assets/stacks/memcached/img/memcached-stack-220x234.png
+	keywords: memcached,cache
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: memcached
+	sources: https://github.com/bitnami/bitnami-docker-memcached,http://memcached.org/
+	urls: https://charts.bitnami.com/bitnami/memcached-6.0.22.tgz
+	version: 6.0.22
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/memcached:1.6.15-debian-10-r50
+Image: docker.io/bitnami/nginx:1.21.6-debian-10-r117
+Image: docker.io/bitnami/grafana-loki:2.5.0-debian-10-r12
+
+Chart Dependencies
+------------------
+grafana-loki:2.0.3 depends on memcached:6.0.22
+memcached:6.0.22 depends on common:1.14.1
+grafana-loki:2.0.3 depends on common:1.14.1
+grafana-loki:2.0.3 uses docker.io/bitnami/nginx:1.21.6-debian-10-r117
+grafana-loki:2.0.3 uses docker.io/bitnami/grafana-loki:2.5.0-debian-10-r12
+memcached:6.0.22 uses docker.io/bitnami/memcached:1.6.15-debian-10-r50
+
+Generated on 2022/05/30 22:08:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

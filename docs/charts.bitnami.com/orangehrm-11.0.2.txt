@@ -21,7 +21,7 @@ Chart: orangehrm:11.0.2
 	apiVersion: v2
 	appVersion: 4.9.0-0
 	created: Not specified
-	dependencies: mariadb:10.3.0, common:1.10.3
+	dependencies: common:1.10.3, mariadb:10.3.0
 	description: OrangeHRM is a free HR management system that offers a wealth of modules to suit the needs of your business.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/orangehrm/img/orangehrm-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/mariadb:10.5.13-debian-10-r32
 
 Chart Dependencies
 ------------------
+orangehrm:11.0.2 depends on common:1.10.3
 orangehrm:11.0.2 depends on mariadb:10.3.0
 mariadb:10.3.0 depends on common:1.10.3
-orangehrm:11.0.2 depends on common:1.10.3
 mariadb:10.3.0 uses docker.io/bitnami/mariadb:10.5.13-debian-10-r32
 orangehrm:11.0.2 uses docker.io/bitnami/orangehrm:4.9.0-0-debian-10-r51
 
-Generated on 2022/05/22 15:41:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:21:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

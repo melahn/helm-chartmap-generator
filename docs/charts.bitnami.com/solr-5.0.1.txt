@@ -6,7 +6,7 @@ Chart: solr:5.0.1
 	apiVersion: v2
 	appVersion: 9.0.0
 	created: Not specified
-	dependencies: common:1.14.1, zookeeper:9.1.5
+	dependencies: zookeeper:9.1.5, common:1.14.1
 	description: Apache Solr is an extremely powerful, open source enterprise search platform built on Apache Lucene. It is highly reliable and flexible, scalable, and designed to add value very quickly after launch.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/solr/img/solr-stack-220x234.png
@@ -70,10 +70,10 @@ Image: docker.io/bitnami/zookeeper:3.8.0-debian-10-r63
 
 Chart Dependencies
 ------------------
-solr:5.0.1 depends on common:1.14.1
 solr:5.0.1 depends on zookeeper:9.1.5
 zookeeper:9.1.5 depends on common:1.14.0
+solr:5.0.1 depends on common:1.14.1
 solr:5.0.1 uses docker.io/bitnami/solr:9.0.0-debian-10-r1
 zookeeper:9.1.5 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r63
 
-Generated on 2022/05/22 15:46:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:26:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

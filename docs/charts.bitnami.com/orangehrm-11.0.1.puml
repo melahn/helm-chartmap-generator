@@ -18,11 +18,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.5.13-debian-10-r32\n==
 usecase "Image\n====\ndocker.io\n====\nbitnami/orangehrm:4.9.0-0-debian-10-r46\n====\n4.9.0-0-debian-10-r46" as docker_io_bitnami_orangehrm_4_9_0_0_debian_10_r46 #Bisque
 
 'Chart Dependencies
+orangehrm_11_0_1--[#green]-|>common_1_10_3
 orangehrm_11_0_1--[#green]-|>mariadb_10_2_0
 mariadb_10_2_0--[#green]-|>common_1_10_3
-orangehrm_11_0_1--[#green]-|>common_1_10_3
 mariadb_10_2_0--[#orange]-|>docker_io_bitnami_mariadb_10_5_13_debian_10_r32
 orangehrm_11_0_1--[#orange]-|>docker_io_bitnami_orangehrm_4_9_0_0_debian_10_r46
 
-center footer Generated on 2022/05/22 15:42:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:21:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

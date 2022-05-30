@@ -51,7 +51,7 @@ Chart: kafka:16.2.10
 	apiVersion: v2
 	appVersion: 3.1.0
 	created: 2022-05-04T17:56:45.120976094Z
-	dependencies: zookeeper:9.1.1, common:1.13.1
+	dependencies: common:1.13.1, zookeeper:9.1.1
 	description: Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.
 	digest: sha256:34667365fac392b7883c89bb0a916a7e47088559514be99d2c71fe23d1396049
 	icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
@@ -111,7 +111,7 @@ Chart: dataplatform-bp1:12.0.1
 	apiVersion: v2
 	appVersion: 1.0.1
 	created: Not specified
-	dependencies: zookeeper:9.1.1, common:1.13.1, kafka:16.2.10, wavefront:3.4.2, solr:4.0.9, spark:6.0.0
+	dependencies: common:1.13.1, spark:6.0.0, kafka:16.2.10, solr:4.0.9, zookeeper:9.1.1, wavefront:3.4.2
 	description: This Helm chart can be used for the automated deployment of a data platform blueprint containing Kafka, Apache Spark, and Solr. It covers optimized pod sizing and placement diversity rules.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/dataplatform-bp1/img/dataplatform-bp1-stack-220x234.png
@@ -166,22 +166,22 @@ Image: docker.io/bitnami/dataplatform-exporter:1.0.1-scratch-r28
 
 Chart Dependencies
 ------------------
-dataplatform-bp1:12.0.1 depends on zookeeper:9.1.1
-zookeeper:9.1.1 depends on common:1.13.0
 dataplatform-bp1:12.0.1 depends on common:1.13.1
+dataplatform-bp1:12.0.1 depends on spark:6.0.0
+spark:6.0.0 depends on common:1.13.1
 dataplatform-bp1:12.0.1 depends on kafka:16.2.10
-kafka:16.2.10 depends on zookeeper:9.1.1
 kafka:16.2.10 depends on common:1.13.1
-dataplatform-bp1:12.0.1 depends on wavefront:3.4.2
-wavefront:3.4.2 depends on common:1.13.1
-wavefront:3.4.2 depends on kube-state-metrics:2.2.19
-kube-state-metrics:2.2.19 depends on common:1.13.0
+kafka:16.2.10 depends on zookeeper:9.1.1
+zookeeper:9.1.1 depends on common:1.13.0
 dataplatform-bp1:12.0.1 depends on solr:4.0.9
 solr:4.0.9 depends on zookeeper:9.1.0
 zookeeper:9.1.0 depends on common:1.13.0
 solr:4.0.9 depends on common:1.13.0
-dataplatform-bp1:12.0.1 depends on spark:6.0.0
-spark:6.0.0 depends on common:1.13.1
+dataplatform-bp1:12.0.1 depends on zookeeper:9.1.1
+dataplatform-bp1:12.0.1 depends on wavefront:3.4.2
+wavefront:3.4.2 depends on common:1.13.1
+wavefront:3.4.2 depends on kube-state-metrics:2.2.19
+kube-state-metrics:2.2.19 depends on common:1.13.0
 solr:4.0.9 uses docker.io/bitnami/solr:8.11.1-debian-10-r125
 spark:6.0.0 uses docker.io/bitnami/spark:3.2.1-debian-10-r85
 kafka:16.2.10 uses docker.io/bitnami/kafka:3.1.0-debian-10-r89
@@ -192,4 +192,4 @@ dataplatform-bp1:12.0.1 uses docker.io/bitnami/dataplatform-exporter:1.0.1-scrat
 wavefront:3.4.2 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r39
 zookeeper:9.1.1 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r37
 
-Generated on 2022/05/22 15:25:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:03:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

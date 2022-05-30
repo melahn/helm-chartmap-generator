@@ -19,12 +19,12 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/jupyterhub:1.5.0-debian-10-r169\n
 usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.3.0-debian-10-r1\n====\n14.3.0-debian-10-r1" as docker_io_bitnami_postgresql_14_3_0_debian_10_r1 #DarkSalmon
 
 'Chart Dependencies
-jupyterhub_1_2_1--[#green]-|>common_1_14_0
 jupyterhub_1_2_1--[#green]-|>postgresql_11_2_1
 postgresql_11_2_1--[#green]-|>common_1_14_0
+jupyterhub_1_2_1--[#green]-|>common_1_14_0
 jupyterhub_1_2_1--[#orange]-|>docker_io_bitnami_configurable_http_proxy_4_5_1_debian_10_r81
 jupyterhub_1_2_1--[#orange]-|>docker_io_bitnami_jupyterhub_1_5_0_debian_10_r169
 postgresql_11_2_1--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_10_r1
 
-center footer Generated on 2022/05/22 15:32:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:11:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

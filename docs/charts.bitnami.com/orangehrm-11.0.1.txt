@@ -61,4 +61,4 @@ orangehrm:11.0.1 depends on common:1.10.3
 mariadb:10.2.0 uses docker.io/bitnami/mariadb:10.5.13-debian-10-r32
 orangehrm:11.0.1 uses docker.io/bitnami/orangehrm:4.9.0-0-debian-10-r46
 
-Generated on 2022/05/22 15:42:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:21:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

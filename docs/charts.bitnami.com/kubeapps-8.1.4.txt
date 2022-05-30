@@ -21,7 +21,7 @@ Chart: kubeapps:8.1.4
 	apiVersion: v2
 	appVersion: 2.4.5
 	created: Not specified
-	dependencies: common:1.14.1, postgresql:11.2.5, redis:16.9.7
+	dependencies: redis:16.9.7, common:1.14.1, postgresql:11.2.5
 	description: Kubeapps is a web-based UI for launching and managing applications on Kubernetes. It allows users to deploy trusted applications and operators to control users access to the cluster.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/kubeapps/img/kubeapps-stack-220x234.png
@@ -90,11 +90,11 @@ Image: docker.io/bitnami/nginx:1.21.6-debian-10-r113
 
 Chart Dependencies
 ------------------
+kubeapps:8.1.4 depends on redis:16.9.7
+redis:16.9.7 depends on common:1.14.0
 kubeapps:8.1.4 depends on common:1.14.1
 kubeapps:8.1.4 depends on postgresql:11.2.5
 postgresql:11.2.5 depends on common:1.14.0
-kubeapps:8.1.4 depends on redis:16.9.7
-redis:16.9.7 depends on common:1.14.0
 redis:16.9.7 uses docker.io/bitnami/redis:6.2.7-debian-10-r20
 kubeapps:8.1.4 uses docker.io/bitnami/kubeapps-dashboard:2.4.5-debian-10-r22
 kubeapps:8.1.4 uses docker.io/bitnami/nginx:1.21.6-debian-10-r113
@@ -103,4 +103,4 @@ kubeapps:8.1.4 uses docker.io/bitnami/kubeapps-apis:2.4.5-debian-10-r21
 kubeapps:8.1.4 uses docker.io/bitnami/kubeapps-kubeops:2.4.5-scratch-r0
 postgresql:11.2.5 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r7
 
-Generated on 2022/05/22 15:35:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:14:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

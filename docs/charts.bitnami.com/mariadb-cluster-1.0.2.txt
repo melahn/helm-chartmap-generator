@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 mariadb-cluster:1.0.2 uses docker.io/bitnami/mariadb:10.2.14
 
-Generated on 2022/05/22 15:36:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:15:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,103 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "python",
+    "scientific"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/configurable-http-proxy:4.5.1-debian-10-r91",
+      "type": "image",
+      "version": "4.5.1-debian-10-r91"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/jupyterhub:1.5.0-debian-10-r170",
+      "type": "image",
+      "version": "1.5.0-debian-10-r170"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/postgresql:14.3.0-debian-10-r13",
+          "type": "image",
+          "version": "14.3.0-debian-10-r13"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.14.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.14.1"
+        }
+      ],
+      "name": "postgresql:11.4.0",
+      "description": "PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "11.4.0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.14.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.14.1"
+    }
+  ],
+  "name": "jupyterhub:1.3.1",
+  "description": "JupyterHub brings the power of notebooks to groups of users. It gives users access to computational environments and resources without burdening the users with installation and maintenance tasks.",
+  "type": "chart",
+  "shortName": "jupyterhub",
+  "version": "1.3.1"
+}

@@ -40,4 +40,4 @@ Chart Dependencies
 ------------------
 kiam:1.0.9 depends on common:1.14.1
 
-Generated on 2022/05/22 15:33:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:12:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

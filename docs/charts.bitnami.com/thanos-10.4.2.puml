@@ -19,11 +19,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/minio:2022.5.8-debian-10-r8\n====
 usecase "Image\n====\ndocker.io\n====\nbitnami/thanos:0.26.0-scratch-r1\n====\n0.26.0-scratch-r1" as docker_io_bitnami_thanos_0_26_0_scratch_r1 #LavenderBlush
 
 'Chart Dependencies
-thanos_10_4_2--[#green]-|>common_1_14_1
 thanos_10_4_2--[#green]-|>minio_11_5_1
 minio_11_5_1--[#green]-|>common_1_14_0
+thanos_10_4_2--[#green]-|>common_1_14_1
 minio_11_5_1--[#orange]-|>docker_io_bitnami_minio_2022_5_8_debian_10_r8
 thanos_10_4_2--[#orange]-|>docker_io_bitnami_thanos_0_26_0_scratch_r1
 
-center footer Generated on 2022/05/22 15:48:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:28:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

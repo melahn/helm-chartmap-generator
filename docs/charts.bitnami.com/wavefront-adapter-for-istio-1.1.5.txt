@@ -110,4 +110,4 @@ wavefront-adapter-for-istio:1.1.5 uses docker.io/bitnami/wavefront-adapter-for-i
 kube-state-metrics:2.2.19 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r42
 wavefront:3.4.2 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r39
 
-Generated on 2022/05/22 15:49:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:29:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

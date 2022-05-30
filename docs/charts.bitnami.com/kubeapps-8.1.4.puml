@@ -25,9 +25,9 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.3.0-debian-10-r7\n=
 usecase "Image\n====\ndocker.io\n====\nbitnami/nginx:1.21.6-debian-10-r113\n====\n1.21.6-debian-10-r113" as docker_io_bitnami_nginx_1_21_6_debian_10_r113 #LightPink
 
 'Chart Dependencies
+kubeapps_8_1_4--[#green]-|>common_1_14_1
 kubeapps_8_1_4--[#green]-|>redis_16_9_7
 redis_16_9_7--[#green]-|>common_1_14_0
-kubeapps_8_1_4--[#green]-|>common_1_14_1
 kubeapps_8_1_4--[#green]-|>postgresql_11_2_5
 postgresql_11_2_5--[#green]-|>common_1_14_0
 redis_16_9_7--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r20
@@ -38,5 +38,5 @@ kubeapps_8_1_4--[#orange]-|>docker_io_bitnami_kubeapps_apis_2_4_5_debian_10_r21
 kubeapps_8_1_4--[#orange]-|>docker_io_bitnami_kubeapps_kubeops_2_4_5_scratch_r0
 postgresql_11_2_5--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_10_r7
 
-center footer Generated on 2022/05/22 15:35:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:14:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

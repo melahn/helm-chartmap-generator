@@ -51,7 +51,7 @@ Chart: discourse:7.2.3
 	apiVersion: v2
 	appVersion: 2.8.3
 	created: Not specified
-	dependencies: postgresql:11.2.4, redis:16.9.7, common:1.14.0
+	dependencies: common:1.14.0, postgresql:11.2.4, redis:16.9.7
 	description: Discourse is an open source discussion platform with built-in moderation and governance systems that let discussion communities protect themselves from bad actors even without official moderators.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/discourse/img/discourse-stack-220x234.png
@@ -71,13 +71,13 @@ Image: docker.io/bitnami/postgresql:14.3.0-debian-10-r6
 
 Chart Dependencies
 ------------------
+discourse:7.2.3 depends on common:1.14.0
 discourse:7.2.3 depends on postgresql:11.2.4
 postgresql:11.2.4 depends on common:1.14.0
 discourse:7.2.3 depends on redis:16.9.7
 redis:16.9.7 depends on common:1.14.0
-discourse:7.2.3 depends on common:1.14.0
 redis:16.9.7 uses docker.io/bitnami/redis:6.2.7-debian-10-r20
 postgresql:11.2.4 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r6
 discourse:7.2.3 uses docker.io/bitnami/discourse:2.8.3-debian-10-r31
 
-Generated on 2022/05/22 15:26:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:04:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

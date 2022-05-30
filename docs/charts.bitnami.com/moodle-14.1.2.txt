@@ -76,4 +76,4 @@ mariadb:11.0.3 depends on common:1.13.1
 mariadb:11.0.3 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r70
 moodle:14.1.2 uses docker.io/bitnami/moodle:4.0.1-debian-10-r1
 
-Generated on 2022/05/22 15:39:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:18:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

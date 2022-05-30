@@ -37,5 +37,5 @@ kubeapps_8_1_5--[#orange]-|>docker_io_bitnami_kubeapps_apprepository_controller_
 kubeapps_8_1_5--[#orange]-|>docker_io_bitnami_kubeapps_kubeops_2_4_5_scratch_r0
 kubeapps_8_1_5--[#orange]-|>docker_io_bitnami_kubeapps_apis_2_4_5_debian_10_r22
 
-center footer Generated on 2022/05/22 15:35:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:14:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

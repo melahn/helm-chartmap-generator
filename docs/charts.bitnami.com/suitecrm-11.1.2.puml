@@ -17,10 +17,10 @@ artifact "suitecrm:11.1.2\n====\n\tType: application\n====\n\tRepo: https://char
 usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.6.7-debian-10-r89\n====\n10.6.7-debian-10-r89" as docker_io_bitnami_mariadb_10_6_7_debian_10_r89 #DarkGoldenRod
 
 'Chart Dependencies
+suitecrm_11_1_2--[#green]-|>common_1_14_0
 suitecrm_11_1_2--[#green]-|>mariadb_11_0_4
 mariadb_11_0_4--[#green]-|>common_1_14_0
-suitecrm_11_1_2--[#green]-|>common_1_14_0
 mariadb_11_0_4--[#orange]-|>docker_io_bitnami_mariadb_10_6_7_debian_10_r89
 
-center footer Generated on 2022/05/22 15:47:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:27:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

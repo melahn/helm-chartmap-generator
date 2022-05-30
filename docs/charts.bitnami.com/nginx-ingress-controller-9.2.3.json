@@ -1,0 +1,54 @@
+{
+  "maintainers": [{
+    "name": "Bitnami",
+    "email": "containers@bitnami.com"
+  }],
+  "keywords": [
+    "ingress",
+    "nginx",
+    "http",
+    "web",
+    "www",
+    "reverse proxy"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/nginx:1.21.6-debian-10-r118",
+      "type": "image",
+      "version": "1.21.6-debian-10-r118"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/nginx-ingress-controller:1.2.0-debian-10-r8",
+      "type": "image",
+      "version": "1.2.0-debian-10-r8"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.14.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.14.1"
+    }
+  ],
+  "name": "nginx-ingress-controller:9.2.3",
+  "description": "NGINX Ingress Controller is an Ingress controller that manages external access to HTTP services in a Kubernetes cluster using NGINX.",
+  "type": "chart",
+  "shortName": "nginx-ingress-controller",
+  "version": "9.2.3"
+}

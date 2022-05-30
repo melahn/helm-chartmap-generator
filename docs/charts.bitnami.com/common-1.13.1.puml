@@ -15,5 +15,5 @@ artifact "common:1.13.1\n====\n\tType: library\n====\n\tRepo: https://charts.bit
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/22 15:24:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:01:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

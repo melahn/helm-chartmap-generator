@@ -42,4 +42,4 @@ Chart Dependencies
 mariadb-galera:7.2.4 depends on common:1.14.1
 mariadb-galera:7.2.4 uses docker.io/bitnami/mariadb-galera:10.6.8-debian-10-r0
 
-Generated on 2022/05/22 15:36:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:16:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

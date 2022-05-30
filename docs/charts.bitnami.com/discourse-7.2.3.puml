@@ -20,14 +20,14 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.7-debian-10-r20\n====\n
 usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.3.0-debian-10-r6\n====\n14.3.0-debian-10-r6" as docker_io_bitnami_postgresql_14_3_0_debian_10_r6 #DarkSalmon
 
 'Chart Dependencies
-discourse_7_2_3--[#green]-|>redis_16_9_7
-redis_16_9_7--[#green]-|>common_1_14_0
 discourse_7_2_3--[#green]-|>postgresql_11_2_4
 postgresql_11_2_4--[#green]-|>common_1_14_0
 discourse_7_2_3--[#green]-|>common_1_14_0
+discourse_7_2_3--[#green]-|>redis_16_9_7
+redis_16_9_7--[#green]-|>common_1_14_0
 redis_16_9_7--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r20
 postgresql_11_2_4--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_10_r6
 discourse_7_2_3--[#orange]-|>docker_io_bitnami_discourse_2_8_3_debian_10_r31
 
-center footer Generated on 2022/05/22 15:26:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:04:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -61,4 +61,4 @@ redis:16.9.8 depends on common:1.14.1
 argo-cd:3.3.4 uses docker.io/bitnami/argo-cd:2.3.4-debian-10-r2
 redis:16.9.8 uses docker.io/bitnami/redis:6.2.7-debian-10-r21
 
-Generated on 2022/05/22 15:22:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:00:12 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

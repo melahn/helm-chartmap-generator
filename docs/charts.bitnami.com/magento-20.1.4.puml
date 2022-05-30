@@ -22,14 +22,14 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.4.25-debian-10-r0\n===
 
 'Chart Dependencies
 magento_20_1_4--[#green]-|>elasticsearch_18_1_6
-elasticsearch_18_1_6--[#green]-|>common_1_14_1
 elasticsearch_18_1_6--[#green]-|>kibana_10_1_3
 kibana_10_1_3--[#green]-|>common_1_14_0
+elasticsearch_18_1_6--[#green]-|>common_1_14_1
+magento_20_1_4--[#green]-|>common_1_14_1
 magento_20_1_4--[#green]-|>mariadb_11_0_7
 mariadb_11_0_7--[#green]-|>common_1_14_1
-magento_20_1_4--[#green]-|>common_1_14_1
 mariadb_11_0_7--[#orange]-|>docker_io_bitnami_mariadb_10_4_25_debian_10_r0
 elasticsearch_18_1_6--[#orange]-|>docker_io_bitnami_elasticsearch_7_17_3_debian_10_r27
 
-center footer Generated on 2022/05/22 15:36:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 22:15:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

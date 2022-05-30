@@ -6,7 +6,7 @@ Chart: oauth2-proxy:2.1.2
 	apiVersion: v2
 	appVersion: 7.2.1
 	created: Not specified
-	dependencies: common:1.14.0, redis:16.9.6
+	dependencies: redis:16.9.6, common:1.14.0
 	description: A reverse proxy and static file server that provides authentication using Providers (Google, GitHub, and others) to validate accounts by email, domain or group.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/oauth2-proxy/img/oauth2-proxy-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/redis:6.2.7-debian-10-r19
 
 Chart Dependencies
 ------------------
-oauth2-proxy:2.1.2 depends on common:1.14.0
 oauth2-proxy:2.1.2 depends on redis:16.9.6
 redis:16.9.6 depends on common:1.14.0
+oauth2-proxy:2.1.2 depends on common:1.14.0
 oauth2-proxy:2.1.2 uses docker.io/bitnami/oauth2-proxy:7.2.1-debian-10-r144
 redis:16.9.6 uses docker.io/bitnami/redis:6.2.7-debian-10-r19
 
-Generated on 2022/05/22 15:41:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 22:20:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
