@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\nalfresco/insight-engine:1.2.0-SNAPSHOT\n===
 'Chart Dependencies
 alfresco_search_services_0_0_1--[#orange]-|>quay_io_alfresco_insight_engine_1_2_0_SNAPSHOT
 
-center footer Generated on 2022/05/24 17:09:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 21:54:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

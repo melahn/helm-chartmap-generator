@@ -41,4 +41,4 @@ Chart Dependencies
 alfresco-adf-app:7.1.0-M11MOCK1 depends on common:7.1.0-M11MOCK1
 alfresco-adf-app:7.1.0-M11MOCK1 uses quay.io/alfresco/alfresco-adf-app:latest
 
-Generated on 2022/05/24 16:56:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 21:17:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-dbp-connector-service:0.1.0 uses quay.io/alfresco/alfresco-dbp-connector-service:0.5.0-SNAPSHOT
 
-Generated on 2022/05/24 17:03:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/05/30 21:46:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

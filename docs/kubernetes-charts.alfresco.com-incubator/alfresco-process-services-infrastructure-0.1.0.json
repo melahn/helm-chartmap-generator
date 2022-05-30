@@ -3,6 +3,47 @@
     {
       "children": [
         {
+          "maintainers": [
+            {
+              "name": "jackzampolin",
+              "email": "jack.zampolin@gmail.com"
+            },
+            {
+              "name": "mgoodness",
+              "email": "mgoodness@gmail.com"
+            },
+            {
+              "name": "chancez",
+              "email": "chance.zibolski@coreos.com"
+            }
+          ],
+          "keywords": [
+            "ingress",
+            "nginx"
+          ],
+          "children": [
+            {
+              "repoHost": "Docker Hub",
+              "children": [],
+              "name": "k8s.gcr.io/defaultbackend",
+              "type": "image",
+              "version": "1.3"
+            },
+            {
+              "repoHost": "quay.io",
+              "children": [],
+              "name": "kubernetes-ingress-controller/nginx-ingress-controller:0.12.0",
+              "type": "image",
+              "version": "0.12.0"
+            }
+          ],
+          "name": "nginx-ingress:0.14.0",
+          "description": "An nginx Ingress controller that uses ConfigMap to store the nginx configuration.",
+          "type": "chart",
+          "shortName": "nginx-ingress",
+          "version": "0.14.0"
+        },
+        {
           "maintainers": [{"name": "Alfresco"}],
           "keywords": [
             "alfresco",
@@ -77,47 +118,6 @@
           "type": "chart",
           "shortName": "activemq",
           "version": "1.0.0"
-        },
-        {
-          "maintainers": [
-            {
-              "name": "jackzampolin",
-              "email": "jack.zampolin@gmail.com"
-            },
-            {
-              "name": "mgoodness",
-              "email": "mgoodness@gmail.com"
-            },
-            {
-              "name": "chancez",
-              "email": "chance.zibolski@coreos.com"
-            }
-          ],
-          "keywords": [
-            "ingress",
-            "nginx"
-          ],
-          "children": [
-            {
-              "repoHost": "Docker Hub",
-              "children": [],
-              "name": "k8s.gcr.io/defaultbackend",
-              "type": "image",
-              "version": "1.3"
-            },
-            {
-              "repoHost": "quay.io",
-              "children": [],
-              "name": "kubernetes-ingress-controller/nginx-ingress-controller:0.12.0",
-              "type": "image",
-              "version": "0.12.0"
-            }
-          ],
-          "name": "nginx-ingress:0.14.0",
-          "description": "An nginx Ingress controller that uses ConfigMap to store the nginx configuration.",
-          "type": "chart",
-          "shortName": "nginx-ingress",
-          "version": "0.14.0"
         }
       ],
       "name": "alfresco-infrastructure:3.0.0",
@@ -163,18 +163,18 @@
           "version": "2.0.4-EA"
         },
         {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-libreoffice:2.0.4-EA",
-          "type": "image",
-          "version": "2.0.4-EA"
-        },
-        {
           "repoHost": "Docker Hub",
           "children": [],
           "name": "alfresco/alfresco-shared-file-store",
           "type": "image",
           "version": "0.3"
+        },
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-libreoffice:2.0.4-EA",
+          "type": "image",
+          "version": "2.0.4-EA"
         },
         {
           "repoHost": "Docker Hub",
@@ -189,6 +189,28 @@
           "name": "alfresco/alfresco-transform-router:0.2.1-EA",
           "type": "image",
           "version": "0.2.1-EA"
+        },
+        {
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "webcenter/activemq",
+            "type": "image",
+            "version": "latest"
+          }],
+          "name": "activemq:0.1.0",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "0.1.0"
+        },
+        {
+          "children": [],
+          "name": "alfresco-infrastructure:1.0.0",
+          "description": "A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform.",
+          "type": "chart",
+          "shortName": "alfresco-infrastructure",
+          "version": "1.0.0"
         },
         {
           "keywords": [
@@ -232,28 +254,6 @@
           "type": "chart",
           "shortName": "postgresql",
           "version": "0.9.3"
-        },
-        {
-          "children": [],
-          "name": "alfresco-infrastructure:1.0.0",
-          "description": "A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform.",
-          "type": "chart",
-          "shortName": "alfresco-infrastructure",
-          "version": "1.0.0"
-        },
-        {
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "webcenter/activemq",
-            "type": "image",
-            "version": "latest"
-          }],
-          "name": "activemq:0.1.0",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
-          "version": "0.1.0"
         }
       ],
       "name": "alfresco-content-services:1.1.4",

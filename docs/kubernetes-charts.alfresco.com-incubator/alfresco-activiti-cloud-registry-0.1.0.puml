@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nactiviti/activiti-cloud-registry\n====\n
 'Chart Dependencies
 alfresco_activiti_cloud_registry_0_1_0--[#orange]-|>activiti_activiti_cloud_registry_latest
 
-center footer Generated on 2022/05/24 16:56:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 21:17:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

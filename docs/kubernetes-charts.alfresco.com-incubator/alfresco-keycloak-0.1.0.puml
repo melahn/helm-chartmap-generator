@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-keycloak\n====\nlatest
 'Chart Dependencies
 alfresco_keycloak_0_1_0--[#orange]-|>alfresco_alfresco_keycloak_latest
 
-center footer Generated on 2022/05/24 17:05:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 21:49:44 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
