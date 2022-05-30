@@ -26,8 +26,4 @@ Chart Dependencies
 ------------------
 alfresco-digital-workspace:2.2.1 uses quay.io/alfresco/alfresco-digital-workspace:1.4.0
 
-<<<<<<< HEAD
-Generated on 2022/05/24 16:17:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
-=======
-Generated on 2022/05/22 15:01:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
->>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
+Generated on 2022/05/30 21:10:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

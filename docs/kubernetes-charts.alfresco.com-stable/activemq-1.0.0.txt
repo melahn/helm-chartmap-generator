@@ -26,8 +26,4 @@ Chart Dependencies
 ------------------
 activemq:1.0.0 uses alfresco/alfresco-activemq:5.15.6-java-8-oracle-centos-7-ac5b98b35cd4
 
-<<<<<<< HEAD
-Generated on 2022/05/24 16:11:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
-=======
-Generated on 2022/05/22 14:57:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
->>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
+Generated on 2022/05/30 21:02:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

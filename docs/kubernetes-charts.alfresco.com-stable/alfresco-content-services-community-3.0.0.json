@@ -80,29 +80,46 @@
       "version": "1.0.0"
     },
     {
+      "maintainers": [{"name": "databus23"}],
       "keywords": [
-        "search",
-        "search services",
-        "alfresco search services",
-        "insight",
-        "insight engine",
-        "alfresco insight engine"
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
       ],
       "children": [{
         "repoHost": "Docker Hub",
         "children": [],
-        "name": "alfresco/alfresco-search-services",
+        "name": "postgres",
         "type": "image",
-        "version": "1.4.0"
+        "version": "11.4"
       }],
-      "name": "alfresco-search:1.0.0",
-      "description": "A Helm chart for deploying Alfresco Search",
+      "name": "postgresql:0.9.3",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
       "type": "chart",
-      "shortName": "alfresco-search",
-      "version": "1.0.0"
+      "shortName": "postgresql",
+      "version": "0.9.3"
     },
     {
       "children": [
+        {
+          "keywords": [
+            "activemq",
+            "message broker"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "alfresco/alfresco-activemq",
+            "type": "image",
+            "version": "5.15.8-java-8-oracle-centos-7-87b15e37ce8b"
+          }],
+          "name": "activemq:1.1.1",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "1.1.1"
+        },
         {
           "maintainers": [{"name": "Alfresco"}],
           "keywords": [
@@ -162,24 +179,6 @@
           "version": "1.1.0"
         },
         {
-          "keywords": [
-            "activemq",
-            "message broker"
-          ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "alfresco/alfresco-activemq",
-            "type": "image",
-            "version": "5.15.8-java-8-oracle-centos-7-87b15e37ce8b"
-          }],
-          "name": "activemq:1.1.1",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
-          "version": "1.1.1"
-        },
-        {
           "maintainers": [
             {
               "name": "jackzampolin",
@@ -226,30 +225,6 @@
       "type": "chart",
       "shortName": "alfresco-infrastructure",
       "version": "4.1.1"
-<<<<<<< HEAD
-=======
-    },
-    {
-      "maintainers": [{"name": "databus23"}],
-      "keywords": [
-        "postgresql",
-        "postgres",
-        "database",
-        "sql"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "postgres",
-        "type": "image",
-        "version": "11.4"
-      }],
-      "name": "postgresql:0.9.3",
-      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-      "type": "chart",
-      "shortName": "postgresql",
-      "version": "0.9.3"
->>>>>>> 6e4ac89299cbae02e89b9786172982acdc387631
     }
   ],
   "name": "alfresco-content-services-community:3.0.0",
