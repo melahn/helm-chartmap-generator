@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.io\n====\njenkins/jenkins:2.222.3-alpine\n====\n2.2
 'Chart Dependencies
 jenkins_1_7_0--[#orange]-|>docker_io_jenkins_jenkins_2_222_3_alpine
 
-center footer Generated on 2022/05/22 15:20:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/05/30 21:58:04 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
