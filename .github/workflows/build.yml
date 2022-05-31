@@ -39,7 +39,6 @@ jobs:
           helm repo add alfresco-stable   	https://kubernetes-charts.alfresco.com/stable   
           helm repo add melahn            	https://melahn.github.io/helm-repo-test       
           helm repo add stable            	https://charts.helm.sh/stable                   
-          helm repo add incubator         	https://charts.helm.sh/incubator                
           helm repo add bitnami           	https://charts.bitnami.com/bitnami              
           helm repo add codecentric       	https://codecentric.github.io/helm-charts       
           helm repo add nuxeo             	https://chartmuseum.platform.dev.nuxeo.com/
