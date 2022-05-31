@@ -147,7 +147,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate google stable charts and commit them to git
         run: | 
-          cd ./docs/kubernetes-charts.storage.googleapis.com
+          cd ./docs/charts.helm.sh-stable
           rm -f helm-chartmap.log
           rm -f index.html
           java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -v -r stable
