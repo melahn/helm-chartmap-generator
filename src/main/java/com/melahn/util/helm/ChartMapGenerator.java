@@ -513,7 +513,7 @@ public class ChartMapGenerator {
         if (verbose) {
             s = s.concat(String.format("<hr><p>Chart versions successfully processed: %s</p>%n", chartCountGood))
                     .concat(String.format("<p>Chart versions with errors: %s</p>%n", chartCountBad))
-                    .concat(String.format("<p>Total chart verssions processed: %s</p>%n%n", chartCount));
+                    .concat(String.format("<p>Total chart versions processed: %s</p>%n%n", chartCount));
             if (getChartCountBad() > 0) {
                 s = s.concat(
                         "<p>Here is a list of the chart versions with errors. Consult the <a href=\"./helm-chartmap.log\">output log</a> to see the error messages logged by ChartMap.</p>\n\t<ul>\n");
