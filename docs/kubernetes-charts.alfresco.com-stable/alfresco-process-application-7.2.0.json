@@ -31,25 +31,6 @@
             "name": "Bitnami",
             "email": "containers@bitnami.com"
           }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.5.2",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.5.2"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
           "keywords": ["zookeeper"],
           "children": [
             {
@@ -84,6 +65,25 @@
           "type": "chart",
           "shortName": "zookeeper",
           "version": "6.7.4"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.5.2",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.5.2"
         }
       ],
       "name": "kafka:12.20.0",
@@ -91,6 +91,14 @@
       "type": "chart",
       "shortName": "kafka",
       "version": "12.20.0"
+    },
+    {
+      "children": [],
+      "name": "common:7.2.0",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.2.0"
     },
     {
       "maintainers": [
@@ -144,14 +152,6 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "9.1.1"
-    },
-    {
-      "children": [],
-      "name": "common:7.2.0",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.2.0"
     },
     {
       "maintainers": [{

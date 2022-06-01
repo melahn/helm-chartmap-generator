@@ -7,27 +7,28 @@
   ],
   "children": [
     {
-      "maintainers": [{"name": "steven-sheehy"}],
-      "keywords": [
-        "rabbitmq",
-        "message queue",
-        "AMQP",
-        "AMQPS",
-        "MQTT",
-        "STOMP"
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-process-query-service:develop",
+          "type": "image",
+          "version": "develop"
+        },
+        {
+          "children": [],
+          "name": "common:7.1.0-M9",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "7.1.0-M9"
+        }
       ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "rabbitmq",
-        "type": "image",
-        "version": "3.8.0-alpine"
-      }],
-      "name": "rabbitmq-ha:1.38.1",
-      "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
+      "name": "activiti-cloud-query:7.1.0-M9",
+      "description": "A Helm chart for Kubernetes",
       "type": "chart",
-      "shortName": "rabbitmq-ha",
-      "version": "1.38.1"
+      "shortName": "activiti-cloud-query",
+      "version": "7.1.0-M9"
     },
     {
       "maintainers": [
@@ -60,6 +61,53 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "6.3.9"
+    },
+    {
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-process-runtime-bundle-service:develop",
+          "type": "image",
+          "version": "develop"
+        },
+        {
+          "children": [],
+          "name": "common:7.1.0-M9",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "7.1.0-M9"
+        }
+      ],
+      "name": "runtime-bundle:7.1.0-M9",
+      "description": "A Helm chart for Activiti Cloud Runtime Bundle Example",
+      "type": "chart",
+      "shortName": "runtime-bundle",
+      "version": "7.1.0-M9"
+    },
+    {
+      "maintainers": [{"name": "steven-sheehy"}],
+      "keywords": [
+        "rabbitmq",
+        "message queue",
+        "AMQP",
+        "AMQPS",
+        "MQTT",
+        "STOMP"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "rabbitmq",
+        "type": "image",
+        "version": "3.8.0-alpine"
+      }],
+      "name": "rabbitmq-ha:1.38.1",
+      "description": "Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).",
+      "type": "chart",
+      "shortName": "rabbitmq-ha",
+      "version": "1.38.1"
     },
     {
       "children": [
@@ -123,54 +171,6 @@
       "type": "chart",
       "shortName": "alfresco-adf-app",
       "version": "2.2.2"
-    },
-    {
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-query-service:develop",
-          "type": "image",
-          "version": "develop"
-        },
-        {
-          "children": [],
-          "name": "common:7.1.0-M9",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "7.1.0-M9"
-        }
-      ],
-      "name": "activiti-cloud-query:7.1.0-M9",
-      "description": "A Helm chart for Kubernetes",
-      "type": "chart",
-      "shortName": "activiti-cloud-query",
-      "version": "7.1.0-M9"
-    },
-    {
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-runtime-bundle-service:develop",
-          "type": "image",
-          "version": "develop"
-        },
-        {
-          "children": [],
-          "name": "common:7.1.0-M9",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "7.1.0-M9"
-        }
-      ],
-      "name": "runtime-bundle:7.1.0-M9",
-      "description": "A Helm chart for Activiti Cloud Runtime Bundle Example",
-      "type": "chart",
-      "shortName": "runtime-bundle",
-      "version": "7.1.0-M9"
     }
   ],
   "name": "alfresco-process-application:7.1.0-M9",

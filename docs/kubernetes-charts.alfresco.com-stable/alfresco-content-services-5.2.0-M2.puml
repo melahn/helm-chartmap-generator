@@ -35,13 +35,13 @@ usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-activemq\n====\n5.16.1
 usecase "Image\n====\nquay.io\n====\nalfresco/alfresco-share:7.2.0-M2\n====\n7.2.0-M2" as quay_io_alfresco_alfresco_share_7_2_0_M2 #LemonChiffon
 
 'Chart Dependencies
-alfresco_content_services_5_2_0_M2--[#green]-|>alfresco_sync_service_3_0_9
-alfresco_content_services_5_2_0_M2--[#green]-|>postgresql_10_13_9
-postgresql_10_13_9--[#green]-|>common_1_10_1
-alfresco_content_services_5_2_0_M2--[#green]-|>activemq_2_0_0
-alfresco_content_services_5_2_0_M2--[#green]-|>common_7_1_0_M16
 alfresco_content_services_5_2_0_M2--[#green]-|>alfresco_search_1_0_4
 alfresco_search_1_0_4--[#green]-|>alfresco_insight_zeppelin_1_0_3
+alfresco_content_services_5_2_0_M2--[#green]-|>alfresco_sync_service_3_0_9
+alfresco_content_services_5_2_0_M2--[#green]-|>activemq_2_0_0
+alfresco_content_services_5_2_0_M2--[#green]-|>common_7_1_0_M16
+alfresco_content_services_5_2_0_M2--[#green]-|>postgresql_10_13_9
+postgresql_10_13_9--[#green]-|>common_1_10_1
 alfresco_content_services_5_2_0_M2--[#orange]-|>quay_io_alfresco_alfresco_content_repository_7_2_0_M2
 alfresco_content_services_5_2_0_M2--[#orange]-|>alfresco_alfresco_imagemagick_2_5_6
 alfresco_content_services_5_2_0_M2--[#orange]-|>alfresco_alfresco_tika_2_5_6
@@ -57,5 +57,5 @@ postgresql_10_13_9--[#orange]-|>docker_io_bitnami_postgresql_13_3_0
 activemq_2_0_0--[#orange]-|>alfresco_alfresco_activemq_5_16_1
 alfresco_sync_service_3_0_9--[#orange]-|>quay_io_alfresco_service_sync_3_5_0
 
-center footer Generated on 2022/05/30 21:09:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/01 23:26:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
