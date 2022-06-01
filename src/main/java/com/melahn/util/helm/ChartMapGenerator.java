@@ -421,7 +421,7 @@ public class ChartMapGenerator {
      */
     protected void addHead () throws IOException {
         String h = "<head>"
-                .concat("\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n")
+                .concat("\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n")
                 .concat("\t<link rel=\"stylesheet\" href=\"./style.css\">\n")
                 .concat("\t<title>Helm Dependency Charts</title>\n")
                 .concat("</head>\n<body>\n")
@@ -438,12 +438,17 @@ public class ChartMapGenerator {
      * @throws IOException if an IO error occurs creating the css style file
      */
     protected void createStyleFile () throws IOException {
-        String s = "* {\n\tfont-family: \"Andale Mono\";\n\tcolor: #66ff00;\n\tbackground-color: #000000;\n}\n"
-                .concat("a:visited {\n\tcolor: #00FFFF;\n}\n")
-                .concat(".header {").concat("\n\tfont: 30px;\n}\n")
-                .concat(".charterror {").concat("\n\tfont: 16px;\n\tcolor: #FF0000;\n}\n")
-                .concat(".chartname  {").concat("\n\tfont-weight: bold;\n\tfont: 16px;\n}\n")
-                .concat(".chartlink  {").concat("\n\tfont: 16px;\n}\n");
+        String s = "* {\n\tfont-family: \"Andale Mono\";\n\tbackground-color: #0a0a0aff;\n}\n"
+                .concat("a:link {\n\tcolor: #eee3c1ff;\n\tfont: 16px;\n\tfont-weight: bold;\n}")
+                .concat("a:visited {\n\tcolor: #2f71e8ff;\n\tfont: 16px;\n}")
+                .concat(".charterror {\n\tcolor: #ff0000ff;\n\tfont: 16px;\n}\n")
+                .concat(".chartname  {\n\tcolor: #b7d0f1ff;\n\tfont-weight: bold;\n\tfont: 16px;\n}\n")
+                .concat(".chartlink  {\n\tcolor: #b7d0f1ff;\n\tfont: 16px;\n}\n")
+                .concat(".chartnumall  {\n\tcolor: #ffffffff;\n\tfont-weight: bold;\n\tfont: 16px;\n}\n")
+                .concat(".chartnumbad  {\n\tcolor: #ff0000ff;\n\tfont-weight: bold;\n\tfont: 16px;\n}\n")
+                .concat(".chartnumgood  {\n\tcolor: #00ff00ff;\n\tfont-weight: bold;\n\tfont: 16px;\n}\n")         
+                .concat(".header {\n\tcolor: #ffffffff;\n\tfont: 30px;\n}\n")
+                .concat(".summarytext {\n\tfont: 16px;\n\tcolor: #d3d3d3ff;\n}\n");
         Files.write(Paths.get(outputDirName.concat("/style.css")),
                 s.getBytes(),
                 StandardOpenOption.CREATE);
@@ -471,10 +476,15 @@ public class ChartMapGenerator {
      * @param f helm chart filename
      */
     protected void addChartToIndex(String f) {
-        writeBuffer = writeBuffer.concat("\t\t<li class=\"chartlink\">").concat("<a href=\"./").concat(f).concat("\">").concat(f).concat("</a>").concat(LI_END);
+        writeBuffer = writeBuffer.concat("\t\t<li class=\"chartlink\">")
+                .concat("<a href=\"./")
+                .concat(f).concat("\">")
+                .concat(f).concat("</a>")
+                .concat(LI_END);
         if (f.endsWith(".puml")) {
             String p = f.replace("puml", "png");
-            writeBuffer = writeBuffer.concat("\t\t<li class=\"chartlink\">").concat("<a href=\"./").concat(p).concat("\">").concat(p).concat("</a>").concat(LI_END);
+            writeBuffer = writeBuffer.concat("\t\t<li class=\"chartlink\">").concat("<a href=\"./").concat(p)
+                    .concat("\">").concat(p).concat("</a>").concat(LI_END);
         }
     }
 
@@ -492,12 +502,14 @@ public class ChartMapGenerator {
      */
     protected void addFooterToIndex() throws IOException {
         String s = getDetails();
-        s = s.concat("<hr>Generated on ")
+        s = s.concat("\t\t<hr>\n\t\tGenerated on ")
                 .concat(getCurrentDateTime())
                 .concat(" by ")
                 .concat(ChartMapGenerator.class.getCanonicalName())
                 .concat(" ")
-                .concat("<a href=\"https://github.com/melahn/helm-chartmap-generator\">https://github.com/melahn/helm-chartmap-generator</a>");
+                .concat("<a href=\"https://github.com/melahn/helm-chartmap-generator\">")
+                .concat("https://github.com/melahn/helm-chartmap-generator</a>")
+                .concat("\n\t</div>");
         Files.write(Paths.get(indexFilename),
                 s.getBytes(),
                 StandardOpenOption.APPEND);
@@ -511,17 +523,18 @@ public class ChartMapGenerator {
     protected String getDetails() {
         String s = "";
         if (verbose) {
-            s = s.concat(String.format("<hr><p>Chart versions successfully processed: %s</p>%n", chartCountGood))
-                    .concat(String.format("<p>Chart versions with errors: %s</p>%n", chartCountBad))
-                    .concat(String.format("<p>Total chart versions processed: %s</p>%n%n", chartCount));
+            s = s.concat("\t<hr>\n\t<div class=\"summarytext\">\n")
+                    .concat(String.format("\t\t<p>Chart versions successfully processed: <span class=\"chartnumgood\">%s</span></p>%n", chartCountGood))
+                    .concat(String.format("\t\t<p>Chart versions with errors: <span class=\"chartnumbad\">%s</span></p>%n", chartCountBad))
+                    .concat(String.format("\t\t<p>Total chart versions processed: <span class=\"chartnumall\">%s</span></p>%n", chartCount));
             if (getChartCountBad() > 0) {
                 s = s.concat(
-                        "<p>Here is a list of the chart versions with errors. Consult the <a href=\"./helm-chartmap.log\">output log</a> to see the error messages logged by ChartMap.</p>\n\t<ul>\n");
+                        "\t\t<p>Here is a list of the chart versions with errors. Consult the <a href=\"./helm-chartmap.log\">output log</a> to see the error messages logged by ChartMap.</p>\n\t\t\t<ul>\n");
                 for (int i=0; i < chartsWithErrors.size(); i++) {
-                    s = s.concat("\t\t<li class=\"charterror\">");
+                    s = s.concat("\t\t\t\t<li class=\"charterror\">");
                     s = s.concat(chartsWithErrors.get(i).concat(LI_END));
                 }
-                s = s.concat("\t</ul>\n");
+                s = s.concat("\t\t\t</ul>\n");
             }
         }
         return s;
@@ -534,7 +547,7 @@ public class ChartMapGenerator {
      */
     protected void endIndex () throws IOException {
         addFooterToIndex();
-        String e = "</body>\n</html>";
+        String e = "\n</body>\n</html>";
         Files.write(Paths.get(indexFilename),
                 e.getBytes(),
                 StandardOpenOption.APPEND);
