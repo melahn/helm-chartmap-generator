@@ -7,14 +7,6 @@
   ],
   "children": [
     {
-      "children": [],
-      "name": "common:7.3.0",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.3.0"
-    },
-    {
       "maintainers": [{
         "name": "Bitnami",
         "email": "containers@bitnami.com"
@@ -196,6 +188,14 @@
       "type": "chart",
       "shortName": "kafka",
       "version": "12.20.0"
+    },
+    {
+      "children": [],
+      "name": "common:7.3.0",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.3.0"
     }
   ],
   "name": "alfresco-process-application:7.3.0",

@@ -98,24 +98,6 @@
       "version": "3.0.9"
     },
     {
-      "keywords": [
-        "activemq",
-        "message broker"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "alfresco/alfresco-activemq",
-        "type": "image",
-        "version": "5.16.1"
-      }],
-      "name": "activemq:2.0.0",
-      "description": "A Helm chart Providing Apache ActiveMQ.",
-      "type": "chart",
-      "shortName": "activemq",
-      "version": "2.0.0"
-    },
-    {
       "maintainers": [
         {
           "name": "Bitnami",
@@ -167,6 +149,24 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "10.13.9"
+    },
+    {
+      "keywords": [
+        "activemq",
+        "message broker"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "alfresco/alfresco-activemq",
+        "type": "image",
+        "version": "5.16.1"
+      }],
+      "name": "activemq:2.0.0",
+      "description": "A Helm chart Providing Apache ActiveMQ.",
+      "type": "chart",
+      "shortName": "activemq",
+      "version": "2.0.0"
     },
     {
       "keywords": [

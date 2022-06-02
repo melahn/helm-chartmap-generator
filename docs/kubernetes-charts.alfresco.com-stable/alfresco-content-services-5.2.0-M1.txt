@@ -93,7 +93,7 @@ Chart: alfresco-content-services:5.2.0-M1
 	apiVersion: v2
 	appVersion: Not specified
 	created: Not specified
-	dependencies: activemq:2.0.0, postgresql:10.13.9, common:7.1.0-M16, alfresco-sync-service:3.0.9, alfresco-search:1.0.4
+	dependencies: activemq:2.0.0, postgresql:10.13.9, alfresco-search:1.0.4, common:7.1.0-M16, alfresco-sync-service:3.0.9
 	description: A Helm chart for deploying Alfresco Content Services
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -141,10 +141,10 @@ Chart Dependencies
 alfresco-content-services:5.2.0-M1 depends on activemq:2.0.0
 alfresco-content-services:5.2.0-M1 depends on postgresql:10.13.9
 postgresql:10.13.9 depends on common:1.10.1
-alfresco-content-services:5.2.0-M1 depends on common:7.1.0-M16
-alfresco-content-services:5.2.0-M1 depends on alfresco-sync-service:3.0.9
 alfresco-content-services:5.2.0-M1 depends on alfresco-search:1.0.4
 alfresco-search:1.0.4 depends on alfresco-insight-zeppelin:1.0.3
+alfresco-content-services:5.2.0-M1 depends on common:7.1.0-M16
+alfresco-content-services:5.2.0-M1 depends on alfresco-sync-service:3.0.9
 alfresco-insight-zeppelin:1.0.3 uses quay.io/alfresco/insight-zeppelin:1.4.0
 alfresco-search:1.0.4 uses alfresco/alfresco-search-services:2.0.2
 postgresql:10.13.9 uses docker.io/bitnami/postgresql:13.3.0
@@ -153,11 +153,11 @@ alfresco-content-services:5.2.0-M1 uses quay.io/alfresco/alfresco-transform-rout
 alfresco-content-services:5.2.0-M1 uses alfresco/alfresco-transform-misc:2.5.3
 alfresco-content-services:5.2.0-M1 uses quay.io/alfresco/alfresco-content-repository:7.2.0-M1
 alfresco-content-services:5.2.0-M1 uses alfresco/alfresco-tika:2.5.3
-alfresco-content-services:5.2.0-M1 uses alfresco/alfresco-imagemagick:2.5.3
 alfresco-content-services:5.2.0-M1 uses quay.io/alfresco/alfresco-shared-file-store:0.16.0
+alfresco-content-services:5.2.0-M1 uses alfresco/alfresco-imagemagick:2.5.3
 alfresco-content-services:5.2.0-M1 uses alfresco/alfresco-pdf-renderer:2.5.3
 alfresco-content-services:5.2.0-M1 uses quay.io/alfresco/alfresco-share:7.2.0-M1
 alfresco-content-services:5.2.0-M1 uses alfresco/alfresco-libreoffice:2.5.3
 alfresco-sync-service:3.0.9 uses quay.io/alfresco/service-sync:3.5.0-M1
 
-Generated on 2022/06/01 23:26:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 01:48:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

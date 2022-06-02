@@ -51,7 +51,7 @@ Chart: alfresco-infrastructure:0.1.0
 	apiVersion: v1
 	appVersion: Not specified
 	created: 2020-07-08T12:03:09.490947973Z
-	dependencies: rabbitmq-ha:0.1.1, alfresco-api-gateway:0.1.0, alfresco-keycloak:0.1.0, alfresco-activiti-cloud-registry:0.1.0, activemq:0.1.0
+	dependencies: alfresco-activiti-cloud-registry:0.1.0, rabbitmq-ha:0.1.1, alfresco-keycloak:0.1.0, activemq:0.1.0, alfresco-api-gateway:0.1.0
 	description: A Helm chart Providing the required Alfresco infrastructure. This includes nginx-ingress, activemq, alfresco-api-gateway, alfresco-identity-service, and the content services volume.
 	digest: 54af5ce5dbfad5c6e3fb1cebe2cd15899713a24db00f29524a9acb822f0f980c
 	icon: Not specified
@@ -81,7 +81,7 @@ Chart: alfresco-content-services-community:6.0.5-ea
 	apiVersion: Not specified
 	appVersion: Not specified
 	created: Not specified
-	dependencies: alfresco-infrastructure:0.1.0, postgresql:0.9.3
+	dependencies: postgresql:0.9.3, alfresco-infrastructure:0.1.0
 	description: A Helm chart for deploying Alfresco Content Services Community
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -137,13 +137,13 @@ Image: alfresco/alfresco-search-services:1.1.1
 
 Chart Dependencies
 ------------------
-alfresco-content-services-community:6.0.5-ea depends on alfresco-infrastructure:0.1.0
-alfresco-infrastructure:0.1.0 depends on rabbitmq-ha:0.1.1
-alfresco-infrastructure:0.1.0 depends on alfresco-api-gateway:0.1.0
-alfresco-infrastructure:0.1.0 depends on alfresco-keycloak:0.1.0
-alfresco-infrastructure:0.1.0 depends on alfresco-activiti-cloud-registry:0.1.0
-alfresco-infrastructure:0.1.0 depends on activemq:0.1.0
 alfresco-content-services-community:6.0.5-ea depends on postgresql:0.9.3
+alfresco-content-services-community:6.0.5-ea depends on alfresco-infrastructure:0.1.0
+alfresco-infrastructure:0.1.0 depends on alfresco-activiti-cloud-registry:0.1.0
+alfresco-infrastructure:0.1.0 depends on rabbitmq-ha:0.1.1
+alfresco-infrastructure:0.1.0 depends on alfresco-keycloak:0.1.0
+alfresco-infrastructure:0.1.0 depends on activemq:0.1.0
+alfresco-infrastructure:0.1.0 depends on alfresco-api-gateway:0.1.0
 postgresql:0.9.3 uses postgres:10.1
 alfresco-api-gateway:0.1.0 uses alfresco/alfresco-api-gateway:latest
 alfresco-activiti-cloud-registry:0.1.0 uses activiti/activiti-cloud-registry:latest
@@ -154,4 +154,4 @@ alfresco-content-services-community:6.0.5-ea uses alfresco/alfresco-share:6.0.a
 activemq:0.1.0 uses webcenter/activemq:latest
 rabbitmq-ha:0.1.1 uses rabbitmq:3.7-alpine
 
-Generated on 2022/06/01 23:26:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 01:49:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
