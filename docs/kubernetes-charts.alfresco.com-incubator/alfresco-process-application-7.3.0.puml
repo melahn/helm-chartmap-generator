@@ -9,15 +9,15 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for alfresco-process-application:7.3.0
 
 'There are 9 referenced Helm Charts
-artifact "common:1.4.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_4_1 #DarkSeaGreen
-artifact "common:7.3.0\n====\n\tType: application\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: \n====\n\tKeywords: " as common_7_3_0 #DarkSeaGreen
-artifact "kafka:12.20.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkafka\n\t\tzookeeper\n\t\tstreaming\n\t\tproducer\n\t\tconsumer" as kafka_12_20_0 #Aqua
+artifact "common:1.4.1\n====\n\tType: library\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_4_1 #DarkSeaGreen
+artifact "common:7.3.0\n====\n\tType: application\n====\n\tRepo: https://activiti.github.io/activiti-cloud-helm-charts\n====\n\tMaintainers: \n====\n\tKeywords: " as common_7_3_0 #DarkSeaGreen
+artifact "kafka:12.20.0\n====\n\tType: application\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkafka\n\t\tzookeeper\n\t\tstreaming\n\t\tproducer\n\t\tconsumer" as kafka_12_20_0 #Aqua
 artifact "alfresco-process-application:7.3.0\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tprocess\n\t\talfresco\n\t\tactiviti\n\t\talfresco activiti enterprise" as alfresco_process_application_7_3_0 #LightSeaGreen
-artifact "postgresql:10.3.13\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_10_3_13 #LightSteelBlue
-artifact "common:1.5.2\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_5_2 #DarkSeaGreen
-artifact "rabbitmq:8.20.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\trabbitmq\n\t\tmessage queue\n\t\tAMQP" as rabbitmq_8_20_5 #Aqua
-artifact "common:1.8.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_8_0 #DarkSeaGreen
-artifact "zookeeper:6.7.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: zookeeper" as zookeeper_6_7_4 #LemonChiffon
+artifact "postgresql:10.3.13\n====\n\tType: application\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_10_3_13 #LightSteelBlue
+artifact "common:1.5.2\n====\n\tType: library\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_5_2 #DarkSeaGreen
+artifact "rabbitmq:8.20.5\n====\n\tType: application\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\trabbitmq\n\t\tmessage queue\n\t\tAMQP" as rabbitmq_8_20_5 #Aqua
+artifact "zookeeper:6.7.4\n====\n\tType: application\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: zookeeper" as zookeeper_6_7_4 #LemonChiffon
+artifact "common:1.8.0\n====\n\tType: library\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_8_0 #DarkSeaGreen
 
 'There are 4 referenced Docker Images
 usecase "Image\n====\ndocker.io\n====\nbitnami/kafka:2.8.0-debian-10-r30\n====\n2.8.0-debian-10-r30" as docker_io_bitnami_kafka_2_8_0_debian_10_r30 #LightPink
@@ -26,19 +26,19 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:13.3.0\n====\n13.3.0" 
 usecase "Image\n====\ndocker.io\n====\nbitnami/rabbitmq:3.8.22-debian-10-r0\n====\n3.8.22-debian-10-r0" as docker_io_bitnami_rabbitmq_3_8_22_debian_10_r0 #Beige
 
 'Chart Dependencies
+alfresco_process_application_7_3_0--[#green]-|>kafka_12_20_0
+kafka_12_20_0--[#green]-|>common_1_5_2
+kafka_12_20_0--[#green]-|>zookeeper_6_7_4
+zookeeper_6_7_4--[#green]-|>common_1_5_2
 alfresco_process_application_7_3_0--[#green]-|>rabbitmq_8_20_5
 rabbitmq_8_20_5--[#green]-|>common_1_8_0
 alfresco_process_application_7_3_0--[#green]-|>postgresql_10_3_13
 postgresql_10_3_13--[#green]-|>common_1_4_1
 alfresco_process_application_7_3_0--[#green]-|>common_7_3_0
-alfresco_process_application_7_3_0--[#green]-|>kafka_12_20_0
-kafka_12_20_0--[#green]-|>zookeeper_6_7_4
-zookeeper_6_7_4--[#green]-|>common_1_5_2
-kafka_12_20_0--[#green]-|>common_1_5_2
 kafka_12_20_0--[#orange]-|>docker_io_bitnami_kafka_2_8_0_debian_10_r30
 postgresql_10_3_13--[#orange]-|>docker_io_bitnami_postgresql_13_3_0
 rabbitmq_8_20_5--[#orange]-|>docker_io_bitnami_rabbitmq_3_8_22_debian_10_r0
 zookeeper_6_7_4--[#orange]-|>docker_io_bitnami_zookeeper_3_7_0_debian_10_r56
 
-center footer Generated on 2022/05/30 21:50:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 07:25:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

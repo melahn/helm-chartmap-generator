@@ -20,16 +20,17 @@ Chart: alfresco-process-springboot-service:7.1.0-M11MOCK1
 Chart: common:1.1.36
 	apiVersion: v1
 	appVersion: Not specified
-	created: Not specified
+	created: 2021-07-16T16:09:55.077874+02:00
 	dependencies: None
 	description: A Helm chart for Activiti Cloud Common Templates
-	digest: Not specified
+	digest: e3e5652af7d860f91eb7dc94b63747a28b95a98c26a7f552eb870c560a0b45ca
 	icon: https://salaboy.files.wordpress.com/2018/01/acitiviti_icon_fullcolor_github_400x400.png
 	keywords: Not specified
 	maintainers: Not specified
+	repo url: https://activiti.github.io/activiti-cloud-helm-charts
 	name: common
 	sources: Not specified
-	urls: Not specified
+	urls: https://activiti.github.io/activiti-cloud-helm-charts/common-1.1.36.tgz
 	version: 1.1.36
 
 There is one referenced Docker Image
@@ -41,4 +42,4 @@ Chart Dependencies
 alfresco-process-springboot-service:7.1.0-M11MOCK1 depends on common:1.1.36
 alfresco-process-springboot-service:7.1.0-M11MOCK1 uses activiti/example-runtime-bundle:
 
-Generated on 2022/05/30 21:54:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 07:29:25 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

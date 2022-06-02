@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-activemq\n====\n5.15.8
 'Chart Dependencies
 activemq_1_1_0--[#orange]-|>alfresco_alfresco_activemq_5_15_8_java_8_oracle_centos_7_87b15e37ce8b
 
-center footer Generated on 2022/05/30 21:16:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 06:56:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

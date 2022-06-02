@@ -78,4 +78,4 @@ postgresql:0.11.0 uses postgres:10.1
 hello-world-ui:0.1 uses quay.io/alfresco/anaxes-hello-world-ui:0.1-SNAPSHOT
 hello-world-service:0.1 uses quay.io/alfresco/anaxes-hello-world-service:0.1-SNAPSHOT
 
-Generated on 2022/05/30 21:55:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 07:29:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

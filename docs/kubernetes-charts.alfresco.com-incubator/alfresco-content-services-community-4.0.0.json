@@ -30,6 +30,28 @@
       "version": "6.2.1-A8"
     },
     {
+      "keywords": [
+        "search",
+        "search services",
+        "alfresco search services",
+        "insight",
+        "insight engine",
+        "alfresco insight engine"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "alfresco/alfresco-search-services",
+        "type": "image",
+        "version": "2.0.0"
+      }],
+      "name": "alfresco-search:1.0.3",
+      "description": "A Helm chart for deploying Alfresco Search",
+      "type": "chart",
+      "shortName": "alfresco-search",
+      "version": "1.0.3"
+    },
+    {
       "children": [
         {
           "maintainers": [{"name": "Alfresco"}],
@@ -39,13 +61,23 @@
             "identity-service"
           ],
           "children": [{
-            "maintainers": [{
-              "name": "Bitnami",
-              "email": "containers@bitnami.com"
-            }],
+            "maintainers": [
+              {
+                "name": "unguiculus",
+                "email": "unguiculus@gmail.com"
+              },
+              {
+                "name": "thomasdarimont",
+                "email": "thomas.darimont+github@gmail.com"
+              }
+            ],
             "keywords": [
-              "keycloak",
-              "access-management"
+              "sso",
+              "idm",
+              "openid connect",
+              "saml",
+              "kerberos",
+              "ldap"
             ],
             "children": [
               {
@@ -78,7 +110,7 @@
               }
             ],
             "name": "keycloak:4.3.0",
-            "description": "Keycloak is a high performance Java-based identity and access management solution. It lets developers add an authentication layer to their applications with minimum effort.",
+            "description": "Open Source Identity and Access Management For Modern Applications and Services",
             "type": "chart",
             "shortName": "keycloak",
             "version": "4.3.0"
@@ -154,28 +186,6 @@
       "type": "chart",
       "shortName": "alfresco-infrastructure",
       "version": "4.1.1"
-    },
-    {
-      "keywords": [
-        "search",
-        "search services",
-        "alfresco search services",
-        "insight",
-        "insight engine",
-        "alfresco insight engine"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "alfresco/alfresco-search-services",
-        "type": "image",
-        "version": "2.0.0"
-      }],
-      "name": "alfresco-search:1.0.3",
-      "description": "A Helm chart for deploying Alfresco Search",
-      "type": "chart",
-      "shortName": "alfresco-search",
-      "version": "1.0.3"
     },
     {
       "maintainers": [{"name": "databus23"}],

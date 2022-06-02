@@ -1,22 +1,47 @@
 * {
 	font-family: "Andale Mono";
-	color: #66ff00;
-	background-color: #000000;
+	background-color: #0a0a0aff;
 }
-a:visited {
-	color: #00FFFF;
-}
-.header {
-	font: 30px;
-}
-.charterror {
+a:link {
+	color: #eee3c1ff;
 	font: 16px;
-	color: #FF0000;
+	font-weight: bold;
+}a:visited {
+	color: #2f71e8ff;
+	font: 16px;
+}.charterror {
+	color: #ff0000ff;
+	font: 16px;
 }
 .chartname  {
+	color: #b7d0f1ff;
 	font-weight: bold;
 	font: 16px;
 }
 .chartlink  {
+	color: #b7d0f1ff;
 	font: 16px;
+}
+.chartnumall  {
+	color: #ffffffff;
+	font-weight: bold;
+	font: 16px;
+}
+.chartnumbad  {
+	color: #ff0000ff;
+	font-weight: bold;
+	font: 16px;
+}
+.chartnumgood  {
+	color: #00ff00ff;
+	font-weight: bold;
+	font: 16px;
+}
+.header {
+	color: #ffffffff;
+	font: 30px;
+}
+.summarytext {
+	font: 16px;
+	color: #d3d3d3ff;
 }

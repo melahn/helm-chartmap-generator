@@ -9,7 +9,7 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for alfresco-process-services:0.3.0-A33
 
 'There are 2 referenced Helm Charts
-artifact "postgresql:8.6.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_8_6_4 #LightSteelBlue
+artifact "postgresql:8.6.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_8_6_4 #LightSteelBlue
 artifact "alfresco-process-services:0.3.0-A33\n====\n\tType: application\n====\n\tRepo: https://kubernetes-charts.alfresco.com/incubator\n====\n\tMaintainers: Alfresco\n====\n\tKeywords: " as alfresco_process_services_0_3_0_A33 #Gainsboro
 
 'There are 4 referenced Docker Images
@@ -25,5 +25,5 @@ alfresco_process_services_0_3_0_A33--[#orange]-|>quay_io_alfresco_alfresco_proce
 alfresco_process_services_0_3_0_A33--[#orange]-|>quay_io_alfresco_alfresco_process_workspace_app_1_3_4
 alfresco_process_services_0_3_0_A33--[#orange]-|>quay_io_alfresco_alfresco_process_services_1_11_0
 
-center footer Generated on 2022/05/30 21:54:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 07:29:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
