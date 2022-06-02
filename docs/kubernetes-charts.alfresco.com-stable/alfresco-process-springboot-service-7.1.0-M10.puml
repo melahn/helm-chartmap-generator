@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nactiviti/example-runtime-bundle\n====\n"
 alfresco_process_springboot_service_7_1_0_M10--[#green]-|>common_1_1_36
 alfresco_process_springboot_service_7_1_0_M10--[#orange]-|>activiti_example_runtime_bundle_
 
-center footer Generated on 2022/06/02 01:55:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:03:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
