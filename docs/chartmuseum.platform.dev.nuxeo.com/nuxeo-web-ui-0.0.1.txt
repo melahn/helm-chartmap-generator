@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 nuxeo-web-ui:0.0.1 uses docker.packages.nuxeo.com/nuxeo/nuxeo-web-ui:3.0.0-SNAPSHOT
 
-Generated on 2022/06/02 01:35:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 02:52:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
