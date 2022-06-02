@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 spark:1.0.5 uses docker.io/bitnami/spark:2.4.3-debian-9-r79
 
-Generated on 2022/05/30 23:29:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:33:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

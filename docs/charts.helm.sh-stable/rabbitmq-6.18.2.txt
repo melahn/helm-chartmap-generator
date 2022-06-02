@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 rabbitmq:6.18.2 uses docker.io/bitnami/rabbitmq:3.8.2-debian-10-r41
 
-Generated on 2022/05/30 23:23:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:27:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

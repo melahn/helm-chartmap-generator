@@ -21,5 +21,5 @@ hackmd_2_0_0--[#green]-|>postgresql_8_1_4
 hackmd_2_0_0--[#orange]-|>hackmdio_hackmd_1_3_0_alpine
 postgresql_8_1_4--[#orange]-|>docker_io_bitnami_postgresql_9_6
 
-center footer Generated on 2022/05/30 22:51:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:55:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

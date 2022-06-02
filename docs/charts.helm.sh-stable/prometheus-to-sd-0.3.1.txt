@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-to-sd:0.3.1 uses gcr.io/google-containers/prometheus-to-sd:v0.5.2
 
-Generated on 2022/05/30 23:23:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:26:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

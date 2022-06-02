@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 phpmyadmin:4.3.5 uses docker.io/bitnami/phpmyadmin:5.0.1-debian-10-r47
 
-Generated on 2022/05/30 23:17:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:21:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

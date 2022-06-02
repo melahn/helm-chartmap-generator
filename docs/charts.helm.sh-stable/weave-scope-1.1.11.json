@@ -1,0 +1,83 @@
+{
+  "maintainers": [
+    {
+      "name": "omkensey",
+      "email": "github@orion-com.com"
+    },
+    {
+      "name": "dholbach",
+      "email": "daniel@weave.works"
+    },
+    {
+      "name": "fbarl",
+      "email": "filip@weave.works"
+    },
+    {
+      "name": "bboreham",
+      "email": "bryan@weave.works"
+    }
+  ],
+  "keywords": [
+    "containers",
+    "dashboard",
+    "monitoring"
+  ],
+  "children": [
+    {
+      "maintainers": [{
+        "name": "omkensey",
+        "email": "github@orion-com.com"
+      }],
+      "keywords": [
+        "containers",
+        "dashboard",
+        "monitoring"
+      ],
+      "children": [],
+      "name": "weave-scope-frontend:1.1.10",
+      "description": "A Helm chart for the Weave Scope cluster visualizer frontend.",
+      "type": "chart",
+      "shortName": "weave-scope-frontend",
+      "version": "1.1.10"
+    },
+    {
+      "maintainers": [{
+        "name": "omkensey",
+        "email": "github@orion-com.com"
+      }],
+      "keywords": [
+        "containers",
+        "dashboard",
+        "monitoring"
+      ],
+      "children": [],
+      "name": "weave-scope-cluster-agent:1.1.10",
+      "description": "A Helm chart for the Weave Scope cluster visualizer node agent.",
+      "type": "chart",
+      "shortName": "weave-scope-cluster-agent",
+      "version": "1.1.10"
+    },
+    {
+      "maintainers": [{
+        "name": "omkensey",
+        "email": "github@orion-com.com"
+      }],
+      "keywords": [
+        "containers",
+        "dashboard",
+        "monitoring"
+      ],
+      "children": [],
+      "name": "weave-scope-agent:1.1.10",
+      "description": "A Helm chart for the Weave Scope cluster visualizer node agent.",
+      "type": "chart",
+      "shortName": "weave-scope-agent",
+      "version": "1.1.10"
+    }
+  ],
+  "name": "weave-scope:1.1.11",
+  "description": "A Helm chart for the Weave Scope cluster visualizer.",
+  "type": "chart",
+  "shortName": "weave-scope",
+  "version": "1.1.11"
+}

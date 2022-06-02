@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 ignite:1.2.2 uses apacheignite/ignite:2.7.6
 
-Generated on 2022/05/30 22:54:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:59:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

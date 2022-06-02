@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 centrifugo:3.2.0 uses centrifugo/centrifugo:v2.4.0
 
-Generated on 2022/05/30 22:35:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:40:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

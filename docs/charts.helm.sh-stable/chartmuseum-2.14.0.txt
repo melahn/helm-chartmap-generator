@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 chartmuseum:2.14.0 uses chartmuseum/chartmuseum:v0.12.0
 
-Generated on 2022/05/30 22:36:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:41:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nappscode/swift\n====\n0.7.3" as appscode
 'Chart Dependencies
 swift_0_6_3--[#orange]-|>appscode_swift_0_7_3
 
-center footer Generated on 2022/05/30 23:33:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:36:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -7,14 +7,14 @@
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-server:2.3.0",
+      "name": "jfrog/xray-indexer:2.3.0",
       "type": "image",
       "version": "2.3.0"
     },
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-indexer:2.3.0",
+      "name": "jfrog/xray-server:2.3.0",
       "type": "image",
       "version": "2.3.0"
     },
@@ -31,30 +31,6 @@
       "name": "jfrog/xray-persist:2.3.0",
       "type": "image",
       "version": "2.3.0"
-    },
-    {
-      "maintainers": [
-        {"name": "swordbeta"},
-        {"name": "databus23"}
-      ],
-      "keywords": [
-        "postgresql",
-        "postgres",
-        "database",
-        "sql"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "postgres",
-        "type": "image",
-        "version": "9.6.2"
-      }],
-      "name": "postgresql:0.8.7",
-      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-      "type": "chart",
-      "shortName": "postgresql",
-      "version": "0.8.7"
     },
     {
       "maintainers": [{
@@ -81,6 +57,30 @@
       "type": "chart",
       "shortName": "rabbitmq-ha",
       "version": "1.5.2"
+    },
+    {
+      "maintainers": [
+        {"name": "swordbeta"},
+        {"name": "databus23"}
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "postgres",
+        "type": "image",
+        "version": "9.6.2"
+      }],
+      "name": "postgresql:0.8.7",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "0.8.7"
     },
     {
       "maintainers": [{

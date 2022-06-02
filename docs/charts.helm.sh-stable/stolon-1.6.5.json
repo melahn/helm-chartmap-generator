@@ -1,0 +1,14 @@
+{
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "sorintlab/stolon",
+    "type": "image",
+    "version": "v0.16.0-pg10"
+  }],
+  "name": "stolon:1.6.5",
+  "description": "DEPRECATED - Stolon - PostgreSQL cloud native High Availability.",
+  "type": "chart",
+  "shortName": "stolon",
+  "version": "1.6.5"
+}

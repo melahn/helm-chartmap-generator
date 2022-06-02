@@ -50,4 +50,4 @@ prometheus:11.12.1 uses prom/alertmanager:v0.21.0
 prometheus:11.12.1 uses prom/pushgateway:v1.2.0
 prometheus:11.12.1 uses jimmidyson/configmap-reload:v0.4.0
 
-Generated on 2022/05/30 23:19:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:22:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

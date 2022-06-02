@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\naerospike/aerospike-server\n====\n4.5.0.
 'Chart Dependencies
 aerospike_0_3_4--[#orange]-|>aerospike_aerospike_server_4_5_0_5
 
-center footer Generated on 2022/05/30 22:31:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:36:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

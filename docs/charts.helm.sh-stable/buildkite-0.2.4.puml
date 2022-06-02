@@ -15,5 +15,5 @@ artifact "buildkite:0.2.4\n====\n\tType: application\n====\n\tRepo: https://char
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/30 22:35:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:39:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

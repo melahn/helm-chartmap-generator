@@ -15,5 +15,5 @@ artifact "elastabot:1.2.0\n====\n\tType: application\n====\n\tRepo: https://char
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/30 22:43:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:47:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

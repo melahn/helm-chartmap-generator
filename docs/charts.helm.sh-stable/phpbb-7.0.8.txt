@@ -44,4 +44,4 @@ phpbb:7.0.8 depends on mariadb:7.3.10
 mariadb:7.3.10 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r17
 phpbb:7.0.8 uses docker.io/bitnami/phpbb:3.3.0-debian-10-r25
 
-Generated on 2022/05/30 23:17:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:21:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

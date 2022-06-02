@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 metrics-server:2.11.2 uses k8s.gcr.io/metrics-server-amd64:v0.3.6
 
-Generated on 2022/05/30 23:08:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:11:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

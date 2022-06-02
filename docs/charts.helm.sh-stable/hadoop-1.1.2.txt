@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 hadoop:1.1.2 uses danisla/hadoop:2.9.0
 
-Generated on 2022/05/30 22:51:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:55:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

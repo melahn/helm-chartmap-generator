@@ -25,5 +25,5 @@ wavefront_1_1_1--[#green]-|>common_1_1_4
 wavefront_1_1_1--[#orange]-|>docker_io_bitnami_wavefront_proxy_9_3_0_debian_10_r108
 kube_state_metrics_1_1_3--[#orange]-|>docker_io_bitnami_kube_state_metrics_1_9_7_debian_10_r143
 
-center footer Generated on 2022/05/30 23:37:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:40:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

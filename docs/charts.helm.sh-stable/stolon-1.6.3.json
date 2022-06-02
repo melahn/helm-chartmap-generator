@@ -1,0 +1,24 @@
+{
+  "maintainers": [
+    {
+      "name": "rtluckie",
+      "email": "rluckie@cisco.com"
+    },
+    {
+      "name": "lwolf",
+      "email": "ipaq.lw@gmail.com"
+    }
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "sorintlab/stolon",
+    "type": "image",
+    "version": "v0.16.0-pg10"
+  }],
+  "name": "stolon:1.6.3",
+  "description": "Stolon - PostgreSQL cloud native High Availability.",
+  "type": "chart",
+  "shortName": "stolon",
+  "version": "1.6.3"
+}

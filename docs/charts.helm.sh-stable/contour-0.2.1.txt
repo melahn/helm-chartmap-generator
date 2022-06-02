@@ -28,4 +28,4 @@ Chart Dependencies
 contour:0.2.1 uses gcr.io/heptio-images/contour:v0.15.0
 contour:0.2.1 uses docker.io/envoyproxy/envoy:v1.11.1
 
-Generated on 2022/05/30 22:39:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:43:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -15,5 +15,5 @@ artifact "sumologic-fluentd:2.1.0\n====\n\tType: application\n====\n\tRepo: http
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/30 23:33:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:36:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

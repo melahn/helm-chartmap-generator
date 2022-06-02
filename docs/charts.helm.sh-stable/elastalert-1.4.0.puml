@@ -15,5 +15,5 @@ artifact "elastalert:1.4.0\n====\n\tType: application\n====\n\tRepo: https://cha
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/30 22:43:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:48:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

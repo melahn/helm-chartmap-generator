@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kube-ops-view:1.2.3 uses hjacobs/kube-ops-view:20.4.0
 
-Generated on 2022/05/30 23:01:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:05:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

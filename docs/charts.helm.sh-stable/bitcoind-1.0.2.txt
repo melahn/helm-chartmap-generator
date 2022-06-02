@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 bitcoind:1.0.2 uses arilot/docker-bitcoind:0.17.1
 
-Generated on 2022/05/30 22:34:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:39:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,20 @@
+{
+  "keywords": [
+    "exporter",
+    "metrics",
+    "mongodb",
+    "prometheus"
+  ],
+  "children": [{
+    "repoHost": "Docker Hub",
+    "children": [],
+    "name": "ssheehy/mongodb-exporter",
+    "type": "image",
+    "version": "0.10.0"
+  }],
+  "name": "prometheus-mongodb-exporter:2.8.1",
+  "description": "DEPRECATED A Prometheus exporter for MongoDB metrics",
+  "type": "chart",
+  "shortName": "prometheus-mongodb-exporter",
+  "version": "2.8.1"
+}

@@ -19,6 +19,20 @@
   ],
   "children": [
     {
+      "repoHost": "docker.bintray.io",
+      "children": [],
+      "name": "jfrog/distribution-distribution:1.1.0",
+      "type": "image",
+      "version": "1.1.0"
+    },
+    {
+      "repoHost": "docker.bintray.io",
+      "children": [],
+      "name": "jfrog/distribution-distributor:1.1.0",
+      "type": "image",
+      "version": "1.1.0"
+    },
+    {
       "maintainers": [{
         "name": "bitnami-bot",
         "email": "containers@bitnami.com"
@@ -54,9 +68,9 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mongodb",
+        "name": "bitnami/mongodb:3.6.3",
         "type": "image",
-        "version": "3.6.4"
+        "version": "3.6.3"
       }],
       "name": "mongodb:2.0.5",
       "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",

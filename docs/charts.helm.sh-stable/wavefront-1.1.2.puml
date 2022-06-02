@@ -19,11 +19,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:1.9.7-debian-1
 usecase "Image\n====\ndocker.io\n====\nbitnami/wavefront-proxy:9.5.0-debian-10-r4\n====\n9.5.0-debian-10-r4" as docker_io_bitnami_wavefront_proxy_9_5_0_debian_10_r4 #Cyan
 
 'Chart Dependencies
-wavefront_1_1_2--[#green]-|>common_1_3_7
 wavefront_1_1_2--[#green]-|>kube_state_metrics_1_1_6
 kube_state_metrics_1_1_6--[#green]-|>common_1_2_3
+wavefront_1_1_2--[#green]-|>common_1_3_7
 kube_state_metrics_1_1_6--[#orange]-|>docker_io_bitnami_kube_state_metrics_1_9_7_debian_10_r172
 wavefront_1_1_2--[#orange]-|>docker_io_bitnami_wavefront_proxy_9_5_0_debian_10_r4
 
-center footer Generated on 2022/05/30 23:37:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:40:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

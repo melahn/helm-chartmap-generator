@@ -1,0 +1,21 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for stolon:1.6.4
+
+'There is one referenced Helm Chart
+artifact "stolon:1.6.4\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\trtluckie\n\t\tlwolf\n====\n\tKeywords: " as stolon_1_6_4 #GreenYellow
+
+'There is one referenced Docker Image
+usecase "Image\n====\nDocker Hub\n====\nsorintlab/stolon\n====\nv0.16.0-pg10" as sorintlab_stolon_v0_16_0_pg10 #AntiqueWhite
+
+'Chart Dependencies
+stolon_1_6_4--[#orange]-|>sorintlab_stolon_v0_16_0_pg10
+
+center footer Generated on 2022/06/02 04:35:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

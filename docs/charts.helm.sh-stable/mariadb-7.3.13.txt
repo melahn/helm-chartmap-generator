@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 mariadb:7.3.13 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r27
 
-Generated on 2022/05/30 23:05:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:09:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

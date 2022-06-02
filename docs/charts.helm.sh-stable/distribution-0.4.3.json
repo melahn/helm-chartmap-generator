@@ -1,0 +1,73 @@
+{
+  "keywords": [
+    "distribution",
+    "jfrog"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.bintray.io",
+      "children": [],
+      "name": "jfrog/distribution-distribution:1.1.0",
+      "type": "image",
+      "version": "1.1.0"
+    },
+    {
+      "repoHost": "docker.bintray.io",
+      "children": [],
+      "name": "jfrog/distribution-distributor:1.1.0",
+      "type": "image",
+      "version": "1.1.0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "mongodb",
+        "database",
+        "nosql"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/mongodb:3.6.3",
+        "type": "image",
+        "version": "3.6.3"
+      }],
+      "name": "mongodb:2.0.5",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "type": "chart",
+      "shortName": "mongodb",
+      "version": "2.0.5"
+    },
+    {
+      "maintainers": [{
+        "name": "bitnami-bot",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "bitnami/redis",
+        "type": "image",
+        "version": "4.0.9-r0"
+      }],
+      "name": "redis:1.1.21",
+      "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "1.1.21"
+    }
+  ],
+  "name": "distribution:0.4.3",
+  "description": "DEPRECATED A Helm chart for JFrog Distribution",
+  "type": "chart",
+  "shortName": "distribution",
+  "version": "0.4.3"
+}

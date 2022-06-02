@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kubed:0.3.2 uses appscode/kubed:0.4.0
 
-Generated on 2022/05/30 23:02:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:05:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

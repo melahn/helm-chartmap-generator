@@ -17,5 +17,5 @@ usecase "Image\n====\ngcr.io\n====\nheptio-images/eventrouter:v0.3\n====\nv0.3" 
 'Chart Dependencies
 eventrouter_0_3_0--[#orange]-|>gcr_io_heptio_images_eventrouter_v0_3
 
-center footer Generated on 2022/05/30 22:45:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:50:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

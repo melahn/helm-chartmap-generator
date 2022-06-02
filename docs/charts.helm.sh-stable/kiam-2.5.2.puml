@@ -15,5 +15,5 @@ artifact "kiam:2.5.2\n====\n\tType: application\n====\n\tRepo: https://charts.he
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/30 22:59:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:03:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

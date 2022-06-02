@@ -19,11 +19,11 @@ usecase "Image\n====\nDocker Hub\n====\nzenko/cloudserver\n====\n8.1.5" as zenko
 usecase "Image\n====\nDocker Hub\n====\nmongo\n====\n3.6" as mongo_3_6 #Aqua
 
 'Chart Dependencies
-cloudserver_1_0_6--[#green]-|>redis_ha_4_4_4
 cloudserver_1_0_6--[#green]-|>mongodb_replicaset_3_17_2
+cloudserver_1_0_6--[#green]-|>redis_ha_4_4_4
 redis_ha_4_4_4--[#orange]-|>redis_5_0_6_alpine
 cloudserver_1_0_6--[#orange]-|>zenko_cloudserver_8_1_5
 mongodb_replicaset_3_17_2--[#orange]-|>mongo_3_6
 
-center footer Generated on 2022/05/30 22:37:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:41:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

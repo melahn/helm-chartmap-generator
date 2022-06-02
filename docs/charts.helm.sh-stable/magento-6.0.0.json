@@ -16,25 +16,6 @@
         "name": "Bitnami",
         "email": "containers@bitnami.com"
       }],
-      "keywords": ["elasticsearch"],
-      "children": [{
-        "repoHost": "docker.io",
-        "children": [],
-        "name": "bitnami/elasticsearch:6.7.1",
-        "type": "image",
-        "version": "6.7.1"
-      }],
-      "name": "elasticsearch:4.7.2",
-      "description": "A highly scalable open-source full-text search and analytics engine",
-      "type": "chart",
-      "shortName": "elasticsearch",
-      "version": "4.7.2"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
       "keywords": [
         "mariadb",
         "mysql",
@@ -54,6 +35,25 @@
       "type": "chart",
       "shortName": "mariadb",
       "version": "5.11.3"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": ["elasticsearch"],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/elasticsearch:6.7.1",
+        "type": "image",
+        "version": "6.7.1"
+      }],
+      "name": "elasticsearch:4.7.2",
+      "description": "A highly scalable open-source full-text search and analytics engine",
+      "type": "chart",
+      "shortName": "elasticsearch",
+      "version": "4.7.2"
     }
   ],
   "name": "magento:6.0.0",

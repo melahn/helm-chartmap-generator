@@ -18,10 +18,10 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/elasticsearch:6.7.1\n====\n6.7.1"
 usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.1.40\n====\n10.1.40" as docker_io_bitnami_mariadb_10_1_40 #DarkGoldenRod
 
 'Chart Dependencies
-magento_6_0_0--[#green]-|>elasticsearch_4_7_2
 magento_6_0_0--[#green]-|>mariadb_5_11_3
+magento_6_0_0--[#green]-|>elasticsearch_4_7_2
 mariadb_5_11_3--[#orange]-|>docker_io_bitnami_mariadb_10_1_40
 elasticsearch_4_7_2--[#orange]-|>docker_io_bitnami_elasticsearch_6_7_1
 
-center footer Generated on 2022/05/30 23:05:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:08:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

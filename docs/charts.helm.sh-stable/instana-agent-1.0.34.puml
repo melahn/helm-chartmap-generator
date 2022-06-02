@@ -15,5 +15,5 @@ artifact "instana-agent:1.0.34\n====\n\tType: application\n====\n\tRepo: https:/
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/30 22:56:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:00:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

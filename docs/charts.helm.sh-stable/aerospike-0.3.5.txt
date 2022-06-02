@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 aerospike:0.3.5 uses aerospike/aerospike-server:4.5.0.5
 
-Generated on 2022/05/30 22:31:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:36:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

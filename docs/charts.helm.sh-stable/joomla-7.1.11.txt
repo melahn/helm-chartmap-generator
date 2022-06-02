@@ -46,4 +46,4 @@ mariadb:7.3.14 uses docker.io/bitnami/mariadb:10.1.44-debian-10-r39
 mariadb:7.3.14 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r44
 joomla:7.1.11 uses docker.io/bitnami/joomla:3.9.16-debian-10-r2
 
-Generated on 2022/05/30 22:57:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:01:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

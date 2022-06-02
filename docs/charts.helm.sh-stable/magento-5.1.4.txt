@@ -42,4 +42,4 @@ Chart Dependencies
 magento:5.1.4 depends on mariadb:5.11.3
 mariadb:5.11.3 uses docker.io/bitnami/mariadb:10.1.40
 
-Generated on 2022/05/30 23:05:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:08:53 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

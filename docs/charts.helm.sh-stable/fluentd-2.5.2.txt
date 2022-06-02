@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 fluentd:2.5.2 uses gcr.io/google-containers/fluentd-elasticsearch:v2.4.0
 
-Generated on 2022/05/30 22:47:27 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:51:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

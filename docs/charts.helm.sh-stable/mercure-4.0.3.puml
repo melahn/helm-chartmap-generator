@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ndunglas/mercure\n====\nv0.10" as dunglas
 'Chart Dependencies
 mercure_4_0_3--[#orange]-|>dunglas_mercure_v0_10
 
-center footer Generated on 2022/05/30 23:07:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:10:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

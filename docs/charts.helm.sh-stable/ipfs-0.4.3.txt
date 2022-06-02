@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 ipfs:0.4.3 uses ipfs/go-ipfs:v0.4.22
 
-Generated on 2022/05/30 22:56:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:00:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

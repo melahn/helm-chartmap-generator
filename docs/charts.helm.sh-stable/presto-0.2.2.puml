@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nprestosql/presto\n====\n329" as prestosq
 'Chart Dependencies
 presto_0_2_2--[#orange]-|>prestosql_presto_329
 
-center footer Generated on 2022/05/30 23:18:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:22:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

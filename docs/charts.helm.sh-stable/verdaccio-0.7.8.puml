@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nverdaccio/verdaccio\n====\n3.11.6" as ve
 'Chart Dependencies
 verdaccio_0_7_8--[#orange]-|>verdaccio_verdaccio_3_11_6
 
-center footer Generated on 2022/05/30 23:36:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:40:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

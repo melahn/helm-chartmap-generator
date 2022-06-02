@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nmetabase/metabase\n====\nv0.36.3" as met
 'Chart Dependencies
 metabase_0_13_1--[#orange]-|>metabase_metabase_v0_36_3
 
-center footer Generated on 2022/05/30 23:07:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:11:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

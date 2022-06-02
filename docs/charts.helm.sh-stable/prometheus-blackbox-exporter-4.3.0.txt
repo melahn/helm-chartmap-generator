@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-blackbox-exporter:4.3.0 uses prom/blackbox-exporter:v0.16.0
 
-Generated on 2022/05/30 23:19:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:23:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

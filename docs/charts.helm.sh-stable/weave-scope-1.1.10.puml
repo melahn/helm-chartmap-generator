@@ -8,12 +8,18 @@ skinparam artifactArrowColor LightSlateGray
 
 title Chart Map for weave-scope:1.1.10
 
-'There is one referenced Helm Chart
-artifact "weave-scope:1.1.10\n====\n\tweave-scope\n====\n\t1.1.10\n====\n\thttps://kubernetes-charts.storage.googleapis.com\n====\n\tMaintainers: omkensey, dholbach, fbarl, bboreham\n====\n\tKeywords: containers\ndashboard\nmonitoring" as weave_scope_1_1_10 #Lavender
+'There are 4 referenced Helm Charts
+artifact "weave-scope-cluster-agent:1.1.10\n====\n\tType: application\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: omkensey\n====\n\tKeywords: \n\t\tcontainers\n\t\tdashboard\n\t\tmonitoring" as weave_scope_cluster_agent_1_1_10 #DeepSkyBlue
+artifact "weave-scope-frontend:1.1.10\n====\n\tType: application\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: omkensey\n====\n\tKeywords: \n\t\tcontainers\n\t\tdashboard\n\t\tmonitoring" as weave_scope_frontend_1_1_10 #LightCyan
+artifact "weave-scope:1.1.10\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tomkensey\n\t\tdholbach\n\t\tfbarl\n\t\tbboreham\n====\n\tKeywords: \n\t\tcontainers\n\t\tdashboard\n\t\tmonitoring" as weave_scope_1_1_10 #Lavender
+artifact "weave-scope-agent:1.1.10\n====\n\tType: application\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: omkensey\n====\n\tKeywords: \n\t\tcontainers\n\t\tdashboard\n\t\tmonitoring" as weave_scope_agent_1_1_10 #Chocolate
 
 'There are 0 referenced Docker Images
 
 'Chart Dependencies
+weave_scope_1_1_10--[#green]-|>weave_scope_frontend_1_1_10
+weave_scope_1_1_10--[#green]-|>weave_scope_cluster_agent_1_1_10
+weave_scope_1_1_10--[#green]-|>weave_scope_agent_1_1_10
 
-center footer Generated on 2020/04/26 14:03:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:41:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

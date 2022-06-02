@@ -22,14 +22,14 @@ usecase "Image\n====\nDocker Hub\n====\ngrafana/grafana\n====\n7.0.3" as grafana
 usecase "Image\n====\nDocker Hub\n====\nsquareup/ghostunnel\n====\nv1.5.2" as squareup_ghostunnel_v1_5_2 #LightPink
 
 'Chart Dependencies
-prometheus_operator_9_3_0--[#green]-|>kube_state_metrics_2_8_10
 prometheus_operator_9_3_0--[#green]-|>grafana_5_3_0
 prometheus_operator_9_3_0--[#green]-|>prometheus_node_exporter_1_10_0
+prometheus_operator_9_3_0--[#green]-|>kube_state_metrics_2_8_10
 grafana_5_3_0--[#orange]-|>kiwigrid_k8s_sidecar_0_1_151
 grafana_5_3_0--[#orange]-|>grafana_grafana_7_0_3
 kube_state_metrics_2_8_10--[#orange]-|>quay_io_coreos_kube_state_metrics_v1_9_7
 prometheus_operator_9_3_0--[#orange]-|>squareup_ghostunnel_v1_5_2
 prometheus_operator_9_3_0--[#orange]-|>quay_io_coreos_prometheus_operator_v0_38_1
 
-center footer Generated on 2022/05/30 23:21:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:25:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

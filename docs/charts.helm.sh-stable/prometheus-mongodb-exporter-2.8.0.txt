@@ -1,0 +1,29 @@
+Chart Map for prometheus-mongodb-exporter:2.8.0
+
+There is one referenced Helm Chart
+----------------------------------
+Chart: prometheus-mongodb-exporter:2.8.0
+	apiVersion: v1
+	appVersion: v0.10.0
+	created: Not specified
+	dependencies: None
+	description: A Prometheus exporter for MongoDB metrics
+	digest: Not specified
+	icon: Not specified
+	keywords: exporter,metrics,mongodb,prometheus
+	maintainers: steven-sheehy:ssheehy@firescope.com
+	repo url: https://charts.helm.sh/stable
+	name: prometheus-mongodb-exporter
+	sources: https://github.com/percona/mongodb_exporter
+	urls: Not specified
+	version: 2.8.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: ssheehy/mongodb-exporter:0.10.0
+
+Chart Dependencies
+------------------
+prometheus-mongodb-exporter:2.8.0 uses ssheehy/mongodb-exporter:0.10.0
+
+Generated on 2022/06/02 04:24:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

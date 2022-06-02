@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 quassel:0.2.11 uses linuxserver/quassel-core:0.13.1-ls33
 
-Generated on 2022/05/30 23:23:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:26:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

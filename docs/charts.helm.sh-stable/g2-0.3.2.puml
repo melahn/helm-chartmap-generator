@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nappscode/gearmand\n====\n0.5.0" as appsc
 'Chart Dependencies
 g2_0_3_2--[#orange]-|>appscode_gearmand_0_5_0
 
-center footer Generated on 2022/05/30 22:47:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:52:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

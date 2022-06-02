@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/phpmyadmin:5.0.1-debian-10-r30\n=
 'Chart Dependencies
 phpmyadmin_4_3_4--[#orange]-|>docker_io_bitnami_phpmyadmin_5_0_1_debian_10_r30
 
-center footer Generated on 2022/05/30 23:17:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:21:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

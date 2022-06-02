@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 locust:1.2.1 uses greenbirdit/locust:0.9.0
 
-Generated on 2022/05/30 23:04:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:08:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

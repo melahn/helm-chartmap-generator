@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nmemcached\n====\n1.5.19-alpine" as memca
 mcrouter_1_0_3--[#green]-|>memcached_3_1_0
 memcached_3_1_0--[#orange]-|>memcached_1_5_19_alpine
 
-center footer Generated on 2022/05/30 23:06:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:10:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

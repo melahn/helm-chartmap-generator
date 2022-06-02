@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prisma:1.2.3 uses prismagraphql/prisma:1.29.1-heroku
 
-Generated on 2022/05/30 23:19:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:22:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

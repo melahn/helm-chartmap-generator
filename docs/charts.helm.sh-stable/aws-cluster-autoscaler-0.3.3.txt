@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 aws-cluster-autoscaler:0.3.3 uses k8s.gcr.io/cluster-autoscaler:v0.6.1
 
-Generated on 2022/05/30 22:34:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:38:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

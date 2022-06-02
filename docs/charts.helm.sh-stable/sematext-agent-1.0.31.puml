@@ -15,5 +15,5 @@ artifact "sematext-agent:1.0.31\n====\n\tType: application\n====\n\tRepo: https:
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/30 23:27:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:30:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

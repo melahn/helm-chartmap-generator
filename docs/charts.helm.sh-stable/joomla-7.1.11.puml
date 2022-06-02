@@ -23,5 +23,5 @@ mariadb_7_3_14--[#orange]-|>docker_io_bitnami_mariadb_10_1_44_debian_10_r39
 mariadb_7_3_14--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r44
 joomla_7_1_11--[#orange]-|>docker_io_bitnami_joomla_3_9_16_debian_10_r2
 
-center footer Generated on 2022/05/30 22:57:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:01:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

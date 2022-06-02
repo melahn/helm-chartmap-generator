@@ -21,7 +21,7 @@ Chart: wavefront:1.1.1
 	apiVersion: v2
 	appVersion: 1.2.6
 	created: Not specified
-	dependencies: kube-state-metrics:1.1.3, common:1.1.4
+	dependencies: common:1.1.4, kube-state-metrics:1.1.3
 	description: Chart for Wavefront Collector for Kubernetes
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/wavefront-collector/img/wavefront-collector-stack-110x117.png
@@ -70,10 +70,10 @@ Image: docker.io/bitnami/kube-state-metrics:1.9.7-debian-10-r143
 
 Chart Dependencies
 ------------------
+wavefront:1.1.1 depends on common:1.1.4
 wavefront:1.1.1 depends on kube-state-metrics:1.1.3
 kube-state-metrics:1.1.3 depends on common:1.1.2
-wavefront:1.1.1 depends on common:1.1.4
 wavefront:1.1.1 uses docker.io/bitnami/wavefront-proxy:9.3.0-debian-10-r108
 kube-state-metrics:1.1.3 uses docker.io/bitnami/kube-state-metrics:1.9.7-debian-10-r143
 
-Generated on 2022/05/30 23:37:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:40:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

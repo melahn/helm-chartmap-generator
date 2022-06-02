@@ -22,10 +22,10 @@ usecase "Image\n====\nDocker Hub\n====\nprom/prometheus\n====\nv2.20.1" as prom_
 'Chart Dependencies
 prometheus_11_12_0--[#green]-|>kube_state_metrics_2_8_14
 prometheus_11_12_0--[#orange]-|>prom_prometheus_v2_20_1
-prometheus_11_12_0--[#orange]-|>prom_alertmanager_v0_21_0
 prometheus_11_12_0--[#orange]-|>prom_pushgateway_v1_2_0
+prometheus_11_12_0--[#orange]-|>prom_alertmanager_v0_21_0
 prometheus_11_12_0--[#orange]-|>jimmidyson_configmap_reload_v0_4_0
 kube_state_metrics_2_8_14--[#orange]-|>quay_io_coreos_kube_state_metrics_v1_9_7
 
-center footer Generated on 2022/05/30 23:19:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:22:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

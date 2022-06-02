@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 tensorflow-serving:1.1.1 uses cheyang/tf-model-server:1.4
 
-Generated on 2022/05/30 23:34:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 04:37:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

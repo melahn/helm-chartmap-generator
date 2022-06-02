@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nprom/pushgateway\n====\nv1.2.0" as prom_
 'Chart Dependencies
 prometheus_pushgateway_1_4_1--[#orange]-|>prom_pushgateway_v1_2_0
 
-center footer Generated on 2022/05/30 23:22:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 04:25:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
