@@ -36,7 +36,7 @@ Chart: wavefront-prometheus-storage-adapter:1.1.7
 	apiVersion: v2
 	appVersion: 1.0.5
 	created: Not specified
-	dependencies: common:1.14.1, wavefront:3.4.2
+	dependencies: wavefront:3.4.2, common:1.14.1
 	description: Wavefront Storage Adapter is a Prometheus integration to transfer metrics from Prometheus to Wavefront. It lets you save Prometheus data in Wavefront without changing your existing Prometheus setup.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/wavefront-prometheus-storage-adapter/img/wavefront-prometheus-storage-adapter-stack-220x234.png
@@ -101,13 +101,13 @@ Image: docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r42
 
 Chart Dependencies
 ------------------
-wavefront-prometheus-storage-adapter:1.1.7 depends on common:1.14.1
 wavefront-prometheus-storage-adapter:1.1.7 depends on wavefront:3.4.2
 wavefront:3.4.2 depends on common:1.13.1
 wavefront:3.4.2 depends on kube-state-metrics:2.2.19
 kube-state-metrics:2.2.19 depends on common:1.13.0
+wavefront-prometheus-storage-adapter:1.1.7 depends on common:1.14.1
 wavefront-prometheus-storage-adapter:1.1.7 uses docker.io/bitnami/wavefront-prometheus-storage-adapter:1.0.5-debian-10-r180
 kube-state-metrics:2.2.19 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r42
 wavefront:3.4.2 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r39
 
-Generated on 2022/05/30 22:29:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:34:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

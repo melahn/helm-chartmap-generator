@@ -21,15 +21,15 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kong-ingress-controller:2.3.1-deb
 usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:11.16.0-debian-10-r13\n====\n11.16.0-debian-10-r13" as docker_io_bitnami_postgresql_11_16_0_debian_10_r13 #DarkSalmon
 
 'Chart Dependencies
+kong_6_3_1--[#green]-|>common_1_14_1
 kong_6_3_1--[#green]-|>postgresql_11_4_0
 postgresql_11_4_0--[#green]-|>common_1_14_1
 kong_6_3_1--[#green]-|>cassandra_9_2_0
 cassandra_9_2_0--[#green]-|>common_1_14_1
-kong_6_3_1--[#green]-|>common_1_14_1
 postgresql_11_4_0--[#orange]-|>docker_io_bitnami_postgresql_11_16_0_debian_10_r13
 cassandra_9_2_0--[#orange]-|>docker_io_bitnami_cassandra_4_0_4_debian_10_r3
 kong_6_3_1--[#orange]-|>docker_io_bitnami_kong_2_8_1_debian_10_r50
 kong_6_3_1--[#orange]-|>docker_io_bitnami_kong_ingress_controller_2_3_1_debian_10_r46
 
-center footer Generated on 2022/05/30 22:13:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:19:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

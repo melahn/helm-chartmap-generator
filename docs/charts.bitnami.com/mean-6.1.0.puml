@@ -18,10 +18,10 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/node:8.12.0-prod\n====\n8.12.0-pr
 usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:4.0.6\n====\n4.0.6" as docker_io_bitnami_mongodb_4_0_6 #Bisque
 
 'Chart Dependencies
-mean_6_1_0--[#green]-|>mongodb_5_6_0
 mean_6_1_0--[#green]-|>bitnami_common_0_0_5
+mean_6_1_0--[#green]-|>mongodb_5_6_0
 mongodb_5_6_0--[#orange]-|>docker_io_bitnami_mongodb_4_0_6
 mean_6_1_0--[#orange]-|>docker_io_bitnami_node_8_12_0_prod
 
-center footer Generated on 2022/05/30 22:16:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:21:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

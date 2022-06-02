@@ -42,4 +42,4 @@ Chart Dependencies
 contour-operator:1.2.0 depends on common:1.13.0
 contour-operator:1.2.0 uses docker.io/bitnami/contour-operator:1.20.1-scratch-r5
 
-Generated on 2022/05/30 22:02:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:08:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

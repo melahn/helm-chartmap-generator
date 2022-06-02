@@ -44,4 +44,4 @@ rabbitmq-cluster-operator:2.6.3 depends on common:1.14.1
 rabbitmq-cluster-operator:2.6.3 uses docker.io/bitnami/rmq-messaging-topology-operator:1.6.0-scratch-r0
 rabbitmq-cluster-operator:2.6.3 uses docker.io/bitnami/rabbitmq-cluster-operator:1.13.1-scratch-r0
 
-Generated on 2022/05/30 22:24:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:29:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

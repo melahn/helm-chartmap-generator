@@ -61,4 +61,4 @@ postgresql:11.2.6 depends on common:1.14.1
 postgresql:11.2.6 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r8
 odoo:21.3.6 uses docker.io/bitnami/odoo:15.0.20220510-debian-10-r12
 
-Generated on 2022/05/30 22:20:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:26:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -15,5 +15,5 @@ artifact "bitnami-common:0.0.5\n====\n\tType: application\n====\n\tRepo: https:/
 
 'Chart Dependencies
 
-center footer Generated on 2022/05/30 22:01:06 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:07:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

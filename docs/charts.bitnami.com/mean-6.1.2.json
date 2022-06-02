@@ -22,26 +22,6 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
-        "helper",
-        "template",
-        "bitnami",
-        "broker",
-        "service",
-        "catalog"
-      ],
-      "children": [],
-      "name": "bitnami-common:0.0.5",
-      "description": "Chart with custom tempaltes used in Bitnami charts.",
-      "type": "chart",
-      "shortName": "bitnami-common",
-      "version": "0.0.5"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
         "mongodb",
         "database",
         "nosql",
@@ -61,6 +41,26 @@
       "type": "chart",
       "shortName": "mongodb",
       "version": "5.6.0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "helper",
+        "template",
+        "bitnami",
+        "broker",
+        "service",
+        "catalog"
+      ],
+      "children": [],
+      "name": "bitnami-common:0.0.5",
+      "description": "Chart with custom tempaltes used in Bitnami charts.",
+      "type": "chart",
+      "shortName": "bitnami-common",
+      "version": "0.0.5"
     }
   ],
   "name": "mean:6.1.2",

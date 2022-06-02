@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/rabbitmq:3.10.2-debian-10-r7\n===
 rabbitmq_10_0_1--[#green]-|>common_1_14_1
 rabbitmq_10_0_1--[#orange]-|>docker_io_bitnami_rabbitmq_3_10_2_debian_10_r7
 
-center footer Generated on 2022/05/30 22:24:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:29:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

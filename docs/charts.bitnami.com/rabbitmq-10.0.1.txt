@@ -42,4 +42,4 @@ Chart Dependencies
 rabbitmq:10.0.1 depends on common:1.14.1
 rabbitmq:10.0.1 uses docker.io/bitnami/rabbitmq:3.10.2-debian-10-r7
 
-Generated on 2022/05/30 22:24:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:29:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

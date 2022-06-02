@@ -26,5 +26,5 @@ memcached_6_0_22--[#orange]-|>docker_io_bitnami_memcached_1_6_15_debian_10_r50
 grafana_loki_2_0_2--[#orange]-|>docker_io_bitnami_nginx_1_21_6_debian_10_r117
 grafana_loki_2_0_2--[#orange]-|>docker_io_bitnami_grafana_loki_2_5_0_debian_10_r12
 
-center footer Generated on 2022/05/30 22:08:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:14:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

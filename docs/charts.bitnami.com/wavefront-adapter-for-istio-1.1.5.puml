@@ -22,14 +22,14 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/wavefront-adapter-for-istio:0.1.5
 usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:2.4.2-debian-10-r42\n====\n2.4.2-debian-10-r42" as docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r42 #CornflowerBlue
 
 'Chart Dependencies
+wavefront_adapter_for_istio_1_1_5--[#green]-|>common_1_14_0
 wavefront_adapter_for_istio_1_1_5--[#green]-|>wavefront_3_4_2
-wavefront_3_4_2--[#green]-|>common_1_13_1
 wavefront_3_4_2--[#green]-|>kube_state_metrics_2_2_19
 kube_state_metrics_2_2_19--[#green]-|>common_1_13_0
-wavefront_adapter_for_istio_1_1_5--[#green]-|>common_1_14_0
+wavefront_3_4_2--[#green]-|>common_1_13_1
 wavefront_adapter_for_istio_1_1_5--[#orange]-|>docker_io_bitnami_wavefront_adapter_for_istio_0_1_5_debian_10_r394
 kube_state_metrics_2_2_19--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r42
 wavefront_3_4_2--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_0_0_debian_10_r39
 
-center footer Generated on 2022/05/30 22:29:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:34:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

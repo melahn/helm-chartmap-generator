@@ -6,7 +6,7 @@ Chart: magento:20.1.5
 	apiVersion: v2
 	appVersion: 2.4.4
 	created: Not specified
-	dependencies: mariadb:11.0.8, common:1.14.1, elasticsearch:18.2.2
+	dependencies: common:1.14.1, elasticsearch:18.2.2, mariadb:11.0.8
 	description: Magento is a powerful open source e-commerce platform. With easy customizations and rich features, it allows retailers to grow their online businesses in a cost-effective way.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/magento/img/magento-stack-220x234.png
@@ -85,14 +85,14 @@ Image: docker.io/bitnami/mariadb:10.4.25-debian-10-r3
 
 Chart Dependencies
 ------------------
-magento:20.1.5 depends on mariadb:11.0.8
-mariadb:11.0.8 depends on common:1.14.1
 magento:20.1.5 depends on common:1.14.1
 magento:20.1.5 depends on elasticsearch:18.2.2
 elasticsearch:18.2.2 depends on common:1.14.1
 elasticsearch:18.2.2 depends on kibana:10.1.6
 kibana:10.1.6 depends on common:1.14.1
+magento:20.1.5 depends on mariadb:11.0.8
+mariadb:11.0.8 depends on common:1.14.1
 elasticsearch:18.2.2 uses docker.io/bitnami/elasticsearch:7.17.4-debian-10-r0
 mariadb:11.0.8 uses docker.io/bitnami/mariadb:10.4.25-debian-10-r3
 
-Generated on 2022/05/30 22:15:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:20:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -63,4 +63,4 @@ jupyterhub:1.3.1 uses docker.io/bitnami/configurable-http-proxy:4.5.1-debian-10-
 jupyterhub:1.3.1 uses docker.io/bitnami/jupyterhub:1.5.0-debian-10-r170
 postgresql:11.4.0 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r13
 
-Generated on 2022/05/30 22:11:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:17:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

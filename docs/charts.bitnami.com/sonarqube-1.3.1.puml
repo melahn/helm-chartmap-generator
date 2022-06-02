@@ -18,11 +18,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/sonarqube:9.4.0-debian-10-r23\n==
 usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.3.0-debian-10-r8\n====\n14.3.0-debian-10-r8" as docker_io_bitnami_postgresql_14_3_0_debian_10_r8 #DarkSalmon
 
 'Chart Dependencies
+sonarqube_1_3_1--[#green]-|>common_1_14_1
 sonarqube_1_3_1--[#green]-|>postgresql_11_2_6
 postgresql_11_2_6--[#green]-|>common_1_14_1
-sonarqube_1_3_1--[#green]-|>common_1_14_1
 sonarqube_1_3_1--[#orange]-|>docker_io_bitnami_sonarqube_9_4_0_debian_10_r23
 postgresql_11_2_6--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_10_r8
 
-center footer Generated on 2022/05/30 22:26:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:31:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

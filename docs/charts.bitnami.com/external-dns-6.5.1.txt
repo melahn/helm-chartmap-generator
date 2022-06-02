@@ -42,4 +42,4 @@ Chart Dependencies
 external-dns:6.5.1 depends on common:1.14.1
 external-dns:6.5.1 uses docker.io/bitnami/external-dns:0.12.0-debian-10-r2
 
-Generated on 2022/05/30 22:06:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:12:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

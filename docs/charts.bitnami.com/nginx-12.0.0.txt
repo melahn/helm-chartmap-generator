@@ -42,4 +42,4 @@ Chart Dependencies
 nginx:12.0.0 depends on common:1.14.1
 nginx:12.0.0 uses docker.io/bitnami/nginx:1.22.0-debian-10-r0
 
-Generated on 2022/05/30 22:19:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:24:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -6,7 +6,7 @@ Chart: grafana-loki:2.0.3
 	apiVersion: v2
 	appVersion: 2.5.0
 	created: Not specified
-	dependencies: memcached:6.0.22, common:1.14.1
+	dependencies: common:1.14.1, memcached:6.0.22
 	description: Grafana Loki is a horizontally scalable, highly available, and multi-tenant log aggregation system. It provides real-time long tailing and full persistence to object storage.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/grafana-loki/img/grafana-loki-stack-220x234.png
@@ -56,11 +56,11 @@ Image: docker.io/bitnami/grafana-loki:2.5.0-debian-10-r12
 
 Chart Dependencies
 ------------------
+grafana-loki:2.0.3 depends on common:1.14.1
 grafana-loki:2.0.3 depends on memcached:6.0.22
 memcached:6.0.22 depends on common:1.14.1
-grafana-loki:2.0.3 depends on common:1.14.1
 grafana-loki:2.0.3 uses docker.io/bitnami/nginx:1.21.6-debian-10-r117
 grafana-loki:2.0.3 uses docker.io/bitnami/grafana-loki:2.5.0-debian-10-r12
 memcached:6.0.22 uses docker.io/bitnami/memcached:1.6.15-debian-10-r50
 
-Generated on 2022/05/30 22:08:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:14:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

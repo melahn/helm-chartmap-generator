@@ -22,12 +22,12 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/redmine:5.0.1-debian-10-r9\n====\
 'Chart Dependencies
 redmine_20_2_2--[#green]-|>postgresql_11_4_0
 postgresql_11_4_0--[#green]-|>common_1_14_1
-redmine_20_2_2--[#green]-|>common_1_14_1
 redmine_20_2_2--[#green]-|>mariadb_11_0_8
 mariadb_11_0_8--[#green]-|>common_1_14_1
+redmine_20_2_2--[#green]-|>common_1_14_1
 postgresql_11_4_0--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_10_r13
 redmine_20_2_2--[#orange]-|>docker_io_bitnami_redmine_5_0_1_debian_10_r9
 mariadb_11_0_8--[#orange]-|>docker_io_bitnami_mariadb_10_6_8_debian_10_r0
 
-center footer Generated on 2022/05/30 22:25:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:30:42 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

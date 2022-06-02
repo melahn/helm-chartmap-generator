@@ -22,16 +22,16 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/airflow-scheduler:2.3.0-debian-10
 usecase "Image\n====\ndocker.io\n====\nbitnami/airflow:2.3.0-debian-10-r6\n====\n2.3.0-debian-10-r6" as docker_io_bitnami_airflow_2_3_0_debian_10_r6 #LightGoldenRodYellow
 
 'Chart Dependencies
-airflow_12_4_0--[#green]-|>common_1_14_1
-airflow_12_4_0--[#green]-|>postgresql_11_3_0
-postgresql_11_3_0--[#green]-|>common_1_14_1
 airflow_12_4_0--[#green]-|>redis_16_9_11
 redis_16_9_11--[#green]-|>common_1_14_1
+airflow_12_4_0--[#green]-|>postgresql_11_3_0
+postgresql_11_3_0--[#green]-|>common_1_14_1
+airflow_12_4_0--[#green]-|>common_1_14_1
 airflow_12_4_0--[#orange]-|>docker_io_bitnami_airflow_scheduler_2_3_0_debian_10_r21
-airflow_12_4_0--[#orange]-|>docker_io_bitnami_airflow_2_3_0_debian_10_r6
 airflow_12_4_0--[#orange]-|>docker_io_bitnami_airflow_worker_2_3_0_debian_10_r21
+airflow_12_4_0--[#orange]-|>docker_io_bitnami_airflow_2_3_0_debian_10_r6
 postgresql_11_3_0--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_10_r13
 redis_16_9_11--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r23
 
-center footer Generated on 2022/05/30 21:59:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:06:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -61,4 +61,4 @@ oauth2-proxy:2.1.4 depends on common:1.14.1
 oauth2-proxy:2.1.4 uses docker.io/bitnami/oauth2-proxy:7.2.1-debian-10-r150
 redis:16.9.11 uses docker.io/bitnami/redis:6.2.7-debian-10-r23
 
-Generated on 2022/05/30 22:20:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:25:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

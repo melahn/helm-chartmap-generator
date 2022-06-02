@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/logstash:8.2.2-debian-10-r0\n====
 logstash_5_0_6--[#green]-|>common_1_14_1
 logstash_5_0_6--[#orange]-|>docker_io_bitnami_logstash_8_2_2_debian_10_r0
 
-center footer Generated on 2022/05/30 22:14:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:20:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

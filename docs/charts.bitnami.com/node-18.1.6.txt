@@ -1,0 +1,64 @@
+Chart Map for node:18.1.6
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: mongodb:12.1.11
+	apiVersion: v2
+	appVersion: 5.0.8
+	created: 2022-05-23T12:57:58.11503412Z
+	dependencies: common:1.14.1
+	description: MongoDB(R) is a relational open source NoSQL database. Easy to use, it stores data in JSON-like documents. Automated scalability and high-performance. Ideal for developing cloud native applications.
+	digest: sha256:684a023b1c93bb59790266f5ca163bf2907e9ca7662f54f208745ca48efa23ec
+	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+	keywords: mongodb,database,nosql,cluster,replicaset,replication
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: mongodb
+	sources: https://github.com/bitnami/bitnami-docker-mongodb,https://mongodb.org
+	urls: https://charts.bitnami.com/bitnami/mongodb-12.1.11.tgz
+	version: 12.1.11
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+Chart: node:18.1.6
+	apiVersion: v2
+	appVersion: 16.15.0
+	created: Not specified
+	dependencies: mongodb:12.1.11, common:1.14.1
+	description: Node.js is a runtime environment built on V8 JavaScript engine. Its event-driven, non-blocking I/O model enables the development of fast, scalable, and data-intensive server applications.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/nodejs/img/nodejs-stack-220x234.png
+	keywords: node,javascript,nodejs,git
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: node
+	sources: https://github.com/bitnami/bitnami-docker-node,http://nodejs.org/
+	urls: Not specified
+	version: 18.1.6
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/node:16.15.0-debian-10-r26
+Image: docker.io/bitnami/mongodb:5.0.8-debian-10-r24
+
+Chart Dependencies
+------------------
+node:18.1.6 depends on mongodb:12.1.11
+mongodb:12.1.11 depends on common:1.14.1
+node:18.1.6 depends on common:1.14.1
+mongodb:12.1.11 uses docker.io/bitnami/mongodb:5.0.8-debian-10-r24
+node:18.1.6 uses docker.io/bitnami/node:16.15.0-debian-10-r26
+
+Generated on 2022/06/02 03:25:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

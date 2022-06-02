@@ -36,7 +36,7 @@ Chart: moodle:14.1.2
 	apiVersion: v2
 	appVersion: 4.0.1
 	created: Not specified
-	dependencies: common:1.14.0, mariadb:11.0.3
+	dependencies: mariadb:11.0.3, common:1.14.0
 	description: Moodle(TM) LMS is an open source online Learning Management System widely used at universities, schools, and corporations. It is modular and highly adaptable to any type of online learning.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/moodle/img/moodle-stack-220x234.png
@@ -70,10 +70,10 @@ Image: docker.io/bitnami/moodle:4.0.1-debian-10-r1
 
 Chart Dependencies
 ------------------
-moodle:14.1.2 depends on common:1.14.0
 moodle:14.1.2 depends on mariadb:11.0.3
 mariadb:11.0.3 depends on common:1.13.1
+moodle:14.1.2 depends on common:1.14.0
 mariadb:11.0.3 uses docker.io/bitnami/mariadb:10.6.7-debian-10-r70
 moodle:14.1.2 uses docker.io/bitnami/moodle:4.0.1-debian-10-r1
 
-Generated on 2022/05/30 22:18:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:23:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

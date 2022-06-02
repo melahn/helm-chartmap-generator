@@ -6,7 +6,7 @@ Chart: osclass:14.1.6
 	apiVersion: v2
 	appVersion: 8.0.2
 	created: Not specified
-	dependencies: common:1.14.1, mariadb:11.0.8
+	dependencies: mariadb:11.0.8, common:1.14.1
 	description: Osclass allows you to easily create a classifieds site without any technical knowledge. It provides support for presenting general ads or specialized ads, is customizable, extensible and multilingual.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/osclass/img/osclass-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/mariadb:10.6.8-debian-10-r0
 
 Chart Dependencies
 ------------------
-osclass:14.1.6 depends on common:1.14.1
 osclass:14.1.6 depends on mariadb:11.0.8
 mariadb:11.0.8 depends on common:1.14.1
+osclass:14.1.6 depends on common:1.14.1
 osclass:14.1.6 uses docker.io/bitnami/osclass:8.0.2-debian-10-r5
 mariadb:11.0.8 uses docker.io/bitnami/mariadb:10.6.8-debian-10-r0
 
-Generated on 2022/05/30 22:21:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:26:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

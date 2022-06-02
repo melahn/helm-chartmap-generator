@@ -6,7 +6,7 @@ Chart: elasticsearch:18.2.3
 	apiVersion: v2
 	appVersion: 8.2.1
 	created: Not specified
-	dependencies: kibana:10.1.7, common:1.14.1
+	dependencies: common:1.14.1, kibana:10.1.7
 	description: Elasticsearch is a distributed search and analytics engine. It is used for web search, log monitoring, and real-time analytics. Ideal for Big Data applications.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/elasticsearch/img/elasticsearch-stack-220x234.png
@@ -54,9 +54,9 @@ Image: docker.io/bitnami/elasticsearch:8.2.1-debian-10-r1
 
 Chart Dependencies
 ------------------
+elasticsearch:18.2.3 depends on common:1.14.1
 elasticsearch:18.2.3 depends on kibana:10.1.7
 kibana:10.1.7 depends on common:1.14.1
-elasticsearch:18.2.3 depends on common:1.14.1
 elasticsearch:18.2.3 uses docker.io/bitnami/elasticsearch:8.2.1-debian-10-r1
 
-Generated on 2022/05/30 22:05:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:11:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

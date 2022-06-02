@@ -31,5 +31,5 @@ kube_state_metrics_2_2_19--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_
 wavefront_3_4_2--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_0_0_debian_10_r39
 wavefront_prometheus_storage_adapter_1_1_6--[#orange]-|>docker_io_bitnami_wavefront_prometheus_storage_adapter_1_0_5_debian_10_r179
 
-center footer Generated on 2022/05/30 22:30:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:34:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

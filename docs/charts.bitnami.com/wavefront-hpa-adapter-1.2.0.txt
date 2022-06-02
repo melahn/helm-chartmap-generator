@@ -42,4 +42,4 @@ Chart Dependencies
 wavefront-hpa-adapter:1.2.0 depends on common:1.14.1
 wavefront-hpa-adapter:1.2.0 uses docker.io/bitnami/wavefront-hpa-adapter:0.9.8-scratch-r21
 
-Generated on 2022/05/30 22:29:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:34:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

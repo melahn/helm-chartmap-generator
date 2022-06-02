@@ -29,6 +29,50 @@
       "version": "2.3.1-debian-10-r46"
     },
     {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "cassandra",
+        "database",
+        "nosql"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/cassandra:4.0.4-debian-10-r3",
+          "type": "image",
+          "version": "4.0.4-debian-10-r3"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.14.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.14.1"
+        }
+      ],
+      "name": "cassandra:9.2.0",
+      "description": "Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many servers, providing high availability with no single point of failure.",
+      "type": "chart",
+      "shortName": "cassandra",
+      "version": "9.2.0"
+    },
+    {
       "maintainers": [
         {
           "name": "Bitnami",
@@ -80,50 +124,6 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "11.4.0"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "cassandra",
-        "database",
-        "nosql"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/cassandra:4.0.4-debian-10-r3",
-          "type": "image",
-          "version": "4.0.4-debian-10-r3"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.14.1",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.14.1"
-        }
-      ],
-      "name": "cassandra:9.2.0",
-      "description": "Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many servers, providing high availability with no single point of failure.",
-      "type": "chart",
-      "shortName": "cassandra",
-      "version": "9.2.0"
     },
     {
       "maintainers": [{

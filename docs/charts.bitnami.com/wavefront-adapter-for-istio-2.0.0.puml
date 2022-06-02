@@ -1,0 +1,33 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for wavefront-adapter-for-istio:2.0.0
+
+'There are 4 referenced Helm Charts
+artifact "kube-state-metrics:3.0.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tprometheus\n\t\tkube-state-metrics\n\t\tmonitoring" as kube_state_metrics_3_0_0 #Gainsboro
+artifact "wavefront-adapter-for-istio:2.0.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\talerting\n\t\tadapter\n\t\tistio\n\t\tmetrics\n\t\tmonitoring\n\t\tobservability\n\t\twavefront" as wavefront_adapter_for_istio_2_0_0 #HoneyDew
+artifact "wavefront:4.0.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmetric\n\t\tmonitoring\n\t\tobservability\n\t\talerting" as wavefront_4_0_0 #LavenderBlush
+artifact "common:1.14.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_1 #DarkSeaGreen
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/wavefront-proxy:11.1.0-debian-10-r13\n====\n11.1.0-debian-10-r13" as docker_io_bitnami_wavefront_proxy_11_1_0_debian_10_r13 #Cyan
+usecase "Image\n====\ndocker.io\n====\nbitnami/wavefront-adapter-for-istio:0.1.5-debian-10-r395\n====\n0.1.5-debian-10-r395" as docker_io_bitnami_wavefront_adapter_for_istio_0_1_5_debian_10_r395 #LightSkyBlue
+usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:2.4.2-debian-10-r72\n====\n2.4.2-debian-10-r72" as docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r72 #CornflowerBlue
+
+'Chart Dependencies
+wavefront_adapter_for_istio_2_0_0--[#green]-|>wavefront_4_0_0
+wavefront_4_0_0--[#green]-|>common_1_14_1
+wavefront_4_0_0--[#green]-|>kube_state_metrics_3_0_0
+kube_state_metrics_3_0_0--[#green]-|>common_1_14_1
+wavefront_adapter_for_istio_2_0_0--[#green]-|>common_1_14_1
+kube_state_metrics_3_0_0--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_4_2_debian_10_r72
+wavefront_adapter_for_istio_2_0_0--[#orange]-|>docker_io_bitnami_wavefront_adapter_for_istio_0_1_5_debian_10_r395
+wavefront_4_0_0--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_1_0_debian_10_r13
+
+center footer Generated on 2022/06/02 03:34:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

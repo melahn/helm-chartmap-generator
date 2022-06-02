@@ -17,10 +17,10 @@ artifact "common:1.14.1\n====\n\tType: library\n====\n\tRepo: https://charts.bit
 usecase "Image\n====\ndocker.io\n====\nbitnami/haproxy-intel:2.5.7-debian-10-r7\n====\n2.5.7-debian-10-r7" as docker_io_bitnami_haproxy_intel_2_5_7_debian_10_r7 #Aquamarine
 
 'Chart Dependencies
-haproxy_intel_0_1_2--[#green]-|>common_1_14_1
 haproxy_intel_0_1_2--[#green]-|>haproxy_0_3_23
 haproxy_0_3_23--[#green]-|>common_1_14_1
+haproxy_intel_0_1_2--[#green]-|>common_1_14_1
 haproxy_0_3_23--[#orange]-|>docker_io_bitnami_haproxy_intel_2_5_7_debian_10_r7
 
-center footer Generated on 2022/05/30 22:09:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:15:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

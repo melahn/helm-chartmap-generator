@@ -42,4 +42,4 @@ Chart Dependencies
 metrics-server:6.0.4 depends on common:1.14.1
 metrics-server:6.0.4 uses docker.io/bitnami/metrics-server:0.6.1-debian-10-r98
 
-Generated on 2022/05/30 22:17:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:22:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

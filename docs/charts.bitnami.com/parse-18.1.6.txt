@@ -6,7 +6,7 @@ Chart: parse:18.1.6
 	apiVersion: v2
 	appVersion: 5.2.1
 	created: Not specified
-	dependencies: common:1.14.1, mongodb:12.1.13
+	dependencies: mongodb:12.1.13, common:1.14.1
 	description: Parse is a platform that enables users to add a scalable and powerful backend to launch a full-featured app for iOS, Android, JavaScript, Windows, Unity, and more.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/parse/img/parse-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/parse:5.2.1-debian-10-r28
 
 Chart Dependencies
 ------------------
-parse:18.1.6 depends on common:1.14.1
 parse:18.1.6 depends on mongodb:12.1.13
 mongodb:12.1.13 depends on common:1.14.1
+parse:18.1.6 depends on common:1.14.1
 parse:18.1.6 uses docker.io/bitnami/parse:5.2.1-debian-10-r28
 mongodb:12.1.13 uses docker.io/bitnami/mongodb:5.0.9-debian-10-r0
 
-Generated on 2022/05/30 22:22:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:27:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

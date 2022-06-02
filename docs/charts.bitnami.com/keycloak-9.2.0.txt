@@ -60,4 +60,4 @@ postgresql:9.1.1 depends on common:0.3.1
 postgresql:9.1.1 uses docker.io/bitnami/postgresql:11.8.0-debian-10-r61
 keycloak:9.2.0 uses docker.io/jboss/keycloak:11.0.2
 
-Generated on 2022/05/30 22:12:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:18:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

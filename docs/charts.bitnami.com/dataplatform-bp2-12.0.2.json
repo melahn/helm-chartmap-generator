@@ -35,49 +35,6 @@
         "name": "Bitnami",
         "email": "containers@bitnami.com"
       }],
-      "keywords": [
-        "apache",
-        "spark"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/spark:3.2.1-debian-10-r64",
-          "type": "image",
-          "version": "3.2.1-debian-10-r64"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.13.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.13.0"
-        }
-      ],
-      "name": "spark:5.9.8",
-      "description": "Apache Spark is a high-performance engine for large-scale computing tasks, such as data processing, machine learning and real-time data streaming. It includes APIs for Java, Python, Scala and R.",
-      "type": "chart",
-      "shortName": "spark",
-      "version": "5.9.8"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
       "keywords": ["elasticsearch"],
       "children": [
         {
@@ -156,43 +113,18 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
-        "logstash",
-        "logging",
-        "elk"
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
       ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/logstash:7.17.2-debian-10-r5",
-          "type": "image",
-          "version": "7.17.2-debian-10-r5"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.13.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.13.0"
-        }
-      ],
-      "name": "logstash:3.8.8",
-      "description": "Logstash is an open source data processing engine. It ingests data from multiple sources, processes it, and sends the output to final destination in real-time. It is a core component of the ELK stack.",
+      "children": [],
+      "name": "common:1.13.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
       "type": "chart",
-      "shortName": "logstash",
-      "version": "3.8.8"
+      "shortName": "common",
+      "version": "1.13.0"
     },
     {
       "maintainers": [{
@@ -213,6 +145,25 @@
           "name": "bitnami/kafka:3.1.0-debian-10-r68",
           "type": "image",
           "version": "3.1.0-debian-10-r68"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.13.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.13.0"
         },
         {
           "maintainers": [{
@@ -253,6 +204,30 @@
           "type": "chart",
           "shortName": "zookeeper",
           "version": "9.0.3"
+        }
+      ],
+      "name": "kafka:16.2.3",
+      "description": "Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.",
+      "type": "chart",
+      "shortName": "kafka",
+      "version": "16.2.3"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "apache",
+        "spark"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/spark:3.2.1-debian-10-r64",
+          "type": "image",
+          "version": "3.2.1-debian-10-r64"
         },
         {
           "maintainers": [{
@@ -274,11 +249,11 @@
           "version": "1.13.0"
         }
       ],
-      "name": "kafka:16.2.3",
-      "description": "Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.",
+      "name": "spark:5.9.8",
+      "description": "Apache Spark is a high-performance engine for large-scale computing tasks, such as data processing, machine learning and real-time data streaming. It includes APIs for Java, Python, Scala and R.",
       "type": "chart",
-      "shortName": "kafka",
-      "version": "16.2.3"
+      "shortName": "spark",
+      "version": "5.9.8"
     },
     {
       "maintainers": [{
@@ -298,6 +273,25 @@
           "name": "bitnami/wavefront-proxy:11.0.0-debian-10-r4",
           "type": "image",
           "version": "11.0.0-debian-10-r4"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.13.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.13.0"
         },
         {
           "maintainers": [{
@@ -342,6 +336,31 @@
           "type": "chart",
           "shortName": "kube-state-metrics",
           "version": "2.2.14"
+        }
+      ],
+      "name": "wavefront:3.3.2",
+      "description": "Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.",
+      "type": "chart",
+      "shortName": "wavefront",
+      "version": "3.3.2"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "logstash",
+        "logging",
+        "elk"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/logstash:7.17.2-debian-10-r5",
+          "type": "image",
+          "version": "7.17.2-debian-10-r5"
         },
         {
           "maintainers": [{
@@ -363,30 +382,11 @@
           "version": "1.13.0"
         }
       ],
-      "name": "wavefront:3.3.2",
-      "description": "Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.",
+      "name": "logstash:3.8.8",
+      "description": "Logstash is an open source data processing engine. It ingests data from multiple sources, processes it, and sends the output to final destination in real-time. It is a core component of the ELK stack.",
       "type": "chart",
-      "shortName": "wavefront",
-      "version": "3.3.2"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "common",
-        "helper",
-        "template",
-        "function",
-        "bitnami"
-      ],
-      "children": [],
-      "name": "common:1.13.0",
-      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-      "type": "chart",
-      "shortName": "common",
-      "version": "1.13.0"
+      "shortName": "logstash",
+      "version": "3.8.8"
     }
   ],
   "name": "dataplatform-bp2:12.0.2",

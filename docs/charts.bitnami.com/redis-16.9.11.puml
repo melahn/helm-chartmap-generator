@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.7-debian-10-r23\n====\n
 redis_16_9_11--[#green]-|>common_1_14_1
 redis_16_9_11--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r23
 
-center footer Generated on 2022/05/30 22:25:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:30:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

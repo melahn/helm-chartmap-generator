@@ -17,10 +17,10 @@ artifact "common:1.14.0\n====\n\tType: library\n====\n\tRepo: https://charts.bit
 usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.6.7-debian-10-r90\n====\n10.6.7-debian-10-r90" as docker_io_bitnami_mariadb_10_6_7_debian_10_r90 #DarkGoldenRod
 
 'Chart Dependencies
+opencart_12_2_3--[#green]-|>common_1_14_0
 opencart_12_2_3--[#green]-|>mariadb_11_0_5
 mariadb_11_0_5--[#green]-|>common_1_14_0
-opencart_12_2_3--[#green]-|>common_1_14_0
 mariadb_11_0_5--[#orange]-|>docker_io_bitnami_mariadb_10_6_7_debian_10_r90
 
-center footer Generated on 2022/05/30 22:21:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:26:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

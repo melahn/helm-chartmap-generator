@@ -22,5 +22,5 @@ kibana_10_1_7--[#green]-|>common_1_14_1
 elasticsearch_18_2_3--[#green]-|>common_1_14_1
 elasticsearch_18_2_3--[#orange]-|>docker_io_bitnami_elasticsearch_8_2_1_debian_10_r1
 
-center footer Generated on 2022/05/30 22:05:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:11:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

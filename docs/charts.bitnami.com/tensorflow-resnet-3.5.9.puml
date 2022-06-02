@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/tensorflow-serving:2.8.0-debian-1
 tensorflow_resnet_3_5_9--[#green]-|>common_1_14_0
 tensorflow_resnet_3_5_9--[#orange]-|>docker_io_bitnami_tensorflow_serving_2_8_0_debian_10_r90
 
-center footer Generated on 2022/05/30 22:28:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:33:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

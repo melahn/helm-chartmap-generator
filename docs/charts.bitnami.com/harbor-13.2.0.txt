@@ -6,7 +6,7 @@ Chart: harbor:13.2.0
 	apiVersion: v2
 	appVersion: 2.5.0
 	created: Not specified
-	dependencies: redis:16.9.11, postgresql:11.2.6, common:1.14.1
+	dependencies: postgresql:11.2.6, common:1.14.1, redis:16.9.11
 	description: Harbor is an open source trusted cloud-native registry to store, sign, and scan content. It adds functionalities like security, identity, and management to the open source Docker distribution.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/harbor-core/img/harbor-core-stack-220x234.png
@@ -80,11 +80,11 @@ Image: docker.io/bitnami/harbor-core:2.5.0-debian-10-r45
 
 Chart Dependencies
 ------------------
-harbor:13.2.0 depends on redis:16.9.11
-redis:16.9.11 depends on common:1.14.1
 harbor:13.2.0 depends on postgresql:11.2.6
 postgresql:11.2.6 depends on common:1.14.1
 harbor:13.2.0 depends on common:1.14.1
+harbor:13.2.0 depends on redis:16.9.11
+redis:16.9.11 depends on common:1.14.1
 harbor:13.2.0 uses docker.io/bitnami/harbor-registry:2.5.0-debian-10-r43
 harbor:13.2.0 uses docker.io/bitnami/harbor-registryctl:2.5.0-debian-10-r43
 harbor:13.2.0 uses docker.io/bitnami/nginx:1.21.6-debian-10-r117
@@ -98,4 +98,4 @@ harbor:13.2.0 uses docker.io/bitnami/harbor-portal:2.5.0-debian-10-r43
 postgresql:11.2.6 uses docker.io/bitnami/postgresql:13.7.0-debian-10-r11
 redis:16.9.11 uses docker.io/bitnami/redis:6.2.7-debian-10-r23
 
-Generated on 2022/05/30 22:10:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:16:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

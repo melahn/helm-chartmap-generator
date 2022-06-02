@@ -13,16 +13,16 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/chartmuseum:0.14.0-debian-10-r115",
+      "name": "bitnami/harbor-notary-signer:2.5.1-debian-10-r0",
       "type": "image",
-      "version": "0.14.0-debian-10-r115"
+      "version": "2.5.1-debian-10-r0"
     },
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/harbor-notary-signer:2.5.1-debian-10-r0",
+      "name": "bitnami/chartmuseum:0.14.0-debian-10-r115",
       "type": "image",
-      "version": "2.5.1-debian-10-r0"
+      "version": "0.14.0-debian-10-r115"
     },
     {
       "repoHost": "docker.io",
@@ -69,14 +69,14 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/harbor-jobservice:2.5.1-debian-10-r0",
+      "name": "bitnami/harbor-portal:2.5.1-debian-10-r0",
       "type": "image",
       "version": "2.5.1-debian-10-r0"
     },
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/harbor-portal:2.5.1-debian-10-r0",
+      "name": "bitnami/harbor-jobservice:2.5.1-debian-10-r0",
       "type": "image",
       "version": "2.5.1-debian-10-r0"
     },

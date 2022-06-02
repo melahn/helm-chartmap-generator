@@ -19,11 +19,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/testlink:1.9.20-debian-10-r671\n=
 usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.5.15-debian-10-r28\n====\n10.5.15-debian-10-r28" as docker_io_bitnami_mariadb_10_5_15_debian_10_r28 #DarkGoldenRod
 
 'Chart Dependencies
+testlink_10_0_14--[#green]-|>common_1_12_0
 testlink_10_0_14--[#green]-|>mariadb_10_4_1
 mariadb_10_4_1--[#green]-|>common_1_11_3
-testlink_10_0_14--[#green]-|>common_1_12_0
 testlink_10_0_14--[#orange]-|>docker_io_bitnami_testlink_1_9_20_debian_10_r671
 mariadb_10_4_1--[#orange]-|>docker_io_bitnami_mariadb_10_5_15_debian_10_r28
 
-center footer Generated on 2022/05/30 22:28:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:33:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

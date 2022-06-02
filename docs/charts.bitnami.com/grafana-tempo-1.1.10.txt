@@ -65,4 +65,4 @@ grafana-tempo:1.1.10 uses docker.io/bitnami/grafana-tempo-vulture:1.4.1-debian-1
 grafana-tempo:1.1.10 uses docker.io/bitnami/grafana-tempo-query:1.4.1-debian-10-r18
 grafana-tempo:1.1.10 uses docker.io/bitnami/grafana-tempo:1.4.1-debian-10-r17
 
-Generated on 2022/05/30 22:08:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:14:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

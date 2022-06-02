@@ -42,4 +42,4 @@ Chart Dependencies
 mariadb:11.0.8 depends on common:1.14.1
 mariadb:11.0.8 uses docker.io/bitnami/mariadb:10.6.8-debian-10-r0
 
-Generated on 2022/05/30 22:15:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:21:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

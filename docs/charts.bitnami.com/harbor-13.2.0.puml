@@ -29,10 +29,10 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/harbor-notary-signer:2.5.0-debian
 usecase "Image\n====\ndocker.io\n====\nbitnami/harbor-core:2.5.0-debian-10-r45\n====\n2.5.0-debian-10-r45" as docker_io_bitnami_harbor_core_2_5_0_debian_10_r45 #Darkorange
 
 'Chart Dependencies
-harbor_13_2_0--[#green]-|>postgresql_11_2_6
-postgresql_11_2_6--[#green]-|>common_1_14_1
 harbor_13_2_0--[#green]-|>redis_16_9_11
 redis_16_9_11--[#green]-|>common_1_14_1
+harbor_13_2_0--[#green]-|>postgresql_11_2_6
+postgresql_11_2_6--[#green]-|>common_1_14_1
 harbor_13_2_0--[#green]-|>common_1_14_1
 harbor_13_2_0--[#orange]-|>docker_io_bitnami_harbor_registry_2_5_0_debian_10_r43
 harbor_13_2_0--[#orange]-|>docker_io_bitnami_harbor_registryctl_2_5_0_debian_10_r43
@@ -47,5 +47,5 @@ harbor_13_2_0--[#orange]-|>docker_io_bitnami_harbor_portal_2_5_0_debian_10_r43
 postgresql_11_2_6--[#orange]-|>docker_io_bitnami_postgresql_13_7_0_debian_10_r11
 redis_16_9_11--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r23
 
-center footer Generated on 2022/05/30 22:10:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:16:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

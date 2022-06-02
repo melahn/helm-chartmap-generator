@@ -6,7 +6,7 @@ Chart: jupyterhub:1.3.0
 	apiVersion: v2
 	appVersion: 1.5.0
 	created: Not specified
-	dependencies: common:1.14.0, postgresql:11.2.1
+	dependencies: postgresql:11.2.1, common:1.14.0
 	description: JupyterHub brings the power of notebooks to groups of users. It gives users access to computational environments and resources without burdening the users with installation and maintenance tasks.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/jupyterhub/img/jupyterhub-stack-220x234.png
@@ -56,11 +56,11 @@ Image: docker.io/bitnami/postgresql:14.3.0-debian-10-r1
 
 Chart Dependencies
 ------------------
-jupyterhub:1.3.0 depends on common:1.14.0
 jupyterhub:1.3.0 depends on postgresql:11.2.1
 postgresql:11.2.1 depends on common:1.14.0
+jupyterhub:1.3.0 depends on common:1.14.0
 jupyterhub:1.3.0 uses docker.io/bitnami/configurable-http-proxy:4.5.1-debian-10-r81
 jupyterhub:1.3.0 uses docker.io/bitnami/jupyterhub:1.5.0-debian-10-r169
 postgresql:11.2.1 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r1
 
-Generated on 2022/05/30 22:11:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:17:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

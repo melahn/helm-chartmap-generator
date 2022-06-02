@@ -51,7 +51,7 @@ Chart: argo-workflows:2.2.2
 	apiVersion: v2
 	appVersion: 3.3.6
 	created: Not specified
-	dependencies: mysql:9.1.0, common:1.14.1, postgresql:11.2.6
+	dependencies: common:1.14.1, mysql:9.1.0, postgresql:11.2.6
 	description: Argo Workflows is meant to orchestrate Kubernetes jobs in parallel. It uses DAG and step-based workflows
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/argo-workflow-cli/img/argo-workflow-cli-stack-220x234.png
@@ -72,9 +72,9 @@ Image: docker.io/bitnami/postgresql:14.3.0-debian-10-r8
 
 Chart Dependencies
 ------------------
+argo-workflows:2.2.2 depends on common:1.14.1
 argo-workflows:2.2.2 depends on mysql:9.1.0
 mysql:9.1.0 depends on common:1.14.1
-argo-workflows:2.2.2 depends on common:1.14.1
 argo-workflows:2.2.2 depends on postgresql:11.2.6
 postgresql:11.2.6 depends on common:1.14.1
 mysql:9.1.0 uses docker.io/bitnami/mysql:8.0.29-debian-10-r23
@@ -82,4 +82,4 @@ postgresql:11.2.6 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r8
 argo-workflows:2.2.2 uses docker.io/bitnami/argo-workflow-cli:3.3.6-scratch-r0
 argo-workflows:2.2.2 uses docker.io/bitnami/argo-workflow-controller:3.3.5-scratch-r0
 
-Generated on 2022/05/30 22:00:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:06:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

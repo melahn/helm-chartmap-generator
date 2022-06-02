@@ -21,7 +21,7 @@ Chart: haproxy-intel:0.1.2
 	apiVersion: v2
 	appVersion: 2.5.7
 	created: Not specified
-	dependencies: haproxy:0.3.23, common:1.14.1
+	dependencies: common:1.14.1, haproxy:0.3.23
 	description: HAProxy is a high-performance, open-source load balancer and reverse proxy for TCP and HTTP applications. This image is optimized with Intel(R) QuickAssist Technology OpenSSL* Engine (QAT_Engine).
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/haproxy/img/haproxy-stack-220x234.png
@@ -54,9 +54,9 @@ Image: docker.io/bitnami/haproxy-intel:2.5.7-debian-10-r7
 
 Chart Dependencies
 ------------------
+haproxy-intel:0.1.2 depends on common:1.14.1
 haproxy-intel:0.1.2 depends on haproxy:0.3.23
 haproxy:0.3.23 depends on common:1.14.1
-haproxy-intel:0.1.2 depends on common:1.14.1
 haproxy:0.3.23 uses docker.io/bitnami/haproxy-intel:2.5.7-debian-10-r7
 
-Generated on 2022/05/30 22:09:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:15:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

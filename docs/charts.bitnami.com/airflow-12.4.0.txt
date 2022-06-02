@@ -79,9 +79,9 @@ airflow:12.4.0 depends on redis:16.9.11
 redis:16.9.11 depends on common:1.14.1
 airflow:12.4.0 depends on common:1.14.1
 airflow:12.4.0 uses docker.io/bitnami/airflow-scheduler:2.3.0-debian-10-r21
-airflow:12.4.0 uses docker.io/bitnami/airflow:2.3.0-debian-10-r6
 airflow:12.4.0 uses docker.io/bitnami/airflow-worker:2.3.0-debian-10-r21
+airflow:12.4.0 uses docker.io/bitnami/airflow:2.3.0-debian-10-r6
 postgresql:11.3.0 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r13
 redis:16.9.11 uses docker.io/bitnami/redis:6.2.7-debian-10-r23
 
-Generated on 2022/05/30 21:59:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:05:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

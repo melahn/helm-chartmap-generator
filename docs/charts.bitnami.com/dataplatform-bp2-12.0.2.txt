@@ -66,7 +66,7 @@ Chart: dataplatform-bp2:12.0.2
 	apiVersion: v2
 	appVersion: 1.0.1
 	created: Not specified
-	dependencies: spark:5.9.8, elasticsearch:17.9.24, common:1.13.0, wavefront:3.3.2, kafka:16.2.3, logstash:3.8.8
+	dependencies: kafka:16.2.3, spark:5.9.8, common:1.13.0, wavefront:3.3.2, logstash:3.8.8, elasticsearch:17.9.24
 	description: This Helm chart can be used for the automated deployment of a data platform blueprint containing Kafka, Apache Spark and Elasticsearch. It covers optimized pod sizing and placement diversity rules.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/dataplatform-bp1/img/dataplatform-bp1-stack-220x234.png
@@ -167,23 +167,23 @@ Image: docker.io/bitnami/dataplatform-emitter:1.0.1-scratch-r26
 
 Chart Dependencies
 ------------------
+dataplatform-bp2:12.0.2 depends on kafka:16.2.3
+kafka:16.2.3 depends on zookeeper:9.0.3
+zookeeper:9.0.3 depends on common:1.13.0
+kafka:16.2.3 depends on common:1.13.0
 dataplatform-bp2:12.0.2 depends on spark:5.9.8
 spark:5.9.8 depends on common:1.13.0
-dataplatform-bp2:12.0.2 depends on elasticsearch:17.9.24
-elasticsearch:17.9.24 depends on kibana:9.3.15
-kibana:9.3.15 depends on common:1.13.0
-elasticsearch:17.9.24 depends on common:1.13.0
 dataplatform-bp2:12.0.2 depends on common:1.13.0
 dataplatform-bp2:12.0.2 depends on wavefront:3.3.2
 wavefront:3.3.2 depends on kube-state-metrics:2.2.14
 kube-state-metrics:2.2.14 depends on common:1.13.0
 wavefront:3.3.2 depends on common:1.13.0
-dataplatform-bp2:12.0.2 depends on kafka:16.2.3
-kafka:16.2.3 depends on zookeeper:9.0.3
-zookeeper:9.0.3 depends on common:1.13.0
-kafka:16.2.3 depends on common:1.13.0
 dataplatform-bp2:12.0.2 depends on logstash:3.8.8
 logstash:3.8.8 depends on common:1.13.0
+dataplatform-bp2:12.0.2 depends on elasticsearch:17.9.24
+elasticsearch:17.9.24 depends on kibana:9.3.15
+kibana:9.3.15 depends on common:1.13.0
+elasticsearch:17.9.24 depends on common:1.13.0
 spark:5.9.8 uses docker.io/bitnami/spark:3.2.1-debian-10-r64
 kube-state-metrics:2.2.14 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r18
 kafka:16.2.3 uses docker.io/bitnami/kafka:3.1.0-debian-10-r68
@@ -194,4 +194,4 @@ logstash:3.8.8 uses docker.io/bitnami/logstash:7.17.2-debian-10-r5
 wavefront:3.3.2 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r4
 elasticsearch:17.9.24 uses docker.io/bitnami/elasticsearch:7.17.2-debian-10-r3
 
-Generated on 2022/05/30 22:04:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:10:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

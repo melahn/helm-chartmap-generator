@@ -1,0 +1,41 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "haproxy",
+    "proxy",
+    "infrastructure"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/haproxy:2.6.0-debian-10-r0",
+      "type": "image",
+      "version": "2.6.0-debian-10-r0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.14.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.14.1"
+    }
+  ],
+  "name": "haproxy:0.3.25",
+  "description": "HAProxy is a TCP proxy and a HTTP reverse proxy. It supports SSL termination and offloading, TCP and HTTP normalization, traffic regulation, caching and protection against DDoS attacks.",
+  "type": "chart",
+  "shortName": "haproxy",
+  "version": "0.3.25"
+}

@@ -50,41 +50,6 @@
       }],
       "keywords": [
         "prometheus",
-        "node-exporter",
-        "monitoring"
-      ],
-      "children": [{
-        "maintainers": [{
-          "name": "Bitnami",
-          "email": "containers@bitnami.com"
-        }],
-        "keywords": [
-          "common",
-          "helper",
-          "template",
-          "function",
-          "bitnami"
-        ],
-        "children": [],
-        "name": "common:1.14.1",
-        "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-        "type": "chart",
-        "shortName": "common",
-        "version": "1.14.1"
-      }],
-      "name": "node-exporter:2.4.16",
-      "description": "Prometheus exporter for hardware and OS metrics exposed by UNIX kernels, with pluggable metric collectors.",
-      "type": "chart",
-      "shortName": "node-exporter",
-      "version": "2.4.16"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "prometheus",
         "kube-state-metrics",
         "monitoring"
       ],
@@ -121,6 +86,41 @@
       "type": "chart",
       "shortName": "kube-state-metrics",
       "version": "2.2.24"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "prometheus",
+        "node-exporter",
+        "monitoring"
+      ],
+      "children": [{
+        "maintainers": [{
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        }],
+        "keywords": [
+          "common",
+          "helper",
+          "template",
+          "function",
+          "bitnami"
+        ],
+        "children": [],
+        "name": "common:1.14.1",
+        "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+        "type": "chart",
+        "shortName": "common",
+        "version": "1.14.1"
+      }],
+      "name": "node-exporter:2.4.16",
+      "description": "Prometheus exporter for hardware and OS metrics exposed by UNIX kernels, with pluggable metric collectors.",
+      "type": "chart",
+      "shortName": "node-exporter",
+      "version": "2.4.16"
     }
   ],
   "name": "kube-prometheus:7.0.0",

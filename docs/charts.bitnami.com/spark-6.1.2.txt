@@ -42,4 +42,4 @@ Chart Dependencies
 spark:6.1.2 depends on common:1.14.0
 spark:6.1.2 uses docker.io/bitnami/spark:3.2.1-debian-10-r105
 
-Generated on 2022/05/30 22:26:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:31:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

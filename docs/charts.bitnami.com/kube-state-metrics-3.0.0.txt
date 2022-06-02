@@ -42,4 +42,4 @@ Chart Dependencies
 kube-state-metrics:3.0.0 depends on common:1.14.1
 kube-state-metrics:3.0.0 uses docker.io/bitnami/kube-state-metrics:2.4.2-debian-10-r72
 
-Generated on 2022/05/30 22:13:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:19:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

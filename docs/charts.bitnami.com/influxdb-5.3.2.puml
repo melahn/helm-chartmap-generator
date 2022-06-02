@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for influxdb:5.3.2
+
+'There are 2 referenced Helm Charts
+artifact "influxdb:5.3.2\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tinfluxdb\n\t\ttick\n\t\tdatabase\n\t\ttimeseries" as influxdb_5_3_2 #Azure
+artifact "common:1.14.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_1 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/influxdb:2.2.0-debian-10-r41\n====\n2.2.0-debian-10-r41" as docker_io_bitnami_influxdb_2_2_0_debian_10_r41 #AntiqueWhite
+
+'Chart Dependencies
+influxdb_5_3_2--[#green]-|>common_1_14_1
+influxdb_5_3_2--[#orange]-|>docker_io_bitnami_influxdb_2_2_0_debian_10_r41
+
+center footer Generated on 2022/06/02 03:16:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

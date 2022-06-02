@@ -80,4 +80,4 @@ mariadb:11.0.7 uses docker.io/bitnami/mariadb:10.6.8-debian-10-r0
 memcached:6.0.21 uses docker.io/bitnami/memcached:1.6.15-debian-10-r50
 wordpress-intel:1.3.0 uses docker.io/bitnami/wordpress-intel:5.9.3-debian-10-r51
 
-Generated on 2022/05/30 22:30:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:35:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

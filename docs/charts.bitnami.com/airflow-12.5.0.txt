@@ -6,7 +6,7 @@ Chart: airflow:12.5.0
 	apiVersion: v2
 	appVersion: 2.3.0
 	created: Not specified
-	dependencies: common:1.14.1, postgresql:11.3.0, redis:16.9.11
+	dependencies: redis:16.9.11, postgresql:11.3.0, common:1.14.1
 	description: Apache Airflow is a tool to express and execute workflows as directed acyclic graphs (DAGs). It includes utilities to schedule tasks, monitor task progress and handle task dependencies.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/airflow/img/airflow-stack-220x234.png
@@ -73,15 +73,15 @@ Image: docker.io/bitnami/airflow:2.3.0-debian-10-r6
 
 Chart Dependencies
 ------------------
-airflow:12.5.0 depends on common:1.14.1
-airflow:12.5.0 depends on postgresql:11.3.0
-postgresql:11.3.0 depends on common:1.14.1
 airflow:12.5.0 depends on redis:16.9.11
 redis:16.9.11 depends on common:1.14.1
+airflow:12.5.0 depends on postgresql:11.3.0
+postgresql:11.3.0 depends on common:1.14.1
+airflow:12.5.0 depends on common:1.14.1
 airflow:12.5.0 uses docker.io/bitnami/airflow-scheduler:2.3.0-debian-10-r21
 airflow:12.5.0 uses docker.io/bitnami/airflow:2.3.0-debian-10-r6
 airflow:12.5.0 uses docker.io/bitnami/airflow-worker:2.3.0-debian-10-r21
 postgresql:11.3.0 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r13
 redis:16.9.11 uses docker.io/bitnami/redis:6.2.7-debian-10-r23
 
-Generated on 2022/05/30 21:59:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:05:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

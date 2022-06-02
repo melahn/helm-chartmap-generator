@@ -17,5 +17,5 @@ artifact "kiam:1.0.9\n====\n\tType: application\n====\n\tRepo: https://charts.bi
 'Chart Dependencies
 kiam_1_0_9--[#green]-|>common_1_14_1
 
-center footer Generated on 2022/05/30 22:12:44 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:18:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

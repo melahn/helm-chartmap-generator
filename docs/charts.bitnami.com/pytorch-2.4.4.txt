@@ -42,4 +42,4 @@ Chart Dependencies
 pytorch:2.4.4 depends on common:1.14.0
 pytorch:2.4.4 uses docker.io/bitnami/pytorch:1.11.0-debian-10-r54
 
-Generated on 2022/05/30 22:24:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:29:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

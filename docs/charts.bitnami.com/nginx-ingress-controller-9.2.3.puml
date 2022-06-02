@@ -21,5 +21,5 @@ nginx_ingress_controller_9_2_3--[#green]-|>common_1_14_1
 nginx_ingress_controller_9_2_3--[#orange]-|>docker_io_bitnami_nginx_1_21_6_debian_10_r118
 nginx_ingress_controller_9_2_3--[#orange]-|>docker_io_bitnami_nginx_ingress_controller_1_2_0_debian_10_r8
 
-center footer Generated on 2022/05/30 22:19:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:25:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

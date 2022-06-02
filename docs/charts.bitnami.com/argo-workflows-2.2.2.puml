@@ -31,5 +31,5 @@ postgresql_11_2_6--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_10_r8
 argo_workflows_2_2_2--[#orange]-|>docker_io_bitnami_argo_workflow_cli_3_3_6_scratch_r0
 argo_workflows_2_2_2--[#orange]-|>docker_io_bitnami_argo_workflow_controller_3_3_5_scratch_r0
 
-center footer Generated on 2022/05/30 22:00:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:06:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

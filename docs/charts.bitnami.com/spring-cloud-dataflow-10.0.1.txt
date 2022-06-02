@@ -81,7 +81,7 @@ Chart: spring-cloud-dataflow:10.0.1
 	apiVersion: v2
 	appVersion: 2.9.4
 	created: Not specified
-	dependencies: rabbitmq:9.1.4, mariadb:11.0.8, common:1.14.1, kafka:17.0.0
+	dependencies: common:1.14.1, rabbitmq:9.1.4, mariadb:11.0.8, kafka:17.0.0
 	description: Spring Cloud Data Flow is a microservices-based toolkit for building streaming and batch data processing pipelines in Cloud Foundry and Kubernetes.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/spring-cloud-dataflow/img/spring-cloud-dataflow-stack-220x234.png
@@ -104,11 +104,11 @@ Image: docker.io/bitnami/kafka:3.2.0-debian-10-r3
 
 Chart Dependencies
 ------------------
+spring-cloud-dataflow:10.0.1 depends on common:1.14.1
 spring-cloud-dataflow:10.0.1 depends on rabbitmq:9.1.4
 rabbitmq:9.1.4 depends on common:1.14.1
 spring-cloud-dataflow:10.0.1 depends on mariadb:11.0.8
 mariadb:11.0.8 depends on common:1.14.1
-spring-cloud-dataflow:10.0.1 depends on common:1.14.1
 spring-cloud-dataflow:10.0.1 depends on kafka:17.0.0
 kafka:17.0.0 depends on common:1.14.1
 kafka:17.0.0 depends on zookeeper:9.1.6
@@ -120,4 +120,4 @@ mariadb:11.0.8 uses docker.io/bitnami/mariadb:10.6.8-debian-10-r0
 spring-cloud-dataflow:10.0.1 uses docker.io/bitnami/spring-cloud-skipper:2.8.4-debian-10-r48
 spring-cloud-dataflow:10.0.1 uses docker.io/bitnami/spring-cloud-dataflow:2.9.4-debian-10-r36
 
-Generated on 2022/05/30 22:26:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:32:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

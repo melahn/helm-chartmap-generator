@@ -20,16 +20,16 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/airflow-worker:2.3.0-debian-10-r21",
+      "name": "bitnami/airflow:2.3.0-debian-10-r6",
       "type": "image",
-      "version": "2.3.0-debian-10-r21"
+      "version": "2.3.0-debian-10-r6"
     },
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/airflow:2.3.0-debian-10-r6",
+      "name": "bitnami/airflow-worker:2.3.0-debian-10-r21",
       "type": "image",
-      "version": "2.3.0-debian-10-r6"
+      "version": "2.3.0-debian-10-r21"
     },
     {
       "maintainers": [{

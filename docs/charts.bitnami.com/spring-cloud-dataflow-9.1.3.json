@@ -30,6 +30,138 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
+        "mariadb",
+        "mysql",
+        "database",
+        "sql",
+        "prometheus"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/mariadb:10.6.8-debian-10-r0",
+          "type": "image",
+          "version": "10.6.8-debian-10-r0"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.14.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.14.1"
+        }
+      ],
+      "name": "mariadb:11.0.7",
+      "description": "MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.",
+      "type": "chart",
+      "shortName": "mariadb",
+      "version": "11.0.7"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "kafka",
+        "zookeeper",
+        "streaming",
+        "producer",
+        "consumer"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/kafka:3.1.1-debian-10-r6",
+          "type": "image",
+          "version": "3.1.1-debian-10-r6"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": ["zookeeper"],
+          "children": [
+            {
+              "repoHost": "docker.io",
+              "children": [],
+              "name": "bitnami/zookeeper:3.8.0-debian-10-r63",
+              "type": "image",
+              "version": "3.8.0-debian-10-r63"
+            },
+            {
+              "maintainers": [{
+                "name": "Bitnami",
+                "email": "containers@bitnami.com"
+              }],
+              "keywords": [
+                "common",
+                "helper",
+                "template",
+                "function",
+                "bitnami"
+              ],
+              "children": [],
+              "name": "common:1.14.0",
+              "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+              "type": "chart",
+              "shortName": "common",
+              "version": "1.14.0"
+            }
+          ],
+          "name": "zookeeper:9.1.5",
+          "description": "Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.",
+          "type": "chart",
+          "shortName": "zookeeper",
+          "version": "9.1.5"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.14.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.14.1"
+        }
+      ],
+      "name": "kafka:16.3.2",
+      "description": "Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.",
+      "type": "chart",
+      "shortName": "kafka",
+      "version": "16.3.2"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
         "rabbitmq",
         "message queue",
         "AMQP"
@@ -74,92 +206,6 @@
         "email": "containers@bitnami.com"
       }],
       "keywords": [
-        "kafka",
-        "zookeeper",
-        "streaming",
-        "producer",
-        "consumer"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/kafka:3.1.1-debian-10-r6",
-          "type": "image",
-          "version": "3.1.1-debian-10-r6"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.14.1",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.14.1"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": ["zookeeper"],
-          "children": [
-            {
-              "repoHost": "docker.io",
-              "children": [],
-              "name": "bitnami/zookeeper:3.8.0-debian-10-r63",
-              "type": "image",
-              "version": "3.8.0-debian-10-r63"
-            },
-            {
-              "maintainers": [{
-                "name": "Bitnami",
-                "email": "containers@bitnami.com"
-              }],
-              "keywords": [
-                "common",
-                "helper",
-                "template",
-                "function",
-                "bitnami"
-              ],
-              "children": [],
-              "name": "common:1.14.0",
-              "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-              "type": "chart",
-              "shortName": "common",
-              "version": "1.14.0"
-            }
-          ],
-          "name": "zookeeper:9.1.5",
-          "description": "Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.",
-          "type": "chart",
-          "shortName": "zookeeper",
-          "version": "9.1.5"
-        }
-      ],
-      "name": "kafka:16.3.2",
-      "description": "Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.",
-      "type": "chart",
-      "shortName": "kafka",
-      "version": "16.3.2"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
         "common",
         "helper",
         "template",
@@ -172,52 +218,6 @@
       "type": "chart",
       "shortName": "common",
       "version": "1.14.1"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "mariadb",
-        "mysql",
-        "database",
-        "sql",
-        "prometheus"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/mariadb:10.6.8-debian-10-r0",
-          "type": "image",
-          "version": "10.6.8-debian-10-r0"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.14.1",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.14.1"
-        }
-      ],
-      "name": "mariadb:11.0.7",
-      "description": "MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.",
-      "type": "chart",
-      "shortName": "mariadb",
-      "version": "11.0.7"
     }
   ],
   "name": "spring-cloud-dataflow:9.1.3",

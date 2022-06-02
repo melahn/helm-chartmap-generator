@@ -36,7 +36,7 @@ Chart: ghost:17.2.2
 	apiVersion: v2
 	appVersion: 4.48.0
 	created: Not specified
-	dependencies: common:1.14.1, mariadb:11.0.7
+	dependencies: mariadb:11.0.7, common:1.14.1
 	description: Ghost is an open source publishing platform designed to create blogs, magazines, and news sites. It includes a simple markdown editor with preview, theming, and SEO built-in to simplify editing.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/ghost/img/ghost-stack-220x234.png
@@ -54,9 +54,9 @@ Image: docker.io/bitnami/mariadb:10.6.8-debian-10-r0
 
 Chart Dependencies
 ------------------
-ghost:17.2.2 depends on common:1.14.1
 ghost:17.2.2 depends on mariadb:11.0.7
 mariadb:11.0.7 depends on common:1.14.1
+ghost:17.2.2 depends on common:1.14.1
 mariadb:11.0.7 uses docker.io/bitnami/mariadb:10.6.8-debian-10-r0
 
-Generated on 2022/05/30 22:07:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:13:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

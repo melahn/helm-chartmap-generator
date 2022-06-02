@@ -61,4 +61,4 @@ kafka:17.1.0 depends on common:1.14.1
 kafka:17.1.0 uses docker.io/bitnami/kafka:3.2.0-debian-10-r4
 zookeeper:9.1.6 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r64
 
-Generated on 2022/05/30 22:11:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:17:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

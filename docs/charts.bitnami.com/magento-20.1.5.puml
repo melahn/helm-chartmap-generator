@@ -20,15 +20,15 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/elasticsearch:7.17.4-debian-10-r0
 usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.4.25-debian-10-r3\n====\n10.4.25-debian-10-r3" as docker_io_bitnami_mariadb_10_4_25_debian_10_r3 #DarkGoldenRod
 
 'Chart Dependencies
+magento_20_1_5--[#green]-|>common_1_14_1
 magento_20_1_5--[#green]-|>mariadb_11_0_8
 mariadb_11_0_8--[#green]-|>common_1_14_1
-magento_20_1_5--[#green]-|>common_1_14_1
 magento_20_1_5--[#green]-|>elasticsearch_18_2_2
-elasticsearch_18_2_2--[#green]-|>common_1_14_1
 elasticsearch_18_2_2--[#green]-|>kibana_10_1_6
 kibana_10_1_6--[#green]-|>common_1_14_1
+elasticsearch_18_2_2--[#green]-|>common_1_14_1
 elasticsearch_18_2_2--[#orange]-|>docker_io_bitnami_elasticsearch_7_17_4_debian_10_r0
 mariadb_11_0_8--[#orange]-|>docker_io_bitnami_mariadb_10_4_25_debian_10_r3
 
-center footer Generated on 2022/05/30 22:15:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/02 03:20:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

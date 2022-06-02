@@ -1,0 +1,66 @@
+Chart Map for jupyterhub:1.3.2
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: postgresql:11.4.0
+	apiVersion: v2
+	appVersion: 14.3.0
+	created: 2022-05-27T08:10:30.733939434Z
+	dependencies: common:1.14.1
+	description: PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+	digest: sha256:0434158c9d478a53c16f450f244988ddd84889b5519262a4a6ba42a44a448fb7
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql,https://www.postgresql.org/
+	urls: https://charts.bitnami.com/bitnami/postgresql-11.4.0.tgz
+	version: 11.4.0
+Chart: jupyterhub:1.3.2
+	apiVersion: v2
+	appVersion: 1.5.0
+	created: Not specified
+	dependencies: postgresql:11.4.0, common:1.14.1
+	description: JupyterHub brings the power of notebooks to groups of users. It gives users access to computational environments and resources without burdening the users with installation and maintenance tasks.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/jupyterhub/img/jupyterhub-stack-220x234.png
+	keywords: python,scientific
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: jupyterhub
+	sources: https://github.com/bitnami/bitnami-docker-jupyterhub,https://github.com/jupyterhub/jupyterhub
+	urls: Not specified
+	version: 1.3.2
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/configurable-http-proxy:4.5.1-debian-10-r91
+Image: docker.io/bitnami/postgresql:14.3.0-debian-10-r13
+Image: docker.io/bitnami/jupyterhub:1.5.0-debian-10-r170
+
+Chart Dependencies
+------------------
+jupyterhub:1.3.2 depends on postgresql:11.4.0
+postgresql:11.4.0 depends on common:1.14.1
+jupyterhub:1.3.2 depends on common:1.14.1
+postgresql:11.4.0 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r13
+jupyterhub:1.3.2 uses docker.io/bitnami/configurable-http-proxy:4.5.1-debian-10-r91
+jupyterhub:1.3.2 uses docker.io/bitnami/jupyterhub:1.5.0-debian-10-r170
+
+Generated on 2022/06/02 03:17:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

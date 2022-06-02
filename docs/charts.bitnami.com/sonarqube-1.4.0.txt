@@ -21,7 +21,7 @@ Chart: sonarqube:1.4.0
 	apiVersion: v2
 	appVersion: 9.4.0
 	created: Not specified
-	dependencies: postgresql:11.2.6, common:1.14.1
+	dependencies: common:1.14.1, postgresql:11.2.6
 	description: SonarQube is an open source quality management platform that analyzes and measures code's technical quality. It enables developers to detect code issues, vulnerabilities, and bugs in early stages.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/sonarqube/img/sonarqube-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/postgresql:14.3.0-debian-10-r8
 
 Chart Dependencies
 ------------------
+sonarqube:1.4.0 depends on common:1.14.1
 sonarqube:1.4.0 depends on postgresql:11.2.6
 postgresql:11.2.6 depends on common:1.14.1
-sonarqube:1.4.0 depends on common:1.14.1
 postgresql:11.2.6 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r8
 sonarqube:1.4.0 uses docker.io/bitnami/sonarqube:9.4.0-debian-10-r23
 
-Generated on 2022/05/30 22:26:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/02 03:31:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -13,13 +13,6 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/nginx:1.21.6-debian-10-r117",
-      "type": "image",
-      "version": "1.21.6-debian-10-r117"
-    },
-    {
-      "repoHost": "docker.io",
-      "children": [],
       "name": "bitnami/harbor-registry:2.5.0-debian-10-r43",
       "type": "image",
       "version": "2.5.0-debian-10-r43"
@@ -30,6 +23,13 @@
       "name": "bitnami/harbor-registryctl:2.5.0-debian-10-r43",
       "type": "image",
       "version": "2.5.0-debian-10-r43"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/nginx:1.21.6-debian-10-r117",
+      "type": "image",
+      "version": "1.21.6-debian-10-r117"
     },
     {
       "repoHost": "docker.io",
