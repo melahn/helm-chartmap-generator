@@ -1,18 +1,26 @@
 * {
-    font-family: "Arial", Helvetica, san-serif;
-    color: lightgray;
-    background-color: black;
+	font-family: "Andale Mono";
+	color: #d3d3d3ff;
+	background-color: #0a0a0aff;
+}
+a:link {
+	color: #eee3c1ff;
+	font: 16px;
 }
 a:visited {
-    color: grey;
+	color: #2f71e8ff;
+	font: 16px;
 }
 .header {
-    font: 30px sans-serif;
+	color: #ffffffff;
+	font: 30px;
 }
-.chartname {
-    font-weight: 700;
-    font: 16px sans-serif;
+.chartname  {
+	color: #b7d0f1ff;
+	font-weight: bold;
+	font: 16px;
 }
-.chartlink {
-    font: 16px sans-serif;
+.chartlink  {
+	color: #b7d0f1ff;
+	font: 16px;
 }
