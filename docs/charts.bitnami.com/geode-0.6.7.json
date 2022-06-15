@@ -1,0 +1,38 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "apache",
+    "geode",
+    "database"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/geode:1.14.4-debian-11-r0",
+      "type": "image",
+      "version": "1.14.4-debian-11-r0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.0"
+    }
+  ],
+  "name": "geode:0.6.7",
+  "description": "Apache Geode is a data management platform that provides advanced capabilities for data-intensive applications.",
+  "type": "chart",
+  "shortName": "geode",
+  "version": "0.6.7"
+}

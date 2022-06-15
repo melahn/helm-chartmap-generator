@@ -1,0 +1,31 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "kibana",
+    "analytics",
+    "monitoring",
+    "metrics",
+    "logs"
+  ],
+  "children": [{
+    "maintainers": [{"name": "Bitnami"}],
+    "keywords": [
+      "common",
+      "helper",
+      "template",
+      "function",
+      "bitnami"
+    ],
+    "children": [],
+    "name": "common:1.16.0",
+    "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+    "type": "chart",
+    "shortName": "common",
+    "version": "1.16.0"
+  }],
+  "name": "kibana:10.1.12",
+  "description": "Kibana is an open source, browser based analytics and search dashboard for Elasticsearch. Kibana strives to be easy to get started with, while also being flexible and powerful.",
+  "type": "chart",
+  "shortName": "kibana",
+  "version": "10.1.12"
+}

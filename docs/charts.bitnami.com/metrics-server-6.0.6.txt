@@ -1,0 +1,45 @@
+Chart Map for metrics-server:6.0.6
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: metrics-server:6.0.6
+	apiVersion: v2
+	appVersion: 0.6.1
+	created: Not specified
+	dependencies: common:1.16.0
+	description: Metrics Server aggregates resource usage data, such as container CPU and memory usage, in a Kubernetes cluster and makes it available via the Metrics API.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/metrics-server/img/metrics-server-stack-220x234.png
+	keywords: metrics-server,cluster,metrics
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: metrics-server
+	sources: https://github.com/bitnami/bitnami-docker-metrics-server,https://github.com/kubernetes-incubator/metrics-server
+	urls: Not specified
+	version: 6.0.6
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/metrics-server:0.6.1-debian-11-r0
+
+Chart Dependencies
+------------------
+metrics-server:6.0.6 depends on common:1.16.0
+metrics-server:6.0.6 uses docker.io/bitnami/metrics-server:0.6.1-debian-11-r0
+
+Generated on 2022/06/15 22:30:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

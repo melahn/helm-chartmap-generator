@@ -1,0 +1,77 @@
+Chart Map for prestashop:15.2.8
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: mariadb:11.0.10
+	apiVersion: v2
+	appVersion: 10.6.8
+	created: 2022-06-03T02:45:49.783913761Z
+	dependencies: common:1.14.1
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: sha256:320cff73b802f7dbff2c8da6ca156b5f9041c16706e2390bb4c0cfae9cd3f09a
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.0.10.tgz
+	version: 11.0.10
+Chart: prestashop:15.2.8
+	apiVersion: v2
+	appVersion: 1.7.8-6
+	created: Not specified
+	dependencies: mariadb:11.0.10, common:1.16.0
+	description: PrestaShop is a powerful open source eCommerce platform used by over 250,000 online storefronts worldwide. It is easily customizable, responsive, and includes powerful tools to drive online sales.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/prestashop/img/prestashop-stack-220x234.png
+	keywords: prestashop,e-commerce,http,web,php
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: prestashop
+	sources: https://github.com/bitnami/bitnami-docker-prestashop,https://prestashop.com/
+	urls: Not specified
+	version: 15.2.8
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.6.8-debian-10-r0
+
+Chart Dependencies
+------------------
+prestashop:15.2.8 depends on mariadb:11.0.10
+mariadb:11.0.10 depends on common:1.14.1
+prestashop:15.2.8 depends on common:1.16.0
+mariadb:11.0.10 uses docker.io/bitnami/mariadb:10.6.8-debian-10-r0
+
+Generated on 2022/06/15 22:36:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

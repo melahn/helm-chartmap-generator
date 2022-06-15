@@ -1,0 +1,66 @@
+Chart Map for argo-cd:3.4.1
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: redis:16.12.1
+	apiVersion: v2
+	appVersion: 6.2.7
+	created: 2022-06-10T15:40:16.355660414Z
+	dependencies: common:1.16.0
+	description: Redis(R) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: sha256:b5092fc5fc0e9852ab4f728aa836fb71f9f15151c1c3f0b7b1d24220cbd47eeb
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://charts.bitnami.com/bitnami/redis-16.12.1.tgz
+	version: 16.12.1
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: argo-cd:3.4.1
+	apiVersion: v2
+	appVersion: 2.3.4
+	created: Not specified
+	dependencies: redis:16.12.1, common:1.16.0
+	description: Argo CD is a continuous delivery tool for Kubernetes based on GitOps.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/argo-cd/img/argo-cd-stack-220x234.png
+	keywords: Continuous delivery,Continuous deployment,Devops,Kubernetes
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: argo-cd
+	sources: https://github.com/bitnami/bitnami-docker-argo-cd,https://github.com/argoproj/argo-cd/,https://github.com/bitnami/bitnami-docker-dex,https://github.com/dexidp/dex
+	urls: Not specified
+	version: 3.4.1
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/redis:6.2.7-debian-11-r3
+Image: docker.io/bitnami/redis:6.2.7-debian-11-r5
+Image: docker.io/bitnami/argo-cd:2.3.4-debian-11-r2
+
+Chart Dependencies
+------------------
+argo-cd:3.4.1 depends on redis:16.12.1
+redis:16.12.1 depends on common:1.16.0
+argo-cd:3.4.1 depends on common:1.16.0
+redis:16.12.1 uses docker.io/bitnami/redis:6.2.7-debian-11-r3
+redis:16.12.1 uses docker.io/bitnami/redis:6.2.7-debian-11-r5
+argo-cd:3.4.1 uses docker.io/bitnami/argo-cd:2.3.4-debian-11-r2
+
+Generated on 2022/06/15 22:15:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -42,4 +42,4 @@ Chart Dependencies
 nginx-intel:2.0.7 depends on common:1.14.1
 nginx-intel:2.0.7 uses docker.io/bitnami/nginx-intel:0.4.7-debian-10-r114
 
-Generated on 2022/06/02 03:25:03 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:32:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

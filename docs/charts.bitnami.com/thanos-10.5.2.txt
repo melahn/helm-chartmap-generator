@@ -1,0 +1,64 @@
+Chart Map for thanos:10.5.2
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: minio:11.7.1
+	apiVersion: v2
+	appVersion: 2022.6.7
+	created: 2022-06-08T19:10:08.788637495Z
+	dependencies: common:1.16.0
+	description: MinIO(R) is an object storage server, compatible with Amazon S3 cloud storage service, mainly used for storing unstructured data (such as photos, videos, log files, etc.).
+	digest: sha256:c50cbc8fd9949746ac63bbfca4a887acc4441a8ecbd8e8fb8d3e2b35e78258be
+	icon: https://bitnami.com/assets/stacks/minio/img/minio-stack-220x234.png
+	keywords: minio,storage,object-storage,s3,cluster
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: minio
+	sources: https://github.com/bitnami/bitnami-docker-minio,https://min.io
+	urls: https://charts.bitnami.com/bitnami/minio-11.7.1.tgz
+	version: 11.7.1
+Chart: thanos:10.5.2
+	apiVersion: v2
+	appVersion: 0.26.0
+	created: Not specified
+	dependencies: minio:11.7.1, common:1.16.0
+	description: Thanos is a highly available metrics system that can be added on top of existing Prometheus deployments, providing a global query view across all Prometheus installations.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/thanos/img/thanos-stack-220x234.png
+	keywords: analytics,monitoring,prometheus,thanos
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: thanos
+	sources: https://github.com/bitnami/bitnami-docker-thanos,https://thanos.io
+	urls: Not specified
+	version: 10.5.2
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/minio:2022.6.7-debian-11-r0
+Image: docker.io/bitnami/thanos:0.26.0-scratch-r4
+
+Chart Dependencies
+------------------
+thanos:10.5.2 depends on minio:11.7.1
+minio:11.7.1 depends on common:1.16.0
+thanos:10.5.2 depends on common:1.16.0
+minio:11.7.1 uses docker.io/bitnami/minio:2022.6.7-debian-11-r0
+thanos:10.5.2 uses docker.io/bitnami/thanos:0.26.0-scratch-r4
+
+Generated on 2022/06/15 22:39:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

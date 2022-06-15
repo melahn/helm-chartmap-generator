@@ -1,0 +1,41 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "wildfly",
+    "java",
+    "http",
+    "web",
+    "application server",
+    "jsp"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/wildfly:26.1.1-debian-11-r0",
+      "type": "image",
+      "version": "26.1.1-debian-11-r0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.0"
+    }
+  ],
+  "name": "wildfly:13.3.7",
+  "description": "Wildfly is a lightweight, open source application server, formerly known as JBoss, that implements the latest enterprise Java standards.",
+  "type": "chart",
+  "shortName": "wildfly",
+  "version": "13.3.7"
+}

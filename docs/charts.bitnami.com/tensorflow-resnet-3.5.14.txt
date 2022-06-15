@@ -1,0 +1,45 @@
+Chart Map for tensorflow-resnet:3.5.14
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: tensorflow-resnet:3.5.14
+	apiVersion: v2
+	appVersion: 2.8.2
+	created: Not specified
+	dependencies: common:1.16.0
+	description: TensorFlow ResNet is a client utility for use with TensorFlow Serving and ResNet models.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/tensorflow-inception/img/tensorflow-inception-stack-220x234.png
+	keywords: tensorflow,serving,resnet,machine,learning,library
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: tensorflow-resnet
+	sources: https://github.com/bitnami/bitnami-docker-tensorflow-serving,https://github.com/bitnami/bitnami-docker-tensorflow-resnet,https://www.tensorflow.org/serving/
+	urls: Not specified
+	version: 3.5.14
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/tensorflow-serving:2.8.0-debian-11-r1
+
+Chart Dependencies
+------------------
+tensorflow-resnet:3.5.14 depends on common:1.16.0
+tensorflow-resnet:3.5.14 uses docker.io/bitnami/tensorflow-serving:2.8.0-debian-11-r1
+
+Generated on 2022/06/15 22:39:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,64 @@
+Chart Map for osclass:14.1.11
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: osclass:14.1.11
+	apiVersion: v2
+	appVersion: 8.0.2
+	created: Not specified
+	dependencies: common:1.16.0, mariadb:11.0.12
+	description: Osclass allows you to easily create a classifieds site without any technical knowledge. It provides support for presenting general ads or specialized ads, is customizable, extensible and multilingual.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/osclass/img/osclass-stack-220x234.png
+	keywords: osclass,classifieds,http,web,php
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: osclass
+	sources: https://github.com/bitnami/bitnami-docker-osclass,https://osclass.org/
+	urls: Not specified
+	version: 14.1.11
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: mariadb:11.0.12
+	apiVersion: v2
+	appVersion: 10.6.8
+	created: 2022-06-08T20:11:01.124519804Z
+	dependencies: common:1.16.0
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: sha256:3d50b105d222e5b0c3687cbd356222e0a2a8a19aaad78d946d9fe5ab372e4994
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.0.12.tgz
+	version: 11.0.12
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/osclass:8.0.2-debian-11-r3
+Image: docker.io/bitnami/mariadb:10.6.8-debian-11-r0
+
+Chart Dependencies
+------------------
+osclass:14.1.11 depends on common:1.16.0
+osclass:14.1.11 depends on mariadb:11.0.12
+mariadb:11.0.12 depends on common:1.16.0
+osclass:14.1.11 uses docker.io/bitnami/osclass:8.0.2-debian-11-r3
+mariadb:11.0.12 uses docker.io/bitnami/mariadb:10.6.8-debian-11-r0
+
+Generated on 2022/06/15 22:34:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

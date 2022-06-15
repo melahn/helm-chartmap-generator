@@ -11,18 +11,18 @@ title Chart Map for orangehrm:11.0.2
 'There are 3 referenced Helm Charts
 artifact "mariadb:10.3.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_10_3_0 #DarkTurquoise
 artifact "orangehrm:11.0.2\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\torangehrm\n\t\thttp\n\t\thttps\n\t\tweb\n\t\tapplication\n\t\tphp\n\t\thuman resources" as orangehrm_11_0_2 #Cyan
-artifact "common:1.10.3\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_10_3 #DarkSeaGreen
+artifact "common:1.10.3\n====\n\tType: library\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_10_3 #DarkSeaGreen
 
 'There are 2 referenced Docker Images
 usecase "Image\n====\ndocker.io\n====\nbitnami/orangehrm:4.9.0-0-debian-10-r51\n====\n4.9.0-0-debian-10-r51" as docker_io_bitnami_orangehrm_4_9_0_0_debian_10_r51 #Bisque
 usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.5.13-debian-10-r32\n====\n10.5.13-debian-10-r32" as docker_io_bitnami_mariadb_10_5_13_debian_10_r32 #DarkGoldenRod
 
 'Chart Dependencies
-orangehrm_11_0_2--[#green]-|>common_1_10_3
 orangehrm_11_0_2--[#green]-|>mariadb_10_3_0
 mariadb_10_3_0--[#green]-|>common_1_10_3
+orangehrm_11_0_2--[#green]-|>common_1_10_3
 mariadb_10_3_0--[#orange]-|>docker_io_bitnami_mariadb_10_5_13_debian_10_r32
 orangehrm_11_0_2--[#orange]-|>docker_io_bitnami_orangehrm_4_9_0_0_debian_10_r51
 
-center footer Generated on 2022/06/02 03:26:44 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:34:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for rabbitmq:10.1.6
+
+'There are 2 referenced Helm Charts
+artifact "rabbitmq:10.1.6\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\trabbitmq\n\t\tmessage queue\n\t\tAMQP" as rabbitmq_10_1_6 #Aqua
+artifact "common:1.16.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_0 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/rabbitmq:3.10.5-debian-11-r3\n====\n3.10.5-debian-11-r3" as docker_io_bitnami_rabbitmq_3_10_5_debian_11_r3 #Beige
+
+'Chart Dependencies
+rabbitmq_10_1_6--[#green]-|>common_1_16_0
+rabbitmq_10_1_6--[#orange]-|>docker_io_bitnami_rabbitmq_3_10_5_debian_11_r3
+
+center footer Generated on 2022/06/15 22:36:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

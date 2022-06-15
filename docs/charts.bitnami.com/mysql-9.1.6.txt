@@ -1,0 +1,45 @@
+Chart Map for mysql:9.1.6
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: mysql:9.1.6
+	apiVersion: v2
+	appVersion: 8.0.29
+	created: Not specified
+	dependencies: common:1.16.0
+	description: MySQL is a fast, reliable, scalable, and easy to use open source relational database system. Designed to handle mission-critical, heavy-load production applications.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/mysql/img/mysql-stack-220x234.png
+	keywords: mysql,database,sql,cluster,high availability
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mysql
+	sources: https://github.com/bitnami/bitnami-docker-mysql,https://mysql.com
+	urls: Not specified
+	version: 9.1.6
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mysql:8.0.29-debian-11-r0
+
+Chart Dependencies
+------------------
+mysql:9.1.6 depends on common:1.16.0
+mysql:9.1.6 uses docker.io/bitnami/mysql:8.0.29-debian-11-r0
+
+Generated on 2022/06/15 22:31:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

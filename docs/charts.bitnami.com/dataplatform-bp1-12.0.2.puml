@@ -31,22 +31,22 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:2.4.2-debian-1
 usecase "Image\n====\ndocker.io\n====\nbitnami/dataplatform-exporter:1.0.1-scratch-r28\n====\n1.0.1-scratch-r28" as docker_io_bitnami_dataplatform_exporter_1_0_1_scratch_r28 #Fuchsia
 
 'Chart Dependencies
-dataplatform_bp1_12_0_2--[#green]-|>zookeeper_9_1_1
-zookeeper_9_1_1--[#green]-|>common_1_13_0
 dataplatform_bp1_12_0_2--[#green]-|>kafka_16_2_10
-kafka_16_2_10--[#green]-|>zookeeper_9_1_1
 kafka_16_2_10--[#green]-|>common_1_13_1
-dataplatform_bp1_12_0_2--[#green]-|>spark_6_0_0
-spark_6_0_0--[#green]-|>common_1_13_1
-dataplatform_bp1_12_0_2--[#green]-|>wavefront_3_4_2
-wavefront_3_4_2--[#green]-|>kube_state_metrics_2_2_19
-kube_state_metrics_2_2_19--[#green]-|>common_1_13_0
-wavefront_3_4_2--[#green]-|>common_1_13_1
-dataplatform_bp1_12_0_2--[#green]-|>common_1_13_1
+kafka_16_2_10--[#green]-|>zookeeper_9_1_1
+zookeeper_9_1_1--[#green]-|>common_1_13_0
 dataplatform_bp1_12_0_2--[#green]-|>solr_4_0_9
 solr_4_0_9--[#green]-|>common_1_13_0
 solr_4_0_9--[#green]-|>zookeeper_9_1_0
 zookeeper_9_1_0--[#green]-|>common_1_13_0
+dataplatform_bp1_12_0_2--[#green]-|>wavefront_3_4_2
+wavefront_3_4_2--[#green]-|>common_1_13_1
+wavefront_3_4_2--[#green]-|>kube_state_metrics_2_2_19
+kube_state_metrics_2_2_19--[#green]-|>common_1_13_0
+dataplatform_bp1_12_0_2--[#green]-|>spark_6_0_0
+spark_6_0_0--[#green]-|>common_1_13_1
+dataplatform_bp1_12_0_2--[#green]-|>common_1_13_1
+dataplatform_bp1_12_0_2--[#green]-|>zookeeper_9_1_1
 solr_4_0_9--[#orange]-|>docker_io_bitnami_solr_8_11_1_debian_10_r125
 dataplatform_bp1_12_0_2--[#orange]-|>docker_io_bitnami_dataplatform_emitter_1_0_1_scratch_r32
 dataplatform_bp1_12_0_2--[#orange]-|>docker_io_bitnami_dataplatform_exporter_1_0_1_scratch_r28
@@ -57,5 +57,5 @@ zookeeper_9_1_0--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r37
 wavefront_3_4_2--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_0_0_debian_10_r39
 zookeeper_9_1_1--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r37
 
-center footer Generated on 2022/06/02 03:09:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:18:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

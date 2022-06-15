@@ -1,0 +1,64 @@
+Chart Map for wavefront:4.0.2
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: wavefront:4.0.2
+	apiVersion: v2
+	appVersion: 1.11.0
+	created: Not specified
+	dependencies: kube-state-metrics:3.0.4, common:1.16.0
+	description: Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/wavefront-collector/img/wavefront-collector-stack-220x234.png
+	keywords: metric,monitoring,observability,alerting
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: wavefront
+	sources: https://github.com/bitnami/bitnami-docker-wavefront-kubernetes-collector,https://github.com/bitnami/bitnami-docker-wavefront-proxy,https://github.com/wavefrontHQ/wavefront-collector-for-kubernetes,https://github.com/wavefrontHQ/wavefront-proxy
+	urls: Not specified
+	version: 4.0.2
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: kube-state-metrics:3.0.4
+	apiVersion: v2
+	appVersion: 2.5.0
+	created: 2022-06-08T10:32:09.459911367Z
+	dependencies: common:1.16.0
+	description: kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.
+	digest: sha256:b1ba2488bf2c010d73a67725be37889dbf613c22b21735ddf7602523a3a90dcc
+	icon: https://bitnami.com/assets/stacks/kube-state-metrics/img/kube-state-metrics-stack-220x234.png
+	keywords: prometheus,kube-state-metrics,monitoring
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: kube-state-metrics
+	sources: https://github.com/bitnami/bitnami-docker-kube-state-metrics,https://github.com/kubernetes/kube-state-metrics
+	urls: https://charts.bitnami.com/bitnami/kube-state-metrics-3.0.4.tgz
+	version: 3.0.4
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/wavefront-proxy:11.1.0-debian-11-r2
+Image: docker.io/bitnami/kube-state-metrics:2.5.0-debian-11-r0
+
+Chart Dependencies
+------------------
+wavefront:4.0.2 depends on kube-state-metrics:3.0.4
+kube-state-metrics:3.0.4 depends on common:1.16.0
+wavefront:4.0.2 depends on common:1.16.0
+wavefront:4.0.2 uses docker.io/bitnami/wavefront-proxy:11.1.0-debian-11-r2
+kube-state-metrics:3.0.4 uses docker.io/bitnami/kube-state-metrics:2.5.0-debian-11-r0
+
+Generated on 2022/06/15 22:39:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

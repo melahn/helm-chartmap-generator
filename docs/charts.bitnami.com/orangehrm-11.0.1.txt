@@ -5,23 +5,22 @@ There are 3 referenced Helm Charts
 Chart: mariadb:10.2.0
 	apiVersion: v2
 	appVersion: 10.5.13
-	created: 2021-12-29T11:08:46.886404422Z
+	created: Not specified
 	dependencies: common:1.10.3
 	description: Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.
-	digest: d553ad1971e891078464c86468caa01216639ba86251afd2f24aeff2b61a04af
+	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
 	keywords: mariadb,mysql,database,sql,prometheus
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
 	name: mariadb
 	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
-	urls: https://charts.bitnami.com/bitnami/mariadb-10.2.0.tgz
+	urls: Not specified
 	version: 10.2.0
 Chart: orangehrm:11.0.1
 	apiVersion: v2
 	appVersion: 4.9.0-0
 	created: Not specified
-	dependencies: mariadb:10.2.0, common:1.10.3
+	dependencies: common:1.10.3, mariadb:10.2.0
 	description: OrangeHRM is a free HR management system that offers a wealth of modules to suit the needs of your business.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/orangehrm/img/orangehrm-stack-220x234.png
@@ -35,17 +34,16 @@ Chart: orangehrm:11.0.1
 Chart: common:1.10.3
 	apiVersion: v2
 	appVersion: 1.10.0
-	created: 2021-11-30T20:17:51.684597621Z
+	created: Not specified
 	dependencies: None
 	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
-	digest: 5c5c415745755c80f39b5fc5fc54a846d81ef72fdd27662e0fa6061e3d342f7e
+	digest: Not specified
 	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
 	keywords: common,helper,template,function,bitnami
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
 	name: common
 	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
-	urls: https://charts.bitnami.com/bitnami/common-1.10.3.tgz
+	urls: Not specified
 	version: 1.10.3
 
 There are 2 referenced Docker Images
@@ -55,10 +53,10 @@ Image: docker.io/bitnami/orangehrm:4.9.0-0-debian-10-r46
 
 Chart Dependencies
 ------------------
+orangehrm:11.0.1 depends on common:1.10.3
 orangehrm:11.0.1 depends on mariadb:10.2.0
 mariadb:10.2.0 depends on common:1.10.3
-orangehrm:11.0.1 depends on common:1.10.3
 mariadb:10.2.0 uses docker.io/bitnami/mariadb:10.5.13-debian-10-r32
 orangehrm:11.0.1 uses docker.io/bitnami/orangehrm:4.9.0-0-debian-10-r46
 
-Generated on 2022/06/02 03:26:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:34:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

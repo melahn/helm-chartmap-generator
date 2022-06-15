@@ -1,0 +1,64 @@
+Chart Map for drupal:12.2.10
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: mariadb:11.0.13
+	apiVersion: v2
+	appVersion: 10.6.8
+	created: 2022-06-10T22:24:58.432140691Z
+	dependencies: common:1.16.0
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: sha256:d117551f4243dcf36bc1b1b09bff70896b3a95f58ca5c63cf5fe0d70e0718460
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.0.13.tgz
+	version: 11.0.13
+Chart: drupal:12.2.10
+	apiVersion: v2
+	appVersion: 9.3.16
+	created: Not specified
+	dependencies: common:1.16.0, mariadb:11.0.13
+	description: Drupal is one of the most versatile open source content management systems in the world. It is pre-configured with the Ctools and Views modules, Drush and Let's Encrypt auto-configuration support.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/drupal/img/drupal-stack-220x234.png
+	keywords: drupal,cms,blog,http,web,application,php
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: drupal
+	sources: https://github.com/bitnami/bitnami-docker-drupal,https://www.drupal.org/
+	urls: Not specified
+	version: 12.2.10
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.6.8-debian-11-r3
+Image: docker.io/bitnami/drupal:9.3.16-debian-11-r0
+
+Chart Dependencies
+------------------
+drupal:12.2.10 depends on common:1.16.0
+drupal:12.2.10 depends on mariadb:11.0.13
+mariadb:11.0.13 depends on common:1.16.0
+mariadb:11.0.13 uses docker.io/bitnami/mariadb:10.6.8-debian-11-r3
+drupal:12.2.10 uses docker.io/bitnami/drupal:9.3.16-debian-11-r0
+
+Generated on 2022/06/15 22:20:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

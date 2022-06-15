@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for moodle:14.1.7
+
+'There are 3 referenced Helm Charts
+artifact "moodle:14.1.7\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmoodle\n\t\tlearning\n\t\tphp" as moodle_14_1_7 #Gainsboro
+artifact "common:1.14.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_1 #DarkSeaGreen
+artifact "mariadb:11.0.8\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_11_0_8 #DarkTurquoise
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/moodle:4.0.1-debian-10-r6\n====\n4.0.1-debian-10-r6" as docker_io_bitnami_moodle_4_0_1_debian_10_r6 #CadetBlue
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.6.8-debian-10-r0\n====\n10.6.8-debian-10-r0" as docker_io_bitnami_mariadb_10_6_8_debian_10_r0 #DarkGoldenRod
+
+'Chart Dependencies
+moodle_14_1_7--[#green]-|>mariadb_11_0_8
+mariadb_11_0_8--[#green]-|>common_1_14_1
+moodle_14_1_7--[#green]-|>common_1_14_1
+moodle_14_1_7--[#orange]-|>docker_io_bitnami_moodle_4_0_1_debian_10_r6
+mariadb_11_0_8--[#orange]-|>docker_io_bitnami_mariadb_10_6_8_debian_10_r0
+
+center footer Generated on 2022/06/15 22:31:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

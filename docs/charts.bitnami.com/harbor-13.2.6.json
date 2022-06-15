@@ -1,0 +1,196 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "docker",
+    "registry",
+    "vulnerability",
+    "scan"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/harbor-notary-server:2.5.1-debian-11-r0",
+      "type": "image",
+      "version": "2.5.1-debian-11-r0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/harbor-registryctl:2.5.1-debian-11-r0",
+      "type": "image",
+      "version": "2.5.1-debian-11-r0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/harbor-registry:2.5.1-debian-11-r0",
+      "type": "image",
+      "version": "2.5.1-debian-11-r0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/harbor-portal:2.5.1-debian-11-r0",
+      "type": "image",
+      "version": "2.5.1-debian-11-r0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/nginx:1.21.6-debian-11-r0",
+      "type": "image",
+      "version": "1.21.6-debian-11-r0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/harbor-jobservice:2.5.1-debian-11-r0",
+      "type": "image",
+      "version": "2.5.1-debian-11-r0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/chartmuseum:0.14.0-debian-11-r0",
+      "type": "image",
+      "version": "0.14.0-debian-11-r0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/harbor-core:2.5.1-debian-11-r0",
+      "type": "image",
+      "version": "2.5.1-debian-11-r0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/harbor-notary-signer:2.5.1-debian-11-r0",
+      "type": "image",
+      "version": "2.5.1-debian-11-r0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/harbor-adapter-trivy:2.5.1-debian-11-r0",
+      "type": "image",
+      "version": "2.5.1-debian-11-r0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.0"
+    },
+    {
+      "maintainers": [
+        {"name": "Bitnami"},
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/postgresql:13.7.0-debian-11-r0",
+          "type": "image",
+          "version": "13.7.0-debian-11-r0"
+        },
+        {
+          "maintainers": [{"name": "Bitnami"}],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.16.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.16.0"
+        }
+      ],
+      "name": "postgresql:11.6.3",
+      "description": "PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "11.6.3"
+    },
+    {
+      "maintainers": [
+        {"name": "Bitnami"},
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/redis:6.2.7-debian-10-r23",
+          "type": "image",
+          "version": "6.2.7-debian-10-r23"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.14.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.14.1"
+        }
+      ],
+      "name": "redis:16.11.2",
+      "description": "Redis(R) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "16.11.2"
+    }
+  ],
+  "name": "harbor:13.2.6",
+  "description": "Harbor is an open source trusted cloud-native registry to store, sign, and scan content. It adds functionalities like security, identity, and management to the open source Docker distribution.",
+  "type": "chart",
+  "shortName": "harbor",
+  "version": "13.2.6"
+}

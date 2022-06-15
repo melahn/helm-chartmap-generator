@@ -1,0 +1,40 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "fluentd",
+    "logging",
+    "logs",
+    "data",
+    "collector"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/fluentd:1.14.6-debian-11-r4",
+      "type": "image",
+      "version": "1.14.6-debian-11-r4"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.0"
+    }
+  ],
+  "name": "fluentd:5.1.10",
+  "description": "Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on.",
+  "type": "chart",
+  "shortName": "fluentd",
+  "version": "5.1.10"
+}

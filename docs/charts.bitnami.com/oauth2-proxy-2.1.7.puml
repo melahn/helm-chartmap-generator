@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for oauth2-proxy:2.1.7
+
+'There are 3 referenced Helm Charts
+artifact "oauth2-proxy:2.1.7\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkubernetes\n\t\toauth\n\t\toauth2\n\t\tauthentication\n\t\tgoogle\n\t\tgithub" as oauth2_proxy_2_1_7 #LightGreen
+artifact "redis:16.10.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_16_10_0 #LightSeaGreen
+artifact "common:1.14.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_1 #DarkSeaGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.7-debian-10-r23\n====\n6.2.7-debian-10-r23" as docker_io_bitnami_redis_6_2_7_debian_10_r23 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/oauth2-proxy:7.3.0-debian-10-r0\n====\n7.3.0-debian-10-r0" as docker_io_bitnami_oauth2_proxy_7_3_0_debian_10_r0 #LightGreen
+
+'Chart Dependencies
+oauth2_proxy_2_1_7--[#green]-|>common_1_14_1
+oauth2_proxy_2_1_7--[#green]-|>redis_16_10_0
+redis_16_10_0--[#green]-|>common_1_14_1
+oauth2_proxy_2_1_7--[#orange]-|>docker_io_bitnami_oauth2_proxy_7_3_0_debian_10_r0
+redis_16_10_0--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_10_r23
+
+center footer Generated on 2022/06/15 22:33:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

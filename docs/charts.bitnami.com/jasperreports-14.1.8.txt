@@ -1,0 +1,79 @@
+Chart Map for jasperreports:14.1.8
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: mariadb:11.0.9
+	apiVersion: v2
+	appVersion: 10.6.8
+	created: 2022-05-31T03:35:44.528952675Z
+	dependencies: common:1.14.1
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: sha256:1133fba4273a092af6f7ce7eeddc9cf6712d2c3d9ae9d8d737dccd280b86aa44
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.0.9.tgz
+	version: 11.0.9
+Chart: jasperreports:14.1.8
+	apiVersion: v2
+	appVersion: 8.0.2
+	created: Not specified
+	dependencies: mariadb:11.0.9, common:1.15.1
+	description: JasperReports Server is a stand-alone and embeddable reporting server. It is a central information hub, with reporting and analytics that can be embedded into web and mobile applications.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/jasperserver/img/jasperserver-stack-220x234.png
+	keywords: business intelligence,java,jasper,reporting,analytic,visualization
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: jasperreports
+	sources: https://github.com/bitnami/bitnami-docker-jasperreports,http://community.jaspersoft.com/project/jasperreports-server
+	urls: Not specified
+	version: 14.1.8
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+Chart: common:1.15.1
+	apiVersion: v2
+	appVersion: 1.15.1
+	created: 2022-06-01T20:46:46.320899192Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:7b408658d3c093aabf5bd9545e9c072a9b0e8594d64eb008b8f5d229fec13c02
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.15.1.tgz
+	version: 1.15.1
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.6.8-debian-10-r0
+Image: docker.io/bitnami/jasperreports:8.0.2-debian-10-r1
+
+Chart Dependencies
+------------------
+jasperreports:14.1.8 depends on mariadb:11.0.9
+mariadb:11.0.9 depends on common:1.14.1
+jasperreports:14.1.8 depends on common:1.15.1
+mariadb:11.0.9 uses docker.io/bitnami/mariadb:10.6.8-debian-10-r0
+jasperreports:14.1.8 uses docker.io/bitnami/jasperreports:8.0.2-debian-10-r1
+
+Generated on 2022/06/15 22:25:45 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

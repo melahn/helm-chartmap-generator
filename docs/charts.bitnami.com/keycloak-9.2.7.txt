@@ -1,0 +1,64 @@
+Chart Map for keycloak:9.2.7
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: keycloak:9.2.7
+	apiVersion: v2
+	appVersion: 18.0.0
+	created: Not specified
+	dependencies: common:1.16.0, postgresql:11.6.5
+	description: Keycloak is a high performance Java-based identity and access management solution. It lets developers add an authentication layer to their applications with minimum effort.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/keycloak/img/keycloak-stack-220x234.png
+	keywords: keycloak,access-management
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: keycloak
+	sources: https://github.com/bitnami/bitnami-docker-keycloak,https://github.com/keycloak/keycloak
+	urls: Not specified
+	version: 9.2.7
+Chart: postgresql:11.6.5
+	apiVersion: v2
+	appVersion: 14.3.0
+	created: 2022-06-08T14:30:30.923486547Z
+	dependencies: common:1.16.0
+	description: PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+	digest: sha256:ba1a8e90e5d2fae8a8c0fb58a8fe564060245f958a2ddeb0473b04d97020cec3
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql,https://www.postgresql.org/
+	urls: https://charts.bitnami.com/bitnami/postgresql-11.6.5.tgz
+	version: 11.6.5
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/keycloak:18.0.0-debian-11-r4
+Image: docker.io/bitnami/postgresql:14.3.0-debian-11-r0
+
+Chart Dependencies
+------------------
+keycloak:9.2.7 depends on common:1.16.0
+keycloak:9.2.7 depends on postgresql:11.6.5
+postgresql:11.6.5 depends on common:1.16.0
+keycloak:9.2.7 uses docker.io/bitnami/keycloak:18.0.0-debian-11-r4
+postgresql:11.6.5 uses docker.io/bitnami/postgresql:14.3.0-debian-11-r0
+
+Generated on 2022/06/15 22:26:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

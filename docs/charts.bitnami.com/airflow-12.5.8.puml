@@ -1,0 +1,37 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for airflow:12.5.8
+
+'There are 4 referenced Helm Charts
+artifact "redis:16.12.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_16_12_1 #LightSeaGreen
+artifact "postgresql:11.6.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_6_5 #LightSteelBlue
+artifact "common:1.16.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_0 #DarkSeaGreen
+artifact "airflow:12.5.8\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tapache\n\t\tairflow\n\t\tworkflow\n\t\tdag" as airflow_12_5_8 #FloralWhite
+
+'There are 5 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.7-debian-11-r3\n====\n6.2.7-debian-11-r3" as docker_io_bitnami_redis_6_2_7_debian_11_r3 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/airflow-scheduler:2.3.2-debian-11-r3\n====\n2.3.2-debian-11-r3" as docker_io_bitnami_airflow_scheduler_2_3_2_debian_11_r3 #LightCyan
+usecase "Image\n====\ndocker.io\n====\nbitnami/airflow-worker:2.3.2-debian-11-r3\n====\n2.3.2-debian-11-r3" as docker_io_bitnami_airflow_worker_2_3_2_debian_11_r3 #AntiqueWhite
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.3.0-debian-11-r0\n====\n14.3.0-debian-11-r0" as docker_io_bitnami_postgresql_14_3_0_debian_11_r0 #DarkSalmon
+usecase "Image\n====\ndocker.io\n====\nbitnami/airflow:2.3.2-debian-11-r3\n====\n2.3.2-debian-11-r3" as docker_io_bitnami_airflow_2_3_2_debian_11_r3 #LightGoldenRodYellow
+
+'Chart Dependencies
+airflow_12_5_8--[#green]-|>redis_16_12_1
+redis_16_12_1--[#green]-|>common_1_16_0
+airflow_12_5_8--[#green]-|>postgresql_11_6_5
+postgresql_11_6_5--[#green]-|>common_1_16_0
+airflow_12_5_8--[#green]-|>common_1_16_0
+redis_16_12_1--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_11_r3
+postgresql_11_6_5--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_11_r0
+airflow_12_5_8--[#orange]-|>docker_io_bitnami_airflow_2_3_2_debian_11_r3
+airflow_12_5_8--[#orange]-|>docker_io_bitnami_airflow_scheduler_2_3_2_debian_11_r3
+airflow_12_5_8--[#orange]-|>docker_io_bitnami_airflow_worker_2_3_2_debian_11_r3
+
+center footer Generated on 2022/06/15 22:15:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

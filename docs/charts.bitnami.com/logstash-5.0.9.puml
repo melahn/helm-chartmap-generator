@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for logstash:5.0.9
+
+'There are 2 referenced Helm Charts
+artifact "logstash:5.0.9\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tlogstash\n\t\tlogging\n\t\telk" as logstash_5_0_9 #Aqua
+artifact "common:1.16.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_0 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/logstash:8.2.2-debian-11-r3\n====\n8.2.2-debian-11-r3" as docker_io_bitnami_logstash_8_2_2_debian_11_r3 #Beige
+
+'Chart Dependencies
+logstash_5_0_9--[#green]-|>common_1_16_0
+logstash_5_0_9--[#orange]-|>docker_io_bitnami_logstash_8_2_2_debian_11_r3
+
+center footer Generated on 2022/06/15 22:29:15 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

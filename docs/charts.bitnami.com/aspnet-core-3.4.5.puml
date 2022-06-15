@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for aspnet-core:3.4.5
+
+'There are 2 referenced Helm Charts
+artifact "aspnet-core:3.4.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tasp.net\n\t\tdotnet" as aspnet_core_3_4_5 #DarkTurquoise
+artifact "common:1.16.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_0 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/aspnet-core:6.0.5-debian-11-r4\n====\n6.0.5-debian-11-r4" as docker_io_bitnami_aspnet_core_6_0_5_debian_11_r4 #LightSalmon
+
+'Chart Dependencies
+aspnet_core_3_4_5--[#green]-|>common_1_16_0
+aspnet_core_3_4_5--[#orange]-|>docker_io_bitnami_aspnet_core_6_0_5_debian_11_r4
+
+center footer Generated on 2022/06/15 22:16:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

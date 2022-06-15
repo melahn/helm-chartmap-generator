@@ -1,0 +1,62 @@
+Chart Map for ghost:19.0.4
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: mysql:9.1.6
+	apiVersion: v2
+	appVersion: 8.0.29
+	created: 2022-06-09T14:40:40.704577195Z
+	dependencies: common:1.16.0
+	description: MySQL is a fast, reliable, scalable, and easy to use open source relational database system. Designed to handle mission-critical, heavy-load production applications.
+	digest: sha256:8d665294c5660372f0cd5fd596498296a555a364bbecda31c8f6bd3c900072e7
+	icon: https://bitnami.com/assets/stacks/mysql/img/mysql-stack-220x234.png
+	keywords: mysql,database,sql,cluster,high availability
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mysql
+	sources: https://github.com/bitnami/bitnami-docker-mysql,https://mysql.com
+	urls: https://charts.bitnami.com/bitnami/mysql-9.1.6.tgz
+	version: 9.1.6
+Chart: ghost:19.0.4
+	apiVersion: v2
+	appVersion: 5.2.2
+	created: Not specified
+	dependencies: common:1.16.0, mysql:9.1.6
+	description: Ghost is an open source publishing platform designed to create blogs, magazines, and news sites. It includes a simple markdown editor with preview, theming, and SEO built-in to simplify editing.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/ghost/img/ghost-stack-220x234.png
+	keywords: ghost,blog,http,web,application,nodejs,javascript
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: ghost
+	sources: https://github.com/bitnami/bitnami-docker-ghost,https://www.ghost.org/
+	urls: Not specified
+	version: 19.0.4
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mysql:8.0.29-debian-11-r0
+
+Chart Dependencies
+------------------
+ghost:19.0.4 depends on common:1.16.0
+ghost:19.0.4 depends on mysql:9.1.6
+mysql:9.1.6 depends on common:1.16.0
+mysql:9.1.6 uses docker.io/bitnami/mysql:8.0.29-debian-11-r0
+
+Generated on 2022/06/15 22:22:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

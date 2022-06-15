@@ -1,0 +1,113 @@
+Chart Map for kube-prometheus:8.0.5
+
+There are 6 referenced Helm Charts
+----------------------------------
+Chart: common:1.15.2
+	apiVersion: v2
+	appVersion: 1.15.1
+	created: 2022-06-02T20:43:28.419235182Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:412afa5097f6099397925a97e11bca8042f97f4f84683a5f7f4a684bfbed742b
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.15.2.tgz
+	version: 1.15.2
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: node-exporter:3.0.1
+	apiVersion: v2
+	appVersion: 1.3.1
+	created: 2022-06-03T02:44:16.556789422Z
+	dependencies: common:1.14.1
+	description: Prometheus exporter for hardware and OS metrics exposed by UNIX kernels, with pluggable metric collectors.
+	digest: sha256:798450451f9062f7f2532920d24440aefdd663d62b403f734557e1af12ad42f5
+	icon: https://bitnami.com/assets/stacks/node-exporter/img/node-exporter-stack-220x234.png
+	keywords: prometheus,node-exporter,monitoring
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: node-exporter
+	sources: https://github.com/bitnami/bitnami-docker-node-exporter,https://github.com/prometheus/node_exporter,https://prometheus.io/
+	urls: https://charts.bitnami.com/bitnami/node-exporter-3.0.1.tgz
+	version: 3.0.1
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+Chart: kube-prometheus:8.0.5
+	apiVersion: v2
+	appVersion: 0.57.0
+	created: Not specified
+	dependencies: node-exporter:3.0.1, kube-state-metrics:3.0.3, common:1.16.0
+	description: Prometheus Operator provides easy monitoring definitions for Kubernetes services and deployment and management of Prometheus instances.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/prometheus-operator/img/prometheus-operator-stack-220x234.png
+	keywords: prometheus,alertmanager,operator,monitoring
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: kube-prometheus
+	sources: https://github.com/bitnami/bitnami-docker-prometheus-operator,https://github.com/bitnami/bitnami-docker-prometheus,https://github.com/bitnami/bitnami-docker-alertmanager,https://github.com/prometheus-operator/kube-prometheus
+	urls: Not specified
+	version: 8.0.5
+Chart: kube-state-metrics:3.0.3
+	apiVersion: v2
+	appVersion: 2.5.0
+	created: 2022-06-04T00:21:53.934773068Z
+	dependencies: common:1.15.2
+	description: kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.
+	digest: sha256:511af894766e11399bdb7fec73cc5fe3665f6eb47cdc9fbbfefade75080d0b3e
+	icon: https://bitnami.com/assets/stacks/kube-state-metrics/img/kube-state-metrics-stack-220x234.png
+	keywords: prometheus,kube-state-metrics,monitoring
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: kube-state-metrics
+	sources: https://github.com/bitnami/bitnami-docker-kube-state-metrics,https://github.com/kubernetes/kube-state-metrics
+	urls: https://charts.bitnami.com/bitnami/kube-state-metrics-3.0.3.tgz
+	version: 3.0.3
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/blackbox-exporter:0.21.0-debian-11-r1
+Image: docker.io/bitnami/prometheus-operator:0.57.0-debian-11-r0
+Image: docker.io/bitnami/kube-state-metrics:2.5.0-debian-10-r0
+
+Chart Dependencies
+------------------
+kube-prometheus:8.0.5 depends on node-exporter:3.0.1
+node-exporter:3.0.1 depends on common:1.14.1
+kube-prometheus:8.0.5 depends on kube-state-metrics:3.0.3
+kube-state-metrics:3.0.3 depends on common:1.15.2
+kube-prometheus:8.0.5 depends on common:1.16.0
+kube-prometheus:8.0.5 uses docker.io/bitnami/blackbox-exporter:0.21.0-debian-11-r1
+kube-prometheus:8.0.5 uses docker.io/bitnami/prometheus-operator:0.57.0-debian-11-r0
+kube-state-metrics:3.0.3 uses docker.io/bitnami/kube-state-metrics:2.5.0-debian-10-r0
+
+Generated on 2022/06/15 22:28:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

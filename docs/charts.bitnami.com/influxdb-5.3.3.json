@@ -1,0 +1,39 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "influxdb",
+    "tick",
+    "database",
+    "timeseries"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/influxdb:2.2.0-debian-11-r0",
+      "type": "image",
+      "version": "2.2.0-debian-11-r0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.0"
+    }
+  ],
+  "name": "influxdb:5.3.3",
+  "description": "InfluxDB(TM) is an open source time-series database. It is a core component of the TICK (Telegraf, InfluxDB(TM), Chronograf, Kapacitor) stack.",
+  "type": "chart",
+  "shortName": "influxdb",
+  "version": "5.3.3"
+}

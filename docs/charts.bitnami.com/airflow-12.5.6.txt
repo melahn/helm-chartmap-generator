@@ -1,0 +1,102 @@
+Chart Map for airflow:12.5.6
+
+There are 5 referenced Helm Charts
+----------------------------------
+Chart: postgresql:11.6.3
+	apiVersion: v2
+	appVersion: 14.3.0
+	created: 2022-06-04T03:20:37.80608231Z
+	dependencies: common:1.16.0
+	description: PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+	digest: sha256:123868274817cc6b1ec4ab0f7d75a3fe90dc7fb7610dc94b24692b694526aa64
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql,https://www.postgresql.org/
+	urls: https://charts.bitnami.com/bitnami/postgresql-11.6.3.tgz
+	version: 11.6.3
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+Chart: redis:16.11.2
+	apiVersion: v2
+	appVersion: 6.2.7
+	created: 2022-06-03T23:40:54.07784449Z
+	dependencies: common:1.14.1
+	description: Redis(R) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: sha256:f72a7267041118a3f7fe6ac35219a552027db06c9b3070ce9670e01dcba5ac5f
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://charts.bitnami.com/bitnami/redis-16.11.2.tgz
+	version: 16.11.2
+Chart: airflow:12.5.6
+	apiVersion: v2
+	appVersion: 2.3.2
+	created: Not specified
+	dependencies: redis:16.11.2, postgresql:11.6.3, common:1.16.0
+	description: Apache Airflow is a tool to express and execute workflows as directed acyclic graphs (DAGs). It includes utilities to schedule tasks, monitor task progress and handle task dependencies.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/airflow/img/airflow-stack-220x234.png
+	keywords: apache,airflow,workflow,dag
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: airflow
+	sources: https://github.com/bitnami/bitnami-docker-airflow,https://airflow.apache.org/
+	urls: Not specified
+	version: 12.5.6
+
+There are 5 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/redis:6.2.7-debian-10-r23
+Image: docker.io/bitnami/airflow:2.3.2-debian-11-r0
+Image: docker.io/bitnami/postgresql:14.3.0-debian-10-r22
+Image: docker.io/bitnami/airflow-worker:2.3.2-debian-11-r0
+Image: docker.io/bitnami/airflow-scheduler:2.3.2-debian-11-r0
+
+Chart Dependencies
+------------------
+airflow:12.5.6 depends on redis:16.11.2
+redis:16.11.2 depends on common:1.14.1
+airflow:12.5.6 depends on postgresql:11.6.3
+postgresql:11.6.3 depends on common:1.16.0
+airflow:12.5.6 depends on common:1.16.0
+postgresql:11.6.3 uses docker.io/bitnami/postgresql:14.3.0-debian-10-r22
+redis:16.11.2 uses docker.io/bitnami/redis:6.2.7-debian-10-r23
+airflow:12.5.6 uses docker.io/bitnami/airflow-worker:2.3.2-debian-11-r0
+airflow:12.5.6 uses docker.io/bitnami/airflow-scheduler:2.3.2-debian-11-r0
+airflow:12.5.6 uses docker.io/bitnami/airflow:2.3.2-debian-11-r0
+
+Generated on 2022/06/15 22:15:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,46 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for spring-cloud-dataflow:11.0.4
+
+'There are 7 referenced Helm Charts
+artifact "kafka:17.2.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkafka\n\t\tzookeeper\n\t\tstreaming\n\t\tproducer\n\t\tconsumer" as kafka_17_2_5 #Aqua
+artifact "rabbitmq:10.1.6\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\trabbitmq\n\t\tmessage queue\n\t\tAMQP" as rabbitmq_10_1_6 #Aqua
+artifact "spring-cloud-dataflow:11.0.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tspring-cloud\n\t\tdataflow\n\t\tskipper\n\t\tspring" as spring_cloud_dataflow_11_0_4 #IndianRed
+artifact "common:1.16.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_0 #DarkSeaGreen
+artifact "mariadb:11.0.12\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_11_0_12 #DarkTurquoise
+artifact "common:1.14.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_1 #DarkSeaGreen
+artifact "zookeeper:9.2.2\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: zookeeper" as zookeeper_9_2_2 #LemonChiffon
+
+'There are 6 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/spring-cloud-dataflow:2.9.4-debian-11-r3\n====\n2.9.4-debian-11-r3" as docker_io_bitnami_spring_cloud_dataflow_2_9_4_debian_11_r3 #CadetBlue
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.6.8-debian-11-r0\n====\n10.6.8-debian-11-r0" as docker_io_bitnami_mariadb_10_6_8_debian_11_r0 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/zookeeper:3.8.0-debian-10-r64\n====\n3.8.0-debian-10-r64" as docker_io_bitnami_zookeeper_3_8_0_debian_10_r64 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/kafka:3.2.0-debian-11-r0\n====\n3.2.0-debian-11-r0" as docker_io_bitnami_kafka_3_2_0_debian_11_r0 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/spring-cloud-skipper:2.8.4-debian-11-r3\n====\n2.8.4-debian-11-r3" as docker_io_bitnami_spring_cloud_skipper_2_8_4_debian_11_r3 #GhostWhite
+usecase "Image\n====\ndocker.io\n====\nbitnami/rabbitmq:3.10.5-debian-11-r3\n====\n3.10.5-debian-11-r3" as docker_io_bitnami_rabbitmq_3_10_5_debian_11_r3 #Beige
+
+'Chart Dependencies
+spring_cloud_dataflow_11_0_4--[#green]-|>common_1_16_0
+spring_cloud_dataflow_11_0_4--[#green]-|>kafka_17_2_5
+kafka_17_2_5--[#green]-|>common_1_16_0
+kafka_17_2_5--[#green]-|>zookeeper_9_2_2
+zookeeper_9_2_2--[#green]-|>common_1_14_1
+spring_cloud_dataflow_11_0_4--[#green]-|>rabbitmq_10_1_6
+rabbitmq_10_1_6--[#green]-|>common_1_16_0
+spring_cloud_dataflow_11_0_4--[#green]-|>mariadb_11_0_12
+mariadb_11_0_12--[#green]-|>common_1_16_0
+kafka_17_2_5--[#orange]-|>docker_io_bitnami_kafka_3_2_0_debian_11_r0
+rabbitmq_10_1_6--[#orange]-|>docker_io_bitnami_rabbitmq_3_10_5_debian_11_r3
+spring_cloud_dataflow_11_0_4--[#orange]-|>docker_io_bitnami_spring_cloud_dataflow_2_9_4_debian_11_r3
+spring_cloud_dataflow_11_0_4--[#orange]-|>docker_io_bitnami_spring_cloud_skipper_2_8_4_debian_11_r3
+mariadb_11_0_12--[#orange]-|>docker_io_bitnami_mariadb_10_6_8_debian_11_r0
+zookeeper_9_2_2--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_10_r64
+
+center footer Generated on 2022/06/15 22:38:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

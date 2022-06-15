@@ -6,7 +6,7 @@ Chart: solr:4.0.9
 	apiVersion: v2
 	appVersion: 8.11.1
 	created: 2022-04-26T10:33:59.018262393Z
-	dependencies: zookeeper:9.1.0, common:1.13.0
+	dependencies: common:1.13.0, zookeeper:9.1.0
 	description: Apache Solr is an extremely powerful, open source enterprise search platform built on Apache Lucene. It is highly reliable and flexible, scalable, and designed to add value very quickly after launch.
 	digest: sha256:d108c9e72d6ce70d7322ab40d8d9fa1970875e55ae333c9d9447525ea1c3bd4d
 	icon: https://bitnami.com/assets/stacks/solr/img/solr-stack-110x117.png
@@ -36,7 +36,7 @@ Chart: dataplatform-bp1:12.0.0
 	apiVersion: v2
 	appVersion: 1.0.1
 	created: Not specified
-	dependencies: kafka:16.2.10, common:1.13.1, spark:6.0.0, zookeeper:9.1.1, solr:4.0.9, wavefront:3.4.2
+	dependencies: spark:6.0.0, kafka:16.2.10, common:1.13.1, solr:4.0.9, zookeeper:9.1.1, wavefront:3.4.2
 	description: This Helm chart can be used for the automated deployment of a data platform blueprint containing Kafka, Apache Spark, and Solr. It covers optimized pod sizing and placement diversity rules.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/dataplatform-bp1/img/dataplatform-bp1-stack-220x234.png
@@ -166,18 +166,18 @@ Image: docker.io/bitnami/dataplatform-exporter:1.0.1-scratch-r28
 
 Chart Dependencies
 ------------------
+dataplatform-bp1:12.0.0 depends on spark:6.0.0
+spark:6.0.0 depends on common:1.13.1
 dataplatform-bp1:12.0.0 depends on kafka:16.2.10
 kafka:16.2.10 depends on common:1.13.1
 kafka:16.2.10 depends on zookeeper:9.1.1
 zookeeper:9.1.1 depends on common:1.13.0
 dataplatform-bp1:12.0.0 depends on common:1.13.1
-dataplatform-bp1:12.0.0 depends on spark:6.0.0
-spark:6.0.0 depends on common:1.13.1
-dataplatform-bp1:12.0.0 depends on zookeeper:9.1.1
 dataplatform-bp1:12.0.0 depends on solr:4.0.9
+solr:4.0.9 depends on common:1.13.0
 solr:4.0.9 depends on zookeeper:9.1.0
 zookeeper:9.1.0 depends on common:1.13.0
-solr:4.0.9 depends on common:1.13.0
+dataplatform-bp1:12.0.0 depends on zookeeper:9.1.1
 dataplatform-bp1:12.0.0 depends on wavefront:3.4.2
 wavefront:3.4.2 depends on common:1.13.1
 wavefront:3.4.2 depends on kube-state-metrics:2.2.19
@@ -192,4 +192,4 @@ zookeeper:9.1.0 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r37
 wavefront:3.4.2 uses docker.io/bitnami/wavefront-proxy:11.0.0-debian-10-r39
 zookeeper:9.1.1 uses docker.io/bitnami/zookeeper:3.8.0-debian-10-r37
 
-Generated on 2022/06/02 03:09:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:18:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

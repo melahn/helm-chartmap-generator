@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for sonarqube:1.4.3
+
+'There are 3 referenced Helm Charts
+artifact "postgresql:11.6.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_6_3 #LightSteelBlue
+artifact "sonarqube:1.4.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tsonarqube\n\t\tcode-quality\n\t\tcode-review\n\t\tstatic-analysis" as sonarqube_1_4_3 #Azure
+artifact "common:1.16.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_0 #DarkSeaGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/sonarqube:9.4.0-debian-11-r0\n====\n9.4.0-debian-11-r0" as docker_io_bitnami_sonarqube_9_4_0_debian_11_r0 #CornflowerBlue
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.3.0-debian-10-r22\n====\n14.3.0-debian-10-r22" as docker_io_bitnami_postgresql_14_3_0_debian_10_r22 #DarkSalmon
+
+'Chart Dependencies
+sonarqube_1_4_3--[#green]-|>postgresql_11_6_3
+postgresql_11_6_3--[#green]-|>common_1_16_0
+sonarqube_1_4_3--[#green]-|>common_1_16_0
+postgresql_11_6_3--[#orange]-|>docker_io_bitnami_postgresql_14_3_0_debian_10_r22
+sonarqube_1_4_3--[#orange]-|>docker_io_bitnami_sonarqube_9_4_0_debian_11_r0
+
+center footer Generated on 2022/06/15 22:38:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

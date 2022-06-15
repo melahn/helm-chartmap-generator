@@ -1,0 +1,62 @@
+Chart Map for haproxy-intel:0.1.6
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: haproxy:0.3.26
+	apiVersion: v2
+	appVersion: 2.6.0
+	created: 2022-06-06T20:51:41.84805795Z
+	dependencies: common:1.16.0
+	description: HAProxy is a TCP proxy and a HTTP reverse proxy. It supports SSL termination and offloading, TCP and HTTP normalization, traffic regulation, caching and protection against DDoS attacks.
+	digest: sha256:2ade60fe6b5d235be16c41c43eedab091dcf40876629b6d8f24d11c077fe657a
+	icon: https://bitnami.com/assets/stacks/haproxy/img/haproxy-stack-220x234.png
+	keywords: haproxy,proxy,infrastructure
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: haproxy
+	sources: https://github.com/bitnami/bitnami-docker-haproxy,https://github.com/haproxytech/haproxy
+	urls: https://charts.bitnami.com/bitnami/haproxy-0.3.26.tgz
+	version: 0.3.26
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: haproxy-intel:0.1.6
+	apiVersion: v2
+	appVersion: 2.6.0
+	created: Not specified
+	dependencies: common:1.16.0, haproxy:0.3.26
+	description: HAProxy is a high-performance, open-source load balancer and reverse proxy for TCP and HTTP applications. This image is optimized with Intel(R) QuickAssist Technology OpenSSL* Engine (QAT_Engine).
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/haproxy/img/haproxy-stack-220x234.png
+	keywords: haproxy,proxy,infrastructure,intel
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: haproxy-intel
+	sources: https://github.com/bitnami/bitnami-docker-haproxy-intel,https://github.com/haproxytech/haproxy
+	urls: Not specified
+	version: 0.1.6
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/haproxy-intel:2.6.0-debian-11-r3
+
+Chart Dependencies
+------------------
+haproxy-intel:0.1.6 depends on common:1.16.0
+haproxy-intel:0.1.6 depends on haproxy:0.3.26
+haproxy:0.3.26 depends on common:1.16.0
+haproxy:0.3.26 uses docker.io/bitnami/haproxy-intel:2.6.0-debian-11-r3
+
+Generated on 2022/06/15 22:24:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

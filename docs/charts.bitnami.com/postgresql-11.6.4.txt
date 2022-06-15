@@ -1,0 +1,45 @@
+Chart Map for postgresql:11.6.4
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: postgresql:11.6.4
+	apiVersion: v2
+	appVersion: 14.3.0
+	created: Not specified
+	dependencies: common:1.16.0
+	description: PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql,https://www.postgresql.org/
+	urls: Not specified
+	version: 11.6.4
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/postgresql:14.3.0-debian-11-r0
+
+Chart Dependencies
+------------------
+postgresql:11.6.4 depends on common:1.16.0
+postgresql:11.6.4 uses docker.io/bitnami/postgresql:14.3.0-debian-11-r0
+
+Generated on 2022/06/15 22:35:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/dokuwiki:20200729.0.0-debian-10-r
 dokuwiki_12_5_2--[#green]-|>common_1_14_1
 dokuwiki_12_5_2--[#orange]-|>docker_io_bitnami_dokuwiki_20200729_0_0_debian_10_r596
 
-center footer Generated on 2022/06/02 03:10:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:20:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

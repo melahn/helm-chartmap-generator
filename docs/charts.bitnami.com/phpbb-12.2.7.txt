@@ -6,7 +6,7 @@ Chart: phpbb:12.2.7
 	apiVersion: v2
 	appVersion: 3.3.7
 	created: Not specified
-	dependencies: common:1.14.1, mariadb:11.0.8
+	dependencies: mariadb:11.0.8, common:1.14.1
 	description: phpBB is a popular bulletin board that features robust messaging capabilities such as flat message structure, subforums, topic split/merge/lock, user groups, full-text search, and attachments.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/phpbb/img/phpbb-stack-220x234.png
@@ -55,10 +55,10 @@ Image: docker.io/bitnami/mariadb:10.6.8-debian-10-r0
 
 Chart Dependencies
 ------------------
-phpbb:12.2.7 depends on common:1.14.1
 phpbb:12.2.7 depends on mariadb:11.0.8
 mariadb:11.0.8 depends on common:1.14.1
+phpbb:12.2.7 depends on common:1.14.1
 phpbb:12.2.7 uses docker.io/bitnami/phpbb:3.3.7-debian-10-r66
 mariadb:11.0.8 uses docker.io/bitnami/mariadb:10.6.8-debian-10-r0
 
-Generated on 2022/06/02 03:27:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:35:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

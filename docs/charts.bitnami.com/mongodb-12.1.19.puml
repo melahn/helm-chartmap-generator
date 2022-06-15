@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for mongodb:12.1.19
+
+'There are 2 referenced Helm Charts
+artifact "mongodb:12.1.19\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmongodb\n\t\tdatabase\n\t\tnosql\n\t\tcluster\n\t\treplicaset\n\t\treplication" as mongodb_12_1_19 #GreenYellow
+artifact "common:1.16.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_0 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:5.0.9-debian-10-r11\n====\n5.0.9-debian-10-r11" as docker_io_bitnami_mongodb_5_0_9_debian_10_r11 #Bisque
+
+'Chart Dependencies
+mongodb_12_1_19--[#green]-|>common_1_16_0
+mongodb_12_1_19--[#orange]-|>docker_io_bitnami_mongodb_5_0_9_debian_10_r11
+
+center footer Generated on 2022/06/15 22:31:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

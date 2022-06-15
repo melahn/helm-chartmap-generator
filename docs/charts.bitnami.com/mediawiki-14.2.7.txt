@@ -36,7 +36,7 @@ Chart: mediawiki:14.2.7
 	apiVersion: v2
 	appVersion: 1.37.2
 	created: Not specified
-	dependencies: common:1.14.1, mariadb:11.0.8
+	dependencies: mariadb:11.0.8, common:1.14.1
 	description: MediaWiki is the free and open source wiki software that powers Wikipedia. Used by thousands of organizations, it is extremely powerful, scalable software and a feature-rich wiki implementation.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/mediawiki/img/mediawiki-stack-220x234.png
@@ -54,9 +54,9 @@ Image: docker.io/bitnami/mariadb:10.6.8-debian-10-r0
 
 Chart Dependencies
 ------------------
-mediawiki:14.2.7 depends on common:1.14.1
 mediawiki:14.2.7 depends on mariadb:11.0.8
 mariadb:11.0.8 depends on common:1.14.1
+mediawiki:14.2.7 depends on common:1.14.1
 mariadb:11.0.8 uses docker.io/bitnami/mariadb:10.6.8-debian-10-r0
 
-Generated on 2022/06/02 03:21:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:30:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

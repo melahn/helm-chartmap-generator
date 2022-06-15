@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for rabbitmq-cluster-operator:2.6.5
+
+'There are 2 referenced Helm Charts
+artifact "common:1.14.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_14_1 #DarkSeaGreen
+artifact "rabbitmq-cluster-operator:2.6.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\trabbitmq\n\t\toperator\n\t\tinfrastructure\n\t\tmessage queue\n\t\tAMQP" as rabbitmq_cluster_operator_2_6_5 #LawnGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/rabbitmq-cluster-operator:1.13.1-scratch-r2\n====\n1.13.1-scratch-r2" as docker_io_bitnami_rabbitmq_cluster_operator_1_13_1_scratch_r2 #LightGoldenRodYellow
+usecase "Image\n====\ndocker.io\n====\nbitnami/rmq-messaging-topology-operator:1.6.0-scratch-r0\n====\n1.6.0-scratch-r0" as docker_io_bitnami_rmq_messaging_topology_operator_1_6_0_scratch_r0 #DarkGoldenRod
+
+'Chart Dependencies
+rabbitmq_cluster_operator_2_6_5--[#green]-|>common_1_14_1
+rabbitmq_cluster_operator_2_6_5--[#orange]-|>docker_io_bitnami_rmq_messaging_topology_operator_1_6_0_scratch_r0
+rabbitmq_cluster_operator_2_6_5--[#orange]-|>docker_io_bitnami_rabbitmq_cluster_operator_1_13_1_scratch_r2
+
+center footer Generated on 2022/06/15 22:36:44 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

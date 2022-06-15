@@ -1,0 +1,41 @@
+{
+  "maintainers": [
+    {"name": "cellebyte"},
+    {"name": "Bitnami"}
+  ],
+  "keywords": [
+    "ingress",
+    "envoy",
+    "contour"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/contour:1.21.1-debian-11-r0",
+      "type": "image",
+      "version": "1.21.1-debian-11-r0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.0"
+    }
+  ],
+  "name": "contour:8.0.1",
+  "description": "Contour is an open source Kubernetes ingress controller that works by deploying the Envoy proxy as a reverse proxy and load balancer.",
+  "type": "chart",
+  "shortName": "contour",
+  "version": "8.0.1"
+}

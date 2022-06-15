@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for pinniped:0.1.3
+
+'There are 2 referenced Helm Charts
+artifact "pinniped:0.1.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tidentity\n\t\tinfrastructure" as pinniped_0_1_3 #LightCoral
+artifact "common:1.16.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_0 #DarkSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/pinniped:0.18.0-scratch-r3\n====\n0.18.0-scratch-r3" as docker_io_bitnami_pinniped_0_18_0_scratch_r3 #LawnGreen
+
+'Chart Dependencies
+pinniped_0_1_3--[#green]-|>common_1_16_0
+pinniped_0_1_3--[#orange]-|>docker_io_bitnami_pinniped_0_18_0_scratch_r3
+
+center footer Generated on 2022/06/15 22:35:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

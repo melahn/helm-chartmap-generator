@@ -1,0 +1,45 @@
+Chart Map for tomcat:10.3.4
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: tomcat:10.3.4
+	apiVersion: v2
+	appVersion: 10.0.21
+	created: Not specified
+	dependencies: common:1.16.0
+	description: Apache Tomcat is an open-source web server designed to host and run Java-based web applications. It is a lightweight server with a good performance for applications running in production environments.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/tomcat/img/tomcat-stack-220x234.png
+	keywords: tomcat,java,http,web,application server,jsp
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: tomcat
+	sources: https://github.com/bitnami/bitnami-docker-tomcat,http://tomcat.apache.org
+	urls: Not specified
+	version: 10.3.4
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/tomcat:10.0.21-debian-11-r0
+
+Chart Dependencies
+------------------
+tomcat:10.3.4 depends on common:1.16.0
+tomcat:10.3.4 uses docker.io/bitnami/tomcat:10.0.21-debian-11-r0
+
+Generated on 2022/06/15 22:39:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

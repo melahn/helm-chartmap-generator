@@ -1,0 +1,116 @@
+Chart Map for harbor:13.2.6
+
+There are 5 referenced Helm Charts
+----------------------------------
+Chart: postgresql:11.6.3
+	apiVersion: v2
+	appVersion: 14.3.0
+	created: 2022-06-04T03:20:37.80608231Z
+	dependencies: common:1.16.0
+	description: PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+	digest: sha256:123868274817cc6b1ec4ab0f7d75a3fe90dc7fb7610dc94b24692b694526aa64
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/bitnami-docker-postgresql,https://www.postgresql.org/
+	urls: https://charts.bitnami.com/bitnami/postgresql-11.6.3.tgz
+	version: 11.6.3
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: common:1.14.1
+	apiVersion: v2
+	appVersion: 1.13.1
+	created: 2022-05-20T15:32:40.107594375Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:330a278e01fc3f3d4b9a90a8614b1a5ddda007de10bb4ee650710991af415f27
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami:containers@bitnami.com
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.14.1.tgz
+	version: 1.14.1
+Chart: redis:16.11.2
+	apiVersion: v2
+	appVersion: 6.2.7
+	created: 2022-06-03T23:40:54.07784449Z
+	dependencies: common:1.14.1
+	description: Redis(R) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+	digest: sha256:f72a7267041118a3f7fe6ac35219a552027db06c9b3070ce9670e01dcba5ac5f
+	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+	keywords: redis,keyvalue,database
+	maintainers: Bitnami,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: redis
+	sources: https://github.com/bitnami/bitnami-docker-redis
+	urls: https://charts.bitnami.com/bitnami/redis-16.11.2.tgz
+	version: 16.11.2
+Chart: harbor:13.2.6
+	apiVersion: v2
+	appVersion: 2.5.1
+	created: Not specified
+	dependencies: redis:16.11.2, postgresql:11.6.3, common:1.16.0
+	description: Harbor is an open source trusted cloud-native registry to store, sign, and scan content. It adds functionalities like security, identity, and management to the open source Docker distribution.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/harbor-core/img/harbor-core-stack-220x234.png
+	keywords: docker,registry,vulnerability,scan
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: harbor
+	sources: https://github.com/bitnami/bitnami-docker-harbor-core,https://github.com/bitnami/bitnami-docker-harbor-portal,https://github.com/bitnami/bitnami-docker-harbor-jobservice,https://github.com/bitnami/bitnami-docker-harbor-registry,https://github.com/bitnami/bitnami-docker-harbor-registryctl,https://goharbor.io/
+	urls: Not specified
+	version: 13.2.6
+
+There are 12 referenced Docker Images
+-------------------------------------
+Image: docker.io/bitnami/redis:6.2.7-debian-10-r23
+Image: docker.io/bitnami/harbor-adapter-trivy:2.5.1-debian-11-r0
+Image: docker.io/bitnami/chartmuseum:0.14.0-debian-11-r0
+Image: docker.io/bitnami/harbor-core:2.5.1-debian-11-r0
+Image: docker.io/bitnami/postgresql:13.7.0-debian-11-r0
+Image: docker.io/bitnami/harbor-registry:2.5.1-debian-11-r0
+Image: docker.io/bitnami/harbor-portal:2.5.1-debian-11-r0
+Image: docker.io/bitnami/nginx:1.21.6-debian-11-r0
+Image: docker.io/bitnami/harbor-notary-server:2.5.1-debian-11-r0
+Image: docker.io/bitnami/harbor-registryctl:2.5.1-debian-11-r0
+Image: docker.io/bitnami/harbor-jobservice:2.5.1-debian-11-r0
+Image: docker.io/bitnami/harbor-notary-signer:2.5.1-debian-11-r0
+
+Chart Dependencies
+------------------
+harbor:13.2.6 depends on redis:16.11.2
+redis:16.11.2 depends on common:1.14.1
+harbor:13.2.6 depends on postgresql:11.6.3
+postgresql:11.6.3 depends on common:1.16.0
+harbor:13.2.6 depends on common:1.16.0
+postgresql:11.6.3 uses docker.io/bitnami/postgresql:13.7.0-debian-11-r0
+redis:16.11.2 uses docker.io/bitnami/redis:6.2.7-debian-10-r23
+harbor:13.2.6 uses docker.io/bitnami/harbor-registryctl:2.5.1-debian-11-r0
+harbor:13.2.6 uses docker.io/bitnami/harbor-notary-server:2.5.1-debian-11-r0
+harbor:13.2.6 uses docker.io/bitnami/harbor-portal:2.5.1-debian-11-r0
+harbor:13.2.6 uses docker.io/bitnami/harbor-registry:2.5.1-debian-11-r0
+harbor:13.2.6 uses docker.io/bitnami/nginx:1.21.6-debian-11-r0
+harbor:13.2.6 uses docker.io/bitnami/harbor-jobservice:2.5.1-debian-11-r0
+harbor:13.2.6 uses docker.io/bitnami/chartmuseum:0.14.0-debian-11-r0
+harbor:13.2.6 uses docker.io/bitnami/harbor-core:2.5.1-debian-11-r0
+harbor:13.2.6 uses docker.io/bitnami/harbor-notary-signer:2.5.1-debian-11-r0
+harbor:13.2.6 uses docker.io/bitnami/harbor-adapter-trivy:2.5.1-debian-11-r0
+
+Generated on 2022/06/15 22:24:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

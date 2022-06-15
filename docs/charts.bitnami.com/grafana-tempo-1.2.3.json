@@ -1,0 +1,93 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "grafana",
+    "tracing",
+    "metrics",
+    "infrastructure"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/grafana-tempo-vulture:1.4.1-debian-11-r0",
+      "type": "image",
+      "version": "1.4.1-debian-11-r0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/grafana-tempo-query:1.4.1-debian-11-r0",
+      "type": "image",
+      "version": "1.4.1-debian-11-r0"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/grafana-tempo:1.4.1-debian-11-r0",
+      "type": "image",
+      "version": "1.4.1-debian-11-r0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "memcached",
+        "cache"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/memcached:1.6.15-debian-10-r50",
+          "type": "image",
+          "version": "1.6.15-debian-10-r50"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.14.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.14.1"
+        }
+      ],
+      "name": "memcached:6.1.1",
+      "description": "Memcached is an high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.",
+      "type": "chart",
+      "shortName": "memcached",
+      "version": "6.1.1"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.0",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.0"
+    }
+  ],
+  "name": "grafana-tempo:1.2.3",
+  "description": "Grafana Tempo is a distributed tracing system that has out-of-the-box integration with Grafana. It is highly scalable and works with many popular tracing protocols.",
+  "type": "chart",
+  "shortName": "grafana-tempo",
+  "version": "1.2.3"
+}

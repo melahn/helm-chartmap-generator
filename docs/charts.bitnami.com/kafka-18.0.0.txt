@@ -1,0 +1,64 @@
+Chart Map for kafka:18.0.0
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+Chart: kafka:18.0.0
+	apiVersion: v2
+	appVersion: 3.2.0
+	created: Not specified
+	dependencies: common:1.16.0, zookeeper:10.0.0
+	description: Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
+	keywords: kafka,zookeeper,streaming,producer,consumer
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: kafka
+	sources: https://github.com/bitnami/bitnami-docker-kafka,https://kafka.apache.org/
+	urls: Not specified
+	version: 18.0.0
+Chart: zookeeper:10.0.0
+	apiVersion: v2
+	appVersion: 3.8.0
+	created: 2022-06-14T11:17:09.400049766Z
+	dependencies: common:1.16.0
+	description: Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.
+	digest: sha256:b27016b76e8fe4ed1046ad1f564d2685065fd62640c4fde64e239a47b8b083b5
+	icon: https://bitnami.com/assets/stacks/zookeeper/img/zookeeper-stack-220x234.png
+	keywords: zookeeper
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: zookeeper
+	sources: https://github.com/bitnami/bitnami-docker-zookeeper,https://zookeeper.apache.org/
+	urls: https://charts.bitnami.com/bitnami/zookeeper-10.0.0.tgz
+	version: 10.0.0
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/zookeeper:3.8.0-debian-11-r6
+Image: docker.io/bitnami/kafka:3.2.0-debian-11-r3
+
+Chart Dependencies
+------------------
+kafka:18.0.0 depends on common:1.16.0
+kafka:18.0.0 depends on zookeeper:10.0.0
+zookeeper:10.0.0 depends on common:1.16.0
+kafka:18.0.0 uses docker.io/bitnami/kafka:3.2.0-debian-11-r3
+zookeeper:10.0.0 uses docker.io/bitnami/zookeeper:3.8.0-debian-11-r6
+
+Generated on 2022/06/15 22:26:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

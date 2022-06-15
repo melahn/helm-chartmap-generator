@@ -1,0 +1,30 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for argo-cd:3.4.1
+
+'There are 3 referenced Helm Charts
+artifact "redis:16.12.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_16_12_1 #LightSeaGreen
+artifact "common:1.16.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_0 #DarkSeaGreen
+artifact "argo-cd:3.4.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tContinuous delivery\n\t\tContinuous deployment\n\t\tDevops\n\t\tKubernetes" as argo_cd_3_4_1 #Ivory
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.7-debian-11-r3\n====\n6.2.7-debian-11-r3" as docker_io_bitnami_redis_6_2_7_debian_11_r3 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/redis:6.2.7-debian-11-r5\n====\n6.2.7-debian-11-r5" as docker_io_bitnami_redis_6_2_7_debian_11_r5 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/argo-cd:2.3.4-debian-11-r2\n====\n2.3.4-debian-11-r2" as docker_io_bitnami_argo_cd_2_3_4_debian_11_r2 #Aqua
+
+'Chart Dependencies
+argo_cd_3_4_1--[#green]-|>redis_16_12_1
+redis_16_12_1--[#green]-|>common_1_16_0
+argo_cd_3_4_1--[#green]-|>common_1_16_0
+redis_16_12_1--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_11_r3
+redis_16_12_1--[#orange]-|>docker_io_bitnami_redis_6_2_7_debian_11_r5
+argo_cd_3_4_1--[#orange]-|>docker_io_bitnami_argo_cd_2_3_4_debian_11_r2
+
+center footer Generated on 2022/06/15 22:15:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

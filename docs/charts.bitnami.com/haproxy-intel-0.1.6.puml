@@ -1,0 +1,26 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for haproxy-intel:0.1.6
+
+'There are 3 referenced Helm Charts
+artifact "haproxy:0.3.26\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\thaproxy\n\t\tproxy\n\t\tinfrastructure" as haproxy_0_3_26 #Khaki
+artifact "common:1.16.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_0 #DarkSeaGreen
+artifact "haproxy-intel:0.1.6\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\thaproxy\n\t\tproxy\n\t\tinfrastructure\n\t\tintel" as haproxy_intel_0_1_6 #Azure
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/haproxy-intel:2.6.0-debian-11-r3\n====\n2.6.0-debian-11-r3" as docker_io_bitnami_haproxy_intel_2_6_0_debian_11_r3 #Aquamarine
+
+'Chart Dependencies
+haproxy_intel_0_1_6--[#green]-|>haproxy_0_3_26
+haproxy_0_3_26--[#green]-|>common_1_16_0
+haproxy_intel_0_1_6--[#green]-|>common_1_16_0
+haproxy_0_3_26--[#orange]-|>docker_io_bitnami_haproxy_intel_2_6_0_debian_11_r3
+
+center footer Generated on 2022/06/15 22:24:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml
