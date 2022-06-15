@@ -6,7 +6,7 @@ Chart: alfresco-content-services:5.2.0-M2
 	apiVersion: v2
 	appVersion: Not specified
 	created: Not specified
-	dependencies: common:7.1.0-M16, activemq:2.0.0, postgresql:10.13.9, alfresco-search:1.0.4, alfresco-sync-service:3.0.9
+	dependencies: alfresco-sync-service:3.0.9, activemq:2.0.0, common:7.1.0-M16, alfresco-search:1.0.4, postgresql:10.13.9
 	description: A Helm chart for deploying Alfresco Content Services
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -49,17 +49,16 @@ Chart: alfresco-search:1.0.4
 Chart: postgresql:10.13.9
 	apiVersion: v2
 	appVersion: 11.14.0
-	created: 2021-11-29T14:25:04.694251183Z
+	created: Not specified
 	dependencies: common:1.10.1
 	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
-	digest: bf390d423e45c512228ad22c2e5899acfc420c0bb424a169ff8770ce3cb05495
+	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
 	keywords: postgresql,postgres,database,sql,replication,cluster
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://charts.bitnami.com/bitnami
 	name: postgresql
 	sources: https://github.com/bitnami/bitnami-docker-postgresql,https://www.postgresql.org/
-	urls: https://charts.bitnami.com/bitnami/postgresql-10.13.9.tgz
+	urls: Not specified
 	version: 10.13.9
 Chart: common:7.1.0-M16
 	apiVersion: v1
@@ -78,17 +77,16 @@ Chart: common:7.1.0-M16
 Chart: common:1.10.1
 	apiVersion: v2
 	appVersion: 1.10.0
-	created: 2021-10-27T15:39:18.298869736Z
+	created: Not specified
 	dependencies: None
 	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
-	digest: d13f6834adeb4d8d9cf94d2149680b08006543ab88944192f236decebd6313ae
+	digest: Not specified
 	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
 	keywords: common,helper,template,function,bitnami
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
 	name: common
 	sources: https://github.com/bitnami/charts,http://www.bitnami.com/
-	urls: https://charts.bitnami.com/bitnami/common-1.10.1.tgz
+	urls: Not specified
 	version: 1.10.1
 Chart: activemq:2.0.0
 	apiVersion: v2
@@ -138,13 +136,13 @@ Image: quay.io/alfresco/alfresco-share:7.2.0-M2
 
 Chart Dependencies
 ------------------
-alfresco-content-services:5.2.0-M2 depends on common:7.1.0-M16
+alfresco-content-services:5.2.0-M2 depends on alfresco-sync-service:3.0.9
 alfresco-content-services:5.2.0-M2 depends on activemq:2.0.0
-alfresco-content-services:5.2.0-M2 depends on postgresql:10.13.9
-postgresql:10.13.9 depends on common:1.10.1
+alfresco-content-services:5.2.0-M2 depends on common:7.1.0-M16
 alfresco-content-services:5.2.0-M2 depends on alfresco-search:1.0.4
 alfresco-search:1.0.4 depends on alfresco-insight-zeppelin:1.0.3
-alfresco-content-services:5.2.0-M2 depends on alfresco-sync-service:3.0.9
+alfresco-content-services:5.2.0-M2 depends on postgresql:10.13.9
+postgresql:10.13.9 depends on common:1.10.1
 alfresco-content-services:5.2.0-M2 uses quay.io/alfresco/alfresco-content-repository:7.2.0-M2
 alfresco-content-services:5.2.0-M2 uses alfresco/alfresco-imagemagick:2.5.6
 alfresco-content-services:5.2.0-M2 uses alfresco/alfresco-tika:2.5.6
@@ -160,4 +158,4 @@ postgresql:10.13.9 uses docker.io/bitnami/postgresql:13.3.0
 activemq:2.0.0 uses alfresco/alfresco-activemq:5.16.1
 alfresco-sync-service:3.0.9 uses quay.io/alfresco/service-sync:3.5.0
 
-Generated on 2022/06/02 02:57:04 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:06:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

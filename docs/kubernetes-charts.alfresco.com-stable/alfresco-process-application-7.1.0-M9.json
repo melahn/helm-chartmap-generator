@@ -9,30 +9,6 @@
     {
       "children": [
         {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "activiti/example-cloud-connector",
-          "type": "image",
-          "version": "7.1.0-M9"
-        },
-        {
-          "children": [],
-          "name": "common:7.1.0-M9",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "7.1.0-M9"
-        }
-      ],
-      "name": "activiti-cloud-connector:7.1.0-M9",
-      "description": "A Helm chart for Kubernetes",
-      "type": "chart",
-      "shortName": "activiti-cloud-connector",
-      "version": "7.1.0-M9"
-    },
-    {
-      "children": [
-        {
           "repoHost": "quay.io",
           "children": [],
           "name": "alfresco/alfresco-process-runtime-bundle-service:develop",
@@ -52,30 +28,6 @@
       "description": "A Helm chart for Activiti Cloud Runtime Bundle Example",
       "type": "chart",
       "shortName": "runtime-bundle",
-      "version": "7.1.0-M9"
-    },
-    {
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-process-query-service:develop",
-          "type": "image",
-          "version": "develop"
-        },
-        {
-          "children": [],
-          "name": "common:7.1.0-M9",
-          "description": "A Helm chart for Activiti Cloud Common Templates",
-          "type": "chart",
-          "shortName": "common",
-          "version": "7.1.0-M9"
-        }
-      ],
-      "name": "activiti-cloud-query:7.1.0-M9",
-      "description": "A Helm chart for Kubernetes",
-      "type": "chart",
-      "shortName": "activiti-cloud-query",
       "version": "7.1.0-M9"
     },
     {
@@ -100,6 +52,30 @@
       "type": "chart",
       "shortName": "rabbitmq-ha",
       "version": "1.38.1"
+    },
+    {
+      "children": [
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "activiti/example-cloud-connector",
+          "type": "image",
+          "version": "7.1.0-M9"
+        },
+        {
+          "children": [],
+          "name": "common:7.1.0-M9",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "7.1.0-M9"
+        }
+      ],
+      "name": "activiti-cloud-connector:7.1.0-M9",
+      "description": "A Helm chart for Kubernetes",
+      "type": "chart",
+      "shortName": "activiti-cloud-connector",
+      "version": "7.1.0-M9"
     },
     {
       "maintainers": [
@@ -132,6 +108,30 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "6.3.9"
+    },
+    {
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-process-query-service:develop",
+          "type": "image",
+          "version": "develop"
+        },
+        {
+          "children": [],
+          "name": "common:7.1.0-M9",
+          "description": "A Helm chart for Activiti Cloud Common Templates",
+          "type": "chart",
+          "shortName": "common",
+          "version": "7.1.0-M9"
+        }
+      ],
+      "name": "activiti-cloud-query:7.1.0-M9",
+      "description": "A Helm chart for Kubernetes",
+      "type": "chart",
+      "shortName": "activiti-cloud-query",
+      "version": "7.1.0-M9"
     },
     {
       "maintainers": [{"name": "Alfresco"}],

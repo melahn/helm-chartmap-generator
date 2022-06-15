@@ -16,21 +16,6 @@ Chart: runtime-bundle:7.1.0-M9
 	sources: Not specified
 	urls: Not specified
 	version: 7.1.0-M9
-Chart: alfresco-adf-app:2.2.2
-	apiVersion: v1
-	appVersion: Not specified
-	created: 2020-08-18T09:26:00.311265257Z
-	dependencies: common:7.1.0-M9
-	description: A Helm chart for a generic Alfresco ADF frontend application
-	digest: c5384b176562ac8d5c5e0dd9ebb90a36935c7cb1dfa8d938ade9958f6ae1432d
-	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
-	keywords: alfresco,adf,alfresco development framework,content,content services,alfresco content services,process,process services,alfresco process services,activiti,activiti enterprise,alfresco activiti enterprise
-	maintainers: Alfresco
-	repo url: https://kubernetes-charts.alfresco.com/stable
-	name: alfresco-adf-app
-	sources: https://github.com/alfresco/alfresco-adf-app-deployment
-	urls: https://kubernetes-charts.alfresco.com/stable/alfresco-adf-app-2.2.2.tgz
-	version: 2.2.2
 Chart: rabbitmq-ha:1.38.1
 	apiVersion: v1
 	appVersion: 3.8.0
@@ -46,11 +31,26 @@ Chart: rabbitmq-ha:1.38.1
 	sources: https://github.com/rabbitmq/rabbitmq,https://github.com/docker-library/rabbitmq
 	urls: https://charts.helm.sh/stable/packages/rabbitmq-ha-1.38.1.tgz
 	version: 1.38.1
+Chart: alfresco-adf-app:2.2.2
+	apiVersion: v1
+	appVersion: Not specified
+	created: 2020-08-18T09:26:00.311265257Z
+	dependencies: common:7.1.0-M9
+	description: A Helm chart for a generic Alfresco ADF frontend application
+	digest: c5384b176562ac8d5c5e0dd9ebb90a36935c7cb1dfa8d938ade9958f6ae1432d
+	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
+	keywords: alfresco,adf,alfresco development framework,content,content services,alfresco content services,process,process services,alfresco process services,activiti,activiti enterprise,alfresco activiti enterprise
+	maintainers: Alfresco
+	repo url: https://kubernetes-charts.alfresco.com/stable
+	name: alfresco-adf-app
+	sources: https://github.com/alfresco/alfresco-adf-app-deployment
+	urls: https://kubernetes-charts.alfresco.com/stable/alfresco-adf-app-2.2.2.tgz
+	version: 2.2.2
 Chart: alfresco-process-application:7.1.0-M9
 	apiVersion: v1
 	appVersion: 7.1.0-M9
 	created: Not specified
-	dependencies: alfresco-adf-app:2.2.2, activiti-cloud-query:7.1.0-M9, postgresql:6.3.9, activiti-cloud-connector:7.1.0-M9, runtime-bundle:7.1.0-M9, rabbitmq-ha:1.38.1
+	dependencies: alfresco-adf-app:2.2.2, postgresql:6.3.9, activiti-cloud-connector:7.1.0-M9, runtime-bundle:7.1.0-M9, activiti-cloud-query:7.1.0-M9, rabbitmq-ha:1.38.1
 	description: A Helm chart for an Alfresco Activiti Enterprise application
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -78,17 +78,17 @@ Chart: activiti-cloud-query:7.1.0-M9
 Chart: postgresql:6.3.9
 	apiVersion: v1
 	appVersion: 11.5.0
-	created: 2019-09-30T15:04:09.298421137Z
+	created: 2020-10-15T15:46:22.493151-04:00
 	dependencies: None
 	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
 	digest: 102b24715e4a0e701bcd8d7bc045f32acfcf39814591f7e1a0ae85ad72c79ce9
 	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
 	keywords: postgresql,postgres,database,sql,replication,cluster
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: postgresql
 	sources: https://github.com/bitnami/bitnami-docker-postgresql
-	urls: https://charts.bitnami.com/bitnami/postgresql-6.3.9.tgz
+	urls: https://charts.helm.sh/stable/packages/postgresql-6.3.9.tgz
 	version: 6.3.9
 Chart: activiti-cloud-connector:7.1.0-M9
 	apiVersion: 7.1.0-M9
@@ -132,19 +132,19 @@ Chart Dependencies
 ------------------
 alfresco-process-application:7.1.0-M9 depends on alfresco-adf-app:2.2.2
 alfresco-adf-app:2.2.2 depends on common:7.1.0-M9
-alfresco-process-application:7.1.0-M9 depends on activiti-cloud-query:7.1.0-M9
-activiti-cloud-query:7.1.0-M9 depends on common:7.1.0-M9
 alfresco-process-application:7.1.0-M9 depends on postgresql:6.3.9
 alfresco-process-application:7.1.0-M9 depends on activiti-cloud-connector:7.1.0-M9
 activiti-cloud-connector:7.1.0-M9 depends on common:7.1.0-M9
 alfresco-process-application:7.1.0-M9 depends on runtime-bundle:7.1.0-M9
 runtime-bundle:7.1.0-M9 depends on common:7.1.0-M9
+alfresco-process-application:7.1.0-M9 depends on activiti-cloud-query:7.1.0-M9
+activiti-cloud-query:7.1.0-M9 depends on common:7.1.0-M9
 alfresco-process-application:7.1.0-M9 depends on rabbitmq-ha:1.38.1
 runtime-bundle:7.1.0-M9 uses quay.io/alfresco/alfresco-process-runtime-bundle-service:develop
-alfresco-adf-app:2.2.2 uses quay.io/alfresco/alfresco-adf-app:latest
 rabbitmq-ha:1.38.1 uses rabbitmq:3.8.0-alpine
+alfresco-adf-app:2.2.2 uses quay.io/alfresco/alfresco-adf-app:latest
 activiti-cloud-query:7.1.0-M9 uses quay.io/alfresco/alfresco-process-query-service:develop
 postgresql:6.3.9 uses docker.io/bitnami/postgresql:11.5.0-debian-9-r34
 activiti-cloud-connector:7.1.0-M9 uses activiti/example-cloud-connector:7.1.0-M9
 
-Generated on 2022/06/02 02:59:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:09:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

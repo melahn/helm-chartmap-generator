@@ -9,16 +9,16 @@
     {
       "repoHost": "quay.io",
       "children": [],
-      "name": "alfresco/alfresco-content-repository:7.2.0",
+      "name": "alfresco/alfresco-share:23.1.0-M1",
       "type": "image",
-      "version": "7.2.0"
+      "version": "23.1.0-M1"
     },
     {
       "repoHost": "quay.io",
       "children": [],
-      "name": "alfresco/alfresco-share:7.2.0",
+      "name": "alfresco/alfresco-content-repository:23.1.0-M1",
       "type": "image",
-      "version": "7.2.0"
+      "version": "23.1.0-M1"
     },
     {
       "repoHost": "Docker Hub",
@@ -35,11 +35,11 @@
       "version": "2.5.7"
     },
     {
-      "repoHost": "quay.io",
+      "repoHost": "Docker Hub",
       "children": [],
-      "name": "alfresco/alfresco-shared-file-store:0.16.1",
+      "name": "alfresco/alfresco-libreoffice",
       "type": "image",
-      "version": "0.16.1"
+      "version": "2.5.7"
     },
     {
       "repoHost": "Docker Hub",
@@ -49,18 +49,18 @@
       "version": "2.5.7"
     },
     {
-      "repoHost": "Docker Hub",
+      "repoHost": "quay.io",
       "children": [],
-      "name": "alfresco/alfresco-libreoffice",
+      "name": "alfresco/alfresco-transform-router:1.5.3",
       "type": "image",
-      "version": "2.5.7"
+      "version": "1.5.3"
     },
     {
       "repoHost": "quay.io",
       "children": [],
-      "name": "alfresco/alfresco-transform-router:1.5.2",
+      "name": "alfresco/alfresco-shared-file-store:1.5.3",
       "type": "image",
-      "version": "1.5.2"
+      "version": "1.5.3"
     },
     {
       "repoHost": "Docker Hub",
@@ -68,14 +68,6 @@
       "name": "alfresco/alfresco-transform-misc",
       "type": "image",
       "version": "2.5.7"
-    },
-    {
-      "children": [],
-      "name": "common:7.2.0",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.2.0"
     },
     {
       "maintainers": [
@@ -131,6 +123,64 @@
       "version": "10.16.2"
     },
     {
+      "children": [],
+      "name": "alfresco-content-common:0.1.0",
+      "description": "A helper subchart to avoid duplication in alfresco-content-services chart and subcharts",
+      "type": "chart",
+      "shortName": "alfresco-content-common",
+      "version": "0.1.0"
+    },
+    {
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-elasticsearch-live-indexing-content:3.1.1",
+          "type": "image",
+          "version": "3.1.1"
+        },
+        {
+          "children": [],
+          "name": "alfresco-content-common:0.1.0",
+          "description": "A helper subchart to avoid duplication in alfresco-content-services chart and subcharts",
+          "type": "chart",
+          "shortName": "alfresco-content-common",
+          "version": "0.1.0"
+        }
+      ],
+      "name": "alfresco-elasticsearch-connector:0.1.0",
+      "description": "A Helm chart for deploying Alfresco Elasticsearch connector",
+      "type": "chart",
+      "shortName": "alfresco-elasticsearch-connector",
+      "version": "0.1.0"
+    },
+    {
+      "keywords": [
+        "activemq",
+        "message broker"
+      ],
+      "children": [{
+        "repoHost": "Docker Hub",
+        "children": [],
+        "name": "alfresco/alfresco-activemq",
+        "type": "image",
+        "version": "5.17.1-jre11-centos7"
+      }],
+      "name": "activemq:2.1.0",
+      "description": "A Helm chart Providing Apache ActiveMQ.",
+      "type": "chart",
+      "shortName": "activemq",
+      "version": "2.1.0"
+    },
+    {
+      "children": [],
+      "name": "common:7.3.0",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.3.0"
+    },
+    {
       "keywords": [
         "syncservice",
         "alfresco",
@@ -140,9 +190,9 @@
         {
           "repoHost": "quay.io",
           "children": [],
-          "name": "alfresco/service-sync:3.6.0",
+          "name": "alfresco/service-sync:3.7.0",
           "type": "image",
-          "version": "3.6.0"
+          "version": "3.7.0"
         },
         {
           "maintainers": [{"name": "Bitnami"}],
@@ -168,22 +218,22 @@
       "version": "3.0.9"
     },
     {
-      "keywords": [
-        "activemq",
-        "message broker"
-      ],
-      "children": [{
-        "repoHost": "Docker Hub",
-        "children": [],
-        "name": "alfresco/alfresco-activemq",
-        "type": "image",
-        "version": "5.16.4-jre11-centos7"
+      "maintainers": [{
+        "name": "Elastic",
+        "email": "helm-charts@elastic.co"
       }],
-      "name": "activemq:2.1.0",
-      "description": "A Helm chart Providing Apache ActiveMQ.",
+      "children": [{
+        "repoHost": "docker.elastic.co",
+        "children": [],
+        "name": "elasticsearch/elasticsearch:7.10.1",
+        "type": "image",
+        "version": "7.10.1"
+      }],
+      "name": "elasticsearch:7.10.1",
+      "description": "Official Elastic helm chart for Elasticsearch",
       "type": "chart",
-      "shortName": "activemq",
-      "version": "2.1.0"
+      "shortName": "elasticsearch",
+      "version": "7.10.1"
     },
     {
       "keywords": [
@@ -201,22 +251,6 @@
           "name": "alfresco/search-services:2.0.3",
           "type": "image",
           "version": "2.0.3"
-        },
-        {
-          "maintainers": [{"name": "Bitnami"}],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.16.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.16.0"
         },
         {
           "keywords": [
@@ -255,6 +289,22 @@
           "type": "chart",
           "shortName": "alfresco-insight-zeppelin",
           "version": "1.0.3"
+        },
+        {
+          "maintainers": [{"name": "Bitnami"}],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.16.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.16.0"
         }
       ],
       "name": "alfresco-search:1.0.4",
@@ -264,9 +314,9 @@
       "version": "1.0.4"
     }
   ],
-  "name": "alfresco-content-services:5.2.0",
+  "name": "alfresco-content-services:5.3.0-M1",
   "description": "A Helm chart for deploying Alfresco Content Services",
   "type": "chart",
   "shortName": "alfresco-content-services",
-  "version": "5.2.0"
+  "version": "5.3.0-M1"
 }
