@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nnextcloud\n====\n17.0.0-apache" as nextc
 'Chart Dependencies
 nextcloud_1_12_0--[#orange]-|>nextcloud_17_0_0_apache
 
-center footer Generated on 2022/06/02 04:15:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:11:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -27,7 +27,7 @@ Chart: sugarcrm:1.0.5
 	icon: https://bitnami.com/assets/stacks/sugarcrm/img/sugarcrm-stack-110x117.png
 	keywords: sugarcrm,CRM
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: sugarcrm
 	sources: https://github.com/bitnami/bitnami-docker-sugarcrm
 	urls: Not specified
@@ -42,4 +42,4 @@ Chart Dependencies
 sugarcrm:1.0.5 depends on mariadb:0.7.0
 mariadb:0.7.0 uses bitnami/mariadb:10.1.23-r2
 
-Generated on 2022/06/02 04:35:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:27:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

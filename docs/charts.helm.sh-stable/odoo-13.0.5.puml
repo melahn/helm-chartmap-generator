@@ -9,17 +9,17 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for odoo:13.0.5
 
 'There are 2 referenced Helm Charts
-artifact "postgresql:8.6.2\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_8_6_2 #LightSteelBlue
-artifact "odoo:13.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\todoo\n\t\tcrm\n\t\twww\n\t\thttp\n\t\tweb" as odoo_13_0_5 #LightSteelBlue
+artifact "odoo:13.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\todoo\n\t\tcrm\n\t\twww\n\t\thttp\n\t\tweb" as odoo_13_0_5 #LightSteelBlue
+artifact "postgresql:8.4.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_8_4_3 #LightSteelBlue
 
 'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/odoo:12.0.20200215-debian-10-r1\n====\n12.0.20200215-debian-10-r1" as docker_io_bitnami_odoo_12_0_20200215_debian_10_r1 #LavenderBlush
 usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:11.7.0-debian-10-r9\n====\n11.7.0-debian-10-r9" as docker_io_bitnami_postgresql_11_7_0_debian_10_r9 #DarkSalmon
-usecase "Image\n====\ndocker.io\n====\nbitnami/odoo:12.0.20200215-debian-10-r17\n====\n12.0.20200215-debian-10-r17" as docker_io_bitnami_odoo_12_0_20200215_debian_10_r17 #LavenderBlush
 
 'Chart Dependencies
-odoo_13_0_5--[#green]-|>postgresql_8_6_2
-postgresql_8_6_2--[#orange]-|>docker_io_bitnami_postgresql_11_7_0_debian_10_r9
-odoo_13_0_5--[#orange]-|>docker_io_bitnami_odoo_12_0_20200215_debian_10_r17
+odoo_13_0_5--[#green]-|>postgresql_8_4_3
+odoo_13_0_5--[#orange]-|>docker_io_bitnami_odoo_12_0_20200215_debian_10_r1
+postgresql_8_4_3--[#orange]-|>docker_io_bitnami_postgresql_11_7_0_debian_10_r9
 
-center footer Generated on 2022/06/02 04:17:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:12:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\njfelten/openvpn-docker\n====\n1.1.0" as 
 'Chart Dependencies
 openvpn_4_2_4--[#orange]-|>jfelten_openvpn_docker_1_1_0
 
-center footer Generated on 2022/06/02 04:18:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:14:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

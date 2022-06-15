@@ -28,4 +28,4 @@ Chart Dependencies
 dask:3.0.0 uses daskdev/dask:1.1.5
 dask:3.0.0 uses daskdev/dask-notebook:1.1.5
 
-Generated on 2022/06/02 03:45:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:48:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

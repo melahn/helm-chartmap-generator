@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\npusher/oauth2_proxy:v5.1.0\n====\nv5.1.0" a
 'Chart Dependencies
 oauth2_proxy_3_2_3--[#orange]-|>quay_io_pusher_oauth2_proxy_v5_1_0
 
-center footer Generated on 2022/06/02 04:17:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:12:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

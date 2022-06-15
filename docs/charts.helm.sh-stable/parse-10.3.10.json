@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "parse",
     "backend",
@@ -15,9 +11,9 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/parse:3.10.0-debian-10-r47",
+      "name": "bitnami/parse:3.10.0-debian-10-r30",
       "type": "image",
-      "version": "3.10.0-debian-10-r47"
+      "version": "3.10.0-debian-10-r30"
     },
     {
       "maintainers": [{
@@ -35,19 +31,19 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mongodb:4.2.4-debian-10-r3",
+        "name": "bitnami/mongodb:4.2.3-debian-10-r10",
         "type": "image",
-        "version": "4.2.4-debian-10-r3"
+        "version": "4.2.3-debian-10-r10"
       }],
-      "name": "mongodb:7.8.10",
+      "name": "mongodb:7.8.5",
       "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
       "type": "chart",
       "shortName": "mongodb",
-      "version": "7.8.10"
+      "version": "7.8.5"
     }
   ],
   "name": "parse:10.3.10",
-  "description": "Parse is a platform that enables users to add a scalable and powerful backend to launch a full-featured app for iOS, Android, JavaScript, Windows, Unity, and more.",
+  "description": "DEPRECATED Parse is a platform that enables users to add a scalable and powerful backend to launch a full-featured app for iOS, Android, JavaScript, Windows, Unity, and more.",
   "type": "chart",
   "shortName": "parse",
   "version": "10.3.10"

@@ -29,26 +29,6 @@
     {
       "maintainers": [
         {
-          "name": "gianrubio",
-          "email": "gianrubio@gmail.com"
-        },
-        {"name": "vsliouniaev"}
-      ],
-      "keywords": [
-        "node-exporter",
-        "prometheus",
-        "exporter"
-      ],
-      "children": [],
-      "name": "prometheus-node-exporter:1.10.0",
-      "description": "A Helm chart for prometheus node-exporter",
-      "type": "chart",
-      "shortName": "prometheus-node-exporter",
-      "version": "1.10.0"
-    },
-    {
-      "maintainers": [
-        {
           "name": "zanhsieh",
           "email": "zanhsieh@gmail.com"
         },
@@ -116,6 +96,26 @@
       "type": "chart",
       "shortName": "kube-state-metrics",
       "version": "2.8.10"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "gianrubio",
+          "email": "gianrubio@gmail.com"
+        },
+        {"name": "vsliouniaev"}
+      ],
+      "keywords": [
+        "node-exporter",
+        "prometheus",
+        "exporter"
+      ],
+      "children": [],
+      "name": "prometheus-node-exporter:1.10.0",
+      "description": "A Helm chart for prometheus node-exporter",
+      "type": "chart",
+      "shortName": "prometheus-node-exporter",
+      "version": "1.10.0"
     }
   ],
   "name": "prometheus-operator:9.3.1",

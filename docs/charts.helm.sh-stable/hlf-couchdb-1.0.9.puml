@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nhyperledger/fabric-couchdb\n====\n0.4.10
 'Chart Dependencies
 hlf_couchdb_1_0_9--[#orange]-|>hyperledger_fabric_couchdb_0_4_10
 
-center footer Generated on 2022/06/02 03:57:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:58:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

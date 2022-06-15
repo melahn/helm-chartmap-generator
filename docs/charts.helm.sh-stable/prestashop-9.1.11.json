@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "prestashop",
     "e-commerce",
@@ -26,9 +22,9 @@
       {
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mariadb:10.1.44-debian-10-r39",
+        "name": "bitnami/mariadb:10.1.44-debian-10-r32",
         "type": "image",
-        "version": "10.1.44-debian-10-r39"
+        "version": "10.1.44-debian-10-r32"
       },
       {
         "repoHost": "docker.io",
@@ -45,7 +41,7 @@
     "version": "7.3.12"
   }],
   "name": "prestashop:9.1.11",
-  "description": "A popular open source ecommerce solution. Professional tools are easily accessible to increase online sales including instant guest checkout, abandoned cart reminders and automated Email marketing.",
+  "description": "DEPRECATED A popular open source ecommerce solution. Professional tools are easily accessible to increase online sales including instant guest checkout, abandoned cart reminders and automated Email marketing.",
   "type": "chart",
   "shortName": "prestashop",
   "version": "9.1.11"

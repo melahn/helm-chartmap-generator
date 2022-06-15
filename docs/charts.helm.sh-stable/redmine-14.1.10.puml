@@ -9,8 +9,8 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for redmine:14.1.10
 
 'There are 2 referenced Helm Charts
-artifact "mariadb:7.3.10\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_7_3_10 #DarkTurquoise
-artifact "redmine:14.1.10\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tredmine\n\t\tproject management\n\t\twww\n\t\thttp\n\t\tweb\n\t\tapplication\n\t\truby\n\t\trails" as redmine_14_1_10 #Gainsboro
+artifact "mariadb:7.3.10\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_7_3_10 #DarkTurquoise
+artifact "redmine:14.1.10\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tredmine\n\t\tproject management\n\t\twww\n\t\thttp\n\t\tweb\n\t\tapplication\n\t\truby\n\t\trails" as redmine_14_1_10 #Gainsboro
 
 'There are 2 referenced Docker Images
 usecase "Image\n====\ndocker.io\n====\nbitnami/redmine:4.1.0-debian-10-r25\n====\n4.1.0-debian-10-r25" as docker_io_bitnami_redmine_4_1_0_debian_10_r25 #Chartreuse
@@ -21,5 +21,5 @@ redmine_14_1_10--[#green]-|>mariadb_7_3_10
 mariadb_7_3_10--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r17
 redmine_14_1_10--[#orange]-|>docker_io_bitnami_redmine_4_1_0_debian_10_r25
 
-center footer Generated on 2022/06/02 04:28:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:21:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

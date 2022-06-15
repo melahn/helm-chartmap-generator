@@ -29,36 +29,22 @@
     {
       "maintainers": [
         {
-          "name": "fiunchinho",
-          "email": "jose@armesto.net"
+          "name": "gianrubio",
+          "email": "gianrubio@gmail.com"
         },
-        {
-          "name": "tariq1890",
-          "email": "tariq.ibrahim@mulesoft.com"
-        },
-        {
-          "name": "mrueg",
-          "email": "manuel@rueg.eu"
-        }
+        {"name": "vsliouniaev"}
       ],
       "keywords": [
-        "metric",
-        "monitoring",
+        "node-exporter",
         "prometheus",
-        "kubernetes"
+        "exporter"
       ],
-      "children": [{
-        "repoHost": "quay.io",
-        "children": [],
-        "name": "coreos/kube-state-metrics:v1.9.7",
-        "type": "image",
-        "version": "v1.9.7"
-      }],
-      "name": "kube-state-metrics:2.8.10",
-      "description": "Install kube-state-metrics to generate and expose cluster-level metrics",
+      "children": [],
+      "name": "prometheus-node-exporter:1.10.0",
+      "description": "A Helm chart for prometheus node-exporter",
       "type": "chart",
-      "shortName": "kube-state-metrics",
-      "version": "2.8.10"
+      "shortName": "prometheus-node-exporter",
+      "version": "1.10.0"
     },
     {
       "maintainers": [
@@ -100,22 +86,36 @@
     {
       "maintainers": [
         {
-          "name": "gianrubio",
-          "email": "gianrubio@gmail.com"
+          "name": "fiunchinho",
+          "email": "jose@armesto.net"
         },
-        {"name": "vsliouniaev"}
+        {
+          "name": "tariq1890",
+          "email": "tariq.ibrahim@mulesoft.com"
+        },
+        {
+          "name": "mrueg",
+          "email": "manuel@rueg.eu"
+        }
       ],
       "keywords": [
-        "node-exporter",
+        "metric",
+        "monitoring",
         "prometheus",
-        "exporter"
+        "kubernetes"
       ],
-      "children": [],
-      "name": "prometheus-node-exporter:1.10.0",
-      "description": "A Helm chart for prometheus node-exporter",
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "coreos/kube-state-metrics:v1.9.7",
+        "type": "image",
+        "version": "v1.9.7"
+      }],
+      "name": "kube-state-metrics:2.8.10",
+      "description": "Install kube-state-metrics to generate and expose cluster-level metrics",
       "type": "chart",
-      "shortName": "prometheus-node-exporter",
-      "version": "1.10.0"
+      "shortName": "kube-state-metrics",
+      "version": "2.8.10"
     }
   ],
   "name": "prometheus-operator:9.3.0",

@@ -20,17 +20,17 @@ Chart: hubot:1.0.4
 Chart: redis:9.4.3
 	apiVersion: v1
 	appVersion: 5.0.5
-	created: 2019-10-29T21:38:55.02351242Z
+	created: 2020-10-15T15:46:27.075742-04:00
 	dependencies: None
 	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
 	digest: 402ed4df79e6a7f7d195822d2c63d9cd0ddfdfb48d354f0610f8e8dd34c24c54
 	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
 	keywords: redis,keyvalue,database
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: redis
 	sources: https://github.com/bitnami/bitnami-docker-redis
-	urls: https://charts.bitnami.com/bitnami/redis-9.4.3.tgz
+	urls: https://charts.helm.sh/stable/packages/redis-9.4.3.tgz
 	version: 9.4.3
 
 There are 2 referenced Docker Images
@@ -44,4 +44,4 @@ hubot:1.0.4 depends on redis:9.4.3
 hubot:1.0.4 uses minddocdev/hubot:3.3.2
 redis:9.4.3 uses docker.io/bitnami/redis:5.0.5-debian-9-r169
 
-Generated on 2022/06/02 03:58:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:58:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

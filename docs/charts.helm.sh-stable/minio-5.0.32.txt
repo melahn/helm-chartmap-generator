@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 minio:5.0.32 uses minio/minio:RELEASE.2020-06-14T18-32-17Z
 
-Generated on 2022/06/02 04:12:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:09:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

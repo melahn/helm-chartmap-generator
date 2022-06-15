@@ -15,5 +15,5 @@ artifact "sematext-docker-agent:0.2.0\n====\n\tType: application\n====\n\tRepo: 
 
 'Chart Dependencies
 
-center footer Generated on 2022/06/02 04:31:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:23:44 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,14 +1,4 @@
 {
-  "maintainers": [
-    {
-      "name": "Bitnami",
-      "email": "containers@bitnami.com"
-    },
-    {
-      "name": "desaintmartin",
-      "email": "cedric@desaintmartin.fr"
-    }
-  ],
   "keywords": [
     "redis",
     "keyvalue",
@@ -17,12 +7,12 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/redis:5.0.8-debian-10-r33",
+    "name": "bitnami/redis:5.0.7-debian-10-r32",
     "type": "image",
-    "version": "5.0.8-debian-10-r33"
+    "version": "5.0.7-debian-10-r32"
   }],
   "name": "redis:10.5.7",
-  "description": "Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+  "description": "DEPRECATED Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
   "type": "chart",
   "shortName": "redis",
   "version": "10.5.7"

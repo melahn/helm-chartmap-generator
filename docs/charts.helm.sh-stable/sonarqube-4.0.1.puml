@@ -9,7 +9,7 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for sonarqube:4.0.1
 
 'There are 2 referenced Helm Charts
-artifact "postgresql:8.2.0\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_8_2_0 #LightSteelBlue
+artifact "postgresql:8.2.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_8_2_0 #LightSteelBlue
 artifact "sonarqube:4.0.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tcoverage\n\t\tsecurity\n\t\tcode\n\t\tquality" as sonarqube_4_0_1 #Azure
 
 'There are 2 referenced Docker Images
@@ -21,5 +21,5 @@ sonarqube_4_0_1--[#green]-|>postgresql_8_2_0
 postgresql_8_2_0--[#orange]-|>docker_io_bitnami_postgresql_11_6_0_debian_10_r0
 sonarqube_4_0_1--[#orange]-|>sonarqube_7_9_2_community
 
-center footer Generated on 2022/06/02 04:32:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:24:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,8 +1,14 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
+  "maintainers": [
+    {
+      "name": "vikramraman",
+      "email": "rvikram@vmware.com"
+    },
+    {
+      "name": "puckpuck",
+      "email": "pierre@wavefront.com"
+    }
+  ],
   "keywords": [
     "metric",
     "monitoring",
@@ -11,78 +17,45 @@
   ],
   "children": [
     {
-      "repoHost": "docker.io",
+      "repoHost": "Docker Hub",
       "children": [],
-      "name": "bitnami/wavefront-proxy:9.3.0-debian-10-r79",
+      "name": "wavefronthq/proxy",
       "type": "image",
-      "version": "9.3.0-debian-10-r79"
+      "version": "4.38"
     },
     {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "common",
-        "helper",
-        "template",
-        "function",
-        "bitnami"
-      ],
-      "children": [],
-      "name": "common:1.1.2",
-      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-      "type": "chart",
-      "shortName": "common",
-      "version": "1.1.2"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "prometheus",
-        "kube-state-metrics",
-        "monitoring"
-      ],
-      "children": [
+      "maintainers": [
         {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/kube-state-metrics:1.9.7-debian-10-r143",
-          "type": "image",
-          "version": "1.9.7-debian-10-r143"
+          "name": "fiunchinho",
+          "email": "jose@armesto.net"
         },
         {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.1.1",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.1.1"
+          "name": "tariq1890",
+          "email": "tariq.ibrahim@mulesoft.com"
         }
       ],
-      "name": "kube-state-metrics:1.1.1",
-      "description": "kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.",
+      "keywords": [
+        "metric",
+        "monitoring",
+        "prometheus",
+        "kubernetes"
+      ],
+      "children": [{
+        "repoHost": "quay.io",
+        "children": [],
+        "name": "coreos/kube-state-metrics:v1.7.2",
+        "type": "image",
+        "version": "v1.7.2"
+      }],
+      "name": "kube-state-metrics:2.3.1",
+      "description": "Install kube-state-metrics to generate and expose cluster-level metrics",
       "type": "chart",
       "shortName": "kube-state-metrics",
-      "version": "1.1.1"
+      "version": "2.3.1"
     }
   ],
   "name": "wavefront:1.1.0",
-  "description": "Chart for Wavefront Collector for Kubernetes",
+  "description": "Wavefront Kubernetes collector",
   "type": "chart",
   "shortName": "wavefront",
   "version": "1.1.0"

@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ndatalust/seq\n====\n2020" as datalust_se
 'Chart Dependencies
 seq_2_3_2--[#orange]-|>datalust_seq_2020
 
-center footer Generated on 2022/06/02 04:31:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:24:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

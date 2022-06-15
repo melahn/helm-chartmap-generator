@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 risk-advisor:2.0.4 uses pposkrobko/risk-advisor:v1.0.0
 
-Generated on 2022/06/02 04:28:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:21:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

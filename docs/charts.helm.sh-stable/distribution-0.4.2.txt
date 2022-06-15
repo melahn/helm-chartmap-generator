@@ -20,23 +20,23 @@ Chart: redis:1.1.21
 Chart: mongodb:2.0.5
 	apiVersion: v1
 	appVersion: 3.6.4
-	created: 2018-05-21T11:12:06.082150457Z
+	created: 2020-10-15T15:46:19.7977-04:00
 	dependencies: None
 	description: NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
 	digest: 6d77a80e5cf5a82c90e610bfeabc97ac053bad04f2f78809ef315498a4dcfbec
 	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
 	keywords: mongodb,database,nosql
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: mongodb
 	sources: https://github.com/bitnami/bitnami-docker-mongodb
-	urls: https://charts.bitnami.com/bitnami/mongodb-2.0.5.tgz
+	urls: https://charts.helm.sh/stable/packages/mongodb-2.0.5.tgz
 	version: 2.0.5
 Chart: distribution:0.4.2
 	apiVersion: v1
 	appVersion: 1.1.0
 	created: Not specified
-	dependencies: redis:1.1.21, mongodb:2.0.5
+	dependencies: mongodb:2.0.5, redis:1.1.21
 	description: DEPRECATED A Helm chart for JFrog Distribution
 	digest: Not specified
 	icon: https://raw.githubusercontent.com/JFrogDev/artifactory-dcos/master/images/jfrog_med.png
@@ -57,11 +57,11 @@ Image: docker.bintray.io/jfrog/distribution-distributor:1.1.0
 
 Chart Dependencies
 ------------------
-distribution:0.4.2 depends on redis:1.1.21
 distribution:0.4.2 depends on mongodb:2.0.5
+distribution:0.4.2 depends on redis:1.1.21
 redis:1.1.21 uses bitnami/redis:4.0.9-r0
 mongodb:2.0.5 uses docker.io/bitnami/mongodb:3.6.3
 distribution:0.4.2 uses docker.bintray.io/jfrog/distribution-distribution:1.1.0
 distribution:0.4.2 uses docker.bintray.io/jfrog/distribution-distributor:1.1.0
 
-Generated on 2022/06/02 03:46:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:49:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

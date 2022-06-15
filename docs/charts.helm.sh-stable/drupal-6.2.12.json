@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "drupal",
     "cms",
@@ -16,9 +12,9 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/drupal:8.8.3-debian-10-r6",
+      "name": "bitnami/drupal:8.8.3-debian-10-r1",
       "type": "image",
-      "version": "8.8.3-debian-10-r6"
+      "version": "8.8.3-debian-10-r1"
     },
     {
       "maintainers": [{
@@ -35,19 +31,19 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mariadb:10.3.22-debian-10-r44",
+        "name": "bitnami/mariadb:10.3.22-debian-10-r27",
         "type": "image",
-        "version": "10.3.22-debian-10-r44"
+        "version": "10.3.22-debian-10-r27"
       }],
-      "name": "mariadb:7.3.14",
+      "name": "mariadb:7.3.12",
       "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
       "type": "chart",
       "shortName": "mariadb",
-      "version": "7.3.14"
+      "version": "7.3.12"
     }
   ],
   "name": "drupal:6.2.12",
-  "description": "One of the most versatile open source content management systems.",
+  "description": "DEPRECATED One of the most versatile open source content management systems.",
   "type": "chart",
   "shortName": "drupal",
   "version": "6.2.12"

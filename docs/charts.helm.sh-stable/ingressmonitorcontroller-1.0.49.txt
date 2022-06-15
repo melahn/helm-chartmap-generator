@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 ingressmonitorcontroller:1.0.49 uses stakater/ingressmonitorcontroller:1.0.47
 
-Generated on 2022/06/02 03:59:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:59:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

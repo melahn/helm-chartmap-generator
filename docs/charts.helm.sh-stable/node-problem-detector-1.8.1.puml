@@ -15,5 +15,5 @@ artifact "node-problem-detector:1.8.1\n====\n\tType: application\n====\n\tRepo: 
 
 'Chart Dependencies
 
-center footer Generated on 2022/06/02 04:16:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:12:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

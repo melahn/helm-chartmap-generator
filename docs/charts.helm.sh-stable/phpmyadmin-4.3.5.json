@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "mariadb",
     "mysql",
@@ -11,12 +7,12 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/phpmyadmin:5.0.1-debian-10-r47",
+    "name": "bitnami/phpmyadmin:5.0.1-debian-10-r30",
     "type": "image",
-    "version": "5.0.1-debian-10-r47"
+    "version": "5.0.1-debian-10-r30"
   }],
   "name": "phpmyadmin:4.3.5",
-  "description": "phpMyAdmin is an mysql administration frontend",
+  "description": "DEPRECATED phpMyAdmin is an mysql administration frontend",
   "type": "chart",
   "shortName": "phpmyadmin",
   "version": "4.3.5"

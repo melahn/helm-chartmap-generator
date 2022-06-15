@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "testlink",
     "testing",
@@ -13,9 +9,9 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/testlink:1.9.20-debian-10-r28",
+      "name": "bitnami/testlink:1.9.20-debian-10-r19",
       "type": "image",
-      "version": "1.9.20-debian-10-r28"
+      "version": "1.9.20-debian-10-r19"
     },
     {
       "maintainers": [{
@@ -44,7 +40,7 @@
     }
   ],
   "name": "testlink:7.1.7",
-  "description": "Web-based test management system that facilitates software quality assurance.",
+  "description": "DEPRECATED Web-based test management system that facilitates software quality assurance.",
   "type": "chart",
   "shortName": "testlink",
   "version": "7.1.7"

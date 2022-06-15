@@ -5,17 +5,17 @@ There are 2 referenced Helm Charts
 Chart: mariadb:7.3.11
 	apiVersion: v1
 	appVersion: 10.3.22
-	created: 2020-02-27T10:38:04.688330461Z
+	created: 2020-10-15T15:46:19.324021-04:00
 	dependencies: None
 	description: Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.
 	digest: ef8cc2a802242b8110de91a567b5f6f46918400730cdc4c3ec2770a9d1752f7f
 	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
 	keywords: mariadb,mysql,database,sql,prometheus
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: mariadb
 	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter
-	urls: https://charts.bitnami.com/bitnami/mariadb-7.3.11.tgz
+	urls: https://charts.helm.sh/stable/packages/mariadb-7.3.11.tgz
 	version: 7.3.11
 Chart: orangehrm:7.0.8
 	apiVersion: v1
@@ -27,7 +27,7 @@ Chart: orangehrm:7.0.8
 	icon: https://bitnami.com/assets/stacks/orangehrm/img/orangehrm-stack-110x117.png
 	keywords: orangehrm,http,https,web,application,php,human resources
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: orangehrm
 	sources: https://github.com/bitnami/bitnami-docker-orangehrm
 	urls: Not specified
@@ -44,4 +44,4 @@ orangehrm:7.0.8 depends on mariadb:7.3.11
 mariadb:7.3.11 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r27
 orangehrm:7.0.8 uses docker.io/bitnami/orangehrm:4.3.4-0-debian-10-r26
 
-Generated on 2022/06/02 04:19:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:14:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

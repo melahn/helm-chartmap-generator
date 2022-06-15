@@ -5,17 +5,17 @@ There are 2 referenced Helm Charts
 Chart: mariadb:7.3.14
 	apiVersion: v1
 	appVersion: 10.3.22
-	created: 2020-03-11T20:23:34.427837219Z
+	created: 2020-10-15T15:46:19.328091-04:00
 	dependencies: None
-	description: Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.
-	digest: 403d581f9854113ffd072fbae446f05e4fea4fbf10f68e29619da80d8c7e7a16
+	description: DEPRECATED Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.
+	digest: 8f91980656568074178e2c02ad808b1db124f244ceb19d3850776c7feac80184
 	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
 	keywords: mariadb,mysql,database,sql,prometheus
-	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
 	name: mariadb
 	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter
-	urls: https://charts.bitnami.com/bitnami/mariadb-7.3.14.tgz
+	urls: https://charts.helm.sh/stable/packages/mariadb-7.3.14.tgz
 	version: 7.3.14
 Chart: bookstack:1.2.4
 	apiVersion: v1
@@ -44,4 +44,4 @@ bookstack:1.2.4 depends on mariadb:7.3.14
 mariadb:7.3.14 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r27
 bookstack:1.2.4 uses solidnerd/bookstack:0.27.5
 
-Generated on 2022/06/02 03:39:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:44:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

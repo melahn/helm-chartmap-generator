@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nbuoyantio/namerd\n====\n0.9.1" as buoyan
 namerd_0_2_2--[#orange]-|>buoyantio_namerd_0_9_1
 namerd_0_2_2--[#orange]-|>buoyantio_kubectl_v1_4_0
 
-center footer Generated on 2022/06/02 04:14:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:10:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

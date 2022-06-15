@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nkong-docker-kubernetes-ingress-controlle
 kong_0_36_5--[#orange]-|>kong_1_4
 kong_0_36_5--[#orange]-|>kong_docker_kubernetes_ingress_controller_bintray_io_kong_ingress_controller_0_7_0
 
-center footer Generated on 2022/06/02 04:04:28 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:03:17 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

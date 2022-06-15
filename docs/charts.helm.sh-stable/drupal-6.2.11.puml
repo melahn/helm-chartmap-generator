@@ -9,7 +9,7 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for drupal:6.2.11
 
 'There are 2 referenced Helm Charts
-artifact "mariadb:7.3.12\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_7_3_12 #DarkTurquoise
+artifact "mariadb:7.3.12\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_7_3_12 #DarkTurquoise
 artifact "drupal:6.2.11\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tdrupal\n\t\tcms\n\t\tblog\n\t\thttp\n\t\tweb\n\t\tapplication\n\t\tphp" as drupal_6_2_11 #HotPink
 
 'There are 2 referenced Docker Images
@@ -21,5 +21,5 @@ drupal_6_2_11--[#green]-|>mariadb_7_3_12
 mariadb_7_3_12--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r27
 drupal_6_2_11--[#orange]-|>docker_io_bitnami_drupal_8_8_3_debian_10_r1
 
-center footer Generated on 2022/06/02 03:47:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:50:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

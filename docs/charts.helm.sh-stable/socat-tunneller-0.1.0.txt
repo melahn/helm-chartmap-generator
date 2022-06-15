@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 socat-tunneller:0.1.0 uses alpine/socat:1.0.3
 
-Generated on 2022/06/02 04:32:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:24:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

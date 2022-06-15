@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 redis-ha:4.4.6 uses redis:5.0.6-alpine
 
-Generated on 2022/06/02 04:27:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:21:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

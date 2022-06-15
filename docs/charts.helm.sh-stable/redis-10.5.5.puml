@@ -9,7 +9,7 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for redis:10.5.5
 
 'There is one referenced Helm Chart
-artifact "redis:10.5.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_10_5_5 #LightSeaGreen
+artifact "redis:10.5.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_10_5_5 #LightSeaGreen
 
 'There is one referenced Docker Image
 usecase "Image\n====\ndocker.io\n====\nbitnami/redis:5.0.7-debian-10-r27\n====\n5.0.7-debian-10-r27" as docker_io_bitnami_redis_5_0_7_debian_10_r27 #Azure
@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/redis:5.0.7-debian-10-r27\n====\n
 'Chart Dependencies
 redis_10_5_5--[#orange]-|>docker_io_bitnami_redis_5_0_7_debian_10_r27
 
-center footer Generated on 2022/06/02 04:27:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:21:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

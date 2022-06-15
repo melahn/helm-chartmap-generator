@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kubernetes-dashboard:1.11.1 uses k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1
 
-Generated on 2022/06/02 04:06:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:04:53 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

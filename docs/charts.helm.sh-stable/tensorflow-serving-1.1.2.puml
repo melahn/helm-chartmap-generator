@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ncheyang/tf-model-server\n====\n1.4" as c
 'Chart Dependencies
 tensorflow_serving_1_1_2--[#orange]-|>cheyang_tf_model_server_1_4
 
-center footer Generated on 2022/06/02 04:37:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:28:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

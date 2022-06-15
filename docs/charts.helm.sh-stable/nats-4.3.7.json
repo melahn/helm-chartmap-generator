@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "nats",
     "messaging",
@@ -12,12 +8,12 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/nats:2.1.4-debian-10-r41",
+    "name": "bitnami/nats:2.1.4-debian-10-r24",
     "type": "image",
-    "version": "2.1.4-debian-10-r41"
+    "version": "2.1.4-debian-10-r24"
   }],
   "name": "nats:4.3.7",
-  "description": "An open-source, cloud-native messaging system",
+  "description": "DEPRECATED An open-source, cloud-native messaging system",
   "type": "chart",
   "shortName": "nats",
   "version": "4.3.7"

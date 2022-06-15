@@ -4,26 +4,28 @@ There is one referenced Helm Chart
 ----------------------------------
 Chart: spark:1.0.4
 	apiVersion: v1
-	appVersion: 2.4.3
+	appVersion: 1.5.1
 	created: Not specified
 	dependencies: None
-	description: Spark is a fast and general-purpose cluster computing system.
+	description: Fast and general-purpose cluster computing system.
 	digest: Not specified
-	icon: https://bitnami.com/assets/stacks/spark/img/spark-stack-220x234-1ea65541e9e427ca5b93300e61d4778576c7f679ae02addb86a2641b0ca70476.png
-	keywords: apache,spark
-	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
+	icon: http://spark.apache.org/images/spark-logo-trademark.png
+	keywords: Not specified
+	maintainers: lachie83:lachlan.evenson@gmail.com,daixiang0:764524258@qq.com
+	repo url: https://charts.helm.sh/stable
 	name: spark
-	sources: https://github.com/bitnami/bitnami-docker-spark
+	sources: https://github.com/kubernetes/kubernetes/tree/master/examples/spark,https://github.com/apache/spark
 	urls: Not specified
 	version: 1.0.4
 
-There is one referenced Docker Image
+There are 2 referenced Docker Images
 ------------------------------------
-Image: docker.io/bitnami/spark:2.4.3-debian-9-r78
+Image: k8s.gcr.io/spark:1.5.1_v3
+Image: apache/zeppelin:0.7.3
 
 Chart Dependencies
 ------------------
-spark:1.0.4 uses docker.io/bitnami/spark:2.4.3-debian-9-r78
+spark:1.0.4 uses k8s.gcr.io/spark:1.5.1_v3
+spark:1.0.4 uses apache/zeppelin:0.7.3
 
-Generated on 2022/06/02 04:33:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:25:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

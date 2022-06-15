@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 rethinkdb:1.1.3 uses codylundquist/helm-rethinkdb-cluster:0.1.0
 
-Generated on 2022/06/02 04:28:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:21:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -9,13 +9,15 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for spark:1.0.5
 
 'There is one referenced Helm Chart
-artifact "spark:1.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tapache\n\t\tspark" as spark_1_0_5 #LightSeaGreen
+artifact "spark:1.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as spark_1_0_5 #LightSeaGreen
 
-'There is one referenced Docker Image
-usecase "Image\n====\ndocker.io\n====\nbitnami/spark:2.4.3-debian-9-r79\n====\n2.4.3-debian-9-r79" as docker_io_bitnami_spark_2_4_3_debian_9_r79 #Azure
+'There are 2 referenced Docker Images
+usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/spark\n====\n1.5.1_v3" as k8s_gcr_io_spark_1_5_1_v3 #Fuchsia
+usecase "Image\n====\nDocker Hub\n====\napache/zeppelin\n====\n0.7.3" as apache_zeppelin_0_7_3 #LightGrey
 
 'Chart Dependencies
-spark_1_0_5--[#orange]-|>docker_io_bitnami_spark_2_4_3_debian_9_r79
+spark_1_0_5--[#orange]-|>k8s_gcr_io_spark_1_5_1_v3
+spark_1_0_5--[#orange]-|>apache_zeppelin_0_7_3
 
-center footer Generated on 2022/06/02 04:33:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:25:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

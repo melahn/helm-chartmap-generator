@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "rabbitmq",
     "message queue",
@@ -11,12 +7,12 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/rabbitmq:3.8.2-debian-10-r41",
+    "name": "bitnami/rabbitmq:3.8.2-debian-10-r30",
     "type": "image",
-    "version": "3.8.2-debian-10-r41"
+    "version": "3.8.2-debian-10-r30"
   }],
   "name": "rabbitmq:6.18.2",
-  "description": "Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
+  "description": "DEPRECATED Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
   "type": "chart",
   "shortName": "rabbitmq",
   "version": "6.18.2"

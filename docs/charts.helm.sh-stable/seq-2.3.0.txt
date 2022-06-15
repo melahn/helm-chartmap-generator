@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 seq:2.3.0 uses datalust/seq:2020
 
-Generated on 2022/06/02 04:31:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:24:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

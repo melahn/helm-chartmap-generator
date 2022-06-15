@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nnginx\n====\nstable" as nginx_stable #Aq
 'Chart Dependencies
 falco_1_1_8--[#orange]-|>nginx_stable
 
-center footer Generated on 2022/06/02 03:50:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:53:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

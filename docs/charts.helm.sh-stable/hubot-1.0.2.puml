@@ -9,7 +9,7 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for hubot:1.0.2
 
 'There are 2 referenced Helm Charts
-artifact "redis:9.4.3\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_9_4_3 #LightSeaGreen
+artifact "redis:9.4.3\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_9_4_3 #LightSeaGreen
 artifact "hubot:1.0.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tdarioblanco\n\t\tdecayofmind\n====\n\tKeywords: \n\t\tslack\n\t\thubot\n\t\tchatbot" as hubot_1_0_2 #Aqua
 
 'There are 2 referenced Docker Images
@@ -21,5 +21,5 @@ hubot_1_0_2--[#green]-|>redis_9_4_3
 redis_9_4_3--[#orange]-|>docker_io_bitnami_redis_5_0_5_debian_9_r169
 hubot_1_0_2--[#orange]-|>minddocdev_hubot_3_3_2
 
-center footer Generated on 2022/06/02 03:59:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:59:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 hlf-ord:1.4.1 uses hyperledger/fabric-orderer:1.4.3
 
-Generated on 2022/06/02 03:57:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:58:15 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

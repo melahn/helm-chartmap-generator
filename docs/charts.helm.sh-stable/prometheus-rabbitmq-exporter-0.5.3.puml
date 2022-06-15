@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nkbudde/rabbitmq-exporter\n====\nv0.29.0"
 'Chart Dependencies
 prometheus_rabbitmq_exporter_0_5_3--[#orange]-|>kbudde_rabbitmq_exporter_v0_29_0
 
-center footer Generated on 2022/06/02 04:26:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:19:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

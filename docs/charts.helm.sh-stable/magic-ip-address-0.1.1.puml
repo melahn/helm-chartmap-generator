@@ -15,5 +15,5 @@ artifact "magic-ip-address:0.1.1\n====\n\tType: application\n====\n\tRepo: https
 
 'Chart Dependencies
 
-center footer Generated on 2022/06/02 04:09:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:06:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

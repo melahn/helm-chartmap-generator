@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 chronograf:1.1.1 uses quay.io/influxdb/chronograf:1.7.12
 
-Generated on 2022/06/02 03:41:21 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:45:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

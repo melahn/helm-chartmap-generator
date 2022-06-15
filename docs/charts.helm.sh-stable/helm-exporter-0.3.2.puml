@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nsstarcher/helm-exporter\n====\n0.4.2" as
 'Chart Dependencies
 helm_exporter_0_3_2--[#orange]-|>sstarcher_helm_exporter_0_4_2
 
-center footer Generated on 2022/06/02 03:56:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:57:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

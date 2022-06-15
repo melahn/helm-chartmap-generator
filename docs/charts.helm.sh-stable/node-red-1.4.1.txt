@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 node-red:1.4.1 uses nodered/node-red:1.0.1-12-minimal
 
-Generated on 2022/06/02 04:16:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:12:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

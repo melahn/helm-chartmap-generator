@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 oauth2-proxy:3.2.4 uses quay.io/pusher/oauth2_proxy:v5.1.0
 
-Generated on 2022/06/02 04:17:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:12:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

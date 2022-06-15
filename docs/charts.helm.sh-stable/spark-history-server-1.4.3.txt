@@ -43,4 +43,4 @@ spark-history-server:1.4.3 depends on nfs:0.1.0
 nfs:0.1.0 uses k8s.gcr.io/volume-nfs:0.8
 spark-history-server:1.4.3 uses lightbend/spark-history-server:2.4.0
 
-Generated on 2022/06/02 04:33:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:25:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nterracotta/terracotta-server-oss\n====\n
 'Chart Dependencies
 terracotta_1_1_0--[#orange]-|>terracotta_terracotta_server_oss_5_6_0
 
-center footer Generated on 2022/06/02 04:38:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:29:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

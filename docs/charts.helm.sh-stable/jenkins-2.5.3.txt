@@ -28,4 +28,4 @@ Chart Dependencies
 jenkins:2.5.3 uses jenkins/jenkins:lts
 jenkins:2.5.3 uses kiwigrid/k8s-sidecar:0.1.144
 
-Generated on 2022/06/02 04:01:12 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:00:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

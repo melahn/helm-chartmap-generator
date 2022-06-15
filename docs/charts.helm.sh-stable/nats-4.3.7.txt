@@ -7,12 +7,12 @@ Chart: nats:4.3.7
 	appVersion: 2.1.4
 	created: Not specified
 	dependencies: None
-	description: An open-source, cloud-native messaging system
+	description: DEPRECATED An open-source, cloud-native messaging system
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/nats/img/nats-stack-110x117.png
 	keywords: nats,messaging,addressing,discovery
-	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
 	name: nats
 	sources: https://github.com/bitnami/bitnami-docker-nats
 	urls: Not specified
@@ -20,10 +20,10 @@ Chart: nats:4.3.7
 
 There is one referenced Docker Image
 ------------------------------------
-Image: docker.io/bitnami/nats:2.1.4-debian-10-r41
+Image: docker.io/bitnami/nats:2.1.4-debian-10-r24
 
 Chart Dependencies
 ------------------
-nats:4.3.7 uses docker.io/bitnami/nats:2.1.4-debian-10-r41
+nats:4.3.7 uses docker.io/bitnami/nats:2.1.4-debian-10-r24
 
-Generated on 2022/06/02 04:14:31 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:10:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

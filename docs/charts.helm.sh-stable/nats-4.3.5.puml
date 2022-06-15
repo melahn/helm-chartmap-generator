@@ -9,7 +9,7 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for nats:4.3.5
 
 'There is one referenced Helm Chart
-artifact "nats:4.3.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tnats\n\t\tmessaging\n\t\taddressing\n\t\tdiscovery" as nats_4_3_5 #AliceBlue
+artifact "nats:4.3.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tnats\n\t\tmessaging\n\t\taddressing\n\t\tdiscovery" as nats_4_3_5 #AliceBlue
 
 'There is one referenced Docker Image
 usecase "Image\n====\ndocker.io\n====\nbitnami/nats:2.1.4-debian-10-r24\n====\n2.1.4-debian-10-r24" as docker_io_bitnami_nats_2_1_4_debian_10_r24 #Cornsilk
@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/nats:2.1.4-debian-10-r24\n====\n2
 'Chart Dependencies
 nats_4_3_5--[#orange]-|>docker_io_bitnami_nats_2_1_4_debian_10_r24
 
-center footer Generated on 2022/06/02 04:14:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:11:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

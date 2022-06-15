@@ -31,35 +31,6 @@
     {
       "maintainers": [
         {
-          "name": "Bitnami",
-          "email": "containers@bitnami.com"
-        },
-        {
-          "name": "desaintmartin",
-          "email": "cedric@desaintmartin.fr"
-        }
-      ],
-      "keywords": [
-        "rabbitmq",
-        "message queue",
-        "AMQP"
-      ],
-      "children": [{
-        "repoHost": "docker.io",
-        "children": [],
-        "name": "bitnami/rabbitmq:3.8.2-debian-10-r0",
-        "type": "image",
-        "version": "3.8.2-debian-10-r0"
-      }],
-      "name": "rabbitmq:6.16.6",
-      "description": "Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
-      "type": "chart",
-      "shortName": "rabbitmq",
-      "version": "6.16.6"
-    },
-    {
-      "maintainers": [
-        {
           "name": "olemarkus",
           "email": "o.with@sportradar.com"
         },
@@ -85,6 +56,35 @@
       "type": "chart",
       "shortName": "mysql",
       "version": "1.6.2"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "rabbitmq",
+        "message queue",
+        "AMQP"
+      ],
+      "children": [{
+        "repoHost": "docker.io",
+        "children": [],
+        "name": "bitnami/rabbitmq:3.8.2-debian-10-r0",
+        "type": "image",
+        "version": "3.8.2-debian-10-r0"
+      }],
+      "name": "rabbitmq:6.16.6",
+      "description": "Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
+      "type": "chart",
+      "shortName": "rabbitmq",
+      "version": "6.16.6"
     }
   ],
   "name": "spring-cloud-data-flow:2.7.2",

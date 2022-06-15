@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nosixia/openldap\n====\n1.2.4" as osixia_
 'Chart Dependencies
 openldap_1_2_6--[#orange]-|>osixia_openldap_1_2_4
 
-center footer Generated on 2022/06/02 04:18:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:14:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

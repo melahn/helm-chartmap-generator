@@ -9,8 +9,8 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for phabricator:9.0.11
 
 'There are 2 referenced Helm Charts
-artifact "mariadb:7.3.12\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_7_3_12 #DarkTurquoise
-artifact "phabricator:9.0.11\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tphabricator\n\t\thttp\n\t\thttps\n\t\tweb\n\t\tapplication\n\t\tcollaboration\n\t\tproject management\n\t\tbug tracking\n\t\tcode review\n\t\twiki\n\t\tgit\n\t\tmercurial\n\t\tsubversion" as phabricator_9_0_11 #Chartreuse
+artifact "mariadb:7.3.12\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_7_3_12 #DarkTurquoise
+artifact "phabricator:9.0.11\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tphabricator\n\t\thttp\n\t\thttps\n\t\tweb\n\t\tapplication\n\t\tcollaboration\n\t\tproject management\n\t\tbug tracking\n\t\tcode review\n\t\twiki\n\t\tgit\n\t\tmercurial\n\t\tsubversion" as phabricator_9_0_11 #Chartreuse
 
 'There is one referenced Docker Image
 usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.3.22-debian-10-r27\n====\n10.3.22-debian-10-r27" as docker_io_bitnami_mariadb_10_3_22_debian_10_r27 #DarkGoldenRod
@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.3.22-debian-10-r27\n==
 phabricator_9_0_11--[#green]-|>mariadb_7_3_12
 mariadb_7_3_12--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r27
 
-center footer Generated on 2022/06/02 04:21:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:15:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

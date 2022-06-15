@@ -7,14 +7,14 @@
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-indexer:2.3.0",
+      "name": "jfrog/xray-server:2.3.0",
       "type": "image",
       "version": "2.3.0"
     },
     {
       "repoHost": "docker.bintray.io",
       "children": [],
-      "name": "jfrog/xray-server:2.3.0",
+      "name": "jfrog/xray-indexer:2.3.0",
       "type": "image",
       "version": "2.3.0"
     },

@@ -34,23 +34,6 @@
         "monitoring"
       ],
       "children": [],
-      "name": "weave-scope-frontend:1.1.10",
-      "description": "A Helm chart for the Weave Scope cluster visualizer frontend.",
-      "type": "chart",
-      "shortName": "weave-scope-frontend",
-      "version": "1.1.10"
-    },
-    {
-      "maintainers": [{
-        "name": "omkensey",
-        "email": "github@orion-com.com"
-      }],
-      "keywords": [
-        "containers",
-        "dashboard",
-        "monitoring"
-      ],
-      "children": [],
       "name": "weave-scope-cluster-agent:1.1.10",
       "description": "A Helm chart for the Weave Scope cluster visualizer node agent.",
       "type": "chart",
@@ -72,6 +55,23 @@
       "description": "A Helm chart for the Weave Scope cluster visualizer node agent.",
       "type": "chart",
       "shortName": "weave-scope-agent",
+      "version": "1.1.10"
+    },
+    {
+      "maintainers": [{
+        "name": "omkensey",
+        "email": "github@orion-com.com"
+      }],
+      "keywords": [
+        "containers",
+        "dashboard",
+        "monitoring"
+      ],
+      "children": [],
+      "name": "weave-scope-frontend:1.1.10",
+      "description": "A Helm chart for the Weave Scope cluster visualizer frontend.",
+      "type": "chart",
+      "shortName": "weave-scope-frontend",
       "version": "1.1.10"
     }
   ],

@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nregistry\n====\n2.7.1" as registry_2_7_1
 'Chart Dependencies
 docker_registry_1_9_5--[#orange]-|>registry_2_7_1
 
-center footer Generated on 2022/06/02 03:46:49 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:50:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

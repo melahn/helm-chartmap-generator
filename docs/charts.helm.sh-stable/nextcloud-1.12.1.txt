@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 nextcloud:1.12.1 uses nextcloud:17.0.0-apache
 
-Generated on 2022/06/02 04:15:12 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:11:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

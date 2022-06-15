@@ -20,17 +20,17 @@ Chart: phabricator:9.0.12
 Chart: mariadb:7.3.12
 	apiVersion: v1
 	appVersion: 10.3.22
-	created: 2020-03-11T16:08:37.015240841Z
+	created: 2020-10-15T15:46:19.325344-04:00
 	dependencies: None
 	description: Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.
 	digest: 0fd31add0399f731d5a5b059465080649d773c2c4130be696628e21271469ccd
 	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
 	keywords: mariadb,mysql,database,sql,prometheus
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: mariadb
 	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter
-	urls: https://charts.bitnami.com/bitnami/mariadb-7.3.12.tgz
+	urls: https://charts.helm.sh/stable/packages/mariadb-7.3.12.tgz
 	version: 7.3.12
 
 There is one referenced Docker Image
@@ -42,4 +42,4 @@ Chart Dependencies
 phabricator:9.0.12 depends on mariadb:7.3.12
 mariadb:7.3.12 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r27
 
-Generated on 2022/06/02 04:20:53 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:15:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

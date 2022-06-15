@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "mongodb",
     "database",
@@ -14,12 +10,12 @@
   "children": [{
     "repoHost": "docker.io",
     "children": [],
-    "name": "bitnami/mongodb:4.2.4-debian-10-r3",
+    "name": "bitnami/mongodb:4.2.4-debian-10-r0",
     "type": "image",
-    "version": "4.2.4-debian-10-r3"
+    "version": "4.2.4-debian-10-r0"
   }],
   "name": "mongodb:7.8.10",
-  "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+  "description": "DEPRECATED NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
   "type": "chart",
   "shortName": "mongodb",
   "version": "7.8.10"

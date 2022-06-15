@@ -28,4 +28,4 @@ Chart Dependencies
 unbound:1.1.3 uses gcr.io/google-containers/exechealthz:1.2
 unbound:1.1.3 uses markbnj/unbound-docker:0.1.0
 
-Generated on 2022/06/02 04:39:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:29:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

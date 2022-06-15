@@ -20,32 +20,32 @@ Chart: sentry:4.3.0
 Chart: postgresql:6.5.0
 	apiVersion: v1
 	appVersion: 11.5.0
-	created: 2019-10-24T08:38:27.768426163Z
+	created: 2020-10-15T15:46:22.495841-04:00
 	dependencies: None
 	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
-	digest: 0d47abc5786840bcb6c805237cd1cf2ab27561dfdd045149fa28a73772e719ad
+	digest: c2b1ca44a75b9fd344f3558e0a0c393255e301e3a9ad45a57805648f47b251f6
 	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
 	keywords: postgresql,postgres,database,sql,replication,cluster
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: postgresql
 	sources: https://github.com/bitnami/bitnami-docker-postgresql
-	urls: https://charts.bitnami.com/bitnami/postgresql-6.5.0.tgz
+	urls: https://charts.helm.sh/stable/packages/postgresql-6.5.0.tgz
 	version: 6.5.0
 Chart: redis:9.3.2
 	apiVersion: v1
 	appVersion: 5.0.5
-	created: 2019-10-21T08:35:37.758714782Z
+	created: 2020-10-15T15:46:27.066944-04:00
 	dependencies: None
 	description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
 	digest: 9ee5995a260785c5d5724844d3d174cfa94643c85e097409aa8fbf4081a13b3e
 	icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
 	keywords: redis,keyvalue,database
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: redis
 	sources: https://github.com/bitnami/bitnami-docker-redis
-	urls: https://charts.bitnami.com/bitnami/redis-9.3.2.tgz
+	urls: https://charts.helm.sh/stable/packages/redis-9.3.2.tgz
 	version: 9.3.2
 
 There are 3 referenced Docker Images
@@ -62,4 +62,4 @@ sentry:4.3.0 uses sentry:9.1.2
 postgresql:6.5.0 uses docker.io/bitnami/postgresql:11.5.0-debian-9-r60
 redis:9.3.2 uses docker.io/bitnami/redis:5.0.5-debian-9-r141
 
-Generated on 2022/06/02 04:31:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:24:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 chaoskube:3.3.1 uses quay.io/linki/chaoskube:v0.21.0
 
-Generated on 2022/06/02 03:40:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:45:35 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

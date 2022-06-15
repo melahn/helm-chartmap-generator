@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "suitecrm",
     "CRM"
@@ -33,7 +29,7 @@
     "version": "7.3.12"
   }],
   "name": "suitecrm:8.0.11",
-  "description": "SuiteCRM is a completely open source enterprise-grade Customer Relationship Management (CRM) application. SuiteCRM is a software fork of the popular customer relationship management (CRM) system SugarCRM.",
+  "description": "DEPRECATED SuiteCRM is a completely open source enterprise-grade Customer Relationship Management (CRM) application. SuiteCRM is a software fork of the popular customer relationship management (CRM) system SugarCRM.",
   "type": "chart",
   "shortName": "suitecrm",
   "version": "8.0.11"

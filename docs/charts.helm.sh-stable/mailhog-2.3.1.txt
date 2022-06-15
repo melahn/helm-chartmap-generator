@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 mailhog:2.3.1 uses mailhog/mailhog:v1.0.0
 
-Generated on 2022/06/02 04:09:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:07:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nsorintlab/stolon\n====\nv0.16.0-pg10" as
 'Chart Dependencies
 stolon_1_6_4--[#orange]-|>sorintlab_stolon_v0_16_0_pg10
 
-center footer Generated on 2022/06/02 04:35:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:27:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

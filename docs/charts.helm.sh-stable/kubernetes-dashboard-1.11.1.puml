@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nk8s.gcr.io/kubernetes-dashboard-amd64\n=
 'Chart Dependencies
 kubernetes_dashboard_1_11_1--[#orange]-|>k8s_gcr_io_kubernetes_dashboard_amd64_v1_10_1
 
-center footer Generated on 2022/06/02 04:06:35 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:04:55 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -27,5 +27,5 @@ prometheus_11_12_0--[#orange]-|>prom_alertmanager_v0_21_0
 prometheus_11_12_0--[#orange]-|>jimmidyson_configmap_reload_v0_4_0
 kube_state_metrics_2_8_14--[#orange]-|>quay_io_coreos_kube_state_metrics_v1_9_7
 
-center footer Generated on 2022/06/02 04:22:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:17:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

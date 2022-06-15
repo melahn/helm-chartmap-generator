@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "moodle",
     "learning",
@@ -12,9 +8,9 @@
     {
       "repoHost": "docker.io",
       "children": [],
-      "name": "bitnami/moodle:3.8.2-debian-10-r3",
+      "name": "bitnami/moodle:3.8.2-debian-10-r0",
       "type": "image",
-      "version": "3.8.2-debian-10-r3"
+      "version": "3.8.2-debian-10-r0"
     },
     {
       "maintainers": [{
@@ -31,19 +27,19 @@
       "children": [{
         "repoHost": "docker.io",
         "children": [],
-        "name": "bitnami/mariadb:10.3.22-debian-10-r44",
+        "name": "bitnami/mariadb:10.3.22-debian-10-r27",
         "type": "image",
-        "version": "10.3.22-debian-10-r44"
+        "version": "10.3.22-debian-10-r27"
       }],
-      "name": "mariadb:7.3.14",
+      "name": "mariadb:7.3.12",
       "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
       "type": "chart",
       "shortName": "mariadb",
-      "version": "7.3.14"
+      "version": "7.3.12"
     }
   ],
   "name": "moodle:7.2.8",
-  "description": "Moodle is a learning platform designed to provide educators, administrators and learners with a single robust, secure and integrated system to create personalised learning environments",
+  "description": "DEPRECATED Moodle is a learning platform designed to provide educators, administrators and learners with a single robust, secure and integrated system to create personalised learning environments",
   "type": "chart",
   "shortName": "moodle",
   "version": "7.2.8"

@@ -9,7 +9,7 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for express-gateway:1.6.6
 
 'There are 2 referenced Helm Charts
-artifact "redis:10.5.7\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_10_5_7 #LightSeaGreen
+artifact "redis:10.5.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_10_5_7 #LightSeaGreen
 artifact "express-gateway:1.6.6\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: " as express_gateway_1_6_6 #CadetBlue
 
 'There are 2 referenced Docker Images
@@ -21,5 +21,5 @@ express_gateway_1_6_6--[#green]-|>redis_10_5_7
 redis_10_5_7--[#orange]-|>docker_io_bitnami_redis_5_0_7_debian_10_r32
 express_gateway_1_6_6--[#orange]-|>expressgateway_express_gateway_v1_16_9
 
-center footer Generated on 2022/06/02 03:50:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:52:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

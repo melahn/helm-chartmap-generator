@@ -62,4 +62,4 @@ redis-ha:4.4.4 uses redis:5.0.6-alpine
 cloudserver:1.0.7 uses zenko/cloudserver:8.1.5
 mongodb-replicaset:3.17.2 uses mongo:3.6
 
-Generated on 2022/06/02 03:41:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:46:13 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

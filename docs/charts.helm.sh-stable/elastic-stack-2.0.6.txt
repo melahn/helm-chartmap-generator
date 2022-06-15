@@ -6,7 +6,7 @@ Chart: elastic-stack:2.0.6
 	apiVersion: v1
 	appVersion: 6
 	created: Not specified
-	dependencies: logstash:2.4.1, kibana:3.2.8, elasticsearch:1.32.5
+	dependencies: kibana:3.2.8, logstash:2.4.1, elasticsearch:1.32.5
 	description: DEPRECATED A Helm chart for ELK
 	digest: Not specified
 	icon: Not specified
@@ -71,11 +71,11 @@ Image: docker.elastic.co/kibana/kibana-oss:6.7.0
 
 Chart Dependencies
 ------------------
-elastic-stack:2.0.6 depends on logstash:2.4.1
 elastic-stack:2.0.6 depends on kibana:3.2.8
+elastic-stack:2.0.6 depends on logstash:2.4.1
 elastic-stack:2.0.6 depends on elasticsearch:1.32.5
 logstash:2.4.1 uses docker.elastic.co/logstash/logstash-oss:7.1.1
 kibana:3.2.8 uses docker.elastic.co/kibana/kibana-oss:6.7.0
 elasticsearch:1.32.5 uses docker.elastic.co/elasticsearch/elasticsearch-oss:6.8.6
 
-Generated on 2022/06/02 03:48:17 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:51:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

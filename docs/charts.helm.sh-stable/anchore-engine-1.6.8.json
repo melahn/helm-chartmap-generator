@@ -28,16 +28,11 @@
       "version": "v0.7.2"
     },
     {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
       "keywords": [
         "postgresql",
+        "postgres",
         "database",
-        "sql",
-        "replication",
-        "cluster"
+        "sql"
       ],
       "children": [{
         "repoHost": "Docker Hub",
@@ -47,7 +42,7 @@
         "version": "9.6.2"
       }],
       "name": "postgresql:1.0.0",
-      "description": "Chart for PostgreSQL",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
       "type": "chart",
       "shortName": "postgresql",
       "version": "1.0.0"

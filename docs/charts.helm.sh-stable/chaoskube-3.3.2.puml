@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\nlinki/chaoskube:v0.21.0\n====\nv0.21.0" as 
 'Chart Dependencies
 chaoskube_3_3_2--[#orange]-|>quay_io_linki_chaoskube_v0_21_0
 
-center footer Generated on 2022/06/02 03:40:56 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:45:34 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

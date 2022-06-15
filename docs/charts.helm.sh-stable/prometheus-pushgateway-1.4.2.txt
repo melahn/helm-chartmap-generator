@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-pushgateway:1.4.2 uses prom/pushgateway:v1.2.0
 
-Generated on 2022/06/02 04:25:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:19:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

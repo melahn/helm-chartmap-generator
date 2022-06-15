@@ -15,5 +15,5 @@ artifact "goldpinger:2.0.4\n====\n\tType: application\n====\n\tRepo: https://cha
 
 'Chart Dependencies
 
-center footer Generated on 2022/06/02 03:54:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:55:44 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

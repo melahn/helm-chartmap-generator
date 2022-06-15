@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 logstash:2.4.1 uses docker.elastic.co/logstash/logstash-oss:7.1.1
 
-Generated on 2022/06/02 04:08:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:06:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

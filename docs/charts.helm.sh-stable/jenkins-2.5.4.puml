@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nkiwigrid/k8s-sidecar\n====\n0.1.144" as 
 jenkins_2_5_4--[#orange]-|>jenkins_jenkins_lts
 jenkins_2_5_4--[#orange]-|>kiwigrid_k8s_sidecar_0_1_144
 
-center footer Generated on 2022/06/02 04:01:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:00:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

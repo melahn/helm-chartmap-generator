@@ -15,5 +15,5 @@ artifact "gcp-night-king:1.0.2\n====\n\tType: application\n====\n\tRepo: https:/
 
 'Chart Dependencies
 
-center footer Generated on 2022/06/02 03:53:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:54:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

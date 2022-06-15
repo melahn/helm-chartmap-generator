@@ -2,32 +2,32 @@ Chart Map for drupal:6.2.12
 
 There are 2 referenced Helm Charts
 ----------------------------------
-Chart: mariadb:7.3.14
+Chart: mariadb:7.3.12
 	apiVersion: v1
 	appVersion: 10.3.22
-	created: 2020-03-11T20:23:34.427837219Z
+	created: 2020-10-15T15:46:19.325344-04:00
 	dependencies: None
 	description: Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.
-	digest: 403d581f9854113ffd072fbae446f05e4fea4fbf10f68e29619da80d8c7e7a16
+	digest: 0fd31add0399f731d5a5b059465080649d773c2c4130be696628e21271469ccd
 	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
 	keywords: mariadb,mysql,database,sql,prometheus
 	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: mariadb
 	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter
-	urls: https://charts.bitnami.com/bitnami/mariadb-7.3.14.tgz
-	version: 7.3.14
+	urls: https://charts.helm.sh/stable/packages/mariadb-7.3.12.tgz
+	version: 7.3.12
 Chart: drupal:6.2.12
 	apiVersion: v1
 	appVersion: 8.8.3
 	created: Not specified
-	dependencies: mariadb:7.3.14
-	description: One of the most versatile open source content management systems.
+	dependencies: mariadb:7.3.12
+	description: DEPRECATED One of the most versatile open source content management systems.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/drupal/img/drupal-stack-220x234.png
 	keywords: drupal,cms,blog,http,web,application,php
-	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
 	name: drupal
 	sources: https://github.com/bitnami/bitnami-docker-drupal
 	urls: Not specified
@@ -35,13 +35,13 @@ Chart: drupal:6.2.12
 
 There are 2 referenced Docker Images
 ------------------------------------
-Image: docker.io/bitnami/drupal:8.8.3-debian-10-r6
-Image: docker.io/bitnami/mariadb:10.3.22-debian-10-r44
+Image: docker.io/bitnami/mariadb:10.3.22-debian-10-r27
+Image: docker.io/bitnami/drupal:8.8.3-debian-10-r1
 
 Chart Dependencies
 ------------------
-drupal:6.2.12 depends on mariadb:7.3.14
-mariadb:7.3.14 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r44
-drupal:6.2.12 uses docker.io/bitnami/drupal:8.8.3-debian-10-r6
+drupal:6.2.12 depends on mariadb:7.3.12
+mariadb:7.3.12 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r27
+drupal:6.2.12 uses docker.io/bitnami/drupal:8.8.3-debian-10-r1
 
-Generated on 2022/06/02 03:47:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:50:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

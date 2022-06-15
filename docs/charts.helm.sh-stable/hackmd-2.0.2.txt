@@ -5,17 +5,17 @@ There are 2 referenced Helm Charts
 Chart: postgresql:8.1.4
 	apiVersion: v1
 	appVersion: 11.6.0
-	created: 2020-01-24T05:36:06.555392661Z
+	created: 2020-10-15T15:46:22.537838-04:00
 	dependencies: None
 	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
-	digest: 3729895115a76faa2e050cd4ccd3ec24313e59ac899d40de1f4a42a1bb2da41c
+	digest: 8cc6e4fb98c8fad13843b5d095045326bbc8bb1e985466939a8c01a9044ea7bb
 	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
 	keywords: postgresql,postgres,database,sql,replication,cluster
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: postgresql
 	sources: https://github.com/bitnami/bitnami-docker-postgresql
-	urls: https://charts.bitnami.com/bitnami/postgresql-8.1.4.tgz
+	urls: https://charts.helm.sh/stable/packages/postgresql-8.1.4.tgz
 	version: 8.1.4
 Chart: hackmd:2.0.2
 	apiVersion: v1
@@ -44,4 +44,4 @@ hackmd:2.0.2 depends on postgresql:8.1.4
 postgresql:8.1.4 uses docker.io/bitnami/postgresql:9.6
 hackmd:2.0.2 uses hackmdio/hackmd:1.3.0-alpine
 
-Generated on 2022/06/02 03:55:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:56:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

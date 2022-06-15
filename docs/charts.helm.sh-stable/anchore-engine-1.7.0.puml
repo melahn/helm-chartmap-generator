@@ -9,8 +9,8 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for anchore-engine:1.7.0
 
 'There are 3 referenced Helm Charts
-artifact "postgresql:1.0.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tpostgresql\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_1_0_1 #LightSteelBlue
-artifact "redis:10.5.7\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_10_5_7 #LightSeaGreen
+artifact "postgresql:1.0.1\n====\n\tType: application\n====\n\tRepo: N/A - Explicit Dependency\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql" as postgresql_1_0_1 #LightSteelBlue
+artifact "redis:10.5.7\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_10_5_7 #LightSeaGreen
 artifact "anchore-engine:1.7.0\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n====\n\tKeywords: \n\t\tanalysis\n\t\tdocker\n\t\tanchore\n\t\tanchore-engine\n\t\timage\n\t\tsecurity\n\t\tvulnerability\n\t\tscanner" as anchore_engine_1_7_0 #Azure
 
 'There are 3 referenced Docker Images
@@ -25,5 +25,5 @@ postgresql_1_0_1--[#orange]-|>postgres_9_6_18
 redis_10_5_7--[#orange]-|>docker_io_bitnami_redis_5_0_7_debian_10_r32
 anchore_engine_1_7_0--[#orange]-|>docker_io_anchore_anchore_engine_v0_7_3
 
-center footer Generated on 2022/06/02 03:37:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:42:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -10,7 +10,7 @@ title Chart Map for distribution:0.4.1
 
 'There are 3 referenced Helm Charts
 artifact "redis:1.1.21\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: bitnami-bot\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_1_1_21 #LightSeaGreen
-artifact "mongodb:2.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmongodb\n\t\tdatabase\n\t\tnosql" as mongodb_2_0_5 #GreenYellow
+artifact "mongodb:2.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmongodb\n\t\tdatabase\n\t\tnosql" as mongodb_2_0_5 #GreenYellow
 artifact "distribution:0.4.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tjainishshah17\n\t\teldada\n\t\trimusz\n====\n\tKeywords: \n\t\tdistribution\n\t\tjfrog" as distribution_0_4_1 #LawnGreen
 
 'There are 4 referenced Docker Images
@@ -27,5 +27,5 @@ mongodb_2_0_5--[#orange]-|>docker_io_bitnami_mongodb_3_6_3
 distribution_0_4_1--[#orange]-|>docker_bintray_io_jfrog_distribution_distribution_1_1_0
 distribution_0_4_1--[#orange]-|>docker_bintray_io_jfrog_distribution_distributor_1_1_0
 
-center footer Generated on 2022/06/02 03:46:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:49:47 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

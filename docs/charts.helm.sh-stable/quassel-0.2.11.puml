@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nlinuxserver/quassel-core\n====\n0.13.1-l
 'Chart Dependencies
 quassel_0_2_11--[#orange]-|>linuxserver_quassel_core_0_13_1_ls33
 
-center footer Generated on 2022/06/02 04:27:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:20:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

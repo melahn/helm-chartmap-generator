@@ -1,21 +1,22 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
-  "keywords": [
-    "apache",
-    "spark"
+  "children": [
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "k8s.gcr.io/spark",
+      "type": "image",
+      "version": "1.5.1_v3"
+    },
+    {
+      "repoHost": "Docker Hub",
+      "children": [],
+      "name": "apache/zeppelin",
+      "type": "image",
+      "version": "0.7.3"
+    }
   ],
-  "children": [{
-    "repoHost": "docker.io",
-    "children": [],
-    "name": "bitnami/spark:2.4.3-debian-9-r79",
-    "type": "image",
-    "version": "2.4.3-debian-9-r79"
-  }],
   "name": "spark:1.0.5",
-  "description": "Spark is a fast and general-purpose cluster computing system.",
+  "description": "DEPRECATED - Fast and general-purpose cluster computing system.",
   "type": "chart",
   "shortName": "spark",
   "version": "1.0.5"

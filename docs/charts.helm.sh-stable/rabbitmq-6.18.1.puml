@@ -9,7 +9,7 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for rabbitmq:6.18.1
 
 'There is one referenced Helm Chart
-artifact "rabbitmq:6.18.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\trabbitmq\n\t\tmessage queue\n\t\tAMQP" as rabbitmq_6_18_1 #Aqua
+artifact "rabbitmq:6.18.1\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\trabbitmq\n\t\tmessage queue\n\t\tAMQP" as rabbitmq_6_18_1 #Aqua
 
 'There is one referenced Docker Image
 usecase "Image\n====\ndocker.io\n====\nbitnami/rabbitmq:3.8.2-debian-10-r30\n====\n3.8.2-debian-10-r30" as docker_io_bitnami_rabbitmq_3_8_2_debian_10_r30 #Beige
@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/rabbitmq:3.8.2-debian-10-r30\n===
 'Chart Dependencies
 rabbitmq_6_18_1--[#orange]-|>docker_io_bitnami_rabbitmq_3_8_2_debian_10_r30
 
-center footer Generated on 2022/06/02 04:27:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:20:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

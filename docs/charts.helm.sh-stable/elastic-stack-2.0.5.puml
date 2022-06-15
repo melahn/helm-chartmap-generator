@@ -21,11 +21,11 @@ usecase "Image\n====\ndocker.elastic.co\n====\nkibana/kibana-oss:6.7.0\n====\n6.
 
 'Chart Dependencies
 elastic_stack_2_0_5--[#green]-|>logstash_2_4_1
-elastic_stack_2_0_5--[#green]-|>kibana_3_2_8
 elastic_stack_2_0_5--[#green]-|>elasticsearch_1_32_5
+elastic_stack_2_0_5--[#green]-|>kibana_3_2_8
 logstash_2_4_1--[#orange]-|>docker_elastic_co_logstash_logstash_oss_7_1_1
 kibana_3_2_8--[#orange]-|>docker_elastic_co_kibana_kibana_oss_6_7_0
 elasticsearch_1_32_5--[#orange]-|>docker_elastic_co_elasticsearch_elasticsearch_oss_6_8_6
 
-center footer Generated on 2022/06/02 03:48:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:51:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

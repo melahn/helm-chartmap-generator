@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 superset:1.1.12 uses amancevice/superset:0.36.0
 
-Generated on 2022/06/02 04:36:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:27:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

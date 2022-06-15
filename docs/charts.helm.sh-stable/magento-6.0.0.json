@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "magento",
     "e-commerce",
@@ -10,54 +6,33 @@
     "web",
     "php"
   ],
-  "children": [
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "mariadb",
-        "mysql",
-        "database",
-        "sql",
-        "prometheus"
-      ],
-      "children": [{
-        "repoHost": "docker.io",
-        "children": [],
-        "name": "bitnami/mariadb:10.1.40",
-        "type": "image",
-        "version": "10.1.40"
-      }],
-      "name": "mariadb:5.11.3",
-      "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
-      "type": "chart",
-      "shortName": "mariadb",
-      "version": "5.11.3"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": ["elasticsearch"],
-      "children": [{
-        "repoHost": "docker.io",
-        "children": [],
-        "name": "bitnami/elasticsearch:6.7.1",
-        "type": "image",
-        "version": "6.7.1"
-      }],
-      "name": "elasticsearch:4.7.2",
-      "description": "A highly scalable open-source full-text search and analytics engine",
-      "type": "chart",
-      "shortName": "elasticsearch",
-      "version": "4.7.2"
-    }
-  ],
+  "children": [{
+    "maintainers": [{
+      "name": "Bitnami",
+      "email": "containers@bitnami.com"
+    }],
+    "keywords": [
+      "mariadb",
+      "mysql",
+      "database",
+      "sql",
+      "prometheus"
+    ],
+    "children": [{
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/mariadb:10.3.18-debian-9-r36",
+      "type": "image",
+      "version": "10.3.18-debian-9-r36"
+    }],
+    "name": "mariadb:7.0.0",
+    "description": "Fast, reliable, scalable, and easy to use open-source relational database system. MariaDB Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Highly available MariaDB cluster.",
+    "type": "chart",
+    "shortName": "mariadb",
+    "version": "7.0.0"
+  }],
   "name": "magento:6.0.0",
-  "description": "A feature-rich flexible e-commerce solution. It includes transaction options, multi-store functionality, loyalty programs, product categorization and shopper filtering, promotion rules, and more.",
+  "description": "DEPRECATED A feature-rich flexible e-commerce solution. It includes transaction options, multi-store functionality, loyalty programs, product categorization and shopper filtering, promotion rules, and more.",
   "type": "chart",
   "shortName": "magento",
   "version": "6.0.0"

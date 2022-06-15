@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\njhillyerd/inbucket\n====\nrelease-2.0.0"
 'Chart Dependencies
 inbucket_3_1_0--[#orange]-|>jhillyerd_inbucket_release_2_0_0
 
-center footer Generated on 2022/06/02 03:59:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:59:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

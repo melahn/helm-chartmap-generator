@@ -28,4 +28,4 @@ Chart Dependencies
 kong:0.36.6 uses kong:1.4
 kong:0.36.6 uses kong-docker-kubernetes-ingress-controller.bintray.io/kong-ingress-controller:0.7.0
 
-Generated on 2022/06/02 04:04:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:03:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

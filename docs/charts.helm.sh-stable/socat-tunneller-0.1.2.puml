@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nalpine/socat\n====\n1.0.3" as alpine_soc
 'Chart Dependencies
 socat_tunneller_0_1_2--[#orange]-|>alpine_socat_1_0_3
 
-center footer Generated on 2022/06/02 04:32:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:24:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

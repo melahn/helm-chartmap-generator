@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "phabricator",
     "http",
@@ -44,7 +40,7 @@
     "version": "7.3.12"
   }],
   "name": "phabricator:9.0.13",
-  "description": "Collection of open source web applications that help software companies build better software.",
+  "description": "DEPRECATED Collection of open source web applications that help software companies build better software.",
   "type": "chart",
   "shortName": "phabricator",
   "version": "9.0.13"

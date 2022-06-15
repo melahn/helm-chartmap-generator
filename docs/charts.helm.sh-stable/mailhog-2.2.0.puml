@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nmailhog/mailhog\n====\nv1.0.0" as mailho
 'Chart Dependencies
 mailhog_2_2_0--[#orange]-|>mailhog_mailhog_v1_0_0
 
-center footer Generated on 2022/06/02 04:09:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:07:14 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

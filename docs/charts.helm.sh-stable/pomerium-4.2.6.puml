@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\npomerium/pomerium\n====\nv0.5.2" as pome
 'Chart Dependencies
 pomerium_4_2_6--[#orange]-|>pomerium_pomerium_v0_5_2
 
-center footer Generated on 2022/06/02 04:21:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:16:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

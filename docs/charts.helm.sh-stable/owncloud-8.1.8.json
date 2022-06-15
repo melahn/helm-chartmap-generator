@@ -1,8 +1,4 @@
 {
-  "maintainers": [{
-    "name": "Bitnami",
-    "email": "containers@bitnami.com"
-  }],
   "keywords": [
     "owncloud",
     "storage",
@@ -36,7 +32,7 @@
     "version": "7.3.12"
   }],
   "name": "owncloud:8.1.8",
-  "description": "A file sharing server that puts the control and security of your own data back into your hands.",
+  "description": "DEPRECATED A file sharing server that puts the control and security of your own data back into your hands.",
   "type": "chart",
   "shortName": "owncloud",
   "version": "8.1.8"

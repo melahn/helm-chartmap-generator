@@ -20,17 +20,17 @@ Chart: concourse:8.3.7
 Chart: postgresql:5.3.8
 	apiVersion: v1
 	appVersion: 11.3.0
-	created: 2019-06-21T09:06:03.330525937Z
+	created: 2020-10-15T15:46:22.466142-04:00
 	dependencies: None
 	description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
 	digest: 4736c933172ebb2c84816d3b7601b590f9831245997ba4a2e2cae145bee3b8fc
 	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
 	keywords: postgresql,postgres,database,sql,replication,cluster
 	maintainers: Bitnami:containers@bitnami.com,desaintmartin:cedric@desaintmartin.fr
-	repo url: https://charts.bitnami.com/bitnami
+	repo url: https://charts.helm.sh/stable
 	name: postgresql
 	sources: https://github.com/bitnami/bitnami-docker-postgresql
-	urls: https://charts.bitnami.com/bitnami/postgresql-5.3.8.tgz
+	urls: https://charts.helm.sh/stable/packages/postgresql-5.3.8.tgz
 	version: 5.3.8
 
 There are 2 referenced Docker Images
@@ -44,4 +44,4 @@ concourse:8.3.7 depends on postgresql:5.3.8
 concourse:8.3.7 uses concourse/concourse:5.6.0
 postgresql:5.3.8 uses docker.io/bitnami/postgresql:11.3.0-debian-9-r38
 
-Generated on 2022/06/02 03:42:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 22:47:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

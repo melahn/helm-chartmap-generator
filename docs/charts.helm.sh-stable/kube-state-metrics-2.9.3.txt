@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kube-state-metrics:2.9.3 uses quay.io/coreos/kube-state-metrics:v1.9.7
 
-Generated on 2022/06/02 04:05:28 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:04:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -9,7 +9,7 @@ skinparam artifactArrowColor LightSlateGray
 title Chart Map for postgresql:8.6.2
 
 'There is one referenced Helm Chart
-artifact "postgresql:8.6.2\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_8_6_2 #LightSteelBlue
+artifact "postgresql:8.6.2\n====\n\tType: application\n====\n\tRepo: https://charts.helm.sh/stable\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_8_6_2 #LightSteelBlue
 
 'There is one referenced Docker Image
 usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:11.7.0-debian-10-r9\n====\n11.7.0-debian-10-r9" as docker_io_bitnami_postgresql_11_7_0_debian_10_r9 #DarkSalmon
@@ -17,5 +17,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:11.7.0-debian-10-r9\n=
 'Chart Dependencies
 postgresql_8_6_2--[#orange]-|>docker_io_bitnami_postgresql_11_7_0_debian_10_r9
 
-center footer Generated on 2022/06/02 04:22:05 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 23:16:50 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

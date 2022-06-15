@@ -20,17 +20,17 @@ Chart: rocketchat:2.0.7
 Chart: mongodb:7.8.10
 	apiVersion: v1
 	appVersion: 4.2.4
-	created: 2020-03-11T19:52:46.056546321Z
+	created: 2020-10-15T15:46:19.953313-04:00
 	dependencies: None
-	description: NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
-	digest: 830154796c9c562df4a6a074729b64e998a90949eb2a0476ab19dd7bd833a6cf
+	description: DEPRECATED NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.
+	digest: f2dc27cdde3a4d0cde5f747c73b36af4a53cdae10b5a1dd74fb3b485c595a183
 	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
 	keywords: mongodb,database,nosql,cluster,replicaset,replication
-	maintainers: Bitnami:containers@bitnami.com
-	repo url: https://charts.bitnami.com/bitnami
+	maintainers: Not specified
+	repo url: https://charts.helm.sh/stable
 	name: mongodb
 	sources: https://github.com/bitnami/bitnami-docker-mongodb
-	urls: https://charts.bitnami.com/bitnami/mongodb-7.8.10.tgz
+	urls: https://charts.helm.sh/stable/packages/mongodb-7.8.10.tgz
 	version: 7.8.10
 
 There are 2 referenced Docker Images
@@ -44,4 +44,4 @@ rocketchat:2.0.7 depends on mongodb:7.8.10
 rocketchat:2.0.7 uses docker.io/rocketchat/rocket.chat:3.6.0
 mongodb:7.8.10 uses docker.io/bitnami/mongodb:4.2.4-debian-10-r0
 
-Generated on 2022/06/02 04:29:09 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:22:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

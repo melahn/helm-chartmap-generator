@@ -44,4 +44,4 @@ keycloak:4.10.0 depends on postgresql:0.15.0
 keycloak:4.10.0 uses jboss/keycloak:5.0.0
 postgresql:0.15.0 uses postgres:9.6.2
 
-Generated on 2022/06/02 04:03:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 23:02:29 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
