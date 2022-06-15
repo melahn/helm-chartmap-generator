@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\nkeycloak/keycloak:17.0.1\n====\n17.0.1" as 
 'Chart Dependencies
 keycloakx_1_3_2--[#orange]-|>quay_io_keycloak_keycloak_17_0_1
 
-center footer Generated on 2022/06/02 03:05:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 22:14:41 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
