@@ -73,6 +73,24 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate alfresco-incubator charts and commit them to git
+        run: | 
+          cd ./docs/kubernetes-charts.alfresco.com-incubator
+          rm -f helm-chartmap.log
+          rm -f index.html
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -v -r alfresco-incubator
+          if [[ `git status --porcelain` ]]; then
+              git config --global user.email "melahn@github"
+              git config --global user.name "GitHub Action (generate-examples.yml)"
+              git add .
+              git commit -m "Update Alfresco Stable Example Chart Maps"
+              git pull origin master
+              git push origin master
+          else
+              echo no git changes found
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate alfresco-stable charts and commit them to git
         run: | 
           cd ./docs/kubernetes-charts.alfresco.com-stable
@@ -127,6 +145,24 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate google incubator charts and commit them to git
+        run: | 
+          cd ./docs/charts.helm.sh-stable
+          rm -f helm-chartmap.log
+          rm -f index.html
+          java -jar ../../target/helm-chartmap-generator-1.1.0-SNAPSHOT.jar -n 3 -f jpt -e ../../resource/example/example-env-spec.yaml -v -r incubator
+          if [[ `git status --porcelain` ]]; then
+              git config --global user.email "melahn@github"
+              git config --global user.name "GitHub Action (generate-examples.yml)"
+              git add .
+              git commit -m "Update Google Incubator Example Chart Maps"
+              git pull origin master
+              git push origin master
+          else
+              echo no git changes found
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate google stable charts and commit them to git
         run: | 
           cd ./docs/charts.helm.sh-stable
@@ -137,7 +173,7 @@ jobs:
               git config --global user.email "melahn@github"
               git config --global user.name "GitHub Action (generate-examples.yml)"
               git add .
-              git commit -m "Update Google Example Chart Maps"
+              git commit -m "Update Google Stable Example Chart Maps"
               git pull origin master
               git push origin master
           else

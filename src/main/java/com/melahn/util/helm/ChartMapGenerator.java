@@ -52,13 +52,15 @@ public class ChartMapGenerator {
     private String writeBuffer = "";
 
     protected static final String INTERRUPTED_EXCEPTION = "InterruptedException {} running command %s : %s";
-    protected static final int PROCESS_TIMEOUT = 100000;
+    protected static final int HELM_PROCESS_TIMEOUT = 10;
        
     private static final String CHARTMAP_GENERATOR_LOGGER_NAME = "helm-chartmap-generator-logger";
     private static final String CHARTMAP_LOG_NAME = "helm-chartmap.log";
     private static final boolean CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE = true;
+    private static final int CHARTMAP_TIMEOUT = 1200;
     private static final boolean CHARTMAP_VERBOSE_SWITCH_FALSE = false;
     private static final String LI_END = "</li>\n";
+    
 
     /**
      * Parses the command line and generates a set of reports
@@ -374,8 +376,8 @@ public class ChartMapGenerator {
                 c,
                 outputDirName.concat(File.separator).concat(f),
                 envFilename,
-                new boolean[] { CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE, r,
-                        CHARTMAP_VERBOSE_SWITCH_FALSE });
+                CHARTMAP_TIMEOUT,
+                r);
         cm.print();
     }
 
@@ -387,12 +389,13 @@ public class ChartMapGenerator {
      * @param h helm chart name
      * @param f file name to write the chartmap
      * @param e env spec filename
-     * @param s switches
+     * @param t wait time
+     * @param r refresh switch
      * @return a ChartMap
      * @throws ChartMapException when the ChartMap could not be created
      */
-    protected ChartMap getChartMap(ChartOption o, String h, String f, String e, boolean[] s) throws ChartMapException  {
-        return new ChartMap(o, h, f, e, s);
+    protected ChartMap getChartMap(ChartOption o, String h, String f, String e, int t, boolean r) throws ChartMapException  {
+        return new ChartMap(o, h, f, e, t, r, CHARTMAP_VERBOSE_SWITCH_FALSE, CHARTMAP_GENERATE_IMAGE_SWITCH_TRUE);
     }
 
     /**
@@ -439,8 +442,8 @@ public class ChartMapGenerator {
      */
     protected void createStyleFile () throws IOException {
         String s = "* {\n\tfont-family: \"Andale Mono\";\n\tbackground-color: #0a0a0aff;\n}\n"
-                .concat("a:link {\n\tcolor: #eee3c1ff;\n\tfont: 16px;\n\tfont-weight: bold;\n}")
-                .concat("a:visited {\n\tcolor: #2f71e8ff;\n\tfont: 16px;\n}")
+                .concat("a:link {\n\tcolor: #eee3c1ff;\n\tfont: 16px;\n\tfont-weight: bold;\n}\n")
+                .concat("a:visited {\n\tcolor: #2f71e8ff;\n\tfont: 16px;\n}\n")
                 .concat(".charterror {\n\tcolor: #ff0000ff;\n\tfont: 16px;\n}\n")
                 .concat(".chartname  {\n\tcolor: #b7d0f1ff;\n\tfont-weight: bold;\n\tfont: 16px;\n}\n")
                 .concat(".chartlink  {\n\tcolor: #b7d0f1ff;\n\tfont: 16px;\n}\n")
@@ -495,6 +498,7 @@ public class ChartMapGenerator {
         DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         return (f.format(LocalDateTime.now()));
     }
+
     /**
      * Adds end elements to the index file.
      *
@@ -622,7 +626,7 @@ public class ChartMapGenerator {
         try {
             Process p = getProcess(c);
             BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            p.waitFor(PROCESS_TIMEOUT, TimeUnit.MILLISECONDS);
+            p.waitFor(HELM_PROCESS_TIMEOUT, TimeUnit.SECONDS);
             int exitValue = p.exitValue();
             if (exitValue == 0) {
                 String o = br.readLine();
@@ -665,7 +669,7 @@ public class ChartMapGenerator {
             ProcessBuilder pb = getProcessBuilder(helmCommand, "env");
             pb.redirectOutput(tempEnvFile);
             Process p = pb.start();
-            p.waitFor(PROCESS_TIMEOUT, TimeUnit.MILLISECONDS);
+            p.waitFor(HELM_PROCESS_TIMEOUT, TimeUnit.SECONDS);
             int exitValue = p.exitValue();
             if (exitValue == 0) {
                 FileReader fileReader = new FileReader(tempEnvFile);
