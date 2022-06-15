@@ -445,10 +445,10 @@ class ChartMapGeneratorTest {
         ChartMapGenerator cmg6 = createTestMapGenerator(TEST_REPO_NAME, testDirectoryName, FORMAT_TEXT, 1, null, true);
         ChartMapGenerator scmg6 = spy(cmg6);
         Process p6 = Runtime.getRuntime()
-                .exec(new String[] { "echo", "I am going to throw an InterruptedException!!" });
+                .exec(new String[] { "echo", "I am going to throw an InterruptedException ... just watch me!!" });
         Process sp6 = spy(p6);
         doReturn(sp6).when(scmg6).getProcess(any());
-        doThrow(InterruptedException.class).when(sp6).waitFor(1200, TimeUnit.MILLISECONDS);
+        doThrow(InterruptedException.class).when(sp6).waitFor(ChartMapGenerator.HELM_PROCESS_TIMEOUT, TimeUnit.SECONDS);
         assertThrows(ChartMapGeneratorException.class, () -> scmg6.checkHelmVersion());
         System.out.println("InterruptedException -> ChartMapGeneratorException thrown as expected");
         System.out.println(new Throwable().getStackTrace()[0].getMethodName().concat(" completed"));
@@ -520,9 +520,9 @@ class ChartMapGeneratorTest {
         ChartMapGenerator scmg5 = spy(cmg5);
         ProcessBuilder pb5 = new ProcessBuilder("foo", "bar");
         ProcessBuilder spb5 = spy(pb5);
-        Process p5 = Runtime.getRuntime().exec(new String[] { "echo", "I am going to throw an InterruptedException on waitFor ... just watch me!!" });
+        Process p5 = Runtime.getRuntime().exec(new String[] {"echo", "I am going to throw an InterruptedException ... just watch me!!"});
         Process sp5 = spy(p5);
-        doThrow(InterruptedException.class).when(sp5).waitFor(1200, TimeUnit.MILLISECONDS);
+        doThrow(InterruptedException.class).when(sp5).waitFor(ChartMapGenerator.HELM_PROCESS_TIMEOUT, TimeUnit.SECONDS);
         doReturn(sp5).when(spb5).start();
         doReturn(spb5).when(scmg5).getProcessBuilder(any(), any());
         assertThrows(ChartMapGeneratorException.class, () -> scmg5.getHelmClientInformation());
