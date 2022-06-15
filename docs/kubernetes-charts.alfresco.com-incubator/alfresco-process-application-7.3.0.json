@@ -7,14 +7,6 @@
   ],
   "children": [
     {
-      "children": [],
-      "name": "common:7.3.0",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.3.0"
-    },
-    {
       "maintainers": [{
         "name": "Bitnami",
         "email": "containers@bitnami.com"
@@ -33,6 +25,25 @@
           "name": "bitnami/kafka:2.8.0-debian-10-r30",
           "type": "image",
           "version": "2.8.0-debian-10-r30"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.5.2",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.5.2"
         },
         {
           "maintainers": [{
@@ -73,6 +84,39 @@
           "type": "chart",
           "shortName": "zookeeper",
           "version": "6.7.4"
+        }
+      ],
+      "name": "kafka:12.20.0",
+      "description": "Apache Kafka is a distributed streaming platform.",
+      "type": "chart",
+      "shortName": "kafka",
+      "version": "12.20.0"
+    },
+    {
+      "children": [],
+      "name": "common:7.3.0",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.3.0"
+    },
+    {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "rabbitmq",
+        "message queue",
+        "AMQP"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/rabbitmq:3.8.22-debian-10-r0",
+          "type": "image",
+          "version": "3.8.22-debian-10-r0"
         },
         {
           "maintainers": [{
@@ -87,18 +131,18 @@
             "bitnami"
           ],
           "children": [],
-          "name": "common:1.5.2",
+          "name": "common:1.8.0",
           "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
           "type": "chart",
           "shortName": "common",
-          "version": "1.5.2"
+          "version": "1.8.0"
         }
       ],
-      "name": "kafka:12.20.0",
-      "description": "Apache Kafka is a distributed streaming platform.",
+      "name": "rabbitmq:8.20.5",
+      "description": "Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
       "type": "chart",
-      "shortName": "kafka",
-      "version": "12.20.0"
+      "shortName": "rabbitmq",
+      "version": "8.20.5"
     },
     {
       "maintainers": [
@@ -152,50 +196,6 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "10.3.13"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "rabbitmq",
-        "message queue",
-        "AMQP"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/rabbitmq:3.8.22-debian-10-r0",
-          "type": "image",
-          "version": "3.8.22-debian-10-r0"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.8.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.8.0"
-        }
-      ],
-      "name": "rabbitmq:8.20.5",
-      "description": "Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
-      "type": "chart",
-      "shortName": "rabbitmq",
-      "version": "8.20.5"
     }
   ],
   "name": "alfresco-process-application:7.3.0",

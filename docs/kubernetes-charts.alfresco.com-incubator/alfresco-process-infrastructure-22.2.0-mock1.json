@@ -7,14 +7,6 @@
   ],
   "children": [
     {
-      "children": [],
-      "name": "common:22.2.0-mock1",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "22.2.0-mock1"
-    },
-    {
       "maintainers": [{"name": "Alfresco"}],
       "keywords": [
         "alfresco",
@@ -115,6 +107,58 @@
       "version": "5.0.0"
     },
     {
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
+      "keywords": [
+        "rabbitmq",
+        "message queue",
+        "AMQP"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/rabbitmq:3.8.22-debian-10-r0",
+          "type": "image",
+          "version": "3.8.22-debian-10-r0"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.8.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.8.0"
+        }
+      ],
+      "name": "rabbitmq:8.20.5",
+      "description": "Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
+      "type": "chart",
+      "shortName": "rabbitmq",
+      "version": "8.20.5"
+    },
+    {
+      "children": [],
+      "name": "common:22.2.0-mock1",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "22.2.0-mock1"
+    },
+    {
       "maintainers": [
         {
           "name": "Bitnami",
@@ -166,50 +210,6 @@
       "type": "chart",
       "shortName": "postgresql",
       "version": "9.1.1"
-    },
-    {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
-      "keywords": [
-        "rabbitmq",
-        "message queue",
-        "AMQP"
-      ],
-      "children": [
-        {
-          "repoHost": "docker.io",
-          "children": [],
-          "name": "bitnami/rabbitmq:3.8.22-debian-10-r0",
-          "type": "image",
-          "version": "3.8.22-debian-10-r0"
-        },
-        {
-          "maintainers": [{
-            "name": "Bitnami",
-            "email": "containers@bitnami.com"
-          }],
-          "keywords": [
-            "common",
-            "helper",
-            "template",
-            "function",
-            "bitnami"
-          ],
-          "children": [],
-          "name": "common:1.8.0",
-          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
-          "type": "chart",
-          "shortName": "common",
-          "version": "1.8.0"
-        }
-      ],
-      "name": "rabbitmq:8.20.5",
-      "description": "Open source message broker software that implements the Advanced Message Queuing Protocol (AMQP)",
-      "type": "chart",
-      "shortName": "rabbitmq",
-      "version": "8.20.5"
     }
   ],
   "name": "alfresco-process-infrastructure:22.2.0-mock1",

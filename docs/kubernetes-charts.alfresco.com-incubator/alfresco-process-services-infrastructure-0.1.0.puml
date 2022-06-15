@@ -40,17 +40,17 @@ usecase "Image\n====\nDocker Hub\n====\njboss/keycloak\n====\n4.5.0.Final" as jb
 usecase "Image\n====\nDocker Hub\n====\nalfresco/alfresco-share\n====\n6.0" as alfresco_alfresco_share_6_0 #LightSalmon
 
 'Chart Dependencies
-alfresco_process_services_infrastructure_0_1_0--[#green]-|>alfresco_infrastructure_3_0_0
-alfresco_infrastructure_3_0_0--[#green]-|>alfresco_identity_service_1_0_0
-alfresco_identity_service_1_0_0--[#green]-|>keycloak_4_0_3
-keycloak_4_0_3--[#green]-|>postgresql_0_15_0
-alfresco_infrastructure_3_0_0--[#green]-|>activemq_1_0_0
-alfresco_infrastructure_3_0_0--[#green]-|>nginx_ingress_0_14_0
 alfresco_process_services_infrastructure_0_1_0--[#green]-|>alfresco_content_services_1_1_4
+alfresco_content_services_1_1_4--[#green]-|>postgresql_0_9_3
 alfresco_content_services_1_1_4--[#green]-|>activemq_0_1_0
 alfresco_content_services_1_1_4--[#green]-|>alfresco_infrastructure_1_0_0
 alfresco_content_services_1_1_4--[#green]-|>alfresco_search_0_0_4
-alfresco_content_services_1_1_4--[#green]-|>postgresql_0_9_3
+alfresco_process_services_infrastructure_0_1_0--[#green]-|>alfresco_infrastructure_3_0_0
+alfresco_infrastructure_3_0_0--[#green]-|>activemq_1_0_0
+alfresco_infrastructure_3_0_0--[#green]-|>nginx_ingress_0_14_0
+alfresco_infrastructure_3_0_0--[#green]-|>alfresco_identity_service_1_0_0
+alfresco_identity_service_1_0_0--[#green]-|>keycloak_4_0_3
+keycloak_4_0_3--[#green]-|>postgresql_0_15_0
 keycloak_4_0_3--[#orange]-|>jboss_keycloak_4_5_0_Final
 postgresql_0_9_3--[#orange]-|>postgres_10_1
 activemq_1_0_0--[#orange]-|>alfresco_alfresco_activemq_5_15_6_java_8_oracle_centos_7_ac5b98b35cd4
@@ -68,5 +68,5 @@ alfresco_content_services_1_1_4--[#orange]-|>quay_io_alfresco_alfresco_libreoffi
 alfresco_content_services_1_1_4--[#orange]-|>alfresco_alfresco_content_repository_6_1_0_EA2
 alfresco_content_services_1_1_4--[#orange]-|>quay_io_alfresco_alfresco_transform_router_0_2_1_EA
 
-center footer Generated on 2022/06/02 07:29:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/06/15 21:59:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

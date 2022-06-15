@@ -44,4 +44,4 @@ alfresco-deployment-service:0.1.0 depends on postgresql:0.11.0
 postgresql:0.11.0 uses postgres:9.6.2
 alfresco-deployment-service:0.1.0 uses quay.io/alfresco/alfresco-deployment-service:latest
 
-Generated on 2022/06/02 07:23:56 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/06/15 21:52:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

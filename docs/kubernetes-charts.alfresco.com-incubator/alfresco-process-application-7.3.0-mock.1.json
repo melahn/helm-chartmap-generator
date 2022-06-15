@@ -93,14 +93,6 @@
       "version": "12.20.0"
     },
     {
-      "children": [],
-      "name": "common:7.3.0-mock.1",
-      "description": "A Helm chart for Activiti Cloud Common Templates",
-      "type": "chart",
-      "shortName": "common",
-      "version": "7.3.0-mock.1"
-    },
-    {
       "maintainers": [
         {
           "name": "Bitnami",
@@ -196,6 +188,14 @@
       "type": "chart",
       "shortName": "rabbitmq",
       "version": "8.20.5"
+    },
+    {
+      "children": [],
+      "name": "common:7.3.0-mock.1",
+      "description": "A Helm chart for Activiti Cloud Common Templates",
+      "type": "chart",
+      "shortName": "common",
+      "version": "7.3.0-mock.1"
     }
   ],
   "name": "alfresco-process-application:7.3.0-mock.1",

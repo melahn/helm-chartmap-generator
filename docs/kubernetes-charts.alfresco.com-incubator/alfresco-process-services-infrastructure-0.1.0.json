@@ -1,142 +1,6 @@
 {
   "children": [
     {
-      "keywords": [
-        "content",
-        "content services",
-        "alfresco",
-        "alfresco content services"
-      ],
-      "children": [
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-tika:2.0.4-EA",
-          "type": "image",
-          "version": "2.0.4-EA"
-        },
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-imagemagick:2.0.4-EA",
-          "type": "image",
-          "version": "2.0.4-EA"
-        },
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "alfresco/alfresco-share",
-          "type": "image",
-          "version": "6.0"
-        },
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-pdf-renderer:2.0.4-EA",
-          "type": "image",
-          "version": "2.0.4-EA"
-        },
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "alfresco/alfresco-shared-file-store",
-          "type": "image",
-          "version": "0.3"
-        },
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-libreoffice:2.0.4-EA",
-          "type": "image",
-          "version": "2.0.4-EA"
-        },
-        {
-          "repoHost": "Docker Hub",
-          "children": [],
-          "name": "alfresco/alfresco-content-repository",
-          "type": "image",
-          "version": "6.1.0-EA2"
-        },
-        {
-          "repoHost": "quay.io",
-          "children": [],
-          "name": "alfresco/alfresco-transform-router:0.2.1-EA",
-          "type": "image",
-          "version": "0.2.1-EA"
-        },
-        {
-          "keywords": [
-            "search",
-            "search services",
-            "alfresco search services",
-            "insight",
-            "insight engine",
-            "alfresco insight engine"
-          ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "alfresco/alfresco-search-services",
-            "type": "image",
-            "version": "1.2.0-RC1"
-          }],
-          "name": "alfresco-search:0.0.4",
-          "description": "A Helm chart for deploying Alfresco Search",
-          "type": "chart",
-          "shortName": "alfresco-search",
-          "version": "0.0.4"
-        },
-        {
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "webcenter/activemq",
-            "type": "image",
-            "version": "latest"
-          }],
-          "name": "activemq:0.1.0",
-          "description": "A Helm chart Providing Apache ActiveMQ.",
-          "type": "chart",
-          "shortName": "activemq",
-          "version": "0.1.0"
-        },
-        {
-          "maintainers": [{"name": "databus23"}],
-          "keywords": [
-            "postgresql",
-            "postgres",
-            "database",
-            "sql"
-          ],
-          "children": [{
-            "repoHost": "Docker Hub",
-            "children": [],
-            "name": "postgres",
-            "type": "image",
-            "version": "10.1"
-          }],
-          "name": "postgresql:0.9.3",
-          "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
-          "type": "chart",
-          "shortName": "postgresql",
-          "version": "0.9.3"
-        },
-        {
-          "children": [],
-          "name": "alfresco-infrastructure:1.0.0",
-          "description": "A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform.",
-          "type": "chart",
-          "shortName": "alfresco-infrastructure",
-          "version": "1.0.0"
-        }
-      ],
-      "name": "alfresco-content-services:1.1.4",
-      "description": "A Helm chart for deploying Alfresco Content Services",
-      "type": "chart",
-      "shortName": "alfresco-content-services",
-      "version": "1.1.4"
-    },
-    {
       "children": [
         {
           "maintainers": [{"name": "Alfresco"}],
@@ -265,6 +129,142 @@
       "type": "chart",
       "shortName": "alfresco-infrastructure",
       "version": "3.0.0"
+    },
+    {
+      "keywords": [
+        "content",
+        "content services",
+        "alfresco",
+        "alfresco content services"
+      ],
+      "children": [
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-tika:2.0.4-EA",
+          "type": "image",
+          "version": "2.0.4-EA"
+        },
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-imagemagick:2.0.4-EA",
+          "type": "image",
+          "version": "2.0.4-EA"
+        },
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "alfresco/alfresco-share",
+          "type": "image",
+          "version": "6.0"
+        },
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-pdf-renderer:2.0.4-EA",
+          "type": "image",
+          "version": "2.0.4-EA"
+        },
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-libreoffice:2.0.4-EA",
+          "type": "image",
+          "version": "2.0.4-EA"
+        },
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "alfresco/alfresco-shared-file-store",
+          "type": "image",
+          "version": "0.3"
+        },
+        {
+          "repoHost": "Docker Hub",
+          "children": [],
+          "name": "alfresco/alfresco-content-repository",
+          "type": "image",
+          "version": "6.1.0-EA2"
+        },
+        {
+          "repoHost": "quay.io",
+          "children": [],
+          "name": "alfresco/alfresco-transform-router:0.2.1-EA",
+          "type": "image",
+          "version": "0.2.1-EA"
+        },
+        {
+          "keywords": [
+            "search",
+            "search services",
+            "alfresco search services",
+            "insight",
+            "insight engine",
+            "alfresco insight engine"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "alfresco/alfresco-search-services",
+            "type": "image",
+            "version": "1.2.0-RC1"
+          }],
+          "name": "alfresco-search:0.0.4",
+          "description": "A Helm chart for deploying Alfresco Search",
+          "type": "chart",
+          "shortName": "alfresco-search",
+          "version": "0.0.4"
+        },
+        {
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "webcenter/activemq",
+            "type": "image",
+            "version": "latest"
+          }],
+          "name": "activemq:0.1.0",
+          "description": "A Helm chart Providing Apache ActiveMQ.",
+          "type": "chart",
+          "shortName": "activemq",
+          "version": "0.1.0"
+        },
+        {
+          "children": [],
+          "name": "alfresco-infrastructure:1.0.0",
+          "description": "A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform.",
+          "type": "chart",
+          "shortName": "alfresco-infrastructure",
+          "version": "1.0.0"
+        },
+        {
+          "maintainers": [{"name": "databus23"}],
+          "keywords": [
+            "postgresql",
+            "postgres",
+            "database",
+            "sql"
+          ],
+          "children": [{
+            "repoHost": "Docker Hub",
+            "children": [],
+            "name": "postgres",
+            "type": "image",
+            "version": "10.1"
+          }],
+          "name": "postgresql:0.9.3",
+          "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+          "type": "chart",
+          "shortName": "postgresql",
+          "version": "0.9.3"
+        }
+      ],
+      "name": "alfresco-content-services:1.1.4",
+      "description": "A Helm chart for deploying Alfresco Content Services",
+      "type": "chart",
+      "shortName": "alfresco-content-services",
+      "version": "1.1.4"
     }
   ],
   "name": "alfresco-process-services-infrastructure:0.1.0",

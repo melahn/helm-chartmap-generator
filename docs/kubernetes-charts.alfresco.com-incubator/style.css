@@ -6,10 +6,12 @@ a:link {
 	color: #eee3c1ff;
 	font: 16px;
 	font-weight: bold;
-}a:visited {
+}
+a:visited {
 	color: #2f71e8ff;
 	font: 16px;
-}.charterror {
+}
+.charterror {
 	color: #ff0000ff;
 	font: 16px;
 }
