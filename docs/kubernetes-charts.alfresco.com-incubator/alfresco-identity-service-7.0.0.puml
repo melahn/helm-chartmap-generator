@@ -27,5 +27,5 @@ alfresco_identity_service_7_0_0--[#green]-|>common_1_11_3
 keycloak_18_0_0--[#orange]-|>quay_io_alfresco_alfresco_identity_service_1_8_0
 postgresql_10_3_13--[#orange]-|>docker_io_bitnami_postgresql_11_11_0_debian_10_r31
 
-center footer Generated on 2022/06/15 21:53:31 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 01:04:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

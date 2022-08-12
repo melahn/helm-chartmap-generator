@@ -21,7 +21,7 @@ Chart: alfresco-process-services:0.2.0
 	apiVersion: v1
 	appVersion: 1.10.0
 	created: 2020-07-08T12:03:13.442975968Z
-	dependencies: alfresco-infrastructure:4.1.1, postgresql:1.0.0
+	dependencies: postgresql:1.0.0, alfresco-infrastructure:4.1.1
 	description: A Helm chart for Alfresco Process Services
 	digest: c487ed1c54cd5043d8ddbbbc16be12e212690509b68b7ffcb6ddc2b7c8fd3a93
 	icon: Not specified
@@ -186,7 +186,7 @@ Chart: alfresco-infrastructure:4.1.1
 	apiVersion: v1
 	appVersion: Not specified
 	created: 2020-07-08T12:03:13.30180831Z
-	dependencies: nginx-ingress:0.14.0, alfresco-identity-service:1.1.0, activemq:1.1.1
+	dependencies: alfresco-identity-service:1.1.0, activemq:1.1.1, nginx-ingress:0.14.0
 	description: A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform. This includes activemq, alfresco-identity-service, nginx-ingress and a persistent volume to use with the DBP chart.
 	digest: 65bb324a6af05a2b2e87bf3f3817596fbac565a74b47440ad7b0459c30e9b201
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -201,7 +201,7 @@ Chart: alfresco-content-services:3.0.5
 	apiVersion: v1
 	appVersion: 6.2.0
 	created: 2020-07-08T12:03:13.196590762Z
-	dependencies: postgresql:0.9.3, alfresco-infrastructure:4.1.1, alfresco-sync-service:2.0.0, alfresco-digital-workspace:2.2.1, alfresco-search:1.0.3
+	dependencies: postgresql:0.9.3, alfresco-infrastructure:4.1.1, alfresco-search:1.0.3, alfresco-sync-service:2.0.0, alfresco-digital-workspace:2.2.1
 	description: A Helm chart for deploying Alfresco Content Services
 	digest: a89a3b6ff8ef7494e29f7724b1c91a52c9fd246c658ca9b82a7f001eebc43dfe
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -216,7 +216,7 @@ Chart: alfresco-infrastructure:5.2.0
 	apiVersion: v1
 	appVersion: Not specified
 	created: 2020-07-08T12:03:09.558280556Z
-	dependencies: alfresco-identity-service:2.0.0, nginx-ingress:0.14.0, activemq:1.1.1, alfresco-event-gateway:0.1.2
+	dependencies: alfresco-event-gateway:0.1.2, activemq:1.1.1, alfresco-identity-service:2.0.0, nginx-ingress:0.14.0
 	description: A Helm chart Providing the required Alfresco infrastructure for the Digital Business Platform. This includes activemq, alfresco-identity-service, nginx-ingress and a persistent volume to use with the DBP chart.
 	digest: 9a0efeac6673bf7f2589796442a5279bf45411e3a0b67a56634b6df1d7042058
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -257,21 +257,6 @@ Chart: alfresco-search:1.0.3
 	sources: https://github.com/alfresco/alfresco-search-deployment
 	urls: http://kubernetes-charts.alfresco.com/stable/alfresco-search-1.0.3.tgz
 	version: 1.0.3
-Chart: keycloak:4.3.0
-	apiVersion: v1
-	appVersion: 4.8.3.Final
-	created: 2020-10-15T15:46:18.46301-04:00
-	dependencies: postgresql:0.15.0
-	description: Open Source Identity and Access Management For Modern Applications and Services
-	digest: fc74a8d9172b8b4647f383a8b087c3d27f95b68b587b97088dddacc102d9c5d7
-	icon: https://www.keycloak.org/resources/images/keycloak_logo_480x108.png
-	keywords: sso,idm,openid connect,saml,kerberos,ldap
-	maintainers: unguiculus:unguiculus@gmail.com,thomasdarimont:thomas.darimont+github@gmail.com
-	repo url: https://charts.helm.sh/stable
-	name: keycloak
-	sources: https://github.com/jboss-dockerfiles/keycloak
-	urls: https://charts.helm.sh/stable/packages/keycloak-4.3.0.tgz
-	version: 4.3.0
 Chart: nginx-ingress:0.14.0
 	apiVersion: v1
 	appVersion: 0.12.0
@@ -287,6 +272,21 @@ Chart: nginx-ingress:0.14.0
 	sources: https://github.com/kubernetes/ingress-nginx
 	urls: https://charts.helm.sh/stable/packages/nginx-ingress-0.14.0.tgz
 	version: 0.14.0
+Chart: keycloak:4.3.0
+	apiVersion: v1
+	appVersion: 4.8.3.Final
+	created: 2020-10-15T15:46:18.46301-04:00
+	dependencies: postgresql:0.15.0
+	description: Open Source Identity and Access Management For Modern Applications and Services
+	digest: fc74a8d9172b8b4647f383a8b087c3d27f95b68b587b97088dddacc102d9c5d7
+	icon: https://www.keycloak.org/resources/images/keycloak_logo_480x108.png
+	keywords: sso,idm,openid connect,saml,kerberos,ldap
+	maintainers: unguiculus:unguiculus@gmail.com,thomasdarimont:thomas.darimont+github@gmail.com
+	repo url: https://charts.helm.sh/stable
+	name: keycloak
+	sources: https://github.com/jboss-dockerfiles/keycloak
+	urls: https://charts.helm.sh/stable/packages/keycloak-4.3.0.tgz
+	version: 4.3.0
 
 There are 25 referenced Docker Images
 -------------------------------------
@@ -319,28 +319,28 @@ Image: alfresco/alfresco-identity-service:1.2
 Chart Dependencies
 ------------------
 alfresco-dbp:2.0.0-SNAPSHOT depends on alfresco-infrastructure:5.2.0
+alfresco-infrastructure:5.2.0 depends on alfresco-event-gateway:0.1.2
+alfresco-event-gateway:0.1.2 depends on activemq:1.1.1
+alfresco-infrastructure:5.2.0 depends on activemq:1.1.1
 alfresco-infrastructure:5.2.0 depends on alfresco-identity-service:2.0.0
 alfresco-identity-service:2.0.0 depends on keycloak:6.0.0
 keycloak:6.0.0 depends on postgresql:6.3.13
 alfresco-infrastructure:5.2.0 depends on nginx-ingress:0.14.0
-alfresco-infrastructure:5.2.0 depends on activemq:1.1.1
-alfresco-infrastructure:5.2.0 depends on alfresco-event-gateway:0.1.2
-alfresco-event-gateway:0.1.2 depends on activemq:1.1.1
 alfresco-dbp:2.0.0-SNAPSHOT depends on alfresco-content-services:3.0.5
 alfresco-content-services:3.0.5 depends on postgresql:0.9.3
 alfresco-content-services:3.0.5 depends on alfresco-infrastructure:4.1.1
-alfresco-infrastructure:4.1.1 depends on nginx-ingress:0.14.0
 alfresco-infrastructure:4.1.1 depends on alfresco-identity-service:1.1.0
 alfresco-identity-service:1.1.0 depends on keycloak:4.3.0
 keycloak:4.3.0 depends on postgresql:0.15.0
 alfresco-infrastructure:4.1.1 depends on activemq:1.1.1
+alfresco-infrastructure:4.1.1 depends on nginx-ingress:0.14.0
+alfresco-content-services:3.0.5 depends on alfresco-search:1.0.3
 alfresco-content-services:3.0.5 depends on alfresco-sync-service:2.0.0
 alfresco-sync-service:2.0.0 depends on postgresql:0.9.3
 alfresco-content-services:3.0.5 depends on alfresco-digital-workspace:2.2.1
-alfresco-content-services:3.0.5 depends on alfresco-search:1.0.3
 alfresco-dbp:2.0.0-SNAPSHOT depends on alfresco-process-services:0.2.0
-alfresco-process-services:0.2.0 depends on alfresco-infrastructure:4.1.1
 alfresco-process-services:0.2.0 depends on postgresql:1.0.0
+alfresco-process-services:0.2.0 depends on alfresco-infrastructure:4.1.1
 postgresql:0.9.3 uses postgres:11.4
 postgresql:0.9.3 uses postgres:10.1
 alfresco-process-services:0.2.0 uses quay.io/alfresco/alfresco-process-services-admin:1.10.0
@@ -364,8 +364,8 @@ alfresco-content-services:3.0.5 uses alfresco/alfresco-tika:2.1.0
 alfresco-content-services:3.0.5 uses alfresco/alfresco-imagemagick:2.1.0
 postgresql:1.0.0 uses postgres:9.4.6
 alfresco-search:1.0.3 uses alfresco/alfresco-search-services:1.4.0
-keycloak:4.3.0 uses jboss/keycloak:4.8.3.Final
 nginx-ingress:0.14.0 uses k8s.gcr.io/defaultbackend:1.3
 nginx-ingress:0.14.0 uses quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.12.0
+keycloak:4.3.0 uses jboss/keycloak:4.8.3.Final
 
-Generated on 2022/06/15 21:52:22 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 01:03:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

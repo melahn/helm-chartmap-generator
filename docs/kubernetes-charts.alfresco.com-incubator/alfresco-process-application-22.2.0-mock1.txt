@@ -20,7 +20,7 @@ Chart: kafka:12.20.0
 	apiVersion: v2
 	appVersion: 2.8.0
 	created: Not specified
-	dependencies: common:1.5.2, zookeeper:6.7.4
+	dependencies: zookeeper:6.7.4, common:1.5.2
 	description: Apache Kafka is a distributed streaming platform.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
@@ -34,7 +34,7 @@ Chart: alfresco-process-application:22.2.0-mock1
 	apiVersion: v1
 	appVersion: 22.2.0-mock1
 	created: Not specified
-	dependencies: kafka:12.20.0, rabbitmq:8.20.5, postgresql:9.1.1, common:22.2.0-mock1
+	dependencies: common:22.2.0-mock1, kafka:12.20.0, rabbitmq:8.20.5, postgresql:9.1.1
 	description: A Helm chart for an Alfresco Activiti Enterprise application
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -139,18 +139,18 @@ Image: docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 
 Chart Dependencies
 ------------------
+alfresco-process-application:22.2.0-mock1 depends on common:22.2.0-mock1
 alfresco-process-application:22.2.0-mock1 depends on kafka:12.20.0
-kafka:12.20.0 depends on common:1.5.2
 kafka:12.20.0 depends on zookeeper:6.7.4
 zookeeper:6.7.4 depends on common:1.5.2
+kafka:12.20.0 depends on common:1.5.2
 alfresco-process-application:22.2.0-mock1 depends on rabbitmq:8.20.5
 rabbitmq:8.20.5 depends on common:1.8.0
 alfresco-process-application:22.2.0-mock1 depends on postgresql:9.1.1
 postgresql:9.1.1 depends on common:0.3.1
-alfresco-process-application:22.2.0-mock1 depends on common:22.2.0-mock1
 postgresql:9.1.1 uses docker.io/postgres:11.7
 kafka:12.20.0 uses docker.io/bitnami/kafka:2.8.0-debian-10-r30
 rabbitmq:8.20.5 uses docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 zookeeper:6.7.4 uses docker.io/bitnami/zookeeper:3.7.0-debian-10-r56
 
-Generated on 2022/06/15 21:54:27 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 01:05:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
