@@ -19,5 +19,5 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:3.6.6-debian-9\n====\n3.6
 nuxeo_mongodb_0_1_0--[#green]-|>mongodb_4_0_3
 mongodb_4_0_3--[#orange]-|>docker_io_bitnami_mongodb_3_6_6_debian_9
 
-center footer Generated on 2022/06/15 21:41:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 00:47:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

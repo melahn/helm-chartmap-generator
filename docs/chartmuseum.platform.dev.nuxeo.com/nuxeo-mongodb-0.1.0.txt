@@ -42,4 +42,4 @@ Chart Dependencies
 nuxeo-mongodb:0.1.0 depends on mongodb:4.0.3
 mongodb:4.0.3 uses docker.io/bitnami/mongodb:3.6.6-debian-9
 
-Generated on 2022/06/15 21:41:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 00:47:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
