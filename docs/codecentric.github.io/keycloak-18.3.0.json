@@ -1,0 +1,87 @@
+{
+  "maintainers": [
+    {
+      "name": "unguiculus",
+      "email": "unguiculus@gmail.com"
+    },
+    {
+      "name": "thomasdarimont",
+      "email": "thomas.darimont+github@gmail.com"
+    }
+  ],
+  "keywords": [
+    "sso",
+    "idm",
+    "openid connect",
+    "saml",
+    "kerberos",
+    "ldap"
+  ],
+  "children": [
+    {
+      "repoHost": "quay.io",
+      "children": [],
+      "name": "keycloak/keycloak:17.0.1-legacy",
+      "type": "image",
+      "version": "17.0.1-legacy"
+    },
+    {
+      "maintainers": [
+        {
+          "name": "Bitnami",
+          "email": "containers@bitnami.com"
+        },
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/postgresql:11.14.0-debian-10-r28",
+          "type": "image",
+          "version": "11.14.0-debian-10-r28"
+        },
+        {
+          "maintainers": [{
+            "name": "Bitnami",
+            "email": "containers@bitnami.com"
+          }],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.10.3",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.10.3"
+        }
+      ],
+      "name": "postgresql:10.16.2",
+      "description": "Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "10.16.2"
+    }
+  ],
+  "name": "keycloak:18.3.0",
+  "description": "Open Source Identity and Access Management For Modern Applications and Services",
+  "type": "chart",
+  "shortName": "keycloak",
+  "version": "18.3.0"
+}

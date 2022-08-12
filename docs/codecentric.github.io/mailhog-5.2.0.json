@@ -1,0 +1,26 @@
+{
+  "maintainers": [{
+    "name": "unguiculus",
+    "email": "unguiculus@gmail.com"
+  }],
+  "keywords": [
+    "mailhog",
+    "mail",
+    "smtp",
+    "email",
+    "e-mail",
+    "testing"
+  ],
+  "children": [{
+    "repoHost": "docker.io",
+    "children": [],
+    "name": "mailhog/mailhog:v1.0.1",
+    "type": "image",
+    "version": "v1.0.1"
+  }],
+  "name": "mailhog:5.2.0",
+  "description": "An e-mail testing tool for developers",
+  "type": "chart",
+  "shortName": "mailhog",
+  "version": "5.2.0"
+}

@@ -1,8 +1,8 @@
-Chart Map for mailhog:5.0.7
+Chart Map for mailhog:5.1.0
 
 There is one referenced Helm Chart
 ----------------------------------
-Chart: mailhog:5.0.7
+Chart: mailhog:5.1.0
 	apiVersion: v2
 	appVersion: v1.0.1
 	created: Not specified
@@ -16,7 +16,7 @@ Chart: mailhog:5.0.7
 	name: mailhog
 	sources: https://github.com/mailhog/MailHog
 	urls: Not specified
-	version: 5.0.7
+	version: 5.1.0
 
 There is one referenced Docker Image
 ------------------------------------
@@ -24,6 +24,6 @@ Image: docker.io/mailhog/mailhog:v1.0.1
 
 Chart Dependencies
 ------------------
-mailhog:5.0.7 uses docker.io/mailhog/mailhog:v1.0.1
+mailhog:5.1.0 uses docker.io/mailhog/mailhog:v1.0.1
 
-Generated on 2022/08/12 01:35:51 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 01:35:48 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
