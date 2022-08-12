@@ -33,28 +33,27 @@
       "version": "2.3.0"
     },
     {
-      "maintainers": [
-        {"name": "swordbeta"},
-        {"name": "databus23"}
-      ],
+      "maintainers": [{
+        "name": "Bitnami",
+        "email": "containers@bitnami.com"
+      }],
       "keywords": [
-        "postgresql",
-        "postgres",
+        "mongodb",
         "database",
-        "sql"
+        "nosql"
       ],
       "children": [{
-        "repoHost": "Docker Hub",
+        "repoHost": "docker.io",
         "children": [],
-        "name": "postgres",
+        "name": "bitnami/mongodb:3.6.3",
         "type": "image",
-        "version": "9.6.2"
+        "version": "3.6.3"
       }],
-      "name": "postgresql:0.8.7",
-      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
+      "name": "mongodb:2.0.5",
+      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
       "type": "chart",
-      "shortName": "postgresql",
-      "version": "0.8.7"
+      "shortName": "mongodb",
+      "version": "2.0.5"
     },
     {
       "maintainers": [{
@@ -83,27 +82,28 @@
       "version": "1.5.2"
     },
     {
-      "maintainers": [{
-        "name": "Bitnami",
-        "email": "containers@bitnami.com"
-      }],
+      "maintainers": [
+        {"name": "swordbeta"},
+        {"name": "databus23"}
+      ],
       "keywords": [
-        "mongodb",
+        "postgresql",
+        "postgres",
         "database",
-        "nosql"
+        "sql"
       ],
       "children": [{
-        "repoHost": "docker.io",
+        "repoHost": "Docker Hub",
         "children": [],
-        "name": "bitnami/mongodb:3.6.3",
+        "name": "postgres",
         "type": "image",
-        "version": "3.6.3"
+        "version": "9.6.2"
       }],
-      "name": "mongodb:2.0.5",
-      "description": "NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.",
+      "name": "postgresql:0.8.7",
+      "description": "Object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.",
       "type": "chart",
-      "shortName": "mongodb",
-      "version": "2.0.5"
+      "shortName": "postgresql",
+      "version": "0.8.7"
     }
   ],
   "name": "xray:0.4.3",

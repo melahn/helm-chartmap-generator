@@ -20,12 +20,12 @@ usecase "Image\n====\nDocker Hub\n====\nmysql\n====\n5.7.28" as mysql_5_7_28 #Aq
 usecase "Image\n====\ndocker.io\n====\nbitnami/rabbitmq:3.8.2-debian-10-r0\n====\n3.8.2-debian-10-r0" as docker_io_bitnami_rabbitmq_3_8_2_debian_10_r0 #Beige
 
 'Chart Dependencies
-spring_cloud_data_flow_2_7_2--[#green]-|>mysql_1_6_2
 spring_cloud_data_flow_2_7_2--[#green]-|>rabbitmq_6_16_6
+spring_cloud_data_flow_2_7_2--[#green]-|>mysql_1_6_2
 rabbitmq_6_16_6--[#orange]-|>docker_io_bitnami_rabbitmq_3_8_2_debian_10_r0
 spring_cloud_data_flow_2_7_2--[#orange]-|>springcloud_spring_cloud_dataflow_server_2_5_3_RELEASE
 spring_cloud_data_flow_2_7_2--[#orange]-|>springcloud_spring_cloud_skipper_server_2_4_3_RELEASE
 mysql_1_6_2--[#orange]-|>mysql_5_7_28
 
-center footer Generated on 2022/06/15 23:26:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:50:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -60,4 +60,4 @@ gitlab-ee:0.2.2 depends on postgresql:0.8.1
 redis:0.9.0 uses bitnami/redis:3.2.9-r2
 postgresql:0.8.1 uses postgres:9.6
 
-Generated on 2022/06/15 22:55:24 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:18:26 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

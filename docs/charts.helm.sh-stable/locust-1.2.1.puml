@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ngreenbirdit/locust\n====\n0.9.0" as gree
 'Chart Dependencies
 locust_1_2_1--[#orange]-|>greenbirdit_locust_0_9_0
 
-center footer Generated on 2022/06/15 23:06:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:29:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

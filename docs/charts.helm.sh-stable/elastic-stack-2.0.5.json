@@ -15,22 +15,18 @@
   ],
   "children": [
     {
-      "keywords": [
-        "elasticsearch",
-        "kibana"
-      ],
       "children": [{
         "repoHost": "docker.elastic.co",
         "children": [],
-        "name": "kibana/kibana-oss:6.7.0",
+        "name": "elasticsearch/elasticsearch-oss:6.8.6",
         "type": "image",
-        "version": "6.7.0"
+        "version": "6.8.6"
       }],
-      "name": "kibana:3.2.8",
-      "description": "DEPRECATED - Kibana is an open source data visualization plugin for Elasticsearch",
+      "name": "elasticsearch:1.32.5",
+      "description": "DEPRECATED Flexible and powerful open source, distributed real-time search and analytics engine.",
       "type": "chart",
-      "shortName": "kibana",
-      "version": "3.2.8"
+      "shortName": "elasticsearch",
+      "version": "1.32.5"
     },
     {
       "maintainers": [
@@ -61,18 +57,22 @@
       "version": "2.4.1"
     },
     {
+      "keywords": [
+        "elasticsearch",
+        "kibana"
+      ],
       "children": [{
         "repoHost": "docker.elastic.co",
         "children": [],
-        "name": "elasticsearch/elasticsearch-oss:6.8.6",
+        "name": "kibana/kibana-oss:6.7.0",
         "type": "image",
-        "version": "6.8.6"
+        "version": "6.7.0"
       }],
-      "name": "elasticsearch:1.32.5",
-      "description": "DEPRECATED Flexible and powerful open source, distributed real-time search and analytics engine.",
+      "name": "kibana:3.2.8",
+      "description": "DEPRECATED - Kibana is an open source data visualization plugin for Elasticsearch",
       "type": "chart",
-      "shortName": "elasticsearch",
-      "version": "1.32.5"
+      "shortName": "kibana",
+      "version": "3.2.8"
     }
   ],
   "name": "elastic-stack:2.0.5",

@@ -19,5 +19,5 @@ usecase "Image\n====\ngcr.io\n====\nheptio-images/contour:v0.15.0\n====\nv0.15.0
 contour_0_2_1--[#orange]-|>gcr_io_heptio_images_contour_v0_15_0
 contour_0_2_1--[#orange]-|>docker_io_envoyproxy_envoy_v1_11_1
 
-center footer Generated on 2022/06/15 22:47:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:10:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

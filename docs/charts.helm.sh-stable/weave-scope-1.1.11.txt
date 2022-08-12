@@ -69,4 +69,4 @@ weave-scope:1.1.11 depends on weave-scope-agent:1.1.10
 weave-scope:1.1.11 depends on weave-scope-frontend:1.1.10
 weave-scope:1.1.11 depends on weave-scope-cluster-agent:1.1.10
 
-Generated on 2022/06/15 23:31:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:55:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

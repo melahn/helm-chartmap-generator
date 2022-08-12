@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\ndaskdev/dask\n====\n1.1.5" as daskdev_da
 dask_3_1_1--[#orange]-|>daskdev_dask_1_1_5
 dask_3_1_1--[#orange]-|>daskdev_dask_notebook_1_1_5
 
-center footer Generated on 2022/06/15 22:48:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:11:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

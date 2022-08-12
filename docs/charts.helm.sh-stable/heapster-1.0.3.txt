@@ -28,4 +28,4 @@ Chart Dependencies
 heapster:1.0.3 uses k8s.gcr.io/heapster-amd64:v1.5.4
 heapster:1.0.3 uses k8s.gcr.io/addon-resizer:1.7
 
-Generated on 2022/06/15 22:57:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:20:16 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

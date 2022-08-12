@@ -44,4 +44,4 @@ express-gateway:1.6.5 depends on redis:10.5.7
 redis:10.5.7 uses docker.io/bitnami/redis:5.0.7-debian-10-r32
 express-gateway:1.6.5 uses expressgateway/express-gateway:v1.16.9
 
-Generated on 2022/06/15 22:52:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:15:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -44,4 +44,4 @@ orangehrm:7.0.10 depends on mariadb:7.3.11
 orangehrm:7.0.10 uses docker.io/bitnami/orangehrm:4.3.4-0-debian-10-r26
 mariadb:7.3.11 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r27
 
-Generated on 2022/06/15 23:14:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:37:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

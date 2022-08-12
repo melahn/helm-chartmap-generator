@@ -19,11 +19,11 @@ usecase "Image\n====\nDocker Hub\n====\napache/airflow\n====\n1.10.12-python3.6"
 usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:11.7.0-debian-10-r9\n====\n11.7.0-debian-10-r9" as docker_io_bitnami_postgresql_11_7_0_debian_10_r9 #DarkSalmon
 
 'Chart Dependencies
-airflow_7_13_3--[#green]-|>postgresql_8_6_4
 airflow_7_13_3--[#green]-|>redis_10_5_7
+airflow_7_13_3--[#green]-|>postgresql_8_6_4
 redis_10_5_7--[#orange]-|>docker_io_bitnami_redis_5_0_7_debian_10_r32
 postgresql_8_6_4--[#orange]-|>docker_io_bitnami_postgresql_11_7_0_debian_10_r9
 airflow_7_13_3--[#orange]-|>apache_airflow_1_10_12_python3_6
 
-center footer Generated on 2022/06/15 22:42:22 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:05:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

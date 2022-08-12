@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nmicrosoft/mssql-server-linux\n====\n2017
 'Chart Dependencies
 mssql_linux_0_11_4--[#orange]-|>microsoft_mssql_server_linux_2017_CU5
 
-center footer Generated on 2022/06/15 23:10:16 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:33:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

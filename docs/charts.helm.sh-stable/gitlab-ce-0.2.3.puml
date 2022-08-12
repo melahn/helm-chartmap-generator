@@ -18,10 +18,10 @@ usecase "Image\n====\nDocker Hub\n====\nbitnami/redis\n====\n3.2.9-r2" as bitnam
 usecase "Image\n====\nDocker Hub\n====\npostgres\n====\n9.6" as postgres_9_6 #Ivory
 
 'Chart Dependencies
-gitlab_ce_0_2_3--[#green]-|>postgresql_0_8_1
 gitlab_ce_0_2_3--[#green]-|>redis_0_9_0
+gitlab_ce_0_2_3--[#green]-|>postgresql_0_8_1
 redis_0_9_0--[#orange]-|>bitnami_redis_3_2_9_r2
 postgresql_0_8_1--[#orange]-|>postgres_9_6
 
-center footer Generated on 2022/06/15 22:55:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:18:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

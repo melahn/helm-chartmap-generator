@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ndocker.io/chronograf\n====\n1.7.11-alpin
 'Chart Dependencies
 chronograf_1_0_3--[#orange]-|>docker_io_chronograf_1_7_11_alpine
 
-center footer Generated on 2022/06/15 22:46:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:08:50 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

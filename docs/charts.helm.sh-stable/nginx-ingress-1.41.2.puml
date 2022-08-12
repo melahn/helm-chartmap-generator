@@ -19,5 +19,5 @@ usecase "Image\n====\nus.gcr.io\n====\nk8s-artifacts-prod/ingress-nginx/controll
 nginx_ingress_1_41_2--[#orange]-|>us_gcr_io_k8s_artifacts_prod_ingress_nginx_controller_v0_34_1
 nginx_ingress_1_41_2--[#orange]-|>k8s_gcr_io_defaultbackend_amd64_1_5
 
-center footer Generated on 2022/06/15 23:12:02 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:35:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

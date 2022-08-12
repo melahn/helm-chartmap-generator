@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nhazelcast/management-center\n====\n4.0.2
 hazelcast_3_3_2--[#orange]-|>hazelcast_hazelcast_4_0_1
 hazelcast_3_3_2--[#orange]-|>hazelcast_management_center_4_0_2
 
-center footer Generated on 2022/06/15 22:56:50 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:19:54 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 cockroachdb:3.0.6 uses cockroachdb/cockroach:v19.2.4
 
-Generated on 2022/06/15 22:46:52 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:09:43 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

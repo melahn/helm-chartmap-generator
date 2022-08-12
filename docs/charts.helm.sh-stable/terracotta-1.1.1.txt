@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 terracotta:1.1.1 uses terracotta/terracotta-server-oss:5.6.0
 
-Generated on 2022/06/15 23:28:55 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:52:40 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

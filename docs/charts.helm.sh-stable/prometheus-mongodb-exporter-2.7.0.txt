@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 prometheus-mongodb-exporter:2.7.0 uses ssheehy/mongodb-exporter:0.10.0
 
-Generated on 2022/06/15 23:18:32 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:42:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

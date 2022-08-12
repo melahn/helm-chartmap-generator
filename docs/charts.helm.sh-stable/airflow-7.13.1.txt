@@ -62,4 +62,4 @@ redis:10.5.7 uses docker.io/bitnami/redis:5.0.7-debian-10-r32
 airflow:7.13.1 uses apache/airflow:1.10.12-python3.6
 postgresql:8.6.4 uses docker.io/bitnami/postgresql:11.7.0-debian-10-r9
 
-Generated on 2022/06/15 22:42:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:05:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

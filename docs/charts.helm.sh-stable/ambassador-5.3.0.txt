@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 ambassador:5.3.0 uses quay.io/datawire/ambassador:0.86.1
 
-Generated on 2022/06/15 22:42:41 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:05:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

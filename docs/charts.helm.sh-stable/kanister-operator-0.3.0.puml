@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\nkanisterio/controller\n====\n0.10.0" as 
 kanister_operator_0_3_0--[#green]-|>profile_0_9_0
 kanister_operator_0_3_0--[#orange]-|>kanisterio_controller_0_10_0
 
-center footer Generated on 2022/06/15 23:01:44 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:24:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

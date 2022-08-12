@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 hlf-couchdb:1.0.9 uses hyperledger/fabric-couchdb:0.4.10
 
-Generated on 2022/06/15 22:57:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:21:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

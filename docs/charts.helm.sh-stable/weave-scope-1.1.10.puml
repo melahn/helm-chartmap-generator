@@ -17,9 +17,9 @@ artifact "weave-scope-agent:1.1.10\n====\n\tType: application\n====\n\tRepo: N/A
 'There are 0 referenced Docker Images
 
 'Chart Dependencies
-weave_scope_1_1_10--[#green]-|>weave_scope_frontend_1_1_10
-weave_scope_1_1_10--[#green]-|>weave_scope_cluster_agent_1_1_10
 weave_scope_1_1_10--[#green]-|>weave_scope_agent_1_1_10
+weave_scope_1_1_10--[#green]-|>weave_scope_cluster_agent_1_1_10
+weave_scope_1_1_10--[#green]-|>weave_scope_frontend_1_1_10
 
-center footer Generated on 2022/06/15 23:31:29 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:55:20 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

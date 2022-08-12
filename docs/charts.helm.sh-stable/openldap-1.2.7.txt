@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 openldap:1.2.7 uses osixia/openldap:1.2.4
 
-Generated on 2022/06/15 23:14:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:37:33 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

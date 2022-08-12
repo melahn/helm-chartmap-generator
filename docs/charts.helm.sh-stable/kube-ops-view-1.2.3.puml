@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nhjacobs/kube-ops-view\n====\n20.4.0" as 
 'Chart Dependencies
 kube_ops_view_1_2_3--[#orange]-|>hjacobs_kube_ops_view_20_4_0
 
-center footer Generated on 2022/06/15 23:03:44 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:27:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

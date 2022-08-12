@@ -21,5 +21,5 @@ mattermost_team_edition_3_1_0--[#green]-|>mysql_0_10_1
 mattermost_team_edition_3_1_0--[#orange]-|>mattermost_mattermost_team_edition_5_9_0
 mysql_0_10_1--[#orange]-|>mysql_5_7_14
 
-center footer Generated on 2022/06/15 23:07:36 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:31:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

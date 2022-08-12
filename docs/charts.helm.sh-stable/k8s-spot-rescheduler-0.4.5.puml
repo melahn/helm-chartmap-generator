@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\npusher/k8s-spot-rescheduler:v0.3.0\n====\nv
 'Chart Dependencies
 k8s_spot_rescheduler_0_4_5--[#orange]-|>quay_io_pusher_k8s_spot_rescheduler_v0_3_0
 
-center footer Generated on 2022/06/15 23:01:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:24:25 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

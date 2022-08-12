@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nssheehy/mongodb-exporter\n====\n0.10.0" 
 'Chart Dependencies
 prometheus_mongodb_exporter_2_8_1--[#orange]-|>ssheehy_mongodb_exporter_0_10_0
 
-center footer Generated on 2022/06/15 23:18:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:42:00 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

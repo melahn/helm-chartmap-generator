@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\npposkrobko/risk-advisor\n====\nv1.0.0" a
 'Chart Dependencies
 risk_advisor_2_0_4--[#orange]-|>pposkrobko_risk_advisor_v1_0_0
 
-center footer Generated on 2022/06/15 23:22:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:45:38 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

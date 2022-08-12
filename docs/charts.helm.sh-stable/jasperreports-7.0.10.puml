@@ -21,5 +21,5 @@ jasperreports_7_0_10--[#green]-|>mariadb_7_3_12
 mariadb_7_3_12--[#orange]-|>docker_io_bitnami_mariadb_10_3_22_debian_10_r27
 jasperreports_7_0_10--[#orange]-|>docker_io_bitnami_jasperreports_7_2_0_debian_10_r24
 
-center footer Generated on 2022/06/15 23:00:37 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:23:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

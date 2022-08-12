@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nappscode/kubed\n====\n0.4.0" as appscode
 'Chart Dependencies
 kubed_0_3_2--[#orange]-|>appscode_kubed_0_4_0
 
-center footer Generated on 2022/06/15 23:04:24 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:27:42 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

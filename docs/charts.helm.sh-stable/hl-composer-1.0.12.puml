@@ -21,5 +21,5 @@ hl_composer_1_0_12--[#orange]-|>hyperledger_composer_cli_0_20_0
 hl_composer_1_0_12--[#orange]-|>hyperledger_composer_rest_server_0_20_0
 hl_composer_1_0_12--[#orange]-|>hyperledger_composer_playground_0_20_0
 
-center footer Generated on 2022/06/15 22:57:46 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:20:53 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\ncoredns/coredns\n====\n1.7.1" as coredns
 'Chart Dependencies
 coredns_1_13_8--[#orange]-|>coredns_coredns_1_7_1
 
-center footer Generated on 2022/06/15 22:47:40 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:10:33 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

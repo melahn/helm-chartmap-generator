@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nhomeassistant/home-assistant\n====\n0.10
 'Chart Dependencies
 home_assistant_0_13_2--[#orange]-|>homeassistant_home_assistant_0_108_7
 
-center footer Generated on 2022/06/15 22:58:48 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:21:58 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

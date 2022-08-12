@@ -51,10 +51,10 @@
         "monitoring"
       ],
       "children": [],
-      "name": "weave-scope-cluster-agent:1.1.10",
+      "name": "weave-scope-agent:1.1.10",
       "description": "A Helm chart for the Weave Scope cluster visualizer node agent.",
       "type": "chart",
-      "shortName": "weave-scope-cluster-agent",
+      "shortName": "weave-scope-agent",
       "version": "1.1.10"
     },
     {
@@ -68,10 +68,10 @@
         "monitoring"
       ],
       "children": [],
-      "name": "weave-scope-agent:1.1.10",
+      "name": "weave-scope-cluster-agent:1.1.10",
       "description": "A Helm chart for the Weave Scope cluster visualizer node agent.",
       "type": "chart",
-      "shortName": "weave-scope-agent",
+      "shortName": "weave-scope-cluster-agent",
       "version": "1.1.10"
     }
   ],

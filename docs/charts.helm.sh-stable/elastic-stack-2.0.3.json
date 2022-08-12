@@ -17,6 +17,34 @@
     {
       "maintainers": [
         {
+          "name": "compleatang",
+          "email": "casey@monax.io"
+        },
+        {
+          "name": "monotek",
+          "email": "monotek23@gmail.com"
+        }
+      ],
+      "keywords": [
+        "elasticsearch",
+        "kibana"
+      ],
+      "children": [{
+        "repoHost": "docker.elastic.co",
+        "children": [],
+        "name": "kibana/kibana-oss:6.7.0",
+        "type": "image",
+        "version": "6.7.0"
+      }],
+      "name": "kibana:3.2.7",
+      "description": "Kibana is an open source data visualization plugin for Elasticsearch",
+      "type": "chart",
+      "shortName": "kibana",
+      "version": "3.2.7"
+    },
+    {
+      "maintainers": [
+        {
           "name": "simonswine",
           "email": "christian@jetstack.io"
         },
@@ -53,34 +81,6 @@
       "type": "chart",
       "shortName": "elasticsearch",
       "version": "1.32.0"
-    },
-    {
-      "maintainers": [
-        {
-          "name": "compleatang",
-          "email": "casey@monax.io"
-        },
-        {
-          "name": "monotek",
-          "email": "monotek23@gmail.com"
-        }
-      ],
-      "keywords": [
-        "elasticsearch",
-        "kibana"
-      ],
-      "children": [{
-        "repoHost": "docker.elastic.co",
-        "children": [],
-        "name": "kibana/kibana-oss:6.7.0",
-        "type": "image",
-        "version": "6.7.0"
-      }],
-      "name": "kibana:3.2.7",
-      "description": "Kibana is an open source data visualization plugin for Elasticsearch",
-      "type": "chart",
-      "shortName": "kibana",
-      "version": "3.2.7"
     },
     {
       "maintainers": [

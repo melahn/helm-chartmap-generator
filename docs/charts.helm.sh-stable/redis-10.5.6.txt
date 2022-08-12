@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 redis:10.5.6 uses docker.io/bitnami/redis:5.0.7-debian-10-r32
 
-Generated on 2022/06/15 23:21:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:44:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

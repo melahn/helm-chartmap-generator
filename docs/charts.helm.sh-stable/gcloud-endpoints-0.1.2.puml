@@ -17,5 +17,5 @@ usecase "Image\n====\nb.gcr.io\n====\nendpoints/endpoints-runtime:1\n====\n1" as
 'Chart Dependencies
 gcloud_endpoints_0_1_2--[#orange]-|>b_gcr_io_endpoints_endpoints_runtime_1
 
-center footer Generated on 2022/06/15 22:54:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:17:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

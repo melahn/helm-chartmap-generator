@@ -51,7 +51,7 @@ Chart: xray:0.4.3
 	apiVersion: v1
 	appVersion: 2.3.0
 	created: Not specified
-	dependencies: rabbitmq-ha:1.5.2, postgresql:0.8.7, mongodb:2.0.5
+	dependencies: postgresql:0.8.7, mongodb:2.0.5, rabbitmq-ha:1.5.2
 	description: DEPRECATED Universal component scan for security and license inventory and impact analysis
 	digest: Not specified
 	icon: Not specified
@@ -75,15 +75,15 @@ Image: docker.bintray.io/jfrog/xray-server:2.3.0
 
 Chart Dependencies
 ------------------
-xray:0.4.3 depends on rabbitmq-ha:1.5.2
 xray:0.4.3 depends on postgresql:0.8.7
 xray:0.4.3 depends on mongodb:2.0.5
+xray:0.4.3 depends on rabbitmq-ha:1.5.2
 mongodb:2.0.5 uses docker.io/bitnami/mongodb:3.6.3
 rabbitmq-ha:1.5.2 uses rabbitmq:3.7-alpine
 postgresql:0.8.7 uses postgres:9.6.2
-xray:0.4.3 uses docker.bintray.io/jfrog/xray-indexer:2.3.0
 xray:0.4.3 uses docker.bintray.io/jfrog/xray-server:2.3.0
+xray:0.4.3 uses docker.bintray.io/jfrog/xray-indexer:2.3.0
 xray:0.4.3 uses docker.bintray.io/jfrog/xray-analysis:2.3.0
 xray:0.4.3 uses docker.bintray.io/jfrog/xray-persist:2.3.0
 
-Generated on 2022/06/15 23:31:42 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:55:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

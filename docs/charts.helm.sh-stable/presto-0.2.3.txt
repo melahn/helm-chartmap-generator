@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 presto:0.2.3 uses prestosql/presto:329
 
-Generated on 2022/06/15 23:17:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:40:34 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

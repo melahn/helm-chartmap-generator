@@ -17,5 +17,5 @@ usecase "Image\n====\nquay.io\n====\ncoreos/vault-operator:0.1.9\n====\n0.1.9" a
 'Chart Dependencies
 vault_operator_0_1_0--[#orange]-|>quay_io_coreos_vault_operator_0_1_9
 
-center footer Generated on 2022/06/15 23:30:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:54:01 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

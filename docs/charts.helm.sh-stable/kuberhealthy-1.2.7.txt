@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kuberhealthy:1.2.7 uses quay.io/comcast/kuberhealthy:v1.0.2
 
-Generated on 2022/06/15 23:04:44 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:28:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

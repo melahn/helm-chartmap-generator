@@ -28,4 +28,4 @@ Chart Dependencies
 sonatype-nexus:1.23.1 uses sonatype/nexus3:3.20.1
 sonatype-nexus:1.23.1 uses quay.io/travelaudience/docker-nexus-proxy:2.5.0
 
-Generated on 2022/06/15 23:24:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:48:39 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

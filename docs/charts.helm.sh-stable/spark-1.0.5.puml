@@ -19,5 +19,5 @@ usecase "Image\n====\nDocker Hub\n====\napache/zeppelin\n====\n0.7.3" as apache_
 spark_1_0_5--[#orange]-|>k8s_gcr_io_spark_1_5_1_v3
 spark_1_0_5--[#orange]-|>apache_zeppelin_0_7_3
 
-center footer Generated on 2022/06/15 23:25:09 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:48:52 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

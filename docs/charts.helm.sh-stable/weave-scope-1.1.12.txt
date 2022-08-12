@@ -34,7 +34,7 @@ Chart: weave-scope:1.1.12
 	apiVersion: v1
 	appVersion: 1.12.0
 	created: Not specified
-	dependencies: weave-scope-cluster-agent:1.1.10, weave-scope-agent:1.1.10, weave-scope-frontend:1.1.10
+	dependencies: weave-scope-agent:1.1.10, weave-scope-cluster-agent:1.1.10, weave-scope-frontend:1.1.10
 	description: DEPRECATED - A Helm chart for the Weave Scope cluster visualizer.
 	digest: Not specified
 	icon: https://avatars1.githubusercontent.com/u/9976052?s=64
@@ -65,8 +65,8 @@ There are 0 referenced Docker Images
 
 Chart Dependencies
 ------------------
-weave-scope:1.1.12 depends on weave-scope-cluster-agent:1.1.10
 weave-scope:1.1.12 depends on weave-scope-agent:1.1.10
+weave-scope:1.1.12 depends on weave-scope-cluster-agent:1.1.10
 weave-scope:1.1.12 depends on weave-scope-frontend:1.1.10
 
-Generated on 2022/06/15 23:31:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:55:10 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

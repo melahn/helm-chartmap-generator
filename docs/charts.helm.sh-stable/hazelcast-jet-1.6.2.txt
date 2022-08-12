@@ -28,4 +28,4 @@ Chart Dependencies
 hazelcast-jet:1.6.2 uses hazelcast/hazelcast-jet:4.1
 hazelcast-jet:1.6.2 uses hazelcast/hazelcast-jet-management-center:4.1
 
-Generated on 2022/06/15 22:56:58 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:20:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

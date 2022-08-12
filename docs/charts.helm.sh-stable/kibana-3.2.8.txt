@@ -26,4 +26,4 @@ Chart Dependencies
 ------------------
 kibana:3.2.8 uses docker.elastic.co/kibana/kibana-oss:6.7.0
 
-Generated on 2022/06/15 23:02:57 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:26:11 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -44,4 +44,4 @@ wavefront:1.1.2 depends on kube-state-metrics:2.3.1
 kube-state-metrics:2.3.1 uses quay.io/coreos/kube-state-metrics:v1.7.2
 wavefront:1.1.2 uses wavefronthq/proxy:5.7
 
-Generated on 2022/06/15 23:30:59 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:54:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

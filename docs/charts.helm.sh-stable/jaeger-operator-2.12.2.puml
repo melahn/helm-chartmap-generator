@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\njaegertracing/jaeger-operator\n====\n1.1
 'Chart Dependencies
 jaeger_operator_2_12_2--[#orange]-|>jaegertracing_jaeger_operator_1_15_1
 
-center footer Generated on 2022/06/15 23:00:13 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:23:26 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

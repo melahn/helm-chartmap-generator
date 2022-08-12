@@ -42,4 +42,4 @@ Chart Dependencies
 suitecrm:8.0.9 depends on mariadb:7.3.12
 mariadb:7.3.12 uses docker.io/bitnami/mariadb:10.3.22-debian-10-r27
 
-Generated on 2022/06/15 23:27:30 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:51:14 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

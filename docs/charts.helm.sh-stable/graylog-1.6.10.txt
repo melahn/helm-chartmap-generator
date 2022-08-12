@@ -62,4 +62,4 @@ graylog:1.6.10 uses graylog/graylog:3.1
 mongodb-replicaset:3.11.2 uses mongo:3.6
 elasticsearch:1.32.2 uses docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4
 
-Generated on 2022/06/15 22:56:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:19:20 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

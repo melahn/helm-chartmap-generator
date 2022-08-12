@@ -17,5 +17,5 @@ usecase "Image\n====\nDocker Hub\n====\nnegz/kuberos\n====\nede4085" as negz_kub
 'Chart Dependencies
 kuberos_0_2_2--[#orange]-|>negz_kuberos_ede4085
 
-center footer Generated on 2022/06/15 23:05:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:28:27 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
