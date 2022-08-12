@@ -1,0 +1,39 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "analytics",
+    "monitoring",
+    "metrics",
+    "logs"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/grafana:9.0.7-debian-11-r0",
+      "type": "image",
+      "version": "9.0.7-debian-11-r0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "grafana:8.0.11",
+  "description": "Grafana is an open source metric analytics and visualization suite for visualizing time series data that supports various types of data sources.",
+  "type": "chart",
+  "shortName": "grafana",
+  "version": "8.0.11"
+}

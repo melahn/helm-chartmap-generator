@@ -36,7 +36,7 @@ Chart: wavefront-adapter-for-istio:2.0.4
 	apiVersion: v2
 	appVersion: 0.1.5
 	created: Not specified
-	dependencies: wavefront:4.0.2, common:1.16.0
+	dependencies: common:1.16.0, wavefront:4.0.2
 	description: Wavefront Adapter for Istio is an adapter for Istio to expose Istio metrics to Wavefront. It is a lightweight tool written in Go. It supports Istio v1.4+ and Kubernetes v1.15+.
 	digest: Not specified
 	icon: https://bitnami.com/assets/stacks/wavefront-adapter-for-istio/img/wavefront-adapter-for-istio-stack-220x234.png
@@ -71,13 +71,13 @@ Image: docker.io/bitnami/kube-state-metrics:2.5.0-debian-11-r0
 
 Chart Dependencies
 ------------------
+wavefront-adapter-for-istio:2.0.4 depends on common:1.16.0
 wavefront-adapter-for-istio:2.0.4 depends on wavefront:4.0.2
 wavefront:4.0.2 depends on kube-state-metrics:3.0.4
 kube-state-metrics:3.0.4 depends on common:1.16.0
 wavefront:4.0.2 depends on common:1.16.0
-wavefront-adapter-for-istio:2.0.4 depends on common:1.16.0
 wavefront:4.0.2 uses docker.io/bitnami/wavefront-proxy:11.1.0-debian-11-r2
 wavefront-adapter-for-istio:2.0.4 uses docker.io/bitnami/wavefront-adapter-for-istio:0.1.5-debian-11-r3
 kube-state-metrics:3.0.4 uses docker.io/bitnami/kube-state-metrics:2.5.0-debian-11-r0
 
-Generated on 2022/06/15 22:40:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 02:02:54 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,47 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "rabbitmq",
+    "operator",
+    "infrastructure",
+    "message queue",
+    "AMQP"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/rmq-messaging-topology-operator:1.7.1-scratch-r2",
+      "type": "image",
+      "version": "1.7.1-scratch-r2"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/rabbitmq-cluster-operator:1.14.0-scratch-r4",
+      "type": "image",
+      "version": "1.14.0-scratch-r4"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "rabbitmq-cluster-operator:2.6.11",
+  "description": "The RabbitMQ Cluster Kubernetes Operator automates provisioning, management, and operations of RabbitMQ clusters running on Kubernetes.",
+  "type": "chart",
+  "shortName": "rabbitmq-cluster-operator",
+  "version": "2.6.11"
+}

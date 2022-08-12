@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for wavefront:4.1.1
+
+'There are 3 referenced Helm Charts
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "kube-state-metrics:3.1.6\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tprometheus\n\t\tkube-state-metrics\n\t\tmonitoring" as kube_state_metrics_3_1_6 #Gainsboro
+artifact "wavefront:4.1.1\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmetric\n\t\tmonitoring\n\t\tobservability\n\t\talerting" as wavefront_4_1_1 #LavenderBlush
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/wavefront-proxy:11.3.0-debian-11-r15\n====\n11.3.0-debian-11-r15" as docker_io_bitnami_wavefront_proxy_11_3_0_debian_11_r15 #Cyan
+usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:2.5.0-debian-11-r23\n====\n2.5.0-debian-11-r23" as docker_io_bitnami_kube_state_metrics_2_5_0_debian_11_r23 #CornflowerBlue
+
+'Chart Dependencies
+wavefront_4_1_1--[#green]-|>common_1_16_1
+wavefront_4_1_1--[#green]-|>kube_state_metrics_3_1_6
+kube_state_metrics_3_1_6--[#green]-|>common_1_16_1
+kube_state_metrics_3_1_6--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_5_0_debian_11_r23
+wavefront_4_1_1--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_3_0_debian_11_r15
+
+center footer Generated on 2022/08/12 02:02:32 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

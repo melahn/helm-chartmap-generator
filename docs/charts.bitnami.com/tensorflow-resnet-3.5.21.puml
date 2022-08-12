@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for tensorflow-resnet:3.5.21
+
+'There are 2 referenced Helm Charts
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "tensorflow-resnet:3.5.21\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\ttensorflow\n\t\tserving\n\t\tresnet\n\t\tmachine\n\t\tlearning\n\t\tlibrary" as tensorflow_resnet_3_5_21 #AliceBlue
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/tensorflow-serving:2.9.1-debian-11-r10\n====\n2.9.1-debian-11-r10" as docker_io_bitnami_tensorflow_serving_2_9_1_debian_11_r10 #DarkGoldenRod
+
+'Chart Dependencies
+tensorflow_resnet_3_5_21--[#green]-|>common_1_16_1
+tensorflow_resnet_3_5_21--[#orange]-|>docker_io_bitnami_tensorflow_serving_2_9_1_debian_11_r10
+
+center footer Generated on 2022/08/12 02:01:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

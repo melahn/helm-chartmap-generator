@@ -1,0 +1,79 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "ejbca",
+    "ca",
+    "pki",
+    "certificate"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/ejbca:7.9.0-2-debian-11-r4",
+      "type": "image",
+      "version": "7.9.0-2-debian-11-r4"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "mariadb",
+        "mysql",
+        "database",
+        "sql",
+        "prometheus"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/mariadb:10.6.8-debian-11-r21",
+          "type": "image",
+          "version": "10.6.8-debian-11-r21"
+        },
+        {
+          "maintainers": [{"name": "Bitnami"}],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.16.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.16.1"
+        }
+      ],
+      "name": "mariadb:11.1.4",
+      "description": "MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.",
+      "type": "chart",
+      "shortName": "mariadb",
+      "version": "11.1.4"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "ejbca:6.2.12",
+  "description": "EJBCA is an enterprise class PKI Certificate Authority software, built using Java (JEE) technology.",
+  "type": "chart",
+  "shortName": "ejbca",
+  "version": "6.2.12"
+}

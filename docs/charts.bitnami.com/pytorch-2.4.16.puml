@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for pytorch:2.4.16
+
+'There are 2 referenced Helm Charts
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "pytorch:2.4.16\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tpytorch\n\t\tpython\n\t\tmachine\n\t\tlearning" as pytorch_2_4_16 #LightSeaGreen
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/pytorch:1.12.0-debian-11-r14\n====\n1.12.0-debian-11-r14" as docker_io_bitnami_pytorch_1_12_0_debian_11_r14 #Coral
+
+'Chart Dependencies
+pytorch_2_4_16--[#green]-|>common_1_16_1
+pytorch_2_4_16--[#orange]-|>docker_io_bitnami_pytorch_1_12_0_debian_11_r14
+
+center footer Generated on 2022/08/12 01:58:23 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

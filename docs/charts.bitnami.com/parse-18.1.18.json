@@ -1,0 +1,82 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "parse",
+    "backend",
+    "serverless",
+    "platform",
+    "mbaas",
+    "mobile"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/parse:5.2.4-debian-11-r13",
+      "type": "image",
+      "version": "5.2.4-debian-11-r13"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "mongodb",
+        "database",
+        "nosql",
+        "cluster",
+        "replicaset",
+        "replication"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/mongodb:5.0.10-debian-11-r1",
+          "type": "image",
+          "version": "5.0.10-debian-11-r1"
+        },
+        {
+          "maintainers": [{"name": "Bitnami"}],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.16.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.16.1"
+        }
+      ],
+      "name": "mongodb:12.1.30",
+      "description": "MongoDB(R) is a relational open source NoSQL database. Easy to use, it stores data in JSON-like documents. Automated scalability and high-performance. Ideal for developing cloud native applications.",
+      "type": "chart",
+      "shortName": "mongodb",
+      "version": "12.1.30"
+    }
+  ],
+  "name": "parse:18.1.18",
+  "description": "Parse is a platform that enables users to add a scalable and powerful backend to launch a full-featured app for iOS, Android, JavaScript, Windows, Unity, and more.",
+  "type": "chart",
+  "shortName": "parse",
+  "version": "18.1.18"
+}

@@ -1,0 +1,73 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "prestashop",
+    "e-commerce",
+    "http",
+    "web",
+    "php"
+  ],
+  "children": [
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "mariadb",
+        "mysql",
+        "database",
+        "sql",
+        "prometheus"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/mariadb:10.6.8-debian-11-r9",
+          "type": "image",
+          "version": "10.6.8-debian-11-r9"
+        },
+        {
+          "maintainers": [{"name": "Bitnami"}],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.16.0",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.16.0"
+        }
+      ],
+      "name": "mariadb:11.1.1",
+      "description": "MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.",
+      "type": "chart",
+      "shortName": "mariadb",
+      "version": "11.1.1"
+    }
+  ],
+  "name": "prestashop:15.2.13",
+  "description": "PrestaShop is a powerful open source eCommerce platform used by over 250,000 online storefronts worldwide. It is easily customizable, responsive, and includes powerful tools to drive online sales.",
+  "type": "chart",
+  "shortName": "prestashop",
+  "version": "15.2.13"
+}

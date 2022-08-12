@@ -1,0 +1,64 @@
+Chart Map for ejbca:6.2.12
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: ejbca:6.2.12
+	apiVersion: v2
+	appVersion: 7.9.0-2
+	created: Not specified
+	dependencies: mariadb:11.1.4, common:1.16.1
+	description: EJBCA is an enterprise class PKI Certificate Authority software, built using Java (JEE) technology.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/ejbca/img/ejbca-stack-220x234.png
+	keywords: ejbca,ca,pki,certificate
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: ejbca
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/ejbca,https://www.ejbca.org/
+	urls: Not specified
+	version: 6.2.12
+Chart: mariadb:11.1.4
+	apiVersion: v2
+	appVersion: 10.6.8
+	created: 2022-08-03T07:51:41.777347827Z
+	dependencies: common:1.16.1
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: 0910630f5db456b1bc9f3beb7912109c6397c6edf25ca328673ba7830202c68d
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.1.4.tgz
+	version: 11.1.4
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.6.8-debian-11-r21
+Image: docker.io/bitnami/ejbca:7.9.0-2-debian-11-r4
+
+Chart Dependencies
+------------------
+ejbca:6.2.12 depends on mariadb:11.1.4
+mariadb:11.1.4 depends on common:1.16.1
+ejbca:6.2.12 depends on common:1.16.1
+ejbca:6.2.12 uses docker.io/bitnami/ejbca:7.9.0-2-debian-11-r4
+mariadb:11.1.4 uses docker.io/bitnami/mariadb:10.6.8-debian-11-r21
+
+Generated on 2022/08/12 01:41:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

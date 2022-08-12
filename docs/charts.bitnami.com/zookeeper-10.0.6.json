@@ -1,0 +1,34 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": ["zookeeper"],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/zookeeper:3.8.0-debian-11-r24",
+      "type": "image",
+      "version": "3.8.0-debian-11-r24"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "zookeeper:10.0.6",
+  "description": "Apache ZooKeeper provides a reliable, centralized register of configuration data and services for distributed applications.",
+  "type": "chart",
+  "shortName": "zookeeper",
+  "version": "10.0.6"
+}

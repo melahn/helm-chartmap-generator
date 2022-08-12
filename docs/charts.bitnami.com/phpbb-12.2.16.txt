@@ -1,0 +1,64 @@
+Chart Map for phpbb:12.2.16
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: mariadb:11.1.6
+	apiVersion: v2
+	appVersion: 10.6.8
+	created: 2022-08-04T17:52:21.492577029Z
+	dependencies: common:1.16.1
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: 70ed8558a4e85fe822b18f766277ff6110cc6e91790cd3c415b54a17aa6cdef2
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.1.6.tgz
+	version: 11.1.6
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: phpbb:12.2.16
+	apiVersion: v2
+	appVersion: 3.3.8
+	created: Not specified
+	dependencies: mariadb:11.1.6, common:1.16.1
+	description: phpBB is a popular bulletin board that features robust messaging capabilities such as flat message structure, subforums, topic split/merge/lock, user groups, full-text search, and attachments.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/phpbb/img/phpbb-stack-220x234.png
+	keywords: phpbb,forum,http,php
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: phpbb
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/phpbb,https://www.phpbb.com/
+	urls: Not specified
+	version: 12.2.16
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.6.8-debian-11-r23
+Image: docker.io/bitnami/phpbb:3.3.8-debian-11-r14
+
+Chart Dependencies
+------------------
+phpbb:12.2.16 depends on mariadb:11.1.6
+mariadb:11.1.6 depends on common:1.16.1
+phpbb:12.2.16 depends on common:1.16.1
+mariadb:11.1.6 uses docker.io/bitnami/mariadb:10.6.8-debian-11-r23
+phpbb:12.2.16 uses docker.io/bitnami/phpbb:3.3.8-debian-11-r14
+
+Generated on 2022/08/12 01:57:00 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

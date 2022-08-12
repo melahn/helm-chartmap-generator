@@ -1,0 +1,85 @@
+Chart Map for kong:6.3.30
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: postgresql:11.6.23
+	apiVersion: v2
+	appVersion: 14.4.0
+	created: 2022-08-04T06:49:47.082524559Z
+	dependencies: common:1.16.1
+	description: PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+	digest: 0c436fca04255cab5abdb70b037ad0920df6b79177b7ad5edcd2549632e190e0
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/postgresql,https://www.postgresql.org/
+	urls: https://charts.bitnami.com/bitnami/postgresql-11.6.23.tgz
+	version: 11.6.23
+Chart: cassandra:9.2.10
+	apiVersion: v2
+	appVersion: 4.0.5
+	created: 2022-08-03T08:44:36.744441383Z
+	dependencies: common:1.16.1
+	description: Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many servers, providing high availability with no single point of failure.
+	digest: sha256:b970921235e811bb21011efae058e196f82bc224cc5e10f2c86f4be72f840760
+	icon: https://bitnami.com/assets/stacks/cassandra/img/cassandra-stack-220x234.png
+	keywords: cassandra,database,nosql
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: cassandra
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/cassandra,http://cassandra.apache.org
+	urls: https://charts.bitnami.com/bitnami/cassandra-9.2.10.tgz
+	version: 9.2.10
+Chart: kong:6.3.30
+	apiVersion: v2
+	appVersion: 2.8.1
+	created: Not specified
+	dependencies: postgresql:11.6.23, common:1.16.1, cassandra:9.2.10
+	description: Kong is an open source Microservice API gateway and platform designed for managing microservices requests of high-availability, fault-tolerance, and distributed systems.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/kong/img/kong-stack-220x234.png
+	keywords: kong,ingress,openresty,controller,http,web,www,reverse proxy
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: kong
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/kong,https://konghq.com/
+	urls: Not specified
+	version: 6.3.30
+
+There are 4 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/kong-ingress-controller:2.5.0-debian-11-r11
+Image: docker.io/bitnami/postgresql:11.16.0-debian-11-r31
+Image: docker.io/bitnami/cassandra:4.0.5-debian-11-r5
+Image: docker.io/bitnami/kong:2.8.1-debian-11-r31
+
+Chart Dependencies
+------------------
+kong:6.3.30 depends on postgresql:11.6.23
+postgresql:11.6.23 depends on common:1.16.1
+kong:6.3.30 depends on common:1.16.1
+kong:6.3.30 depends on cassandra:9.2.10
+cassandra:9.2.10 depends on common:1.16.1
+postgresql:11.6.23 uses docker.io/bitnami/postgresql:11.16.0-debian-11-r31
+cassandra:9.2.10 uses docker.io/bitnami/cassandra:4.0.5-debian-11-r5
+kong:6.3.30 uses docker.io/bitnami/kong-ingress-controller:2.5.0-debian-11-r11
+kong:6.3.30 uses docker.io/bitnami/kong:2.8.1-debian-11-r31
+
+Generated on 2022/08/12 01:49:08 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

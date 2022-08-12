@@ -1,0 +1,37 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "asp.net",
+    "dotnet"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/aspnet-core:6.0.8-debian-11-r0",
+      "type": "image",
+      "version": "6.0.8-debian-11-r0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "aspnet-core:3.4.20",
+  "description": "ASP.NET Core is an open-source framework for web application development created by Microsoft. It runs on both the full .NET Framework, on Windows, and the cross-platform .NET Core.",
+  "type": "chart",
+  "shortName": "aspnet-core",
+  "version": "3.4.20"
+}

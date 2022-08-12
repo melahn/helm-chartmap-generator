@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for node:18.1.20
+
+'There are 3 referenced Helm Charts
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "node:18.1.20\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tnode\n\t\tjavascript\n\t\tnodejs\n\t\tgit" as node_18_1_20 #AliceBlue
+artifact "mongodb:12.1.31\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmongodb\n\t\tdatabase\n\t\tnosql\n\t\tcluster\n\t\treplicaset\n\t\treplication" as mongodb_12_1_31 #GreenYellow
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/node:16.16.0-debian-11-r13\n====\n16.16.0-debian-11-r13" as docker_io_bitnami_node_16_16_0_debian_11_r13 #Cornsilk
+usecase "Image\n====\ndocker.io\n====\nbitnami/mongodb:5.0.10-debian-11-r3\n====\n5.0.10-debian-11-r3" as docker_io_bitnami_mongodb_5_0_10_debian_11_r3 #Bisque
+
+'Chart Dependencies
+node_18_1_20--[#green]-|>mongodb_12_1_31
+mongodb_12_1_31--[#green]-|>common_1_16_1
+node_18_1_20--[#green]-|>common_1_16_1
+node_18_1_20--[#orange]-|>docker_io_bitnami_node_16_16_0_debian_11_r13
+mongodb_12_1_31--[#orange]-|>docker_io_bitnami_mongodb_5_0_10_debian_11_r3
+
+center footer Generated on 2022/08/12 01:55:07 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

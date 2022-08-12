@@ -1,0 +1,85 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "kubernetes",
+    "oauth",
+    "oauth2",
+    "authentication",
+    "google",
+    "github"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/oauth2-proxy:7.3.0-debian-11-r22",
+      "type": "image",
+      "version": "7.3.0-debian-11-r22"
+    },
+    {
+      "maintainers": [
+        {"name": "Bitnami"},
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/redis:7.0.4-debian-11-r4",
+          "type": "image",
+          "version": "7.0.4-debian-11-r4"
+        },
+        {
+          "maintainers": [{"name": "Bitnami"}],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.16.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.16.1"
+        }
+      ],
+      "name": "redis:17.0.6",
+      "description": "Redis(R) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "17.0.6"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "oauth2-proxy:3.0.3",
+  "description": "A reverse proxy and static file server that provides authentication using Providers (Google, GitHub, and others) to validate accounts by email, domain or group.",
+  "type": "chart",
+  "shortName": "oauth2-proxy",
+  "version": "3.0.3"
+}

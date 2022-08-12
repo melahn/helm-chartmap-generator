@@ -1,0 +1,41 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "mongodb",
+    "database",
+    "nosql",
+    "cluster",
+    "replicaset",
+    "replication"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/mongodb-sharded:6.0.0-debian-11-r0",
+      "type": "image",
+      "version": "6.0.0-debian-11-r0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "mongodb-sharded:6.0.1",
+  "description": "MongoDB(R) is an open source NoSQL database that uses JSON for data storage. MongoDB(TM) Sharded improves scalability and reliability for large datasets by distributing data across multiple machines.",
+  "type": "chart",
+  "shortName": "mongodb-sharded",
+  "version": "6.0.1"
+}

@@ -1,0 +1,23 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for nginx-intel:2.0.16
+
+'There are 2 referenced Helm Charts
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "nginx-intel:2.0.16\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tnginx\n\t\thttp\n\t\tweb\n\t\twww\n\t\treverse proxy" as nginx_intel_2_0_16 #Khaki
+
+'There is one referenced Docker Image
+usecase "Image\n====\ndocker.io\n====\nbitnami/nginx-intel:0.4.7-debian-11-r25\n====\n0.4.7-debian-11-r25" as docker_io_bitnami_nginx_intel_0_4_7_debian_11_r25 #AntiqueWhite
+
+'Chart Dependencies
+nginx_intel_2_0_16--[#green]-|>common_1_16_1
+nginx_intel_2_0_16--[#orange]-|>docker_io_bitnami_nginx_intel_0_4_7_debian_11_r25
+
+center footer Generated on 2022/08/12 01:54:43 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

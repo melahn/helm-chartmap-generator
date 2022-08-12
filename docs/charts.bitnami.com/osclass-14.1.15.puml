@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for osclass:14.1.15
+
+'There are 3 referenced Helm Charts
+artifact "mariadb:11.0.14\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_11_0_14 #DarkTurquoise
+artifact "common:1.16.0\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_0 #DarkSeaGreen
+artifact "osclass:14.1.15\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tosclass\n\t\tclassifieds\n\t\thttp\n\t\tweb\n\t\tphp" as osclass_14_1_15 #GoldenRod
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/osclass:8.0.2-debian-11-r14\n====\n8.0.2-debian-11-r14" as docker_io_bitnami_osclass_8_0_2_debian_11_r14 #LawnGreen
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.6.8-debian-11-r9\n====\n10.6.8-debian-11-r9" as docker_io_bitnami_mariadb_10_6_8_debian_11_r9 #DarkGoldenRod
+
+'Chart Dependencies
+osclass_14_1_15--[#green]-|>common_1_16_0
+osclass_14_1_15--[#green]-|>mariadb_11_0_14
+mariadb_11_0_14--[#green]-|>common_1_16_0
+mariadb_11_0_14--[#orange]-|>docker_io_bitnami_mariadb_10_6_8_debian_11_r9
+osclass_14_1_15--[#orange]-|>docker_io_bitnami_osclass_8_0_2_debian_11_r14
+
+center footer Generated on 2022/08/12 01:56:30 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,41 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "dokuwiki",
+    "wiki",
+    "http",
+    "web",
+    "application",
+    "php"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/dokuwiki:2022.7.31-debian-11-r0",
+      "type": "image",
+      "version": "2022.7.31-debian-11-r0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "dokuwiki:13.0.0",
+  "description": "DokuWiki is a standards-compliant wiki optimized for creating documentation. Designed to be simple to use for small organizations, it stores all data in plain text files so no database is required.",
+  "type": "chart",
+  "shortName": "dokuwiki",
+  "version": "13.0.0"
+}

@@ -1,0 +1,30 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for grafana-loki:2.2.8
+
+'There are 3 referenced Helm Charts
+artifact "memcached:6.1.10\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmemcached\n\t\tcache" as memcached_6_1_10 #DarkSeaGreen
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "grafana-loki:2.2.8\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tgrafana\n\t\ttracing\n\t\tmetrics\n\t\tinfrastructure" as grafana_loki_2_2_8 #DeepSkyBlue
+
+'There are 3 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/grafana-loki:2.6.1-debian-11-r9\n====\n2.6.1-debian-11-r9" as docker_io_bitnami_grafana_loki_2_6_1_debian_11_r9 #CadetBlue
+usecase "Image\n====\ndocker.io\n====\nbitnami/memcached:1.6.16-debian-11-r1\n====\n1.6.16-debian-11-r1" as docker_io_bitnami_memcached_1_6_16_debian_11_r1 #CadetBlue
+usecase "Image\n====\ndocker.io\n====\nbitnami/nginx:1.23.1-debian-11-r7\n====\n1.23.1-debian-11-r7" as docker_io_bitnami_nginx_1_23_1_debian_11_r7 #LightPink
+
+'Chart Dependencies
+grafana_loki_2_2_8--[#green]-|>common_1_16_1
+grafana_loki_2_2_8--[#green]-|>memcached_6_1_10
+memcached_6_1_10--[#green]-|>common_1_16_1
+memcached_6_1_10--[#orange]-|>docker_io_bitnami_memcached_1_6_16_debian_11_r1
+grafana_loki_2_2_8--[#orange]-|>docker_io_bitnami_nginx_1_23_1_debian_11_r7
+grafana_loki_2_2_8--[#orange]-|>docker_io_bitnami_grafana_loki_2_6_1_debian_11_r9
+
+center footer Generated on 2022/08/12 01:44:21 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

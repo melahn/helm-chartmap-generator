@@ -1,0 +1,41 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "tomcat",
+    "java",
+    "http",
+    "web",
+    "application server",
+    "jsp"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/tomcat:10.0.23-debian-11-r2",
+      "type": "image",
+      "version": "10.0.23-debian-11-r2"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "tomcat:10.3.12",
+  "description": "Apache Tomcat is an open-source web server designed to host and run Java-based web applications. It is a lightweight server with a good performance for applications running in production environments.",
+  "type": "chart",
+  "shortName": "tomcat",
+  "version": "10.3.12"
+}

@@ -1,0 +1,134 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "Devops",
+    "Kubernetes",
+    "Jobs",
+    "Continuous delivery",
+    "Continous deployment"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/argo-workflow-controller:3.3.8-scratch-r3",
+      "type": "image",
+      "version": "3.3.8-scratch-r3"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/argo-workflow-cli:3.3.8-scratch-r7",
+      "type": "image",
+      "version": "3.3.8-scratch-r7"
+    },
+    {
+      "maintainers": [
+        {"name": "Bitnami"},
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "postgresql",
+        "postgres",
+        "database",
+        "sql",
+        "replication",
+        "cluster"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/postgresql:14.4.0-debian-11-r20",
+          "type": "image",
+          "version": "14.4.0-debian-11-r20"
+        },
+        {
+          "maintainers": [{"name": "Bitnami"}],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.16.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.16.1"
+        }
+      ],
+      "name": "postgresql:11.6.23",
+      "description": "PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.",
+      "type": "chart",
+      "shortName": "postgresql",
+      "version": "11.6.23"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "mysql",
+        "database",
+        "sql",
+        "cluster",
+        "high availability"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/mysql:8.0.30-debian-11-r3",
+          "type": "image",
+          "version": "8.0.30-debian-11-r3"
+        },
+        {
+          "maintainers": [{"name": "Bitnami"}],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.16.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.16.1"
+        }
+      ],
+      "name": "mysql:9.2.4",
+      "description": "MySQL is a fast, reliable, scalable, and easy to use open source relational database system. Designed to handle mission-critical, heavy-load production applications.",
+      "type": "chart",
+      "shortName": "mysql",
+      "version": "9.2.4"
+    }
+  ],
+  "name": "argo-workflows:2.3.8",
+  "description": "Argo Workflows is meant to orchestrate Kubernetes jobs in parallel. It uses DAG and step-based workflows",
+  "type": "chart",
+  "shortName": "argo-workflows",
+  "version": "2.3.8"
+}

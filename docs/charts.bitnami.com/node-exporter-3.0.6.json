@@ -1,0 +1,29 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "prometheus",
+    "node-exporter",
+    "monitoring"
+  ],
+  "children": [{
+    "maintainers": [{"name": "Bitnami"}],
+    "keywords": [
+      "common",
+      "helper",
+      "template",
+      "function",
+      "bitnami"
+    ],
+    "children": [],
+    "name": "common:1.16.1",
+    "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+    "type": "chart",
+    "shortName": "common",
+    "version": "1.16.1"
+  }],
+  "name": "node-exporter:3.0.6",
+  "description": "Prometheus exporter for hardware and OS metrics exposed by UNIX kernels, with pluggable metric collectors.",
+  "type": "chart",
+  "shortName": "node-exporter",
+  "version": "3.0.6"
+}

@@ -1,0 +1,53 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "go",
+    "security",
+    "tls",
+    "certificate"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/cainjector:1.9.1-debian-11-r6",
+      "type": "image",
+      "version": "1.9.1-debian-11-r6"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/cert-manager-webhook:1.9.1-debian-11-r5",
+      "type": "image",
+      "version": "1.9.1-debian-11-r5"
+    },
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/cert-manager:1.9.1-debian-11-r6",
+      "type": "image",
+      "version": "1.9.1-debian-11-r6"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "cert-manager:0.7.8",
+  "description": "Cert Manager is a Kubernetes add-on to automate the management and issuance of TLS certificates from various issuing sources.",
+  "type": "chart",
+  "shortName": "cert-manager",
+  "version": "0.7.8"
+}

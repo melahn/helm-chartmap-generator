@@ -1,0 +1,45 @@
+Chart Map for wavefront-hpa-adapter:1.2.5
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: wavefront-hpa-adapter:1.2.5
+	apiVersion: v2
+	appVersion: 0.9.9
+	created: Not specified
+	dependencies: common:1.16.1
+	description: Wavefront HPA Adapter for Kubernetes is a Kubernetes Horizontal Pod Autoscaler adapter. It allows to scale your Kubernetes workloads based on Wavefront metrics.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/wavefront-hpa-adapter/img/wavefront-hpa-adapter-stack-220x234.png
+	keywords: alerting,adapter,metrics,monitoring,observability,wavefront
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: wavefront-hpa-adapter
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/wavefront-hpa-adapter
+	urls: Not specified
+	version: 1.2.5
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/wavefront-hpa-adapter:0.9.9-scratch-r2
+
+Chart Dependencies
+------------------
+wavefront-hpa-adapter:1.2.5 depends on common:1.16.1
+wavefront-hpa-adapter:1.2.5 uses docker.io/bitnami/wavefront-hpa-adapter:0.9.9-scratch-r2
+
+Generated on 2022/08/12 02:03:06 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

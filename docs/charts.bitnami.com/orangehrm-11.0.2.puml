@@ -18,11 +18,11 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/orangehrm:4.9.0-0-debian-10-r51\n
 usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.5.13-debian-10-r32\n====\n10.5.13-debian-10-r32" as docker_io_bitnami_mariadb_10_5_13_debian_10_r32 #DarkGoldenRod
 
 'Chart Dependencies
+orangehrm_11_0_2--[#green]-|>common_1_10_3
 orangehrm_11_0_2--[#green]-|>mariadb_10_3_0
 mariadb_10_3_0--[#green]-|>common_1_10_3
-orangehrm_11_0_2--[#green]-|>common_1_10_3
 mariadb_10_3_0--[#orange]-|>docker_io_bitnami_mariadb_10_5_13_debian_10_r32
 orangehrm_11_0_2--[#orange]-|>docker_io_bitnami_orangehrm_4_9_0_0_debian_10_r51
 
-center footer Generated on 2022/06/15 22:34:08 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 01:56:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

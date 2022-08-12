@@ -1,0 +1,35 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kong:6.3.32
+
+'There are 4 referenced Helm Charts
+artifact "kong:6.3.32\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkong\n\t\tingress\n\t\topenresty\n\t\tcontroller\n\t\thttp\n\t\tweb\n\t\twww\n\t\treverse proxy" as kong_6_3_32 #LightSteelBlue
+artifact "cassandra:9.2.12\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcassandra\n\t\tdatabase\n\t\tnosql" as cassandra_9_2_12 #Gainsboro
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "postgresql:11.6.26\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_6_26 #LightSteelBlue
+
+'There are 4 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:11.16.0-debian-11-r33\n====\n11.16.0-debian-11-r33" as docker_io_bitnami_postgresql_11_16_0_debian_11_r33 #DarkSalmon
+usecase "Image\n====\ndocker.io\n====\nbitnami/kong:2.8.1-debian-11-r34\n====\n2.8.1-debian-11-r34" as docker_io_bitnami_kong_2_8_1_debian_11_r34 #LavenderBlush
+usecase "Image\n====\ndocker.io\n====\nbitnami/cassandra:4.0.5-debian-11-r8\n====\n4.0.5-debian-11-r8" as docker_io_bitnami_cassandra_4_0_5_debian_11_r8 #Khaki
+usecase "Image\n====\ndocker.io\n====\nbitnami/kong-ingress-controller:2.5.0-debian-11-r13\n====\n2.5.0-debian-11-r13" as docker_io_bitnami_kong_ingress_controller_2_5_0_debian_11_r13 #LightCyan
+
+'Chart Dependencies
+kong_6_3_32--[#green]-|>postgresql_11_6_26
+postgresql_11_6_26--[#green]-|>common_1_16_1
+kong_6_3_32--[#green]-|>common_1_16_1
+kong_6_3_32--[#green]-|>cassandra_9_2_12
+cassandra_9_2_12--[#green]-|>common_1_16_1
+kong_6_3_32--[#orange]-|>docker_io_bitnami_kong_2_8_1_debian_11_r34
+kong_6_3_32--[#orange]-|>docker_io_bitnami_kong_ingress_controller_2_5_0_debian_11_r13
+cassandra_9_2_12--[#orange]-|>docker_io_bitnami_cassandra_4_0_5_debian_11_r8
+postgresql_11_6_26--[#orange]-|>docker_io_bitnami_postgresql_11_16_0_debian_11_r33
+
+center footer Generated on 2022/08/12 01:48:59 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

@@ -1,0 +1,45 @@
+Chart Map for geode:1.0.0
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: geode:1.0.0
+	apiVersion: v2
+	appVersion: 1.15.0
+	created: Not specified
+	dependencies: common:1.16.1
+	description: Apache Geode is a data management platform that provides advanced capabilities for data-intensive applications.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/geode/img/geode-stack-220x234.png
+	keywords: apache,geode,database
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: geode
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/geode,https://github.com/apache/geode
+	urls: Not specified
+	version: 1.0.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/geode:1.15.0-debian-11-r17
+
+Chart Dependencies
+------------------
+geode:1.0.0 depends on common:1.16.1
+geode:1.0.0 uses docker.io/bitnami/geode:1.15.0-debian-11-r17
+
+Generated on 2022/08/12 01:43:27 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

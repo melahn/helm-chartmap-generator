@@ -1,0 +1,49 @@
+Chart Map for cert-manager:0.7.7
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: cert-manager:0.7.7
+	apiVersion: v2
+	appVersion: 1.9.1
+	created: Not specified
+	dependencies: common:1.16.1
+	description: Cert Manager is a Kubernetes add-on to automate the management and issuance of TLS certificates from various issuing sources.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/cert-manager/img/cert-manager-stack-220x234.png
+	keywords: go,security,tls,certificate
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: cert-manager
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/cert-manager,https://github.com/bitnami/containers/tree/main/bitnami/cert-manager-webhook,https://github.com/bitnami/containers/tree/main/bitnami/cainjector,https://github.com/jetstack/cert-manager
+	urls: Not specified
+	version: 0.7.7
+
+There are 3 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/cert-manager-webhook:1.9.1-debian-11-r3
+Image: docker.io/bitnami/cainjector:1.9.1-debian-11-r4
+Image: docker.io/bitnami/cert-manager:1.9.1-debian-11-r4
+
+Chart Dependencies
+------------------
+cert-manager:0.7.7 depends on common:1.16.1
+cert-manager:0.7.7 uses docker.io/bitnami/cert-manager-webhook:1.9.1-debian-11-r3
+cert-manager:0.7.7 uses docker.io/bitnami/cainjector:1.9.1-debian-11-r4
+cert-manager:0.7.7 uses docker.io/bitnami/cert-manager:1.9.1-debian-11-r4
+
+Generated on 2022/08/12 01:37:47 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

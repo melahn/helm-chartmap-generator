@@ -1,0 +1,80 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "node",
+    "javascript",
+    "nodejs",
+    "git"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/node:16.16.0-debian-11-r16",
+      "type": "image",
+      "version": "16.16.0-debian-11-r16"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "mongodb",
+        "database",
+        "nosql",
+        "cluster",
+        "replicaset",
+        "replication"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/mongodb:6.0.0-debian-11-r0",
+          "type": "image",
+          "version": "6.0.0-debian-11-r0"
+        },
+        {
+          "maintainers": [{"name": "Bitnami"}],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.16.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.16.1"
+        }
+      ],
+      "name": "mongodb:13.0.0",
+      "description": "MongoDB(R) is a relational open source NoSQL database. Easy to use, it stores data in JSON-like documents. Automated scalability and high-performance. Ideal for developing cloud native applications.",
+      "type": "chart",
+      "shortName": "mongodb",
+      "version": "13.0.0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "node:19.0.2",
+  "description": "Node.js is a runtime environment built on V8 JavaScript engine. Its event-driven, non-blocking I/O model enables the development of fast, scalable, and data-intensive server applications.",
+  "type": "chart",
+  "shortName": "node",
+  "version": "19.0.2"
+}

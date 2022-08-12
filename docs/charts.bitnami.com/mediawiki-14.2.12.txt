@@ -1,0 +1,62 @@
+Chart Map for mediawiki:14.2.12
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: mariadb:11.0.14
+	apiVersion: v2
+	appVersion: 10.6.8
+	created: 2022-06-30T10:57:18.718409683Z
+	dependencies: common:1.16.0
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: 91fe0e4ea7c5eda4ed590f0eb866de5b0d3f563ca5247032ae2f11f4f32ec934
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/bitnami-docker-mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.0.14.tgz
+	version: 11.0.14
+Chart: mediawiki:14.2.12
+	apiVersion: v2
+	appVersion: 1.38.2
+	created: Not specified
+	dependencies: mariadb:11.0.14, common:1.16.0
+	description: MediaWiki is the free and open source wiki software that powers Wikipedia. Used by thousands of organizations, it is extremely powerful, scalable software and a feature-rich wiki implementation.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/mediawiki/img/mediawiki-stack-220x234.png
+	keywords: mediawiki,wiki,http,web,application,php
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mediawiki
+	sources: https://github.com/bitnami/bitnami-docker-mediawiki,https://www.mediawiki.org/
+	urls: Not specified
+	version: 14.2.12
+Chart: common:1.16.0
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-06-03T14:26:06.328357199Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:612ba0ee47eecb204499b7021508c8ebff38d8b50899be717de3e44e7aa78aec
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.0.tgz
+	version: 1.16.0
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.6.8-debian-11-r9
+
+Chart Dependencies
+------------------
+mediawiki:14.2.12 depends on mariadb:11.0.14
+mariadb:11.0.14 depends on common:1.16.0
+mediawiki:14.2.12 depends on common:1.16.0
+mariadb:11.0.14 uses docker.io/bitnami/mariadb:10.6.8-debian-11-r9
+
+Generated on 2022/08/12 01:52:02 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

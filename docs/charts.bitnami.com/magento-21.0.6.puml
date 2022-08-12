@@ -1,0 +1,34 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for magento:21.0.6
+
+'There are 5 referenced Helm Charts
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "kibana:10.1.17\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkibana\n\t\tanalytics\n\t\tmonitoring\n\t\tmetrics\n\t\tlogs" as kibana_10_1_17 #GhostWhite
+artifact "mariadb:11.1.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_11_1_5 #DarkTurquoise
+artifact "magento:21.0.6\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmagento\n\t\te-commerce\n\t\thttp\n\t\tweb\n\t\tphp" as magento_21_0_6 #HotPink
+artifact "elasticsearch:19.1.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: elasticsearch" as elasticsearch_19_1_5 #Aquamarine
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/elasticsearch:7.17.5-debian-11-r13\n====\n7.17.5-debian-11-r13" as docker_io_bitnami_elasticsearch_7_17_5_debian_11_r13 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.4.25-debian-11-r24\n====\n10.4.25-debian-11-r24" as docker_io_bitnami_mariadb_10_4_25_debian_11_r24 #DarkGoldenRod
+
+'Chart Dependencies
+magento_21_0_6--[#green]-|>common_1_16_1
+magento_21_0_6--[#green]-|>mariadb_11_1_5
+mariadb_11_1_5--[#green]-|>common_1_16_1
+magento_21_0_6--[#green]-|>elasticsearch_19_1_5
+elasticsearch_19_1_5--[#green]-|>kibana_10_1_17
+kibana_10_1_17--[#green]-|>common_1_16_1
+elasticsearch_19_1_5--[#green]-|>common_1_16_1
+mariadb_11_1_5--[#orange]-|>docker_io_bitnami_mariadb_10_4_25_debian_11_r24
+elasticsearch_19_1_5--[#orange]-|>docker_io_bitnami_elasticsearch_7_17_5_debian_11_r13
+
+center footer Generated on 2022/08/12 01:51:11 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

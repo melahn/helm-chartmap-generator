@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for odoo:21.5.4
+
+'There are 3 referenced Helm Charts
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "postgresql:11.6.24\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_6_24 #LightSteelBlue
+artifact "odoo:21.5.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\todoo\n\t\tcrm\n\t\twww\n\t\thttp\n\t\tweb" as odoo_21_5_4 #LightSteelBlue
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.4.0-debian-11-r21\n====\n14.4.0-debian-11-r21" as docker_io_bitnami_postgresql_14_4_0_debian_11_r21 #DarkSalmon
+usecase "Image\n====\ndocker.io\n====\nbitnami/odoo:15.0.20220710-debian-11-r9\n====\n15.0.20220710-debian-11-r9" as docker_io_bitnami_odoo_15_0_20220710_debian_11_r9 #LavenderBlush
+
+'Chart Dependencies
+odoo_21_5_4--[#green]-|>common_1_16_1
+odoo_21_5_4--[#green]-|>postgresql_11_6_24
+postgresql_11_6_24--[#green]-|>common_1_16_1
+postgresql_11_6_24--[#orange]-|>docker_io_bitnami_postgresql_14_4_0_debian_11_r21
+odoo_21_5_4--[#orange]-|>docker_io_bitnami_odoo_15_0_20220710_debian_11_r9
+
+center footer Generated on 2022/08/12 01:55:45 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

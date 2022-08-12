@@ -1,0 +1,83 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "Continuous delivery",
+    "Continuous deployment",
+    "Devops",
+    "Kubernetes"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/argo-cd:2.4.8-debian-11-r3",
+      "type": "image",
+      "version": "2.4.8-debian-11-r3"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    },
+    {
+      "maintainers": [
+        {"name": "Bitnami"},
+        {
+          "name": "desaintmartin",
+          "email": "cedric@desaintmartin.fr"
+        }
+      ],
+      "keywords": [
+        "redis",
+        "keyvalue",
+        "database"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/redis:7.0.4-debian-11-r9",
+          "type": "image",
+          "version": "7.0.4-debian-11-r9"
+        },
+        {
+          "maintainers": [{"name": "Bitnami"}],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.16.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.16.1"
+        }
+      ],
+      "name": "redis:17.0.8",
+      "description": "Redis(R) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+      "type": "chart",
+      "shortName": "redis",
+      "version": "17.0.8"
+    }
+  ],
+  "name": "argo-cd:4.0.6",
+  "description": "Argo CD is a continuous delivery tool for Kubernetes based on GitOps.",
+  "type": "chart",
+  "shortName": "argo-cd",
+  "version": "4.0.6"
+}

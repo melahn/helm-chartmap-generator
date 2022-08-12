@@ -1,0 +1,64 @@
+Chart Map for parse:18.1.18
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: parse:18.1.18
+	apiVersion: v2
+	appVersion: 5.2.4
+	created: Not specified
+	dependencies: mongodb:12.1.30, common:1.16.1
+	description: Parse is a platform that enables users to add a scalable and powerful backend to launch a full-featured app for iOS, Android, JavaScript, Windows, Unity, and more.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/parse/img/parse-stack-220x234.png
+	keywords: parse,backend,serverless,platform,mbaas,mobile
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: parse
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/parse,https://github.com/bitnami/containers/tree/main/bitnami/parse-dashboard,https://parse.com/
+	urls: Not specified
+	version: 18.1.18
+Chart: mongodb:12.1.30
+	apiVersion: v2
+	appVersion: 5.0.10
+	created: 2022-07-28T12:13:14.776839836Z
+	dependencies: common:1.16.1
+	description: MongoDB(R) is a relational open source NoSQL database. Easy to use, it stores data in JSON-like documents. Automated scalability and high-performance. Ideal for developing cloud native applications.
+	digest: 204fd78bdba73d6fe578e1e59e958df81f29804ac2b55e9508721f5a1d7f0738
+	icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+	keywords: mongodb,database,nosql,cluster,replicaset,replication
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mongodb
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/mongodb,https://mongodb.org
+	urls: https://charts.bitnami.com/bitnami/mongodb-12.1.30.tgz
+	version: 12.1.30
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/parse:5.2.4-debian-11-r13
+Image: docker.io/bitnami/mongodb:5.0.10-debian-11-r1
+
+Chart Dependencies
+------------------
+parse:18.1.18 depends on mongodb:12.1.30
+mongodb:12.1.30 depends on common:1.16.1
+parse:18.1.18 depends on common:1.16.1
+parse:18.1.18 uses docker.io/bitnami/parse:5.2.4-debian-11-r13
+mongodb:12.1.30 uses docker.io/bitnami/mongodb:5.0.10-debian-11-r1
+
+Generated on 2022/08/12 01:56:50 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,45 @@
+Chart Map for tensorflow-resnet:3.5.22
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: tensorflow-resnet:3.5.22
+	apiVersion: v2
+	appVersion: 2.9.1
+	created: Not specified
+	dependencies: common:1.16.1
+	description: TensorFlow ResNet is a client utility for use with TensorFlow Serving and ResNet models.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/tensorflow-inception/img/tensorflow-inception-stack-220x234.png
+	keywords: tensorflow,serving,resnet,machine,learning,library
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: tensorflow-resnet
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/tensorflow-serving,https://github.com/bitnami/containers/tree/main/bitnami/tensorflow-resnet,https://www.tensorflow.org/serving/
+	urls: Not specified
+	version: 3.5.22
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/tensorflow-serving:2.9.1-debian-11-r12
+
+Chart Dependencies
+------------------
+tensorflow-resnet:3.5.22 depends on common:1.16.1
+tensorflow-resnet:3.5.22 uses docker.io/bitnami/tensorflow-serving:2.9.1-debian-11-r12
+
+Generated on 2022/08/12 02:01:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

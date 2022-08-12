@@ -1,0 +1,41 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for kubeapps:10.0.5
+
+'There are 4 referenced Helm Charts
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "redis:17.0.7\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tredis\n\t\tkeyvalue\n\t\tdatabase" as redis_17_0_7 #LightSeaGreen
+artifact "postgresql:11.6.23\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_6_23 #LightSteelBlue
+artifact "kubeapps:10.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\thelm\n\t\tdashboard\n\t\tservice catalog\n\t\tdeployment" as kubeapps_10_0_5 #FloralWhite
+
+'There are 7 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/nginx:1.23.1-debian-11-r5\n====\n1.23.1-debian-11-r5" as docker_io_bitnami_nginx_1_23_1_debian_11_r5 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/kubeapps-kubeops:2.4.6-scratch-r3\n====\n2.4.6-scratch-r3" as docker_io_bitnami_kubeapps_kubeops_2_4_6_scratch_r3 #LightSeaGreen
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.4.0-debian-11-r20\n====\n14.4.0-debian-11-r20" as docker_io_bitnami_postgresql_14_4_0_debian_11_r20 #DarkSalmon
+usecase "Image\n====\ndocker.io\n====\nbitnami/redis:7.0.4-debian-11-r7\n====\n7.0.4-debian-11-r7" as docker_io_bitnami_redis_7_0_4_debian_11_r7 #Azure
+usecase "Image\n====\ndocker.io\n====\nbitnami/kubeapps-apis:2.4.6-debian-11-r16\n====\n2.4.6-debian-11-r16" as docker_io_bitnami_kubeapps_apis_2_4_6_debian_11_r16 #LightGrey
+usecase "Image\n====\ndocker.io\n====\nbitnami/kubeapps-dashboard:2.4.6-debian-11-r14\n====\n2.4.6-debian-11-r14" as docker_io_bitnami_kubeapps_dashboard_2_4_6_debian_11_r14 #CadetBlue
+usecase "Image\n====\ndocker.io\n====\nbitnami/kubeapps-apprepository-controller:2.4.6-scratch-r3\n====\n2.4.6-scratch-r3" as docker_io_bitnami_kubeapps_apprepository_controller_2_4_6_scratch_r3 #Fuchsia
+
+'Chart Dependencies
+kubeapps_10_0_5--[#green]-|>postgresql_11_6_23
+postgresql_11_6_23--[#green]-|>common_1_16_1
+kubeapps_10_0_5--[#green]-|>common_1_16_1
+kubeapps_10_0_5--[#green]-|>redis_17_0_7
+redis_17_0_7--[#green]-|>common_1_16_1
+redis_17_0_7--[#orange]-|>docker_io_bitnami_redis_7_0_4_debian_11_r7
+postgresql_11_6_23--[#orange]-|>docker_io_bitnami_postgresql_14_4_0_debian_11_r20
+kubeapps_10_0_5--[#orange]-|>docker_io_bitnami_kubeapps_apprepository_controller_2_4_6_scratch_r3
+kubeapps_10_0_5--[#orange]-|>docker_io_bitnami_nginx_1_23_1_debian_11_r5
+kubeapps_10_0_5--[#orange]-|>docker_io_bitnami_kubeapps_apis_2_4_6_debian_11_r16
+kubeapps_10_0_5--[#orange]-|>docker_io_bitnami_kubeapps_kubeops_2_4_6_scratch_r3
+kubeapps_10_0_5--[#orange]-|>docker_io_bitnami_kubeapps_dashboard_2_4_6_debian_11_r14
+
+center footer Generated on 2022/08/12 01:50:10 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

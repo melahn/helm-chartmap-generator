@@ -1,0 +1,85 @@
+Chart Map for argo-workflows:2.3.9
+
+There are 4 referenced Helm Charts
+----------------------------------
+Chart: mysql:9.2.5
+	apiVersion: v2
+	appVersion: 8.0.30
+	created: 2022-08-04T14:37:34.422536899Z
+	dependencies: common:1.16.1
+	description: MySQL is a fast, reliable, scalable, and easy to use open source relational database system. Designed to handle mission-critical, heavy-load production applications.
+	digest: 81e31c8386ad7480781b65d4e7b10a7b3b887d197bb428726e76478d18828fb7
+	icon: https://bitnami.com/assets/stacks/mysql/img/mysql-stack-220x234.png
+	keywords: mysql,database,sql,cluster,high availability
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mysql
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/mysql,https://mysql.com
+	urls: https://charts.bitnami.com/bitnami/mysql-9.2.5.tgz
+	version: 9.2.5
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: postgresql:11.6.25
+	apiVersion: v2
+	appVersion: 14.4.0
+	created: 2022-08-05T08:18:54.887700741Z
+	dependencies: common:1.16.1
+	description: PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+	digest: 21757e2921ee15c50c5a9da3c690f03d12b3ba52a30fadf5ab73e6fa04b899be
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/postgresql,https://www.postgresql.org/
+	urls: https://charts.bitnami.com/bitnami/postgresql-11.6.25.tgz
+	version: 11.6.25
+Chart: argo-workflows:2.3.9
+	apiVersion: v2
+	appVersion: 3.3.8
+	created: Not specified
+	dependencies: common:1.16.1, mysql:9.2.5, postgresql:11.6.25
+	description: Argo Workflows is meant to orchestrate Kubernetes jobs in parallel. It uses DAG and step-based workflows
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/argo-workflows/img/argo-workflows-stack-220x234.png
+	keywords: Devops,Kubernetes,Jobs,Continuous delivery,Continous deployment
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: argo-workflows
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/argo-workflow-cli,https://github.com/bitnami/containers/tree/main/bitnami/argo-workflow-controller,https://github.com/bitnami/containers/tree/main/bitnami/argo-workflow-exec,https://argoproj.github.io/workflows/
+	urls: Not specified
+	version: 2.3.9
+
+There are 4 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/postgresql:14.4.0-debian-11-r21
+Image: docker.io/bitnami/argo-workflow-controller:3.3.8-scratch-r4
+Image: docker.io/bitnami/mysql:8.0.30-debian-11-r4
+Image: docker.io/bitnami/argo-workflow-cli:3.3.8-scratch-r8
+
+Chart Dependencies
+------------------
+argo-workflows:2.3.9 depends on common:1.16.1
+argo-workflows:2.3.9 depends on mysql:9.2.5
+mysql:9.2.5 depends on common:1.16.1
+argo-workflows:2.3.9 depends on postgresql:11.6.25
+postgresql:11.6.25 depends on common:1.16.1
+mysql:9.2.5 uses docker.io/bitnami/mysql:8.0.30-debian-11-r4
+postgresql:11.6.25 uses docker.io/bitnami/postgresql:14.4.0-debian-11-r21
+argo-workflows:2.3.9 uses docker.io/bitnami/argo-workflow-controller:3.3.8-scratch-r4
+argo-workflows:2.3.9 uses docker.io/bitnami/argo-workflow-cli:3.3.8-scratch-r8
+
+Generated on 2022/08/12 01:37:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

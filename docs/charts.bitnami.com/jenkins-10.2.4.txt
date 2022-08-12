@@ -42,4 +42,4 @@ Chart Dependencies
 jenkins:10.2.4 depends on common:1.16.0
 jenkins:10.2.4 uses docker.io/bitnami/jenkins:2.332.3-debian-11-r3
 
-Generated on 2022/06/15 22:25:49 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 01:47:07 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,77 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "metric",
+    "monitoring",
+    "observability",
+    "alerting"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/wavefront-proxy:11.3.0-debian-11-r15",
+      "type": "image",
+      "version": "11.3.0-debian-11-r15"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "prometheus",
+        "kube-state-metrics",
+        "monitoring"
+      ],
+      "children": [
+        {
+          "repoHost": "docker.io",
+          "children": [],
+          "name": "bitnami/kube-state-metrics:2.5.0-debian-11-r21",
+          "type": "image",
+          "version": "2.5.0-debian-11-r21"
+        },
+        {
+          "maintainers": [{"name": "Bitnami"}],
+          "keywords": [
+            "common",
+            "helper",
+            "template",
+            "function",
+            "bitnami"
+          ],
+          "children": [],
+          "name": "common:1.16.1",
+          "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+          "type": "chart",
+          "shortName": "common",
+          "version": "1.16.1"
+        }
+      ],
+      "name": "kube-state-metrics:3.1.5",
+      "description": "kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.",
+      "type": "chart",
+      "shortName": "kube-state-metrics",
+      "version": "3.1.5"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "wavefront:4.1.0",
+  "description": "Wavefront is a high-performance streaming analytics platform for monitoring and optimizing your environment and applications.",
+  "type": "chart",
+  "shortName": "wavefront",
+  "version": "4.1.0"
+}

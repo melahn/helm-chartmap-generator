@@ -1,0 +1,45 @@
+Chart Map for kube-state-metrics:3.1.6
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: kube-state-metrics:3.1.6
+	apiVersion: v2
+	appVersion: 2.5.0
+	created: Not specified
+	dependencies: common:1.16.1
+	description: kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/kube-state-metrics/img/kube-state-metrics-stack-220x234.png
+	keywords: prometheus,kube-state-metrics,monitoring
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: kube-state-metrics
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/kube-state-metrics,https://github.com/kubernetes/kube-state-metrics
+	urls: Not specified
+	version: 3.1.6
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/kube-state-metrics:2.5.0-debian-11-r23
+
+Chart Dependencies
+------------------
+kube-state-metrics:3.1.6 depends on common:1.16.1
+kube-state-metrics:3.1.6 uses docker.io/bitnami/kube-state-metrics:2.5.0-debian-11-r23
+
+Generated on 2022/08/12 01:49:38 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

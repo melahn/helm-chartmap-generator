@@ -1,0 +1,98 @@
+Chart Map for magento:21.0.6
+
+There are 5 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: kibana:10.1.17
+	apiVersion: v2
+	appVersion: 8.3.3
+	created: 2022-07-29T04:37:10.895275687Z
+	dependencies: common:1.16.1
+	description: Kibana is an open source, browser based analytics and search dashboard for Elasticsearch. Kibana strives to be easy to get started with, while also being flexible and powerful.
+	digest: dc20b028810bb89294e84a7ed48ba629eed07c088b43b5a7b9e757c5fcddb3a1
+	icon: https://bitnami.com/assets/stacks/kibana/img/kibana-stack-220x234.png
+	keywords: kibana,analytics,monitoring,metrics,logs
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: kibana
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/kibana,https://www.elastic.co/products/kibana
+	urls: https://charts.bitnami.com/bitnami/kibana-10.1.17.tgz
+	version: 10.1.17
+Chart: mariadb:11.1.5
+	apiVersion: v2
+	appVersion: 10.6.8
+	created: 2022-08-04T08:10:30.884221886Z
+	dependencies: common:1.16.1
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: df01d24fb1afad3ce7495b764deaa9cb48185a1a9f3f7c853650d1c3f1848c32
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.1.5.tgz
+	version: 11.1.5
+Chart: magento:21.0.6
+	apiVersion: v2
+	appVersion: 2.4.4
+	created: Not specified
+	dependencies: elasticsearch:19.1.5, mariadb:11.1.5, common:1.16.1
+	description: Magento is a powerful open source e-commerce platform. With easy customizations and rich features, it allows retailers to grow their online businesses in a cost-effective way.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/magento/img/magento-stack-220x234.png
+	keywords: magento,e-commerce,http,web,php
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: magento
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/magento,https://magento.com/
+	urls: Not specified
+	version: 21.0.6
+Chart: elasticsearch:19.1.5
+	apiVersion: v2
+	appVersion: 8.3.3
+	created: 2022-08-03T08:56:59.68080516Z
+	dependencies: common:1.16.1, kibana:10.1.17
+	description: Elasticsearch is a distributed search and analytics engine. It is used for web search, log monitoring, and real-time analytics. Ideal for Big Data applications.
+	digest: f29139bdeb0ab057a98507fafd67bfda0e3c1b2f1d8fab3ae276585859a9252e
+	icon: https://bitnami.com/assets/stacks/elasticsearch/img/elasticsearch-stack-220x234.png
+	keywords: elasticsearch
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: elasticsearch
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/elasticsearch,https://www.elastic.co/products/elasticsearch
+	urls: https://charts.bitnami.com/bitnami/elasticsearch-19.1.5.tgz
+	version: 19.1.5
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/elasticsearch:7.17.5-debian-11-r13
+Image: docker.io/bitnami/mariadb:10.4.25-debian-11-r24
+
+Chart Dependencies
+------------------
+magento:21.0.6 depends on elasticsearch:19.1.5
+elasticsearch:19.1.5 depends on common:1.16.1
+elasticsearch:19.1.5 depends on kibana:10.1.17
+kibana:10.1.17 depends on common:1.16.1
+magento:21.0.6 depends on mariadb:11.1.5
+mariadb:11.1.5 depends on common:1.16.1
+magento:21.0.6 depends on common:1.16.1
+mariadb:11.1.5 uses docker.io/bitnami/mariadb:10.4.25-debian-11-r24
+elasticsearch:19.1.5 uses docker.io/bitnami/elasticsearch:7.17.5-debian-11-r13
+
+Generated on 2022/08/12 01:51:05 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

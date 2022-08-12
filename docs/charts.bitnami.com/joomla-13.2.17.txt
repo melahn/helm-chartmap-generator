@@ -1,0 +1,64 @@
+Chart Map for joomla:13.2.17
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: joomla:13.2.17
+	apiVersion: v2
+	appVersion: 4.1.5
+	created: Not specified
+	dependencies: mariadb:11.1.5, common:1.16.1
+	description: Joomla! is an award winning open source CMS platform for building websites and applications. It includes page caching, page compression and Let's Encrypt auto-configuration support.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/joomla/img/joomla-stack-220x234.png
+	keywords: joomla,cms,blog,http,php
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: joomla
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/joomla,https://www.joomla.org/
+	urls: Not specified
+	version: 13.2.17
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: mariadb:11.1.5
+	apiVersion: v2
+	appVersion: 10.6.8
+	created: 2022-08-04T08:10:30.884221886Z
+	dependencies: common:1.16.1
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: df01d24fb1afad3ce7495b764deaa9cb48185a1a9f3f7c853650d1c3f1848c32
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.1.5.tgz
+	version: 11.1.5
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/mariadb:10.6.8-debian-11-r22
+Image: docker.io/bitnami/joomla:4.1.5-debian-11-r18
+
+Chart Dependencies
+------------------
+joomla:13.2.17 depends on mariadb:11.1.5
+mariadb:11.1.5 depends on common:1.16.1
+joomla:13.2.17 depends on common:1.16.1
+joomla:13.2.17 uses docker.io/bitnami/joomla:4.1.5-debian-11-r18
+mariadb:11.1.5 uses docker.io/bitnami/mariadb:10.6.8-debian-11-r22
+
+Generated on 2022/08/12 01:47:19 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,35 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for argo-workflows:2.3.8
+
+'There are 4 referenced Helm Charts
+artifact "mysql:9.2.4\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tcluster\n\t\thigh availability" as mysql_9_2_4 #Aqua
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "postgresql:11.6.23\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: \n\t\tBitnami\n\t\tdesaintmartin\n====\n\tKeywords: \n\t\tpostgresql\n\t\tpostgres\n\t\tdatabase\n\t\tsql\n\t\treplication\n\t\tcluster" as postgresql_11_6_23 #LightSteelBlue
+artifact "argo-workflows:2.3.8\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tDevops\n\t\tKubernetes\n\t\tJobs\n\t\tContinuous delivery\n\t\tContinous deployment" as argo_workflows_2_3_8 #LavenderBlush
+
+'There are 4 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/argo-workflow-controller:3.3.8-scratch-r3\n====\n3.3.8-scratch-r3" as docker_io_bitnami_argo_workflow_controller_3_3_8_scratch_r3 #Chocolate
+usecase "Image\n====\ndocker.io\n====\nbitnami/mysql:8.0.30-debian-11-r3\n====\n8.0.30-debian-11-r3" as docker_io_bitnami_mysql_8_0_30_debian_11_r3 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/postgresql:14.4.0-debian-11-r20\n====\n14.4.0-debian-11-r20" as docker_io_bitnami_postgresql_14_4_0_debian_11_r20 #DarkSalmon
+usecase "Image\n====\ndocker.io\n====\nbitnami/argo-workflow-cli:3.3.8-scratch-r7\n====\n3.3.8-scratch-r7" as docker_io_bitnami_argo_workflow_cli_3_3_8_scratch_r7 #DarkSeaGreen
+
+'Chart Dependencies
+argo_workflows_2_3_8--[#green]-|>mysql_9_2_4
+mysql_9_2_4--[#green]-|>common_1_16_1
+argo_workflows_2_3_8--[#green]-|>postgresql_11_6_23
+postgresql_11_6_23--[#green]-|>common_1_16_1
+argo_workflows_2_3_8--[#green]-|>common_1_16_1
+mysql_9_2_4--[#orange]-|>docker_io_bitnami_mysql_8_0_30_debian_11_r3
+postgresql_11_6_23--[#orange]-|>docker_io_bitnami_postgresql_14_4_0_debian_11_r20
+argo_workflows_2_3_8--[#orange]-|>docker_io_bitnami_argo_workflow_controller_3_3_8_scratch_r3
+argo_workflows_2_3_8--[#orange]-|>docker_io_bitnami_argo_workflow_cli_3_3_8_scratch_r7
+
+center footer Generated on 2022/08/12 01:37:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

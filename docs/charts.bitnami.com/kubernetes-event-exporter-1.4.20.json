@@ -1,0 +1,41 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "alerting",
+    "event exporting",
+    "events",
+    "kubernetes events",
+    "monitoring",
+    "observability"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/kubernetes-event-exporter:0.11.0-debian-11-r24",
+      "type": "image",
+      "version": "0.11.0-debian-11-r24"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "kubernetes-event-exporter:1.4.20",
+  "description": "Kubernetes Event Exporter makes it easy to export Kubernetes events to other tools, thereby enabling better event observability, custom alerts and aggregation.",
+  "type": "chart",
+  "shortName": "kubernetes-event-exporter",
+  "version": "1.4.20"
+}

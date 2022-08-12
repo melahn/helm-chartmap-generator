@@ -1,0 +1,37 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "apache",
+    "spark"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/spark:3.3.0-debian-11-r14",
+      "type": "image",
+      "version": "3.3.0-debian-11-r14"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "spark:6.2.2",
+  "description": "Apache Spark is a high-performance engine for large-scale computing tasks, such as data processing, machine learning and real-time data streaming. It includes APIs for Java, Python, Scala and R.",
+  "type": "chart",
+  "shortName": "spark",
+  "version": "6.2.2"
+}

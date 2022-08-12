@@ -24,5 +24,5 @@ testlink_10_0_16--[#green]-|>common_1_12_0
 testlink_10_0_16--[#orange]-|>docker_io_bitnami_testlink_1_9_20_debian_10_r676
 mariadb_10_4_2--[#orange]-|>docker_io_bitnami_mariadb_10_5_15_debian_10_r30
 
-center footer Generated on 2022/06/15 22:39:18 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:01:51 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml

@@ -1,0 +1,39 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "pytorch",
+    "python",
+    "machine",
+    "learning"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/pytorch:1.12.1-debian-11-r0",
+      "type": "image",
+      "version": "1.12.1-debian-11-r0"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "pytorch:2.4.17",
+  "description": "PyTorch is a deep learning platform that accelerates the transition from research prototyping to production deployment. Bitnami image includes Torchvision for specific computer vision support.",
+  "type": "chart",
+  "shortName": "pytorch",
+  "version": "2.4.17"
+}

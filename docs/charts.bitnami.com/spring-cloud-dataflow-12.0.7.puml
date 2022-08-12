@@ -1,0 +1,45 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for spring-cloud-dataflow:12.0.7
+
+'There are 6 referenced Helm Charts
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+artifact "rabbitmq:10.1.17\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\trabbitmq\n\t\tmessage queue\n\t\tAMQP" as rabbitmq_10_1_17 #Aqua
+artifact "zookeeper:10.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: zookeeper" as zookeeper_10_0_5 #LemonChiffon
+artifact "mariadb:11.1.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tmariadb\n\t\tmysql\n\t\tdatabase\n\t\tsql\n\t\tprometheus" as mariadb_11_1_5 #DarkTurquoise
+artifact "kafka:18.0.5\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tkafka\n\t\tzookeeper\n\t\tstreaming\n\t\tproducer\n\t\tconsumer" as kafka_18_0_5 #Aqua
+artifact "spring-cloud-dataflow:12.0.7\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tspring-cloud\n\t\tdataflow\n\t\tskipper\n\t\tspring" as spring_cloud_dataflow_12_0_7 #IndianRed
+
+'There are 6 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/mariadb:10.6.8-debian-11-r22\n====\n10.6.8-debian-11-r22" as docker_io_bitnami_mariadb_10_6_8_debian_11_r22 #DarkGoldenRod
+usecase "Image\n====\ndocker.io\n====\nbitnami/spring-cloud-skipper:2.8.4-debian-11-r25\n====\n2.8.4-debian-11-r25" as docker_io_bitnami_spring_cloud_skipper_2_8_4_debian_11_r25 #GhostWhite
+usecase "Image\n====\ndocker.io\n====\nbitnami/zookeeper:3.8.0-debian-11-r23\n====\n3.8.0-debian-11-r23" as docker_io_bitnami_zookeeper_3_8_0_debian_11_r23 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/kafka:3.2.1-debian-11-r1\n====\n3.2.1-debian-11-r1" as docker_io_bitnami_kafka_3_2_1_debian_11_r1 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/rabbitmq:3.10.7-debian-11-r0\n====\n3.10.7-debian-11-r0" as docker_io_bitnami_rabbitmq_3_10_7_debian_11_r0 #Beige
+usecase "Image\n====\ndocker.io\n====\nbitnami/spring-cloud-dataflow:2.9.4-debian-11-r25\n====\n2.9.4-debian-11-r25" as docker_io_bitnami_spring_cloud_dataflow_2_9_4_debian_11_r25 #CadetBlue
+
+'Chart Dependencies
+spring_cloud_dataflow_12_0_7--[#green]-|>kafka_18_0_5
+kafka_18_0_5--[#green]-|>zookeeper_10_0_5
+zookeeper_10_0_5--[#green]-|>common_1_16_1
+kafka_18_0_5--[#green]-|>common_1_16_1
+spring_cloud_dataflow_12_0_7--[#green]-|>common_1_16_1
+spring_cloud_dataflow_12_0_7--[#green]-|>rabbitmq_10_1_17
+rabbitmq_10_1_17--[#green]-|>common_1_16_1
+spring_cloud_dataflow_12_0_7--[#green]-|>mariadb_11_1_5
+mariadb_11_1_5--[#green]-|>common_1_16_1
+rabbitmq_10_1_17--[#orange]-|>docker_io_bitnami_rabbitmq_3_10_7_debian_11_r0
+zookeeper_10_0_5--[#orange]-|>docker_io_bitnami_zookeeper_3_8_0_debian_11_r23
+mariadb_11_1_5--[#orange]-|>docker_io_bitnami_mariadb_10_6_8_debian_11_r22
+kafka_18_0_5--[#orange]-|>docker_io_bitnami_kafka_3_2_1_debian_11_r1
+spring_cloud_dataflow_12_0_7--[#orange]-|>docker_io_bitnami_spring_cloud_dataflow_2_9_4_debian_11_r25
+spring_cloud_dataflow_12_0_7--[#orange]-|>docker_io_bitnami_spring_cloud_skipper_2_8_4_debian_11_r25
+
+center footer Generated on 2022/08/12 02:01:03 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

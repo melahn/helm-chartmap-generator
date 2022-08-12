@@ -1,0 +1,25 @@
+@startuml
+skinparam linetype ortho
+skinparam backgroundColor white
+skinparam usecaseBorderColor black
+skinparam usecaseArrowColor LightSlateGray
+skinparam artifactBorderColor black
+skinparam artifactArrowColor LightSlateGray
+
+title Chart Map for nginx-ingress-controller:9.2.25
+
+'There are 2 referenced Helm Charts
+artifact "nginx-ingress-controller:9.2.25\n====\n\tType: application\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tingress\n\t\tnginx\n\t\thttp\n\t\tweb\n\t\twww\n\t\treverse proxy" as nginx_ingress_controller_9_2_25 #Azure
+artifact "common:1.16.1\n====\n\tType: library\n====\n\tRepo: https://charts.bitnami.com/bitnami\n====\n\tMaintainers: Bitnami\n====\n\tKeywords: \n\t\tcommon\n\t\thelper\n\t\ttemplate\n\t\tfunction\n\t\tbitnami" as common_1_16_1 #DarkSeaGreen
+
+'There are 2 referenced Docker Images
+usecase "Image\n====\ndocker.io\n====\nbitnami/nginx:1.23.1-debian-11-r5\n====\n1.23.1-debian-11-r5" as docker_io_bitnami_nginx_1_23_1_debian_11_r5 #LightPink
+usecase "Image\n====\ndocker.io\n====\nbitnami/nginx-ingress-controller:1.3.0-debian-11-r8\n====\n1.3.0-debian-11-r8" as docker_io_bitnami_nginx_ingress_controller_1_3_0_debian_11_r8 #Coral
+
+'Chart Dependencies
+nginx_ingress_controller_9_2_25--[#green]-|>common_1_16_1
+nginx_ingress_controller_9_2_25--[#orange]-|>docker_io_bitnami_nginx_ingress_controller_1_3_0_debian_11_r8
+nginx_ingress_controller_9_2_25--[#orange]-|>docker_io_bitnami_nginx_1_23_1_debian_11_r5
+
+center footer Generated on 2022/08/12 01:54:39 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+@enduml

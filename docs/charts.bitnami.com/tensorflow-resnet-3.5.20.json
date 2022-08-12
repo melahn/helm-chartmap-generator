@@ -1,0 +1,41 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "tensorflow",
+    "serving",
+    "resnet",
+    "machine",
+    "learning",
+    "library"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/tensorflow-serving:2.9.1-debian-11-r8",
+      "type": "image",
+      "version": "2.9.1-debian-11-r8"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "tensorflow-resnet:3.5.20",
+  "description": "TensorFlow ResNet is a client utility for use with TensorFlow Serving and ResNet models.",
+  "type": "chart",
+  "shortName": "tensorflow-resnet",
+  "version": "3.5.20"
+}

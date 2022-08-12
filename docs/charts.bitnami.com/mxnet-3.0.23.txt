@@ -1,0 +1,45 @@
+Chart Map for mxnet:3.0.23
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: mxnet:3.0.23
+	apiVersion: v2
+	appVersion: 1.9.1
+	created: Not specified
+	dependencies: common:1.16.1
+	description: Apache MXNet (Incubating) is a flexible and efficient library for deep learning designed to work as a neural network. Bitnami image ships OpenBLAS as math library.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/mxnet/img/mxnet-stack-220x234.png
+	keywords: mxnet,python,machine,learning
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mxnet
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/mxnet,https://mxnet.apache.org/
+	urls: Not specified
+	version: 3.0.23
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/mxnet:1.9.1-debian-11-r23
+
+Chart Dependencies
+------------------
+mxnet:3.0.23 depends on common:1.16.1
+mxnet:3.0.23 uses docker.io/bitnami/mxnet:1.9.1-debian-11-r23
+
+Generated on 2022/08/12 01:53:46 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

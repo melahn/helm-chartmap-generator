@@ -1,0 +1,45 @@
+Chart Map for kubernetes-event-exporter:1.4.18
+
+There are 2 referenced Helm Charts
+----------------------------------
+Chart: kubernetes-event-exporter:1.4.18
+	apiVersion: v2
+	appVersion: 0.11.0
+	created: Not specified
+	dependencies: common:1.16.1
+	description: Kubernetes Event Exporter makes it easy to export Kubernetes events to other tools, thereby enabling better event observability, custom alerts and aggregation.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/kubernetes-event-exporter/img/kubernetes-event-exporter-stack-220x234.png
+	keywords: alerting,event exporting,events,kubernetes events,monitoring,observability
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: kubernetes-event-exporter
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/kubernetes-event-exporter,https://github.com/opsgenie/kubernetes-event-exporter
+	urls: Not specified
+	version: 1.4.18
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+
+There is one referenced Docker Image
+------------------------------------
+Image: docker.io/bitnami/kubernetes-event-exporter:0.11.0-debian-11-r21
+
+Chart Dependencies
+------------------
+kubernetes-event-exporter:1.4.18 depends on common:1.16.1
+kubernetes-event-exporter:1.4.18 uses docker.io/bitnami/kubernetes-event-exporter:0.11.0-debian-11-r21
+
+Generated on 2022/08/12 01:50:18 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

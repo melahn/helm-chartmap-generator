@@ -1,0 +1,40 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "mysql",
+    "database",
+    "sql",
+    "cluster",
+    "high availability"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/mysql:8.0.30-debian-11-r6",
+      "type": "image",
+      "version": "8.0.30-debian-11-r6"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "mysql:9.2.6",
+  "description": "MySQL is a fast, reliable, scalable, and easy to use open source relational database system. Designed to handle mission-critical, heavy-load production applications.",
+  "type": "chart",
+  "shortName": "mysql",
+  "version": "9.2.6"
+}

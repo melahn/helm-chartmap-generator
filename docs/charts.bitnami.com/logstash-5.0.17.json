@@ -1,0 +1,38 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "logstash",
+    "logging",
+    "elk"
+  ],
+  "children": [
+    {
+      "repoHost": "docker.io",
+      "children": [],
+      "name": "bitnami/logstash:8.3.3-debian-11-r3",
+      "type": "image",
+      "version": "8.3.3-debian-11-r3"
+    },
+    {
+      "maintainers": [{"name": "Bitnami"}],
+      "keywords": [
+        "common",
+        "helper",
+        "template",
+        "function",
+        "bitnami"
+      ],
+      "children": [],
+      "name": "common:1.16.1",
+      "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+      "type": "chart",
+      "shortName": "common",
+      "version": "1.16.1"
+    }
+  ],
+  "name": "logstash:5.0.17",
+  "description": "Logstash is an open source data processing engine. It ingests data from multiple sources, processes it, and sends the output to final destination in real-time. It is a core component of the ELK stack.",
+  "type": "chart",
+  "shortName": "logstash",
+  "version": "5.0.17"
+}

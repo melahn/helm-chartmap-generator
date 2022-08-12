@@ -1,0 +1,64 @@
+Chart Map for phpmyadmin:10.2.2
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: mariadb:11.1.2
+	apiVersion: v2
+	appVersion: 10.6.8
+	created: 2022-07-30T10:21:17.351831802Z
+	dependencies: common:1.16.1
+	description: MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+	digest: 6079698105bd56705d60092543239dc7a5b347bed86b250766a47de70b2e992f
+	icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+	keywords: mariadb,mysql,database,sql,prometheus
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: mariadb
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/mariadb,https://github.com/prometheus/mysqld_exporter,https://mariadb.org
+	urls: https://charts.bitnami.com/bitnami/mariadb-11.1.2.tgz
+	version: 11.1.2
+Chart: phpmyadmin:10.2.2
+	apiVersion: v2
+	appVersion: 5.2.0
+	created: Not specified
+	dependencies: mariadb:11.1.2, common:1.16.1
+	description: phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/phpmyadmin/img/phpmyadmin-stack-220x234.png
+	keywords: mariadb,mysql,phpmyadmin
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: phpmyadmin
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/phpmyadmin,https://www.phpmyadmin.net/
+	urls: Not specified
+	version: 10.2.2
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/phpmyadmin:5.2.0-debian-11-r22
+Image: docker.io/bitnami/mariadb:10.6.8-debian-11-r20
+
+Chart Dependencies
+------------------
+phpmyadmin:10.2.2 depends on mariadb:11.1.2
+mariadb:11.1.2 depends on common:1.16.1
+phpmyadmin:10.2.2 depends on common:1.16.1
+mariadb:11.1.2 uses docker.io/bitnami/mariadb:10.6.8-debian-11-r20
+phpmyadmin:10.2.2 uses docker.io/bitnami/phpmyadmin:5.2.0-debian-11-r22
+
+Generated on 2022/08/12 01:57:23 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

@@ -1,0 +1,16 @@
+{
+  "maintainers": [{"name": "Bitnami"}],
+  "keywords": [
+    "common",
+    "helper",
+    "template",
+    "function",
+    "bitnami"
+  ],
+  "children": [],
+  "name": "common:1.16.1",
+  "description": "A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.",
+  "type": "chart",
+  "shortName": "common",
+  "version": "1.16.1"
+}

@@ -1,0 +1,64 @@
+Chart Map for odoo:21.5.5
+
+There are 3 referenced Helm Charts
+----------------------------------
+Chart: common:1.16.1
+	apiVersion: v2
+	appVersion: 1.16.0
+	created: 2022-07-14T17:14:12.421862423Z
+	dependencies: None
+	description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+	digest: sha256:8aa21b5bafcd74810aca6c1de3892e4e4e84582a87c8e623c6a6e248ee0da037
+	icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+	keywords: common,helper,template,function,bitnami
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: common
+	sources: https://github.com/bitnami/charts,https://www.bitnami.com/
+	urls: https://charts.bitnami.com/bitnami/common-1.16.1.tgz
+	version: 1.16.1
+Chart: odoo:21.5.5
+	apiVersion: v2
+	appVersion: 15.0.20220810
+	created: Not specified
+	dependencies: common:1.16.1, postgresql:11.6.26
+	description: Odoo is an open source ERP and CRM platform, formerly known as OpenERP, that can connect a wide variety of business operations such as sales, supply chain, finance, and project management.
+	digest: Not specified
+	icon: https://bitnami.com/assets/stacks/odoo/img/odoo-stack-220x234.png
+	keywords: odoo,crm,www,http,web
+	maintainers: Bitnami
+	repo url: https://charts.bitnami.com/bitnami
+	name: odoo
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/odoo,https://www.odoo.com/
+	urls: Not specified
+	version: 21.5.5
+Chart: postgresql:11.6.26
+	apiVersion: v2
+	appVersion: 14.4.0
+	created: 2022-08-09T06:46:39.489173097Z
+	dependencies: common:1.16.1
+	description: PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+	digest: 0f28a70ea01674fe9754f442b81499cafd60bb5c3b9255dd95bd285a83f7a60a
+	icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+	keywords: postgresql,postgres,database,sql,replication,cluster
+	maintainers: Bitnami,desaintmartin:cedric@desaintmartin.fr
+	repo url: https://charts.bitnami.com/bitnami
+	name: postgresql
+	sources: https://github.com/bitnami/containers/tree/main/bitnami/postgresql,https://www.postgresql.org/
+	urls: https://charts.bitnami.com/bitnami/postgresql-11.6.26.tgz
+	version: 11.6.26
+
+There are 2 referenced Docker Images
+------------------------------------
+Image: docker.io/bitnami/odoo:15.0.20220810-debian-11-r0
+Image: docker.io/bitnami/postgresql:14.4.0-debian-11-r23
+
+Chart Dependencies
+------------------
+odoo:21.5.5 depends on common:1.16.1
+odoo:21.5.5 depends on postgresql:11.6.26
+postgresql:11.6.26 depends on common:1.16.1
+odoo:21.5.5 uses docker.io/bitnami/odoo:15.0.20220810-debian-11-r0
+postgresql:11.6.26 uses docker.io/bitnami/postgresql:14.4.0-debian-11-r23
+
+Generated on 2022/08/12 01:55:37 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)

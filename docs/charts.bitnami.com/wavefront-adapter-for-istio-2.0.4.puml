@@ -21,13 +21,13 @@ usecase "Image\n====\ndocker.io\n====\nbitnami/kube-state-metrics:2.5.0-debian-1
 
 'Chart Dependencies
 wavefront_adapter_for_istio_2_0_4--[#green]-|>wavefront_4_0_2
-wavefront_4_0_2--[#green]-|>common_1_16_0
 wavefront_4_0_2--[#green]-|>kube_state_metrics_3_0_4
 kube_state_metrics_3_0_4--[#green]-|>common_1_16_0
+wavefront_4_0_2--[#green]-|>common_1_16_0
 wavefront_adapter_for_istio_2_0_4--[#green]-|>common_1_16_0
 wavefront_4_0_2--[#orange]-|>docker_io_bitnami_wavefront_proxy_11_1_0_debian_11_r2
 wavefront_adapter_for_istio_2_0_4--[#orange]-|>docker_io_bitnami_wavefront_adapter_for_istio_0_1_5_debian_11_r3
 kube_state_metrics_3_0_4--[#orange]-|>docker_io_bitnami_kube_state_metrics_2_5_0_debian_11_r0
 
-center footer Generated on 2022/06/15 22:40:12 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
+center footer Generated on 2022/08/12 02:02:57 by com.melahn.util.helm.PlantUmlChartMapPrinter\nhttps://github.com/melahn/helm-chartmap
 @enduml
