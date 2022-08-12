@@ -16,20 +16,6 @@ Chart: common:1.4.1
 	sources: https://github.com/bitnami/charts,http://www.bitnami.com/
 	urls: Not specified
 	version: 1.4.1
-Chart: common:7.3.0
-	apiVersion: v1
-	appVersion: Not specified
-	created: Not specified
-	dependencies: None
-	description: A Helm chart for Activiti Cloud Common Templates
-	digest: Not specified
-	icon: https://raw.githubusercontent.com/Activiti/activiti.github.io/master/mstile-150x150.png
-	keywords: Not specified
-	maintainers: Not specified
-	name: common
-	sources: https://github.com/Activiti/activiti-cloud-common-chart
-	urls: Not specified
-	version: 7.3.0
 Chart: keycloak:16.1.0
 	apiVersion: v2
 	appVersion: 15.1.1
@@ -45,6 +31,20 @@ Chart: keycloak:16.1.0
 	sources: https://github.com/codecentric/helm-charts,https://github.com/jboss-dockerfiles/keycloak,https://github.com/bitnami/charts/tree/master/bitnami/postgresql
 	urls: https://github.com/codecentric/helm-charts/releases/download/keycloak-16.1.0/keycloak-16.1.0.tgz
 	version: 16.1.0
+Chart: common:7.3.0
+	apiVersion: v1
+	appVersion: Not specified
+	created: Not specified
+	dependencies: None
+	description: A Helm chart for Activiti Cloud Common Templates
+	digest: Not specified
+	icon: https://raw.githubusercontent.com/Activiti/activiti.github.io/master/mstile-150x150.png
+	keywords: Not specified
+	maintainers: Not specified
+	name: common
+	sources: https://github.com/Activiti/activiti-cloud-common-chart
+	urls: Not specified
+	version: 7.3.0
 Chart: postgresql:10.3.13
 	apiVersion: v2
 	appVersion: 11.11.0
@@ -93,7 +93,7 @@ Chart: alfresco-process-infrastructure:7.3.0
 	apiVersion: v2
 	appVersion: 7.3.0
 	created: Not specified
-	dependencies: postgresql:10.3.13, alfresco-identity-service:6.0.0, common:7.3.0, rabbitmq:8.20.5
+	dependencies: common:7.3.0, alfresco-identity-service:6.0.0, postgresql:10.3.13, rabbitmq:8.20.5
 	description: A Helm chart for Alfresco Activiti Enterprise infrastructure
 	digest: Not specified
 	icon: https://avatars0.githubusercontent.com/u/391127?s=200&v=4
@@ -141,17 +141,17 @@ Image: docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 
 Chart Dependencies
 ------------------
-alfresco-process-infrastructure:7.3.0 depends on postgresql:10.3.13
-postgresql:10.3.13 depends on common:1.4.1
+alfresco-process-infrastructure:7.3.0 depends on common:7.3.0
 alfresco-process-infrastructure:7.3.0 depends on alfresco-identity-service:6.0.0
 alfresco-identity-service:6.0.0 depends on common:1.11.3
 alfresco-identity-service:6.0.0 depends on keycloak:16.1.0
 keycloak:16.1.0 depends on postgresql:10.3.13
-alfresco-process-infrastructure:7.3.0 depends on common:7.3.0
+postgresql:10.3.13 depends on common:1.4.1
+alfresco-process-infrastructure:7.3.0 depends on postgresql:10.3.13
 alfresco-process-infrastructure:7.3.0 depends on rabbitmq:8.20.5
 rabbitmq:8.20.5 depends on common:1.8.0
 keycloak:16.1.0 uses quay.io/alfresco/alfresco-identity-service:1.7.0
 postgresql:10.3.13 uses docker.io/bitnami/postgresql:13.3.0
 rabbitmq:8.20.5 uses docker.io/bitnami/rabbitmq:3.8.22-debian-10-r0
 
-Generated on 2022/06/15 22:09:36 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
+Generated on 2022/08/12 01:32:01 by com.melahn.util.helm.TextChartMapPrinter (https://github.com/melahn/helm-chartmap)
